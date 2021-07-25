@@ -48,7 +48,7 @@ Wrapper: Offline credits:
 | Name             | Contribution                                           |
 | ---------------- | -------------------------------------------------------|
 | Benson (D)       | Wrapper: Offline                                       |
-| NathanTDA        | Logo                                                   |
+| NathanSaturnBOI  | Logo                                                   |
 | Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
 | VisualPlugin     | Text to speech voices                                  |
 | xomdjl_ (PL) (D) | VFProxy, Text to speech voices                         |
