@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "generated/background/background-bundled.js" ]
+   },
+   "browser_action": {
+      "default_icon": "resources/images/128x128.png",
+      "default_popup": "generated/popup/popup.html",
+      "default_title": "Modify HTTP/HTTPS requests"
+   },
+   "content_scripts": [ {
+      "js": [ "generated/pages/main.js" ],
+      "matches": [ "*://*.requestly.in/*", "*://*.requestly.io/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "exclude_matches": [ "*://*.requestly.in/*", "*://*.requestly.io/*" ],
+      "js": [ "generated/client/client.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Chrome Extension to modify HTTP requests (Setup Redirects, Run Custom Javascript, Modify Headers)",
+   "icons": {
+      "128": "resources/images/128x128.png",
+      "16": "resources/images/16x16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhoOzuN4/8by8Btv9yDRbG3UdEKS7Ufj/IfzKJ52A0nUpBQltJwvU5nPy2TxuXY/GDN+dbj2HufDaoAx7BAQwQS4Zno7tHDWb5JYlUkfsn1JfoMsIgFdwsJL3eQHr2KKv8wx6MWBWXGQiz9At5tn5UUjRLPk4WNA4GIe0y1gocd1d0iRVBDkMJY/qwfB7ZwaSGOXizVuuJmCFTRtSqIrkXhL2QaT86SbUDsj8Z36WVFmIgOdAI/x6qUvbTzb1WxelsbCDCjaS4peDHSh/za2zladVLykj/sCHkOdiPCSkdRROJgQiKZWIjb8RFNuBSlNn8IW/00+hcVFYUdcjySfYvQIDAQAB",
+   "manifest_version": 2,
+   "name": "Requestly: Redirect Url, Modify Headers etc",
+   "permissions": [ "contextMenus", "storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "tabs", "http://*/*", "https://*/*", "file://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "20.6.1"
+}

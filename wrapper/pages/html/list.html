@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../../favicon.ico" type="image/png">
+	<title>Video List</title>
+	<meta name="description" content="Wrapper: Offline's Video List">
+	<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/list.css">
+</head>
+<body>
+
+<header>
+	<a href="/">
+		<h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.svg" alt="Wrapper: Offline"/></h1>
+	</a>
+	<nav id="headbuttons">
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button upload_button">UPLOAD</div>
+			<nav class="dropdown_menu">
+				<a onclick="document.getElementById('file').click()">Movie</a>
+				<a onclick="document.getElementById('file2').click()">Character</a>
+			</nav>
+		</div>	
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button">CREATE A CHARACTER</div>
+			<nav class="dropdown_menu">
+				<h2>Comedy World</h2>
+				<a href="/cc?themeId=family&bs=adam">Guy (Adam)</a>
+				<a href="/cc?themeId=family&bs=eve">Girl (Eve)</a>
+				<a href="/cc?themeId=family&bs=bob">Fat (Bob)</a>
+				<a href="/cc?themeId=family&bs=rocky">Buff (Rocky)</a>
+				<hr />
+				<h2>Anime</h2>
+				<a href="/cc?themeId=anime&bs=guy">Guy</a>
+				<a href="/cc?themeId=anime&bs=girl">Girl</a>
+				<a href="/cc?themeId=ninjaanime&bs=guy">Guy (Ninja)</a>
+				<a href="/cc?themeId=ninjaanime&bs=girl">Girl (Ninja)</a>
+				<hr />
+				<h2>Peepz</h2>
+				<a href="/cc?themeId=cc2&bs=default">Lil Peepz</a>
+				<a href="/cc?themeId=chibi&bs=default">Chibi Peepz</a>
+				<a href="/cc?themeId=ninja&bs=default">Chibi Ninjas</a>
+			</nav>
+		</div>
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button">BROWSE CHARACTERS</div>
+			<nav class="dropdown_menu">
+				<h2>Comedy World</h2>
+				<a href="/cc_browser?themeId=family">Comedy World</a>
+				<hr />
+				<h2>Anime</h2>
+				<a href="/cc_browser?themeId=anime">Anime</a>
+				<a href="/cc_browser?themeId=ninjaanime">Ninja Anime</a>
+				<hr />
+				<h2>Peepz</h2>
+				<a href="/cc_browser?themeId=cc2">Lil' Peepz</a>
+				<a href="/cc_browser?themeId=chibi">Chibi Peepz</a>
+				<a href="/cc_browser?themeId=ninja">Chibi Ninjas</a>
+			</nav>
+		</div>
+		<a href="/go_full" class="button_big">MAKE A VIDEO</a>
+	</nav>
+</header>
+
+<main>
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<td>Video Title</td>
+				<td>Last Modified</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		<tfoot>
+			<tr>
+				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+			</tr>
+		</tfoot>
+	</table>
+</main>
+
+<footer>
+	<nav id="foot-left">
+		<a>v1.2.3½</a>
+		<a href="https://localhost:4664/faq.html">FAQ</a>
+		<a href="https://discord.gg/yhGAetN">Wrapper Hub</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a href="https://localhost:4664">Server Page</a>
+		<a href="https://localhost:4664/caillou.html">Caillou</a>
+	</nav>
+</footer>
+
+
+<form enctype='multipart/form-data' action='/upload_movie' method='post'>
+	<input id='file' type="file" onchange="this.form.submit()" name='import' />
+</form>
+
+<form enctype='multipart/form-data' action='/upload_character' method='post'>
+	<input id='file2' type="file" onchange="this.form.submit()" name='import' />
+</form>
+
+</body>
+
+<script>
+	const closeReq = new XMLHttpRequest();
+	closeReq.open('GET', '/events/close');
+	closeReq.send();
+
+	var json;
+	var tbody = document.getElementsByTagName('tbody')[0];
+	var loadMore = document.getElementById('load_more');
+	const listReq = new XMLHttpRequest();
+	listReq.open('GET', '/movieList');
+	listReq.send();
+
+	var C = 0;
+	function loadRows() {
+		let c = C; C += 69;
+		for (; c < C; c++) {
+			if (c > json.length - 1) {
+				loadMore.remove();
+				break;
+			}
+
+			const tbl = json[c];
+			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
+			tbody.insertAdjacentHTML('beforeend',
+				'<tr><td><img src="/movie_thumbs/' + tbl.id + '"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+		}
+	}
+
+	loadMore.onclick = loadRows;
+	listReq.onreadystatechange = function (e) {
+		if (listReq.readyState != 4) return;
+		json = JSON.parse(listReq.responseText);
+		loadRows();
+	}
+
+	function popup(id) {
+		window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+	}
+</script>
+
+</html>

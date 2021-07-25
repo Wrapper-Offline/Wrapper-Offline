@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="space" name="Space Peepz" cc_theme_id="cc2">
+	<background id="ncc_sci01bg.swf" name="Control room" enable="N" default="N" is_premium="N" aid="14929" money="0" sharing="0"/>
+	<background id="ncc_sci02bg.swf" name="Empty room" enable="Y" default="N" is_premium="N" aid="14930" money="0" sharing="0"/>
+	<background id="ncc_sci03bg.swf" name="Empty room" enable="Y" default="N" is_premium="N" aid="14931" money="0" sharing="0"/>
+	<background id="ncc_sci04bg.swf" name="Hallway" enable="Y" default="N" is_premium="N" aid="14932" money="0" sharing="0"/>
+	<background id="ncc_sci05bg.swf" name="Hallway with window" enable="Y" default="N" is_premium="N" aid="14933" money="0" sharing="0"/>
+	<background id="ncc_sci06bg.swf" name="Speed lines" enable="N" default="N" is_premium="N" aid="14934" money="0" sharing="0"/>
+	<background id="ncc_sci07bg.swf" name="Sandy planet" enable="N" default="N" is_premium="N" aid="14935" money="0" sharing="0"/>
+	<background id="ncc_sci08bg.swf" name="Rocky planet" enable="N" default="N" is_premium="N" aid="14936" money="0" sharing="0"/>
+	<background id="ncc_sci10bg.swf" name="Volcanic planet" enable="N" default="N" is_premium="N" aid="14937" money="0" sharing="0"/>
+	<background id="ncc_sci11bg.swf" name="Space travel" enable="Y" default="N" is_premium="N" aid="14938" money="0" sharing="0"/>
+	<background id="ncc_sci09bg.swf" name="" enable="N" default="N" is_premium="N" aid="14939" money="0" sharing="0"/>
+	<background id="ncc_sci12bg.swf" name="" enable="N" default="N" is_premium="N" aid="14940" money="0" sharing="0"/>
+	<background id="ncc_sci13bg.swf" name="" enable="Y" default="N" is_premium="N" aid="14941" money="0" sharing="0"/>
+	<background id="ncc_sci14bg.swf" name="" enable="N" default="N" is_premium="N" aid="14942" money="0" sharing="0"/>
+	<compositebg id="cbg_ncc_sci016" name="Bridge" enable="Y" default="Y" thumb="ncc_sci016bg.png" display_order="1" is_premium="N" money="0" sharing="0" aid="14956">
+	<bg id="cbg_ncc_sci016_BG62" index="0">
+		<file>space.ncc_sci03bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci016_PROP50" index="4">
+		<file>space.ncc_sci013.swf</file>
+		<x>284</x>
+		<y>166</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci016_PROP51" index="3">
+		<file>space.msp_sci001.msp_sci001_ncc_sci001_on.swf</file>
+		<x>491</x>
+		<y>197</y>
+		<xscale>0.53</xscale>
+		<yscale>0.53</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci016_PROP52" index="5">
+		<file>space.msp_sci012.msp_sci012_ncc_sci012_01.swf</file>
+		<x>273</x>
+		<y>253.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci016_PROP53" index="6">
+		<file>space.msp_sci012.msp_sci012_ncc_sci012_03.swf</file>
+		<x>117</x>
+		<y>345.5</y>
+		<xscale>1.61</xscale>
+		<yscale>1.61</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci016_PROP54" index="8">
+		<file>space.msp_sci012.msp_sci012_ncc_sci012_03.swf</file>
+		<x>509</x>
+		<y>351.5</y>
+		<xscale>1.61</xscale>
+		<yscale>1.61</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci001" name="Control room" enable="Y" default="N" thumb="ncc_sci001bg.png" display_order="2" is_premium="N" money="0" sharing="0" aid="14943">
+	<bg id="cbg_ncc_sci001_BG4" index="0">
+		<file>space.ncc_sci01bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci001_PROP1" index="4">
+		<file>space.msp_sci001.msp_sci001_ncc_sci001_on.swf</file>
+		<x>319.7</x>
+		<y>252.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci001_PROP2" index="3">
+		<file>space.msp_sci002.msp_sci002_ncc_sci002_side.swf</file>
+		<x>599.2</x>
+		<y>236.1</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci018" name="View Screen" enable="Y" default="N" thumb="ncc_sci018bg.png" display_order="2" is_premium="N" money="0" sharing="0" aid="14969">
+	<bg id="cbg_ncc_sci018_cbg_ncc_sci001_BG4" index="0">
+		<file>space.ncc_sci01bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci018_PROP10" index="4">
+		<file>space.msp_sci034.msp_sci034_ncc_sci034_still.swf</file>
+		<x>308.7</x>
+		<y>251.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci005" name="Engineering" enable="Y" default="N" thumb="ncc_sci005bg.png" display_order="3" is_premium="N" money="0" sharing="0" aid="14946">
+	<bg id="cbg_ncc_sci005_BG12" index="0">
+		<file>space.ncc_sci05bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci005_PROP4" index="9">
+		<file>space.ncc_sci004.swf</file>
+		<x>232</x>
+		<y>156</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci005_PROP6" index="6">
+		<file>space.ncc_sci007_01.swf</file>
+		<x>600.9</x>
+		<y>278.7</y>
+		<xscale>0.58</xscale>
+		<yscale>0.58</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci005_PROP7" index="3">
+		<file>space.ncc_sci005.swf</file>
+		<x>646</x>
+		<y>191.8</y>
+		<xscale>0.58</xscale>
+		<yscale>0.58</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci005_PROP8" index="4">
+		<file>space.ncc_sci007_02.swf</file>
+		<x>448</x>
+		<y>202.1</y>
+		<xscale>0.58</xscale>
+		<yscale>0.58</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci005_PROP9" index="5">
+		<file>space.ncc_sci006.swf</file>
+		<x>529.8</x>
+		<y>202.7</y>
+		<xscale>0.58</xscale>
+		<yscale>0.58</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci005_PROP11" index="1">
+		<file>space.msp_sci008.msp_sci008_ncc_sci008_side.swf</file>
+		<x>504</x>
+		<y>296.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci013" name="Sick bay" enable="Y" default="N" thumb="ncc_sci013bg.png" display_order="4" is_premium="N" money="0" sharing="0" aid="14953">
+	<bg id="cbg_ncc_sci013_BG1" index="0">
+		<file>space.ncc_sci13bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci013_PROP0" index="2">
+		<file>space.msp_sci015.msp_sci015_ncc_sci015_front.swf</file>
+		<x>300</x>
+		<y>115</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci013_PROP1" index="3">
+		<file>space.msp_sci018a.msp_sci018a_ncc_sci018_frontclose.swf</file>
+		<x>-26</x>
+		<y>85</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci013_PROP2" index="4">
+		<file>space.msp_sci017.msp_sci017_ncc_sci017_side.swf</file>
+		<x>558.9</x>
+		<y>97.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci013_PROP3" index="5">
+		<file>space.msp_sci014.msp_sci014_ncc_sci014_side.swf</file>
+		<x>423</x>
+		<y>232.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci013_PROP4" index="7">
+		<file>space.msp_sci014.msp_sci014_ncc_sci014_side.swf</file>
+		<x>567</x>
+		<y>310.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci013_PROP5" index="8">
+		<file>space.msp_sci016.msp_sci016_ncc_sci016_on.swf</file>
+		<x>171</x>
+		<y>231</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci017" name="Cargo Bay" enable="Y" default="N" thumb="ncc_sci017bg.png" display_order="5" is_premium="N" money="0" sharing="0" aid="14957">
+	<bg id="cbg_ncc_sci017_BG7" index="0">
+		<file>space.ncc_sci14bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci017_PROP8" index="3">
+		<file>space.msp_sci033.msp_sci033_ncc_sci032_close.swf</file>
+		<x>280.4</x>
+		<y>173.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci003" name="Lift lobby" enable="Y" default="N" thumb="ncc_sci003bg.png" display_order="6" is_premium="N" money="0" sharing="0" aid="14944">
+	<bg id="cbg_ncc_sci003_BG22" index="0">
+		<file>space.ncc_sci03bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci003_PROP12" index="3">
+		<file>space.msp_sci003b.msp_sci003b_ncc_sci003_sideclose.swf</file>
+		<x>293</x>
+		<y>160</y>
+		<xscale>0.72</xscale>
+		<yscale>0.72</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci003_PROP13" index="5">
+		<file>space.msp_sci031.msp_sci031_ncc_sci031_side.swf</file>
+		<x>170.6</x>
+		<y>93.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci003_PROP14" index="6">
+		<file>space.msp_sci030.msp_sci030_ncc_sci030_side.swf</file>
+		<x>164.7</x>
+		<y>199.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci003_PROP15" index="7">
+		<file>space.msp_sci003b.msp_sci003b_ncc_sci003_sideclose.swf</file>
+		<x>34</x>
+		<y>287</y>
+		<xscale>0.72</xscale>
+		<yscale>0.72</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci003_PROP16" index="8">
+		<file>space.msp_sci029.msp_sci029_ncc_sci029_front.swf</file>
+		<x>513</x>
+		<y>125</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci003_PROP17" index="9">
+		<file>space.ncc_sci019.swf</file>
+		<x>584</x>
+		<y>202</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci004" name="Hallway" enable="Y" default="N" thumb="ncc_sci004bg.png" display_order="7" is_premium="N" money="0" sharing="0" aid="14945">
+	<bg id="cbg_ncc_sci004_BG69" index="0">
+		<file>space.ncc_sci04bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci004_PROP56" index="2">
+		<file>space.msp_sci003a.msp_sci003a_ncc_sci003_frontclose.swf</file>
+		<x>122.8</x>
+		<y>157</y>
+		<xscale>0.79</xscale>
+		<yscale>0.79</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci004_PROP57" index="3">
+		<file>space.msp_sci003a.msp_sci003a_ncc_sci003_frontclose.swf</file>
+		<x>508.2</x>
+		<y>156</y>
+		<xscale>0.79</xscale>
+		<yscale>0.79</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci004_PROP58" index="5">
+		<file>space.msp_sci031.msp_sci031_ncc_sci031_front.swf</file>
+		<x>307</x>
+		<y>44</y>
+		<xscale>0.71</xscale>
+		<yscale>0.71</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci004_PROP59" index="7">
+		<file>space.msp_sci030.msp_sci030_ncc_sci030_front.swf</file>
+		<x>306</x>
+		<y>117</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci014" name="Entrance" enable="Y" default="N" thumb="ncc_sci014bg.png" display_order="8" is_premium="N" money="0" sharing="0" aid="14954">
+	<bg id="cbg_ncc_blank_BG10" index="0">
+		<file>space.ncc_sci11bg.swf</file>
+		<color r="ccColorA">0</color>
+	</bg>
+	<prop id="PROP49" index="4">
+		<file>space.msp_sci011.msp_sci011_ncc_sci011_open.swf</file>
+		<x>319</x>
+		<y>202</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci015" name="Entrance" enable="Y" default="N" thumb="ncc_sci015bg.png" display_order="9" is_premium="N" money="0" sharing="0" aid="14955">
+	<bg id="cbg_ncc_sci015_cbg_ncc_blank_BG10" index="0">
+		<file>space.ncc_sci11bg.swf</file>
+		<color r="ccColorA">0</color>
+	</bg>
+	<prop id="cbg_ncc_sci015_PROP47" index="5">
+		<file>space.ncc_sci009.swf</file>
+		<x>328.1</x>
+		<y>210</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci015_PROP48" index="1">
+		<file>space.ncc_sci010.swf</file>
+		<x>331</x>
+		<y>209</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci009" name="Desert base" enable="Y" default="N" thumb="ncc_sci009bg.png" display_order="10" is_premium="N" money="0" sharing="0" aid="14949">
+	<bg id="cbg_ncc_sci009_BG11" index="0">
+		<file>space.ncc_sci09bg.swf</file>
+	</bg>
+	<prop id="PROP22" index="2">
+		<file>space.ncc_sci_build_01.swf</file>
+		<x>424.8</x>
+		<y>155.9</y>
+		<xscale>0.6</xscale>
+		<yscale>0.6</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP23" index="3">
+		<file>space.ncc_sci_build_01.swf</file>
+		<x>581.8</x>
+		<y>178.9</y>
+		<xscale>1.01</xscale>
+		<yscale>1.01</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP24" index="4">
+		<file>space.ncc_sci024.swf</file>
+		<x>256.9</x>
+		<y>234.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP25" index="5">
+		<file>space.ncc_sci024.swf</file>
+		<x>197.9</x>
+		<y>258.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP26" index="6">
+		<file>space.ncc_sci020.swf</file>
+		<x>329.8</x>
+		<y>325.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP27" index="7">
+		<file>space.ncc_sci021.swf</file>
+		<x>578.3</x>
+		<y>311.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP28" index="1">
+		<file>space.ncc_sci022.swf</file>
+		<x>320</x>
+		<y>54</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci012" name="Snowy base" enable="Y" default="N" thumb="ncc_sci012bg.png" display_order="11" is_premium="N" money="0" sharing="0" aid="14952">
+	<bg id="cbg_ncc_sci012_BG1" index="0">
+		<file>space.ncc_sci12bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci012_PROP7" index="1">
+		<file>space.ncc_sci_build_02.swf</file>
+		<x>313</x>
+		<y>19</y>
+		<xscale>0.97</xscale>
+		<yscale>0.97</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP8" index="2">
+		<file>space.ncc_sci_build_02.swf</file>
+		<x>736</x>
+		<y>-103</y>
+		<xscale>3.3</xscale>
+		<yscale>3.3</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP9" index="3">
+		<file>space.ncc_sci025.swf</file>
+		<x>515</x>
+		<y>265</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP10" index="4">
+		<file>space.ncc_sci025.swf</file>
+		<x>515</x>
+		<y>232</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP11" index="5">
+		<file>space.ncc_sci025.swf</file>
+		<x>543</x>
+		<y>277</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP12" index="6">
+		<file>space.ncc_sci025.swf</file>
+		<x>543</x>
+		<y>244</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP13" index="9">
+		<file>space.msp_sci023.msp_sci023_ncc_sci023_on.swf</file>
+		<x>180</x>
+		<y>176.2</y>
+		<xscale>0.53</xscale>
+		<yscale>0.53</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP14" index="11">
+		<file>space.msp_sci023.msp_sci023_ncc_sci023_on.swf</file>
+		<x>389</x>
+		<y>290.2</y>
+		<xscale>0.97</xscale>
+		<yscale>0.97</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_ncc_sci012_PROP15" index="10">
+		<file>space.ncc_sci025.swf</file>
+		<x>337</x>
+		<y>307</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci007" name="Sandy planet" enable="Y" default="N" thumb="ncc_sci007bg.png" display_order="12" is_premium="N" money="0" sharing="0" aid="14947">
+	<bg id="cbg_ncc_sci007_BG9" index="0">
+		<file>space.ncc_sci07bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_ncc_sci008" name="Rocky planet" enable="Y" default="N" thumb="ncc_sci008bg.png" display_order="13" is_premium="N" money="0" sharing="0" aid="14948">
+	<bg id="cbg_ncc_sci008_BG7" index="0">
+		<file>space.ncc_sci08bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_ncc_sci010" name="Volcanic planet" enable="Y" default="N" thumb="ncc_sci010bg.png" display_order="14" is_premium="N" money="0" sharing="0" aid="14950">
+	<bg id="cbg_ncc_sci010_BG2" index="0">
+		<file>space.ncc_sci10bg.swf</file>
+	</bg>
+	<prop id="cbg_ncc_sci010_PROP0" index="3">
+		<file>space.ncc_sci027.swf</file>
+		<x>37</x>
+		<y>258</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_ncc_sci011" name="Space travel" enable="Y" default="N" thumb="ncc_sci011bg.png" display_order="15" is_premium="N" money="0" sharing="0" aid="14951">
+	<bg id="BG8" index="0">
+		<file>space.ncc_sci11bg.swf</file>
+	</bg>
+	<prop id="PROP6" index="3">
+		<file>space.ncc_sci028.swf</file>
+		<x>321</x>
+		<y>200</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP7" index="4">
+		<file>space.msp_sci_ship01.msp_sci_ship01_ncc_sci_ship_01.swf</file>
+		<x>342.7</x>
+		<y>207.5</y>
+		<xscale>1.19</xscale>
+		<yscale>1.19</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="msp_ncc_gun_sci02" name="Laser gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_sci02_ncc_gun_still.swf" enable="Y" is_premium="N" aid="14792" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_sci02_ncc_gun_loop.swf" name="keep shooting" enable="Y"/>
+		<state id="msp_ncc_gun_sci02_ncc_gun_once.swf" name="shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_sci02_ncc_gun_still.swf" name="still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_msci01" name="Laser rifle" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_msci01_ncc_gun_still.swf" enable="Y" is_premium="N" aid="14796" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_msci01_ncc_gun_fire.swf" name="automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_msci01_ncc_gun_loop.swf" name="burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_msci01_ncc_gun_once.swf" name="shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_msci01_ncc_gun_still.swf" name="still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_msci02" name="Laser rifle" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_msci02_ncc_gun_still.swf" enable="Y" is_premium="N" aid="14801" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_msci02_ncc_gun_fire.swf" name="automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_msci02_ncc_gun_loop.swf" name="burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_msci02_ncc_gun_once.swf" name="shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_msci02_ncc_gun_still.swf" name="still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="ncc_sci_build_01.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14806" money="0" sharing="0"/>
+	<prop id="ncc_sci_build_02.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14807" money="0" sharing="0"/>
+	<prop id="msp_sci_ship01" name="Spaceship" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci_ship01_ncc_sci_ship_01.swf" enable="Y" is_premium="N" aid="14808" money="0" sharing="0">
+		<state id="msp_sci_ship01_ncc_sci_ship_01.swf" name="forward" enable="Y" default="Y"/>
+		<state id="msp_sci_ship01_ncc_sci_ship_01_down.swf" name="side - take off" enable="Y"/>
+		<state id="msp_sci_ship01_ncc_sci_ship_01_fire.swf" name="side - fire lasers" enable="Y"/>
+		<state id="msp_sci_ship01_ncc_sci_ship_01_side.swf" name="side - forward" enable="Y"/>
+		<state id="msp_sci_ship01_ncc_sci_ship_01_still.swf" name="side - still" enable="Y"/>
+		<state id="msp_sci_ship01_ncc_sci_ship_01_topstill.swf" name="still" enable="Y"/>
+	</prop>
+	<prop id="msp_sci_ship02" name="Spaceship" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci_ship02_ncc_sci_ship_02.swf" enable="Y" is_premium="N" aid="14815" money="0" sharing="0">
+		<state id="msp_sci_ship02_ncc_sci_ship_02.swf" name="forward" enable="Y" default="Y"/>
+		<state id="msp_sci_ship02_ncc_sci_ship_02_down.swf" name="side - take off" enable="Y"/>
+		<state id="msp_sci_ship02_ncc_sci_ship_02_fire.swf" name="side - fire lasers" enable="Y"/>
+		<state id="msp_sci_ship02_ncc_sci_ship_02_fire_b.swf" name="side - fire cannon" enable="Y"/>
+		<state id="msp_sci_ship02_ncc_sci_ship_02_side.swf" name="side - forward" enable="Y"/>
+		<state id="msp_sci_ship02_ncc_sci_ship_02_still.swf" name="side - still" enable="Y"/>
+		<state id="msp_sci_ship02_msp_sci_ship01_ncc_sci_ship_02_topstill.swf" name="still" enable="Y"/>
+	</prop>
+	<prop id="msp_sci001" name="Holographic table" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci001_ncc_sci001_on.swf" enable="Y" is_premium="N" aid="14823" money="0" sharing="0">
+		<state id="msp_sci001_ncc_sci001_off.swf" name="off" enable="Y"/>
+		<state id="msp_sci001_ncc_sci001_on.swf" name="on" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_sci002" name="Digital board" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci002_ncc_sci002_front.swf" enable="Y" is_premium="N" aid="14826" money="0" sharing="0">
+		<state id="msp_sci002_ncc_sci002_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci002_ncc_sci002_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci003a" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci003a_ncc_sci003_frontclose.swf" enable="Y" is_premium="N" aid="14829" money="0" sharing="0">
+		<state id="msp_sci003a_ncc_sci003_frontclose.swf" name="closed" enable="Y" default="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontclosing.swf" name="closing" enable="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontclosingtran.swf" name="closing - transparent" enable="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontopen.swf" name="opened" enable="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontopening.swf" name="opening" enable="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontopeningtran.swf" name="opening - transparent" enable="Y"/>
+		<state id="msp_sci003a_ncc_sci003_frontopentran.swf" name="opened - transparent" enable="Y"/>
+	</prop>
+	<prop id="msp_sci003b" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci003b_ncc_sci003_sideclose.swf" enable="Y" is_premium="N" aid="14837" money="0" sharing="0">
+		<state id="msp_sci003b_ncc_sci003_sideclose.swf" name="closed" enable="Y" default="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideclosing.swf" name="closing" enable="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideclosingtran.swf" name="closing - transparent" enable="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideopen.swf" name="opened" enable="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideopening.swf" name="opening" enable="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideopeningtran.swf" name="opening - transparent" enable="Y"/>
+		<state id="msp_sci003b_ncc_sci003_sideopentran.swf" name="opened - transparent" enable="Y"/>
+	</prop>
+	<prop id="ncc_sci004.swf" name="Tank" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14845" money="0" sharing="0"/>
+	<prop id="ncc_sci005.swf" name="Block" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14846" money="0" sharing="0"/>
+	<prop id="ncc_sci006.swf" name="Ladder" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14847" money="0" sharing="0"/>
+	<prop id="ncc_sci007_01.swf" name="Computer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14848" money="0" sharing="0"/>
+	<prop id="ncc_sci007_02.swf" name="Computer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14849" money="0" sharing="0"/>
+	<prop id="msp_sci008" name="Yellow line" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci008_ncc_sci008_front.swf" enable="Y" is_premium="N" aid="14850" money="0" sharing="0">
+		<state id="msp_sci008_ncc_sci008_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci008_ncc_sci008_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="ncc_sci009.swf" name="Entrance" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14853" money="0" sharing="0"/>
+	<prop id="ncc_sci010.swf" name="Cargo door" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14854" money="0" sharing="0"/>
+	<prop id="msp_sci011" name="Entrance" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci011_ncc_sci011_open.swf" enable="N" is_premium="N" aid="14855" money="0" sharing="0">
+		<state id="msp_sci011_ncc_sci011_close.swf" name="closed" enable="Y"/>
+		<state id="msp_sci011_ncc_sci011_open.swf" name="opened" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_sci012" name="Navigation station" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci012_ncc_sci012_01.swf" enable="Y" is_premium="N" aid="14858" money="0" sharing="0">
+		<state id="msp_sci012_ncc_sci012_01.swf" name="on" enable="Y" default="Y"/>
+		<state id="msp_sci012_ncc_sci012_02.swf" name="off" enable="Y"/>
+		<state id="msp_sci012_ncc_sci012_03.swf" name="receiving data" enable="Y"/>
+		<state id="msp_sci012_ncc_sci012_04.swf" name="sphere" enable="Y"/>
+	</prop>
+	<prop id="ncc_sci013.swf" name="Bridge" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14863" money="0" sharing="0"/>
+	<prop id="msp_sci014" name="Bed" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci014_ncc_sci014_front.swf" enable="Y" is_premium="N" aid="14864" money="0" sharing="0">
+		<state id="msp_sci014_ncc_sci014_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci014_ncc_sci014_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci015" name="In-wall display" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci015_ncc_sci015_front.swf" enable="Y" is_premium="N" aid="14867" money="0" sharing="0">
+		<state id="msp_sci015_ncc_sci015_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci015_ncc_sci015_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci016" name="Holographic display" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci016_ncc_sci016_on.swf" enable="Y" is_premium="N" aid="14870" money="0" sharing="0">
+		<state id="msp_sci016_ncc_sci016_off.swf" name="off" enable="Y"/>
+		<state id="msp_sci016_ncc_sci016_on.swf" name="on - sphere" enable="Y" default="Y"/>
+		<state id="msp_sci016_ncc_sci016_on02.swf" name="on" enable="Y"/>
+	</prop>
+	<prop id="msp_sci017" name="Wall display" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci017_ncc_sci017_front.swf" enable="Y" is_premium="N" aid="14874" money="0" sharing="0">
+		<state id="msp_sci017_ncc_sci017_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci017_ncc_sci017_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci018a" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci018a_ncc_sci018_frontclose.swf" enable="Y" is_premium="N" aid="14877" money="0" sharing="0">
+		<state id="msp_sci018a_ncc_sci018_frontclose.swf" name="closed" enable="Y" default="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontclosing.swf" name="closing" enable="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontclosingtran.swf" name="closing - transparent" enable="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontopen.swf" name="opened" enable="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontopening.swf" name="opening" enable="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontopeningtran.swf" name="opening - transparent" enable="Y"/>
+		<state id="msp_sci018a_ncc_sci018_frontopentran.swf" name="opened - transparent" enable="Y"/>
+	</prop>
+	<prop id="msp_sci018b" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci018b_ncc_sci018_sideclose.swf" enable="Y" is_premium="N" aid="14885" money="0" sharing="0">
+		<state id="msp_sci018b_ncc_sci018_sideclose.swf" name="closed" enable="Y" default="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideclosing.swf" name="closing" enable="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideclosingtran.swf" name="closing - transparent" enable="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideopen.swf" name="opened" enable="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideopening.swf" name="opening" enable="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideopeningtran.swf" name="opening - transparent" enable="Y"/>
+		<state id="msp_sci018b_ncc_sci018_sideopentran.swf" name="opened - transparent" enable="Y"/>
+	</prop>
+	<prop id="ncc_sci019.swf" name="Wall control board" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14893" money="0" sharing="0"/>
+	<prop id="ncc_sci020.swf" name="Landscape" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14894" money="0" sharing="0"/>
+	<prop id="ncc_sci021.swf" name="Bush" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14895" money="0" sharing="0"/>
+	<prop id="ncc_sci022.swf" name="Space battle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14896" money="0" sharing="0"/>
+	<prop id="msp_sci023" name="Storage tank" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci023_ncc_sci023_off.swf" enable="Y" is_premium="N" aid="14897" money="0" sharing="0">
+		<state id="msp_sci023_ncc_sci023_off.swf" name="off" enable="Y" default="Y"/>
+		<state id="msp_sci023_ncc_sci023_on.swf" name="on" enable="Y"/>
+	</prop>
+	<prop id="ncc_sci024.swf" name="Storage tank" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14900" money="0" sharing="0"/>
+	<prop id="ncc_sci025.swf" name="Box" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14901" money="0" sharing="0"/>
+	<prop id="ncc_sci026.swf" name="Speed lines" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14902" money="0" sharing="0"/>
+	<prop id="ncc_sci027.swf" name="Lava" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14903" money="0" sharing="0"/>
+	<prop id="ncc_sci028.swf" name="Moving stars" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="14904" money="0" sharing="0"/>
+	<prop id="msp_sci029" name="Wall control board" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci029_ncc_sci029_front.swf" enable="Y" is_premium="N" aid="14905" money="0" sharing="0">
+		<state id="msp_sci029_ncc_sci029_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci029_ncc_sci029_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci030" name="Wall display" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci030_ncc_sci030_front.swf" enable="Y" is_premium="N" aid="14908" money="0" sharing="0">
+		<state id="msp_sci030_ncc_sci030_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci030_ncc_sci030_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sci031" name="Light" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci031_ncc_sci031_front.swf" enable="Y" is_premium="N" aid="14911" money="0" sharing="0">
+		<state id="msp_sci031_ncc_sci031_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sci031_ncc_sci031_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sciwall01" name="Wall" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sciwall01_ncc_sciwall01_front.swf" enable="Y" is_premium="N" aid="14914" money="0" sharing="0">
+		<state id="msp_sciwall01_ncc_sciwall01_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sciwall01_ncc_sciwall01_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_sciwall02" name="Wall" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sciwall02_ncc_sciwall02_front.swf" enable="Y" is_premium="N" aid="14917" money="0" sharing="0">
+		<state id="msp_sciwall02_ncc_sciwall02_front.swf" name="front" enable="Y" default="Y"/>
+		<state id="msp_sciwall02_ncc_sciwall02_side.swf" name="side" enable="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_sci01" name="Laser gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_sci01_ncc_gun_still.swf" enable="Y" is_premium="N" aid="14920" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_sci01_ncc_gun_loop.swf" name="keep shooting" enable="Y"/>
+		<state id="msp_ncc_gun_sci01_ncc_gun_once.swf" name="shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_sci01_ncc_gun_still.swf" name="still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_sci033" name="Cargo Doors" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci033_ncc_sci032_close.swf" enable="N" is_premium="N" aid="14924" money="0" sharing="0">
+		<state id="msp_sci033_ncc_sci032_close.swf" name="closed" enable="Y" default="Y"/>
+		<state id="msp_sci033_ncc_sci032_open.swf" name="opened - both" enable="Y"/>
+		<state id="msp_sci033_ncc_sci032_open1.swf" name="opened - one" enable="Y"/>
+		<state id="msp_sci033_ncc_sci032_open2.swf" name="opened - two" enable="Y"/>
+	</prop>
+	<prop id="msp_sci033a" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci033a_ncc_sci033_once.swf" enable="Y" is_premium="N" aid="14960" money="0" sharing="0">
+		<state id="msp_sci033a_ncc_sci033_loop.swf" name="loop" enable="Y"/>
+		<state id="msp_sci033a_ncc_sci033_mult.swf" name="multiple" enable="Y"/>
+		<state id="msp_sci033a_ncc_sci033_once.swf" name="once" enable="Y" default="Y"/>
+	</prop>
+	<prop id="ncc_sci034.swf" name="Screenviewer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="14964" money="0" sharing="0"/>
+	<prop id="msp_sci034" name="View screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci034_ncc_sci034_still.swf" enable="Y" is_premium="N" aid="14965" money="0" sharing="0">
+		<state id="msp_sci034_ncc_sci034_open.swf" name="connect" enable="Y"/>
+		<state id="msp_sci034_ncc_sci034_still.swf" name="default" enable="Y" default="Y"/>
+		<state id="msp_sci034_ncc_sci034_close.swf" name="disconnect" enable="Y"/>
+	</prop>
+	<effect id="ncc_fx_scifi.swf" type="ANIME" resize="false" move="false" name="Analyzing specimen" enable="N" is_premium="N" aid="14958" money="0" sharing="0" display_order="0"/>
+	<effect id="ncc_sci002fx.swf" type="ANIME" resize="false" move="false" name="Snow storm" enable="N" is_premium="N" aid="14959" money="0" sharing="0" display_order="0"/>
+	<effect id="ncc_sci003fx.swf" type="ANIME" resize="false" move="false" name="Screenviewer" enable="N" is_premium="N" aid="14970" money="0" sharing="0" display_order="0"/>
+	<effect id="ncc_sci004fx.swf" type="ANIME" resize="false" move="false" name="Red alert" enable="N" is_premium="N" aid="14971" money="0" sharing="0" display_order="0"/>
+	<effect id="ncc_sci005fx.swf" type="ANIME" resize="false" move="false" name="Ceiling Crumbling" enable="N" is_premium="N" aid="14972" money="0" sharing="0" display_order="0"/>
+</theme>

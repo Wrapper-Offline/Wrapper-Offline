@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="street" name="Street">
+	<char id="cliff" name="Cliff" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="N">
+		<action id="dance.swf" name="Dance" loop="Y" totalframe="48"/>
+		<action id="guitar.swf" name="Play Guitar" loop="Y" totalframe="100"/>
+		<action id="stand.swf" name="Stand" loop="Y"  totalframe="61"/>
+		<action id="fire.swf" name="fire" loop="Y"  totalframe="35"></action>
+		<action id="abuse.swf" name="abuse" loop="Y"  totalframe="30"></action>
+		<action id="attack.swf" name="attack" loop="Y" totalframe="21" ></action>
+		<action id="beg.swf" name="beg" loop="Y" totalframe="8" ></action>
+		<action id="die.swf" name="die" loop="N" totalframe="62"></action>
+		<action id="kiss.swf" name="kiss" loop="Y"  totalframe="41"></action>
+		<action id="laugh.swf" name="laugh" loop="Y" totalframe="3" ></action>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="60" ></action>
+		<action id="wave.swf" name="wave" loop="Y" totalframe="60" ></action>
+		<action id="sing.swf" name="sing" loop="Y" totalframe="40" ></action>
+		<motion id="run.swf" name="Run" loop="Y" totalframe="20"></motion>
+		<motion id="stand.swf" name="Walk" loop="Y" totalframe="61"></motion>
+	</char>
+	<char id="kim" name="Kim" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="N">
+		<action id="attack.swf" name="attack" loop="Y"  totalframe="100"></action>
+		<action id="cry.swf" name="cry" loop="Y"  totalframe="35"></action>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="16" ></action>
+		<action id="die.swf" name="die" loop="N" totalframe="91"></action>
+		<action id="electrocuted.swf" name="get electrocuted" loop="N" totalframe="185" ></action>
+		<action id="keyboard.swf" name="play keyboard" loop="Y"  totalframe="40"></action>
+		<action id="kiss.swf" name="kiss" loop="Y"  totalframe="62"></action>
+		<action id="laugh.swf" name="Laugh" loop="Y"  totalframe="16"/>
+		<action id="mad.swf" name="get mad" loop="Y"  totalframe="60"></action>
+		<action id="sing.swf" name="sing" loop="Y"  totalframe="100"></action>
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="30"/>
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="50"/>
+		<action id="wave.swf" name="wave" loop="Y" totalframe="60" ></action>
+		<motion id="stand.swf" name="Walk" loop="Y" totalframe="30"></motion>
+		<motion id="run.swf" name="Run" loop="Y" totalframe="61"></motion>
+	</char>
+	<char id="grannie" name="Grannie" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="N">
+		<action id="dance.swf" name="Dance" loop="Y" totalframe="36" />
+		<action id="fart.swf" name="Fart" loop="Y" totalframe="60" />
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="60" />
+		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="40" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="40" />
+		<motion id="stand.swf" name="Displace" loop="Y" totalframe="40"></motion>
+		<motion id="run.swf" name="Run" loop="Y" totalframe="14"></motion>
+	</char>
+	<char id="kan" name="Kan" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="N">
+		<action id="angry.swf" name="Get Angry" loop="Y" totalframe="40" />
+		<action id="attack.swf" name="Attack" loop="Y" totalframe="60" />
+		<action id="drums.swf" name="Drum" loop="Y" totalframe="60" />
+		<action id="sad.swf" name="Cry" loop="Y" totalframe="37" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="80" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="80" />
+		<motion id="run.swf" name="Run" loop="Y" totalframe="24"></motion>
+		<motion id="stand.swf" name="Displace" loop="Y" totalframe="80"></motion>
+	</char>
+	<char id="matchBoy" name="Match Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="N">
+		<action id="dance.swf" name="Dance" loop="Y" totalframe="44" />
+		<action id="die.swf" name="Die" loop="N" totalframe="72" />
+		<action id="fart.swf" name="Fart" loop="Y" totalframe="48" />
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="54" />
+		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="3" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="72" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="48"></action>
+		<action id="threaten.swf" name="Become Threatened" loop="Y" totalframe="2"></action>
+		<action id="propose.swf" name="Propose (a)" loop="Y" totalframe="40" />
+		<action id="propose02.swf" name="Propose (b)" loop="Y" totalframe="45" />
+		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="42" />
+		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="50" />
+		<action id="kill06.swf" name="Kill" loop="Y" totalframe="20" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="8"></motion>
+	</char>
+	<char id="matchBoyNew" name="Match Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="dance.swf" name="Dance" loop="Y" totalframe="44" />
+		<action id="die.swf" name="Die" loop="N" totalframe="72" />
+		<action id="fart.swf" name="Fart" loop="Y" totalframe="48" />
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="54" />
+		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="3" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="72" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="48"></action>
+		<action id="threaten.swf" name="Become Threatened" loop="Y" totalframe="2"></action>
+		<action id="propose.swf" name="Propose (a)" loop="Y" totalframe="40" />
+		<action id="propose02.swf" name="Propose (b)" loop="Y" totalframe="45" />
+		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="42" />
+		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="50" />
+		<action id="kill06.swf" name="Kill" loop="Y" totalframe="20" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="8"></motion>
+	</char>
+	<char id="matchGirl" name="Match Girl" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="35" reactionid="die.swf"/>
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="4" reactionid="stand.swf"/>
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="50" reactionid="talk.swf"/>
+		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="35" reactionid="kill06.swf"/>
+		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="70" reactionid="kill06.swf"/>
+		<action id="shy.swf" name="Shy" loop="Y" totalframe="16" reactionid="propose.swf"/>
+		<action id="dance01.swf" name="Dance (a)" loop="Y" totalframe="25" reactionid="dance.swf"/>
+		<action id="dance02.swf" name="Dance (b)" loop="Y" totalframe="13" reactionid="dance.swf"/>
+		<action id="greeting.swf" name="Greeting (a)" loop="Y" totalframe="65" reactionid="kiss.swf"/>
+		<action id="greeting02.swf" name="Greeting (b)" loop="Y" totalframe="75" reactionid="kiss.swf"/>
+		<action id="sing.swf" name="Sing" loop="Y" totalframe="24" reactionid="laugh.swf"/>
+		<action id="think.swf" name="Think" loop="Y" totalframe="75" reactionid="talk.swf"/>
+		<action id="cry.swf" name="Cry" loop="Y" totalframe="24" reactionid="murder01.swf"/>
+		<action id="scare.swf" name="Scare" loop="Y" totalframe="2" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="58" reactionid="walk.swf"/>
+	</char>
+	<char id="styleA_Bush" name="Bush (style A)" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="N">
+		<action id="laughing.swf" name="Laugh" loop="N" totalframe="70" />
+		<action id="ear.swf" name="Pick ear" loop="Y" totalframe="25" />
+		<action id="fuck.swf" name="Give Middle Finger" loop="Y" totalframe="15" />
+		<action id="salalva.swf" name="Salivate" loop="Y" totalframe="49" />
+		<action id="suck_finger.swf" name="Suck thumb" loop="Y" totalframe="99" />
+		<action id="vomit.swf" name="Vomit" loop="Y" totalframe="38" />
+		<action id="stomache.swf" name="Get Sick" loop="Y" totalframe="14" />
+		<action id="runny nose.swf" name="Pick nose" loop="Y" totalframe="18" />
+		<action id="peeing.swf" name="Pee" loop="Y" totalframe="53" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="66" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="41" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="18" />
+	</char>
+	<char id="styleA_Paris" name="Paris Style A" thumb="stand01.swf" facing="left" default="stand01.swf" motion="walk01.swf" enable="N">
+		<action id="anger01.swf" name="Get Angry" loop="Y" totalframe="3" />
+		<action id="fart01.swf" name="Fart" loop="Y" totalframe="48" />
+		<action id="kiss01.swf" name="Kiss" loop="Y" totalframe="48" />
+		<action id="laugh01.swf" name="Laugh" loop="Y" totalframe="48" />
+		<action id="stand01.swf" name="Stand" loop="Y" totalframe="72" />
+		<action id="talk01.swf" name="Talk" loop="Y" totalframe="48" />
+		<action id="threaten01.swf" name="Become Threatened" loop="Y" totalframe="4" />
+		<action id="vomit01.swf" name="Vomit" loop="Y" totalframe="52" />
+		<action id="cry01.swf" name="Cry" loop="Y" totalframe="9" />
+		<motion id="walk01.swf" name="Walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="styleB_Bush" name="Bush (style B)" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="N">
+		<action id="eyesattack.swf" name="Gouge Eyes" loop="Y" totalframe="115" />
+		<action id="laughing2.swf" name="Laugh" loop="Y" totalframe="4" />
+		<action id="running_nose.swf" name="Get Runny Nose" loop="Y" totalframe="61" />
+		<action id="sala.swf" name="Salivate" loop="Y" totalframe="68" />
+		<action id="smoke.swf" name="Smoke" loop="Y" totalframe="98" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="95" />
+		<action id="suckFinger.swf" name="Suck Thumb" loop="Y" totalframe="111" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="37" />
+		<action id="vomit-01.swf" name="Vomit" loop="Y" totalframe="46" />
+		<action id="wig.swf" name="Adjust Wig" loop="Y" totalframe="90" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="styleB_Paris" name="Paris Style B" thumb="stand-01.swf" facing="left" default="stand-01.swf" motion="walk.swf" enable="N">
+		<action id="laugh-01.swf" name="Laugh" loop="Y" totalframe="36" />
+		<action id="liu-ear.swf" name="Pick ear" loop="Y" totalframe="55" />
+		<action id="liu-nose01.swf" name="Pick nose" loop="Y" totalframe="110" />
+		<action id="Mpose-04.swf" name="Pose (A)" loop="Y" totalframe="47" />
+		<action id="pose-03.swf" name="Pose (B)" loop="Y" totalframe="55" />
+		<action id="smoke.swf" name="Smoke" loop="Y" totalframe="53" />
+		<action id="stand-01.swf" name="Stand" loop="Y" totalframe="100" />
+		<action id="talk-01.swf" name="Talk" loop="Y" totalframe="13" />
+		<action id="wig-02.swf" name="Adjust Wig" loop="Y" totalframe="87" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="40" />
+	</char>
+	<char id="obama" name="Barack O." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" /> 
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" /> 
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" /> 
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" /> 
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" /> 
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" /> 
+		<action id="split01.swf" name="spit" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" /> 
+		<category name="talk">
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" /> 
+			<action id="talk01_angry.swf" name="angry (a)" loop="Y" totalframe="45" />
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" /> 
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk04_confi.swf" name="smiling" loop="Y" totalframe="45" /> 
+			<action id="talk06_high.swf" name="excited" loop="Y" totalframe="45" /> 
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk08_sad.swf" name="sad" loop="Y" totalframe="45" /> 
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" /> 
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think02.swf" name="ponder" loop="Y" totalframe="60" /> 
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" /> 
+		</category>
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="bush" name="George B." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk01_angry.swf" name="angry (a)" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk04_confi.swf" name="smiling" loop="Y" totalframe="45" />
+			<action id="talk06_high.swf" name="excited" loop="Y" totalframe="45" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk08_sad.swf" name="sad" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think02.swf" name="ponder" loop="Y" totalframe="60" />
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="64" />
+	</char>
+	<char id="johnMcCain" name="John M." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk01_angry.swf" name="angry (a)" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think02.swf" name="ponder" loop="Y" totalframe="60" />
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="mittRomney" name="Mitt R." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="ronPaul" name="Ron P." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="jonStewart" name="Jon S." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<category name="think">
+			<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="johnEdwards" name="John E." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="rudyGiuliani" name="Rudy G." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="stephenColbert" name="Stephen C." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh02.swf" name="flash smile" loop="Y" totalframe="43" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="deer" name="Reindeer" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="Y">
+		<action id="angry.swf" name="talk angrily" loop="Y" totalframe="45" />
+		<action id="clap.swf" name="clap " loop="Y" totalframe="4" />
+		<action id="dog-like.swf" name="wiggle tail" loop="Y" totalframe="35" />
+		<action id="fear.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="55" />
+		<action id="laughing.swf" name="laugh" loop="Y" totalframe="4" />
+		<action id="pee.swf" name="pee" loop="Y" totalframe="65" />
+		<action id="R.swf" name="feeling itchy" loop="Y" totalframe="60" />
+		<action id="sad.swf" name="become sad" loop="Y" totalframe="55" />
+		<action id="shy.swf" name="feeling shy" loop="Y" totalframe="45" />
+		<action id="smile.swf" name="smile" loop="Y" totalframe="4" />
+		<action id="upsad.swf" name="sigh" loop="Y" totalframe="40" />
+		<motion id="run.swf" name="run" loop="Y" totalframe="17" />
+	</char>
+	<char id="sexy_girl" name="Miss Hottie" thumb="fairy08-greeting.swf" facing="left" default="fairy08-greeting.swf" motion="fairy05-fly.swf" enable="Y">
+		<action id="fair10-nob.swf" name="Nod" loop="Y" totalframe="30" />
+		<action id="fairy01-magic.swf" name="Use Magic Wand (Slow)" loop="Y" totalframe="30" />
+		<action id="fairy02-dance.swf" name="Dance (Slow)" loop="Y" totalframe="20" />
+		<action id="fairy03-dance.swf" name="Dance (Fast)" loop="Y" totalframe="48" />
+		<action id="fairy05-fly.swf" name="Fly" loop="Y" totalframe="20" />
+		<action id="fairy06-laugh.swf" name="Laugh" loop="Y" totalframe="4" />
+		<action id="fairy07-kick.swf" name="Kick" loop="Y" totalframe="65" />
+		<action id="fairy08-greeting.swf" name="Wave" loop="Y" totalframe="24" />
+		<action id="fairy09-angry.swf" name="Use Magic Wand (Fast)" loop="Y" totalframe="60" />
+		<action id="fairy11-think.swf" name="Think" loop="Y" totalframe="60" />
+		<action id="fairy012-vomit.swf" name="Vomit" loop="Y" totalframe="60" />
+		<action id="fairy13-shock.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="fairy14-kiss.swf" name="Kiss" loop="Y" totalframe="30" />
+		<action id="fairy15-laugh02.swf" name="Lick Lips" loop="Y" totalframe="40" />
+		<action id="fairy17-hip.swf" name="Dance (Sexy)" loop="Y" totalframe="20" />
+		<action id="fairy18-cry.swf" name="Cry" loop="Y" totalframe="4" />
+		<action id="fairy19-scold.swf" name="Become Angry" loop="Y" totalframe="65" />
+		<action id="fairy20-laydown.swf" name="Lie Down" loop="Y" totalframe="16" />
+		<action id="fairy21-ballet.swf" name="Dance (Ballet Jump)" loop="Y" totalframe="28" />
+		<action id="fairy22-ballet.swf" name="Dance (Ballet Stand)" loop="Y" totalframe="19" />
+		<action id="fairy23-sleep.swf" name="Sleep" loop="Y" totalframe="20" />
+		<motion id="fairy05-fly.swf" name="Fly" loop="Y" totalframe="20" />
+	</char>
+	<char id="snowman" name="Snowman" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="come02.swf" name="Beckon" loop="Y" totalframe="25" />
+		<action id="dance02.swf" name="Dance" loop="Y" totalframe="50" />
+		<action id="greeting.swf" name="Greeting" loop="Y" totalframe="29" />
+		<action id="hit.swf" name="Hit" loop="Y" totalframe="120" />
+		<action id="laugh01.swf" name="Laugh (A)" loop="Y" totalframe="4" />
+		<action id="laugh02.swf" name="Laugh (B)" loop="Y" totalframe="4" />
+		<action id="melt.swf" name="Melt" loop="N" totalframe="53" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="9" />
+		<action id="talk01_happy.swf" name="Talk (Happy)" loop="Y" totalframe="75" />
+		<action id="talk02_angry.swf" name="Talk (Angry)" loop="Y" totalframe="10" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="37" />
+	</char>
+	<char id="elf" name="Elf" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="anger.swf" name="Become Angry" loop="Y" totalframe="24" />
+		<action id="cry.swf" name="Cry" loop="Y" totalframe="8" />
+		<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="40" />
+		<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="50" />
+		<action id="dance03.swf" name="Dance (C)" loop="Y" totalframe="155" />
+		<action id="hello.swf" name="Wave" loop="Y" totalframe="60" />
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="80" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="60" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="45" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="24" />
+	</char>
+	<char id="boy" name="Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="jump01.swf" name="Jump" loop="Y" totalframe="35" />
+		<action id="smile.swf" name="Smile" loop="Y" totalframe="4" />
+		<action id="greeting.swf" name="Wave" loop="Y" totalframe="50" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="58" />
+		<action id="r.swf" name="Scratch" loop="Y" totalframe="35" />
+		<action id="throw.swf" name="Throw" loop="Y" totalframe="70" />
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="70" />
+		<action id="sad.swf" name="Cry" loop="Y" totalframe="9" />
+		<action id="innocent.swf" name="Innocent" loop="Y" totalframe="35" />
+		<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="40" />
+		<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="45" />
+		<action id="dance03.swf" name="Dance (C)" loop="Y" totalframe="42" />
+		<action id="dance04.swf" name="Dance (D)" loop="Y" totalframe="50" />
+		<action id="dance06.swf" name="Dance (E)" loop="Y" totalframe="20" />
+		<action id="dance07.swf" name="Dance (F)" loop="Y" totalframe="155" />
+		<action id="dance09.swf" name="Dance (G)" loop="Y" totalframe="36" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="santa" name="Santa" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="dance01.swf" name="Dance (Twist)" loop="Y" totalframe="48" />
+		<action id="dance02.swf" name="Dance (Disco)" loop="Y" totalframe="18" />
+		<action id="dance03.swf" name="Dance (Middle Finger)" loop="Y" totalframe="20" />
+		<action id="dance04.swf" name="Dance (Can-Can)" loop="Y" totalframe="45" />
+		<action id="dance05.swf" name="Dance (Russian)" loop="Y" totalframe="40" />
+		<action id="laugh03.swf" name="Laugh" loop="Y" totalframe="44" />
+		<action id="raisebell4.swf" name="Ring Bell" loop="Y" totalframe="115" />
+		<action id="talk01_angry.swf" name="Talk (Angry)" loop="Y" totalframe="45" />
+		<action id="talk06_sad.swf" name="Talk (Sad)" loop="Y" totalframe="45" />
+		<action id="shock01.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="sitdown01_laugh.swf" name="Sit" loop="Y" totalframe="4" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="23" />
+		<action id="talk05_happy.swf" name="Talk (Happy)" loop="Y" totalframe="45" />
+		<action id="think03.swf" name="Think" loop="Y" totalframe="78" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="12" />
+	</char>
+	<char id="Al_Gore" name="Al G." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="shock01.swf" name="become Shocked" loop="Y" totalframe="3" />
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="dance02.swf" name="dance (disco)" loop="Y" totalframe="18" />
+		<action id="dance03.swf" name="dance (middle finger)" loop="Y" totalframe="20" />
+		<action id="dance01.swf" name="dance (twist)" loop="Y" totalframe="48" />
+		<action id="shakehead01.swf" name="disagree (a)" loop="Y" totalframe="24" />
+		<action id="disagree01.swf" name="disagree (b)" loop="Y" totalframe="45" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="laugh01.swf" name="laugh (a)" loop="Y" totalframe="4" />
+		<action id="laugh02.swf" name="laugh (b)" loop="Y" totalframe="43" />
+		<action id="laugh03.swf" name="laugh (c)" loop="Y" totalframe="44" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="sad01.swf" name="sad" loop="Y" totalframe="70" />
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<action id="talk05_happy.swf" name="happy" loop="Y" totalframe="45" />
+		<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+		<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+		<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+		<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		<action id="angry01.swf" name="angry (a)" loop="Y" totalframe="40" />
+		<action id="talk02_angry.swf" name="angry (b)" loop="Y" totalframe="61" />
+
+		<action id="think01.swf" name="think" loop="Y" totalframe="60" />
+		<action id="think03.swf" name="ponder" loop="Y" totalframe="74" />
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+
+	<char id="Bill Clinton" name="Bill C." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="angry01.swf" name="angry (a)" loop="Y" totalframe="40" />
+		<action id="talk02_angry.swf" name="angry (b)" loop="Y" totalframe="61" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="disagree01.swf" name="disagree (a)" loop="Y" totalframe="45" />
+		<action id="shakehead01.swf" name="disagree (b)" loop="Y" totalframe="24" />
+		<action id="dance01.swf" name="dance (twist)" loop="Y" totalframe="48" />
+		<action id="dance02.swf" name="dance (disco)" loop="Y" totalframe="18" />
+		<action id="dance03.swf" name="dance (middle finger)" loop="Y" totalframe="20" />
+		<action id="fear01.swf" name="fear" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh01.swf" name="laugh (a)" loop="Y" totalframe="4" />
+		<action id="laugh02.swf" name="laugh (b)" loop="Y" totalframe="43" />
+		<action id="laugh03.swf" name="laugh (c)" loop="Y" totalframe="44" />
+		<action id="sad01.swf" name="sad" loop="Y" totalframe="70" />
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+
+		<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+		<action id="talk05_happy.swf" name="happy" loop="Y" totalframe="45" />
+		<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+		<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+		<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+		<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		<action id="think01.swf" name="think" loop="Y" totalframe="60" />
+		<action id="think03.swf" name="ponder" loop="Y" totalframe="74" />
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+
+	<char id="kim jong il" name="Kim J." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="angry01.swf" name="angry (a)" loop="Y" totalframe="40" />
+		<action id="talk02_angry.swf" name="angry (b)" loop="Y" totalframe="61" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+		<action id="dance01.swf" name="dance (twist)" loop="Y" totalframe="48" />
+		<action id="dance02.swf" name="dance (disco)" loop="Y" totalframe="18" />
+		<action id="dance03.swf" name="dance03" loop="Y" totalframe="20" />
+		<action id="shakehead01.swf" name="disagree (b)" loop="Y" totalframe="24" />
+		<action id="fear01.swf" name="fear" loop="Y" totalframe="2" />
+		<action id="greeting01.swf" name="greet" loop="Y" totalframe="30" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="laugh01.swf" name="laugh" loop="Y" totalframe="4" />
+		<action id="laugh02.swf" name="laugh (b)" loop="Y" totalframe="43" />
+		<action id="laugh03.swf" name="laugh (c)" loop="Y" totalframe="44" />
+		<action id="sad01.swf" name="sad" loop="Y" totalframe="70" />
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="split01.swf" name="split" loop="Y" totalframe="35" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+
+		<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+		<action id="talk05_happy.swf" name="happy" loop="Y" totalframe="45" />
+		<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+		<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+		<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+		<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		<action id="think01.swf" name="think" loop="Y" totalframe="60" />
+		<action id="think03.swf" name="ponder" loop="Y" totalframe="74" />
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<action id="turnhead01.swf" name="spin head" loop="Y" totalframe="44" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+
+	<char id="osama" name="Being Hiding" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="crack up" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="laugh" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="tap foot" loop="Y" totalframe="4" />
+			<action id="sitdown03_sad.swf" name="sigh" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="think" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="angry (b)" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagree" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="cool" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="calm" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="serious" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sorrowful" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+		</category>
+		<action id="think04.swf" name="scheme" loop="Y" totalframe="74" />
+		<action id="clap01.swf" name="clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="become scared" loop="Y" totalframe="2" />
+		<action id="handsup01.swf" name="raise hand" loop="Y" totalframe="60" />
+		<action id="nob01.swf" name="agree" loop="Y" totalframe="55" />
+		<action id="sad01.swf" name="sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="disagree" loop="Y" totalframe="24" />
+		<action id="shock01.swf" name="become shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="fall asleep" loop="Y" totalframe="55" />
+		<action id="stand.swf" name="stand" loop="Y" totalframe="50" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="parisHilton" name="Paris H." thumb="model02-stand.swf" facing="left" default="model02-stand.swf" motion="walk01.swf" enable="Y">
+		<category name="dance">
+			<action id="model01-dance.swf" name="Dance (A)" loop="Y" totalframe="13" />
+			<action id="model15-dance.swf" name="Dance (B)" loop="Y" totalframe="7" />
+			<action id="model14-dance.swf" name="Dance (C)" loop="Y" totalframe="118" />
+			<action id="model16-dance.swf" name="Dance (D)" loop="Y" totalframe="83" />
+		</category>
+		<action id="model07-think.swf" name="Think" loop="Y" totalframe="60" />
+		<action id="model04-yeah.swf" name="Jump for Joy" loop="Y" totalframe="16" />
+		<action id="sing.swf" name="Sing" loop="Y" totalframe="25" />
+		<action id="shock.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="model06-cry.swf" name="Cry" loop="Y" totalframe="11" />
+		<action id="angry01.swf" name="Get Angry" loop="Y" totalframe="16" />
+		<action id="model03-sit.swf" name="Sit" loop="Y" totalframe="34" />
+		<action id="sleep.swf" name="Sleep" loop="Y" totalframe="40" />
+		<action id="model02-stand.swf" name="Stand" loop="Y" totalframe="93" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="110" />
+		<action id="greeting.swf" name="Wave" loop="Y" totalframe="105" />
+		<action id="model05-laugh.swf" name="Laugh" loop="Y" totalframe="42" />
+		<action id="model17-sulk.swf" name="Sulk" loop="Y" totalframe="125" />
+		<motion id="walk01.swf" name="Walk" loop="Y" totalframe="24" />
+	</char>
+	<char id="hillary" name="Hillary C." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<category name="dance">
+			<action id="dance01.swf" name="twist" loop="Y" totalframe="48" />
+			<action id="dance02.swf" name="disco" loop="Y" totalframe="18" />
+			<action id="dance03.swf" name="middle finger" loop="Y" totalframe="20" />
+		</category>
+		<category name="laugh">
+			<action id="laugh01.swf" name="chuckle" loop="Y" totalframe="4" />
+			<action id="laugh03.swf" name="die laughing" loop="Y" totalframe="44" />
+		</category>
+		<category name="sit">
+			<action id="sitdown01_laugh.swf" name="happy" loop="Y" totalframe="4" />
+			<action id="sitdown02_un.swf" name="annoyed" loop="Y" totalframe="8" />
+			<action id="sitdown03_sad.swf" name="sad" loop="Y" totalframe="80" />
+			<action id="sitdown04_think.swf" name="thinking" loop="Y" totalframe="70" />
+		</category>
+		<category name="talk">
+			<action id="angry01.swf" name="Angry" loop="Y" totalframe="40" />
+			<action id="disagree01.swf" name="disagreeing" loop="Y" totalframe="45" />
+			<action id="talk03_point.swf" name="lecturing" loop="Y" totalframe="44" />
+			<action id="talk07_normal.swf" name="excited" loop="Y" totalframe="45" />
+			<action id="talk09_serious.swf" name="firm" loop="Y" totalframe="45" />
+			<action id="talk10_sorrow.swf" name="sad" loop="Y" totalframe="45" />
+			<action id="talk11_count.swf" name="listing" loop="Y" totalframe="64" />
+			<action id="talk02_angry.swf" name="forceful" loop="Y" totalframe="65" />
+			<action id="talk05_happy.swf" name="animated" loop="Y" totalframe="45" />
+		</category>
+		<category name="think">
+			<action id="think01.swf" name="daydreams" loop="Y" totalframe="123" />
+			<action id="think03.swf" name="has an idea" loop="Y" totalframe="123" />
+			<action id="think04.swf" name="ponders" loop="Y" totalframe="74" />
+		</category>
+		<action id="clap01.swf" name="Clap" loop="Y" totalframe="3" />
+		<action id="fear01.swf" name="Become Scared" loop="Y" totalframe="2" />
+		<action id="handsup01.swf" name="Raise Hand" loop="Y" totalframe="60" />
+		<action id="nob01.swf" name="Agree" loop="Y" totalframe="18" />
+		<action id="sad01.swf" name="Sigh" loop="Y" totalframe="70" />
+		<action id="shakehead01.swf" name="Disagree" loop="Y" totalframe="10" />
+		<action id="shock01.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="sleep01.swf" name="Sleep" loop="Y" totalframe="55" />
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="50" />
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" />
+	</char>
+	<char id="britneySpear" name="Britney S." thumb="model02-stand.swf" facing="left" default="model02-stand.swf" motion="walk01.swf" enable="Y">
+		<category name="dance">
+			<action id="model01-dance.swf" name="Dance (A)" loop="Y" totalframe="13" />
+			<action id="model14-dance.swf" name="Dance (B)" loop="Y" totalframe="118" />
+			<action id="model15-dance.swf" name="Dance (C)" loop="Y" totalframe="7" />
+			<action id="model16-dance.swf" name="Dance (D)" loop="Y" totalframe="83" />
+		</category>
+		<action id="angry01.swf" name="Get Angry" loop="Y" totalframe="16" />
+		<action id="greeting.swf" name="Wave" loop="Y" totalframe="105" />
+		<action id="model02-stand.swf" name="Stand" loop="Y" totalframe="93" />
+		<action id="model03-sit.swf" name="Sit" loop="Y" totalframe="34" />
+		<action id="model04-yeah.swf" name="Jump for Joy" loop="Y" totalframe="16" />
+		<action id="model05-laugh.swf" name="Laugh" loop="Y" totalframe="42" />
+		<action id="model06-cry.swf" name="Cry" loop="Y" totalframe="11" />
+		<action id="model07-think.swf" name="Think" loop="Y" totalframe="60" />
+		<action id="shock.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="sing.swf" name="Sing" loop="Y" totalframe="25" />
+		<action id="sleep.swf" name="Sleep" loop="Y" totalframe="40" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="95" />
+		<motion id="walk01.swf" name="Walk" loop="Y" totalframe="40" />
+	</char>
+	<char id="lindsay" name="Lindsay L." thumb="model02-stand.swf" facing="left" default="model02-stand.swf" motion="walk01.swf" enable="Y">
+		<category name="dance">
+			<action id="model01-dance.swf" name="Dance (A)" loop="Y" totalframe="13" />
+			<action id="model14-dance.swf" name="Dance (B)" loop="Y" totalframe="118" />
+			<action id="model15-dance.swf" name="Dance (C)" loop="Y" totalframe="7" />
+			<action id="model16-dance.swf" name="Dance (D)" loop="Y" totalframe="83" />
+		</category>
+		<action id="angry01.swf" name="Get Angry" loop="Y" totalframe="16" />
+		<action id="greeting.swf" name="Wave" loop="Y" totalframe="105" />
+		<action id="model02-stand.swf" name="Stand" loop="Y" totalframe="30" />
+		<action id="model03-sit.swf" name="Sit" loop="Y" totalframe="34" />
+		<action id="model04-yeah.swf" name="Jump for Joy" loop="Y" totalframe="16" />
+		<action id="model05-laugh.swf" name="Laugh" loop="Y" totalframe="42" />
+		<action id="model06-cry.swf" name="Cry" loop="Y" totalframe="11" />
+		<action id="model07-think.swf" name="Think" loop="Y" totalframe="60" />
+		<action id="shock.swf" name="Become Shocked" loop="Y" totalframe="3" />
+		<action id="sing.swf" name="Sing" loop="Y" totalframe="25" />
+		<action id="sleep.swf" name="Sleep" loop="Y" totalframe="40" />
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="95" />
+		<motion id="walk01.swf" name="Walk" loop="Y" totalframe="40" />
+	</char>
+
+	<char id="dog" name="Dog" thumb="stand.swf" facing="left" default="stand.swf" motion="dog20-walk.swf" enable="Y" hitman="Y">
+		<action id="dog02-laugh.swf" name="laugh at" loop="Y" totalframe="16" reactionid="17_grin.swf"/>	
+		<action id="dog03-bark.swf" name="bark at" loop="Y" totalframe="22" reactionid="16_shck.swf"/>	
+		<action id="dog04-lick.swf" name="lick" loop="Y" totalframe="45" reactionid="17_grin.swf" />	
+		<action id="dog05-sit-angry.swf" name="become angry at" loop="Y" totalframe="6" reactionid="15_ang.swf"/>	
+		<action id="dog07-tongue.swf" name="drool on" loop="Y" totalframe="26" reactionid="17_grin.swf"/>	
+		<action id="dog08-pat.swf" name="shake at" loop="Y" totalframe="9" reactionid="19_schm.swf"/>	
+		<action id="dog09-scratch.swf" name="scratch at" loop="Y" totalframe="32" reactionid="17_grin.swf"/>	
+		<action id="dog10-sleep.swf" name="sleep with" loop="Y" totalframe="1" />	
+		<action id="dog11-shit.swf" name="poop on" loop="Y" totalframe="160" reactionid="15_ang.swf"/>	
+		<action id="dog12-pee.swf" name="pee on" loop="Y" totalframe="68" reactionid="15_ang.swf"/>	
+		<action id="dog13-beg.swf" name="beg" loop="Y" totalframe="1" reactionid="38_love2.swf"/>	
+		<action id="dog14-vomit.swf" name="vomit on" loop="Y" totalframe="120" reactionid="16_shck.swf"/>	
+		<action id="dog15-fart.swf" name="fart on" loop="Y" totalframe="60" reactionid="01_fart.swf"/>	
+		<action id="dog16-woo.swf" name="howl at" loop="Y" totalframe="80" reactionid="17_grin.swf"/>	
+		<action id="dog17-stand.swf" name="stand with" loop="Y" totalframe="1" enable="N" ymeenable="N" />
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="1" reactionid="stand.swf" />	
+		<action id="dog18-die.swf" name="die for" loop="Y" totalframe="40" reactionid="14_cry.swf"/>	
+		<action id="dog19-bite.swf" name="bite" loop="Y" totalframe="2" reactionid="16_shck.swf"/>	
+		<motion id="dog20-walk.swf" name="walk" loop="Y" totalframe="11" />
+	</char>
+
+	<char id="MikeHuckabee" name="Mike H." thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y">
+		<action id="angry01.swf" name="Angry" loop="Y" totalframe="40" />	
+		<action id="clap01.swf" name="Clap" loop="Y" totalframe="3" />
+		<category name="Dance">
+			<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="48" />	
+			<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="18" />	
+			<action id="dance03.swf" name="Dance (C)" loop="Y" totalframe="20" />	
+		</category>
+		<action id="disagree01.swf" name="Disagree" loop="Y" totalframe="45" />	
+		<action id="fear01.swf" name="Fear" loop="Y" totalframe="2" />	
+		<action id="greeting01.swf" name="Greeting" loop="Y" totalframe="30" />	
+		<action id="handsup01.swf" name="Raise Hand" loop="Y" totalframe="60" />	
+		<action id="laugh01.swf" name="Laugh (A)" loop="Y" totalframe="4" />	
+		<action id="laugh02.swf" name="Laugh (B)" loop="Y" totalframe="43" />	
+		<action id="laugh03.swf" name="Laugh (C)" loop="Y" totalframe="44" />	
+		<action id="nob01.swf" name="Nob" loop="Y" totalframe="55" />	
+		<action id="sad01.swf" name="Sad" loop="Y" totalframe="70" />	
+		<action id="shakehead01.swf" name="Shake Head" loop="Y" totalframe="24" />	
+		<action id="shock01.swf" name="Shock" loop="Y" totalframe="3" />	
+
+		<category name="Sit">
+			<action id="sitdown01_laugh.swf" name="Laugh" loop="Y" totalframe="4" />	
+			<action id="sitdown02_un.swf" name="Tap Foot" loop="Y" totalframe="4" />	
+			<action id="sitdown03_sad.swf" name="Sigh" loop="Y" totalframe="80" />	
+			<action id="sitdown04_think.swf" name="Think" loop="Y" totalframe="70" />	
+		</category>
+
+
+		<action id="sleep01.swf" name="Sleep" loop="Y" totalframe="55" />	
+		<action id="split01.swf" name="Split" loop="Y" totalframe="35" />	
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="50" />	
+		<category name="Talk">
+			<action id="talk02_angry.swf" name="Angry" loop="Y" totalframe="61" />	
+			<action id="talk03_point.swf" name="Cool" loop="Y" totalframe="44" />	
+			<action id="talk05_happy.swf" name="Happy" loop="Y" totalframe="45" />	
+			<action id="talk07_normal.swf" name="Normal" loop="Y" totalframe="45" />	
+			<action id="talk09_serious.swf" name="Serious" loop="Y" totalframe="45" />	
+			<action id="talk10_sorrow.swf" name="Sorrow" loop="Y" totalframe="45" />	
+			<action id="talk11_count.swf" name="Listing" loop="Y" totalframe="64" />	
+		</category>
+		<category name="Think">
+			<action id="think01.swf" name="Think (A)" loop="Y" totalframe="60" />	
+			<action id="think03.swf" name="Think (B)" loop="Y" totalframe="74" />	
+			<action id="think04.swf" name="Think (C)" loop="Y" totalframe="74" />	
+		</category>
+		<action id="turnhead01.swf" name="Turn Head" loop="Y" totalframe="44" />	
+		<action id="walk.swf" name="walk" loop="Y" totalframe="16" />
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="16" />
+	</char>
+
+	<char id="mac_boy" name="Mac Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="185" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="185" ymeenable="N"/>	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="120" reactionid="hi5_A.swf" />	
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="120" ymeenable="N" enable="N"/>	
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N"/>	
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" enable="N" />
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_D.swf" />	
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" />
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="1"/>	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="1" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="24" ymeenable="N"/>
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="90" reactionid="wave_A.swf" />	
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="90" ymeenable="N" enable="N"/>
+		
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="mac_girl" name="Mac Girl" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="185" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="185" ymeenable="N"/>	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="120" reactionid="hi5_A.swf" />	
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="120" ymeenable="N" enable="N"/>	
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N"/>	
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" enable="N"/>
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_D.swf" />	
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N"/>
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="1"/>	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="1" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="24" ymeenable="N"/>
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="90" reactionid="wave_A.swf" />	
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="90" ymeenable="N" enable="N"/>	
+
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="mac_girl02" name="Mac Girl 2" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="185" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="185" ymeenable="N"/>	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="120" reactionid="hi5_A.swf" />	
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="120" ymeenable="N" enable="N"/>	
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N"/>	
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" enable="N"/>
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_D.swf" />	
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N"/>
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="1"/>	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="1" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="24" ymeenable="N"/>
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="90" reactionid="wave_A.swf" />	
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="90" ymeenable="N" enable="N"/>
+
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="wilson" name="Wilson" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="185" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="185" ymeenable="N"/>	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="120" reactionid="hi5_A.swf" />	
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="120" ymeenable="N" enable="N" />	
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N"/>	
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" enable="N" />	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="145" reactionid="kiss_D.swf" />	
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="145" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="1"/>	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="1" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="24" ymeenable="N"/>
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="90" reactionid="wave_A.swf" />	
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="90" ymeenable="N" enable="N"/>	
+
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="stephen" name="Stephen" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="100" enable="N" ymeenable="N" />	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="100" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+	</char>
+
+	<char id="matt" name="Matt" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="100" enable="N" ymeenable="N" />	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="100" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="40_laugh.swf" name="laugh at" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+	</char>
+
+	<char id="joyce" name="Joyce" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="100" enable="N" ymeenable="N" />	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="100" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+	</char>
+
+	<char id="ann" name="Ann" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />	
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="hi5_B.swf" name="get hi five" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_A.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_B.swf" ymeenable="N" enable="N" />	
+		<action id="kiss_B.swf" name="get kiss" loop="Y" totalframe="100" enable="N" ymeenable="N" />	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<action id="talk.swf" name="talk to" loop="Y" totalframe="100" reactionid="talk.swf"/>	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="wave_B.swf" name="get waved at" loop="Y" totalframe="100" ymeenable="N" enable="N" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>		
+
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf"/>	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="cupid" name="Cupid" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<motion id="walk.swf" name="fly" loop="Y" totalframe="100" />
+		<action id="shoot.swf" name="shoot" loop="Y" totalframe="100" reactionid="gotShoot.swf" />	
+		<action id="smile.swf" name="smile at" loop="Y" totalframe="100" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf"/>	
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />	
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="01_fart.swf"/>	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />
+	</char>
+
+	<char id="george" name="George" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>		
+
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100" reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100" ymeenable="N" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+	</char>
+
+
+	<char id="jane" name="Jane" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>	
+
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />
+		<action id="13_bop.swf"  name="hurt" loop="Y" totalframe="100" reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="rosie" name="Rosie" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>
+
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+	</char>
+
+	<char id="tom" name="Tom" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" hitman="Y" randompick="Y" enable="Y">
+		<action id="kickA.swf" name="kick" loop="Y" totalframe="100" reactionid="kickB.swf" />	
+		<action id="kickB.swf" name="get kick" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="kiss_C.swf" name="kiss" loop="Y" totalframe="100" reactionid="kiss_D.swf" />
+		<action id="kiss_D.swf" name="get kiss" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="stand.swf" name="stand with" loop="Y" totalframe="100" />	
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="12" />
+		<action id="01_fart.swf" name="fart on" loop="Y" totalframe="100" reactionid="15_ang.swf"/>	
+		<action id="04_beg.swf" name="charm" loop="Y" totalframe="100" reactionid="38_love2.swf"/>	
+		<action id="05_sing.swf" name="sing with" loop="Y" totalframe="100" reactionid="05_sing.swf" />	
+		<action id="07_slap.swf" name="slap" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="14_cry.swf" name="cry to" loop="Y" totalframe="100" reactionid="14_cry.swf" />	
+		<action id="15_ang.swf" name="get angry with" loop="Y" totalframe="100" reactionid="04_beg.swf" />	
+		<action id="16_shck.swf" name="get shocked by" loop="Y" totalframe="100" reactionid="16_shck.swf" />	
+		<action id="17_grin.swf" name="grin at" loop="Y" totalframe="100" reactionid="17_grin.swf" />	
+		<action id="19_schm.swf" name="scheme with" loop="Y" totalframe="100" reactionid="19_schm.swf" />	
+		<action id="20_danc.swf" name="dance with" loop="Y" totalframe="100" reactionid="20_danc.swf" />	
+		<action id="24_mus.swf" name="play music with" loop="Y" totalframe="100" reactionid="24_mus.swf" />	
+		<action id="31_love.swf" name="fall in love with" loop="Y" totalframe="100" reactionid="kiss_C.swf"/>	
+		<action id="38_love2.swf" name="love" loop="Y" totalframe="100" reactionid="kiss_D.swf"/>
+
+		<action id="hi5_A.swf" name="hi five" loop="Y" totalframe="100" reactionid="hi5_A.swf" />
+		<action id="beer_A.swf" name="give a beer to" loop="Y" totalframe="100" reactionid="beer_B.swf" />
+		<action id="beer_B.swf" name="get beer" loop="Y" totalframe="100" ymeenable="N" />
+		<action id="10_thx.swf" name="thank" loop="Y" totalframe="100" reactionid="10_thx.swf" />	
+		<action id="13_bop.swf" name="hurt" loop="Y" totalframe="100"  reactionid="38_hurt.swf" />	
+		<action id="38_hurt.swf" name="get hurt by" loop="Y" totalframe="100"  ymeenable="N" />
+		<action id="32_hug.swf" name="hug" loop="Y" totalframe="100" reactionid="32_hug.swf" />	
+		<action id="wave_A.swf" name="wave to" loop="Y" totalframe="100" reactionid="wave_A.swf" />
+
+		<action id="33_poke.swf" name="poke" loop="Y" totalframe="100" reactionid="39_shake2.swf"/>	
+		<action id="39_shake2.swf" name="get poked by" loop="Y" totalframe="100" ymeenable="N" />	
+		<action id="34_tick.swf" name="tickle" loop="Y" totalframe="100"  reactionid="35_shak.swf" />	
+		<action id="35_shak.swf" name="get tickled by" loop="Y" totalframe="100" ymeenable="N" />
+
+		<action id="gotShoot.swf" name="get shoot by" loop="Y" totalframe="100" ymeenable="N" enable="N"/>
+
+		<action id="11_laugh.swf" name="laugh at" loop="Y" totalframe="100" />
+	</char>
+
+	<background id="street.swf" name="Street" enable="Y"/>
+	<background id="backStage.swf" name="Back Stage" enable="Y" />
+	<background id="classroom.swf" name="Classroom A" enable="Y" />
+	<background id="snowyPlain.swf" name="Snowy Plain" enable="Y" />
+	<background id="bg02.swf" name="BG 02" enable="Y" />
+	<background id="bg03.swf" name="BG 03" enable="N" />
+	<background id="bg04.swf" name="BG 04" enable="N" />
+	<background id="war.swf" name="War" enable="N" />
+	<background id="bank.swf" name="Bank" enable="Y" />
+	<background id="bar.swf" name="Bar" enable="Y" />
+	<background id="battlefield.swf" name="BattleField" enable="Y" />
+	<background id="interview.swf" name="Interview" enable="Y" />
+	<background id="mountRushmore1.swf" name="Mount Rush More" enable="Y" />
+	<background id="office.swf" name="Office" enable="Y" />
+	<background id="podium.swf" name="Podium" enable="Y" />
+	<background id="fireplaceindr.swf" name="Fireplace" enable="Y"/>
+	<background id="santacastle.swf" name="Santa Castle" enable="Y"/>
+	<background id="nightlandscape.swf" name="Night Landscape" enable="Y"/>
+    <background id="snowynight.swf" name="Snowy Night" enable="Y"/>
+
+	<background id="restaurant.swf" name="Restaurant" enable="Y" />
+	<background id="busStop.swf" name="Bus Stop" enable="Y" />
+	<background id="cafe.swf" name="Cafe" enable="Y" />
+	<background id="locker.swf" name="Locker" enable="Y" />
+	<background id="loser_podium.swf" name="Loser Podium" enable="Y" />
+	<background id="playground.swf" name="Playground" enable="Y" default="Y" />
+	<background id="classroom_B.swf" name="Classroom B" enable="Y"/>
+	<background id="hawaii beach_night.swf" name="Hawaii Beach_Night" enable="Y" />
+	<background id="hawaii beach.swf" name="Hawaii Beach" enable="Y"/>
+	<background id="eiffel tower.swf" name="Eiffel Tower" enable="Y"/>
+	<background id="diamond.swf" name="Diamond" enable="Y"/>
+	<background id="skateboard boy.swf" name="Skateboard Boy" enable="Y"/>
+
+	<background id="boxing_bg.swf" name="Boxing" enable="Y"/>
+
+	<background id="toilet_dirty.swf" name="Dirty toilet" enable="Y"/>
+	<background id="toilet_clean.swf" name="Toilet" enable="Y"/>
+
+	<prop id="1rose.swf" name="Rose" placeable="1" holdable="1" facing="left" enable="Y" default="Y"/>
+	<prop id="chcolove.swf" name="Chocolate (A)" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="chocobox.swf" name="Chocolate Box (A)" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="drum.swf" name="Drum" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="largechoco.swf" name="Chocolate Love (A)" placeable="1" holdable="1" wearable="0" facing="left" enable="Y"/>
+
+	<prop id="bannerA.swf" name="Birthday Banner (A)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+
+	<prop id="banner.swf" name="Birthday Banner (B)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+
+	<prop id="bannerB.swf" name="Valentine Banner (A)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+
+	<prop id="valentine_banner.swf" name="Valentine Banner (B)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+
+	<prop id="ballA.swf" name="Ball (A)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="ballB.swf" name="Ball (B)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="ballC.swf" name="Ball (C)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="ballD.swf" name="Ball (D)" placeable="1" holdable="0" wearable="0" facing="left" enable="Y" />
+
+	<prop id="scoccerball.swf" name="Soccer" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="football.swf" name="Football" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="basketball.swf" name="Basketball" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+	<prop id="guitar_rock.swf" name="Guitar" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="prop13.swf" name="Chocolate (B)" placeable="1" holdable="1" wearable="0" facing="left" enable="N" />
+	<prop id="prop12.swf" name="Chocolate Love (B)" placeable="1" holdable="1" wearable="0" facing="left" enable="N" />
+	<prop id="prop14.swf" name="Chocolate Box (B)" placeable="1" holdable="1" wearable="0" facing="left" enable="N" />
+	<prop id="saxophone.swf" name="Saxophone" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="violin.swf" name="Violin" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+
+	<prop id="cake_valetine.swf" name="Valentine Cake" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+	<prop id="redpocket.swf" name="Red Pocket" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="fook.swf" name="Necklace" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="littleorange.swf" name="Little Orange" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+	<prop id="bobhead.swf" name="Bob Head" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+
+	<prop id="diamond.swf" name="Diamond" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="table.swf" name="Ballon" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+	<prop id="skateboard boy.swf" name="Skateboard Boy" placeable="0" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="loveEffect.swf" name="Love (A)" placeable="0" holdable="0" wearable="0" facing="left" enable="Y" />
+	<prop id="love_effect3.swf" name="Love (B)" placeable="0" holdable="0" wearable="0" facing="left" enable="Y" />
+
+
+
+	<prop id="sword.swf" name="Sword" placeable="0" holdable="1" facing="left" enable="N"/>
+	<prop id="guitar.swf" name="Guitar" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="mic.swf" name="Mic" placeable="0" holdable="1" facing="left" enable="N"/>
+	<prop id="saxophone.swf" name="Saxophone" placeable="0" holdable="1" facing="left" enable="Y"/>
+	<prop id="gas.swf" name="Gas" placeable="1" holdable="0" facing="left" enable="N"/>
+	<prop id="speaker_red.swf" name="Red Speaker" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="speaker_black.swf" name="Black Speaker" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="cup.swf" name="Cup" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="casinomoney1.swf" name="Chips" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="chair1.swf" name="Chair 1" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="chair2.swf" name="Chair 2" placeable="1" holdable="0" facing="left" enable="N"/>
+	<prop id="door1.swf" name="Door 1" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="glass1.swf" name="Glass 1" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="highseat.swf" name="High Seat 1" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="highseat2.swf" name="High Seat 2" placeable="1" holdable="0" facing="left" enable="N"/>
+	<prop id="prop01.swf" name="Sword" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="prop02.swf" name="Gun" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="prop03.swf" name="Chainsaw" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="table1.swf" name="Table" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="wine1.swf" name="Wine 1" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="wine2.swf" name="Wine 2" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="wine3.swf" name="Wine 3" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="wine4.swf" name="Wine 4" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="wine5.swf" name="Wine 5" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="ak47.swf" name="AK 47" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="baseballbat.swf" name="BaseBall Stick" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="cake.swf" name="Cake" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="cigar.swf" name="Cigarette" placeable="0" holdable="1" facing="left" enable="Y"/>
+	<prop id="coke1.swf" name="Coke" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="dailyshowtable.swf" name="Show Table" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="foldchair.swf" name="FoldChair" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="foldedchair.swf" name="FoldChair - unfold" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="grenade.swf" name="Grenade" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="lightray.swf" name="Light Ray" placeable="1" holdable="0" facing="left" enable="Y"/>
+	<prop id="losecard1.swf" name="Poke" placeable="1" holdable="1" facing="left" enable="N"/>
+	<prop id="pipe.swf" name="Pipe" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="secretfolder.swf" name="Secret Folder" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="spinbat.swf" name="Spin Bat" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="stainblueskirt.swf" name="Blue Skirt" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="wincard1.swf" name="Winning Poke" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="moneybag1.swf" name="Money Bag" placeable="1" holdable="1" facing="left" enable="Y"/>
+	<prop id="candle.swf" name="candle.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="cookies.swf" name="cookies.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="decoball.swf" name="decoball.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="gingerman.swf" name="gingerman.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="jettoy.swf" name="jettoy.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="milk.swf" name="milk.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="tramty.swf" name="tramty.swf" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="xmasbell.swf" name="xmasbell.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmbear.swf" name="xmbear.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmbox1.swf" name="xmbox1.swf" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="xmbox2.swf" name="xmbox2.swf" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="xmbox3.swf" name="xmbox3.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmhat.swf" name="xmhat.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmsock.swf" name="xmsock.swf" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="xmsockwtoy.swf" name="xmsockwtoy.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmstick.swf" name="xmstick.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmtree.swf" name="xmtree.swf" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="xmtree2.swf" name="xmtree2.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmashat.swf" name="XmasHat" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+	<prop id="rocking_chair.swf" name="Rocking Chair" placeable="1" holdable="1" facing="left" enable="N" />
+	<prop id="magicmirrors.swf" name="Magic Mirror" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="xmsleigh.swf" name="Xmasleigh" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="wreath.swf" name="Wreath" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="fireplace.swf" name="Fireplace" placeable="1" holdable="1" facing="left" enable="Y" />
+
+	<prop id="sexdoll_male.swf" name="Male Doll" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="punk head.swf" name="Punk Head" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+	<prop id="busted.swf" name="Busted Magazine" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="banknote.swf" name="Bank Note" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="sexdoll_female.swf" name="Female Doll" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="pighead.swf" name="Pig Head" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+	<prop id="rose.swf" name="Rose" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="necklace.swf" name="Necklace" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+	<prop id="diamond_ring.swf" name="Diamond Ring" placeable="1" holdable="1" wearable="0" facing="left" enable="Y" />
+
+	<prop id="devilcorn.swf" name="Devil Corn" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+
+	<prop id="angel ring.swf" name="Angel Ring" placeable="1" holdable="0" wearable="1" facing="left" enable="Y" />
+
+	<prop id="boxing_glove.swf" name="Boxing Glove" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="camera.swf" name="Camera" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="camera_with_flash.swf" name="Camera with Flash" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="flag.swf" name="Flag" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="interview_cup.swf" name="Interview Cup" placeable="1" holdable="1" facing="left" enable="Y" />
+	
+	<prop id="boxA-Open.swf" name="boxA-Open.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="firework.swf" name="firework.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="firework03.swf" name="firework03.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<prop id="firework05.swf" name="firework05.swf" placeable="1" holdable="1" facing="left" enable="Y" />
+	<sound id="joy and fun.swf" name="Joy and Fun" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="roadSide.swf" name="Rock at the road side" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="rockMain.swf" name="Rock &amp; Roll" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="soft.swf" name="Soft" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="tension builds up.swf" name="Build up tension" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="laugh_4.swf" name="Laugh" enable="Y" downloadtype="embed" subtype="soundeffect" />
+	<sound id="shot.swf" name="Gun Shot" enable="N" downloadtype="embed" subtype="soundeffect" />
+	<sound id="bushism_internets.swf" name="Bushism, the Internet" enable="N" downloadtype="embed" subtype="voiceover" />
+	<sound id="12_Days_of_Christmas.swf" name="12 Days of Christmas" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Christmas_Tree.swf" name="Christmas Tree" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Deck_the_Halls.swf" name="Deck The Halls" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Hark_the_Herald_Angels_Sing.swf" name="Hark The Herald Angels Sing" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Jingle_Bells.swf" name="Jingle Bells" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Joy_to_the_World.swf" name="Joy To The World" enable="Y" downloadtype="embed" subtype="bgmusic"/>
+	<sound id="O_Come_All_Ye_Faithful.swf" name="O Come All Ye Faithful" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="O_Little_Town_of_Bethlehem.swf" name="O Little Town of Bethlehem" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Silent_Night.swf" name="Silent Night" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="The_First_Noel.swf" name="The First Noel" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="We_Wish_You_A_Merry_Christmas.swf" name="We Wish You A Merry Christmas" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Action.swf" name="Action" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Suspense.swf" name="Suspense" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="Romance.swf" name="Romance" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="BroadcastNews.swf" name="Broadcast News" enable="Y" downloadtype="embed" subtype="bgmusic" />
+	<sound id="FunkyBeat.swf" name="Funky Beat" enable="Y" downloadtype="embed" subtype="bgmusic" />
+
+	<bubble id="ellipse" x="0" y="0" w="180" h="90" rotate="0" type="ELLIPSE" enable="Y">
+		<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+		<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+	<bubble id="roundRect" x="0" y="0" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	  <text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+	<bubble id="rect" x="0" y="0" w="180" h="90" rotate="0" type="RECTANGULAR" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	  <text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+	<bubble id="cloud" x="0" y="0" w="180" h="90" rotate="0" type="CLOUD" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	  <text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+	<bubble id="heart" x="0" y="0" w="180" h="90" rotate="0" type="HEART" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	  <text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+	<bubble id="boom" x="0" y="0" w="260" h="130" rotate="0" type="BOOM" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="260" taily="130"/>
+	  <text rgb="0" font="BadaBoom BB" size="20" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>	
+	<bubble id="blank" x="0" y="0" w="180" h="90" rotate="0" type="BLANK" enable="Y">
+	  <body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	  <text rgb="0" font="BadaBoom BB" size="20" align="center" bold="false" italic="false">Click here to edit</text>
+	</bubble>
+
+	<effect id="zoom" x="0" y="0" w="140" h="90" rotate="0" type="ZOOM" resize="true" move="true" name="Zoom" enable="Y"/>
+	<effect id="earthquake" x="0" y="0" w="550" h="354" rotate="0" type="EARTHQUAKE" resize="false" move="false" name="Earthquake" enable="Y"/>
+	<effect id="upsideDown" x="0" y="0" w="550" h="354" rotate="0" type="UPSIDEDOWN" resize="false" move="false" name="Upside Down" enable="Y"/>
+	<effect id="firework" x="0"  y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="Y"/>
+	<effect id="firespring" x="0"  y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire Spring" enable="Y"/>	
+
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="Y"/>
+	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="Y"/>
+	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="Y"/>
+	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper Snow" enable="Y"/>
+	<effect id="snow01.swf" type="ANIME" resize="false" move="false" name="Snow01" enable="Y"/>
+	<effect id="snow02.swf" type="ANIME" resize="false" move="false" name="Snow02" enable="Y"/>
+	<effect id="boxA-Open.swf" type="ANIME" resize="true" move="true" name="boxA-Open" enable="Y"/>
+	<effect id="firework03.swf" type="ANIME" resize="true" move="true" name="firework03" enable="Y"/>
+	<effect id="firework05.swf" type="ANIME" resize="true" move="true" name="firework05" enable="Y"/>
+	<effect id="old_film_effect.swf" type="ANIME" resize="false" move="false" name="Old Film" enable="Y"/>
+	<effect id="hearts.swf" type="ANIME" resize="false" move="false" name="Heart" enable="Y"/>
+</theme>

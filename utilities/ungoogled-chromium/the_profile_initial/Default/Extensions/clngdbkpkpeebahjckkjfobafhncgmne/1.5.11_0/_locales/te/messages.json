@@ -1,0 +1,67 @@
+{
+   "addStyleLabel": {
+      "description": "Label for the button to go to the add style page",
+      "message": "క్రొత్త స్టైల్ వ్రాయండి"
+   },
+   "appliesAdd": {
+      "description": "Label for the button to add an 'applies' entry",
+      "message": "చేర్చు"
+   },
+   "appliesDisplay": {
+      "description": "Text on the manage screen to describe what the style applies to",
+      "message": "వేటికి వర్తిస్తుంది; $applies$",
+      "placeholders": {
+         "applies": {
+            "content": "$1"
+         }
+      }
+   },
+   "appliesDisplayTruncatedSuffix": {
+      "description": "Text added to appliesDisplay when there are more sites for the style than are displayed",
+      "message": "ఇంకా మరిన్ని"
+   },
+   "appliesRemove": {
+      "description": "Label for the button to remove an 'applies' entry",
+      "message": "తొలగించు"
+   },
+   "appliesToEverything": {
+      "description": "Text displayed for styles that apply to all sites",
+      "message": "అన్నిటికీ"
+   },
+   "deleteStyleConfirm": {
+      "description": "Confirmation before deleting a style",
+      "message": "మీరు నజంగానే ఈ శైలిని తొలగించాలనుకుంటున్నారా?"
+   },
+   "deleteStyleLabel": {
+      "description": "Label for the button to delete a style",
+      "message": "తొలగించు"
+   },
+   "disableStyleLabel": {
+      "description": "Label for the button to disable a style",
+      "message": "అచేతనించు"
+   },
+   "editStyleLabel": {
+      "description": "Label for the button to go to the edit style page",
+      "message": "మార్చు"
+   },
+   "enableStyleLabel": {
+      "description": "Label for the button to enable a style",
+      "message": "చేతనించు"
+   },
+   "helpAlt": {
+      "description": "Alternate text for help buttons",
+      "message": "సహాయం"
+   },
+   "manageHeading": {
+      "description": "Heading for the manage page",
+      "message": "స్థాపిత శైలులు"
+   },
+   "manageTitle": {
+      "description": "Title for the manage page",
+      "message": "స్టైలిష్"
+   },
+   "styleSaveLabel": {
+      "description": "Label for save button for style editing",
+      "message": "భద్రపరచు"
+   }
+}

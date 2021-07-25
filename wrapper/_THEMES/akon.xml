@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="akon" name="AKON">
+	<char id="akon_char" name="AKON" thumb="standing.swf" facing="left" default="standing.swf" motion="walking.swf" enable="Y" is_premium="N" aid="4544" money="0" sharing="0">
+		<category name="dance">
+			<action id="dance01.swf" name="style a" loop="Y" totalframe="50" enable="Y" aid="4547"/>
+			<action id="dance02.swf" name="style b" loop="Y" totalframe="103" enable="Y" aid="4548"/>
+		</category>
+		<category name="emotion">
+			<action id="excited.swf" name="excited" loop="Y" totalframe="16" enable="Y" aid="4549"/>
+			<action id="in_love.swf" name="in love" loop="Y" totalframe="30" enable="Y" aid="4667"/>
+			<action id="shocked.swf" name="shocked" loop="Y" totalframe="52" enable="Y" aid="4668"/>
+		</category>
+		<category name="sing">
+			<action id="sing01.swf" name="style a" loop="Y" totalframe="52" enable="Y" aid="4550"/>
+			<action id="sing02.swf" name="style b" loop="Y" totalframe="55" enable="Y" aid="4551"/>
+			<action id="sing03.swf" name="style c" loop="Y" totalframe="129" enable="Y" aid="4669"/>
+		</category>
+		<action id="standing.swf" name="standing" loop="Y" totalframe="88" enable="Y" aid="4545"/>
+		<motion id="walking.swf" name="walk" loop="Y" totalframe="26" enable="Y" aid="4546"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="65" enable="Y" aid="4552"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="119" enable="Y" aid="4553"/>
+		<action id="talk_phone.swf" name="talk on cell" loop="Y" totalframe="110" enable="Y" aid="4554"/>
+		<action id="in_love.swf" name="in love" loop="Y" totalframe="30" enable="Y" aid="4555"/>
+		<action id="shocked.swf" name="shocked" loop="Y" totalframe="52" enable="Y" aid="4556"/>
+		<action id="take_off_glasses.swf" name="take off shades" loop="Y" totalframe="47" enable="Y" aid="4557"/>
+		<action id="ohyea.swf" name="oh yeah" loop="Y" totalframe="63" enable="Y" aid="4558"/>
+		<motion id="walk_sing.swf" name="walk singing" loop="Y" totalframe="30" enable="Y" aid="4559"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="4560"/>
+		<facial id="head_talk_angry.swf" name="talk pissed off" enable="Y" aid="4561"/>
+		<facial id="head_surprised.swf" name="surprised" enable="Y" aid="4562"/>
+		<facial id="head_confused.swf" name="confused" enable="Y" aid="4563"/>
+		<facial id="head_stare.swf" name="pretty lady" enable="Y" aid="4564"/>
+		<facial id="head_excited.swf" name="excited" enable="Y" aid="4565"/>
+		<facial id="head_kiss.swf" name="kiss" enable="Y" aid="4566"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="8497"/>
+	</char>
+	<char id="ripley" name="Ripley" thumb="standing.swf" facing="left" default="standing.swf" motion="walking.swf" enable="Y" is_premium="N" aid="4567" money="0" sharing="0">
+		<category name="rap">
+			<action id="rap.swf" name="style a" loop="Y" totalframe="62" enable="Y" aid="4570"/>
+			<action id="rap_cap.swf" name="style b" loop="Y" totalframe="90" enable="Y" aid="4571"/>
+			<action id="rap_necklace.swf" name="style c" loop="Y" totalframe="135" enable="Y" aid="4572"/>
+		</category>
+		<action id="standing.swf" name="standing" loop="Y" totalframe="41" enable="Y" aid="4568"/>
+		<motion id="walking.swf" name="walk" loop="Y" totalframe="20" enable="Y" aid="4569"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="40" enable="Y" aid="4573"/>
+		<action id="talk_phone.swf" name="talk on cell" loop="Y" totalframe="71" enable="Y" aid="4574"/>
+		<action id="dance01.swf" name="dance" loop="Y" totalframe="130" enable="Y" aid="4575"/>
+		<action id="secret_handshake.swf" name="hip-hop handshake" loop="Y" totalframe="70" enable="Y" aid="4576"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="4577"/>
+		<facial id="head_angry.swf" name="pissed off" enable="Y" aid="4578"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="4579"/>
+		<facial id="head_in_love.swf" name="in love" enable="Y" aid="4580"/>
+		<facial id="head_stare.swf" name="pretty lady" enable="Y" aid="4581"/>
+		<facial id="head_rap_happy.swf" name="talk happy" enable="Y" aid="4582"/>
+		<facial id="head_rap_sad.swf" name="talk sad" enable="Y" aid="4583"/>
+		<facial id="head_yeah.swf" name="oh yeah" enable="Y" aid="4584"/>
+		<facial id="head_laugh.swf" name="laugh" enable="Y" aid="4585"/>
+		<facial id="head_rap_angry.swf" name="talk pissed off" enable="Y" aid="4586"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="8498"/>
+	</char>
+	<char id="johnny_aldo" name="Johnny Aldo" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="4670" money="0" sharing="0">
+		<action id="standing.swf" name="standing" loop="Y" totalframe="1" enable="Y" aid="4671"/>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="25" enable="Y" aid="4672"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="1" enable="Y" aid="4673"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="98" enable="Y" aid="4674"/>
+		<action id="dance_01.swf" name="dance" loop="Y" totalframe="169" enable="Y" aid="4675"/>
+		<action id="talk_phone.swf" name="talk on phone" loop="Y" totalframe="62" enable="Y" aid="4676"/>
+		<action id="mad_phone.swf" name="pissed off on phone" loop="Y" totalframe="92" enable="Y" aid="4677"/>
+		<action id="throw_phone.swf" name="smash phone" loop="Y" totalframe="94" enable="Y" aid="4678"/>
+		<action id="show_money.swf" name="show off money" loop="Y" totalframe="67" enable="Y" aid="4679"/>
+		<action id="secret_handshake.swf" name="hip hop handshake" loop="Y" totalframe="75" enable="Y" aid="4680"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="4681"/>
+		<facial id="head_angry.swf" name="pissed off" enable="Y" aid="4682"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="4683"/>
+		<facial id="head_in_love.swf" name="in love" enable="Y" aid="4684"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="4685"/>
+		<facial id="head_talk_sad.swf" name="talk sad" enable="Y" aid="4686"/>
+		<facial id="head_thinking.swf" name="thinking" enable="Y" aid="4687"/>
+		<facial id="head_laugh.swf" name="laugh" enable="Y" aid="4688"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="8499"/>
+	</char>
+	<char id="sierra" name="Sierra" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="4689" money="0" sharing="0">
+		<action id="standing.swf" name="standing" loop="Y" totalframe="1" enable="Y" aid="4690"/>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="32" enable="Y" aid="4691"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="31" enable="Y" aid="4692"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="100" enable="Y" aid="4693"/>
+		<action id="dance01.swf" name="dance - style a" loop="Y" totalframe="80" enable="Y" aid="4694"/>
+		<action id="sexy_dance01.swf" name="dance - style b" loop="Y" totalframe="141" enable="Y" aid="4695"/>
+		<action id="pole_dance01.swf" name="dance - style c" loop="Y" totalframe="74" enable="Y" aid="4696"/>
+		<action id="sing.swf" name="sing" loop="Y" totalframe="39" enable="Y" aid="4697"/>
+		<action id="come_here.swf" name="come here baby" loop="Y" totalframe="100" enable="Y" aid="4698"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="4699"/>
+		<facial id="head_in_love.swf" name="in love" enable="Y" aid="4700"/>
+		<facial id="head_kiss.swf" name="kiss" enable="Y" aid="4701"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="4702"/>
+		<facial id="head_snub.swf" name="snub" enable="Y" aid="4703"/>
+		<facial id="head_laugh.swf" name="laugh" enable="Y" aid="4704"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="8500"/>
+	</char>
+	<char id="kc" name="K.C." thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="4705" money="0" sharing="0">
+		<action id="standing.swf" name="standing" loop="Y" totalframe="1" enable="Y" aid="4706"/>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="30" enable="Y" aid="4707"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="1" enable="Y" aid="4708"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="120" enable="Y" aid="4709"/>
+		<action id="dance01.swf" name="dance" loop="Y" totalframe="108" enable="Y" aid="4710"/>
+		<action id="dance02.swf" name="dance" loop="Y" totalframe="189" enable="Y" aid="4711"/>
+		<action id="talk_phone.swf" name="talk on phone" loop="Y" totalframe="150" enable="Y" aid="4712"/>
+		<action id="protecting_people.swf" name="protect people" loop="Y" totalframe="150" enable="Y" aid="4713"/>
+		<action id="rap.swf" name="rap" loop="Y" totalframe="136" enable="Y" aid="4714"/>
+		<action id="taunt.swf" name="stop people" loop="Y" totalframe="60" enable="Y" aid="4715"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="4716"/>
+		<facial id="head_angry.swf" name="pissed off" enable="Y" aid="4717"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="4718"/>
+		<facial id="head_in_love.swf" name="in love" enable="Y" aid="4719"/>
+		<facial id="head_stare_at.swf" name="check out lady" enable="Y" aid="4720"/>
+		<facial id="head_rap_happy.swf" name="talk happy" enable="Y" aid="4721"/>
+		<facial id="head_rap_sad.swf" name="talk sad" enable="Y" aid="4722"/>
+		<facial id="head_yeah.swf" name="yeah" enable="Y" aid="4723"/>
+		<facial id="head_laugh.swf" name="laugh" enable="Y" aid="4724"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="8501"/>
+	</char>
+	<background id="outside_theater_hall.swf" name="Outside Theater Hall" enable="Y" default="Y" is_premium="N" aid="4587" money="0" sharing="0"/>
+	<background id="indoor_stage_bg.swf" name="" enable="Y" is_premium="N" aid="4588" money="0" sharing="0"/>
+	<background id="studio_bg.swf" name="" enable="Y" is_premium="N" aid="4725" money="0" sharing="0"/>
+	<background id="outdoor_stage_bg.swf" name="" enable="Y" is_premium="N" aid="4726" money="0" sharing="0"/>
+	<compositebg id="indoor_stage" name="indoor stage" thumb="indoor_stage.jpg" enable="Y" is_premium="N" aid="4589" money="0" sharing="0">
+	<bg id="indoor_stage_BG2" index="0">
+		<file>akon.indoor_stage_bg.swf</file>
+	</bg>
+	<prop id="indoor_stage_PROP0" index="2">
+		<file>akon.indoor_stage_dj_stage.swf</file>
+		<x>465.2</x>
+		<y>220</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="indoor_stage_PROP1" index="3">
+		<file>akon.indoor_stage_light.swf</file>
+		<x>365.4</x>
+		<y>135.2</y>
+		<xscale>1</xscale>
+		<yscale>0.93</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="studio" name="studio" thumb="studio.jpg" enable="Y" is_premium="N" aid="4727" money="0" sharing="0">
+	<bg id="studio_BG35" index="0">
+		<file>akon.studio_bg.swf</file>
+	</bg>
+	<prop id="studio_PROP6" index="2">
+		<file>akon.studio_mic_set.swf</file>
+		<x>332.2</x>
+		<y>148</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="studio_PROP7" index="3">
+		<file>akon.studio_stool.swf</file>
+		<x>453.2</x>
+		<y>208</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="studio_PROP8" index="4">
+		<file>akon.studio_panal.swf</file>
+		<x>273</x>
+		<y>238</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="outdoor_stage" name="outdoor stage" thumb="outdoor_stage.jpg" enable="Y" is_premium="N" aid="4728" money="0" sharing="0">
+	<bg id="outdoor_stage_BG2" index="0">
+		<file>akon.outdoor_stage_bg.swf</file>
+	</bg>
+	<prop id="outdoor_stage_PROP0" index="2">
+		<file>akon.outdoor_stage_drumset.swf</file>
+		<x>316.2</x>
+		<y>282</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="outdoor_stage_PROP1" index="3">
+		<file>akon.outdoor_stage_micset.swf</file>
+		<x>323</x>
+		<y>296</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="outdoor_stage_PROP2" index="4">
+		<file>akon.outdoor_stage_frence.swf</file>
+		<x>323</x>
+		<y>218.2</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="akon_mic.swf" name="Akon Mic" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4590" money="0" sharing="0"/>
+	<prop id="suv.swf" name="SUV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4729" money="0" sharing="0"/>
+	<prop id="shades_hold.swf" name="Shades" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4730" money="0" sharing="0"/>
+	<prop id="outdoor_stage_drumset.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4731" money="0" sharing="0"/>
+	<prop id="outdoor_stage_frence.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4732" money="0" sharing="0"/>
+	<prop id="outdoor_stage_micset.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4733" money="0" sharing="0"/>
+	<prop id="studio_mic_set.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4734" money="0" sharing="0"/>
+	<prop id="studio_panal.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4735" money="0" sharing="0"/>
+	<prop id="studio_stool.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4736" money="0" sharing="0"/>
+	<prop id="indoor_stage_dj_stage.swf" name="DJ Stage" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4601" money="0" sharing="0"/>
+	<prop id="indoor_stage_light.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4600" money="0" sharing="0"/>
+	<prop id="homie_shutter_shades.swf" name="Ripley Shutter Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="4599" money="0" sharing="0"/>
+	<prop id="cd_cover.swf" name="CD" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4591" money="0" sharing="0"/>
+	<prop id="cell_phone.swf" name="Cell Phone" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4592" money="0" sharing="0"/>
+	<prop id="necklace.swf" name="Necklace" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4593" money="0" sharing="0"/>
+	<prop id="platinum_record.swf" name="Platinum Record" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4594" money="0" sharing="0"/>
+	<prop id="poster.swf" name="Poster" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="4595" money="0" sharing="0"/>
+	<prop id="shades.swf" name="Akon Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="4596" money="0" sharing="0"/>
+	<prop id="shutter_shades.swf" name="Akon Shutter Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="4597" money="0" sharing="0"/>
+	<prop id="homie_shades.swf" name="Ripley Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="4598" money="0" sharing="0"/>
+	<prop id="christmas_hat.swf" name="Christmas Hat" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="4773" money="0" sharing="0"/>
+	<sound id="right_now_na_60s.mp3" name="Right Now (Na Na Na)" downloadtype="stream" subtype="bgmusic" duration="56137" enable="Y" is_premium="N" aid="4602" money="0" sharing="0"/>
+	<sound id="right_now_na_90s.mp3" name="Right Now (Na Na Na) 90s" downloadtype="stream" subtype="bgmusic" duration="97358" enable="Y" is_premium="N" aid="4603" money="0" sharing="0"/>
+	<sound id="be_with_you_60.mp3" name="Be with you" downloadtype="stream" subtype="bgmusic" duration="66330" enable="Y" is_premium="N" aid="4756" money="0" sharing="0"/>
+	<sound id="sound_keep_u_much_longer.mp3" name="Keep You Much Longer" downloadtype="stream" subtype="bgmusic" duration="62125" enable="Y" is_premium="N" aid="4774" money="0" sharing="0"/>
+</theme>

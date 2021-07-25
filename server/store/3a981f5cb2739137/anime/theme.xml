@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="anime" name="Anime" cc_theme_id="anime">
+	<background id="dining06_bg.swf" name="Apartment" enable="N" default="N" is_premium="N" aid="17425" money="0" sharing="0"/>
+	<background id="dining02_bg.swf" name="Sitting room" enable="N" default="N" is_premium="N" aid="17421" money="0" sharing="0"/>
+	<background id="dining01_bg.swf" name="Sitting room" enable="N" default="N" is_premium="N" aid="17420" money="0" sharing="0"/>
+	<background id="dining03_bg.swf" name="Studio flat" enable="N" default="N" is_premium="N" aid="17422" money="0" sharing="0"/>
+	<background id="dining04_bg.swf" name="Studio flat" enable="N" default="N" is_premium="N" aid="17423" money="0" sharing="0"/>
+	<background id="dining07_bg.swf" name="Kitchen" enable="N" default="N" is_premium="N" aid="17426" money="0" sharing="0"/>
+	<background id="dining05_bg.swf" name="Apartment entance" enable="N" default="N" is_premium="N" aid="17424" money="0" sharing="0"/>
+	<background id="dining08_bg.swf" name="Apartment entance" enable="N" default="N" is_premium="N" aid="17427" money="0" sharing="0"/>
+	<background id="street01_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17428" money="0" sharing="0"/>
+	<background id="street02_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17429" money="0" sharing="0"/>
+	<background id="street03_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17430" money="0" sharing="0"/>
+	<background id="street04_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17431" money="0" sharing="0"/>
+	<background id="street05_bg.swf" name="Street corner" enable="N" default="N" is_premium="N" aid="17432" money="0" sharing="0"/>
+	<background id="street06_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17433" money="0" sharing="0"/>
+	<background id="street07_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17434" money="0" sharing="0"/>
+	<background id="street08_bg.swf" name="Bridge" enable="N" default="N" is_premium="N" aid="17435" money="0" sharing="0"/>
+	<background id="city09_bg.swf" name="Food store" enable="N" default="N" is_premium="N" aid="17597" money="0" sharing="0"/>
+	<background id="city10_bg.swf" name="Food store" enable="N" default="N" is_premium="N" aid="17598" money="0" sharing="0"/>
+	<background id="city11_bg.swf" name="Food store" enable="N" default="N" is_premium="N" aid="17599" money="0" sharing="0"/>
+	<background id="city12_bg.swf" name="Food store" enable="N" default="N" is_premium="N" aid="17600" money="0" sharing="0"/>
+	<background id="city13_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17601" money="0" sharing="0"/>
+	<background id="city14_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17602" money="0" sharing="0"/>
+	<background id="city15_bg.swf" name="Convenience store" enable="N" default="N" is_premium="N" aid="17603" money="0" sharing="0"/>
+	<background id="city16_bg.swf" name="Convenience store" enable="N" default="N" is_premium="N" aid="17604" money="0" sharing="0"/>
+	<background id="city17_bg.swf" name="Convenience store" enable="N" default="N" is_premium="N" aid="17605" money="0" sharing="0"/>
+	<background id="ninja15_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17606" money="0" sharing="0"/>
+	<background id="city18_bg.swf" name="Supermarket" enable="N" default="N" is_premium="N" aid="17608" money="0" sharing="0"/>
+	<background id="city19_bg.swf" name="City - fast food" enable="N" default="N" is_premium="N" aid="17609" money="0" sharing="0"/>
+	<background id="city21_bg.swf" name="City - park" enable="N" default="N" is_premium="N" aid="17610" money="0" sharing="0"/>
+	<background id="city22_bg.swf" name="Convenience store" enable="N" default="N" is_premium="N" aid="17611" money="0" sharing="0"/>
+	<background id="city23_bg.swf" name="City - bus stop" enable="N" default="N" is_premium="N" aid="17612" money="0" sharing="0"/>
+	<background id="city24_bg.swf" name="City - park - temple" enable="N" default="N" is_premium="N" aid="17613" money="0" sharing="0"/>
+	<background id="city29_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17658" money="0" sharing="0"/>
+	<background id="city30_bg.swf" name="City - fast food" enable="N" default="N" is_premium="N" aid="17659" money="0" sharing="0"/>
+	<background id="city31_bg.swf" name="City - fast food" enable="N" default="N" is_premium="N" aid="17660" money="0" sharing="0"/>
+	<background id="city32_bg.swf" name="City - game center" enable="N" default="N" is_premium="N" aid="17661" money="0" sharing="0"/>
+	<background id="city33_bg.swf" name="City - game center" enable="N" default="N" is_premium="N" aid="17662" money="0" sharing="0"/>
+	<background id="city34_bg.swf" name="City - game center" enable="N" default="N" is_premium="N" aid="17663" money="0" sharing="0"/>
+	<background id="city35_bg.swf" name="City - residential - street" enable="N" default="N" is_premium="N" aid="17664" money="0" sharing="0"/>
+	<background id="city36_bg.swf" name="City - residential - street" enable="N" default="N" is_premium="N" aid="17665" money="0" sharing="0"/>
+	<background id="city37_bg.swf" name="City - residential - street" enable="N" default="N" is_premium="N" aid="17666" money="0" sharing="0"/>
+	<background id="city38_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17667" money="0" sharing="0"/>
+	<background id="city49_bg.swf" name="City - street" enable="N" default="N" is_premium="N" aid="17669" money="0" sharing="0"/>
+	<background id="city39_bg.swf" name="City - clock" enable="N" default="N" is_premium="N" aid="17668" money="0" sharing="0"/>
+	<background id="school01_bg.swf" name="School" enable="N" default="N" is_premium="N" aid="17436" money="0" sharing="0"/>
+	<background id="school09_bg.swf" name="Playground" enable="N" default="N" is_premium="N" aid="17444" money="0" sharing="0"/>
+	<background id="school06_bg.swf" name="Hallway" enable="N" default="N" is_premium="N" aid="17441" money="0" sharing="0"/>
+	<background id="school10_bg.swf" name="Hallway" enable="N" default="N" is_premium="N" aid="17445" money="0" sharing="0"/>
+	<background id="school05_bg.swf" name="Hallway" enable="N" default="N" is_premium="N" aid="17440" money="0" sharing="0"/>
+	<background id="school04_bg.swf" name="Classroom" enable="N" default="N" is_premium="N" aid="17439" money="0" sharing="0"/>
+	<background id="school03_bg.swf" name="Classroom" enable="N" default="N" is_premium="N" aid="17438" money="0" sharing="0"/>
+	<background id="school02_bg.swf" name="Classroom" enable="N" default="N" is_premium="N" aid="17437" money="0" sharing="0"/>
+	<background id="school08_bg.swf" name="Rooftop" enable="N" default="N" is_premium="N" aid="17443" money="0" sharing="0"/>
+	<background id="school07_bg.swf" name="Rooftop" enable="N" default="N" is_premium="N" aid="17442" money="0" sharing="0"/>
+	<background id="school11_bg.swf" name="School - track" enable="N" default="N" is_premium="N" aid="17607" money="0" sharing="0"/>
+	<background id="school13_bg.swf" name="Office - computers" enable="N" default="N" is_premium="N" aid="17670" money="0" sharing="0"/>
+	<background id="shop02_bg.swf" name="Restaurant" enable="N" default="N" is_premium="N" aid="17447" money="0" sharing="0"/>
+	<background id="shop04_bg.swf" name="Restaurant" enable="N" default="N" is_premium="N" aid="17449" money="0" sharing="0"/>
+	<background id="shop01_bg.swf" name="Restaurant" enable="N" default="N" is_premium="N" aid="17446" money="0" sharing="0"/>
+	<background id="shop03_bg.swf" name="Restaurant" enable="N" default="N" is_premium="N" aid="17448" money="0" sharing="0"/>
+	<background id="shop05_bg.swf" name="Toy shop" enable="N" default="N" is_premium="N" aid="17450" money="0" sharing="0"/>
+	<background id="shop06_bg.swf" name="Toy shop" enable="N" default="N" is_premium="N" aid="17451" money="0" sharing="0"/>
+	<background id="shop07_bg.swf" name="Store" enable="N" default="N" is_premium="N" aid="17452" money="0" sharing="0"/>
+	<background id="shop08_bg.swf" name="Convenience store" enable="N" default="N" is_premium="N" aid="17453" money="0" sharing="0"/>
+	<background id="shop09_bg.swf" name="Convenience store cashier" enable="N" default="N" is_premium="N" aid="17454" money="0" sharing="0"/>
+	<background id="train01_bg.swf" name="Train station" enable="N" default="N" is_premium="N" aid="17455" money="0" sharing="0"/>
+	<background id="train03_bg.swf" name="Train platform" enable="N" default="N" is_premium="N" aid="17457" money="0" sharing="0"/>
+	<background id="train04_bg.swf" name="Train platform" enable="N" default="N" is_premium="N" aid="17458" money="0" sharing="0"/>
+	<background id="train05_bg.swf" name="Train inside" enable="N" default="N" is_premium="N" aid="17459" money="0" sharing="0"/>
+	<background id="train06_bg.swf" name="Train inside" enable="N" default="N" is_premium="N" aid="17460" money="0" sharing="0"/>
+	<background id="train02_bg.swf" name="Train track" enable="N" default="N" is_premium="N" aid="17456" money="0" sharing="0"/>
+	<background id="train07_bg.swf" name="Train entrance" enable="N" default="N" is_premium="N" aid="17461" money="0" sharing="0"/>
+	<compositebg id="cbg_dining06" name="Home - Residential building" enable="Y" default="N" thumb="dining06.jpg" display_order="11" is_premium="Y" money="0" sharing="0" aid="17467">
+	<bg id="cbg_dining06_BG40" index="0">
+		<file>anime.dining06_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_dining02" name="Home - Living room" enable="Y" default="N" thumb="dining02.jpg" display_order="12" is_premium="N" money="0" sharing="0" aid="17463">
+	<bg id="cbg_dining02_BG47" index="0">
+		<file>anime.dining02_bg.swf</file>
+	</bg>
+	<prop id="cbg_dining02_PROP1" index="2">
+		<file>anime.dining02_prop02.swf</file>
+		<x>292</x>
+		<y>283</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_dining02_PROP2" index="1">
+		<file>anime.dining02_prop01.swf</file>
+		<x>313</x>
+		<y>231</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_dining01" name="Home - Living room" enable="Y" default="Y" thumb="dining01.jpg" display_order="13" is_premium="N" money="0" sharing="0" aid="17462">
+	<bg id="cbg_dining01_BG56" index="0">
+		<file>anime.dining01_bg.swf</file>
+	</bg>
+	<prop id="cbg_dining01_PROP3" index="1">
+		<file>anime.dining01_prop01.swf</file>
+		<x>213</x>
+		<y>316</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_dining03" name="Home - Small flat" enable="Y" default="N" thumb="dining03.jpg" display_order="14" is_premium="N" money="0" sharing="0" aid="17464">
+	<bg id="cbg_dining03_BG59" index="0">
+		<file>anime.dining03_bg.swf</file>
+	</bg>
+	<prop id="PROP2" index="2">
+		<file>anime.dining03_prop02.swf</file>
+		<x>311.3</x>
+		<y>307.2</y>
+		<xscale>0.62</xscale>
+		<yscale>0.62</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP3" index="3">
+		<file>anime.dining03_prop02.swf</file>
+		<x>413</x>
+		<y>326.5</y>
+		<xscale>1.04</xscale>
+		<yscale>1.04</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP4" index="4">
+		<file>anime.dining03_prop02.swf</file>
+		<x>322</x>
+		<y>321.2</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_dining03_PROP4" index="1">
+		<file>anime.dining03_prop01.swf</file>
+		<x>396.7</x>
+		<y>300.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_dining04" name="Home - Small flat" enable="Y" default="N" thumb="dining04.jpg" display_order="15" is_premium="N" money="0" sharing="0" aid="17465">
+	<bg id="cbg_dining04_BG61" index="0">
+		<file>anime.dining04_bg.swf</file>
+	</bg>
+	<prop id="cbg_dining04_PROP5" index="3">
+		<file>anime.dining03_prop01.swf</file>
+		<x>343</x>
+		<y>311</y>
+		<xscale>1.3</xscale>
+		<yscale>1.3</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP6" index="1">
+		<file>anime.dining03_prop02.swf</file>
+		<x>441</x>
+		<y>318.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP7" index="2">
+		<file>anime.dining03_prop02.swf</file>
+		<x>255.5</x>
+		<y>316.2</y>
+		<xscale>0.78</xscale>
+		<yscale>0.78</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="PROP8" index="4">
+		<file>anime.dining03_prop02.swf</file>
+		<x>253.8</x>
+		<y>333.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_dining07" name="Home - Kitchen" enable="Y" default="N" thumb="dining07.jpg" display_order="17" is_premium="N" money="0" sharing="0" aid="17468">
+	<bg id="cbg_dining07_BG63" index="0">
+		<file>anime.dining07_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_dining05" name="Home - Entrance door" enable="Y" default="N" thumb="dining05.jpg" display_order="18" is_premium="Y" money="0" sharing="0" aid="17466">
+	<bg id="cbg_dining05_BG64" index="0">
+		<file>anime.dining05_bg.swf</file>
+	</bg>
+	<prop id="cbg_dining05_PROP6" index="1">
+		<file>anime.dining05_prop01.swf</file>
+		<x>336</x>
+		<y>329</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_dining08" name="Home - Flat entrance" enable="Y" default="N" thumb="dining08.jpg" display_order="18" is_premium="N" money="0" sharing="0" aid="17469">
+	<bg id="cbg_dining08_BG66" index="0">
+		<file>anime.dining08_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_street01" name="City - street" enable="Y" default="N" thumb="street01.jpg" display_order="51" is_premium="Y" money="0" sharing="0" aid="17470">
+	<bg id="cbg_street01_BG78" index="0">
+		<file>anime.street01_bg.swf</file>
+	</bg>
+	<prop id="cbg_street01_PROP12" index="1">
+		<file>anime.street01_prop01.swf</file>
+		<x>317.3</x>
+		<y>190.7</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_street02" name="City - street" enable="Y" default="N" thumb="street02.jpg" display_order="52" is_premium="N" money="0" sharing="0" aid="17471">
+	<bg id="cbg_street02_BG68" index="0">
+		<file>anime.street02_bg.swf</file>
+	</bg>
+	<prop id="cbg_street02_PROP7" index="1">
+		<file>anime.street02_prop01.swf</file>
+		<x>327</x>
+		<y>202</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_street03" name="City - street" enable="Y" default="N" thumb="street03.jpg" display_order="53" is_premium="N" money="0" sharing="0" aid="17472">
+	<bg id="cbg_street03_BG70" index="0">
+		<file>anime.street03_bg.swf</file>
+	</bg>
+	<prop id="cbg_street03_PROP9" index="1">
+		<file>anime.street03_prop01.swf</file>
+		<x>305</x>
+		<y>184</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_street04" name="City - road with signs" enable="Y" default="N" thumb="street04.jpg" display_order="54" is_premium="N" money="0" sharing="0" aid="17473">
+	<bg id="cbg_street04_BG73" index="0">
+		<file>anime.street04_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_street05" name="Street corner" enable="Y" default="N" thumb="street05.jpg" display_order="55" is_premium="N" money="0" sharing="0" aid="17474">
+	<bg id="cbg_street05_BG74" index="0">
+		<file>anime.street05_bg.swf</file>
+	</bg>
+	<prop id="cbg_street05_PROP10" index="1">
+		<file>anime.street05_prop01.swf</file>
+		<x>495.2</x>
+		<y>228.2</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_street06" name="City - street" enable="Y" default="N" thumb="street06.jpg" display_order="56" is_premium="Y" money="0" sharing="0" aid="17475">
+	<bg id="cbg_street06_BG80" index="0">
+		<file>anime.street06_bg.swf</file>
+	</bg>
+	<prop id="cbg_street06_PROP13" index="1">
+		<file>anime.street06_prop01.swf</file>
+		<x>304</x>
+		<y>187.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_street07" name="City - park" enable="Y" default="N" thumb="street07.jpg" display_order="57" is_premium="N" money="0" sharing="0" aid="17476">
+	<bg id="cbg_street07_BG84" index="0">
+		<file>anime.street07_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_street08" name="City - Bridge" enable="Y" default="N" thumb="street08.jpg" display_order="58" is_premium="N" money="0" sharing="0" aid="17477">
+	<bg id="cbg_street08_BG85" index="0">
+		<file>anime.street08_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city09" name="Food stall" enable="Y" default="N" thumb="city09.jpg" display_order="59" is_premium="Y" money="0" sharing="0" aid="17614">
+	<bg id="cbg_city09_BG5" index="0">
+		<file>anime.city09_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city10" name="Food stall" enable="Y" default="N" thumb="city10.jpg" display_order="60" is_premium="Y" money="0" sharing="0" aid="17615">
+	<bg id="cbg_city10_BG6" index="0">
+		<file>anime.city10_bg.swf</file>
+	</bg>
+	<prop id="cbg_city10_PROP1" index="2">
+		<file>anime.city10_prop03.swf</file>
+		<x>520</x>
+		<y>358</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city10_PROP2" index="3">
+		<file>anime.city10_prop01.swf</file>
+		<x>264</x>
+		<y>210</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city10_PROP3" index="4">
+		<file>anime.city10_prop02.swf</file>
+		<x>390</x>
+		<y>142</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city10_PROP4" index="1">
+		<file>anime.city10_prop03.swf</file>
+		<x>480</x>
+		<y>327.2</y>
+		<xscale>0.93</xscale>
+		<yscale>0.93</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city11" name="Food stall" enable="Y" default="N" thumb="city11.jpg" display_order="61" is_premium="Y" money="0" sharing="0" aid="17616">
+	<bg id="cbg_city11_BG19" index="0">
+		<file>anime.city11_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city12" name="Food stall" enable="Y" default="N" thumb="city12.jpg" display_order="62" is_premium="Y" money="0" sharing="0" aid="17617">
+	<bg id="cbg_city12_BG20" index="0">
+		<file>anime.city12_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city13" name="City - street" enable="Y" default="N" thumb="city13.jpg" display_order="63" is_premium="Y" money="0" sharing="0" aid="17618">
+	<bg id="cbg_city13_BG21" index="0">
+		<file>anime.city13_bg.swf</file>
+	</bg>
+	<prop id="cbg_city13_PROP5" index="1">
+		<file>anime.city13_prop01.swf</file>
+		<x>519.9</x>
+		<y>247.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city14" name="City - street" enable="Y" default="N" thumb="city14.jpg" display_order="64" is_premium="Y" money="0" sharing="0" aid="17619">
+	<bg id="cbg_city14_BG30" index="0">
+		<file>anime.city14_bg.swf</file>
+	</bg>
+	<prop id="PROP6" index="1">
+		<file>anime.msp_city14.msp_city14_city14_prop01.swf</file>
+		<x>223</x>
+		<y>201</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city15" name="Convenience store" enable="Y" default="N" thumb="city15.jpg" display_order="65" is_premium="Y" money="0" sharing="0" aid="17620">
+	<bg id="cbg_city15_BG23" index="0">
+		<file>anime.city15_bg.swf</file>
+	</bg>
+	<prop id="cbg_city15_PROP5" index="1">
+		<file>anime.city13_prop01.swf</file>
+		<x>519.9</x>
+		<y>247.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city15_PROP6" index="2">
+		<file>anime.city15_prop01.swf</file>
+		<x>281.3</x>
+		<y>280</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city16" name="Convenience store" enable="Y" default="N" thumb="city16.jpg" display_order="66" is_premium="Y" money="0" sharing="0" aid="17621">
+	<bg id="cbg_city16_BG25" index="0">
+		<file>anime.city16_bg.swf</file>
+	</bg>
+	<prop id="cbg_city16_PROP8" index="1">
+		<file>anime.city16_prop01.swf</file>
+		<x>322.5</x>
+		<y>167.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city17" name="Convenience store" enable="Y" default="N" thumb="city17.jpg" display_order="67" is_premium="Y" money="0" sharing="0" aid="17622">
+	<bg id="cbg_city17_BG28" index="0">
+		<file>anime.city17_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_ninja15" name="City - street" enable="Y" default="N" thumb="ninja15.jpg" display_order="68" is_premium="Y" money="0" sharing="0" aid="17623">
+	<bg id="cbg_ninja15_BG29" index="0">
+		<file>anime.ninja15_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city19" name="City - fast food" enable="Y" default="N" thumb="city19.jpg" display_order="69" is_premium="Y" money="0" sharing="0" aid="17625">
+	<bg id="cbg_city19_BG12" index="0">
+		<file>anime.city19_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city21" name="City - park" enable="Y" default="N" thumb="city21.jpg" display_order="70" is_premium="Y" money="0" sharing="0" aid="17626">
+	<bg id="cbg_city21_BG13" index="0">
+		<file>anime.city21_bg.swf</file>
+	</bg>
+	<prop id="PROP2" index="1">
+		<file>anime.city21_prop01.swf</file>
+		<x>131</x>
+		<y>174</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city22" name="Convenience store" enable="Y" default="N" thumb="city22.jpg" display_order="71" is_premium="Y" money="0" sharing="0" aid="17627">
+	<bg id="cbg_city22_BG14" index="0">
+		<file>anime.city22_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city23" name="City - bus stop" enable="Y" default="N" thumb="city23.jpg" display_order="72" is_premium="Y" money="0" sharing="0" aid="17628">
+	<bg id="cbg_city23_BG15" index="0">
+		<file>anime.city23_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city24" name="City - park - temple" enable="Y" default="N" thumb="city24.jpg" display_order="73" is_premium="Y" money="0" sharing="0" aid="17629">
+	<bg id="cbg_city24_BG16" index="0">
+		<file>anime.city24_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city18" name="Supermarket" enable="Y" default="N" thumb="city18.jpg" display_order="74" is_premium="N" money="0" sharing="0" aid="17624">
+	<bg id="cbg_city18_BG11" index="0">
+		<file>anime.city18_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city29" name="City - street" enable="Y" default="N" thumb="city29.jpg" display_order="75" is_premium="Y" money="0" sharing="0" aid="17671">
+	<bg id="cbg_city29_BG5" index="0">
+		<file>anime.city29_bg.swf</file>
+	</bg>
+	<prop id="cbg_city29_PROP1" index="1">
+		<file>anime.city29_prop01.swf</file>
+		<x>501</x>
+		<y>207</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city30" name="City - fast food" enable="Y" default="N" thumb="city30.jpg" display_order="76" is_premium="Y" money="0" sharing="0" aid="17672">
+	<bg id="cbg_city30_BG10" index="0">
+		<file>anime.city30_bg.swf</file>
+	</bg>
+	<prop id="cbg_city30_PROP3" index="1">
+		<file>anime.city30_prop03.swf</file>
+		<x>436</x>
+		<y>240</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city30_PROP4" index="2">
+		<file>anime.city30_prop02.swf</file>
+		<x>532</x>
+		<y>312</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city30_PROP5" index="3">
+		<file>anime.city30_prop01.swf</file>
+		<x>561</x>
+		<y>353</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city31" name="City - fast food" enable="Y" default="N" thumb="city31.jpg" display_order="77" is_premium="Y" money="0" sharing="0" aid="17673">
+	<bg id="cbg_city31_BG14" index="0">
+		<file>anime.city31_bg.swf</file>
+	</bg>
+	<prop id="cbg_city31_PROP6" index="4">
+		<file>anime.city31_prop01.swf</file>
+		<x>253.8</x>
+		<y>290.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city31_PROP7" index="3">
+		<file>anime.city31_prop02.swf</file>
+		<x>283</x>
+		<y>319</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city31_PROP8" index="2">
+		<file>anime.city31_prop03.swf</file>
+		<x>435.7</x>
+		<y>294</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city31_PROP9" index="1">
+		<file>anime.city31_prop04.swf</file>
+		<x>441</x>
+		<y>243</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city32" name="City - game center" enable="Y" default="N" thumb="city32.jpg" display_order="78" is_premium="Y" money="0" sharing="0" aid="17674">
+	<bg id="cbg_city32_BG21" index="0">
+		<file>anime.city32_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city33" name="City - game center" enable="Y" default="N" thumb="city33.jpg" display_order="79" is_premium="Y" money="0" sharing="0" aid="17675">
+	<bg id="cbg_city33_BG23" index="0">
+		<file>anime.city33_bg.swf</file>
+	</bg>
+	<prop id="cbg_city33_PROP10" index="1">
+		<file>anime.city33_prop01.swf</file>
+		<x>126</x>
+		<y>265</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city33_PROP11" index="2">
+		<file>anime.city33_prop02.swf</file>
+		<x>517</x>
+		<y>200</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_city33_PROP12" index="3">
+		<file>anime.city33_prop03.swf</file>
+		<x>327.5</x>
+		<y>207</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city34" name="City - game center" enable="Y" default="N" thumb="city34.jpg" display_order="80" is_premium="Y" money="0" sharing="0" aid="17676">
+	<bg id="cbg_city34_BG27" index="0">
+		<file>anime.city34_bg.swf</file>
+	</bg>
+	<prop id="cbg_city34_PROP13" index="1">
+		<file>anime.city34_prop01.swf</file>
+		<x>340</x>
+		<y>267</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city35" name="City - residential - street" enable="Y" default="N" thumb="city35.jpg" display_order="81" is_premium="Y" money="0" sharing="0" aid="17677">
+	<bg id="cbg_city35_BG29" index="0">
+		<file>anime.city35_bg.swf</file>
+	</bg>
+	<prop id="cbg_city35_PROP14" index="1">
+		<file>anime.city35_prop01.swf</file>
+		<x>567</x>
+		<y>181</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city36" name="City - residential - street" enable="Y" default="N" thumb="city36.jpg" display_order="82" is_premium="Y" money="0" sharing="0" aid="17678">
+	<bg id="cbg_city36_BG31" index="0">
+		<file>anime.city36_bg.swf</file>
+	</bg>
+	<prop id="cbg_city36_PROP15" index="1">
+		<file>anime.city36_prop01.swf</file>
+		<x>321</x>
+		<y>193</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city37" name="City - residential - street" enable="Y" default="N" thumb="city37.jpg" display_order="83" is_premium="Y" money="0" sharing="0" aid="17679">
+	<bg id="cbg_city37_BG33" index="0">
+		<file>anime.city37_bg.swf</file>
+	</bg>
+	<prop id="cbg_city37_PROP16" index="1">
+		<file>anime.city37_prop01.swf</file>
+		<x>311</x>
+		<y>200</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_city38" name="City - street" enable="Y" default="N" thumb="city38.jpg" display_order="84" is_premium="Y" money="0" sharing="0" aid="17680">
+	<bg id="cbg_city38_BG35" index="0">
+		<file>anime.city38_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city49" name="City - street" enable="Y" default="N" thumb="city49.jpg" display_order="85" is_premium="Y" money="0" sharing="0" aid="17682">
+	<bg id="cbg_city49_BG36" index="0">
+		<file>anime.city49_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_city39" name="City - clock" enable="Y" default="N" thumb="city39.jpg" display_order="86" is_premium="Y" money="0" sharing="0" aid="17681">
+	<bg id="cbg_city39_BG37" index="0">
+		<file>anime.city39_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school01" name="School" enable="Y" default="N" thumb="school01.jpg" display_order="101" is_premium="Y" money="0" sharing="0" aid="17478">
+	<bg id="cbg_school01_BG86" index="0">
+		<file>anime.school01_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school09" name="School - outdoor" enable="Y" default="N" thumb="school09.jpg" display_order="102" is_premium="N" money="0" sharing="0" aid="17486">
+	<bg id="cbg_school09_BG87" index="0">
+		<file>anime.school09_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school06" name="School - staircase" enable="Y" default="N" thumb="school06.jpg" display_order="103" is_premium="N" money="0" sharing="0" aid="17483">
+	<bg id="cbg_school06_BG88" index="0">
+		<file>anime.school06_bg.swf</file>
+	</bg>
+	<prop id="cbg_school06_PROP14" index="1">
+		<file>anime.school06_prop01.swf</file>
+		<x>370.8</x>
+		<y>145.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_school10" name="School - staircase" enable="Y" default="N" thumb="school10.jpg" display_order="104" is_premium="N" money="0" sharing="0" aid="17487">
+	<bg id="cbg_school10_BG90" index="0">
+		<file>anime.school10_bg.swf</file>
+	</bg>
+	<prop id="cbg_school10_PROP15" index="1">
+		<file>anime.school10_prop01.swf</file>
+		<x>514.8</x>
+		<y>228.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_school05" name="School - hallway" enable="Y" default="N" thumb="school05.jpg" display_order="105" is_premium="N" money="0" sharing="0" aid="17482">
+	<bg id="cbg_school05_BG92" index="0">
+		<file>anime.school05_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school04" name="School - classroom" enable="N" default="N" thumb="school04.jpg" display_order="106" is_premium="N" money="0" sharing="0" aid="17481">
+	<bg id="cbg_school04_BG93" index="0">
+		<file>anime.school04_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school03" name="School - classroom" enable="Y" default="N" thumb="school03.jpg" display_order="107" is_premium="N" money="0" sharing="0" aid="17480">
+	<bg id="cbg_school03_BG94" index="0">
+		<file>anime.school03_bg.swf</file>
+	</bg>
+	<prop id="cbg_school03_PROP16" index="3">
+		<file>anime.school03_prop01.swf</file>
+		<x>272.2</x>
+		<y>320</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP17" index="4">
+		<file>anime.school03_prop02.swf</file>
+		<x>196.5</x>
+		<y>224.1</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP18" index="9">
+		<file>anime.school03_prop03.swf</file>
+		<x>173.4</x>
+		<y>245.3</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP19" index="12">
+		<file>anime.school03_prop04.swf</file>
+		<x>142.2</x>
+		<y>284.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP20" index="13">
+		<file>anime.school03_prop05.swf</file>
+		<x>97.3</x>
+		<y>343.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP21" index="2">
+		<file>anime.school03_prop06.swf</file>
+		<x>132.2</x>
+		<y>224.1</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP22" index="6">
+		<file>anime.school03_prop07.swf</file>
+		<x>98.6</x>
+		<y>246.2</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP24" index="1">
+		<file>anime.school03_prop08.swf</file>
+		<x>104.9</x>
+		<y>212</y>
+		<xscale>0.45</xscale>
+		<yscale>0.45</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP25" index="5">
+		<file>anime.school03_prop08.swf</file>
+		<x>82</x>
+		<y>229.9</y>
+		<xscale>0.54</xscale>
+		<yscale>0.54</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP26" index="8">
+		<file>anime.school03_prop08.swf</file>
+		<x>157.3</x>
+		<y>239</y>
+		<xscale>0.54</xscale>
+		<yscale>0.54</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP27" index="7">
+		<file>anime.school03_prop08.swf</file>
+		<x>180.3</x>
+		<y>221.2</y>
+		<xscale>0.44</xscale>
+		<yscale>0.44</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP28" index="10">
+		<file>anime.school03_prop08.swf</file>
+		<x>125.5</x>
+		<y>264.9</y>
+		<xscale>0.74</xscale>
+		<yscale>0.74</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school03_PROP29" index="11">
+		<file>anime.school03_prop08.swf</file>
+		<x>68.8</x>
+		<y>335.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_school02" name="School - classroom" enable="Y" default="N" thumb="school02.jpg" display_order="108" is_premium="N" money="0" sharing="0" aid="17479">
+	<bg id="cbg_school02_BG128" index="0">
+		<file>anime.school02_bg.swf</file>
+	</bg>
+	<prop id="cbg_school02_PROP38" index="1">
+		<file>anime.school02_prop02.swf</file>
+		<x>43.3</x>
+		<y>351.9</y>
+		<xscale>0.83</xscale>
+		<yscale>0.83</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP31" index="2">
+		<file>anime.school02_prop01.swf</file>
+		<x>229.6</x>
+		<y>314.4</y>
+		<xscale>1.04</xscale>
+		<yscale>1.04</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP32" index="3">
+		<file>anime.school02_prop01.swf</file>
+		<x>116.5</x>
+		<y>346.3</y>
+		<xscale>1.15</xscale>
+		<yscale>1.15</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP30" index="4">
+		<file>anime.school02_prop02.swf</file>
+		<x>282.8</x>
+		<y>352.4</y>
+		<xscale>0.83</xscale>
+		<yscale>0.83</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP33" index="5">
+		<file>anime.school02_prop02.swf</file>
+		<x>182</x>
+		<y>383.7</y>
+		<xscale>0.92</xscale>
+		<yscale>0.92</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP34" index="6">
+		<file>anime.school02_prop01.swf</file>
+		<x>507.3</x>
+		<y>332.9</y>
+		<xscale>1.04</xscale>
+		<yscale>1.04</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP35" index="7">
+		<file>anime.school02_prop02.swf</file>
+		<x>561.5</x>
+		<y>370.8</y>
+		<xscale>0.83</xscale>
+		<yscale>0.83</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP36" index="8">
+		<file>anime.school02_prop01.swf</file>
+		<x>386.8</x>
+		<y>363.7</y>
+		<xscale>1.15</xscale>
+		<yscale>1.15</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school02_PROP37" index="9">
+		<file>anime.school02_prop02.swf</file>
+		<x>459.7</x>
+		<y>402.2</y>
+		<xscale>0.92</xscale>
+		<yscale>0.92</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_school08" name="School - rooftop" enable="Y" default="N" thumb="school08.jpg" display_order="109" is_premium="N" money="0" sharing="0" aid="17485">
+	<bg id="cbg_school08_BG173" index="0">
+		<file>anime.school08_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school07" name="School - rooftop" enable="Y" default="N" thumb="school07.jpg" display_order="110" is_premium="N" money="0" sharing="0" aid="17484">
+	<bg id="cbg_school07_BG174" index="0">
+		<file>anime.school07_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school11" name="School - track" enable="Y" default="N" thumb="school11.jpg" display_order="111" is_premium="Y" money="0" sharing="0" aid="17630">
+	<bg id="cbg_school11_BG17" index="0">
+		<file>anime.school11_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_school13" name="Office - computers" enable="Y" default="N" thumb="school13.jpg" display_order="112" is_premium="Y" money="0" sharing="0" aid="17683">
+	<bg id="cbg_school13_BG38" index="0">
+		<file>anime.school13_bg.swf</file>
+	</bg>
+	<prop id="cbg_school13_PROP18" index="1">
+		<file>anime.school13_prop04.swf</file>
+		<x>351.1</x>
+		<y>315.7</y>
+		<xscale>1.15</xscale>
+		<yscale>1.15</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school13_PROP19" index="2">
+		<file>anime.school13_prop03.swf</file>
+		<x>313</x>
+		<y>256.3</y>
+		<xscale>0.93</xscale>
+		<yscale>0.93</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school13_PROP20" index="3">
+		<file>anime.school13_prop01.swf</file>
+		<x>132.7</x>
+		<y>291</y>
+		<xscale>0.93</xscale>
+		<yscale>0.93</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_school13_PROP21" index="4">
+		<file>anime.school13_prop02.swf</file>
+		<x>480.2</x>
+		<y>358.1</y>
+		<xscale>0.93</xscale>
+		<yscale>0.93</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_shop02" name="Restaurant" enable="Y" default="N" thumb="shop02.jpg" display_order="151" is_premium="Y" money="0" sharing="0" aid="17489">
+	<bg id="cbg_shop02_BG177" index="0">
+		<file>anime.shop02_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_shop04" name="Restaurant" enable="Y" default="N" thumb="shop04.jpg" display_order="152" is_premium="Y" money="0" sharing="0" aid="17491">
+	<bg id="cbg_shop04_BG178" index="0">
+		<file>anime.shop04_bg.swf</file>
+	</bg>
+	<prop id="cbg_shop04_PROP41" index="2">
+		<file>anime.shop04_prop01.swf</file>
+		<x>578.9</x>
+		<y>356.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_shop04_PROP42" index="1">
+		<file>anime.shop04_prop02.swf</file>
+		<x>267.4</x>
+		<y>349.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_shop01" name="Restaurant" enable="Y" default="N" thumb="shop01.jpg" display_order="153" is_premium="Y" money="0" sharing="0" aid="17488">
+	<bg id="cbg_shop01_BG184" index="0">
+		<file>anime.shop01_bg.swf</file>
+	</bg>
+	<prop id="cbg_shop01_PROP43" index="3">
+		<file>anime.shop01_prop03.swf</file>
+		<x>321.1</x>
+		<y>332.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_shop01_PROP44" index="1">
+		<file>anime.shop01_prop04.swf</file>
+		<x>209.5</x>
+		<y>349.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_shop01_PROP45" index="2">
+		<file>anime.shop01_prop02.swf</file>
+		<x>453.7</x>
+		<y>347.3</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_shop01_PROP46" index="4">
+		<file>anime.shop01_prop01.swf</file>
+		<x>510.6</x>
+		<y>366.3</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_shop03" name="Restaurant" enable="N" default="N" thumb="shop03.jpg" display_order="154" is_premium="Y" money="0" sharing="0" aid="17490">
+	<bg id="cbg_shop03_BG189" index="0">
+		<file>anime.shop03_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_shop05" name="Shop" enable="Y" default="N" thumb="shop05.jpg" display_order="155" is_premium="Y" money="0" sharing="0" aid="17492">
+	<bg id="cbg_shop05_BG191" index="0">
+		<file>anime.shop05_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_shop06" name="Shop" enable="Y" default="N" thumb="shop06.jpg" display_order="156" is_premium="Y" money="0" sharing="0" aid="17493">
+	<bg id="cbg_shop06_BG192" index="0">
+		<file>anime.shop06_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_shop07" name="Shop" enable="Y" default="N" thumb="shop07.jpg" display_order="157" is_premium="Y" money="0" sharing="0" aid="17494">
+	<bg id="cbg_shop07_BG193" index="0">
+		<file>anime.shop07_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_shop08" name="Convenience store" enable="Y" default="N" thumb="shop08.jpg" display_order="158" is_premium="Y" money="0" sharing="0" aid="17495">
+	<bg id="cbg_shop08_BG194" index="0">
+		<file>anime.shop08_bg.swf</file>
+	</bg>
+	<prop id="cbg_shop08_PROP47" index="1">
+		<file>anime.shop08_prop01.swf</file>
+		<x>295.9</x>
+		<y>255.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_shop09" name="Convenience store" enable="Y" default="N" thumb="shop09.jpg" display_order="159" is_premium="Y" money="0" sharing="0" aid="17496">
+	<bg id="cbg_shop09_BG197" index="0">
+		<file>anime.shop09_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train01" name="Train - station" enable="Y" default="N" thumb="train01.jpg" display_order="201" is_premium="Y" money="0" sharing="0" aid="17497">
+	<bg id="cbg_train01_BG198" index="0">
+		<file>anime.train01_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train03" name="Train platform" enable="Y" default="N" thumb="train03.jpg" display_order="202" is_premium="Y" money="0" sharing="0" aid="17499">
+	<bg id="cbg_train03_BG199" index="0">
+		<file>anime.train03_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train04" name="Train platform" enable="Y" default="N" thumb="train04.jpg" display_order="203" is_premium="Y" money="0" sharing="0" aid="17500">
+	<bg id="cbg_train04_BG200" index="0">
+		<file>anime.train04_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train05" name="Train inside" enable="Y" default="N" thumb="train05.jpg" display_order="204" is_premium="Y" money="0" sharing="0" aid="17501">
+	<bg id="cbg_train05_BG201" index="0">
+		<file>anime.train05_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train06" name="Train inside" enable="Y" default="N" thumb="train06.jpg" display_order="205" is_premium="Y" money="0" sharing="0" aid="17502">
+	<bg id="cbg_train06_BG202" index="0">
+		<file>anime.train06_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train02" name="Train - countryside" enable="Y" default="N" thumb="train02.jpg" display_order="206" is_premium="Y" money="0" sharing="0" aid="17498">
+	<bg id="cbg_train02_BG203" index="0">
+		<file>anime.train02_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_train07" name="Train - station platform" enable="Y" default="N" thumb="train07.jpg" display_order="207" is_premium="Y" money="0" sharing="0" aid="17503">
+	<bg id="cbg_train07_BG204" index="0">
+		<file>anime.train07_bg.swf</file>
+	</bg>
+</compositebg>
+	<prop id="shop04_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17408" money="0" sharing="0"/>
+	<prop id="shop04_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17409" money="0" sharing="0"/>
+	<prop id="shop08_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17410" money="0" sharing="0"/>
+	<prop id="dining02_prop03.swf" name="Rice cake" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17411" money="0" sharing="0"/>
+	<prop id="dining02_prop04.swf" name="Tea" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17412" money="0" sharing="0"/>
+	<prop id="school09_prop01.swf" name="Tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17413" money="0" sharing="0"/>
+	<prop id="school09_prop02.swf" name="Tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17414" money="0" sharing="0"/>
+	<prop id="school09_prop03.swf" name="Tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17415" money="0" sharing="0"/>
+	<prop id="street01_prop02.swf" name="Plant" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17416" money="0" sharing="0"/>
+	<prop id="street01_prop03.swf" name="Plant" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17417" money="0" sharing="0"/>
+	<prop id="street01_prop04.swf" name="Plant" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17418" money="0" sharing="0"/>
+	<prop id="dining03_prop02.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17419" money="0" sharing="0"/>
+	<prop id="02sword01.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17504" money="0" sharing="0" handstyle="stick"/>
+	<prop id="02sword02.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17505" money="0" sharing="0" handstyle="stick"/>
+	<prop id="02sword03.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17506" money="0" sharing="0" handstyle="stick"/>
+	<prop id="02sword04.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17507" money="0" sharing="0" handstyle="stick"/>
+	<prop id="02sword05.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17508" money="0" sharing="0" handstyle="stick"/>
+	<prop id="city10_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17581" money="0" sharing="0"/>
+	<prop id="city10_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17582" money="0" sharing="0"/>
+	<prop id="city10_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17583" money="0" sharing="0"/>
+	<prop id="city13_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17584" money="0" sharing="0"/>
+	<prop id="city14_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17585" money="0" sharing="0"/>
+	<prop id="city14_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17586" money="0" sharing="0"/>
+	<prop id="city14_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17587" money="0" sharing="0"/>
+	<prop id="city14_prop04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17588" money="0" sharing="0"/>
+	<prop id="city15_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17589" money="0" sharing="0"/>
+	<prop id="city16_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17590" money="0" sharing="0"/>
+	<prop id="msp_city14" name="Traffic light" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_city14_city14_prop01.swf" enable="N" is_premium="N" aid="17591" money="0" sharing="0">
+		<state id="msp_city14_city14_prop01.swf" name="green" enable="Y" default="Y"/>
+		<state id="msp_city14_city14_prop02.swf" name="green to red" enable="Y"/>
+		<state id="msp_city14_city14_prop03.swf" name="red" enable="Y"/>
+		<state id="msp_city14_city14_prop04.swf" name="red to green" enable="Y"/>
+	</prop>
+	<prop id="city21_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17596" money="0" sharing="0"/>
+	<prop id="dining01_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17375" money="0" sharing="0"/>
+	<prop id="food01.swf" name="Food - dish" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17631" money="0" sharing="0"/>
+	<prop id="dining02_prop01.swf" name="Cushion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17376" money="0" sharing="0"/>
+	<prop id="food02.swf" name="Food - bread" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17632" money="0" sharing="0"/>
+	<prop id="dining02_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17377" money="0" sharing="0"/>
+	<prop id="food03.swf" name="Food - dish" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17633" money="0" sharing="0"/>
+	<prop id="dining03_prop01.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17378" money="0" sharing="0"/>
+	<prop id="food04.swf" name="Food - ramen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17634" money="0" sharing="0"/>
+	<prop id="dining05_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17379" money="0" sharing="0"/>
+	<prop id="food05.swf" name="Food - drink" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17635" money="0" sharing="0"/>
+	<prop id="street01_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17380" money="0" sharing="0"/>
+	<prop id="food06.swf" name="Food - bread" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17636" money="0" sharing="0"/>
+	<prop id="street02_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17381" money="0" sharing="0"/>
+	<prop id="train_side.swf" name="Train" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17637" money="0" sharing="0"/>
+	<prop id="street03_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17382" money="0" sharing="0"/>
+	<prop id="city29_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17638" money="0" sharing="0"/>
+	<prop id="street04_prop01.swf" name="Banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17383" money="0" sharing="0"/>
+	<prop id="city29_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17639" money="0" sharing="0"/>
+	<prop id="street04_prop02.swf" name="Banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17384" money="0" sharing="0"/>
+	<prop id="city30_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17640" money="0" sharing="0"/>
+	<prop id="street04_prop03.swf" name="Banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17385" money="0" sharing="0"/>
+	<prop id="city30_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17641" money="0" sharing="0"/>
+	<prop id="street04_prop04.swf" name="Banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17386" money="0" sharing="0"/>
+	<prop id="city30_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17642" money="0" sharing="0"/>
+	<prop id="street04_prop05.swf" name="Banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17387" money="0" sharing="0"/>
+	<prop id="city31_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17643" money="0" sharing="0"/>
+	<prop id="street05_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17388" money="0" sharing="0"/>
+	<prop id="city31_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17644" money="0" sharing="0"/>
+	<prop id="street06_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17389" money="0" sharing="0"/>
+	<prop id="city31_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17645" money="0" sharing="0"/>
+	<prop id="street07_prop01.swf" name="Vending machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17390" money="0" sharing="0"/>
+	<prop id="city31_prop04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17646" money="0" sharing="0"/>
+	<prop id="street07_prop02.swf" name="Rubbish bin" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17391" money="0" sharing="0"/>
+	<prop id="city33_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17647" money="0" sharing="0"/>
+	<prop id="school02_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17392" money="0" sharing="0"/>
+	<prop id="city33_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17648" money="0" sharing="0"/>
+	<prop id="school02_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17393" money="0" sharing="0"/>
+	<prop id="city33_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17649" money="0" sharing="0"/>
+	<prop id="school03_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17394" money="0" sharing="0"/>
+	<prop id="city34_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17650" money="0" sharing="0"/>
+	<prop id="school03_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17395" money="0" sharing="0"/>
+	<prop id="city35_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17651" money="0" sharing="0"/>
+	<prop id="school03_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17396" money="0" sharing="0"/>
+	<prop id="city36_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17652" money="0" sharing="0"/>
+	<prop id="school03_prop04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17397" money="0" sharing="0"/>
+	<prop id="city37_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17653" money="0" sharing="0"/>
+	<prop id="school03_prop05.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17398" money="0" sharing="0"/>
+	<prop id="school13_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17654" money="0" sharing="0"/>
+	<prop id="school03_prop06.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17399" money="0" sharing="0"/>
+	<prop id="school13_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17655" money="0" sharing="0"/>
+	<prop id="school03_prop07.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17400" money="0" sharing="0"/>
+	<prop id="school13_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17656" money="0" sharing="0"/>
+	<prop id="school03_prop08.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17401" money="0" sharing="0"/>
+	<prop id="school13_prop04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17657" money="0" sharing="0"/>
+	<prop id="school06_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17402" money="0" sharing="0"/>
+	<prop id="school10_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17403" money="0" sharing="0"/>
+	<prop id="shop01_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17404" money="0" sharing="0"/>
+	<prop id="shop01_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17405" money="0" sharing="0"/>
+	<prop id="shop01_prop03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17406" money="0" sharing="0"/>
+	<prop id="shop01_prop04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17407" money="0" sharing="0"/>
+</theme>

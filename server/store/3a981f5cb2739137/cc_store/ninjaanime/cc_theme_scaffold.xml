@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cc_theme id="ninjaanime" parent_theme_id="anime" studio_theme_id="ninjaanime" name="Ninja Anime" version="2.0" xsi:noNamespaceSchemaLocation="http://alvin.goanimate.org/schema/cc_library_theme.xsd" xmlns:xi="http://alvin.goanimate.org/store" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<bodyshape id="guy" name="Guy" default_action="guy_stand01_still" default_motion="guy_walk" action_thumb="guy_stand01_still" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="guy">
+		<default_char>
+			<color r="ccSkinColor">0xE2C294</color>
+			<color r="ccEyeLib">0xBD8764</color>
+			<color r="ccEyeIris">0x003333</color>
+			<color r="ccMouthLip">0xB7796A</color>
+			<color r="ccBackMajor">0x996600</color>
+			<color r="ccLowerMinor">0x4F5157</color>
+			<color r="ccHairMajor">0x534339</color>
+			<component type="bodyshape" component_id="guy" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="freeaction" component_id="guy" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="ear" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eye" component_id="006" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="501" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="75" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="002" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="faceshape" component_id="003" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="002" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<library type="GoHands" component_id="001" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+			<library type="GoLower" component_id="501" theme_id="ninjaanime" gobucks="75" gopoints="0"/>
+			<library type="GoUpper" component_id="501" theme_id="ninjaanime" gobucks="150" gopoints="0"/>
+			<library type="GoHair" component_id="501" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+			<library type="GoFeet" component_id="501" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+		</default_char>
+
+		<actionpack id="ninja" name="Ninja" money="0" sharing="0" enable="Y">
+						<action id="guy_nja_run01" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_run02" name="Run-Combat" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_appear01" name="Teleport - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_appear02" name="Teleport - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_disappear01" name="Teleport - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_disappear02" name="Teleport - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_fight_stand01" name="Fighting Stance" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_fight_stand02" name="Fighting Stance" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_stand" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_prepare01" name="Prepare Spell" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_prepare02" name="Prepare Spell" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_vanish_disappear01" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_vanish_disappear02" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_vanish_disappear03" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_focus_energy" name="Focus Energy" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_super" name="Super Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_thunder01" name="Thunder Bolts" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_thunder02" name="Thunder Bolts" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_vanish_appear" name="Vanish - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_strike01" name="Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_strike02" name="Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_get_hit01" name="Get Hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_get_hit02" name="Get Hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_shuriken01" name="Shuriken" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_shuriken02" name="Shuriken" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="guy_nja_jump01" name="Jump" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_jump02" name="Jump" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="guy_nja_kneeling01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+		</actionpack>
+
+		<actionpack id="swordfight" name="Sword Fighting" money="0" sharing="0" enable="Y">
+			<action id="guy_sword_hurtfront" name="Hurt from front" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_hurtback" name="Hurt from behind" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_hurtbad" name="Hurt" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_hurtfatal" name="Hurt badly" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_hurtfatal2" name="Hurt badly" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_hurtair" name="Hurt (in the air)" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_dodge" name="Dodge" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_dodgecombo" name="Dodge combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_guard" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_guardfront" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_guardback" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_guardfail" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_guardcombo" name="Guard combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_jump01" name="Jump - in the air" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_jump02" name="Jump - in the air" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_run02" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_run01" name="Run - spell" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_takeout01" name="Take sword out" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_takeout01pose" name="Take sword out - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_takeout02" name="Take sword out" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_takeout02pose" name="Take sword out - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk01" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk01_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk02" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk02_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk03" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk03_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk_combo01" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk_combo02" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_atk3hit" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_stand" name="Stand" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_stand02" name="Stand" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="guy_sword_charge" name="Power growing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+		</actionpack>
+
+		<component type="GoUpper" xi:inherit="false">
+		<library type="GoUpper" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="502" path="502" name="502" thumb="502_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="503" path="503" name="503" thumb="503_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="506" path="506" name="506" thumb="506_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="508" path="508" name="508" thumb="508_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="509" path="509" name="509" thumb="509_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="510" path="510" name="510" thumb="510_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="515" path="515" name="515" thumb="515_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="516" path="516" name="516" thumb="516_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="519" path="519" name="519" thumb="519_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="521" path="521" name="521" thumb="521_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="522" path="522" name="522" thumb="522_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		</component>
+
+		<component type="GoLower" xi:inherit="false">
+		<library type="GoLower" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="503" path="503" name="503" thumb="503_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F512" />
+		</library>
+		<library type="GoLower" id="506" path="506" name="506" thumb="506_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="508" path="508" name="508" thumb="508_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="509" path="509" name="509" thumb="509_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="510" path="510" name="510" thumb="510_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F510" />
+		</library>
+		<library type="GoLower" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F512" />
+		</library>
+		<library type="GoLower" id="518" path="518" name="518" thumb="518_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+			<apply-template ref="F501" />
+		</library>
+		</component>
+
+		<component type="GoFeet" xi:inherit="false">
+		<library type="GoFeet" id="500" path="500" name="500" thumb="500_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="510" path="510" name="510" thumb="510_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="511" path="511" name="511" thumb="511_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="513" path="513" name="513" thumb="513_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		</component>
+
+		<component type="GoHair">
+		<library type="GoHair" id="500" path="500" name="500" thumb="500.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="501" path="501" name="501" thumb="501.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="502" path="502" name="502" thumb="502.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="503" path="503" name="503" thumb="503.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="504" path="504" name="504" thumb="504.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="505" path="505" name="505" thumb="505.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="506" path="506" name="506" thumb="506.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="507" path="507" name="507" thumb="507.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="508" path="508" name="508" thumb="508.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="509" path="509" name="509" thumb="509.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="510" path="510" name="510" thumb="510.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="511" path="511" name="511" thumb="511.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		</component>
+	</bodyshape>
+
+
+	<bodyshape id="girl" name="Girl" default_action="stand01_still" default_motion="walk" action_thumb="stand01_still" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="girl">
+		<default_char>
+			<color r="ccSkinColor">0xE2C294</color>
+			<color r="ccEyeLib">0xBD8764</color>
+			<color r="ccEyeIris">0x003333</color>
+			<color r="ccMouthLip">0xB7796A</color>
+			<color r="ccBackMajor">0x996600</color>
+			<color r="ccLowerMinor">0x4F5157</color>
+			<component type="bodyshape" component_id="girl" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="freeaction" component_id="girl" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="ear" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="faceshape" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="501" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="75" gopoints="0"/>
+			<component type="eye" component_id="001" theme_id="ninjaanime" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<library type="GoHands" component_id="001" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+			<library type="GoUpper" component_id="511" theme_id="ninjaanime" gobucks="150" gopoints="0"/>
+			<library type="GoLower" component_id="505" theme_id="ninjaanime" gobucks="75" gopoints="0"/>
+			<library type="GoFeet" component_id="500" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+			<library type="GoHair" component_id="501" theme_id="ninjaanime" gobucks="0" gopoints="0"/>
+		</default_char>
+
+		<actionpack id="ninja" name="Ninja" money="0" sharing="0" enable="Y">
+						<action id="nja_run01" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_run02" name="Run-Combat" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_appear01" name="Teleport - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_appear02" name="Teleport - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_disappear01" name="Teleport - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_disappear02" name="Teleport - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_fight_stand01" name="Fighting Stance" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_fight_stand02" name="Fighting Stance" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_stand" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_prepare01" name="Prepare Spell" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_prepare02" name="Prepare Spell" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_vanish_disappear01" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_vanish_disappear02" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_vanish_disappear03" name="Vanish - Disappear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_focus_energy" name="Focus Energy" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_super" name="Super Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_thunder01" name="Thunder Bolts" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_thunder02" name="Thunder Bolts" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_vanish_appear" name="Vanish - Appear" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_strike01" name="Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_strike02" name="Strike" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_get_hit01" name="Get Hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_get_hit02" name="Get Hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_shuriken01" name="Shuriken" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_shuriken02" name="Shuriken" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+						<action id="nja_jump01" name="Jump" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_jump02" name="Jump" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+						<action id="nja_kneeling01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Ninja">
+				<selection type="facial" facial_id="head_serious" />
+			</action>
+		</actionpack>
+
+		<actionpack id="swordfight" name="Sword Fighting" money="0" sharing="0" enable="Y">
+			<action id="sword_hurtfront" name="Hurt from front" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_hurtback" name="Hurt from behind" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_hurtbad" name="Hurt" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_hurtfatal" name="Hurt badly" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_hurtfatal2" name="Hurt badly" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_hurtair" name="Hurt (in the air)" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_dodge" name="Dodge" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_dodgecombo" name="Dodge combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_guard" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_guardfront" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_guardback" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_guardfail" name="Guard" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_guardcombo" name="Guard combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_jump01" name="Jump - in the air" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_jump02" name="Jump - in the air" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_run02" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_run01" name="Run - spell" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_takeout01" name="Take sword out" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_takeout01pose" name="Take sword out - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_takeout02" name="Take sword out" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_takeout02pose" name="Take sword out - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk01" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk01_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk02" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk02_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk03" name="Attack" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk03_pose" name="Attack - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk_combo01" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk_combo02" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_atk3hit" name="Attack combo" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_stand" name="Stand" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_stand02" name="Stand" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+			<action id="sword_charge" name="Power growing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sword fight">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="02sword01.swf" theme="ninjaanime" aid="99999"/>
+			</action>
+		</actionpack>
+
+
+
+		<component type="GoUpper" xi:inherit="false">
+		<library type="GoUpper" id="500" path="500" name="500" thumb="500_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="504" path="504" name="504" thumb="504_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="505" path="505" name="505" thumb="505_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="507" path="507" name="507" thumb="507_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="508" path="508" name="508" thumb="508_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="511" path="511" name="511" thumb="511_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="514" path="514" name="514" thumb="514_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="517" path="517" name="517" thumb="517_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="518" path="518" name="518" thumb="518_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="520" path="520" name="520" thumb="520_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="523" path="523" name="523" thumb="523_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		</component>
+
+		<component type="GoLower" xi:inherit="false">
+		<library type="GoLower" id="500" path="500" name="500" thumb="500_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		<library type="GoLower" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="502" path="502" name="502" thumb="502_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		<library type="GoLower" id="504" path="504" name="504" thumb="504_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="505" path="505" name="505" thumb="505_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		<library type="GoLower" id="507" path="507" name="507" thumb="507_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		<library type="GoLower" id="508" path="508" name="508" thumb="508_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="511" path="511" name="511" thumb="511_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F511" />
+		</library>
+		<library type="GoLower" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F512" />
+		</library>
+		<library type="GoLower" id="514" path="514" name="514" thumb="514_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F511" />
+		</library>
+		<library type="GoLower" id="515" path="515" name="515" thumb="515_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F513" />
+		</library>
+		<library type="GoLower" id="517" path="517" name="517" thumb="517_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		<library type="GoLower" id="518" path="518" name="518" thumb="518_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F501" />
+		</library>
+		<library type="GoLower" id="519" path="519" name="519" thumb="519_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+			<apply-template ref="F500" />
+		</library>
+		</component>
+
+		<component type="GoFeet" xi:inherit="false">
+		<library type="GoFeet" id="500" path="500" name="500" thumb="500_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="510" path="510" name="510" thumb="510_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="511" path="511" name="511" thumb="511_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="513" path="513" name="513" thumb="513_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		</component>
+
+		<component type="GoHair">
+		<library type="GoHair" id="500" path="500" name="500" thumb="500.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="501" path="501" name="501" thumb="501.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="502" path="502" name="502" thumb="502.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="503" path="503" name="503" thumb="503.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="504" path="504" name="504" thumb="504.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="505" path="505" name="505" thumb="505.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="506" path="506" name="506" thumb="506.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="507" path="507" name="507" thumb="507.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="508" path="508" name="508" thumb="508.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="509" path="509" name="509" thumb="509.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="510" path="510" name="510" thumb="510.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="511" path="511" name="511" thumb="511.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		</component>
+	</bodyshape>
+
+	<component type="eye">
+	</component>
+
+	<component type="eyebrow">
+	</component>
+
+	<component type="faceshape">
+	</component>
+
+	<component type="hair">
+	<!-- Items in anime to be disabled -->
+	<component type="hair" id="022" path="022" name="022" thumb="thumbnail.swf" money="0" sharing="0" enable="N">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="023" path="023" name="023" thumb="thumbnail.swf" money="0" sharing="0" enable="N">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+		<component type="hair" id="031" path="031" name="031" thumb="thumbnail.swf" money="0" sharing="0" enable="N">
+				<state id="side_default" filename="side_default.swf" />
+				<tag>_sticky_filter_girl</tag>
+		</component>
+		<component type="hair" id="032" path="032" name="032" thumb="thumbnail.swf" money="0" sharing="0" enable="N">
+				<state id="side_default" filename="side_default.swf" />
+				<tag>_sticky_filter_guy</tag>
+		</component>
+
+	<!-- Ninja anime items -->
+	<component type="hair" id="500" path="500" name="500" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="503" path="503" name="503" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="504" path="504" name="504" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="505" path="505" name="505" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="506" path="506" name="506" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="507" path="507" name="507" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="508" path="508" name="508" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="509" path="509" name="509" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="510" path="510" name="510" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+		<tag>_sticky_filter_guy</tag>
+	</component>
+	<component type="hair" id="511" path="511" name="511" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	</component>
+
+	<component type="mouth">
+	</component>
+
+	<component type="nose">
+	</component>
+
+		<component type="facedecoration">
+	</component>
+
+		<component type="glasses" xi:inherit="false">
+	</component>
+
+	<template id="F500">
+		<library type="GoFeet" component_id="500" theme_id="ninjaanime" />
+	</template>
+	<template id="F501">
+		<library type="GoFeet" component_id="501" theme_id="ninjaanime" />
+	</template>
+	<template id="F510">
+		<library type="GoFeet" component_id="510" theme_id="ninjaanime" />
+	</template>
+	<template id="F511">
+		<library type="GoFeet" component_id="511" theme_id="ninjaanime" />
+	</template>
+	<template id="F512">
+		<library type="GoFeet" component_id="512" theme_id="ninjaanime" />
+	</template>
+	<template id="F513">
+		<library type="GoFeet" component_id="513" theme_id="ninjaanime" />
+	</template>
+
+</cc_theme>

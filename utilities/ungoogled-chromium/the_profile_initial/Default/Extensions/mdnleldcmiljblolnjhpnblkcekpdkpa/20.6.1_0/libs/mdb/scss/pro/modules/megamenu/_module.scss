@@ -1,0 +1,106 @@
+// Mega menu
+.navbar {
+  .mega-dropdown {
+    position: static !important;
+    .dropdown-menu {
+      &.mega-menu {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        .sub-menu {
+          .news-title {
+            font-size: 1.1rem;
+            transition: .2s;
+            &.smaller {
+              font-weight: 400;
+              font-size: 1rem;
+              line-height: 1.4;
+            }
+          }
+          .sub-title {
+            border-bottom: 1px solid #e0e0e0;
+          }
+          ul {
+            li {
+              a {
+                width: 100%;
+                transition: .3s;
+                &:hover {
+                  background-color: rgba(0, 0, 0, 0.2);
+                  transition: .3s;
+                }
+              }
+            }
+          }
+        }
+        &.v-1 {
+          .sub-menu {
+            .news-single {
+              border-bottom: 1px solid #e0e0e0;
+            }
+            .news-title {
+              color: #4f4f4f !important;
+              &:hover {
+                color: #2196f3 !important;
+              }
+            }
+            .m-sm {
+              margin-bottom: -6px;
+              font-size: .9rem;
+              color: #2196f3 !important;
+              &:hover {
+                color: #2196f3 !important;
+              }
+            }
+          }
+        }
+        &.v-2 {
+          .sub-menu {
+            .news-title {
+              color: #fff !important;
+            }
+            ul {
+              li {
+                a {
+                  color: #fff !important;
+                  &:hover {
+                    color: #fff !important;
+                  }
+                }
+              }
+            }
+            .sub-title {
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        &.v-3 {
+          .sub-menu {
+            ul {
+              li {
+                a {
+                  color: #fff !important;
+                  &:hover {
+                    color: #fff !important;
+                  }
+                }
+              }
+            }
+            .news-title {
+              color: #fff !important;
+              &:hover {
+                color: #e0e0e0 !important;
+              }
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          max-height: 300px;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}

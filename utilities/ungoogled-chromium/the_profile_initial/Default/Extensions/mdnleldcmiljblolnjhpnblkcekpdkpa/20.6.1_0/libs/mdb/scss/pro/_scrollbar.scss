@@ -1,0 +1,132 @@
+// Scroll bar
+.ps {
+  touch-action: auto;
+  overflow: hidden !important;
+  &.ps--active-x > .ps__scrollbar-x-rail,
+  &.ps--active-y > .ps__scrollbar-y-rail {
+    display: block;
+    background-color: transparent;
+  }
+  &.ps--active-y > .ps__scrollbar-y-rail {
+    top: 0 !important;
+  }
+  &.ps--in-scrolling.ps--x {
+    > .ps__scrollbar-x-rail {
+      background-color: $grey-lighten-3;
+      opacity: $scrollbar-ps-xrail-opacity;
+      > .ps__scrollbar-x {
+        background-color: $scrollbar-color-mdb;
+        @include scroll-height(0.6875rem);
+      }
+
+    }
+  }
+  > .ps__scrollbar-x-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 0;
+    @include transition-main($scrollbar-transition-bg, $scrollbar-transition-opacity);
+    bottom: 0rem;
+    /* there must be 'bottom' for ps__scrollbar-x-rail */
+    @include scroll-height(0.9375rem);
+    > .ps__scrollbar-x {
+      position: absolute;
+      /* please don't change 'position' */
+      background-color:$scrollbar-color-mdb-grey;
+      border-radius: $scrollbar-ps-scrollbar-xrail-x-border-radius;
+      @include transition-main($scrollbar-transition-bg, $scrollbar-transition-height, $scrollbar-transition-width, $scrollbar-transition-border-radius);
+      bottom: $scrollbar-ps-scrollbar-xrail-x-bottom;
+      /* there must be 'bottom' for ps__scrollbar-x */
+      @include scroll-height(0.375rem);
+
+    }
+    &:hover > .ps__scrollbar-x,
+    > .ps__scrollbar-x-rail:active > .ps__scrollbar-x {
+      @include scroll-height(0.6875rem);
+    }
+  }
+  &.ps--in-scrolling.ps--y {
+    > .ps__scrollbar-y-rail {
+      background-color: $grey-lighten-3;
+      opacity: $scrollbar-ps-scrollbar-inscrolling-opacity;
+      > .ps__scrollbar-y {
+        background-color: $scrollbar-color-mdb;
+        @include scroll-width(0.6875rem);
+      }
+    }
+  }
+  > .ps__scrollbar-y-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 0;
+    @include transition-main($scrollbar-transition-bg,$scrollbar-transition-opacity);
+    right: 0;
+    /* there must be 'right' for ps__scrollbar-y-rail */
+    @include scroll-width(0.9375rem);
+    z-index: 999;
+    > .ps__scrollbar-y {
+      position: absolute;
+      /* please don't change 'position' */
+      background-color: $scrollbar-color-mdb-grey;
+      border-radius: $scrollbar-ps-scrollbar-scrollbar-y-border-radius;
+      @include transition-main($scrollbar-transition-bg, $scrollbar-transition-height, $scrollbar-transition-width, $scrollbar-transition-border-radius);
+      right: $scrollbar-ps-scrollbar-yrail-y-right;
+      /* there must be 'right' for ps__scrollbar-y */
+      @include scroll-width(0.375rem);
+    }
+    &:hover > .ps__scrollbar-y,
+    > .ps__scrollbar-y-rail:active > .ps__scrollbar-y {
+      @include scroll-width(0.6875rem);
+    }
+  }
+  &:hover.ps--in-scrolling.ps--x {
+    > .ps__scrollbar-x-rail {
+      background-color: $grey-lighten-3;
+      opacity: $scrollbar-ps-hover-inscrolling-xrail-opacity;
+      > .ps__scrollbar-x {
+        background-color: $scrollbar-color-mdb;
+        @include scroll-height(0.6875rem);
+      }
+    }
+  }
+  &:hover.ps--in-scrolling.ps--y {
+    > .ps__scrollbar-y-rail {
+      background-color: $grey-lighten-3;
+      opacity: $scrollbar-ps-hover-inscrolling-xrail-opacity;
+      > .ps__scrollbar-y {
+        background-color: $scrollbar-color-mdb;
+        @include scroll-width(0.6875rem);
+      }
+    }
+  }
+  &:hover > .ps__scrollbar-x-rail,
+  &:hover > .ps__scrollbar-y-rail {
+    opacity: $scrollbar-ps-hover-scrollbar-y-rail-opacity;
+  }
+  &:hover {
+    > .ps__scrollbar-x-rail{
+      &:hover {
+        background-color: $grey-lighten-3;
+        opacity: $scrollbar-ps-hover-inscrolling-xrail-opacity;
+        > .ps__scrollbar-x {
+          background-color: $scrollbar-color-mdb;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    > .ps__scrollbar-y-rail {
+      &:hover {
+        background-color: $grey-lighten-3;
+        opacity:  $scrollbar-ps-hover-inscrolling-xrail-opacity;
+        > .ps__scrollbar-y {
+          background-color: $scrollbar-color-mdb;
+        }
+      }
+    }
+  }
+
+}

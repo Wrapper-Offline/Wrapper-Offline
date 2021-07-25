@@ -1,0 +1,271 @@
+// Cards extended
+.card {
+  &.promoting-card {
+    .fa {
+      transition: .4s;
+      &[class*="fa-"] {
+        &:hover {
+          transition: .4s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &.weather-card {
+    .collapse-content {
+      a {
+        &.collapsed {
+          &:after {
+            content: 'Expand';
+          }
+        }
+        &:not(.collapsed) {
+          &:after {
+            content: 'Collapse';
+          }
+        }
+      }
+    }
+    .degree {
+      &:after {
+        content: "°C";
+        position: absolute;
+        font-size: 3rem;
+        margin-top: .9rem;
+        font-weight: 400;
+      }
+    }
+  }
+  &.gradient-card {
+    transition: all .5s ease-in-out;
+    .first-content {
+      .card-title {
+        font-weight: 500;
+      }
+    }
+    .second-content {
+      display: none;
+    }
+    .third-content {
+      display: none;
+    }
+    .card-body {
+      transition: all .5s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .card-image {
+      border-radius: .25rem;
+      .mask {
+        border-radius: .25rem;
+      }
+    }
+    &:focus-within {
+      margin-top: 3rem;
+      transition: all .5s ease-in-out;
+      .card-image {
+        transition: all .5s ease-in-out;
+        width: 7rem;
+        height: 7rem;
+        margin-top: -2rem;
+        margin-left: 1rem;
+        border-radius: .25rem;
+        margin-bottom: 2rem;
+        @extend .z-depth-1;
+        .mask {
+          border-radius: .25rem;
+        }
+      }
+      .card-body {
+        transition: all .7s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+        overflow: visible;
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+        height: auto;
+        border-radius: .25rem;
+        .progress {
+          height: .4rem;
+          .progress-bar {
+            height: .4rem;
+          }
+        }
+      }
+      .first-content {
+        display: none;
+      }
+      .second-content {
+        display: block;
+      }
+      .third-content {
+        display: block;
+        margin-top: -6rem;
+      }
+    }
+    @media (max-device-width: 1025px) {
+      &:hover {
+        margin-top: 3rem;
+        transition: all .5s ease-in-out;
+        .card-image {
+          transition: all .5s ease-in-out;
+          width: 7rem;
+          height: 7rem;
+          margin-top: -2rem;
+          margin-left: 1rem;
+          border-radius: .25rem;
+          margin-bottom: 2rem;
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+          .mask {
+            border-radius: .25rem;
+          }
+        }
+        .card-body {
+          transition: all .7s ease-in-out;
+          visibility: visible;
+          opacity: 1;
+          overflow: visible;
+          padding-bottom: 1.25rem;
+          padding-top: 1.25rem;
+          height: auto;
+          border-radius: .25rem;
+          .progress {
+            height: .4rem;
+            .progress-bar {
+              height: .4rem;
+            }
+          }
+        }
+        .first-content {
+          display: none;
+        }
+        .second-content {
+          display: block;
+        }
+        .third-content {
+          display: block;
+          margin-top: -6rem;
+        }
+      }
+    }
+  }
+  &.booking-card {
+    .rating {
+      font-size: .7rem;
+    }
+  }
+  &.chart-card {
+    .classic-tabs {
+      .nav {
+        li {
+          a {
+            &.active {
+              border-bottom: 2px solid;
+              transition: width .5s ease, background-color .5s ease;
+            }
+          }
+        }
+        &.tabs-white {
+          li {
+            a {
+              color: $grey-darken-1;
+              font-weight: 500;
+              &.active {
+                color: $deep-purple-base;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-deep-purple-accent {
+      background-color: $deep-purple-accent-1;
+      margin-top: -65px;
+      i {
+        color: $black-base !important;
+      }
+    }
+    .btn-teal-accent {
+      background-color: $teal-accent-3;
+      margin-top: -65px;
+      i {
+        color: $black-base !important;
+      }
+    }
+  }
+  &.colorful-card {
+    .indigo-accent-text {
+      color: $indigo-accent-4;
+    }
+    .btn-indigo-accent {
+      background-color: $indigo-accent-4;
+    }
+    .yellow-darken-text {
+      color: $yellow-darken-1;
+    }
+    .testimonial-card {
+      .avatar {
+        width: 55px;
+        margin-top: -30px;
+        border: 3px solid #fff;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    .brown-darken-text {
+      color: $brown-darken-4;
+    }
+    .btn-red-lighten {
+      background-color: $red-lighten-4;
+    }
+  }
+}
+.card-wrapper {
+  &.card-action {
+    min-height: 640px;
+    @media (max-width: 450px) {
+      min-height: 790px;
+    }
+  }
+}
+
+.card-form {
+  .md-form {
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+      &:focus:not([readonly]) {
+        box-shadow: 0 1px 0 0 #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  .card-form-2 {
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    margin-top: -35px;
+    .form-check-input[type=checkbox].filled-in:checked+label:after,
+    label.btn input[type=checkbox].filled-in:checked+label:after {
+      background-color: $red-darken-1;
+      border: $checkbox-label-before-after-border-width solid $red-darken-1;
+    }
+    .btn-outline-red-accent {
+      border: 2px solid $red-darken-1;
+      background-color: transparent;
+      color: $red-darken-1;
+    }
+    .pink-accent-text {
+      color: $pink-accent-4
+    }
+  }
+}
+
+.z-depth-1-bottom {
+  box-shadow:  0 5px 5px -2px rgba(0, 0, 0, 0.16);
+}

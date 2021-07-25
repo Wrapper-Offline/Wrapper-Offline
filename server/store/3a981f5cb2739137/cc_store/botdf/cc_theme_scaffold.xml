@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cc_theme id="botdf" parent_theme_id="cc2" studio_theme_id="botdf" name="Blood On The Dance Floor" version="2.0" xsi:noNamespaceSchemaLocation="http://alvin.goanimate.org/schema/cc_library_theme.xsd" xmlns:xi="http://alvin.goanimate.org/store" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+		<bodyshape id="default" name="Default" default_action="stand" default_motion="walk" action_thumb="stand" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y">
+				<default_char>
+		<color r="ccSkinColor">0xE2C294</color>
+		<color r="ccEyeLib">0xBD8764</color>
+		<color r="ccEyeIris">0x003333</color>
+		<color r="ccGlassesFrame">0xBE10B0</color>
+		<color r="ccGlassesLens">0x737373</color>
+		<color r="ccMouthLip">0xB7796A</color>
+		<color r="ccEyebrow">0x421D0B</color>
+		<color r="ccBackMajor">0x000000</color>
+		<color r="ccBackMinor">0x000000</color>
+		<color r="ccLowerMain">0x2D2928</color>
+		<color r="ccHairMajor">0x7E4D1B</color>
+		<component type="bodyshape" component_id="default" theme_id="botdf" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="freeaction" component_id="default" theme_id="botdf" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="eyebrow" component_id="002" theme_id="botdf" x="-1" y="1" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="ear" component_id="003" theme_id="botdf" x="-3" y="-7" xscale="1" yscale="1" offset="0" rotation="6" gobucks="0" gopoints="0"/>
+		<component type="hair" component_id="058" theme_id="botdf" x="1" y="7" xscale="0.97" yscale="1.08" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="nose" component_id="007" theme_id="botdf" x="0" y="-4" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="mouth" component_id="008" theme_id="botdf" x="-2" y="-3" xscale="0.83" yscale="0.79" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="eye" component_id="003" theme_id="botdf" x="0" y="-1" xscale="0.92" yscale="0.76" offset="-3" rotation="0" gobucks="0" gopoints="0"/>
+		<component type="faceshape" component_id="007" theme_id="botdf" x="-1" y="0" xscale="0.92" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+		<library type="GoHands" component_id="001" theme_id="botdf" gobucks="0" gopoints="0"/>
+		<library type="GoLower" component_id="001" theme_id="botdf" gobucks="10" gopoints="0"/>
+		<library type="GoUpper" component_id="221" theme_id="botdf" gobucks="40" gopoints="0"/>
+				</default_char>
+
+		<component type="GoUpper">
+				<library type="GoUpper" id="3001" path="3001" name="3001" thumb="3001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3002" path="3002" name="3002" thumb="3002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3003" path="3003" name="3003" thumb="3003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3004" path="3004" name="3004" thumb="3004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3005" path="3005" name="3005" thumb="3005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3006" path="3006" name="3006" thumb="3006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+				<library type="GoUpper" id="3007" path="3007" name="3007" thumb="3007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_userrole_admin</tag>
+		</library>
+		</component>
+	</bodyshape>
+
+	<component type="faceshape">
+		<component type="faceshape" id="3001" path="3001" name="3001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_userrole_admin</tag>
+		</component>
+	</component>
+
+	<component type="hair">
+		<component type="hair" id="3001" path="3001" name="3001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_userrole_admin</tag>
+		</component>
+		<component type="hair" id="3002" path="3002" name="3002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_userrole_admin</tag>
+		</component>
+		<component type="hair" id="3003" path="3003" name="3003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_userrole_admin</tag>
+		</component>
+		<component type="hair" id="3004" path="3004" name="3004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_userrole_admin</tag>
+		</component>
+	</component>
+
+</cc_theme>

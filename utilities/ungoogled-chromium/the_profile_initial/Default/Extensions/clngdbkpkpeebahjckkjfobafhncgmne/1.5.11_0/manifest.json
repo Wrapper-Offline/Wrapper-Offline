@@ -1,0 +1,68 @@
+{
+   "applications": {
+      "gecko": {
+         "id": "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}",
+         "strict_min_version": "53.0"
+      }
+   },
+   "background": {
+      "scripts": [ "js/polyfill.js", "js/promisify.js", "js/messaging.js", "js/msg.js", "js/storage-util.js", "js/sections-util.js", "js/worker-util.js", "js/prefs.js", "js/script-loader.js", "js/usercss.js", "js/cache.js", "vendor/semver-bundle/semver.js", "vendor/db-to-cloud/db-to-cloud.min.js", "vendor/uuid/uuid.min.js", "background/token-manager.js", "background/sync.js", "background/content-scripts.js", "background/db-chrome-storage.js", "background/db.js", "background/style-manager.js", "background/navigator-util.js", "background/icon-util.js", "background/tab-manager.js", "background/icon-manager.js", "background/background.js", "background/usercss-helper.js", "background/style-via-api.js", "background/search-db.js", "background/update.js", "background/openusercss-api.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "/images/icon/16w.png",
+         "19": "/images/icon/19w.png",
+         "32": "/images/icon/32w.png",
+         "38": "/images/icon/38w.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Stylus"
+   },
+   "commands": {
+      "_execute_browser_action": {
+
+      },
+      "openManage": {
+         "description": "__MSG_openManage__"
+      },
+      "reload": {
+         "description": "__MSG_reload__"
+      },
+      "styleDisableAll": {
+         "description": "__MSG_disableAllStyles__"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/polyfill.js", "js/promisify.js", "js/msg.js", "js/prefs.js", "content/style-injector.js", "content/apply.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "content/install-hook-userstyles.js" ],
+      "matches": [ "http://userstyles.org/*", "https://userstyles.org/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "content/install-hook-openusercss.js" ],
+      "matches": [ "https://openusercss.org/*", "https://openusercss.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "homepage_url": "https://add0n.com/stylus.html",
+   "icons": {
+      "128": "/images/icon/128.png",
+      "16": "/images/icon/16.png",
+      "32": "/images/icon/32.png",
+      "48": "/images/icon/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ypG+Z/beZtoYrxxwXYhMwQiAiwRVnSHqdpOSzJdjsXVWdvJjlgEuZcU8kte75w58P45LsRUrwvU6N9x12S6eW84KNEBC8rlZj0RGNoxuhSAcdxneYzjJ9tBkZKOidVedYHHsi3LeaXiLuTNTBR+2lf3uCNcP0ebaFML9uDLdYTGEW4eL3hnEKYPSmT1/xkh4bSGTToCg4YNuWWWoTA0beEOpBWYkPVMarLDQgPzMN5Byu5w3lOS2zL0PPJcmdyk3ez/ZsB4PZKU+h17fVA6+YTvUfxUqLde5i2RiuZhEb6Coo5/W90ZW1yCDC9osjWrxMGYeUMQWHPIgFtDhk4K6QIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "49",
+   "name": "Stylus",
+   "permissions": [ "tabs", "webNavigation", "webRequest", "webRequestBlocking", "contextMenus", "storage", "alarms", "identity", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.11"
+}

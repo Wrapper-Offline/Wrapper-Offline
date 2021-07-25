@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="christmas" name="Holiday &amp; Seasonal">
+	<char id="sexy_girl" name="Miss Hottie" thumb="fairy08-greeting.swf" facing="left" default="fairy08-greeting.swf" motion="fairy05-fly.swf" enable="N" is_premium="N" aid="1244" money="0" sharing="0">
+		<action id="fairy08-greeting.swf" name="Wave" loop="Y" totalframe="24" enable="Y" aid="1245"/>
+		<motion id="fairy05-fly.swf" name="Fly" loop="Y" totalframe="20" enable="Y" aid="1246"/>
+		<action id="fair10-nob.swf" name="Nod" loop="Y" totalframe="30" enable="Y" aid="1247"/>
+		<action id="fairy01-magic.swf" name="Use Magic Wand (Slow)" loop="Y" totalframe="30" enable="Y" aid="1248"/>
+		<action id="fairy02-dance.swf" name="Dance (Slow)" loop="Y" totalframe="20" enable="Y" aid="1249"/>
+		<action id="fairy03-dance.swf" name="Dance (Fast)" loop="Y" totalframe="48" enable="Y" aid="1250"/>
+		<action id="fairy05-fly.swf" name="Fly" loop="Y" totalframe="20" enable="Y" aid="1251"/>
+		<action id="fairy06-laugh.swf" name="Laugh" loop="Y" totalframe="4" enable="Y" aid="1252"/>
+		<action id="fairy07-kick.swf" name="Kick" loop="Y" totalframe="65" enable="Y" aid="1253"/>
+		<action id="fairy09-angry.swf" name="Use Magic Wand (Fast)" loop="Y" totalframe="60" enable="Y" aid="1254"/>
+		<action id="fairy11-think.swf" name="Think" loop="Y" totalframe="60" enable="Y" aid="1255"/>
+		<action id="fairy012-vomit.swf" name="Vomit" loop="Y" totalframe="60" enable="Y" aid="1256"/>
+		<action id="fairy13-shock.swf" name="Become Shocked" loop="Y" totalframe="3" enable="Y" aid="1257"/>
+		<action id="fairy14-kiss.swf" name="Kiss" loop="Y" totalframe="30" enable="Y" aid="1258"/>
+		<action id="fairy15-laugh02.swf" name="Lick Lips" loop="Y" totalframe="40" enable="Y" aid="1259"/>
+		<action id="fairy17-hip.swf" name="Dance (Sexy)" loop="Y" totalframe="20" enable="Y" aid="1260"/>
+		<action id="fairy18-cry.swf" name="Cry" loop="Y" totalframe="4" enable="Y" aid="1261"/>
+		<action id="fairy19-scold.swf" name="Become Angry" loop="Y" totalframe="65" enable="Y" aid="1262"/>
+		<action id="fairy20-laydown.swf" name="Lie Down" loop="Y" totalframe="16" enable="Y" aid="1263"/>
+		<action id="fairy21-ballet.swf" name="Dance (Ballet Jump)" loop="Y" totalframe="28" enable="Y" aid="1264"/>
+		<action id="fairy22-ballet.swf" name="Dance (Ballet Stand)" loop="Y" totalframe="19" enable="Y" aid="1265"/>
+		<action id="fairy23-sleep.swf" name="Sleep" loop="Y" totalframe="20" enable="Y" aid="1266"/>
+	</char>
+	<char id="deer" name="Reindeer" thumb="stand.swf" facing="left" default="stand.swf" motion="run.swf" enable="Y" is_premium="N" aid="1230" money="0" sharing="0">
+		<action id="stand.swf" name="stand" loop="Y" totalframe="55" enable="Y" aid="1231"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="17" enable="Y" aid="1232"/>
+		<action id="angry.swf" name="talk angrily" loop="Y" totalframe="45" enable="Y" aid="1233"/>
+		<action id="clap.swf" name="clap" loop="Y" totalframe="4" enable="Y" aid="1234"/>
+		<action id="dog-like.swf" name="wiggle tail" loop="Y" totalframe="35" enable="Y" aid="1235"/>
+		<action id="fear.swf" name="become scared" loop="Y" totalframe="2" enable="Y" aid="1236"/>
+		<action id="laughing.swf" name="laugh" loop="Y" totalframe="4" enable="Y" aid="1237"/>
+		<action id="pee.swf" name="pee" loop="Y" totalframe="65" enable="N" aid="1238"/>
+		<action id="R.swf" name="feeling itchy" loop="Y" totalframe="60" enable="Y" aid="1239"/>
+		<action id="sad.swf" name="become sad" loop="Y" totalframe="55" enable="Y" aid="1240"/>
+		<action id="shy.swf" name="feeling shy" loop="Y" totalframe="45" enable="Y" aid="1241"/>
+		<action id="smile.swf" name="smile" loop="Y" totalframe="4" enable="Y" aid="1242"/>
+		<action id="upsad.swf" name="sigh" loop="Y" totalframe="40" enable="Y" aid="1243"/>
+	</char>
+	<char id="snowman" name="Snowman" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="1267" money="0" sharing="0">
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="9" enable="Y" aid="1268"/>
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="37" enable="Y" aid="1269"/>
+		<action id="come02.swf" name="Beckon" loop="Y" totalframe="25" enable="Y" aid="1270"/>
+		<action id="dance02.swf" name="Dance" loop="Y" totalframe="50" enable="Y" aid="1271"/>
+		<action id="greeting.swf" name="Greeting" loop="Y" totalframe="29" enable="Y" aid="1272"/>
+		<action id="hit.swf" name="Hit" loop="Y" totalframe="120" enable="Y" aid="1273"/>
+		<action id="laugh01.swf" name="Laugh (A)" loop="Y" totalframe="4" enable="Y" aid="1274"/>
+		<action id="laugh02.swf" name="Laugh (B)" loop="Y" totalframe="4" enable="Y" aid="1275"/>
+		<action id="melt.swf" name="Melt" loop="N" totalframe="53" enable="Y" aid="1276"/>
+		<action id="talk01_happy.swf" name="Talk (Happy)" loop="Y" totalframe="75" enable="Y" aid="1277"/>
+		<action id="talk02_angry.swf" name="Talk (Angry)" loop="Y" totalframe="10" enable="Y" aid="1278"/>
+	</char>
+	<char id="elf" name="Elf" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="1279" money="0" sharing="0">
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="60" enable="Y" aid="1280"/>
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="24" enable="Y" aid="1281"/>
+		<action id="anger.swf" name="Become Angry" loop="Y" totalframe="24" enable="Y" aid="1282"/>
+		<action id="cry.swf" name="Cry" loop="Y" totalframe="8" enable="Y" aid="1283"/>
+		<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="40" enable="Y" aid="1284"/>
+		<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="50" enable="Y" aid="1285"/>
+		<action id="dance03.swf" name="Dance (C)" loop="Y" totalframe="155" enable="Y" aid="1286"/>
+		<action id="hello.swf" name="Wave" loop="Y" totalframe="60" enable="Y" aid="1287"/>
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="80" enable="Y" aid="1288"/>
+		<action id="talk.swf" name="Talk" loop="Y" totalframe="45" enable="Y" aid="1289"/>
+	</char>
+	<char id="boy" name="Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="1290" money="0" sharing="0">
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="58" enable="Y" aid="1291"/>
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="16" enable="Y" aid="1292"/>
+		<action id="jump01.swf" name="Jump" loop="Y" totalframe="35" enable="Y" aid="1293"/>
+		<action id="smile.swf" name="Smile" loop="Y" totalframe="4" enable="Y" aid="1294"/>
+		<action id="greeting.swf" name="Wave" loop="Y" totalframe="50" enable="Y" aid="1295"/>
+		<action id="r.swf" name="Scratch" loop="Y" totalframe="35" enable="Y" aid="1296"/>
+		<action id="throw.swf" name="Throw" loop="Y" totalframe="70" enable="Y" aid="1297"/>
+		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="70" enable="Y" aid="1298"/>
+		<action id="sad.swf" name="Cry" loop="Y" totalframe="9" enable="Y" aid="1299"/>
+		<action id="innocent.swf" name="Innocent" loop="Y" totalframe="35" enable="Y" aid="1300"/>
+		<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="40" enable="Y" aid="1301"/>
+		<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="45" enable="Y" aid="1302"/>
+		<action id="dance03.swf" name="Dance (C)" loop="Y" totalframe="42" enable="Y" aid="1303"/>
+		<action id="dance04.swf" name="Dance (D)" loop="Y" totalframe="50" enable="Y" aid="1304"/>
+		<action id="dance06.swf" name="Dance (E)" loop="Y" totalframe="20" enable="Y" aid="1305"/>
+		<action id="dance07.swf" name="Dance (F)" loop="Y" totalframe="155" enable="Y" aid="1306"/>
+		<action id="dance09.swf" name="Dance (G)" loop="Y" totalframe="36" enable="Y" aid="1307"/>
+	</char>
+	<char id="santa" name="Santa" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="1308" money="0" sharing="0">
+		<action id="stand.swf" name="Stand" loop="Y" totalframe="23" enable="Y" aid="1309"/>
+		<motion id="walk.swf" name="Walk" loop="Y" totalframe="12" enable="Y" aid="1310"/>
+		<action id="dance01.swf" name="Dance (Twist)" loop="Y" totalframe="48" enable="Y" aid="1311"/>
+		<action id="dance02.swf" name="Dance (Disco)" loop="Y" totalframe="18" enable="Y" aid="1312"/>
+		<action id="dance03.swf" name="Dance (Middle Finger)" loop="Y" totalframe="20" enable="N" aid="1313"/>
+		<action id="dance04.swf" name="Dance (Can-Can)" loop="Y" totalframe="45" enable="Y" aid="1314"/>
+		<action id="dance05.swf" name="Dance (Russian)" loop="Y" totalframe="40" enable="Y" aid="1315"/>
+		<action id="laugh03.swf" name="Laugh" loop="Y" totalframe="44" enable="Y" aid="1316"/>
+		<action id="raisebell4.swf" name="Ring Bell" loop="Y" totalframe="115" enable="Y" aid="1317"/>
+		<action id="talk01_angry.swf" name="Talk (Angry)" loop="Y" totalframe="45" enable="Y" aid="1318"/>
+		<action id="talk06_sad.swf" name="Talk (Sad)" loop="Y" totalframe="45" enable="Y" aid="1319"/>
+		<action id="shock01.swf" name="Become Shocked" loop="Y" totalframe="3" enable="Y" aid="1320"/>
+		<action id="sitdown01_laugh.swf" name="Sit" loop="Y" totalframe="4" enable="Y" aid="1321"/>
+		<action id="talk05_happy.swf" name="Talk (Happy)" loop="Y" totalframe="45" enable="Y" aid="1322"/>
+		<action id="think03.swf" name="Think" loop="Y" totalframe="78" enable="Y" aid="1323"/>
+	</char>
+	<background id="fireplaceindr.swf" name="Fireplace" enable="Y" is_premium="N" aid="1324" money="0" sharing="0"/>
+	<background id="santacastle.swf" name="Santa Castle" enable="Y" default="Y" is_premium="N" aid="1325" money="0" sharing="0"/>
+	<background id="snowynight.swf" name="Snowy Night" enable="Y" is_premium="N" aid="1326" money="0" sharing="0"/>
+	<background id="nightlandscape.swf" name="Night Landscape" enable="Y" default="Y" is_premium="N" aid="1327" money="0" sharing="0"/>
+	<background id="snowyPlain.swf" name="Snowy Plain" enable="Y" is_premium="N" aid="1328" money="0" sharing="0"/>
+	<background id="so_warm_inside_bg.swf" name="" enable="N" is_premium="N" aid="4757" money="0" sharing="0"/>
+	<background id="toy_workshop_bg.swf" name="" enable="N" is_premium="N" aid="4758" money="0" sharing="0"/>
+	<compositebg id="so_warm_inside" name="so warm inside" enable="Y" default="N" thumb="so_warm_inside.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="4759">
+	<bg id="so_warm_inside_BG2" index="0">
+		<file>christmas.so_warm_inside_bg.swf</file>
+	</bg>
+	<prop id="so_warm_inside_PROP0" index="2">
+		<file>christmas.so_warm_inside_table.swf</file>
+		<x>306.2</x>
+		<y>254</y>
+		<xscale>1.52</xscale>
+		<yscale>1.52</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="so_warm_inside_PROP2" index="3">
+		<file>christmas.so_warm_inside_phone.swf</file>
+		<x>291.2</x>
+		<y>265</y>
+		<xscale>1.16</xscale>
+		<yscale>1.16</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="so_warm_inside_PROP3" index="4">
+		<file>christmas.so_warm_inside_window.swf</file>
+		<x>321.2</x>
+		<y>198</y>
+		<xscale>1.46</xscale>
+		<yscale>1.46</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="toy_workshop" name="toy workshop" enable="Y" default="N" thumb="toy_workshop.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="4760">
+	<bg id="BG2" index="0">
+		<file>christmas.toy_workshop_bg.swf</file>
+	</bg>
+	<prop id="toy_workshop_PROP0" index="2">
+		<file>christmas.toy_workshop_doorframe.swf</file>
+		<x>417.2</x>
+		<y>128</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="toy_workshop_PROP1" index="3">
+		<file>christmas.toy_workshop_chair2.swf</file>
+		<x>271.2</x>
+		<y>195</y>
+		<xscale>0.92</xscale>
+		<yscale>0.92</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="toy_workshop_PROP2" index="4">
+		<file>christmas.toy_workshop_chair2.swf</file>
+		<x>162.7</x>
+		<y>207.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="toy_workshop_PROP3" index="5">
+		<file>christmas.toy_workshop_table.swf</file>
+		<x>285.2</x>
+		<y>256</y>
+		<xscale>1.26</xscale>
+		<yscale>1.26</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="toy_workshop_PROP4" index="6">
+		<file>christmas.toy_workshop_chair1.swf</file>
+		<x>375</x>
+		<y>288</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="xmasbell.swf" name="Xmas Bell" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1329" money="0" sharing="0"/>
+	<prop id="xmbear.swf" name="Xmas Bear" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1330" money="0" sharing="0"/>
+	<prop id="xmbox3.swf" name="Xmas Box" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1331" money="0" sharing="0"/>
+	<prop id="xmhat.swf" name="Xmas Hat" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1332" money="0" sharing="0"/>
+	<prop id="xmsockwtoy.swf" name="Xmas Sock" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1333" money="0" sharing="0"/>
+	<prop id="xmstick.swf" name="Xmas Stick" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1334" money="0" sharing="0"/>
+	<prop id="xmtree2.swf" name="Xmas Tree" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="1335" money="0" sharing="0"/>
+	<prop id="xmashat.swf" name="XmasHat" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1336" money="0" sharing="0"/>
+	<prop id="xmsleigh.swf" name="Xmasleigh" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="1337" money="0" sharing="0"/>
+	<prop id="wreath.swf" name="Wreath" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1338" money="0" sharing="0"/>
+	<prop id="candle.swf" name="Candle" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1339" money="0" sharing="0"/>
+	<prop id="decoball.swf" name="Decoball" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1340" money="0" sharing="0"/>
+	<prop id="gingerman.swf" name="Gingerman" holdable="1" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1341" money="0" sharing="0"/>
+	<prop id="fireplace.swf" name="Fireplace" holdable="0" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1342" money="0" sharing="0"/>
+	<prop id="xmbox1.swf" name="xmbox1.swf" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1343" money="0" sharing="0"/>
+	<prop id="xmbox2.swf" name="xmbox2.swf" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1344" money="0" sharing="0"/>
+	<prop id="xmsock.swf" name="xmsock.swf" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1345" money="0" sharing="0"/>
+	<prop id="xmtree.swf" name="xmtree.swf" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1346" money="0" sharing="0"/>
+	<prop id="so_warm_inside_window.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4761" money="0" sharing="0"/>
+	<prop id="so_warm_inside_table.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4762" money="0" sharing="0"/>
+	<prop id="so_warm_inside_phone.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4763" money="0" sharing="0"/>
+	<prop id="toy_workshop_chair1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4764" money="0" sharing="0"/>
+	<prop id="toy_workshop_table.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4765" money="0" sharing="0"/>
+	<prop id="toy_workshop_chair2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4766" money="0" sharing="0"/>
+	<prop id="toy_workshop_doorframe.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4767" money="0" sharing="0"/>
+	<prop id="xmtree3.swf" name="Xmas Tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9101" money="0" sharing="0"/>
+	<prop id="xmsleigh1.swf" name="Xmasleigh" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9102" money="0" sharing="0"/>
+	<sound id="joy and fun.swf" name="Joy and Fun" downloadtype="progressive" subtype="bgmusic" duration="36300" enable="N" is_premium="N" aid="1347" money="0" sharing="0"/>
+	<sound id="12_Days_of_Christmas.swf" name="12 Days of Christmas" downloadtype="progressive" subtype="bgmusic" duration="59200" enable="N" is_premium="N" aid="1348" money="0" sharing="0"/>
+	<sound id="Christmas_Tree.swf" name="Christmas Tree" downloadtype="progressive" subtype="bgmusic" duration="58500" enable="N" is_premium="N" aid="1349" money="0" sharing="0"/>
+	<sound id="Hark_the_Herald_Angels_Sing.swf" name="Hark The Herald Angels Sing" downloadtype="progressive" subtype="bgmusic" duration="59700" enable="N" is_premium="N" aid="1350" money="0" sharing="0"/>
+	<sound id="Jingle_Bells.swf" name="Jingle Bells" downloadtype="progressive" subtype="bgmusic" duration="59300" enable="N" is_premium="N" aid="1351" money="0" sharing="0"/>
+	<sound id="Joy_to_the_World.swf" name="Joy To The World" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="1352" money="0" sharing="0"/>
+	<sound id="Silent_Night.swf" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="1353" money="0" sharing="0"/>
+	<sound id="We_Wish_You_A_Merry_Christmas.swf" name="We Wish You A Merry Christmas" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="1354" money="0" sharing="0"/>
+	<sound id="Deck_the_Halls.swf" name="Deck The Halls" downloadtype="progressive" subtype="bgmusic" duration="59800" enable="N" is_premium="N" aid="1355" money="0" sharing="0"/>
+	<sound id="O_Come_All_Ye_Faithful.swf" name="O Come All Ye Faithful" downloadtype="progressive" subtype="bgmusic" duration="58500" enable="N" is_premium="N" aid="1356" money="0" sharing="0"/>
+	<sound id="O_Little_Town_of_Bethlehem.swf" name="O Little Town of Bethlehem" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="1357" money="0" sharing="0"/>
+	<sound id="we_own_christmas.swf" name="We Own Christmas" downloadtype="progressive" subtype="bgmusic" duration="165100" enable="N" is_premium="N" aid="1358" money="0" sharing="0"/>
+	<sound id="xxx_xmas.mp3" name="Welcome Xmas" downloadtype="progressive" subtype="bgmusic" duration="45694" enable="N" is_premium="N" aid="4775" money="0" sharing="0"/>
+	<sound id="joy and fun.mp3" name="Joy and Fun" downloadtype="progressive" subtype="bgmusic" duration="36300" enable="N" is_premium="N" aid="6024" money="0" sharing="0"/>
+	<sound id="12_Days_of_Christmas.mp3" name="12 Days of Christmas" downloadtype="progressive" subtype="bgmusic" duration="59200" enable="N" is_premium="N" aid="6025" money="0" sharing="0"/>
+	<sound id="Christmas_Tree.mp3" name="Christmas Tree" downloadtype="progressive" subtype="bgmusic" duration="58500" enable="N" is_premium="N" aid="6026" money="0" sharing="0"/>
+	<sound id="Hark_the_Herald_Angels_Sing.mp3" name="Hark The Herald Angels Sing" downloadtype="progressive" subtype="bgmusic" duration="59700" enable="N" is_premium="N" aid="6027" money="0" sharing="0"/>
+	<sound id="Jingle_Bells.mp3" name="Jingle Bells" downloadtype="progressive" subtype="bgmusic" duration="59300" enable="N" is_premium="N" aid="6028" money="0" sharing="0"/>
+	<sound id="Joy_to_the_World.mp3" name="Joy To The World" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="6029" money="0" sharing="0"/>
+	<sound id="Silent_Night.mp3" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="6030" money="0" sharing="0"/>
+	<sound id="We_Wish_You_A_Merry_Christmas.mp3" name="We Wish You A Merry Christmas" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="6031" money="0" sharing="0"/>
+	<sound id="Deck_the_Halls.mp3" name="Deck The Halls" downloadtype="progressive" subtype="bgmusic" duration="59800" enable="N" is_premium="N" aid="6032" money="0" sharing="0"/>
+	<sound id="O_Come_All_Ye_Faithful.mp3" name="O Come All Ye Faithful" downloadtype="progressive" subtype="bgmusic" duration="58500" enable="N" is_premium="N" aid="6033" money="0" sharing="0"/>
+	<sound id="O_Little_Town_of_Bethlehem.mp3" name="O Little Town of Bethlehem" downloadtype="progressive" subtype="bgmusic" duration="59900" enable="N" is_premium="N" aid="6034" money="0" sharing="0"/>
+	<sound id="we_own_christmas.mp3" name="We Own Christmas" downloadtype="progressive" subtype="bgmusic" duration="165100" enable="N" is_premium="N" aid="6035" money="0" sharing="0"/>
+	<bubble id="ellipse" x="0" y="0" w="180" h="90" rotate="0" type="ELLIPSE" enable="N" is_premium="N" aid="1359" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="roundRect" x="0" y="0" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="N" is_premium="N" aid="1360" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="rect" x="0" y="0" w="180" h="90" rotate="0" type="RECTANGULAR" enable="N" is_premium="N" aid="1361" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="cloud" x="0" y="0" w="180" h="90" rotate="0" type="CLOUD" enable="N" is_premium="N" aid="1362" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="heart" x="0" y="0" w="180" h="90" rotate="0" type="HEART" enable="N" is_premium="N" aid="1363" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="boom" x="0" y="0" w="260" h="130" rotate="0" type="BOOM" enable="N" is_premium="N" aid="1364" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="260" taily="130"/>
+	<text rgb="0" font="BadaBoom BB" size="20" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<bubble id="blank" x="0" y="0" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="1365" money="0" sharing="0">
+	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
+	<text rgb="0" font="BadaBoom BB" size="20" align="center" bold="false" italic="false">Click here to edit</text>
+</bubble>
+	<effect id="zoom" x="0" y="0" w="140" h="90" rotate="0" type="ZOOM" resize="true" move="true" name="Zoom" enable="N" is_premium="N" aid="1366" money="0" sharing="0" display_order="1366"/>
+	<effect id="cut" x="0" y="0" w="140" h="90" rotate="0" type="ZOOM" resize="true" move="true" name="Cut" enable="N" isCut="true" is_premium="N" aid="1367" money="0" sharing="0" display_order="1367"/>
+	<effect id="earthquake" x="0" y="0" w="550" h="354" rotate="0" type="EARTHQUAKE" resize="false" move="false" name="Earthquake" enable="N" is_premium="N" aid="1368" money="0" sharing="0" display_order="1368"/>
+	<effect id="upsideDown" x="0" y="0" w="550" h="354" rotate="0" type="UPSIDEDOWN" resize="false" move="false" name="Upside Down" enable="N" is_premium="N" aid="1369" money="0" sharing="0" display_order="1369"/>
+	<effect id="firework" x="0" y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="N" is_premium="N" aid="1370" money="0" sharing="0" display_order="1370"/>
+	<effect id="firespring" x="0" y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire Spring" enable="N" is_premium="N" aid="1371" money="0" sharing="0" display_order="1371"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="N" is_premium="N" aid="1372" money="0" sharing="0" display_order="1372"/>
+	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="N" is_premium="N" aid="1373" money="0" sharing="0" display_order="1373"/>
+	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="N" is_premium="N" aid="1374" money="0" sharing="0" display_order="1374"/>
+	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper Snow" enable="N" is_premium="N" aid="1375" money="0" sharing="0" display_order="1375"/>
+	<effect id="snow01.swf" type="ANIME" resize="false" move="false" name="Snow01" enable="N" is_premium="N" aid="1376" money="0" sharing="0" display_order="1376"/>
+	<effect id="snow02.swf" type="ANIME" resize="false" move="false" name="Snow02" enable="N" is_premium="N" aid="1377" money="0" sharing="0" display_order="1377"/>
+	<effect id="old_film_effect.swf" type="ANIME" resize="false" move="false" name="Old Film" enable="N" is_premium="N" aid="1378" money="0" sharing="0" display_order="1378"/>
+	<effect id="hearts.swf" type="ANIME" resize="false" move="false" name="Heart" enable="N" is_premium="N" aid="1379" money="0" sharing="0" display_order="1379"/>
+	<effect id="atomic-bomb.swf" type="ANIME" resize="false" move="false" name="Atomic Bomb" enable="N" is_premium="N" aid="1380" money="0" sharing="0" display_order="1380"/>
+	<effect id="aud-01.swf" type="ANIME" resize="false" move="false" name="Auditorium" enable="N" is_premium="N" aid="1381" money="0" sharing="0" display_order="1381"/>
+	<effect id="aud-banner.swf" type="ANIME" resize="false" move="false" name="Banner" enable="N" is_premium="N" aid="1382" money="0" sharing="0" display_order="1382"/>
+	<effect id="aud-clap.swf" type="ANIME" resize="false" move="false" name="Clap" enable="N" is_premium="N" aid="1383" money="0" sharing="0" display_order="1383"/>
+	<effect id="black_all.swf" type="ANIME" resize="false" move="false" name="Darkness" enable="N" is_premium="N" aid="1384" money="0" sharing="0" display_order="1384"/>
+	<effect id="black_bar.swf" type="ANIME" resize="false" move="false" name="Black Bar" enable="N" is_premium="N" aid="1385" money="0" sharing="0" display_order="1385"/>
+	<effect id="blue_screen.swf" type="ANIME" resize="false" move="false" name="Blue Screen" enable="N" is_premium="N" aid="1386" money="0" sharing="0" display_order="1386"/>
+	<effect id="circle_fade_out.swf" type="ANIME" resize="false" move="false" name="Circle Fade Out" enable="N" is_premium="N" aid="1387" money="0" sharing="0" display_order="1387"/>
+	<effect id="fade_in.swf" type="ANIME" resize="false" move="false" name="Fade In" enable="N" is_premium="N" aid="1388" money="0" sharing="0" display_order="1388"/>
+	<effect id="fade_out.swf" type="ANIME" resize="false" move="false" name="Fade Out" enable="N" is_premium="N" aid="1389" money="0" sharing="0" display_order="1389"/>
+	<effect id="flash_light01.swf" type="ANIME" resize="false" move="false" name="Flash Light" enable="N" is_premium="N" aid="1390" money="0" sharing="0" display_order="1390"/>
+	<effect id="gnn_news.swf" type="ANIME" resize="false" move="false" name="GNN News" enable="N" is_premium="N" aid="1391" money="0" sharing="0" display_order="1391"/>
+	<effect id="green_screen.swf" type="ANIME" resize="false" move="false" name="Green Screen" enable="N" is_premium="N" aid="1392" money="0" sharing="0" display_order="1392"/>
+	<effect id="ppl01.swf" type="ANIME" resize="false" move="false" name="People" enable="N" is_premium="N" aid="1393" money="0" sharing="0" display_order="1393"/>
+	<effect id="bomb.swf" type="ANIME" resize="false" move="false" name="Bomb" enable="N" is_premium="N" aid="1394" money="0" sharing="0" display_order="1394"/>
+	<effect id="water_flood.swf" type="ANIME" resize="false" move="false" name="Water Flood" enable="N" is_premium="N" aid="1395" money="0" sharing="0" display_order="1395"/>
+	<effect id="DV_screen.swf" type="ANIME" resize="false" move="false" name="DV Screen" enable="N" is_premium="N" aid="1396" money="0" sharing="0" display_order="1396"/>
+</theme>

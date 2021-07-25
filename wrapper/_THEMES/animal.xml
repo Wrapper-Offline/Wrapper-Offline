@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="animal" name="Lil' Petz" cc_theme_id="cc2">
+	<background id="ncc_pet_01bg.swf" name="Countryside" enable="Y" default="Y" is_premium="N" aid="12443" money="0" sharing="0"/>
+	<background id="ncc_pet_02bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="12444" money="0" sharing="0"/>
+	<background id="ncc_pet_03bg.swf" name="Desert" enable="Y" default="N" is_premium="N" aid="12445" money="0" sharing="0"/>
+	<background id="ncc_pet_04bg.swf" name="Cave" enable="Y" default="N" is_premium="N" aid="12446" money="0" sharing="0"/>
+	<background id="ncc_pet_05bg.swf" name="Butcher" enable="Y" default="N" is_premium="N" aid="12447" money="0" sharing="0"/>
+	<background id="ncc_pet_06bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="12448" money="0" sharing="0"/>
+	<compositebg id="ncc_pet_03" name="Desert" enable="Y" default="N" thumb="ncc_pet_03bg.jpg" display_order="100" is_premium="N" money="0" sharing="0" aid="12449">
+	<bg id="ncc_pet_03_BG809" index="0">
+		<file>animal.ncc_pet_03bg.swf</file>
+	</bg>
+	<prop id="ncc_pet_03_PROP24" index="1">
+		<file>animal.ncc_pet_03prop.swf</file>
+		<x>323.2</x>
+		<y>265.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="ncc_pet_04" name="Cave" enable="Y" default="N" thumb="ncc_pet_04bg.jpg" display_order="100" is_premium="N" money="0" sharing="0" aid="12450">
+	<bg id="ncc_pet_04_BG813" index="0">
+		<file>animal.ncc_pet_04bg.swf</file>
+	</bg>
+	<prop id="ncc_pet_04_PROP26" index="1">
+		<file>animal.ncc_pet_04prop.swf</file>
+		<x>510.8</x>
+		<y>176.1</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="ncc_pet_05" name="Butcher" enable="Y" default="N" thumb="ncc_pet_05bg.jpg" display_order="100" is_premium="N" money="0" sharing="0" aid="12451">
+	<bg id="ncc_pet_05_BG817" index="0">
+		<file>animal.ncc_pet_05bg.swf</file>
+	</bg>
+	<prop id="ncc_pet_05_PROP12" index="1">
+		<file>animal.ncc_pet_05prop.swf</file>
+		<x>308.7</x>
+		<y>241</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="ncc_pet_06" name="Forest" enable="Y" default="N" thumb="ncc_pet_06bg.jpg" display_order="100" is_premium="N" money="0" sharing="0" aid="12452">
+	<bg id="ncc_pet_06_BG821" index="0">
+		<file>animal.ncc_pet_06bg.swf</file>
+	</bg>
+	<prop id="ncc_pet_06_PROP13" index="1">
+		<file>animal.ncc_pet_06prop_2.swf</file>
+		<x>318.1</x>
+		<y>65.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="ncc_pet_06_PROP14" index="2">
+		<file>animal.ncc_pet_06prop_1.swf</file>
+		<x>378.9</x>
+		<y>171.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="ncc_pet_03prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12438" money="0" sharing="0"/>
+	<prop id="ncc_pet_04prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12439" money="0" sharing="0"/>
+	<prop id="ncc_pet_05prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12440" money="0" sharing="0"/>
+	<prop id="ncc_pet_06prop_1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12441" money="0" sharing="0"/>
+	<prop id="ncc_pet_06prop_2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12442" money="0" sharing="0"/>
+</theme>

@@ -1,0 +1,62 @@
+// Navbars pro
+.navbar {
+  .nav-item {
+    &.avatar {
+      padding: 0;
+      &.active {
+        background-color: transparent!important;
+      }
+      .dropdown-toggle {
+        padding: 0;
+        img {
+          height: $navbar-avatar-height;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.double-nav {
+  @media (max-width: $medium-screen) {
+    padding-top: $navbar-double-small-padding;
+    padding-bottom: $navbar-double-small-padding;
+  }
+  .container {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  a {
+    font-size: $navbar-double-font-size;
+    color: $white-base;
+  }
+  .breadcrumb-dn {
+    p {
+      margin: 0;
+      padding-top: 0;
+      padding-left: $navbar-breadcrumb-dn-padding;
+    }
+    @media (max-width: 993px) {
+      display: none;
+    }
+  }
+  .button-collapse {
+    position: absolute;
+    left: $navbar-button-collapse-left;
+    font-size: $navbar-button-collapse-font-size;
+    @media (min-width: $sidenav-breakpoint) {
+      display: none;
+    }
+    @media (max-width: $sidenav-breakpoint) {
+      display: block;
+      position: relative;
+      font-size: $navbar-button-collapse-fs-sm;
+      margin-right: $navbar-button-collapse-mx;
+      margin-left: $navbar-button-collapse-mx;
+    }
+  }
+}

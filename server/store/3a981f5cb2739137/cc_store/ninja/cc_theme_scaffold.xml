@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cc_theme id="ninja" parent_theme_id="chibi" studio_theme_id="ninja" name="Chibi Ninjas" version="2.0" xsi:noNamespaceSchemaLocation="http://alvin.goanimate.org/schema/cc_library_theme.xsd" xmlns:xi="http://alvin.goanimate.org/store" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<bodyshape id="default" name="Default" default_action="stand" default_motion="walk" action_thumb="stand" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y">
+				<default_char>
+					 <color r="ccSkinColor">0xE2C294</color>                                                                                                                       
+					 <color r="ccEyeLib">0xBD8764</color>                                                                                                                          
+					 <color r="ccEyeIris">0x003333</color>                                                                                                                         
+					 <color r="ccGlassesFrame">0xBE10B0</color>                                                                                                                    
+					 <color r="ccGlassesLens">0x737373</color>                                                                                                                     
+					 <color r="ccMouthLip">0xB7796A</color>                                                                                                                        
+					 <color r="ccEyebrow">0x421D0B</color>                                                                                                                         
+					 <color r="ccBackMajor">0x996600</color>                                                                                                                       
+					 <color r="ccLowerMinor">0x4F5157</color>                                                                                                                      
+					 <component type="bodyshape" component_id="default" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>      
+					 <component type="freeaction" component_id="default" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>     
+					 <component type="ear" component_id="6001" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>               
+					 <component type="nose" component_id="6001" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>              
+					 <component type="faceshape" component_id="6002" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>         
+					 <component type="eyebrow" component_id="6001" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/> 
+					 <component type="hair" component_id="6069" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="60" gopoints="0"/>             
+					 <component type="eye" component_id="6012" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="20" gopoints="0"/>    
+					 <component type="mouth" component_id="6008" theme_id="ninja" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="20" gopoints="0"/>            
+					 <library type="GoHands" component_id="6003" theme_id="ninja" gobucks="0" gopoints="0"/>                                                                       
+					 <library type="GoUpper" component_id="6043" theme_id="ninja" gobucks="0" gopoints="0"/>                                                                       
+					 <library type="GoLower" component_id="6009" theme_id="ninja" gobucks="30" gopoints="0"/>                                                                      
+					 <library type="GoBehindBody" component_id="6003" theme_id="ninja" gobucks="30" gopoints="0"/>                                                                 
+				</default_char>
+
+		<!-- GoUpper -->
+		<component type="GoUpper" xi:inherit="false">
+				<library type="GoUpper" id="6044" path="6044" name="6044" thumb="6044_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6031" path="6031" name="6031" thumb="6031_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6040" path="6040" name="6040" thumb="6040_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6041" path="6041" name="6041" thumb="6041_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6042" path="6042" name="6042" thumb="6042_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6043" path="6043" name="6043" thumb="6043_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6021" path="6021" name="6021" thumb="6021_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6022" path="6022" name="6022" thumb="6022_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6023" path="6023" name="6023" thumb="6023_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6024" path="6024" name="6024" thumb="6024_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6025" path="6025" name="6025" thumb="6025_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6026" path="6026" name="6026" thumb="6026_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6027" path="6027" name="6027" thumb="6027_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6028" path="6028" name="6028" thumb="6028_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6029" path="6029" name="6029" thumb="6029_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+	<library type="GoUpper" id="6058" path="6058" name="6058" thumb="6058_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6030" path="6030" name="6030" thumb="6030_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6032" path="6032" name="6032" thumb="6032_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6033" path="6033" name="6033" thumb="6033_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6034" path="6034" name="6034" thumb="6034_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6035" path="6035" name="6035" thumb="6035_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6036" path="6036" name="6036" thumb="6036_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6037" path="6037" name="6037" thumb="6037_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6038" path="6038" name="6038" thumb="6038_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoUpper" id="6039" path="6039" name="6039" thumb="6039_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+
+		<!-- Denom hacking -->
+				<library type="GoUpper" id="6002" path="6002" name="6002" thumb="6002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N"/>
+		</component>
+
+		<component type="GoLower" xi:inherit="false">
+				<library type="GoLower" id="6011" path="6011" name="6011" thumb="6011_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+		<library type="GoLower" id="6008" path="6008" name="6008" thumb="6008_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+		<library type="GoLower" id="6001" path="6001" name="6001" thumb="6001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+				<library type="GoLower" id="6009" path="6009" name="6009" thumb="6009_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+				<library type="GoLower" id="6010" path="6010" name="6010" thumb="6010_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+				<library type="GoLower" id="6012" path="6012" name="6012" thumb="6012_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y"/>
+
+		<!-- Denom hacking -->
+				<library type="GoLower" id="6005" path="6005" name="6005" thumb="6005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N"/>
+		</component>
+
+		<!-- BACK PROPS START HERE -->
+		<component type="GoBehindBody">
+				<library type="GoBehindBody" id="6001" path="6001" name="6001" thumb="6001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6002" path="6002" name="6002" thumb="6002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6003" path="6003" name="6003" thumb="6003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6004" path="6004" name="6004" thumb="6004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6005" path="6005" name="6005" thumb="6005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6006" path="6006" name="6006" thumb="6006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6007" path="6007" name="6007" thumb="6007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6008" path="6008" name="6008" thumb="6008_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoBehindBody" id="6009" path="6009" name="6009" thumb="6009_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+		</component>
+
+		<!-- HANDS START HERE -->
+		<component type="GoHands">
+				<library type="GoHands" id="6004" path="6004" name="6004" thumb="6004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoHands" id="6005" path="6005" name="6005" thumb="6005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+				<library type="GoHands" id="6007" path="6007" name="6007" thumb="6007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_ninja</tag>
+		</library>
+		</component>
+	</bodyshape>
+
+	<!--NINJA EYES-->
+	<component type="eye">
+	<component type="eye" id="6014" path="6014" name="6014" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="angry" filename="angry.swf" />
+		<state id="blue" filename="blue.swf" />
+		<state id="break" filename="break.swf" />
+		<state id="broken01" filename="broken01.swf" />
+		<state id="broken02" filename="broken02.swf" />
+		<state id="closed_eye" filename="closed_eye.swf" />
+		<state id="confundance" filename="confundance.swf" />
+		<state id="confused" filename="confused.swf" />
+		<state id="cry" filename="cry.swf" />
+		<state id="cry_cute" filename="cry_cute.swf" />
+		<state id="cute" filename="cute.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="desperate" filename="desperate.swf" />
+		<state id="embarrassed" filename="embarrassed.swf" />
+		<state id="fail" filename="fail.swf" />
+		<state id="ghost02" filename="ghost02.swf" />
+		<state id="hang_up_phone" filename="hang_up_phone.swf" />
+		<state id="happy_cute" filename="happy_cute.swf" />
+		<state id="kimaochi" filename="kimaochi.swf" />
+		<state id="laugh" filename="laugh.swf" />
+		<state id="look_down" filename="look_down.swf" />
+		<state id="love02" filename="love02.swf" />
+		<state id="mischievous" filename="mischievous.swf" />
+		<state id="no" filename="no.swf" />
+		<state id="pain" filename="pain.swf" />
+		<state id="phone_ringing" filename="phone_ringing.swf" />
+		<state id="pick_up_phone" filename="pick_up_phone.swf" />
+		<state id="plan" filename="plan.swf" />
+		<state id="sad" filename="sad.swf" />
+		<state id="shock" filename="shock.swf" />
+		<state id="sick" filename="sick.swf" />
+		<state id="sick02" filename="sick02.swf" />
+		<state id="sleepy" filename="sleepy.swf" />
+		<state id="touch" filename="touch.swf" />
+		<state id="trouble" filename="trouble.swf" />
+		<state id="up" filename="up.swf" />
+		<state id="whatever" filename="whatever.swf" />
+		<state id="wink" filename="wink.swf" />
+		<tag>_ninja</tag>
+	</component>
+	<component type="eye" id="6011" path="6011" name="6011" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="angry" filename="angry.swf" />
+		<state id="blue" filename="blue.swf" />
+		<state id="break" filename="break.swf" />
+		<state id="broken01" filename="broken01.swf" />
+		<state id="broken02" filename="broken02.swf" />
+		<state id="closed_eye" filename="closed_eye.swf" />
+		<state id="confundance" filename="confundance.swf" />
+		<state id="confused" filename="confused.swf" />
+		<state id="cry" filename="cry.swf" />
+		<state id="cry_cute" filename="cry_cute.swf" />
+		<state id="cute" filename="cute.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="desperate" filename="desperate.swf" />
+		<state id="embarrassed" filename="embarrassed.swf" />
+		<state id="fail" filename="fail.swf" />
+		<state id="ghost02" filename="ghost02.swf" />
+		<state id="hang_up_phone" filename="hang_up_phone.swf" />
+		<state id="happy_cute" filename="happy_cute.swf" />
+		<state id="kimaochi" filename="kimaochi.swf" />
+		<state id="laugh" filename="laugh.swf" />
+		<state id="look_down" filename="look_down.swf" />
+		<state id="love02" filename="love02.swf" />
+		<state id="mischievous" filename="mischievous.swf" />
+		<state id="no" filename="no.swf" />
+		<state id="pain" filename="pain.swf" />
+		<state id="phone_ringing" filename="phone_ringing.swf" />
+		<state id="pick_up_phone" filename="pick_up_phone.swf" />
+		<state id="plan" filename="plan.swf" />
+		<state id="sad" filename="sad.swf" />
+		<state id="shock" filename="shock.swf" />
+		<state id="sick" filename="sick.swf" />
+		<state id="sick02" filename="sick02.swf" />
+		<state id="sleepy" filename="sleepy.swf" />
+		<state id="touch" filename="touch.swf" />
+		<state id="trouble" filename="trouble.swf" />
+		<state id="up" filename="up.swf" />
+		<state id="whatever" filename="whatever.swf" />
+		<state id="wink" filename="wink.swf" />
+		<tag>_ninja</tag>
+	</component>
+	<component type="eye" id="6012" path="6012" name="6012" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="angry" filename="angry.swf" />
+		<state id="blue" filename="blue.swf" />
+		<state id="break" filename="break.swf" />
+		<state id="broken01" filename="broken01.swf" />
+		<state id="broken02" filename="broken02.swf" />
+		<state id="closed_eye" filename="closed_eye.swf" />
+		<state id="confundance" filename="confundance.swf" />
+		<state id="confused" filename="confused.swf" />
+		<state id="cry" filename="cry.swf" />
+		<state id="cry_cute" filename="cry_cute.swf" />
+		<state id="cute" filename="cute.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="desperate" filename="desperate.swf" />
+		<state id="embarrassed" filename="embarrassed.swf" />
+		<state id="fail" filename="fail.swf" />
+		<state id="ghost02" filename="ghost02.swf" />
+		<state id="hang_up_phone" filename="hang_up_phone.swf" />
+		<state id="happy_cute" filename="happy_cute.swf" />
+		<state id="kimaochi" filename="kimaochi.swf" />
+		<state id="laugh" filename="laugh.swf" />
+		<state id="look_down" filename="look_down.swf" />
+		<state id="love02" filename="love02.swf" />
+		<state id="mischievous" filename="mischievous.swf" />
+		<state id="no" filename="no.swf" />
+		<state id="pain" filename="pain.swf" />
+		<state id="phone_ringing" filename="phone_ringing.swf" />
+		<state id="pick_up_phone" filename="pick_up_phone.swf" />
+		<state id="plan" filename="plan.swf" />
+		<state id="sad" filename="sad.swf" />
+		<state id="shock" filename="shock.swf" />
+		<state id="sick" filename="sick.swf" />
+		<state id="sick02" filename="sick02.swf" />
+		<state id="sleepy" filename="sleepy.swf" />
+		<state id="touch" filename="touch.swf" />
+		<state id="trouble" filename="trouble.swf" />
+		<state id="up" filename="up.swf" />
+		<state id="whatever" filename="whatever.swf" />
+		<state id="wink" filename="wink.swf" />
+		<tag>_ninja</tag>
+	</component>
+	</component>
+
+	<!--NINJA FACESHAPES-->
+	<component type="faceshape">
+		<component type="faceshape" id="6007" path="6007" name="6007" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="blackface" filename="blackface.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="supercute" filename="supercute.swf" />
+		<state id="sweating" filename="sweating.swf" />
+		<tag>_ninja</tag>
+		</component>
+		<component type="faceshape" id="6008" path="6008" name="6008" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="blackface" filename="blackface.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="supercute" filename="supercute.swf" />
+		<state id="sweating" filename="sweating.swf" />
+		<tag>_ninja</tag>
+		</component>
+		<component type="faceshape" id="6009" path="6009" name="6009" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="blackface" filename="blackface.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="supercute" filename="supercute.swf" />
+		<state id="sweating" filename="sweating.swf" />
+		<tag>_ninja</tag>
+		</component>
+		<component type="faceshape" id="6010" path="6010" name="6010" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="blackface" filename="blackface.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="supercute" filename="supercute.swf" />
+		<state id="sweating" filename="sweating.swf" />
+		<tag>_ninja</tag>
+		</component>
+		</component>
+
+	<!--NINJA HAIRSTYLES-->
+	<component type="hair" xi:inherit="false">
+	<component type="hair" id="6047" path="6047" name="6047" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6048" path="6048" name="6048" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6049" path="6049" name="6049" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6051" path="6051" name="6051" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6052" path="6052" name="6052" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6053" path="6053" name="6053" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6054" path="6054" name="6054" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6055" path="6055" name="6055" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6056" path="6056" name="6056" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6057" path="6057" name="6057" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6058" path="6058" name="6058" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6059" path="6059" name="6059" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6060" path="6060" name="6060" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6061" path="6061" name="6061" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6062" path="6062" name="6062" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6063" path="6063" name="6063" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6064" path="6064" name="6064" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6065" path="6065" name="6065" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6066" path="6066" name="6066" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6067" path="6067" name="6067" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6068" path="6068" name="6068" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6069" path="6069" name="6069" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6070" path="6070" name="6070" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6050" path="6050" name="6050" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		<tag>_ninja</tag>
+		</component>
+	<component type="hair" id="6001" path="6001" name="6001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6011" path="6011" name="6011" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6003" path="6003" name="6003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6018" path="6018" name="6018" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6019" path="6019" name="6019" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6013" path="6013" name="6013" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6022" path="6022" name="6022" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6023" path="6023" name="6023" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+	<component type="hair" id="6016" path="6016" name="6016" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6017" path="6017" name="6017" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6002" path="6002" name="6002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6004" path="6004" name="6004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+	<component type="hair" id="6020" path="6020" name="6020" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6021" path="6021" name="6021" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6024" path="6024" name="6024" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+		<component type="hair" id="6028" path="6028" name="6028" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf" />
+		</component>
+	</component>
+
+	<!--NINJA MOUTH-->
+	<component type="mouth">
+	<component type="mouth" id="6014" path="6014" name="6014" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="angry" filename="angry.swf" />
+		<state id="angry02" filename="angry02.swf" />
+		<state id="blue" filename="blue.swf" />
+		<state id="break" filename="break.swf" />
+		<state id="confundance" filename="confundance.swf" />
+		<state id="confused" filename="confused.swf" />
+		<state id="cry" filename="cry.swf" />
+		<state id="cry_cute" filename="cry_cute.swf" />
+		<state id="cute" filename="cute.swf" />
+		<state id="default" filename="default.swf" />
+		<state id="desperate" filename="desperate.swf" />
+		<state id="embarrassed" filename="embarrassed.swf" />
+		<state id="fail" filename="fail.swf" />
+		<state id="get_hit" filename="get_hit.swf" />
+		<state id="ghost02" filename="ghost02.swf" />
+		<state id="happy" filename="happy.swf" />
+		<state id="happy02" filename="happy02.swf" />
+		<state id="happy_cute" filename="happy_cute.swf" />
+		<state id="kimaochi" filename="kimaochi.swf" />
+		<state id="laugh" filename="laugh.swf" />
+		<state id="love02" filename="love02.swf" />
+		<state id="mischievous" filename="mischievous.swf" />
+		<state id="no" filename="no.swf" />
+		<state id="pain" filename="pain.swf" />
+		<state id="plan" filename="plan.swf" />
+		<state id="run03" filename="run03.swf" />
+		<state id="sad" filename="sad.swf" />
+		<state id="shock" filename="shock.swf" />
+		<state id="sick" filename="sick.swf" />
+		<state id="sick02" filename="sick02.swf" />
+		<state id="sleepy" filename="sleepy.swf" />
+		<state id="stand02" filename="stand02.swf" />
+		<state id="surprised" filename="surprised.swf" />
+		<state id="talk" filename="talk.swf" />
+		<state id="talk_angry" filename="talk_angry.swf" />
+		<state id="talk_happy" filename="talk_happy.swf" />
+		<state id="talk_sad" filename="talk_sad.swf" />
+		<state id="touch" filename="touch.swf" />
+		<state id="trouble" filename="trouble.swf" />
+		<state id="whatever" filename="whatever.swf" />
+		<tag>_ninja</tag>
+	</component>
+	</component>
+
+	<!-- FACE DECORATION START HERE -->
+
+		<component type="facedecoration">
+		<component type="facedecoration" id="6001" path="6001" name="6001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_ninja</tag>
+		</component>
+		<component type="facedecoration" id="6002" path="6002" name="6002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_ninja</tag>
+		</component>
+		<component type="facedecoration" id="6004" path="6004" name="6004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+				<state id="default" filename="default.swf"/>
+		<tag>_ninja</tag>
+		</component>
+		</component>
+
+</cc_theme>

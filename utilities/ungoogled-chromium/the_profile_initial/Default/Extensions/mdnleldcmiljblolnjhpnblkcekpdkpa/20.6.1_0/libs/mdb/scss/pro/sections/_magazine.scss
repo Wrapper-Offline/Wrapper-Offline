@@ -1,0 +1,9 @@
+// Magazine section
+.magazine-section {
+  .single-news {
+    border-bottom: 1px solid $magazine-single-news-border-bottom;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

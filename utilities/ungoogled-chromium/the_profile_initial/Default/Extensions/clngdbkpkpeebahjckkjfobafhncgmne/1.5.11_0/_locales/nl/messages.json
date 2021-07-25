@@ -1,0 +1,1619 @@
+{
+   "InaccessibleFileHint": {
+      "description": "Note in the toolbar popup for some file types that cannot be accessed",
+      "message": "Stylus heeft geen toegang tot sommige bestandstypen (bv. pdf- en json-bestanden)."
+   },
+   "addStyleLabel": {
+      "description": "Label for the button to go to the add style page",
+      "message": "Nieuwe stijl schrijven"
+   },
+   "addStyleTitle": {
+      "description": "Title of the page for adding styles",
+      "message": "Stijl toevoegen"
+   },
+   "alphaChannel": {
+      "description": "Label of color's opacity",
+      "message": "Doorzichtigheid"
+   },
+   "appliesAdd": {
+      "description": "Label for the button to add an 'applies' entry",
+      "message": "Toevoegen"
+   },
+   "appliesDisplay": {
+      "description": "Text on the manage screen to describe what the style applies to",
+      "message": "Van toepassing op: $applies$",
+      "placeholders": {
+         "applies": {
+            "content": "$1"
+         }
+      }
+   },
+   "appliesDisplayTruncatedSuffix": {
+      "description": "Text added to appliesDisplay when there are more sites for the style than are displayed",
+      "message": "en meer"
+   },
+   "appliesDomainOption": {
+      "description": "Option to make the style apply to the entered string as a domain",
+      "message": "URL’s op het domein"
+   },
+   "appliesHelp": {
+      "description": "Help text for 'applies to' section",
+      "message": "Gebruik de ‘Van toepassing op’-functies om de URL’s voor de code in deze sectie te beperken."
+   },
+   "appliesLabel": {
+      "description": "Label for 'applies to' fields on the edit/add screen",
+      "message": "Van toepassing op"
+   },
+   "appliesLineWidgetLabel": {
+      "description": "Label for the checkbox to display applies-to information in the single editor",
+      "message": "‘Van toepassing op’-info weergeven"
+   },
+   "appliesLineWidgetWarning": {
+      "description": "A warning that applies-to information won't show properly with minified CSS",
+      "message": "Werkt niet met verkleinde CSS"
+   },
+   "appliesRegexpOption": {
+      "description": "Option to make the style apply to the entered string as a regular expression",
+      "message": "URL’s overeenkomend met de regexp"
+   },
+   "appliesRemove": {
+      "description": "Label for the button to remove an 'applies' entry",
+      "message": "Verwijderen"
+   },
+   "appliesRemoveError": {
+      "description": "Error displayed when the last 'applies' is going to be removed",
+      "message": "Kan laatste ‘Van toepassing op’-item niet verwijderen"
+   },
+   "appliesSpecify": {
+      "description": "Label for the button to make a style apply only to specific sites",
+      "message": "Specificeren"
+   },
+   "appliesToEverything": {
+      "description": "Text displayed for styles that apply to all sites",
+      "message": "Alles"
+   },
+   "appliesUrlPrefixOption": {
+      "description": "Option to make the style apply to the entered string as a URL prefix",
+      "message": "URL’s beginnend met"
+   },
+   "applyAllUpdates": {
+      "description": "Label for the button to apply all detected updates",
+      "message": "Alle updates toepassen"
+   },
+   "author": {
+      "description": "Label for the style author",
+      "message": "Auteur"
+   },
+   "backupButtons": {
+      "description": "Heading for backup",
+      "message": "Back-up"
+   },
+   "backupMessage": {
+      "description": "Message for backup",
+      "message": "Selecteer een bestand of sleep het naar deze pagina."
+   },
+   "bckpInstStyles": {
+      "description": "",
+      "message": "Stijlen exporteren"
+   },
+   "checkAllUpdates": {
+      "description": "Label for the button to check all styles for updates",
+      "message": "Alle stijlen controleren op updates"
+   },
+   "checkAllUpdatesForce": {
+      "description": "Label for the button to apply all detected updates",
+      "message": "Ik heb geen stijlen bewerkt; opnieuw controleren!"
+   },
+   "checkForUpdate": {
+      "description": "Label for the button to check a single style for an update",
+      "message": "Controleren op update"
+   },
+   "checkingForUpdate": {
+      "description": "Text to display when checking a style for an update",
+      "message": "Controleren..."
+   },
+   "clickToUninstall": {
+      "description": "Label for the overlay on a style thumbnail when installed via inline search in the popup",
+      "message": "Klik om te de-installeren"
+   },
+   "cm_autoCloseBrackets": {
+      "description": "Label for the checkbox in the style editor.",
+      "message": "Haakjes en aanhalingstekens automatisch sluiten"
+   },
+   "cm_autoCloseBracketsTooltip": {
+      "description": "Label for the checkbox in the style editor.",
+      "message": "Automatisch sluitingsteken toevoegen bij typen van een openingsteken uit ()[]{}''\"\""
+   },
+   "cm_autocompleteOnTyping": {
+      "description": "Label for the checkbox in the style editor.",
+      "message": "Automatisch aanvullen tijdens typen"
+   },
+   "cm_colorpicker": {
+      "description": "Label for the checkbox controlling colorpicker option for the style editor.",
+      "message": "Kleurkiezer voor CSS-kleuren"
+   },
+   "cm_indentWithTabs": {
+      "description": "Label for the checkbox controlling tabs with smart indentation option for the style editor.",
+      "message": "Tabs met slimme inspringing gebruiken"
+   },
+   "cm_keyMap": {
+      "description": "Label for the drop-down list controlling the keymap for the style editor.",
+      "message": "Toetsenbordindeling"
+   },
+   "cm_lineWrapping": {
+      "description": "Label for the checkbox controlling word wrap option for the style editor.",
+      "message": "Tekstterugloop"
+   },
+   "cm_linter": {
+      "description": "Select the linter to check for CSS issues",
+      "message": "CSS-linter"
+   },
+   "cm_matchHighlight": {
+      "description": "Label for the drop-down list controlling the automatic highlighting of current word/selection occurrences in the style editor.",
+      "message": "Markeren"
+   },
+   "cm_matchHighlightSelection": {
+      "description": "Style editor's 'highglight' drop-down list option: highlight the occurrences of currently selected text",
+      "message": "Alleen selectie"
+   },
+   "cm_matchHighlightToken": {
+      "description": "Style editor's 'highglight' drop-down list option: highlight the occurrences of the word/token under cursor even if nothing is selected",
+      "message": "Token onder cursor"
+   },
+   "cm_resizeGripHint": {
+      "description": "Tooltip for the resize grip in style editor",
+      "message": "Dubbelklik om de hoogte te maximaliseren/herstellen"
+   },
+   "cm_selectByTokens": {
+      "description": "Label for the checkbox in the editor.",
+      "message": "Dubbelklikken selecteert tokens"
+   },
+   "cm_selectByTokensTooltip": {
+      "description": "",
+      "message": "Voorbeelden van tokens: .foo-bar-2 #aabbcc 0.32 !important\nWanneer uitgeschakeld: door interpunctie gescheiden woorden worden geselecteerd."
+   },
+   "cm_smartIndent": {
+      "description": "Label for the checkbox controlling smart indentation option for the style editor.",
+      "message": "Slimme inspringing gebruiken"
+   },
+   "cm_tabSize": {
+      "description": "Label for the text box controlling tab size option for the style editor.",
+      "message": "Tabgrootte"
+   },
+   "cm_theme": {
+      "description": "Label for the style editor's CSS theme.",
+      "message": "Thema"
+   },
+   "colorpickerSwitchFormatTooltip": {
+      "description": "Tooltip for the switch button in the color picker popup in the style editor.",
+      "message": "Indelingen omschakelen: HEX -> RGB -> HSL.\nShift-klik om de volgorde om te keren.\nWerkt ook met de toetsen PgUp (PageUp) en PgDn (PageDown)."
+   },
+   "colorpickerTooltip": {
+      "description": "Tooltip for the colored squares shown before CSS colors in the style editor.",
+      "message": "Kleurkiezer openen"
+   },
+   "configOnChange": {
+      "description": "VERY SHORT label for the checkbox in style config dialog after the save button - when enabled the changes in the dialog are saved and applied automatically without the need to press the Save button",
+      "message": "bij wijzigingen"
+   },
+   "configOnChangeTooltip": {
+      "description": "",
+      "message": "Wijzigingen automatisch opslaan en toepassen"
+   },
+   "configureStyle": {
+      "description": "Label for the button to configure usercss userstyle",
+      "message": "Configureren"
+   },
+   "configureStyleOnHomepage": {
+      "description": "Label for the button to configure userstyles.org userstyle",
+      "message": "Configureren op startpagina"
+   },
+   "confirmCancel": {
+      "description": "",
+      "message": "Annuleren"
+   },
+   "confirmClose": {
+      "description": "'Close' button in a confirm dialog",
+      "message": "Sluiten"
+   },
+   "confirmDefault": {
+      "description": "'Set to default' button in a confirm dialog",
+      "message": "Standaard gebruiken"
+   },
+   "confirmDelete": {
+      "description": "",
+      "message": "Verwijderen"
+   },
+   "confirmDiscardChanges": {
+      "description": "Generic label or title displayed when trying to close something (not a style) with unsaved changes",
+      "message": "Wijzigingen verwerpen?"
+   },
+   "confirmNo": {
+      "description": "'No' button in a confirm dialog",
+      "message": "Nee"
+   },
+   "confirmSave": {
+      "description": "'Save' button in a confirm dialog",
+      "message": "Opslaan"
+   },
+   "confirmStop": {
+      "description": "'Stop' button in a confirm dialog",
+      "message": "Stoppen"
+   },
+   "confirmYes": {
+      "description": "'Yes' button in a confirm dialog",
+      "message": "Ja"
+   },
+   "connectingDropbox": {
+      "description": "",
+      "message": "Dropbox koppelen..."
+   },
+   "connectingDropboxNotAllowed": {
+      "description": "",
+      "message": "Koppelen met Dropbox is alleen beschikbaar in apps die direct vanuit de webstore zijn geïnstalleerd"
+   },
+   "copied": {
+      "description": "Message shown when content has been copied to the clipboard",
+      "message": "Gekopieerd naar klembord"
+   },
+   "copy": {
+      "description": "Tooltip for elements which can be copied",
+      "message": "Kopiëren naar klembord"
+   },
+   "dateInstalled": {
+      "description": "Option text for the user to sort the style by install date",
+      "message": "Installatiedatum"
+   },
+   "dateUpdated": {
+      "description": "Option text for the user to sort the style by last update date",
+      "message": "Bijwerkdatum"
+   },
+   "dbError": {
+      "description": "Prompt when a DB error is encountered",
+      "message": "Er is een fout opgetreden bij het gebruiken van de Stylus-database. Wilt u een webpagina met mogelijke oplossingen bezoeken?"
+   },
+   "defaultTheme": {
+      "description": "Default CodeMirror CSS theme option on the edit style page",
+      "message": "standaard"
+   },
+   "deleteStyleConfirm": {
+      "description": "Confirmation before deleting a style",
+      "message": "Weet u zeker dat u deze stijl wilt verwijderen?"
+   },
+   "deleteStyleLabel": {
+      "description": "Label for the button to delete a style",
+      "message": "Verwijderen"
+   },
+   "description": {
+      "description": "Extension description",
+      "message": "Voorzie het web van een ander uiterlijk met Stylus, een gebruikersstijlbeheerder. Met Stylus kunt u eenvoudig thema’s en stijlen voor veel populaire websites installeren."
+   },
+   "disableAllStyles": {
+      "description": "Label for the checkbox that turns all enabled styles off.",
+      "message": "Alle stijlen uitschakelen"
+   },
+   "disableStyleLabel": {
+      "description": "Label for the button to disable a style",
+      "message": "Uitschakelen"
+   },
+   "dragDropMessage": {
+      "description": "Drag'n'drop message",
+      "message": "Sleep uw back-upbestand naar deze pagina om het te importeren."
+   },
+   "dragDropUsercssTabstrip": {
+      "description": "Message popup shown when erroneously dropping a usercss file into the manager page",
+      "message": "Sleep het bestand naar de tabbladenstrook (het gebied waar de tabbladtitels worden getoond) om het te installeren."
+   },
+   "editDeleteText": {
+      "description": "Label for the context menu item in the editor to delete selected text",
+      "message": "Verwijderen"
+   },
+   "editGotoLine": {
+      "description": "Go to line or line:column on Ctrl-G in style code editor",
+      "message": "Ga naar regel (of regel:kolom)"
+   },
+   "editStyleHeading": {
+      "description": "Title of the page for editing styles",
+      "message": "Stijl bewerken"
+   },
+   "editStyleLabel": {
+      "description": "Label for the button to go to the edit style page",
+      "message": "Bewerken"
+   },
+   "editStyleTitle": {
+      "description": "Title of the page for editing styles",
+      "message": "Stijl $stylename$ bewerken",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "editorStylesButton": {
+      "description": "Find styles for the editor",
+      "message": "Editorstijlen zoeken"
+   },
+   "enableStyleLabel": {
+      "description": "Label for the button to enable a style",
+      "message": "Inschakelen"
+   },
+   "excludeStyleByDomainLabel": {
+      "description": "",
+      "message": "Het huidige domein uitsluiten"
+   },
+   "excludeStyleByUrlLabel": {
+      "description": "",
+      "message": "De huidige URL uitsluiten"
+   },
+   "exportLabel": {
+      "description": "Label for the button to export a style ('edit' page) or all styles ('manage' page)",
+      "message": "Exporteren"
+   },
+   "exportSavedSuccess": {
+      "description": "",
+      "message": "Bestand opgeslagen"
+   },
+   "externalHomepage": {
+      "description": "Label for the external link to style's homepage",
+      "message": "Startpagina"
+   },
+   "externalLink": {
+      "description": "Label for external links",
+      "message": "Externe koppeling"
+   },
+   "externalSupport": {
+      "description": "Label for the external link to style's support site",
+      "message": "Ondersteuning"
+   },
+   "externalUsercssDocument": {
+      "description": "Label for the external link to usercss documentation",
+      "message": "Documentatie voor Usercss"
+   },
+   "filteredStyles": {
+      "description": "TL note - make this message short",
+      "message": "$numShown$ van de $numTotal$ getoond",
+      "placeholders": {
+         "numShown": {
+            "content": "$1"
+         },
+         "numTotal": {
+            "content": "$2"
+         }
+      }
+   },
+   "filteredStylesAllHidden": {
+      "description": "Text shown when no styles match currently applied filter in the style manager",
+      "message": "Geen overeenkomende stijlen met de momenteel toegepaste filters"
+   },
+   "findStyles": {
+      "description": "Text for a link that gets a list of styles for the current site",
+      "message": "Stijlen zoeken"
+   },
+   "findStylesForSite": {
+      "description": "Text for a link that gets a list of styles for the current site",
+      "message": "Meer stijlen voor deze website zoeken"
+   },
+   "findStylesInlineTooltip": {
+      "description": "Text for a checkbox that displays search results within the Stylus popup.",
+      "message": "Zoekresultaten binnen dit venster weergeven"
+   },
+   "genericAdd": {
+      "description": "Used in various places for an action that adds something",
+      "message": "Toevoegen"
+   },
+   "genericClone": {
+      "description": "Used in various places for an action that clones something",
+      "message": "Dupliceren"
+   },
+   "genericDisabledLabel": {
+      "description": "Used in various lists/options to indicate that something is disabled",
+      "message": "Uitgeschakeld"
+   },
+   "genericEnabledLabel": {
+      "description": "Used in various lists/options to indicate that something is enabled",
+      "message": "Ingeschakeld"
+   },
+   "genericError": {
+      "description": "Used in various places to indicate some error occurred.",
+      "message": "Fout"
+   },
+   "genericHistoryLabel": {
+      "description": "Used in various places to show a history log of something",
+      "message": "Geschiedenis"
+   },
+   "genericNext": {
+      "description": "Used in various places to select/perform the next step/action",
+      "message": "Volgende"
+   },
+   "genericPrevious": {
+      "description": "Used in various places to select/perform the previous step/action",
+      "message": "Vorige"
+   },
+   "genericResetLabel": {
+      "description": "Used in various parts of UI to indicate that something may be reset to its original state",
+      "message": "Standaardwaarden"
+   },
+   "genericSavedMessage": {
+      "description": "Used in various parts of the UI to indicate that something was saved",
+      "message": "Opgeslagen"
+   },
+   "genericTitle": {
+      "description": "Used in various parts of the UI to indicate the title of something",
+      "message": "Titel"
+   },
+   "genericUnknown": {
+      "description": "Used in various parts of the UI to indicate if something is unknown (e.g. an unknown date)",
+      "message": "Onbekend"
+   },
+   "gettingStyles": {
+      "description": "",
+      "message": "Alle stijlen ophalen..."
+   },
+   "helpAlt": {
+      "description": "Alternate text for help buttons",
+      "message": "Hulp"
+   },
+   "helpKeyMapCommand": {
+      "description": "Placeholder text of inputbox in keymap help popup on the edit style page. Must be very short",
+      "message": "Typ een opdrachtnaam"
+   },
+   "helpKeyMapHotkey": {
+      "description": "Placeholder text of inputbox in keymap help popup on the edit style page. Must be very short",
+      "message": "Druk op een sneltoets"
+   },
+   "hostDisabled": {
+      "description": "Tooltip for cloud host disabled",
+      "message": "Deze host is uitgeschakeld vanwege een bug in de huidige versie van de gebruikte browser"
+   },
+   "importAppendLabel": {
+      "description": "Label for the button to import a style and append to the existing sections",
+      "message": "Toevoegen aan stijl"
+   },
+   "importAppendTooltip": {
+      "description": "Tooltip for the button to import a style and append to the existing sections",
+      "message": "Geïmporteerde stijl toevoegen aan huidige stijl"
+   },
+   "importLabel": {
+      "description": "Label for the button to import a style ('edit' page) or all styles ('manage' page)",
+      "message": "Importeren"
+   },
+   "importReplaceLabel": {
+      "description": "Label for the button to import and overwrite current style",
+      "message": "Stijl overschrijven"
+   },
+   "importReplaceTooltip": {
+      "description": "Label for the button to import and overwrite current style",
+      "message": "Inhoud van huidige stijl verwerpen en met de geïmporteerde stijl overschrijven"
+   },
+   "importReportLegendAdded": {
+      "description": "Text after the number of styles added in the report shown after importing styles",
+      "message": "toegevoegd"
+   },
+   "importReportLegendIdentical": {
+      "description": "Text after the number of styles skipped due to being identical to the already installed ones in the report shown after importing styles",
+      "message": "gelijke overgeslagen"
+   },
+   "importReportLegendInvalid": {
+      "description": "Text after the number of styles skipped due to being invalid (not a Stylus/Stylish backup file probably) in the report shown after importing styles",
+      "message": "ongeldige overgeslagen"
+   },
+   "importReportLegendUpdatedBoth": {
+      "description": "Text after the number of styles updated entirely in the report shown after importing styles",
+      "message": "meta-informatie en code bijgewerkt"
+   },
+   "importReportLegendUpdatedCode": {
+      "description": "Text after the number of styles with updated code (meta info is unchanged) in the report shown after importing styles",
+      "message": "code bijgewerkt"
+   },
+   "importReportLegendUpdatedMeta": {
+      "description": "Text after the number of styles with updated meta info like name/url in the report shown after importing styles",
+      "message": "meta-informatie bijgewerkt"
+   },
+   "importReportTitle": {
+      "description": "Title of the report shown after importing styles",
+      "message": "Stijlen importeren voltooid"
+   },
+   "importReportUnchanged": {
+      "description": "Message in the report shown after importing styles",
+      "message": "Er is niets gewijzigd."
+   },
+   "importReportUndone": {
+      "description": "Text after the number of styles reverted in the message box shown after undoing the import of styles",
+      "message": "stijlen zijn teruggezet"
+   },
+   "importReportUndoneTitle": {
+      "description": "Title of the message box shown after undoing the import of styles",
+      "message": "Importeren is ongedaan gemaakt"
+   },
+   "installButton": {
+      "description": "Label for install button",
+      "message": "Stijl installeren"
+   },
+   "installButtonInstalled": {
+      "description": "Text displayed when the style is successfully installed",
+      "message": "Stijl geïnstalleerd"
+   },
+   "installButtonReinstall": {
+      "description": "Label for reinstall button",
+      "message": "Stijl herinstalleren"
+   },
+   "installButtonUpdate": {
+      "description": "Label for update button",
+      "message": "Stijl bijwerken"
+   },
+   "installUpdate": {
+      "description": "Label for the button to install an update for a single style",
+      "message": "Update installeren"
+   },
+   "installUpdateFrom": {
+      "description": "Label to describe where the style gets update",
+      "message": "De stijl wordt momenteel bijgewerkt vanaf $url$",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "installUpdateFromLabel": {
+      "description": "Label for the checkbox to save current URL for update check",
+      "message": "Controleren op updates"
+   },
+   "license": {
+      "description": "Label for the license",
+      "message": "Licentie"
+   },
+   "linkGetHelp": {
+      "description": "Homepage link text on the manage page e.g. https://add0n.com/stylus.html#features with chat/FAQ/intro/info",
+      "message": "Hulp verkrijgen"
+   },
+   "linkGetStyles": {
+      "description": "Help link text on the manage page e.g. https://userstyles.org",
+      "message": "Stijlen verkrijgen"
+   },
+   "linkTranslate": {
+      "description": "Transifex link text on the manage page",
+      "message": "Vertalen"
+   },
+   "linterCSSLintIncompatible": {
+      "description": "The label to display when the preprocessor isn't compatible with CSSLint",
+      "message": "CSSLint heeft geen ondersteuning voor $preprocessorname$",
+      "placeholders": {
+         "preprocessorname": {
+            "content": "$1"
+         }
+      }
+   },
+   "linterCSSLintSettings": {
+      "description": "CSSLint rule config values",
+      "message": "(stel regel als volgt in: 0 = uitgeschakeld; 1 = waarschuwing; 2 = fout)"
+   },
+   "linterConfigPopupTitle": {
+      "description": "Stylelint or CSSLint popup header",
+      "message": "$linter$-regelconfiguratie instellen",
+      "placeholders": {
+         "linter": {
+            "content": "$1"
+         }
+      }
+   },
+   "linterConfigTooltip": {
+      "description": "Icon tooltip to indicate that it opens a popup with the selected linter configuration",
+      "message": "Klik om deze linter te configureren"
+   },
+   "linterInvalidConfigError": {
+      "description": "Invalid linter config will show a message followed by a list of invalid entries",
+      "message": "Niet opgeslagen vanwege deze ongeldige configuratie-instellingen:"
+   },
+   "linterIssues": {
+      "description": "Label for the CSS linter issues block on the style edit page",
+      "message": "Problemen"
+   },
+   "linterIssuesHelp": {
+      "description": "Help popup message for the selected CSS linter issues block on the style edit page",
+      "message": "De door stylelint gevonden problemen, $link$:",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "linterJSONError": {
+      "description": "Setting linter config with invalid JSON",
+      "message": "Ongeldige JSON-opmaak"
+   },
+   "linterResetMessage": {
+      "description": "Reset button tooltip to inform user on how to undo an accidental reset",
+      "message": "Druk op Ctrl-Z (of Cmd-Z) in het tekstvak om ongedaan te maken"
+   },
+   "linterRulesLink": {
+      "description": "Stylelint or CSSLint rules label added immediately before a link",
+      "message": "Volledige regellijst bekijken"
+   },
+   "liveReloadError": {
+      "description": "The label of live-reload error",
+      "message": "Er is een fout opgetreden tijdens het bekijken van het bestand"
+   },
+   "liveReloadInstallHint": {
+      "description": "The label of live-reload feature",
+      "message": "Houd dit tabblad geopend om de stijl automatisch bij te werken bij externe wijzigingen."
+   },
+   "liveReloadInstallHintFF": {
+      "description": "The extra hint of live-reload feature shown only for file:// URLs in Firefox",
+      "message": "Houd zowel dit tabblad als het oorspronkelijke tabblad geopend om de stijl automatisch bij te werken bij externe wijzigingen."
+   },
+   "liveReloadLabel": {
+      "description": "The label of live-reload feature",
+      "message": "Live herladen"
+   },
+   "manageFavicons": {
+      "description": "Label for the checkbox that toggles applies-to favicons in the new UI on manage page",
+      "message": "Favicons in kolom ‘Van toepassing op’"
+   },
+   "manageFaviconsGray": {
+      "description": "Label for the checkbox that toggles grayed out mode of applies-to favicons in the new UI on manage page",
+      "message": "Niet beschikbaar"
+   },
+   "manageFaviconsHelp": {
+      "description": "Label for the checkbox that toggles applies-to favicons in the new UI on manage page",
+      "message": "Stylus gebruikt een externe dienst: https://www.google.com/s2/favicons"
+   },
+   "manageHeading": {
+      "description": "Heading for the manage page",
+      "message": "Geïnstalleerde stijlen"
+   },
+   "manageMaxTargets": {
+      "description": "Label for the numeric input box to limit max number of applies-to targets in the new UI on manage page",
+      "message": "Aantal ‘Van toepassing op’-items"
+   },
+   "manageNewStyleAsUsercss": {
+      "description": "VERY SHORT label for the checkbox next to the 'Write new style' button in the style manager",
+      "message": "als Usercss"
+   },
+   "manageNewUI": {
+      "description": "Label for the checkbox that toggles the new UI on manage page",
+      "message": "Nieuwe indeling van beheerscherm"
+   },
+   "manageOnlyDisabled": {
+      "description": "Checkbox to show only disabled styles",
+      "message": "Alleen uitgeschakelde stijlen"
+   },
+   "manageOnlyEnabled": {
+      "description": "Checkbox to show only enabled styles",
+      "message": "Alleen ingeschakelde stijlen"
+   },
+   "manageOnlyExternal": {
+      "description": "Checkbox to show only externally installed styles i.e. updatable",
+      "message": "Alleen externe stijlen"
+   },
+   "manageOnlyLocal": {
+      "description": "Checkbox to show only locally created styles i.e. non-updatable",
+      "message": "Alleen lokaal aangemaakte stijlen"
+   },
+   "manageOnlyLocalTooltip": {
+      "description": "Tooltip for the checkbox to show only locally created styles i.e. non-updatable",
+      "message": "(de stijlen die niet via userstyles.org zijn geïnstalleerd)"
+   },
+   "manageOnlyNonUsercss": {
+      "description": "Checkbox to show only non-Usercss (standard) styles",
+      "message": "Alleen niet-Usercss-stijlen"
+   },
+   "manageOnlyUpdates": {
+      "description": "Checkbox to show only styles that have updates after check-all-styles-for-updates was performed",
+      "message": "Alleen bij updates of problemen"
+   },
+   "manageOnlyUsercss": {
+      "description": "Checkbox to show only Usercss styles",
+      "message": "Alleen Usercss-stijlen"
+   },
+   "menuShowBadge": {
+      "description": "Label (must be very short) for the checkbox in the toolbar button context menu controlling toolbar badge text.",
+      "message": "Aantal actieve stijlen tonen"
+   },
+   "meta_invalidCheckboxDefault": {
+      "description": "Error displayed when the value of @var checkbox is invalid",
+      "message": "Ongeldig @var-selectievakje: waarde moet 0 of 1 zijn"
+   },
+   "meta_invalidColor": {
+      "description": "Error displayed when the value of @var color is invalid",
+      "message": "Ongeldige @var-kleur: $color$ is geen geldige kleur",
+      "placeholders": {
+         "color": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidNumber": {
+      "description": "Error displayed when the value is expected to be a number",
+      "message": "Getal verwacht"
+   },
+   "meta_invalidRange": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: waarde moet een getal of reeks zijn",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeDefault": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: standaardwaarde is null",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeMax": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: standaardwaarde is hoger dan het maximum",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeMin": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: standaardwaarde is lager dan het minimum",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeMultipleUnits": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: meerdere eenheden opgegeven",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeStep": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldge @var $type$: standaardwaarde is geen vermeerdering van de stap",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeTooManyValues": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: de reeks bevat te veel items",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidRangeUnits": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: '$units$' is geen geldige eenheid",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         },
+         "units": {
+            "content": "$2"
+         }
+      }
+   },
+   "meta_invalidRangeValue": {
+      "description": "Error displayed when the value of @var range or @var number is invalid",
+      "message": "Ongeldige @var $type$: items in de reeks moeten een getal, string of null zijn",
+      "placeholders": {
+         "type": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidSelect": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: de standaardwaarde moet een reeks of object zijn"
+   },
+   "meta_invalidSelectEmptyOptions": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: optielijst is leeg"
+   },
+   "meta_invalidSelectLabel": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: optielabel is leeg"
+   },
+   "meta_invalidSelectMultipleDefaults": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: meerdere standaardopties opgegeven"
+   },
+   "meta_invalidSelectNameDuplicated": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: optienaam is een duplicaat"
+   },
+   "meta_invalidSelectValue": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: waarden binnen de reeks/het object moeten een string zijn"
+   },
+   "meta_invalidSelectValueMismatch": {
+      "description": "Error displayed when the value of @var select is invalid",
+      "message": "Ongeldige @var-select: waarde staat niet op de optielijst"
+   },
+   "meta_invalidString": {
+      "description": "Error displayed when the value is expected to be a quoted string",
+      "message": "Citaatstring verwacht"
+   },
+   "meta_invalidURLProtocol": {
+      "description": "Error displayed when the protocol of the URL is invalid",
+      "message": "Ongeldig URL-protocol. Alleen http en https zijn toegestaan: $protocol$",
+      "placeholders": {
+         "protocol": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidVersion": {
+      "description": "Error displayed when @version is invalid",
+      "message": "Ongeldig versienummer. De waarde komt niet overeen met het SemVer-patroon:$version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_invalidWord": {
+      "description": "Error displayed when the value is expected to be a word",
+      "message": "Woord verwacht"
+   },
+   "meta_missingChar": {
+      "description": "Error displayed when the value is expected to be some characters",
+      "message": "Tekens verwacht: $chars$",
+      "placeholders": {
+         "chars": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_missingEOT": {
+      "description": "Error displayed when the value is expected to be an EOT list",
+      "message": "EOT-gegevens verwacht"
+   },
+   "meta_missingMandatory": {
+      "description": "Error displayed when mandatory keys are missing",
+      "message": "Ontbrekende vereiste metagegevens: $keys$",
+      "placeholders": {
+         "keys": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_unknownJSONLiteral": {
+      "description": "Error displayed when JSON value is invalid",
+      "message": "Ongeldige JSON: $literal$ is geen geldige JSON-literal",
+      "placeholders": {
+         "literal": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_unknownMeta": {
+      "description": "Error displayed when unknown metadata is parsed",
+      "message": "Onbekende metagegevens: $key$",
+      "placeholders": {
+         "key": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_unknownPreprocessor": {
+      "description": "Error displayed when unknown @preprocessor is parsed",
+      "message": "Onbekende @preprocessor: $preprocessor$",
+      "placeholders": {
+         "preprocessor": {
+            "content": "$1"
+         }
+      }
+   },
+   "meta_unknownVarType": {
+      "description": "Error displayed when unknown variable type is parsed",
+      "message": "Onbekend @$varkey$-type: $vartype$",
+      "placeholders": {
+         "varkey": {
+            "content": "$1"
+         },
+         "vartype": {
+            "content": "$2"
+         }
+      }
+   },
+   "noFileToImport": {
+      "description": "",
+      "message": "Als u uw stijlen wilt importeren, dient u deze eerst te exporteren."
+   },
+   "noStylesForSite": {
+      "description": "Text displayed when no styles are installed for the current site",
+      "message": "Geen geïnstalleerde stijlen voor deze website."
+   },
+   "openManage": {
+      "description": "Link to open the manage page.",
+      "message": "Beheren"
+   },
+   "openOptions": {
+      "description": "Go to Options UI",
+      "message": "Opties"
+   },
+   "openStylesManager": {
+      "description": "Label for the style maanger opener in the browser action context menu.",
+      "message": "Stijlbeheerder openen"
+   },
+   "optionsActions": {
+      "description": "",
+      "message": "Acties"
+   },
+   "optionsAdvanced": {
+      "description": "",
+      "message": "Geavanceerd"
+   },
+   "optionsAdvancedContextDelete": {
+      "description": "",
+      "message": "‘Verwijderen’ toevoegen in contextmenu van editor"
+   },
+   "optionsAdvancedExposeIframes": {
+      "description": "",
+      "message": "iframes blootleggen via HTML[stylus-iframe]"
+   },
+   "optionsAdvancedExposeIframesNote": {
+      "description": "Add attribute to iframe; make sure to include the double $$ in the css example, or the `$=` will be omitted in the displayed text.",
+      "message": "Legt het bovenliggende domein van de website bloot in elk iframe.\nSchakelt schrijven in voor iframe-specifieke CSS, zoals:\nhtml[stylus-iframe$$=\"twitter.com\"] h1 { display:none }"
+   },
+   "optionsAdvancedNewStyleAsUsercss": {
+      "description": "",
+      "message": "Nieuwe stijl schrijven als usercss"
+   },
+   "optionsBadgeDisabled": {
+      "description": "",
+      "message": "Achtergrondkleur wanneer uitgeschakeld"
+   },
+   "optionsBadgeNormal": {
+      "description": "",
+      "message": "Achtergrondkleur"
+   },
+   "optionsCheck": {
+      "description": "",
+      "message": "Stijlen bijwerken"
+   },
+   "optionsCheckUpdate": {
+      "description": "",
+      "message": "Controleren op updates en deze installeren"
+   },
+   "optionsCustomizeBadge": {
+      "description": "",
+      "message": "Badge op het werkbalkpictogram"
+   },
+   "optionsCustomizeIcon": {
+      "description": "",
+      "message": "Werkbalkpictogram"
+   },
+   "optionsCustomizePopup": {
+      "description": "",
+      "message": "Pop-up"
+   },
+   "optionsCustomizeSync": {
+      "description": "",
+      "message": "Synchroniseren met cloud"
+   },
+   "optionsHeading": {
+      "description": "Heading for options section on manage page.",
+      "message": "Opties"
+   },
+   "optionsIconDark": {
+      "description": "",
+      "message": "Donkere browserthema’s"
+   },
+   "optionsIconLight": {
+      "description": "",
+      "message": "Lichte browserthema’s"
+   },
+   "optionsOpen": {
+      "description": "",
+      "message": "Openen"
+   },
+   "optionsOpenManager": {
+      "description": "",
+      "message": "Stijlen beheren"
+   },
+   "optionsPopupWidth": {
+      "description": "",
+      "message": "Pop-upbreedte (in pixels)"
+   },
+   "optionsReset": {
+      "description": "",
+      "message": "Opties terugzetten naar standaardwaarden"
+   },
+   "optionsResetButton": {
+      "description": "",
+      "message": "Standaardwaarden"
+   },
+   "optionsSubheading": {
+      "description": "Subheading for options section on manage page.",
+      "message": "Meer opties"
+   },
+   "optionsSyncConnect": {
+      "description": "",
+      "message": "Koppelen"
+   },
+   "optionsSyncDisconnect": {
+      "description": "",
+      "message": "Ontkoppelen"
+   },
+   "optionsSyncLogin": {
+      "description": "",
+      "message": "Aanmelden"
+   },
+   "optionsSyncNone": {
+      "description": "",
+      "message": "Geen"
+   },
+   "optionsSyncStatusConnected": {
+      "description": "",
+      "message": "Gekoppeld"
+   },
+   "optionsSyncStatusConnecting": {
+      "description": "",
+      "message": "Koppelen..."
+   },
+   "optionsSyncStatusDisconnected": {
+      "description": "",
+      "message": "Ontkoppeld"
+   },
+   "optionsSyncStatusDisconnecting": {
+      "description": "",
+      "message": "Ontkoppelen..."
+   },
+   "optionsSyncStatusPull": {
+      "description": "",
+      "message": "Stijl $loaded$ van $total$ ophalen",
+      "placeholders": {
+         "loaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "optionsSyncStatusPush": {
+      "description": "",
+      "message": "Stijl $loaded$ van $total$ uploaden",
+      "placeholders": {
+         "loaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "optionsSyncStatusSyncing": {
+      "description": "",
+      "message": "Synchroniseren..."
+   },
+   "optionsSyncSyncNow": {
+      "description": "",
+      "message": "Nu synchroniseren"
+   },
+   "optionsUpdateImportNote": {
+      "description": "",
+      "message": "Als u stijlen vanuit een oudere versie of vanuit Stylish importeert, controleer dan eenmalig op updates in de stijlbeheerder om er zeker van te zijn dat alle stijlen zijn bijgewerkt."
+   },
+   "optionsUpdateInterval": {
+      "description": "",
+      "message": "Interval voor automatisch bijwerken van gebruikersstijlen in uren (geef 0 op om dit uit te schakelen)"
+   },
+   "overwriteFileExport": {
+      "description": "",
+      "message": "Wilt u een bestaand bestand overschrijven?"
+   },
+   "paginationCurrent": {
+      "description": "Tooltip for the current page index in search results",
+      "message": "Huidige pagina"
+   },
+   "paginationEstimated": {
+      "description": "Tooltip for the total page count in search results",
+      "message": "Geschatte aantal pagina’s"
+   },
+   "paginationNext": {
+      "description": "Tooltip for the '->' (next page) button in search results",
+      "message": "Volgende pagina"
+   },
+   "paginationPrevious": {
+      "description": "Tooltip for the '\u003C-' button in search results",
+      "message": "Vorige pagina"
+   },
+   "paginationTotal": {
+      "description": "",
+      "message": "Totale aantal pagina’s"
+   },
+   "parseUsercssError": {
+      "description": "The error message to show when stylus failed to parse usercss",
+      "message": "Stylus kan de usercss niet verwerken:"
+   },
+   "popupAutoResort": {
+      "description": "Label for the checkbox controlling popup resorting.",
+      "message": "Stijlen opnieuw sorteren in pop-up na omschakelen"
+   },
+   "popupBorders": {
+      "description": "",
+      "message": "Witte randen toevoegen aan zijkanten"
+   },
+   "popupBordersTooltip": {
+      "description": "",
+      "message": "Handig voor donkere thema’s in Chrome, omdat zijranden niet meer worden gerenderd"
+   },
+   "popupHotkeysInfo": {
+      "description": "NOTE1: preserve \u003C and > symbols so that \u003Chotkey> is styled as a key.\nNOTE2: the last line is displayed as a text of the link to the wiki page.\nNOTE3: this is the list of hotkeys displayed after clicking the right edge of the extension popup.",
+      "message": "\u003C1>-\u003C9>, \u003C0>, ook op het numerieke toetsenbord - schakelt naar de Ne stijl (0 is 10)\n\u003CA>-\u003CZ> schakelt naar de eerste stijl die met de letter begint\n\u003CShift> opent de editor i.p.v. deze in/uit te schakelen\n\u003CNumpad +> schakelt opgesomde stijlen in\n\u003CNumpad –> schakelt opgesomde stijlen uit\n\u003CNumpad *> en \u003C`> (accent grave) - schakelt tussen initieel ingeschakelde stijlen; niet van toepassing op stijlen die zijn ingeschakeld met het pop-upvenster geopend, zodat u na het uitproberen de initiële selectie kunt herstellen: schakel alles uit en schakel dan om, m.a.w. \u003CNumpad –> \u003CNumpad *>\nMeer info is te vinden in de wiki"
+   },
+   "popupHotkeysTooltip": {
+      "description": "Tooltip displayed when hovering the right edge of the extension popup",
+      "message": "Klik om beschikbare sneltoetsen te tonen"
+   },
+   "popupManageTooltip": {
+      "description": "Tooltip for the 'Manage' button in the popup.",
+      "message": "Shift-klik of rechtsklik opent de beheerder met stijlen die op de huidige website van toepassing zijn"
+   },
+   "popupMenuButtonTooltip": {
+      "description": "Tooltip for menu button in popup.",
+      "message": "Actiemenu"
+   },
+   "popupOpenEditInWindow": {
+      "description": "Label for the checkbox controlling 'edit' action behavior in the popup.",
+      "message": "Editor openen in nieuw venster"
+   },
+   "popupOpenEditInWindowTooltip": {
+      "description": "Label for the checkbox controlling 'edit' action behavior in the popup.",
+      "message": "Wordt tevens ingeschakeld door het losmaken van het editor-tabblad,\nen uitgeschakeld door het vastmaken van een los editor-tabblad aan een ander venster."
+   },
+   "popupStylesFirst": {
+      "description": "Label for the checkbox controlling section order in the popup.",
+      "message": "Stijlen vóór opdrachten"
+   },
+   "prefShowBadge": {
+      "description": "Label for the checkbox controlling toolbar badge text.",
+      "message": "Aantal actieve stijlen voor de huidige website"
+   },
+   "previewLabel": {
+      "description": "Label for the checkbox in style editor to enable live preview while editing.",
+      "message": "Live-voorbeeld"
+   },
+   "previewTooltip": {
+      "description": "Tooltip for the checkbox in style editor to enable live preview while editing.",
+      "message": "Past de wijzigingen tijdelijk toe zonder deze op te slaan.\nSla de stijl op om de wijzigingen permanent te maken."
+   },
+   "readingStyles": {
+      "description": "",
+      "message": "Stijlen lezen..."
+   },
+   "reload": {
+      "description": "Context menu reload",
+      "message": "Stylus-extensie herladen"
+   },
+   "replace": {
+      "description": "Label before the replace input field in the editor shown on Ctrl-H",
+      "message": "Vervangen"
+   },
+   "replaceAll": {
+      "description": "Label before the replace input field in the editor shown on 'replaceAll' hotkey",
+      "message": "Alle vervangen"
+   },
+   "replaceWith": {
+      "description": "Label before the replace-with input field in the editor shown on Ctrl-H etc.",
+      "message": "Vervangen door"
+   },
+   "retrieveBckp": {
+      "description": "",
+      "message": "Stijlen importeren"
+   },
+   "retrieveDropboxSync": {
+      "description": "",
+      "message": "Dropbox - Importeren"
+   },
+   "search": {
+      "description": "Label before the search input field in the editor shown on Ctrl-F",
+      "message": "Zoeken"
+   },
+   "searchCaseSensitive": {
+      "description": "Tooltip for the 'Aa' icon that enables case-sensitive search in the editor shown on Ctrl-F",
+      "message": "Hoofdlettergevoelig"
+   },
+   "searchNumberOfResults": {
+      "description": "Tooltip for the number of found search results in the editor shown on Ctrl-F",
+      "message": "Aantal overeenkomsten"
+   },
+   "searchNumberOfResults2": {
+      "description": "Tooltip for the number of found search results in the editor shown on Ctrl-F",
+      "message": "Aantal overeenkomsten in code en ‘Van toepassing op’-waarden"
+   },
+   "searchRegexp": {
+      "description": "Label after the search input field in the editor shown on Ctrl-F",
+      "message": "Gebruik /re/-syntaxis voor regexp-zoeken"
+   },
+   "searchResultInstallCount": {
+      "description": "Text for label that shows the number of times a search result was installed",
+      "message": "Totale aantal installaties"
+   },
+   "searchResultNoneFound": {
+      "description": "Error text in the popup when inline search didn't find any site-specific styles",
+      "message": "Geen stijlen voor deze website gevonden."
+   },
+   "searchResultRating": {
+      "description": "Text for label that shows the search result's rating",
+      "message": "Waardering"
+   },
+   "searchResultUpdated": {
+      "description": "Text for label that shows the search result's last update date",
+      "message": "Bijgewerkt"
+   },
+   "searchResultWeeklyCount": {
+      "description": "Text for label that shows the number of times a search result was installed during last week",
+      "message": "Wekelijks aantal installaties"
+   },
+   "searchStyles": {
+      "description": "Label for the search filter textbox on the Manage styles page",
+      "message": "Inhoud doorzoeken"
+   },
+   "searchStylesHelp": {
+      "description": "Text in the minihelp displayed when clicking (i) icon to the right of the search input field on the Manage styles page",
+      "message": "\u003C/>-toets legt de focus in het zoekvak.\nPlatte tekst: zoeken in de naam, code, website-URL en de websites waarop het wordt toegepast. Woorden met minder dan 3 letters worden genegeerd.\nStijlen die met een volledige URL overeenkomen: begin de zoekopdracht met \u003Curl:>, bv. \u003Curl:https://github.com/openstyles/stylus>\nReguliere expressies: voeg schuine strepen en vlaggen toe, bv. \u003C/body.*?\\ba\\b/simguy>\nExacte woorden: gebruik dubbele aanhalingstekens in de zoekterm, bv. \u003C\".header ~ div\">"
+   },
+   "sectionAdd": {
+      "description": "Label for the button to add a section",
+      "message": "Nog een sectie toevoegen"
+   },
+   "sectionRemove": {
+      "description": "Label for the button to remove a section",
+      "message": "Sectie verwijderen"
+   },
+   "sectionRestore": {
+      "description": "Label for the button to restore a removed section",
+      "message": "Verwijderde sectie herstellen"
+   },
+   "shortcuts": {
+      "description": "Go to shortcut configuration",
+      "message": "Sneltoetsen"
+   },
+   "shortcutsNote": {
+      "description": "",
+      "message": "Sneltoetsen definiëren"
+   },
+   "sortDateNewestFirst": {
+      "description": "Text added to indicate that sorting a date would add the newest entries at the top",
+      "message": "nieuwste eerst"
+   },
+   "sortDateOldestFirst": {
+      "description": "Text added to indicate that sorting a date would add the oldest entries at the top",
+      "message": "oudste eerst"
+   },
+   "sortLabel": {
+      "description": "Title on the sort select to indicate it is used for sorting entries",
+      "message": "Selecteer een sorteermethode om op geïnstalleerde stijlen toe te passen"
+   },
+   "sortLabelTitleAsc": {
+      "description": "Text added to option group to indicate a block of options that apply a title ascending (A to Z) sort",
+      "message": "Titel - Oplopend"
+   },
+   "sortLabelTitleDesc": {
+      "description": "Text added to option group to indicate a block of options that apply a title descending (Z to A) sort",
+      "message": "Titel - Aflopend"
+   },
+   "sortStylesHelp": {
+      "description": "Text in the minihelp displayed when clicking (i) icon to the right of the sort input field on the Manage styles page",
+      "message": "Kies de toe te passen sorteermethode voor de geïnstalleerde items vanuit het vervolgkeuzemenu. De standaardinstelling past een oplopende sortering (A-Z) op de itemtitels toe. Sorteren op ‘Titel - Aflopend’ past het omgekeerde (Z-A) toe.\nAndere keuzes laten u items sorteren op basis van meerdere criteria. Denk hierbij aan het sorteren van een tabel met meerdere kolommen, en elke categorie in een selectie (tussen de plustekens) stelt een kolom of groep voor.\nVoorbeeld: als de instelling ‘Ingeschakeld (eerst) + Titel’ is, worden de ingeschakelde items bovenaan geplaatst en worden zowel de in- als uitgeschakelde items apart oplopend gesorteerd (A-Z)."
+   },
+   "sortStylesHelpTitle": {
+      "description": "Label for the sort info popup on the Manage styles page",
+      "message": "Inhoud sorteren"
+   },
+   "styleBadRegexp": {
+      "description": "Validation message for a bad regexp in a style",
+      "message": "Regexp is ongeldig."
+   },
+   "styleBeautify": {
+      "description": "Label for the CSS-beautifier button on the edit style page",
+      "message": "Mooier maken"
+   },
+   "styleBeautifyIndentConditional": {
+      "description": "CSS-beautifier option",
+      "message": "@media, @supports inspringen"
+   },
+   "styleBeautifyPreserveNewlines": {
+      "description": "CSS-beautifier option",
+      "message": "Nieuwe regels behouden"
+   },
+   "styleCancelEditLabel": {
+      "description": "Label for cancel button for style editing",
+      "message": "Terug naar beheren"
+   },
+   "styleChangesNotSaved": {
+      "description": "Text for the prompt when changes are made to a style and the user tries to leave without saving",
+      "message": "U hebt wijzigingen in deze stijl aangebracht zonder op te slaan."
+   },
+   "styleEnabledLabel": {
+      "description": "Label for the enabled state of styles",
+      "message": "Ingeschakeld"
+   },
+   "styleFromMozillaFormatError": {
+      "description": "Label for the import error",
+      "message": "Importeren vanuit Mozilla-opmaak mislukt"
+   },
+   "styleFromMozillaFormatPrompt": {
+      "description": "Prompt in the dialog displayed after clicking 'Import from Mozilla format' button",
+      "message": "Plak de code in Mozilla-opmaak"
+   },
+   "styleInstall": {
+      "description": "Confirmation when installing a style",
+      "message": "‘$stylename$’ installeren in Stylus?",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "styleInstallFailed": {
+      "description": "Warning when installation failed",
+      "message": "Installeren van gebruikersstijl mislukt!\n$error$",
+      "placeholders": {
+         "error": {
+            "content": "$1"
+         }
+      }
+   },
+   "styleInstallOverwrite": {
+      "description": "Confirmation when re-installing a style",
+      "message": "‘$stylename$’ is al geïnstalleerd. Overschrijven?\nVersie: $oldVersion$ -> $newVersion$",
+      "placeholders": {
+         "newVersion": {
+            "content": "$3"
+         },
+         "oldVersion": {
+            "content": "$2"
+         },
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "styleMissingName": {
+      "description": "Error displayed when user saves without providing a name",
+      "message": "Voer een naam in"
+   },
+   "styleMozillaFormatHeading": {
+      "description": "Heading for the section with buttons to import/export Mozilla format of the style",
+      "message": "Mozilla-opmaak"
+   },
+   "styleNotAppliedRegexpProblemTooltip": {
+      "description": "Tooltip in the popup for styles that were not applied at all",
+      "message": "Stijl is niet toegepast vanwege onjuist gebruik van ‘regexp()’"
+   },
+   "styleRegexpInvalidExplanation": {
+      "description": "",
+      "message": "Sommige ‘regexp()’-regels konden niet worden gecompileerd."
+   },
+   "styleRegexpPartialExplanation": {
+      "description": "",
+      "message": "Deze stijl gebruikt gedeeltelijk overeenkomende regexps. Dit is in strijd met de \u003Ca href='https://developer.mozilla.org/docs/Web/CSS/@document'>CSS4 @document-specificatie\u003C/a>, die een volledige URL-overeenkomst vereist. De getroffen CSS-secties zijn niet op de pagina toegepast. Deze stijl is waarschijnlijk met Stylish-for-Chrome gemaakt, dat sinds de allereerste versie op een onjuiste manier ‘regexp()’-regels controleert (bekende fout)."
+   },
+   "styleRegexpProblemTooltip": {
+      "description": "Tooltip in the popup for styles that were applied only partially",
+      "message": "Aantal secties dat niet wordt toegepast vanwege onjuist gebruik van ‘regexp()’"
+   },
+   "styleRegexpTestButton": {
+      "description": "RegExp test button label in the editor shown when applies-to list has a regexp value",
+      "message": "RegExp-test"
+   },
+   "styleRegexpTestFull": {
+      "description": "RegExp test report: label for the fully matching expressions",
+      "message": "Overeenkomende tabbladen"
+   },
+   "styleRegexpTestInvalid": {
+      "description": "RegExp test report: label for the invalid expressions",
+      "message": "Ongeldige regexps overgeslagen"
+   },
+   "styleRegexpTestNone": {
+      "description": "RegExp test report: label for expressions that didn't match any tabs",
+      "message": "Geen overeenkomende tabbladen"
+   },
+   "styleRegexpTestNote": {
+      "description": "RegExp test report: a note displayed at the bottom of the dialog",
+      "message": "Let op: gebruik een enkele \\ voor het gebruik van escapetekens in het regexp-invoerveld. Deze worden automatisch omgezet naar \\\\ in de stijlcode volgens de specificatie voor tekenreeksen tussen aanhalingstekens in CSS."
+   },
+   "styleRegexpTestPartial": {
+      "description": "RegExp test report: label for the partially matching expressions",
+      "message": "Niet volledig overeenkomend, dus overgeslagen"
+   },
+   "styleRegexpTestTitle": {
+      "description": "RegExp test report: title of the report",
+      "message": "Lijst van overeenkomende geopende tabbladen (klik op de URL om de focus op het tabblad te leggen)"
+   },
+   "styleSaveLabel": {
+      "description": "Label for save button for style editing",
+      "message": "Opslaan"
+   },
+   "styleToMozillaFormatHelp": {
+      "description": "Help info for the Mozilla format header section that converts the code to/from Mozilla format",
+      "message": "De Mozilla-opmaak van de code kan bij userstyles.org worden ingediend en met het klassieke Stylish voor Firefox worden gebruikt."
+   },
+   "styleToMozillaFormatTitle": {
+      "description": "Title of the popup with the style code in Mozilla format, shown after pressing the Export button on Edit style page",
+      "message": "Stijl in Mozilla-opmaak"
+   },
+   "styleUpdate": {
+      "description": "Confirmation when updating a style",
+      "message": "Weet u zeker dat u ‘$stylename$’ wilt bijwerken?",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "styleUpdateDiscardChanges": {
+      "description": "Confirmation to update the style in the editor",
+      "message": "Deze stijl is buiten de editor om gewijzigd. Wilt u de stijl opnieuw laden?"
+   },
+   "stylusUnavailableForURL": {
+      "description": "Note in the toolbar pop-up when on a URL Stylus can't affect",
+      "message": "Stylus werkt niet op pagina’s als deze."
+   },
+   "stylusUnavailableForURLdetails": {
+      "description": "Sub-note in the toolbar pop-up when on a URL Stylus can't affect",
+      "message": "Als beveiligingsmaatregel verbiedt de browser dat extensies effect hebben op ingebouwde pagina’s (zoals chrome://version, de standaard nieuw-tabbladpagina sinds Chrome 61, about:addons, enz.), evenals op pagina’s van andere extensies. Ook beperkt elke browser toegang tot de eigen extensiegalerij (zoals de Chrome Web Store of AMO)."
+   },
+   "syncDropboxDeprecated": {
+      "description": "",
+      "message": "Importeren/exporteren via Dropbox is vervangen door een meer geavanceerde stijlsynchronisatie in de optiespagina."
+   },
+   "syncDropboxStyles": {
+      "description": "",
+      "message": "Dropbox - Exporteren"
+   },
+   "syncStorageErrorSaving": {
+      "description": "Displayed when trying to save an excessively big value via storage.sync API",
+      "message": "De waarde kan niet worden opgeslagen. Probeer de hoeveelheid tekst te verminderen."
+   },
+   "toggleStyle": {
+      "description": "Label for the checkbox to enable/disable a style",
+      "message": "Stijl in-/uitschakelen"
+   },
+   "undo": {
+      "description": "Button label",
+      "message": "Ongedaan maken"
+   },
+   "undoGlobal": {
+      "description": "CSS-beautify global Undo button label",
+      "message": "Ongedaan maken (alle secties)"
+   },
+   "unreachableAMO": {
+      "description": "Note in the popup displayed when opened on addons.mozilla.org",
+      "message": "Firefox blokkeert de toegang tot deze website."
+   },
+   "unreachableAMOHint": {
+      "description": "Note in the popup when opened on addons.mozilla.org in Firefox >= 59",
+      "message": "Toestemming verlenen: open \u003Cabout:config>, klik met de rechtermuisknop op de lijst, klik op ‘Nieuw’ -> ‘Boolean’ en plak \u003Cprivacy.resistFingerprinting.block_mozAddonManager>. Klik daarna op OK -> \u003Ctrue> -> OK en vernieuw de pagina \u003Caddons.mozilla.org>."
+   },
+   "unreachableAMOHintNewFF": {
+      "description": "Note in the popup when opened on addons.mozilla.org in Firefox >= 59",
+      "message": "In Firefox 60 en hoger moet u ook het AMO-domein uit \u003Cextensions.webextensions.restrictedDomains> verwijderen in \u003Cabout:config>."
+   },
+   "unreachableAMOHintOldFF": {
+      "description": "Note in the popup when opened on addons.mozilla.org in Firefox \u003C 59",
+      "message": "Alleen Firefox 59 en hoger kunnen worden geconfigureerd om WebExtensions stijlelementen te laten toevoegen op door CSP beveiligde websites zoals deze."
+   },
+   "unreachableContentScript": {
+      "description": "Note in the toolbar popup usually on file:// URLs after [re]loading Stylus",
+      "message": "Kon niet met de pagina communiceren. Probeer het tabblad te vernieuwen."
+   },
+   "unreachableFileHint": {
+      "description": "Note in the toolbar popup for file:// URLs",
+      "message": "Stylus kan URL’s die met file:// beginnen alleen benaderen als u het selectievakje hiervoor op de pagina chrome://extensions aanvinkt."
+   },
+   "unzipStyles": {
+      "description": "",
+      "message": "Stijlen uitpakken..."
+   },
+   "updateAllCheckSucceededNoUpdate": {
+      "description": "Text that displays when an update all check completed and no updates are available",
+      "message": "Geen updates gevonden."
+   },
+   "updateAllCheckSucceededSomeEdited": {
+      "description": "Text that displays when an update all check completed and no updates are available",
+      "message": "Sommige stijlen die kunnen worden bijgewerkt zijn niet gecontroleerd, om mogelijke lokale bewerkingen te behouden. Updates kunnen worden geforceerd door de stijlen individueel te controleren, of door alle stijlen opnieuw te controleren (lokale bewerkingen worden overschreven)."
+   },
+   "updateCheckFailBadResponseCode": {
+      "description": "Text that displays when an update check failed because the response code indicates an error",
+      "message": "Update mislukt: server gaf code $code$ als antwoord.",
+      "placeholders": {
+         "code": {
+            "content": "$1"
+         }
+      }
+   },
+   "updateCheckFailServerUnreachable": {
+      "description": "Text that displays when an update check failed because the update server is unreachable",
+      "message": "Update mislukt: server onbereikbaar."
+   },
+   "updateCheckHistory": {
+      "description": "",
+      "message": "Geschiedenis van updatecontroles"
+   },
+   "updateCheckManualUpdateForce": {
+      "description": "Additional text displayed when an update check skipped updating the style to avoid losing local modifications",
+      "message": "Update installeren (lokale bewerkingen worden overschreven)"
+   },
+   "updateCheckManualUpdateHint": {
+      "description": "Additional text displayed when an update check skipped updating the style to avoid losing local modifications",
+      "message": "Een update forceren zal lokale bewerkingen overschrijven."
+   },
+   "updateCheckSkippedLocallyEdited": {
+      "description": "Text that displays when an update check skipped updating the style to avoid losing local modifications",
+      "message": "Deze stijl is lokaal bewerkt."
+   },
+   "updateCheckSkippedMaybeLocallyEdited": {
+      "description": "Text that displays when an update check skipped updating the style to avoid losing possible local modifications",
+      "message": "Deze stijl is mogelijk lokaal bewerkt."
+   },
+   "updateCheckSucceededNoUpdate": {
+      "description": "Text that displays when an update check completed and no update is available",
+      "message": "Stijl is up-to-date."
+   },
+   "updateCompleted": {
+      "description": "Text that displays when an update completed",
+      "message": "Update voltooid."
+   },
+   "updatesCurrentlyInstalled": {
+      "description": "Text that displays when an update is installed on options page. Followed by the number of currently installed updates.",
+      "message": "Geïnstalleerde updates:"
+   },
+   "uploadingFile": {
+      "description": "",
+      "message": "Bestand uploaden..."
+   },
+   "usercssAvoidOverwriting": {
+      "description": "Shown in a message box when attempting to save a new Usercss style that would overwrite an existing one.",
+      "message": "Wijzig de waarde van @name of @namespace om te voorkomen dat een bestaande stijl wordt overschreven."
+   },
+   "usercssConfigIncomplete": {
+      "description": "",
+      "message": "De stijl is bijgewerkt of verwijderd nadat het configuratievenster werd getoond. Om beschadiging van metagegevens van de extensie te voorkomen, zijn deze variabelen niet opgeslagen:"
+   },
+   "usercssEditorNamePlaceholder": {
+      "description": "Placeholder text for the empty name input field when creating a new Usercss style",
+      "message": "Specificeer @name in de code"
+   },
+   "usercssReplaceTemplateConfirmation": {
+      "description": "",
+      "message": "Wilt u de standaardsjabloon voor nieuwe Usercss-stijlen vervangen door de huidige code?"
+   },
+   "usercssReplaceTemplateName": {
+      "description": "The text shown after @name when creating a new Usercss style",
+      "message": "Lege @name vervangt de standaardsjabloon"
+   },
+   "usercssReplaceTemplateSectionBody": {
+      "description": "The code placeholder comment in a new style created by clicking 'Write style' in the popup",
+      "message": "Voer hier code in..."
+   },
+   "versionInvalidOlder": {
+      "description": "Displayed when the version of style is older than the installed one",
+      "message": "De versie is ouder dan de geïnstalleerde stijl."
+   },
+   "writeStyleFor": {
+      "description": "Label for toolbar pop-up that precedes the links to write a new style",
+      "message": "Stijl schrijven voor:"
+   },
+   "writeStyleForURL": {
+      "description": "Text for link in toolbar pop-up to write a new style for the current URL",
+      "message": "deze URL"
+   },
+   "zipStyles": {
+      "description": "",
+      "message": "Stijlen inpakken..."
+   }
+}

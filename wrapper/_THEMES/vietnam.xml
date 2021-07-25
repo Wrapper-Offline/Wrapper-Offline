@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="vietnam" name="Jungle Warfare" cc_theme_id="cc2">
+	<background id="rw_checkpoint_bg.swf" name="Checkpoint" enable="Y" default="N" is_premium="N" aid="12540" money="0" sharing="0"/>
+	<background id="rw_sky03_bg.swf" name="Skyline - Panning Right" enable="Y" default="N" is_premium="N" aid="12551" money="0" sharing="0"/>
+	<background id="rw_sky02_bg.swf" name="Skyline" enable="Y" default="N" is_premium="N" aid="12550" money="0" sharing="0"/>
+	<background id="rw_sky01_bg.swf" name="Skyline - Panning Left" enable="Y" default="N" is_premium="N" aid="12549" money="0" sharing="0"/>
+	<background id="rw_river03_bg.swf" name="River - Panning Left" enable="Y" default="N" is_premium="N" aid="12548" money="0" sharing="0"/>
+	<background id="rw_river02_bg.swf" name="River" enable="Y" default="N" is_premium="N" aid="12547" money="0" sharing="0"/>
+	<background id="rw_river01_bg.swf" name="River - Panning Right" enable="Y" default="N" is_premium="N" aid="12546" money="0" sharing="0"/>
+	<background id="rw_landing02_bg.swf" name="Grassland - Helicopter landing" enable="Y" default="N" is_premium="N" aid="12545" money="0" sharing="0"/>
+	<background id="rw_landing01_bg.swf" name="Grassland" enable="Y" default="Y" is_premium="N" aid="12544" money="0" sharing="0"/>
+	<background id="rw_forest04_bg.swf" name="Forest - Panning Right" enable="Y" default="N" is_premium="N" aid="12543" money="0" sharing="0"/>
+	<background id="rw_forest03_bg.swf" name="Forest - Panning Left" enable="Y" default="N" is_premium="N" aid="12542" money="0" sharing="0"/>
+	<background id="rw_forest02_bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="12541" money="0" sharing="0"/>
+	<background id="rw_underground01_bg.swf" name="Hideout" enable="Y" default="N" is_premium="N" aid="12552" money="0" sharing="0"/>
+	<background id="rw_underground02_bg.swf" name="Hideout - explosions" enable="Y" default="N" is_premium="N" aid="12553" money="0" sharing="0"/>
+	<compositebg id="rw_checkpoint" name="Checkpoint" enable="Y" default="N" thumb="checkpoint_bg.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="12554">
+	<bg id="rw_checkpoint_BG4" index="0">
+		<file>vietnam.rw_checkpoint_bg.swf</file>
+	</bg>
+	<prop id="rw_checkpoint_PROP2" index="2">
+		<file>vietnam.rw_sandbag.swf</file>
+		<x>99</x>
+		<y>268</y>
+		<xscale>1.1</xscale>
+		<yscale>1.1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="rw_checkpoint_PROP3" index="3">
+		<file>vietnam.rw_sandbag.swf</file>
+		<x>77</x>
+		<y>209</y>
+		<xscale>0.8</xscale>
+		<yscale>0.8</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="rw_checkpoint_PROP4" index="4">
+		<file>vietnam.rw_box.swf</file>
+		<x>31</x>
+		<y>303</y>
+		<xscale>1.31</xscale>
+		<yscale>1.31</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="rw_checkpoint_PROP5" index="5">
+		<file>vietnam.rw_box.swf</file>
+		<x>32</x>
+		<y>239</y>
+		<xscale>1.09</xscale>
+		<yscale>1.09</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="rw_checkpoint_PROP6" index="8">
+		<file>vietnam.rw_checkpoint01.swf</file>
+		<x>266.2</x>
+		<y>249.6</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_forest02" name="Forest" enable="Y" default="N" thumb="forest02_bg.jpg" display_order="10" is_premium="N" money="0" sharing="0" aid="12556">
+	<bg id="rw_forest02_BG27" index="0">
+		<file>vietnam.rw_forest02_bg.swf</file>
+	</bg>
+	<prop id="rw_forest02_PROP3" index="2">
+		<file>vietnam.rw_forest02.swf</file>
+		<x>322.6</x>
+		<y>161.7</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_forest03" name="Forest - Panning Left" enable="Y" default="N" thumb="forest03_bg.jpg" display_order="11" is_premium="N" money="0" sharing="0" aid="12555">
+	<bg id="rw_forest03_BG24" index="0">
+		<file>vietnam.rw_forest03_bg.swf</file>
+	</bg>
+	<prop id="rw_forest03_PROP2" index="1">
+		<file>vietnam.rw_forest01.swf</file>
+		<x>310.5</x>
+		<y>324.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_forest04" name="Forest - Panning Right" enable="Y" default="N" thumb="forest04_bg.jpg" display_order="12" is_premium="N" money="0" sharing="0" aid="12557">
+	<bg id="rw_forest04_BG23" index="0">
+		<file>vietnam.rw_forest04_bg.swf</file>
+	</bg>
+	<prop id="rw_forest04_PROP2" index="1">
+		<file>vietnam.rw_forest01.swf</file>
+		<x>310.5</x>
+		<y>324.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_river02" name="River" enable="Y" default="N" thumb="river02_bg.jpg" display_order="20" is_premium="N" money="0" sharing="0" aid="12560">
+	<bg id="rw_river02_BG6" index="0">
+		<file>vietnam.rw_river02_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="rw_river03" name="River - Panning Left" enable="Y" default="N" thumb="river03_bg.jpg" display_order="21" is_premium="N" money="0" sharing="0" aid="12559">
+	<bg id="rw_river03_BG10" index="0">
+		<file>vietnam.rw_river03_bg.swf</file>
+	</bg>
+	<prop id="rw_river03_PROP2" index="1">
+		<file>vietnam.rw_forest01.swf</file>
+		<x>310.5</x>
+		<y>324.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_river01" name="River - Panning Right" enable="Y" default="N" thumb="river01_bg.jpg" display_order="22" is_premium="N" money="0" sharing="0" aid="12558">
+	<bg id="rw_river01_BG20" index="0">
+		<file>vietnam.rw_river01_bg.swf</file>
+	</bg>
+	<prop id="rw_river01_PROP2" index="1">
+		<file>vietnam.rw_forest01.swf</file>
+		<x>310.5</x>
+		<y>324.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="rw_sky02" name="Skyline" enable="Y" default="N" thumb="sky_02.jpg" display_order="30" is_premium="N" money="0" sharing="0" aid="12562">
+	<bg id="rw_sky02_BG53" index="0">
+		<file>vietnam.rw_sky02_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="rw_sky01" name="Skyline - Panning Left" enable="Y" default="N" thumb="sky_01.jpg" display_order="31" is_premium="N" money="0" sharing="0" aid="12561">
+	<bg id="rw_sky01_BG49" index="0">
+		<file>vietnam.rw_sky01_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="rw_sky03" name="Skyline - Panning Right" enable="Y" default="N" thumb="sky_03.jpg" display_order="32" is_premium="N" money="0" sharing="0" aid="12563">
+	<bg id="rw_sky03_BG51" index="0">
+		<file>vietnam.rw_sky03_bg.swf</file>
+	</bg>
+</compositebg>
+	<prop id="rw_checkpoint01.swf" name="Gate" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12476" money="0" sharing="0"/>
+	<prop id="rw_forest01.swf" name="Bushes" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12477" money="0" sharing="0"/>
+	<prop id="rw_forest02.swf" name="Trees" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12478" money="0" sharing="0"/>
+	<prop id="rw_02kabar.swf" name="Combat knife" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12479" money="0" sharing="0" handstyle="stick"/>
+	<prop id="msp_ncc_gun_car15" name="CAR-15" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_car15_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12480" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_car15_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_car15_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_car15_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_car15_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m1a1" name="M1A1" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m1a1_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12485" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m1a1_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m1a1_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m1a1_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m1a1_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m1g" name="M1 Garand" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m1g_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12490" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m1g_ncc_gun_loop.swf" name="Keep shooting" enable="Y"/>
+		<state id="msp_ncc_gun_m1g_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m1g_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m2car" name="M2 Carbine" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m2car_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12494" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m2car_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m2car_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m2car_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m2car_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m14" name="M14" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m14_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12499" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m14_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m14_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m14_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m14_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m16vn" name="M16 Vietnam" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m16vn_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12504" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m16vn_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m16vn_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m16vn_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m16vn_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m60" name="M60" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m60_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12509" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m60_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m60_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m60_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m60_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m63" name="M63 Mk.23 Mod.0" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m63_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12514" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m63_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
+		<state id="msp_ncc_gun_m63_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>
+		<state id="msp_ncc_gun_m63_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m63_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_m191" name="1911" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_m191_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12519" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_m191_ncc_gun_loop.swf" name="Keep shooting" enable="Y"/>
+		<state id="msp_ncc_gun_m191_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_m191_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_ncc_gun_winche" name="Model 70 Sniper" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_winche_ncc_gun_still.swf" enable="Y" is_premium="N" aid="12523" money="0" sharing="0" handstyle="gun">
+		<tag>gun</tag>
+		<state id="msp_ncc_gun_winche_ncc_gun_loop.swf" name="Keep shooting" enable="Y"/>
+		<state id="msp_ncc_gun_winche_ncc_gun_once.swf" name="Shoot once" enable="Y"/>
+		<state id="msp_ncc_gun_winche_ncc_gun_still.swf" name="Still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_rw_huey01" name="Chopper" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_rw_huey01_rw_huey_03.swf" enable="Y" is_premium="N" aid="12527" money="0" sharing="0">
+		<state id="msp_rw_huey01_rw_huey_01.swf" name="still" enable="Y"/>
+		<state id="msp_rw_huey01_rw_huey_02.swf" name="door" enable="Y"/>
+		<state id="msp_rw_huey01_rw_huey_03.swf" name="flying" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_rw_ship" name="Patrol boat" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_rw_ship_rw_ship_still.swf" enable="Y" is_premium="N" aid="12531" money="0" sharing="0">
+		<state id="msp_rw_ship_rw_ship_move.swf" name="move" enable="Y"/>
+		<state id="msp_rw_ship_rw_ship_still.swf" name="still" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_rw_willly" name="Jeep" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_rw_willly_rw_willysjeep_off.swf" enable="Y" is_premium="N" aid="12534" money="0" sharing="0">
+		<state id="msp_rw_willly_rw_willysjeep_cover.swf" name="front" enable="Y"/>
+		<state id="msp_rw_willly_rw_willysjeep_off.swf" name="still" enable="Y" default="Y"/>
+		<state id="msp_rw_willly_rw_willysjeep_on.swf" name="driving" enable="Y"/>
+	</prop>
+	<prop id="rw_box.swf" name="Box" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12538" money="0" sharing="0"/>
+	<prop id="rw_sandbag.swf" name="Sand bag" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12539" money="0" sharing="0"/>
+</theme>

@@ -1,0 +1,52 @@
+// MDB Autocomplete
+.mdb-autocomplete {
+  margin-bottom: $autocomplete-margin-bottom;
+}
+button {
+  &:focus {
+    outline: 0 !important;
+  }
+  &.mdb-autocomplete-clear {
+    position: absolute;
+    z-index: 2;
+    top: $autocomplete-clear-top;
+    right: 0;
+    visibility: hidden;
+    border: none;
+    background: transparent;
+    svg {
+      fill: $autocomplete-clear-color;
+    }
+  }
+}
+
+.mdb-autocomplete-wrap {
+  box-shadow: $z-depth-1;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+  overflow-y: auto;
+  max-height: $autocomplete-wrap-max-height;
+  padding-left: 0;
+  background: $white-base;
+  li {
+    padding: $autocomplete-wrap-li-padding-y $autocomplete-wrap-li-padding-x;
+    cursor: pointer;
+    font-size: $autocomplete-wrap-li-font-size;
+    &:hover {
+      background: $autocomplete-wrap-li-hover-bg;
+    }
+  }
+}
+
+.form-inline {
+  .md-form {
+    .form-control {
+      &.mdb-autocomplete {
+        width: $form-inline-autocomplete-width;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Team section
+section {
+  &.team-section {
+    .avatar {
+      img {
+        max-width: $team-section-avatar-max-width;
+        height: auto;
+        &.rounded-circle {
+          max-width: $team-section-avatar-circle-max-width;
+        }
+      }
+    }
+  }
+}

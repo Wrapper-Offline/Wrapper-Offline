@@ -1,0 +1,34 @@
+/*
+* Override MDB styles here. These are generic styles which are copied on all the pages.
+*/
+
+/* In floating buttons, background of btn-success is overridden by tbn-floating */
+.btn-success {
+  background-color: #00C851 !important;
+}
+
+/* Used in index screens */
+.table > thead > tr > td,
+.table > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  color: #666;
+  padding: 8px 0.75rem;
+  line-height: 1.42857143;
+  font-weight: 400;
+}
+
+/* Modal styling */
+/* Left shift modal due to left rail */
+.modal {
+  background: rgba(0,0,0,.5);
+}
+
+.modal.show .modal-dialog {
+  margin-top: 100px;
+}
+
+.toast-top-right {
+  top: 50px !important;
+  right: 5px !important;
+}

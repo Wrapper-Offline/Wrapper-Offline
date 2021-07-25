@@ -1,0 +1,25 @@
+{
+	"name": "wrapper-offline",
+	"description": "A Node.js app which communicates with a web server to run the LVM",
+	"version": "1.2.3",
+	"homepage": "https://discord.gg/Kf7BzSw",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"start": "node main.js"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"audio-converter": "^1.0.13",
+		"brotli": "^1.3.2",
+		"discord-rpc": "^3.2.0",
+		"formidable": "^1.2.2",
+		"fs": "0.0.1-security",
+		"js-base64": "^3.6.1",
+		"js-md5": "^0.7.3",
+		"mp3-duration": "^1.1.0",
+		"node-stream-zip": "^1.13.5",
+		"node-zip": "github:kyriosli/node-zip",
+		"xmldoc": "^1.1.2"
+	}
+}

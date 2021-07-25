@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="domo" name="Domo">
+	<char id="domo_char" name="Domo" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="6492" money="0" sharing="0">
+		<category name="Emotion">
+			<action id="excited.swf" name="excited" loop="Y" totalframe="52" enable="Y" aid="6495"/>
+			<action id="furious.swf" name="Irritated" loop="Y" totalframe="29" enable="Y" aid="6496"/>
+			<action id="surprised.swf" name="surprised" loop="Y" totalframe="60" enable="Y" aid="6497"/>
+			<action id="impatient.swf" name="impatient" loop="Y" totalframe="100" enable="Y" aid="6498"/>
+		</category>
+		<category name="Sitting">
+			<action id="sitting.swf" name="still" loop="Y" totalframe="1" enable="Y" aid="6499"/>
+			<action id="eat.swf" name="eat" loop="Y" totalframe="20" enable="Y" aid="6500"/>
+		</category>
+		<category name="Standing">
+			<action id="standing.swf" name="facing camera" loop="Y" totalframe="100" enable="Y" aid="6493"/>
+			<action id="3_4_back.swf" name="back view" loop="Y" totalframe="51" enable="Y" aid="6501"/>
+			<action id="stand.swf" name="front view" loop="Y" totalframe="1" enable="Y" aid="6502"/>
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" enable="Y" aid="6494"/>
+		<action id="try_to_take_off.swf" name="try to take off" loop="Y" totalframe="51" enable="Y" aid="6503"/>
+		<action id="egg_hatching.swf" name="egg hatching" loop="Y" totalframe="100" enable="Y" aid="6504"/>
+		<action id="lying_down.swf" name="lying down" loop="Y" totalframe="1" enable="Y" aid="6505"/>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="72" enable="Y" aid="6506"/>
+		<action id="play_guitar.swf" name="play guitar" loop="Y" totalframe="83" enable="Y" aid="6507"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="100" enable="Y" aid="6508"/>
+		<action id="scare.swf" name="scare" loop="Y" totalframe="101" enable="Y" aid="6509"/>
+		<action id="fart.swf" name="fart" loop="Y" totalframe="100" enable="Y" aid="6510"/>
+		<action id="look_up.swf" name="look up" loop="Y" totalframe="100" enable="Y" aid="6511"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="12" enable="Y" aid="6512"/>
+		<motion id="flying.swf" name="fly" loop="Y" totalframe="24" enable="Y" aid="6513"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="6514"/>
+		<facial id="head_furious.swf" name="irritated" enable="Y" aid="6515"/>
+		<facial id="head_upset.swf" name="upset" enable="Y" aid="6516"/>
+		<facial id="head_embarrassed.swf" name="embarrassed" enable="Y" aid="6517"/>
+		<facial id="head_sleeping.swf" name="sleeping" enable="Y" aid="6518"/>
+		<facial id="head_sweating.swf" name="sweating" enable="Y" aid="6519"/>
+		<action id="fishing.swf" name="fishing" loop="Y" totalframe="37" enable="Y" aid="6797"/>
+		<action id="catch_fish.swf" name="catch fish" loop="Y" totalframe="37" enable="Y" aid="6798"/>
+		<action id="play_piano.swf" name="play piano" loop="Y" totalframe="113" enable="Y" aid="6799"/>
+		<action id="rub_tummy.swf" name="rub tummy" loop="Y" totalframe="113" enable="Y" aid="6800"/>
+		<action id="swing_bat.swf" name="swing bat" loop="Y" totalframe="37" enable="Y" aid="6801"/>
+		<action id="take_picture.swf" name="take picture" loop="Y" totalframe="95" enable="Y" aid="6802"/>
+	</char>
+	<char id="mr_usaji" name="Mr Usaji" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="6520" money="0" sharing="0">
+		<category name="Emotion">
+			<action id="excited.swf" name="excited" loop="Y" totalframe="50" enable="Y" aid="6523"/>
+			<action id="irritated.swf" name="irritated" loop="N" totalframe="40" enable="Y" aid="6524"/>
+			<action id="surprised.swf" name="surprised" loop="N" totalframe="20" enable="Y" aid="6525"/>
+		</category>
+		<category name="Sitting">
+			<action id="sitting.swf" name="still" loop="Y" totalframe="50" enable="Y" aid="6526"/>
+			<action id="drink_tea.swf" name="drink tea" loop="Y" totalframe="85" enable="Y" aid="6527"/>
+			<action id="bend_spoon.swf" name="bend spoon" loop="N" totalframe="70" enable="Y" aid="6528"/>
+		</category>
+		<category name="Standing">
+			<action id="standing.swf" name="front view" loop="Y" totalframe="50" enable="Y" aid="6521"/>
+			<action id="standing_back.swf" name="back view" loop="Y" totalframe="55" enable="Y" aid="6529"/>
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" enable="Y" aid="6522"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="55" enable="Y" aid="6530"/>
+		<action id="lying_down.swf" name="lying down" loop="Y" totalframe="50" enable="Y" aid="6531"/>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="103" enable="Y" aid="6532"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="16" enable="Y" aid="6533"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="6534"/>
+		<facial id="head_irritated.swf" name="irritated" enable="Y" aid="6535"/>
+		<facial id="head_emba.swf" name="embarrassed" enable="Y" aid="6536"/>
+		<facial id="head_confused.swf" name="confused" enable="Y" aid="6537"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="6538"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="6539"/>
+		<facial id="head_sleeping.swf" name="sleeping" enable="Y" aid="6540"/>
+		<facial id="head_sweating.swf" name="sweating" enable="Y" aid="6541"/>
+		<facial id="head_talk.swf" name="talk" enable="Y" aid="6542"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="6543"/>
+		<facial id="head_talk_angry.swf" name="talk irritated" enable="Y" aid="6544"/>
+		<action id="pitch_ball.swf" name="pitch ball" loop="N" totalframe="58" enable="Y" aid="6804"/>
+		<action id="back_camera.swf" name="back view with camera" loop="N" totalframe="55" enable="Y" aid="6805"/>
+	</char>
+	<char id="tashanna" name="Tashanna" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="6545" money="0" sharing="0">
+		<category name="Emotion">
+			<action id="excited.swf" name="excited" loop="Y" totalframe="17" enable="Y" aid="6548"/>
+			<action id="angry.swf" name="irritated" loop="Y" totalframe="65" enable="Y" aid="6549"/>
+			<action id="surprised.swf" name="surprised" loop="N" totalframe="80" enable="Y" aid="6550"/>
+		</category>
+		<category name="Standing">
+			<action id="standing.swf" name="front view" loop="Y" totalframe="60" enable="Y" aid="6546"/>
+			<action id="standing_back.swf" name="back view" loop="Y" totalframe="60" enable="Y" aid="6551"/>
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" enable="Y" aid="6547"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="47" enable="Y" aid="6552"/>
+		<action id="lying_down.swf" name="lying down" loop="Y" totalframe="42" enable="Y" aid="6553"/>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="100" enable="Y" aid="6554"/>
+		<action id="talk.swf" name="talk" loop="N" totalframe="100" enable="Y" aid="6555"/>
+		<action id="talk_phone.swf" name="talk on the phone" loop="Y" totalframe="100" enable="Y" aid="6556"/>
+		<action id="giggle.swf" name="giggle" loop="N" totalframe="43" enable="Y" aid="6557"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="16" enable="Y" aid="6558"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="6559"/>
+		<facial id="head_irritated.swf" name="irritated" enable="Y" aid="6560"/>
+		<facial id="head_emba.swf" name="embarrassed" enable="Y" aid="6561"/>
+		<facial id="head_confused.swf" name="confused" enable="Y" aid="6562"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="6563"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="6564"/>
+		<facial id="head_sleeping.swf" name="sleeping" enable="Y" aid="6565"/>
+		<facial id="head_headphone.swf" name="wear headphone" enable="Y" aid="6566"/>
+		<facial id="head_talk.swf" name="talk" enable="Y" aid="6567"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="6568"/>
+		<facial id="head_talk_angry.swf" name="talk irritated" enable="Y" aid="6569"/>
+		<facial id="head_in_love.swf" name="in love" enable="Y" aid="6570"/>
+		<action id="bend_spoon.swf" name="bend spoon" loop="N" totalframe="51" enable="Y" aid="6803"/>
+	</char>
+	<char id="maya" name="Maya" thumb="standing.swf" facing="left" default="standing.swf" motion="flying.swf" enable="Y" is_premium="N" aid="6571" money="0" sharing="0">
+		<action id="standing.swf" name="standing" loop="Y" totalframe="1" enable="Y" aid="6572"/>
+		<motion id="flying.swf" name="fly" loop="Y" totalframe="8" enable="Y" aid="6573"/>
+	</char>
+	<char id="mario" name="Mario" thumb="standing.swf" facing="left" default="standing.swf" motion="flying.swf" enable="Y" is_premium="N" aid="6574" money="0" sharing="0">
+		<action id="standing.swf" name="standing" loop="Y" totalframe="1" enable="Y" aid="6575"/>
+		<motion id="flying.swf" name="fly" loop="Y" totalframe="7" enable="Y" aid="6576"/>
+	</char>
+	<char id="bear_boy" name="Bear Boy" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="6577" money="0" sharing="0">
+		<category name="Emotion">
+			<action id="excited.swf" name="excited" loop="N" totalframe="72" enable="Y" aid="6580"/>
+			<action id="irritated.swf" name="irritated" loop="Y" totalframe="60" enable="Y" aid="6581"/>
+			<action id="surprised.swf" name="surprised" loop="N" totalframe="61" enable="Y" aid="6582"/>
+		</category>
+		<category name="Standing">
+			<action id="standing.swf" name="front view" loop="Y" totalframe="50" enable="Y" aid="6578"/>
+			<action id="standing_back.swf" name="back view" loop="Y" totalframe="50" enable="Y" aid="6583"/>
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" enable="Y" aid="6579"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="50" enable="Y" aid="6584"/>
+		<action id="lying_down.swf" name="lying down" loop="Y" totalframe="50" enable="Y" aid="6585"/>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="72" enable="Y" aid="6586"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="60" enable="Y" aid="6587"/>
+		<action id="swing_bat.swf" name="swing baseball bat" loop="N" totalframe="50" enable="Y" aid="6588"/>
+		<action id="shy.swf" name="shy" loop="N" totalframe="60" enable="Y" aid="6589"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="16" enable="Y" aid="6590"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="6591"/>
+		<facial id="head_irritated.swf" name="irritated" enable="Y" aid="6592"/>
+		<facial id="head_emba.swf" name="shy" enable="Y" aid="6593"/>
+		<facial id="head_confused.swf" name="confused" enable="Y" aid="6594"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="6595"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="6596"/>
+		<facial id="head_sleeping.swf" name="sleeping" enable="Y" aid="6597"/>
+		<facial id="head_sweating.swf" name="sweating" enable="Y" aid="6598"/>
+		<facial id="head_talk.swf" name="talk" enable="Y" aid="6599"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="6600"/>
+		<facial id="head_talk_angry.swf" name="talk irritated" enable="Y" aid="6601"/>
+		<action id="catch_ball.swf" name="play catcher" loop="N" totalframe="100" enable="Y" aid="6806"/>
+	</char>
+	<char id="hungry_bear" name="Hungry Bear" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="6602" money="0" sharing="0">
+		<category name="Emotion">
+			<action id="excited.swf" name="excited" loop="Y" totalframe="64" enable="Y" aid="6605"/>
+			<action id="angry.swf" name="angry" loop="Y" totalframe="20" enable="Y" aid="6606"/>
+			<action id="surprised.swf" name="surprised" loop="N" totalframe="70" enable="Y" aid="6607"/>
+		</category>
+		<category name="Standing">
+			<action id="standing.swf" name="front view" loop="Y" totalframe="50" enable="Y" aid="6603"/>
+			<action id="standing_back.swf" name="back view" loop="Y" totalframe="50" enable="Y" aid="6608"/>
+		</category>
+		<motion id="walk.swf" name="walk" loop="Y" totalframe="16" enable="Y" aid="6604"/>
+		<action id="sitting.swf" name="sitting" loop="Y" totalframe="45" enable="Y" aid="6609"/>
+		<action id="lying_down.swf" name="lying down" loop="Y" totalframe="50" enable="Y" aid="6610"/>
+		<action id="dance.swf" name="dance" loop="Y" totalframe="100" enable="Y" aid="6611"/>
+		<action id="talk.swf" name="talk" loop="Y" totalframe="100" enable="Y" aid="6612"/>
+		<action id="rub_tummy.swf" name="rub tummy" loop="Y" totalframe="69" enable="Y" aid="6613"/>
+		<action id="faint.swf" name="faint" loop="N" totalframe="71" enable="Y" aid="6614"/>
+		<motion id="run.swf" name="run" loop="Y" totalframe="16" enable="Y" aid="6615"/>
+		<facial id="head_neutral.swf" name="neutral" enable="Y" aid="6616"/>
+		<facial id="head_irritated.swf" name="furious" enable="Y" aid="6617"/>
+		<facial id="head_emba.swf" name="embarrassed" enable="Y" aid="6618"/>
+		<facial id="head_confused.swf" name="confused" enable="Y" aid="6619"/>
+		<facial id="head_happy.swf" name="happy" enable="Y" aid="6620"/>
+		<facial id="head_sad.swf" name="sad" enable="Y" aid="6621"/>
+		<facial id="head_sleeping.swf" name="sleeping" enable="Y" aid="6622"/>
+		<facial id="head_sweating.swf" name="sweating" enable="Y" aid="6623"/>
+		<facial id="head_talk.swf" name="talk" enable="Y" aid="6624"/>
+		<facial id="head_talk_happy.swf" name="talk happy" enable="Y" aid="6625"/>
+		<facial id="head_talk_angry.swf" name="talk angry" enable="Y" aid="6626"/>
+	</char>
+	<background id="space_bg.swf" name="Space" enable="N" is_premium="N" aid="6627" money="0" sharing="0"/>
+	<background id="big_tree_bg.swf" name="Big Tree" enable="N" is_premium="N" aid="6811" money="0" sharing="0"/>
+	<background id="rotation_bg.swf" name="Swirl" enable="Y" is_premium="N" aid="6809" money="0" sharing="0">
+		<colorset aid="6810" enable="Y">
+	<color r="color1">0x5B564A</color>
+	<color r="color2">0xCCCCCC</color>
+</colorset>
+		<c_parts>
+	<c_area>color1</c_area>
+	<c_area>color2</c_area>
+</c_parts>
+	</background>
+	<background id="weather_report_bg.swf" name="Weather Report" enable="Y" is_premium="N" aid="6808" money="0" sharing="0"/>
+	<background id="domo_pattern.swf" name="Domo Pattern" enable="Y" is_premium="N" aid="6807" money="0" sharing="0"/>
+	<background id="tashanna_home_bg.swf" name="Tashanna's Home" enable="N" is_premium="N" aid="6634" money="0" sharing="0"/>
+	<background id="outside_home_night_bg.swf" name="Outdoor Nighttime" enable="N" is_premium="N" aid="6633" money="0" sharing="0"/>
+	<background id="outside_home_bg.swf" name="Outdoor Daytime" enable="N" is_premium="N" aid="6632" money="0" sharing="0"/>
+	<background id="home_watchingtv_bg.swf" name="Watching TV" enable="N" is_premium="N" aid="6631" money="0" sharing="0"/>
+	<background id="forest_night_bg.swf" name="Forest Nighttime" enable="N" is_premium="N" aid="6630" money="0" sharing="0"/>
+	<background id="forest_bg.swf" name="Forest Daytime" enable="N" is_premium="N" aid="6629" money="0" sharing="0"/>
+	<background id="domo_home_bg.swf" name="Domo's Home" enable="N" is_premium="N" aid="6628" money="0" sharing="0"/>
+	<background id="foot_print_bg.swf" name="Footprint" enable="N" is_premium="N" aid="6812" money="0" sharing="0"/>
+	<compositebg id="cbg_domo_home" name="Domo's Home" thumb="domo_home.png" enable="Y" default="Y" is_premium="N" aid="6635" money="0" sharing="0">
+	<bg id="cbg_domo_home_BG1" index="0">
+		<file>domo.domo_home_bg.swf</file>
+	</bg>
+	<prop id="cbg_domo_home_PROP1" index="2">
+		<file>domo.domo_home_tv.swf</file>
+		<x>125.1</x>
+		<y>269</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_domo_home_PROP2" index="3">
+		<file>domo.domo_home_table.swf</file>
+		<x>293.2</x>
+		<y>314</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_domo_home_PROP0" index="4">
+		<file>domo.domo_home_frame.swf</file>
+		<x>322.5</x>
+		<y>198.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_bigtree" name="Big Tree" thumb="big_tree.png" enable="Y" is_premium="N" money="0" sharing="0" aid="6813">
+	<bg id="cbg_bigtree_BG3" index="0">
+		<file>domo.big_tree_bg.swf</file>
+	</bg>
+	<prop id="cbg_bigtree_PROP0" index="2">
+		<file>domo.big_tree_tree.swf</file>
+		<x>310.2</x>
+		<y>18</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space" name="Space" thumb="space.png" enable="Y" is_premium="N" aid="6642" money="0" sharing="0">
+	<bg id="cbg_space_BG1" index="0">
+		<file>domo.space_bg.swf</file>
+	</bg>
+	<prop id="cbg_space_PROP0" index="2">
+		<file>domo.space_planet1.swf</file>
+		<x>106.4</x>
+		<y>188.5</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space_PROP1" index="3">
+		<file>domo.space_planet.swf</file>
+		<x>360.9</x>
+		<y>229.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space_PROP2" index="4">
+		<file>domo.space_planet2.swf</file>
+		<x>485.9</x>
+		<y>80.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_tashanna_home" name="Tashanna's Home" thumb="tashanna_home.png" enable="Y" is_premium="N" aid="6641" money="0" sharing="0">
+	<bg id="cbg_tashanna_home_BG8" index="0">
+		<file>domo.tashanna_home_bg.swf</file>
+	</bg>
+	<prop id="cbg_tashanna_home_PROP4" index="2">
+		<file>domo.tashanna_home_chairback.swf</file>
+		<x>218.2</x>
+		<y>290</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_tashanna_home_PROP5" index="3">
+		<file>domo.tashanna_home_chairfront.swf</file>
+		<x>253.2</x>
+		<y>304</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>-1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_tashanna_home_PROP3" index="4">
+		<file>domo.tashanna_home_table.swf</file>
+		<x>320.2</x>
+		<y>310</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_tashanna_home_PROP6" index="5">
+		<file>domo.tashanna_home_table.swf</file>
+		<x>84.2</x>
+		<y>337</y>
+		<xscale>0.6</xscale>
+		<yscale>0.44</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_tashanna_home_PROP2" index="6">
+		<file>domo.tashanna_home_frame.swf</file>
+		<x>317.6</x>
+		<y>197.3</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_outdoor_night" name="Outdoor Nighttime" thumb="outside_home_night.png" enable="Y" is_premium="N" aid="6640" money="0" sharing="0">
+	<bg id="cbg_outdoor_night_BG24" index="0">
+		<file>domo.outside_home_night_bg.swf</file>
+	</bg>
+	<prop id="cbg_outdoor_night_PROP12" index="2">
+		<file>domo.outside_home_night_tree.swf</file>
+		<x>484</x>
+		<y>207</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_outdoor_night_PROP14" index="3">
+		<file>domo.outside_home_night_back.swf</file>
+		<x>208.1</x>
+		<y>367.7</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_outdoor_night_PROP22" index="4">
+		<file>domo.outside_home_night_cover.swf</file>
+		<x>325.2</x>
+		<y>385</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_outdoor_daytime" name="Outdoor Daytime" thumb="outside_home.png" enable="Y" is_premium="N" aid="6639" money="0" sharing="0">
+	<bg id="cbg_outdoor_daytime_BG22" index="0">
+		<file>domo.outside_home_bg.swf</file>
+	</bg>
+	<prop id="cbg_outdoor_daytime_PROP8" index="2">
+		<file>domo.outside_home_tree.swf</file>
+		<x>484.6</x>
+		<y>206</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_outdoor_daytime_PROP20" index="3">
+		<file>domo.outside_home_back.swf</file>
+		<x>204.9</x>
+		<y>362.8</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_outdoor_daytime_PROP21" index="4">
+		<file>domo.outside_home_cover.swf</file>
+		<x>322.2</x>
+		<y>380.4</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_watch_tv" name="Watching TV" thumb="home_watchingtv.png" enable="Y" is_premium="N" aid="6638" money="0" sharing="0">
+	<bg id="cbg_watch_tv_BG1" index="0">
+		<file>domo.home_watchingtv_bg.swf</file>
+	</bg>
+	<prop id="cbg_watch_tv_PROP0" index="2">
+		<file>domo.home_watchingtv_tv.swf</file>
+		<x>277.2</x>
+		<y>203</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_watch_tv_PROP1" index="3">
+		<file>domo.domo_home_table.swf</file>
+		<x>295.2</x>
+		<y>358</y>
+		<xscale>2.3</xscale>
+		<yscale>2</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_forest_night" name="Forest Night Time" thumb="forest_night.png" enable="Y" is_premium="N" aid="6637" money="0" sharing="0">
+	<bg id="cbg_forest_night_BG1" index="0">
+		<file>domo.forest_night_bg.swf</file>
+	</bg>
+	<prop id="cbg_forest_night_PROP0" index="2">
+		<file>domo.forest_night_tree1.swf</file>
+		<x>599.2</x>
+		<y>58</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_forest_night_PROP1" index="1">
+		<file>domo.forest_night_tree2.swf</file>
+		<x>101.2</x>
+		<y>112</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_forest_daytime" name="Forest Daytime" thumb="forest.png" enable="Y" is_premium="N" aid="6636" money="0" sharing="0">
+	<bg id="cbg_forest_daytime_BG1" index="0">
+		<file>domo.forest_bg.swf</file>
+	</bg>
+	<prop id="cbg_forest_daytime_PROP1" index="2">
+		<file>domo.forest_tree2.swf</file>
+		<x>81.2</x>
+		<y>105</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_forest_daytime_PROP0" index="3">
+		<file>domo.forest_tree1.swf</file>
+		<x>585.3</x>
+		<y>55</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_footprint" name="Foot Print" thumb="foot_print.png" enable="Y" is_premium="N" money="0" sharing="0" aid="6814">
+	<bg id="cbg_footprint_BG1" index="0">
+		<file>domo.foot_print_bg.swf</file>
+	</bg>
+	<prop id="cbg_footprint_PROP0" index="2">
+		<file>domo.foot_print_monster_footprint.swf</file>
+		<x>332.2</x>
+		<y>241</y>
+		<xscale>0.62</xscale>
+		<yscale>0.62</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="msp_pot" name="Pot" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_pot_pot_still.swf" enable="Y" is_premium="N" aid="6854" money="0" sharing="0">
+		<state id="msp_pot_pot_still.swf" name="normal" enable="Y" default="Y"/>
+		<state id="msp_pot_pot_heat.swf" name="overheating" enable="Y"/>
+		<state id="msp_pot_pot_uncover.swf" name="uncovered" enable="Y"/>
+	</prop>
+	<prop id="broadcast_backdrop.swf" name="Broadcasting Backdrop" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6826" money="0" sharing="0"/>
+	<prop id="dj_desk.swf" name="DJ Turntable" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6825" money="0" sharing="0"/>
+	<prop id="baseball_glove.swf" name="Baseball Glove" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6824" money="0" sharing="0"/>
+	<prop id="baseball_bat.swf" name="Baseball Bat" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6823" money="0" sharing="0"/>
+	<prop id="baseball.swf" name="Baseball" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6822" money="0" sharing="0"/>
+	<prop id="sun_glasses.swf" name="Sun Glasses" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="6821" money="0" sharing="0"/>
+	<prop id="glasses.swf" name="Glasses" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="6820" money="0" sharing="0"/>
+	<prop id="monster_leg.swf" name="Monster's Leg" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6819" money="0" sharing="0"/>
+	<prop id="fish_pole.swf" name="Fishing Pole" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6818" money="0" sharing="0"/>
+	<prop id="fish.swf" name="Fish" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6817" money="0" sharing="0"/>
+	<prop id="bowtie.swf" name="Bow Tie" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="6816" money="0" sharing="0"/>
+	<prop id="cushion.swf" name="Cushion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6815" money="0" sharing="0"/>
+	<prop id="tashanna_home_table.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6678" money="0" sharing="0"/>
+	<prop id="magnifier.swf" name="Magnifying Glass" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6827" money="0" sharing="0"/>
+	<prop id="rocket_stand.swf" name="Launch Pad" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6828" money="0" sharing="0"/>
+	<prop id="microphone.swf" name="Microphone" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6829" money="0" sharing="0"/>
+	<prop id="msp_rice_bowl" name="Rice Bowl" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_rice_bowl_rice.swf" enable="Y" is_premium="N" aid="6849" money="0" sharing="0">
+		<state id="msp_rice_bowl_rice.swf" name="full" enable="Y" default="Y"/>
+		<state id="msp_rice_bowl_rice_decrease.swf" name="being eaten" enable="Y"/>
+		<state id="msp_rice_bowl_rice_empty.swf" name="empty" enable="Y"/>
+		<state id="msp_rice_bowl_rice_many.swf" name="very full" enable="Y"/>
+	</prop>
+	<prop id="msp_rocket" name="Rocket" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_rocket_rocket.swf" enable="Y" is_premium="N" aid="6846" money="0" sharing="0">
+		<state id="msp_rocket_rocket_fire.swf" name="taking off" enable="Y"/>
+		<state id="msp_rocket_rocket.swf" name="normal" enable="Y" default="Y"/>
+	</prop>
+	<prop id="msp_mushroom" name="Mushroom" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_mushroom_mushroom_normal.swf" enable="Y" is_premium="N" aid="6843" money="0" sharing="0">
+		<state id="msp_mushroom_mushroom_normal.swf" name="normal" enable="Y" default="Y"/>
+		<state id="msp_mushroom_mushroom_scared.swf" name="scared" enable="Y"/>
+	</prop>
+	<prop id="msp_spoon" name="Spoon" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_spoon_spoon_normal.swf" enable="Y" is_premium="N" aid="6839" money="0" sharing="0">
+		<state id="msp_spoon_spoon_normal.swf" name="straight" enable="Y" default="Y"/>
+		<state id="msp_spoon_spoon_bending.swf" name="bending" enable="Y"/>
+		<state id="msp_spoon_spoon_bended.swf" name="bent" enable="Y"/>
+	</prop>
+	<prop id="foot_print_monster_footprint.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6838" money="0" sharing="0"/>
+	<prop id="big_tree_tree.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6837" money="0" sharing="0"/>
+	<prop id="mountain.swf" name="Mountain" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6836" money="0" sharing="0"/>
+	<prop id="river.swf" name="River" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6835" money="0" sharing="0"/>
+	<prop id="speed_line.swf" name="Speed Line" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6834" money="0" sharing="0"/>
+	<prop id="thunder.swf" name="Lightning" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6833" money="0" sharing="0"/>
+	<prop id="chef_hat.swf" name="Chef's Hat" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="6832" money="0" sharing="0"/>
+	<prop id="domo_cook_banner.swf" name="Domo's Cooking Logo" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6831" money="0" sharing="0"/>
+	<prop id="camera.swf" name="Camera" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6830" money="0" sharing="0"/>
+	<prop id="tashanna_home_frame.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6677" money="0" sharing="0"/>
+	<prop id="tashanna_home_chairback.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6676" money="0" sharing="0"/>
+	<prop id="tashanna_home_chairfront.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6675" money="0" sharing="0"/>
+	<prop id="forest_tree1.swf" name="tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6658" money="0" sharing="0"/>
+	<prop id="msp_snake" name="Snake" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_snake_snake1.swf" enable="Y" is_premium="N" aid="6655" money="0" sharing="0">
+		<state id="msp_snake_snake1.swf" name="still" enable="Y" default="Y"/>
+		<state id="msp_snake_snake2.swf" name="moving" enable="Y"/>
+	</prop>
+	<prop id="tv.swf" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6654" money="0" sharing="0"/>
+	<prop id="trunk.swf" name="Trunk" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6653" money="0" sharing="0"/>
+	<prop id="sculture.swf" name="Sculture" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6652" money="0" sharing="0"/>
+	<prop id="remote.swf" name="Remote" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6651" money="0" sharing="0"/>
+	<prop id="radio.swf" name="Radio" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6650" money="0" sharing="0"/>
+	<prop id="planet.swf" name="Planet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6649" money="0" sharing="0"/>
+	<prop id="painting.swf" name="Painting" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6648" money="0" sharing="0"/>
+	<prop id="guitar.swf" name="Guitar" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6647" money="0" sharing="0"/>
+	<prop id="egg.swf" name="Egg" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6646" money="0" sharing="0"/>
+	<prop id="earth.swf" name="Earth" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6645" money="0" sharing="0"/>
+	<prop id="cloud.swf" name="Cloud" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6644" money="0" sharing="0"/>
+	<prop id="forest_tree2.swf" name="tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6659" money="0" sharing="0"/>
+	<prop id="forest_night_tree1.swf" name="tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6660" money="0" sharing="0"/>
+	<prop id="forest_night_tree2.swf" name="trunk" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6661" money="0" sharing="0"/>
+	<prop id="space_planet.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6674" money="0" sharing="0"/>
+	<prop id="space_planet2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6673" money="0" sharing="0"/>
+	<prop id="space_planet1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6672" money="0" sharing="0"/>
+	<prop id="outside_home_night_tree.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6671" money="0" sharing="0"/>
+	<prop id="outside_home_night_cover.swf" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6670" money="0" sharing="0"/>
+	<prop id="outside_home_night_back.swf" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6669" money="0" sharing="0"/>
+	<prop id="outside_home_tree.swf" name="table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6668" money="0" sharing="0"/>
+	<prop id="outside_home_cover.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6667" money="0" sharing="0"/>
+	<prop id="outside_home_back.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6666" money="0" sharing="0"/>
+	<prop id="home_watchingtv_tv.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6665" money="0" sharing="0"/>
+	<prop id="domo_home_tv.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6664" money="0" sharing="0"/>
+	<prop id="domo_home_table.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6663" money="0" sharing="0"/>
+	<prop id="domo_home_frame.swf" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="6662" money="0" sharing="0"/>
+	<prop id="bonzai.swf" name="Bonsai" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="6643" money="0" sharing="0"/>
+	<sound id="DOMO_1.swf" name="Domo 1" downloadtype="embed" subtype="voiceover" duration="1726" enable="Y" is_premium="N" aid="6858" money="0" sharing="0"/>
+	<sound id="DOMO_2.swf" name="Domo 2" downloadtype="embed" subtype="voiceover" duration="1543" enable="Y" is_premium="N" aid="6859" money="0" sharing="0"/>
+	<sound id="DOMO_3.swf" name="Domo 3" downloadtype="embed" subtype="voiceover" duration="1674" enable="Y" is_premium="N" aid="6860" money="0" sharing="0"/>
+	<sound id="DOMO_4.swf" name="Domo 4" downloadtype="embed" subtype="voiceover" duration="2013" enable="Y" is_premium="N" aid="6861" money="0" sharing="0"/>
+	<sound id="DOMO_5.swf" name="Domo 5" downloadtype="embed" subtype="voiceover" duration="1622" enable="Y" is_premium="N" aid="6862" money="0" sharing="0"/>
+	<sound id="USAJI_chuckle.swf" name="Mr. Usaji - Chuckle" downloadtype="embed" subtype="voiceover" duration="2484" enable="Y" is_premium="N" aid="6863" money="0" sharing="0"/>
+	<sound id="USAJI_hello_domo.swf" name="Mr. Usaji - Hello Domo" downloadtype="embed" subtype="voiceover" duration="1935" enable="Y" is_premium="N" aid="6864" money="0" sharing="0"/>
+	<sound id="USAJI_here_we_go.swf" name="Mr. Usaji - Here we go" downloadtype="embed" subtype="voiceover" duration="1726" enable="Y" is_premium="N" aid="6865" money="0" sharing="0"/>
+	<sound id="USAJI_not_funny.swf" name="Mr. Usaji - Not funny" downloadtype="embed" subtype="voiceover" duration="1778" enable="Y" is_premium="N" aid="6866" money="0" sharing="0"/>
+	<sound id="USAJI_stop.swf" name="Mr. Usaji - Stop Domo" downloadtype="embed" subtype="voiceover" duration="1439" enable="Y" is_premium="N" aid="6867" money="0" sharing="0"/>
+	<sound id="USAJI_whats_matter.swf" name="Mr. Usaji - What's the matter" downloadtype="embed" subtype="voiceover" duration="1413" enable="Y" is_premium="N" aid="6868" money="0" sharing="0"/>
+	<effect id="dim.swf" type="ANIME" resize="0" move="0" name="Dim" enable="Y" is_premium="N" aid="6869" money="0" sharing="0"/>
+	<effect id="raining.swf" type="ANIME" resize="0" move="0" name="Raining" enable="Y" is_premium="N" aid="6870" money="0" sharing="0"/>
+</theme>

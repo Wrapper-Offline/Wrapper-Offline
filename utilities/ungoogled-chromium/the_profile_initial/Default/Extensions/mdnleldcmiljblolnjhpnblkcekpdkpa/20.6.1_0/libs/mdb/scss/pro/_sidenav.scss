@@ -1,0 +1,521 @@
+// Sidenav background variants
+.sn-bg-1 {
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav1.jpg);
+}
+
+.sn-bg-2 {
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg);
+}
+
+.sn-bg-3 {
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav3.jpg);
+}
+
+.sn-bg-4 {
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav4.jpg);
+}
+
+// Sidenav
+.side-nav {
+  position: fixed;
+  width: $sidenav-width;
+  left: 0;
+  top: 0;
+  margin: 0;
+  transform: translateX(-100%);
+  height: 100%;
+  padding-bottom: $sidenav-padding-bottom;
+  background-color: $sidenav-background-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1040;
+  backface-visibility: hidden;
+  overflow: hidden;
+  will-change: transform;
+  backface-visibility: hidden;
+  list-style-type: none;
+  padding: 0;
+  @extend .white-text;
+  box-shadow: $z-depth-1;
+
+  &.wide {
+    width: $sidenav-width;
+    overflow: visible;
+    transition-property: top, bottom, width;
+    transition-duration: .2s, .2s, .35s;
+    transition-timing-function: linear, linear, ease;
+
+    .logo-wrapper {
+      &.sn-ad-avatar-wrapper {
+        height: 5rem;
+        padding: 19px 10px;
+        border-bottom: 1px solid $sidenav-logo-wrapper-border-bottom-color;
+
+        a {
+          line-height: 2.6rem;
+          color: #fff;
+
+          span {
+            padding-left: .7rem;
+            margin-top: -1rem;
+          }
+
+          img {
+            max-width: 2.5rem;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .collapsible {
+      a {
+        padding-left: 23px;
+        transition: all .3s ease-in-out;
+
+        .sv-normal {
+          opacity: 1;
+          transition: all .1s linear;
+        }
+
+        .sv-slim {
+          opacity: 0;
+          display: none;
+          transition: all .1s linear;
+        }
+      }
+
+      .sv-slim-icon {
+        padding-left: 0;
+        width: 30px;
+        height: 36px;
+        text-align: left;
+        margin-right: 0;
+      }
+    }
+
+    .collapsible-body a {
+      padding-left: $sidenav-collapsible-body-a-pl;
+    }
+
+    .fa-angle-down {
+      &.rotate-icon {
+        opacity: 1;
+        display: block;
+      }
+    }
+
+    &.slim {
+      width: 3.75rem;
+      transition-property: top, bottom, width;
+      transition-duration: .2s, .2s, .35s;
+      transition-timing-function: linear, linear, ease;
+      right: 3.75rem;
+
+      .collapsible {
+        a {
+          padding-left: 23px;
+          transition: all .3s ease-in-out;
+
+          .sv-normal {
+            opacity: 0;
+            transition: all .1s linear;
+          }
+
+          .sv-slim {
+            display: block;
+            opacity: 1;
+            transition: all .1s linear;
+          }
+        }
+
+        .sv-slim-icon {
+          padding-left: 0;
+          width: 30px;
+          height: 36px;
+          text-align: left;
+          margin-right: 0;
+        }
+      }
+
+      .fa-angle-down {
+        &.rotate-icon {
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+  }
+
+  >ul {
+    max-height: 100vh;
+  }
+
+  ul {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      padding: 0;
+    }
+  }
+
+  &.right-aligned {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+  }
+
+  // Light version
+  &.side-nav-light {
+    background-color: $sidenav-light-bgc;
+
+    .logo-wrapper {
+      border-bottom: 1px solid $sidenav-light-border-bottom-color;
+
+      &.sn-ad-avatar-wrapper {
+        color: $sidenav-light-color;
+      }
+    }
+
+    .about {
+      border-bottom: 1px solid $sidenav-light-border-bottom-color;
+
+      p {
+        color: $sidenav-light-color;
+      }
+    }
+
+    .social {
+      border-bottom: 1px solid $sidenav-light-border-bottom-color;
+
+      .fas,
+      .fab,
+      .far {
+        color: $sidenav-light-color;
+      }
+    }
+
+    .search-form {
+      input[type=text] {
+        border-bottom-color: $sidenav-light-border-bottom-color;
+        color: $sidenav-light-color !important;
+
+        @include placeholder {
+          color: $sidenav-light-color !important;
+        }
+      }
+    }
+
+    .collapsible {
+      a {
+        color: $sidenav-light-color;
+      }
+    }
+
+    .collapsible-body {
+      a {
+        background-color: $sidenav-light-collapsible-body-a-bgc;
+      }
+    }
+
+    .collapsible li .collapsible-header {
+      &:hover {
+        background-color: $sidenav-light-collapsible-header-hover-bgc;
+      }
+
+      &.active {
+        color: $sidenav-light-collapsible-header-active-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // Fixed side-nav shown
+  &.fixed {
+    left: 0;
+    transform: translateX(0);
+    position: fixed; // Right Align
+
+    &.right-aligned {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  // Fixed sideNav hide on smaller
+  @media #{$hide-sidenav} {
+    &.fixed {
+      transform: translateX(-105%);
+
+      &.right-aligned {
+        transform: translateX(105%);
+      }
+    }
+  }
+
+  // Collapsible menu
+  .collapsible {
+    margin: 0;
+    padding: 0;
+    margin-top: $sidenav-collapsible-mt;
+
+    li {
+      a {
+        &:hover {
+          background-color: $collapsible-hover-bgc;
+        }
+      }
+    }
+
+    >li {
+      border-radius: $collapsible-li-border-radius;
+
+      a.collapsible-header {
+        &:hover {
+          background-color: $collapsible-header-hover-bgc;
+        }
+
+        &.active {
+          background-color: $collapsible-header-active-bgc;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    a {
+      color: $white-base;
+      font-weight: 300;
+      font-size: $sidenav-collapsible-a-font-size;
+      height: $sidenav-collapsible-a-height;
+      line-height: $sidenav-collapsible-a-line-height;
+
+      &.active,
+      &:hover {
+        border-radius: $collapsible-li-border-radius;
+      }
+    }
+
+    .fas,
+    .fab,
+    .far {
+      font-size: $sidenav-collapsible-a-font-size;
+      margin-right: $sidenav-fa-margin-right;
+    }
+  }
+
+  .collapsible-body a {
+    padding-left: $sidenav-collapsible-body-a-pl;
+    height: $sidenav-collapsible-a-height;
+    line-height: $sidenav-collapsible-a-height;
+    background-color: $sidenav-collapsible-body-a-bgc;
+  }
+
+  a {
+    display: block;
+    font-size: $sidenav-a-font-size;
+    height: $sidenav-a-height;
+    line-height: $sidenav-a-line-height;
+    padding-left: $sidenav-padding-left;
+  }
+
+  // Manu icon
+  .fa-angle-down {
+    &.rotate-icon {
+      position: absolute;
+      right: 0;
+      top: $sidenav-rotate-icon-top;
+      margin-right: $sidenav-rotate-icon-mr;
+    }
+  }
+
+  // Mask and image
+  .sidenav-bg {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: $sidenav-bg-width;
+    z-index: -1;
+    background-attachment: fixed;
+
+    &:after {
+      width: 100%;
+      display: block;
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      margin-bottom: -99999px;
+      padding-bottom: 99999px;
+    }
+  }
+
+  // SideNav logo
+  .logo-wrapper {
+    border-bottom: 1px solid $sidenav-light-border-bottom-color;
+    height: $sidenav-logo-wrapper-height;
+
+    a {
+      height: $sidenav-logo-wrapper-height;
+      width: $sidenav-logo-wrapper-width;
+      padding: 0;
+    }
+
+    img {
+      padding-left: $sidenav-logo-wrapper-img-px;
+      padding-right: $sidenav-logo-wrapper-img-px;
+      padding-top: $sidenav-logo-wrapper-img-py;
+      padding-bottom: $sidenav-logo-wrapper-img-py;
+      height: auto;
+    }
+
+    @media (max-height: $medium-screen) {
+      height: $sidenav-logo-wrapper-medium-img-height;
+
+      a {
+        height: $sidenav-logo-wrapper-medium-img-height;
+      }
+
+      img {
+        padding-top: $sidenav-logo-wrapper-medium-img-py;
+        padding-bottom: $sidenav-logo-wrapper-medium-img-py;
+      }
+    }
+
+    &.sn-avatar-wrapper {
+      padding-left: $sidenav-sn-avatar-wrapper-px;
+      padding-right: $sidenav-sn-avatar-wrapper-px;
+      padding-top: $sidenav-sn-avatar-wrapper-py;
+      padding-bottom: $sidenav-sn-avatar-wrapper-py;
+
+      img {
+        box-shadow: $z-depth-1;
+        margin: 0;
+        padding: 0;
+        max-width: $sidenav-sn-avatar-wrapper-max-width;
+      }
+
+      @media only screen and (max-height: $medium-screen) {
+        padding-left: $sidenav-sn-avatar-wrapper-medium-px;
+        padding-right: $sidenav-sn-avatar-wrapper-medium-px;
+
+        img {
+          max-width: $sidenav-sn-avatar-wrapper-medium-max-width;
+        }
+      }
+    }
+
+    &.sn-ad-avatar-wrapper {
+      height: auto;
+      margin-bottom: 0;
+
+      img {
+        max-width: $sidenav-ad-avatar-wrapper-img-max-width;
+        padding: $sidenav-ad-avatar-wrapper-img-padding;
+        float: left;
+      }
+
+      p {
+        font-size: $sidenav-ad-avatar-wrapper-p-font-size;
+        padding-top: $sidenav-ad-avatar-wrapper-p-padding;
+        padding-bottom: $sidenav-ad-avatar-wrapper-p-padding;
+        margin: 0;
+      }
+    }
+  }
+
+  // About
+  .about {
+    padding: $sidenav-about-padding;
+    border-bottom: 1px solid $sidenav-logo-wrapper-border-bottom-color;
+
+    p {
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  // Social
+  .social {
+    padding-top: 0;
+    text-align: center;
+    border-bottom: 1px solid $sidenav-logo-wrapper-border-bottom-color;
+
+    li {
+      display: inline-block;
+      padding-top: $sidenav-social-li-padding;
+      padding-bottom: $sidenav-social-li-padding;
+      margin: 0;
+    }
+
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    .fas,
+    .fab,
+    .far {
+      font-size: $sidenav-social-fa-font-size;
+      padding-right: $sidenav-social-li-padding;
+      padding-left: $sidenav-social-li-padding;
+      color: $sidenav-social-fa-color;
+      transition: $sidenav-social-fa-transition;
+
+      &:hover {
+        color: $sidenav-social-fa-color-hover;
+        transition: $sidenav-social-fa-transition;
+      }
+    }
+  }
+
+  // Search form
+  .search-form {
+    padding: 0;
+
+    input[type=text] {
+      border-bottom: 1px solid $sidenav-logo-wrapper-border-bottom-color;
+      font-weight: 300;
+      padding-left: $sidenav-search-form-input-padding-left;
+
+      @include placeholder {
+        color: #fff;
+      }
+    }
+
+    .form-control {
+      @extend .white-text;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Touch interaction
+.drag-target {
+  height: 100%;
+  width: $drag-target-width;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+
+#sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120vh;
+  background-color: $sidenav-overlay;
+  z-index: 997;
+  will-change: opacity;
+}

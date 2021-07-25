@@ -1,0 +1,125 @@
+// Remove default Radio Buttons
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Radio buttons
+.form-check-input[type="radio"],
+label.btn input[type="radio"] {
+
+  &:not(:checked)+label,
+  &:checked+label {
+    position: relative;
+    padding-left: $radio-label-pl;
+    cursor: pointer;
+    display: inline-block;
+    height: $radio-label-height;
+    line-height: $radio-label-line-height;
+    transition: $radio-label-transition;
+    user-select: none;
+  }
+
+  &+label:before,
+  &+label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: $radio-label-before-after-margin;
+    width: $radio-label-before-after-width;
+    height: $radio-label-before-after-height;
+    z-index: 0;
+    transition: $radio-label-transition;
+  }
+
+  // Unchecked styles
+  &:not(:checked)+label:before,
+  &:not(:checked)+label:after,
+  &:checked+label:before,
+  &:checked+label:after,
+  &.with-gap:checked+label:before,
+  &.with-gap:checked+label:after {
+    border-radius: $radio-label-border-radius;
+  }
+
+  &:not(:checked)+label:before,
+  &:not(:checked)+label:after {
+    border: $radio-label-border-width solid $radio-empty-color;
+  }
+
+  &:not(:checked)+label:after {
+    transform: scale(0);
+  }
+
+  // Checked styles
+  &:checked+label:before {
+    border: $radio-label-border-width solid transparent;
+  }
+
+  &:checked+label:after,
+  &.with-gap:checked+label:before,
+  &.with-gap:checked+label:after {
+    border: $radio-label-border-width solid $radio-fill-color;
+  }
+
+  &:checked+label:after,
+  &.with-gap:checked+label:after {
+    background-color: $radio-fill-color;
+  }
+
+  &:checked+label:after {
+    transform: $radio-label-checked-transform;
+  }
+
+  // Radio With gap
+  &.with-gap:checked+label:after {
+    transform: $radio-label-with-gap-checked-transform;
+  }
+
+  // Disabled Radio With gap
+  &.with-gap:disabled:checked+label:before {
+    border: $radio-label-border-width solid $input-disabled-color;
+  }
+
+  &.with-gap:disabled:checked+label:after {
+    border: none;
+    background-color: $input-disabled-color;
+  }
+
+  // Disabled style
+  &:disabled:not(:checked)+label:before,
+  &:disabled:checked+label:before {
+    background-color: transparent;
+    border-color: $input-disabled-color;
+  }
+
+  &:disabled+span {
+    color: $input-disabled-color;
+  }
+
+  &:disabled:not(:checked)+span:before {
+    border-color: $input-disabled-color;
+  }
+
+  &:disabled:checked+span:after {
+    background-color: $input-disabled-color;
+    border-color: $input-disabled-solid-color;
+  }
+
+  &:checked+label:after .disabled-material {
+    background-color: rgba($radio-fill-color, .2);
+  }
+
+}
+
+.md-disabled::after {
+  background-color: rgba($radio-fill-color, .5) !important;
+  border-color: rgba($radio-fill-color, .2) !important;
+}
+
+.md-disabled::before {
+  border-color: rgba($radio-fill-color, .25) !important;
+}

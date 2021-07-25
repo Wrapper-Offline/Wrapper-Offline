@@ -1,0 +1,2634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cc_theme xmlns:xi="http://alvin.goanimate.org/store" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="spacecitizen" studio_theme_id="spacecitizen" name="Space Citizens" version="2.0" xsi:noNamespaceSchemaLocation="http://alvin.goanimate.org/schema/cc_library_theme.xsd">
+
+	<color r="ccSkinColor" component_type="bodyshape" enable="Y">
+		<choice>0xF9DDD1</choice>
+		<choice>0xFEEDD3</choice>
+		<choice>0xEAD2B0</choice>
+		<choice>0xEBC9AF</choice>
+		<choice>0xE2C294</choice>
+		<choice>0xCE9D7D</choice>
+		<choice>0xAC8151</choice>
+		<choice>0x8d6850</choice>
+	</color>
+	<color r="ccFaceHairColor" component_type="bodyshape" enable="Y">
+		<choice>0xF2E784</choice>
+		<choice>0xE3EEF4</choice>
+		<choice>0x7E4D1B</choice>
+		<choice>0x321F1B</choice>
+		<choice>0x9AB03E</choice>
+		<choice>0xC48888</choice>
+		<choice>0xBA4545</choice>
+		<choice>0x6C5E91</choice>
+	</color>
+	<color r="ccEyeLib" component_type="eye" parent_color_r="ccSkinColor" parent_component_type="bodyshape" enable="N">
+		<choice>0x5F3F29</choice>
+		<choice>0xBD8764</choice>
+		<choice>0x80DCE6</choice>
+		<choice>0x99CC00</choice>
+		<choice>0x1E447B</choice>
+		<choice>0x996666</choice>
+		<choice>0xE47070</choice>
+		<choice>0x4B0156</choice>
+	</color>
+	<color r="ccEyeIris" component_type="eye" enable="N">
+		<choice>0x988986</choice>
+		<choice>0x229188</choice>
+		<choice>0x7D551C</choice>
+		<choice>0x9966CC</choice>
+		<choice>0x7892C6</choice>
+		<choice>0x993333</choice>
+		<choice>0x669900</choice>
+		<choice>0xEA7B9D</choice>
+	</color>
+	<color r="ccGlassesFrame" component_type="glasses" enable="Y">
+		<choice>0xAE0057</choice>
+		<choice>0x53A8DF</choice>
+		<choice>0xEC9EC5</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0x5F4929</choice>
+		<choice>0x4A6028</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccGlassesLens" component_type="glasses" enable="Y">
+		<choice>0xFFFFFF</choice>
+		<choice>0x555555</choice>
+		<choice>0xBC6A70</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0xFFCC00</choice>
+		<choice>0x640F0F</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccMouthLip" component_type="mouth" enable="N">
+		<choice>0xB7796A</choice>
+		<choice>0x9A6C46</choice>
+		<choice>0xCA3030</choice>
+		<choice>0x73263E</choice>
+		<choice>0xE47070</choice>
+		<choice>0x891212</choice>
+		<choice>0x7D5134</choice>
+		<choice>0xEB8369</choice>
+	</color>
+	<color r="ccHairMajor" component_type="hair" enable="Y">
+		<choice>0xFFFEFF</choice>
+		<choice>0xEB704E</choice>
+		<choice>0x4C96B3</choice>
+		<choice>0x6BBE8F</choice>
+		<choice>0xFF86A3</choice>
+		<choice>0x534339</choice>
+		<choice>0xE8D257</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccHairMinor" component_type="hair" enable="Y">
+		<choice>0xFFFEFF</choice>
+		<choice>0xDC613F</choice>
+		<choice>0x2F9BC5</choice>
+		<choice>0x3DD17D</choice>
+		<choice>0xF24492</choice>
+		<choice>0x634F3E</choice>
+		<choice>0xD2A12C</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccUpperMain" component_type="GoUpper" enable="Y">
+		<choice>0xFFF3FF</choice>
+		<choice>0xFFFFAA</choice>
+		<choice>0x6A944F</choice>
+		<choice>0x93D6E4</choice>
+		<choice>0xFF87A3</choice>
+		<choice>0xCC9966</choice>
+		<choice>0x3D8075</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccUpperMinor" component_type="GoUpper" enable="Y">
+		<choice>0xFFFEFF</choice>
+		<choice>0xC6C648</choice>
+		<choice>0x3A5529</choice>
+		<choice>0x48BAD2</choice>
+		<choice>0xFF4052</choice>
+		<choice>0xA47A4F</choice>
+		<choice>0x0C594C</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccLowerMain" component_type="GoLower" enable="Y">
+		<choice>0xFFFEFF</choice>
+		<choice>0x4F5157</choice>
+		<choice>0xA4A4A4</choice>
+		<choice>0x5E5F34</choice>
+		<choice>0xFF87A3</choice>
+		<choice>0xCC9966</choice>
+		<choice>0x65503B</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccLowerMinor" component_type="GoLower" enable="Y">
+		<choice>0xFFF3FF</choice>
+		<choice>0x4F5157</choice>
+		<choice>0xA4A4A4</choice>
+		<choice>0x99DAD8</choice>
+		<choice>0xFCD0DA</choice>
+		<choice>0x9474A8</choice>
+		<choice>0x65503B</choice>
+		<choice>0x3C3C3C</choice>
+	</color>
+	<color r="ccDecMajor" component_type="facedecoration" enable="Y">
+		<choice>0xAE0057</choice>
+		<choice>0x53A8DF</choice>
+		<choice>0xEC9EC5</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0x5F4929</choice>
+		<choice>0x4A6028</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccDecMinor" component_type="facedecoration" enable="Y">
+		<choice>0xFFFFFF</choice>
+		<choice>0x555555</choice>
+		<choice>0xBC6A70</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0xFFCC00</choice>
+		<choice>0x640F0F</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccBackMajor" component_type="GoBehindBody" enable="Y">
+		<choice>0xAE0057</choice>
+		<choice>0x53A8DF</choice>
+		<choice>0xEC9EC5</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0x5F4929</choice>
+		<choice>0x4A6028</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccBackMinor" component_type="GoBehindBody" enable="Y">
+		<choice>0xFFFFFF</choice>
+		<choice>0x555555</choice>
+		<choice>0xBC6A70</choice>
+		<choice>0x360202</choice>
+		<choice>0xC1BFB8</choice>
+		<choice>0xFFCC00</choice>
+		<choice>0x640F0F</choice>
+		<choice>0x000000</choice>
+	</color>
+	<color r="ccHandMain" component_type="GoHands" enable="Y">
+		<choice>0x2F2F2F</choice>
+		<choice>0xB80303</choice>
+		<choice>0x5B88B5</choice>
+		<choice>0x94C422</choice>
+		<choice>0xE8E9E2</choice>
+		<choice>0x67564B</choice>
+		<choice>0xBE5A30</choice>
+		<choice>0xE797B6</choice>
+	</color>
+
+
+	<facial id="head_neutral" name="Neutral" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_default" />
+		<selection type="eyebrow" state_id="side_default" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_default" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_happy" name="Happy" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_happy" />
+		<selection type="eyebrow" state_id="side_happy" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_happy" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_sad" name="Sad" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_sad" />
+		<selection type="eyebrow" state_id="side_sad" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_sad" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_angry" name="Angry" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_angry" />
+		<selection type="eyebrow" state_id="side_angry" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_angry" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_cry" name="Cry" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_cry" />
+		<selection type="eyebrow" state_id="side_cry" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_cry" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_confused" name="Confused" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_confused" />
+		<selection type="eyebrow" state_id="side_confused" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_confused" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_think" name="Thinking" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_thinking" />
+		<selection type="eyebrow" state_id="side_thinking" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_thinking" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_surprised" name="Surprised" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_surprised" />
+		<selection type="eyebrow" state_id="side_surprised" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_surprised" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_shocked" name="Shocked" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_shock" />
+		<selection type="eyebrow" state_id="side_shock" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_shock" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_desperate" name="Desperate" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_desperate" />
+		<selection type="eyebrow" state_id="side_desperate" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_desperate" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_talk" name="Talk" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_talk" />
+		<selection type="eyebrow" state_id="side_talk" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_talk" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_lookup" name="Look up" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_lookup" />
+		<selection type="eyebrow" state_id="side_lookup" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_lookup" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_lookdown" name="Look down" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_lookdown" />
+		<selection type="eyebrow" state_id="side_lookdown" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_lookdown" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_lookcam" name="Look camera" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_lookcam" />
+		<selection type="eyebrow" state_id="side_lookcam" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_lookcam" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_confident" name="Confident" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_confindence" />
+		<selection type="eyebrow" state_id="side_confindence" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_confindence" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_serious" name="Determined" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_serious" />
+		<selection type="eyebrow" state_id="side_serious" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_serious" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_eyeclosed" name="Eyes closed" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_closed" />
+		<selection type="eyebrow" state_id="side_closed" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_closed" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_talkangry" name="Talk angry" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_talk_angry" />
+		<selection type="eyebrow" state_id="side_talk_angry" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_talk_angry" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+	<facial id="head_talkhappy" name="Talk happy" enable="Y">
+		<selection type="ear" state_id="side_default" />
+		<selection type="eye" state_id="side_talk_happy" />
+		<selection type="eyebrow" state_id="side_talk_happy" />
+		<selection type="faceshape" state_id="side_default" />
+		<selection type="glasses" state_id="side_default" />
+		<selection type="hair" state_id="side_default" />
+		<selection type="mouth" state_id="side_talk_happy" />
+		<selection type="nose" state_id="side_default" />
+		<selection type="facedecoration" state_id="side_default" />
+	</facial>
+
+	<bodyshape id="guy" name="Guy" default_action="stand01" default_motion="walk" action_thumb="stand01" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="guy">
+		<default_char>
+			<color r="ccSkinColor">0xE2C294</color>
+			<color r="ccEyeLib">0xBD8764</color>
+			<color r="ccEyeIris">0x003333</color>
+			<color r="ccMouthLip">0xB7796A</color>
+			<color r="ccBackMajor">0x996600</color>
+			<color r="ccLowerMinor">0x4F5157</color>
+			<color r="ccHairMajor">0x534339</color>
+			<component type="bodyshape" component_id="guy" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="freeaction" component_id="guy" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="ear" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eye" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="75" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="faceshape" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<library type="GoHands" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoLower" component_id="001" theme_id="spacecitizen" gobucks="75" gopoints="0"/>
+			<library type="GoUpper" component_id="004" theme_id="spacecitizen" gobucks="150" gopoints="0"/>
+			<library type="GoHair" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoFeet" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+		</default_char>
+
+		<actionpack id="standard" name="Standard" money="0" sharing="0" enable="Y">
+			<action id="happy" name="Happy" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="cross_arm_ani" name="Angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="cross_arm" name="Angry - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="sad_ani" name="Sad" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="sad" name="Sad - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="cry_ani" name="Crying" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="cry" name="Crying - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="confused" name="Confused" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_confused" />
+			</action>
+			<action id="surprised" name="Surprised" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_surprised" />
+			</action>
+			<action id="stand02_ani" name="One hand on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand02" name="One hand on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="lyingdown01" name="Lying down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_eyeclosed" />
+			</action>
+			<action id="sitting02" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting03" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip_ani" name="Hands on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip" name="Hands on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand01_ani" name="Standing with transition" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="talk01" name="Talk neutral" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talk" />
+			</action>
+			<action id="talk02" name="Talk angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talkangry" />
+			</action>
+			<action id="point01_ani" name="Point straight" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point01" name="Point straight - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02_ani" name="Point down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02" name="Point down - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03_ani" name="Point up" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03" name="Point up - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04_ani" name="Come here!" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04" name="Come here! - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05_ani" name="Point" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05" name="Point - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="wave01" name="Wave one arm" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="stand01" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="walk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="run" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<actionpack id="scifi" name="Sci-Fi Action Pack" money="0" sharing="0" enable="Y">
+			<action id="salute03" name="At attention" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="bow01" name="Bow" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="kneeling01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute01" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute02" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="gunwalk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunpoint" name="Aim" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit02" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunshoot" name="Shoot" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunstand" name="Standing alert" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="dematerialized01" name="De-materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="materialized01" name="Materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working02" name="Sitting" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working03" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="device01" name="Tablet - Look at" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write01" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write02" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<!-- GoUpper -->
+		<library type="GoUpper" id="010" path="010" name="010" thumb="010_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="012" path="012" name="012" thumb="012_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="017" path="017" name="017" thumb="017_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="018" path="018" name="018" thumb="018_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="019" path="019" name="019" thumb="019_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="020" path="020" name="020" thumb="020_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="022" path="022" name="022" thumb="022_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="023" path="023" name="023" thumb="023_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="024" path="024" name="024" thumb="024_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="025" path="025" name="025" thumb="025_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="026" path="026" name="026" thumb="026_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="027" path="027" name="027" thumb="027_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="028" path="028" name="028" thumb="028_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="030" path="030" name="030" thumb="030_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="031" path="031" name="031" thumb="031_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="032" path="032" name="032" thumb="032_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="033" path="033" name="033" thumb="033_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="034" path="034" name="034" thumb="034_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoUpper" id="038" path="038" name="038" thumb="038_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+
+		<!-- GoLower -->
+		<library type="GoLower" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="003" path="003" name="003" thumb="003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="004" path="004" name="004" thumb="004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="005" path="005" name="005" thumb="005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="006" path="006" name="006" thumb="006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="007" path="007" name="007" thumb="007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="008" path="008" name="008" thumb="008_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="009" path="009" name="009" thumb="009_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoLower" id="010" path="010" name="010" thumb="010_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+
+		<!-- GoHands -->
+		<library type="GoHands" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+		<library type="GoHands" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+
+		<!-- GoFeet -->
+		<library type="GoFeet" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="003" path="003" name="003" thumb="003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="004" path="004" name="004" thumb="004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="005" path="005" name="005" thumb="005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="006" path="006" name="006" thumb="006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoFeet" id="007" path="007" name="007" thumb="007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		
+		<!-- GoHair -->
+		<library type="GoHair" id="001" path="001" name="001" thumb="001.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="002" path="002" name="002" thumb="002.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="003" path="003" name="003" thumb="003.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="004" path="004" name="004" thumb="004.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="005" path="005" name="005" thumb="005.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="006" path="006" name="006" thumb="006.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="007" path="007" name="007" thumb="007.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="008" path="008" name="008" thumb="008.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="009" path="009" name="009" thumb="009.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="010" path="010" name="010" thumb="010.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="011" path="011" name="011" thumb="011.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="012" path="012" name="012" thumb="012.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="013" path="013" name="013" thumb="013.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="014" path="014" name="014" thumb="014.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="015" path="015" name="015" thumb="015.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="016" path="016" name="016" thumb="016.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="017" path="017" name="017" thumb="017.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="018" path="018" name="018" thumb="018.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="019" path="019" name="019" thumb="019.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="020" path="020" name="020" thumb="020.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="021" path="021" name="021" thumb="021.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="022" path="022" name="022" thumb="022.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="023" path="023" name="023" thumb="023.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="024" path="024" name="024" thumb="024.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="025" path="025" name="025" thumb="025.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="026" path="026" name="026" thumb="026.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="027" path="027" name="027" thumb="027.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="501" path="501" name="501" thumb="501.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="502" path="502" name="502" thumb="502.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="503" path="503" name="503" thumb="503.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="504" path="504" name="504" thumb="504.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="505" path="505" name="505" thumb="505.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="506" path="506" name="506" thumb="506.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="507" path="507" name="507" thumb="507.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="508" path="508" name="508" thumb="508.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="509" path="509" name="509" thumb="509.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="510" path="510" name="510" thumb="510.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoHair" id="511" path="511" name="511" thumb="511.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_guy</tag>
+		</library>
+
+		<!-- Back prop -->
+		<library type="GoBehindBody" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_guy</tag>
+		</library>
+		<library type="GoBehindBody" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_guy</tag>
+		</library>
+
+		<component type="freeaction" id="guy" path="guy" name="guy" thumb="" money="0" sharing="0" enable="Y"/>
+	</bodyshape>
+
+	<bodyshape id="muscular_guy" name="Muscular Guy" default_action="stand01" default_motion="walk" action_thumb="stand01" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="guy">
+		<default_char>
+			<color r="ccSkinColor">0xE2C294</color>
+			<color r="ccEyeLib">0xBD8764</color>
+			<color r="ccEyeIris">0x003333</color>
+			<color r="ccMouthLip">0xB7796A</color>
+			<color r="ccBackMajor">0x996600</color>
+			<color r="ccLowerMinor">0x4F5157</color>
+			<color r="ccHairMajor">0x534339</color>
+			<component type="bodyshape" component_id="muscular_guy" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="freeaction" component_id="muscular_guy" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="ear" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eye" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="75" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="faceshape" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<library type="GoHands" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoLower" component_id="001" theme_id="spacecitizen" gobucks="75" gopoints="0"/>
+			<library type="GoUpper" component_id="001" theme_id="spacecitizen" gobucks="150" gopoints="0"/>
+			<library type="GoHair" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoFeet" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+		</default_char>
+
+		<actionpack id="standard" name="Standard" money="0" sharing="0" enable="Y">
+			<action id="happy" name="Happy" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="cross_arm_ani" name="Angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="cross_arm" name="Angry - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="sad_ani" name="Sad" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="sad" name="Sad - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="cry_ani" name="Crying" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="cry" name="Crying - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="confused" name="Confused" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_confused" />
+			</action>
+			<action id="surprised" name="Surprised" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_surprised" />
+			</action>
+			<action id="stand02_ani" name="One hand on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand02" name="One hand on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="lyingdown01" name="Lying down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_eyeclosed" />
+			</action>
+			<action id="sitting02" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting03" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip_ani" name="Hands on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip" name="Hands on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand01_ani" name="Standing with transition" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="talk01" name="Talk neutral" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talk" />
+			</action>
+			<action id="talk02" name="Talk angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talkangry" />
+			</action>
+			<action id="point01_ani" name="Point straight" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point01" name="Point straight - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02_ani" name="Point down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02" name="Point down - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03_ani" name="Point up" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03" name="Point up - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04_ani" name="Come here!" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04" name="Come here! - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05_ani" name="Point" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05" name="Point - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="wave01" name="Wave one arm" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="stand01" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="walk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="run" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<actionpack id="scifi" name="Sci-Fi Action Pack" money="0" sharing="0" enable="Y">
+			<action id="salute03" name="At attention" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="bow01" name="Bow" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="kneeling01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute01" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute02" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="gunwalk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunpoint" name="Aim" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit02" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunshoot" name="Shoot" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunstand" name="Standing alert" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="dematerialized01" name="De-materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="materialized01" name="Materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working02" name="Sitting" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working03" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="device01" name="Tablet - Look at" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write01" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write02" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<!-- GoUpper -->
+		<library type="GoUpper" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="003" path="003" name="003" thumb="003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="004" path="004" name="004" thumb="004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="005" path="005" name="005" thumb="005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="006" path="006" name="006" thumb="006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="007" path="007" name="007" thumb="007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="008" path="008" name="008" thumb="008_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="009" path="009" name="009" thumb="009_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="011" path="011" name="011" thumb="011_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="013" path="013" name="013" thumb="013_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="014" path="014" name="014" thumb="014_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="015" path="015" name="015" thumb="015_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="016" path="016" name="016" thumb="016_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="021" path="021" name="021" thumb="021_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="029" path="029" name="029" thumb="029_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="035" path="035" name="035" thumb="035_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="036" path="036" name="036" thumb="036_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="037" path="037" name="037" thumb="037_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoUpper" id="038" path="038" name="038" thumb="038_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+
+		<!-- GoLower -->
+		<library type="GoLower" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="003" path="003" name="003" thumb="003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="004" path="004" name="004" thumb="004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="005" path="005" name="005" thumb="005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="006" path="006" name="006" thumb="006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="007" path="007" name="007" thumb="007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="008" path="008" name="008" thumb="008_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="009" path="009" name="009" thumb="009_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoLower" id="010" path="010" name="010" thumb="010_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+
+		<!-- GoHands -->
+		<library type="GoHands" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+		<library type="GoHands" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+
+		<!-- GoFeet -->
+		<library type="GoFeet" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="003" path="003" name="003" thumb="003_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="004" path="004" name="004" thumb="004_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="005" path="005" name="005" thumb="005_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="006" path="006" name="006" thumb="006_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoFeet" id="007" path="007" name="007" thumb="007_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		
+		<!-- GoHair -->
+		<library type="GoHair" id="001" path="001" name="001" thumb="001.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="002" path="002" name="002" thumb="002.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="003" path="003" name="003" thumb="003.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="004" path="004" name="004" thumb="004.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="005" path="005" name="005" thumb="005.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="006" path="006" name="006" thumb="006.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="007" path="007" name="007" thumb="007.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="008" path="008" name="008" thumb="008.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="009" path="009" name="009" thumb="009.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="010" path="010" name="010" thumb="010.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="011" path="011" name="011" thumb="011.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="012" path="012" name="012" thumb="012.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="013" path="013" name="013" thumb="013.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="014" path="014" name="014" thumb="014.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="015" path="015" name="015" thumb="015.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="016" path="016" name="016" thumb="016.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="017" path="017" name="017" thumb="017.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="018" path="018" name="018" thumb="018.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="019" path="019" name="019" thumb="019.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="020" path="020" name="020" thumb="020.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="021" path="021" name="021" thumb="021.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="022" path="022" name="022" thumb="022.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="023" path="023" name="023" thumb="023.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="024" path="024" name="024" thumb="024.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="025" path="025" name="025" thumb="025.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="026" path="026" name="026" thumb="026.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="027" path="027" name="027" thumb="027.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="501" path="501" name="501" thumb="501.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="502" path="502" name="502" thumb="502.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="503" path="503" name="503" thumb="503.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="504" path="504" name="504" thumb="504.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="505" path="505" name="505" thumb="505.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="506" path="506" name="506" thumb="506.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="507" path="507" name="507" thumb="507.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="508" path="508" name="508" thumb="508.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="509" path="509" name="509" thumb="509.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="510" path="510" name="510" thumb="510.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoHair" id="511" path="511" name="511" thumb="511.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+
+		<!-- Back prop -->
+		<library type="GoBehindBody" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+		<library type="GoBehindBody" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_muscle_guy</tag>
+		</library>
+
+		<component type="freeaction" id="muscular_guy" path="muscular_guy" name="muscular_guy" thumb="" money="0" sharing="0" enable="Y"/>
+	</bodyshape>
+
+	<bodyshape id="girl" name="Girl" default_action="stand01" default_motion="walk" action_thumb="stand01" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="girl">
+		<default_char>
+			<color r="ccSkinColor">0xE2C294</color>
+			<color r="ccEyeLib">0xBD8764</color>
+			<color r="ccEyeIris">0x003333</color>
+			<color r="ccMouthLip">0xB7796A</color>
+			<color r="ccBackMajor">0x996600</color>
+			<color r="ccLowerMinor">0x4F5157</color>
+			<color r="ccHairMajor">0x534339</color>
+			<component type="bodyshape" component_id="girl" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="freeaction" component_id="girl" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="ear" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eye" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="75" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="faceshape" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="001" theme_id="spacecitizen" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" split="N" gobucks="0" gopoints="0"/>
+			<library type="GoHands" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoLower" component_id="001" theme_id="spacecitizen" gobucks="75" gopoints="0"/>
+			<library type="GoUpper" component_id="001" theme_id="spacecitizen" gobucks="150" gopoints="0"/>
+			<library type="GoHair" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+			<library type="GoFeet" component_id="001" theme_id="spacecitizen" gobucks="0" gopoints="0"/>
+		</default_char>
+
+		<actionpack id="standard" name="Standard" money="0" sharing="0" enable="Y">
+			<action id="happy" name="Happy" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="cross_arm_ani" name="Angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="cross_arm" name="Angry - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_angry" />
+			</action>
+			<action id="sad_ani" name="Sad" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="sad" name="Sad - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_sad" />
+			</action>
+			<action id="cry_ani" name="Crying" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="cry" name="Crying - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_cry" />
+			</action>
+			<action id="confused" name="Confused" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_confused" />
+			</action>
+			<action id="surprised" name="Surprised" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_surprised" />
+			</action>
+			<action id="stand02_ani" name="One hand on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand02" name="One hand on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="lyingdown01" name="Lying down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_eyeclosed" />
+			</action>
+			<action id="sitting02" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting03" name="Sitting on a chair" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip_ani" name="Hands on hips" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="hand_on_hip" name="Hands on hips - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="stand01_ani" name="Standing with transition" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="talk01" name="Talk neutral" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talk" />
+			</action>
+			<action id="talk02" name="Talk angry" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_talkangry" />
+			</action>
+			<action id="point01_ani" name="Point straight" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point01" name="Point straight - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02_ani" name="Point down" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point02" name="Point down - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03_ani" name="Point up" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point03" name="Point up - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04_ani" name="Come here!" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point04" name="Come here! - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05_ani" name="Point" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="point05" name="Point - still" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="wave01" name="Wave one arm" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_happy" />
+			</action>
+			<action id="stand01" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="walk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="run" name="Run" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Daily life">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<actionpack id="scifi" name="Sci-Fi Action Pack" money="0" sharing="0" enable="Y">
+			<action id="salute03" name="At attention" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="bow01" name="Bow" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="kneeling01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="sitting01" name="Kneeling" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute01" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="salute02" name="Salute" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="gunwalk" name="Walk" loop="Y" totalframe="60" enable="Y" is_motion="Y" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunpoint" name="Aim" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunhit02" name="Get hit" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_desperate" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunshoot" name="Shoot" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="gunstand" name="Standing alert" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_angry" />
+				<prop id="05gun04_still.swf" theme="spacecitizen" aid="20512"/>
+			</action>
+			<action id="dematerialized01" name="De-materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="materialized01" name="Materialize" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working02" name="Sitting" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="working03" name="Standing" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="device01" name="Tablet - Look at" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write01" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+			<action id="write02" name="Tablet - take notes" loop="Y" totalframe="60" enable="Y" is_motion="N" category="Sci-Fi">
+				<selection type="facial" facial_id="head_neutral" />
+			</action>
+		</actionpack>
+
+		<!-- GoUpper -->
+		<library type="GoUpper" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="502" path="502" name="502" thumb="502_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="503" path="503" name="503" thumb="503_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="504" path="504" name="504" thumb="504_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="505" path="505" name="505" thumb="505_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="506" path="506" name="506" thumb="506_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="507" path="507" name="507" thumb="507_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="508" path="508" name="508" thumb="508_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="509" path="509" name="509" thumb="509_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="510" path="510" name="510" thumb="510_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="511" path="511" name="511" thumb="511_thumbnail.swf" display_order="10" money="0" sharing="0" enable="N">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoUpper" id="512" path="512" name="512" thumb="512_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+
+		<!-- GoLower -->
+		<library type="GoLower" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="502" path="502" name="502" thumb="502_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="503" path="503" name="503" thumb="503_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="504" path="504" name="504" thumb="504_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="505" path="505" name="505" thumb="505_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="506" path="506" name="506" thumb="506_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoLower" id="507" path="507" name="507" thumb="507_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+
+		<!-- GoHands -->
+		<library type="GoHands" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+		<library type="GoHands" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y" />
+
+		<!-- GoFeet -->
+		<library type="GoFeet" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="501" path="501" name="501" thumb="501_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="502" path="502" name="502" thumb="502_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="503" path="503" name="503" thumb="503_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="504" path="504" name="504" thumb="504_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="505" path="505" name="505" thumb="505_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="506" path="506" name="506" thumb="506_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoFeet" id="507" path="507" name="507" thumb="507_thumbnail.swf" display_order="10" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		
+		<!-- GoHair -->
+		<library type="GoHair" id="001" path="001" name="001" thumb="001.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="002" path="002" name="002" thumb="002.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="003" path="003" name="003" thumb="003.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="004" path="004" name="004" thumb="004.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="005" path="005" name="005" thumb="005.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="006" path="006" name="006" thumb="006.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="007" path="007" name="007" thumb="007.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="008" path="008" name="008" thumb="008.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="009" path="009" name="009" thumb="009.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="010" path="010" name="010" thumb="010.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="011" path="011" name="011" thumb="011.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="012" path="012" name="012" thumb="012.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="013" path="013" name="013" thumb="013.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="014" path="014" name="014" thumb="014.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="015" path="015" name="015" thumb="015.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="016" path="016" name="016" thumb="016.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="017" path="017" name="017" thumb="017.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="018" path="018" name="018" thumb="018.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="019" path="019" name="019" thumb="019.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="020" path="020" name="020" thumb="020.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="021" path="021" name="021" thumb="021.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="022" path="022" name="022" thumb="022.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="023" path="023" name="023" thumb="023.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="024" path="024" name="024" thumb="024.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="025" path="025" name="025" thumb="025.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="026" path="026" name="026" thumb="026.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="027" path="027" name="027" thumb="027.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="501" path="501" name="501" thumb="501.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="502" path="502" name="502" thumb="502.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="503" path="503" name="503" thumb="503.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="504" path="504" name="504" thumb="504.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="505" path="505" name="505" thumb="505.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="506" path="506" name="506" thumb="506.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="507" path="507" name="507" thumb="507.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="508" path="508" name="508" thumb="508.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="509" path="509" name="509" thumb="509.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="510" path="510" name="510" thumb="510.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoHair" id="511" path="511" name="511" thumb="511.swf" display_order="0" money="0" sharing="0" enable="Y">
+			<tag>_sticky_filter_girl</tag>
+		</library>
+
+		<!-- Back prop -->
+		<library type="GoBehindBody" id="001" path="001" name="001" thumb="001_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_girl</tag>
+		</library>
+		<library type="GoBehindBody" id="002" path="002" name="002" thumb="002_thumbnail.swf" display_order="0" money="0" sharing="0" enable="N">
+			<tag>_userrole_admin</tag>
+			<tag>_sticky_filter_girl</tag>
+		</library>
+
+		<component type="freeaction" id="girl" path="girl" name="girl" thumb="" money="0" sharing="0" enable="Y"/>
+	</bodyshape>
+
+	<!-- Ears -->
+	<component type="ear" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="ear" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="ear" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="ear" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	
+	<!-- Eyes -->
+	<component type="eye" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eye" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eye" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eye" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="eye" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="eye" id="503" path="503" name="503" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Eyebrows -->
+	<component type="eyebrow" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eyebrow" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eyebrow" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="eyebrow" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="eyebrow" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Faceshape -->
+	<component type="faceshape" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="005" path="005" name="005" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="006" path="006" name="006" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="007" path="007" name="007" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="008" path="008" name="008" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="009" path="009" name="009" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="faceshape" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="faceshape" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Hair -->
+	<component type="hair" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="005" path="005" name="005" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="006" path="006" name="006" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="007" path="007" name="007" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="008" path="008" name="008" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="009" path="009" name="009" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="010" path="010" name="010" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="011" path="011" name="011" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="012" path="012" name="012" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="013" path="013" name="013" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="014" path="014" name="014" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="015" path="015" name="015" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="016" path="016" name="016" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="017" path="017" name="017" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="018" path="018" name="018" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="019" path="019" name="019" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="020" path="020" name="020" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="021" path="021" name="021" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="022" path="022" name="022" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="023" path="023" name="023" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="024" path="024" name="024" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="025" path="025" name="025" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="026" path="026" name="026" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="hair" id="027" path="027" name="027" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+
+	<component type="hair" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="503" path="503" name="503" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="504" path="504" name="504" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="505" path="505" name="505" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="506" path="506" name="506" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="507" path="507" name="507" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="508" path="508" name="508" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="509" path="509" name="509" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="510" path="510" name="510" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="hair" id="511" path="511" name="511" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf" />
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Mouth -->
+	<component type="mouth" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="mouth" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="mouth" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="mouth" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+
+	<component type="mouth" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="mouth" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="mouth" id="503" path="503" name="503" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_angry" filename="side_angry.swf"/>
+		<state id="side_closed" filename="side_closed.swf"/>
+		<state id="side_confindence" filename="side_confindence.swf"/>
+		<state id="side_confused" filename="side_confused.swf"/>
+		<state id="side_cry" filename="side_cry.swf"/>
+		<state id="side_default" filename="side_default.swf"/>
+		<state id="side_desperate" filename="side_desperate.swf"/>
+		<state id="side_embarrass" filename="side_embarrass.swf"/>
+		<state id="side_happy" filename="side_happy.swf"/>
+		<state id="side_inlove" filename="side_inlove.swf"/>
+		<state id="side_lookcam" filename="side_lookcam.swf"/>
+		<state id="side_lookdown" filename="side_lookdown.swf"/>
+		<state id="side_lookup" filename="side_lookup.swf"/>
+		<state id="side_pleased" filename="side_pleased.swf"/>
+		<state id="side_sad" filename="side_sad.swf"/>
+		<state id="side_serious" filename="side_serious.swf"/>
+		<state id="side_shock" filename="side_shock.swf"/>
+		<state id="side_surprised" filename="side_surprised.swf"/>
+		<state id="side_talk" filename="side_talk.swf"/>
+		<state id="side_thinking" filename="side_thinking.swf"/>
+		<state id="side_touched" filename="side_touched.swf"/>
+		<state id="side_wink" filename="side_wink.swf"/>
+		<state id="side_talk_happy" filename="side_talk_happy.swf"/>
+		<state id="side_talk_angry" filename="side_talk_angry.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Nose -->
+	<component type="nose" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="005" path="005" name="005" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="006" path="006" name="006" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="007" path="007" name="007" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+	<component type="nose" id="501" path="501" name="501" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="nose" id="502" path="502" name="502" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="nose" id="503" path="503" name="503" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="nose" id="504" path="504" name="504" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="side_default.swf"/>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+	<!-- Glasses -->
+	<component type="glasses" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" split="N" enable="N">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+	</component>
+
+	<!-- Face decoration -->
+	<component type="facedecoration" id="001" path="001" name="001" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="002" path="002" name="002" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="003" path="003" name="003" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="004" path="004" name="004" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="005" path="005" name="005" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="006" path="006" name="006" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="007" path="007" name="007" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="008" path="008" name="008" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="009" path="009" name="009" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="010" path="010" name="010" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="011" path="011" name="011" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="012" path="012" name="012" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="013" path="013" name="013" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="014" path="014" name="014" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="015" path="015" name="015" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="016" path="016" name="016" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="017" path="017" name="017" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="018" path="018" name="018" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="019" path="019" name="019" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+	<component type="facedecoration" id="020" path="020" name="020" thumb="thumbnail.swf" money="0" sharing="0" enable="Y">
+		<state id="side_default" filename="default.swf"/>
+		<tag>_sticky_filter_guy</tag>
+		<tag>_sticky_filter_muscle_guy</tag>
+		<tag>_sticky_filter_girl</tag>
+	</component>
+
+</cc_theme>

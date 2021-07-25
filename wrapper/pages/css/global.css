@@ -1,0 +1,193 @@
+/***
+this css has the general header/footer layout stuff
+***/
+
+/**
+general
+**/
+html, body {
+	background: #fff;
+	color: #474747;
+	font: 16px/1.5 'Sailec', Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+body {
+	display: flex; 
+	flex-direction: column; 
+}
+
+
+/**
+header
+**/
+header {
+	/* style */
+	background: #1e1e1e;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 13px;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-shrink: 0;
+}
+/* makes the header a set height when the window is 887px wide */
+@media (min-width: 887px) {
+	header {
+		padding-bottom: auto;
+		height: 44px;
+	}
+}
+#logo {
+	margin-top: 4px;
+	height: 35px;
+}
+/* buttons */
+.button_big,
+.button_small {
+	/* style */
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 6px;
+	/* layout */
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 6px 5px;
+}
+.button_big:hover,
+.button_small:hover {
+	cursor: pointer;
+}
+/* small buttons */
+.button_small       { background: #333 }
+.button_small:hover { background: #444; color: #d85e27 }
+/* big buttons */
+.button_big {
+	background-color: #d85e27;
+	width: 160px;
+}
+.button_big:hover {
+	text-decoration: underline;
+}
+
+
+/**
+header dropdowns
+**/
+/* change button margin/padding to fit dropdown */
+.dropdown_contain { padding: 0; margin: 6px 5px; }
+.dropdown_button { margin: 0; padding: 5px 10px; }
+.upload_button { margin: 0; padding: 5px 25px; }
+/* make dropdown appear on hover */
+.dropdown_contain:hover>nav {
+	display: block;
+	cursor: default;
+}
+/* the dropdown itself */
+.dropdown_menu {
+	/* style */
+	background-color: #444;
+	border-radius: 6px;
+	/* layout */
+	width: 100%;
+	padding: 10px 0;
+	margin: 0;
+	text-align: left;
+	/* hover stuff */
+	position: relative;
+	float: left;
+	display: none;
+}
+/* dropdown links */
+.dropdown_menu>a {
+	/* style */
+	color: #ddd;
+	text-decoration: none;
+	/* layout */
+	display: block;
+	padding: 2px 20px;
+}
+.dropdown_menu>a:hover {
+	background: #222;
+	color: #d85e27;
+	cursor: pointer;
+}
+/* dropdown header and separation */
+.dropdown_menu>h2 {
+	/* style */
+	color: #fff;
+	font-size: 15px;
+	/* layout */
+	margin:0;
+	padding:2px 20px;
+}
+.dropdown_menu>hr {
+	border: 1px solid #222;
+	margin: 10px 0;
+}
+
+
+/**
+footer
+**/
+footer{
+	background: #1e1e1e;
+	margin-top: auto; /* footer at the foot */
+	display: flex;
+	justify-content: space-between;
+	flex-shrink: 0;
+}
+footer nav { margin:5px 10px}
+/* links */
+footer a {
+	color: #fff;
+	text-decoration:none;
+	margin: 0 10px;
+	font-weight: bold;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+
+/**
+font importing
+**/
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 100;
+	src: url('.../fonts/Sailec-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 200;
+	src: url('../fonts/Sailec-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 400;
+	src: url('../fonts/Sailec-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 500;
+	src: url('../fonts/Sailec-Medium.woff') format('woff');
+}
+
+/* font weight 500 and font weight 700 (bold) are the same for better integration support */
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 700;
+	src: url('../fonts/Sailec-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GlyphiconsRegular';
+	src: url('../fonts/glyphicons-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
