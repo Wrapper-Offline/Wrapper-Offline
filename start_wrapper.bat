@@ -87,8 +87,7 @@ if not exist "utilities\checks\disclaimer.txt" (
 
 :: Welcome, Director Ford!
 echo Wrapper: Offline
-echo A project from VisualPlugin originally adapted by Benson
-echo Adapted by xomdjl_ and the Wrapper: Offline Team
+echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
 echo Version !WRAPPER_VER!, build !WRAPPER_BLD!
 echo:
 
@@ -774,7 +773,7 @@ cls
 
 echo:
 echo Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) running
-echo A project from VisualPlugin adapted by Benson and the Wrapper: Offline Team
+echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
 echo:
 if !VERBOSEWRAPPER!==n ( echo DON'T CLOSE THIS WINDOW^^! Use the quit option ^(0^) when you're done. )
 if !VERBOSEWRAPPER!==y ( echo Verbose mode is on, see the two extra CMD windows for extra output. )
