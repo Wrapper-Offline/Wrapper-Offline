@@ -1,6 +1,6 @@
 :: Wrapper: Offline Launcher
 :: Original Author: benson#0411
-:: Project Runner: xomdjl_#1337
+:: Project Owner: GoTest334
 :: License: MIT
 set WRAPPER_VER=1.2.3
 set WRAPPER_BLD=72
