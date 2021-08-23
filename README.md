@@ -57,7 +57,6 @@ Wrapper: Offline credits:
 | RegularSpark (D) | Fixing 1.2.3 to actually work, truncated themelist     |
 | KrisAnimate      | Chromium parameter                                     |
 | narutofan420 (D) | W:O installer and updater                              |
-| 2Epik4u (PL) (D) | Discord rich presence                                  |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name               | Contribution                     |
