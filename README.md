@@ -72,4 +72,4 @@ These are unaffiliated people that they haven't directly done anything for the p
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
 
 ## Themes added
-1. Business Friendly (from GA2016 Online asset set)
+1. Business Friendly (from GA2016 Offline asset set)
