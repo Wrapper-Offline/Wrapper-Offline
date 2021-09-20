@@ -69,20 +69,7 @@ if not exist "utilities\checks\disclaimer.txt" (
 	echo If you object to any of this, feel free to close Wrapper: Offline now.
 	echo You will be allowed to accept 20 seconds after this message has appeared.
 	echo: 
-	PING -n 21 127.0.0.1>nul
-	echo If you still want to use Wrapper: Offline, press Y. If you no longer want to, press N.
-	:disclaimacceptretry
-	set /p ACCEPTCHOICE= Response:
-	echo:
-	if not '!acceptchoice!'=='' set acceptchoice=%acceptchoice:~0,1%
-	if /i "!acceptchoice!"=="y" goto disclaimaccepted
-	if /i "!acceptchoice!"=="n" exit
-	goto disclaimacceptretry
-	:disclaimaccepted
-	echo: 
-	echo Sorry for all the legalese, let's get back on track.
-	echo You've accepted the disclaimer. To reread it, remove this file. > utilities\checks\disclaimer.txt
-)
+) > utilities\checks\disclaimer.txt
 
 :: Welcome, Director Ford!
 echo Wrapper: Offline
