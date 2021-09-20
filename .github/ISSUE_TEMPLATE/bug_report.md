@@ -1,8 +1,8 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help me improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
@@ -26,8 +26,13 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - OS: [e.g. windows]
  - Browser [e.g. balistic, ungoogled chrome]
- - Version [e.g. beta, stable]
+ - OS version: [e.g. 10.0.9841.0, get yours by launching winver]
 
 
 **Additional context**
 Add any other context about the problem here.
+
+**Which additions did you use?**
+Select these below if you used one of them:
+[]Acapela Voice Fix
+[]Voice Fix
