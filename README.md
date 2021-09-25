@@ -68,6 +68,7 @@ These are unaffiliated people that they haven't directly done anything for the p
 | vocatus            | Some of TronScript's batch code  |
 | ss64.com           | Incredible CMD info resource     |
 | robvanderwoude.com | Also amazing CMD info resource   |
+| Michelle1574       | Voice fix toogler                |
 
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
@@ -77,9 +78,7 @@ These are unaffiliated people that they haven't directly done anything for the p
 | ------------------ | -------------------------------- |
 | Business Friendly  | GA2016 Offline asset set         |
 
----
-
-Name of theme: Business Friendly, test
-From: GA2016 Offline asset set, test
-
----
+**Copyrighted themes that are not retired**
+| Name of theme     | By                         |  Got from                 |
+| ----------------  | -------------------------- | -----------------------   |
+| Business Friendly | Vyond (creator of theme)   | GA2016 Offline Assets     |
