@@ -1,7 +1,7 @@
 ---
 name: Suggestion
 about: Create a suggestion to make me add it.
-title: ''
+title: 'My suggestion: '
 labels: 'suggestion'
 assignees: ''
 
