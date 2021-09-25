@@ -2,7 +2,7 @@
 name: Suggestion
 about: Create a suggestion to make me add it.
 title: ''
-labels: 'bug'
+labels: 'suggestion'
 assignees: ''
 
 ---
