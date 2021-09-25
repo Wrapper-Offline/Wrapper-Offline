@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help me improve
+name: Suggestion
+about: Create a suggestion to make me add it.
 title: ''
 labels: 'bug'
 assignees: ''
