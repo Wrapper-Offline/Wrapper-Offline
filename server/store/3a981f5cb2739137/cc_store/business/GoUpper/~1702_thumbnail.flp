@@ -1,0 +1,11 @@
+﻿<flash_project name="~1702_thumbnail" version="1">
+	<project_file path="./~1702_thumbnail.fla" filetype="fla" profile="" def_file="true"/>
+	<project_file path="./armL01.as" filetype="as"/>
+	<project_file path="./armL02.as" filetype="as"/>
+	<project_file path="./armL03.as" filetype="as"/>
+	<project_file path="./armU01.as" filetype="as"/>
+	<project_file path="./armU02.as" filetype="as"/>
+	<project_file path="./armU03.as" filetype="as"/>
+	<project_file path="./body01.as" filetype="as"/>
+	<project_file path="./body02.as" filetype="as"/>
+</flash_project>
