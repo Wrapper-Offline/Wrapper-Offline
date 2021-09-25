@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact-links:
+-name: Email contacting
+url: mailto:michalkichal1@outlook.com
+about: Contact to me.
+-name: W:O discord server
+url: https://discord.gg/b7YSRkg
+about: Enter the server to ask someone
+-name: W:O original app
+url: https://github.com/Wrapper-Offline/Wrapper-Offline
+about: Download the official version of W:O
