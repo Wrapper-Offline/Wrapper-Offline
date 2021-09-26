@@ -21,6 +21,8 @@ server/characters/*
 server/characters/characters.zip
 server/store/3a981f5cb2739137/import/*
 server/store/3a981f5cb2739137/cc_store/family/cc_theme.xml
+server/store/3a981f5cb2739137/cc_store/business/cc_theme.xml
+server/store/3a981f5cb2739137/cc_store/*
 server/store/3a981f5cb2739137/import/import.zip
 server/store/3a981f5cb2739137/import/theme.xml
 server/store/3a981f5cb2739137/business/*
