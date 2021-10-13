@@ -73,18 +73,6 @@ These are unaffiliated people that they haven't directly done anything for the p
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
 
-| ------------------ | -------------------------------- |
-| Vyond              | Creators of the themes we love   |
-| http-party         | Creators of http-server          |
-| Stephan Brenner    | Creator of SilentCMD             |
-| vocatus            | Some of TronScript's batch code  |
-| ss64.com           | Incredible CMD info resource     |
-| robvanderwoude.com | Also amazing CMD info resource   |
-| Michelle1574       | Voice fix toogler                |
-
-## Footnotes
-[1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
-
 ## Themes added
 | Name of theme      | From                             |
 | ------------------ | -------------------------------- |
@@ -94,3 +82,4 @@ These are unaffiliated people that they haven't directly done anything for the p
 | Name of theme     | By                         |  Got from                 |
 | ----------------  | -------------------------- | -----------------------   |
 | Business Friendly | Vyond (creator of theme)   | GA2016 Offline Assets     |
+
