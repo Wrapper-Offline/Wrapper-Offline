@@ -1,6 +1,5 @@
 # Wrapper: Offline
-After learning that GoAnimate Wrapper (a project by VisualPlugin) would be shut down, Wrapper: Offline was created. (simply called "Offline" for the rest of this page) Unlike the original project, Offline can not be shut down or "patched". You have the files all on your computer. This project is important for historical and archival purposes, as the ability to use this legacy editor and themes would be completely gone without it. Besides simply emulating the original Flash editor, some additional features and improvements have been made. And Offline will continue to get additional updates in the future.
-Warning: there's no beta version with Business Friendly.
+Wrapper: Offline is a GoAnimate Server Emulator carrying on the torch of [VisualPlugin's GoAnimate Wrapper project](https://github.com/GoAnimate-Wrapper) after it's shutdown in 2020. Unlike the original project, Offline can not be shut down by Vyond. Why? It's because of our twist on the GoAnimate Wrapper formula! Everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of Offline, we have also added other additional features and improvements compared to the original GoAnimate Wrapper project, and there will be more to come, as Offline will continue to get additional updates in the future.
 
 ## Running / Installation
 To start Offline on Windows, open start_wrapper.bat. It'll automate just about everything for you and, well, start Wrapper: Offline. On your first run, you will likely need to right-click it and click "Run as Administrator". This allows it to properly install what it needs to run. After your initial run, you shouldn't need to do that again, you can start it as normal.
@@ -40,27 +39,40 @@ Original Wrapper credits:
 | VisualPlugin | GoAnimate Wrapper    |
 | xomdjl_      | Custom/Modded Assets |
 | CLarramore   | Bug fixes            |
-| PoleyMagik   | Asset Recreation     |
+| PoleyMagik   | Asset Store Archive  |
 
 No members of the original team are officially working on Offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
 
-Project Lead will have (PL) on their name and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point.
+Project Lead will have (PL) on their name and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point, or left the development team.
 Wrapper: Offline credits:
 | Name             | Contribution                                           |
 | ---------------- | -------------------------------------------------------|
+| GoTest334 (PL)   | Current Project Lead                                   |
 | Benson (D)       | Wrapper: Offline                                       |
 | NathanSaturnBOI  | Logo                                                   |
 | Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
 | VisualPlugin     | Text to speech voices                                  |
-| xomdjl_ (PL) (D) | VFProxy, Text to speech voices                         |
+| xomdjl_          | VFProxy, Text to speech voices                         |
 | creepyjokes2000  | Waveform fix, improved actions                         |
 | JoshAnimate      | Headgear fix                                           |
-| RegularSpark (D) | Fixing 1.2.3 to actually work, truncated themelist     |
+| RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
 | KrisAnimate      | Chromium parameter                                     |
-| narutofan420 (D) | W:O installer and updater                              |
+| narutofan420     | W:O installer and updater                              |
+| PoleyMagik       | Client Modifications                                   |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name               | Contribution                     |
+| ------------------ | -------------------------------- |
+| Vyond              | Creators of the themes we love   |
+| http-party         | Creators of http-server          |
+| Stephan Brenner    | Creator of SilentCMD             |
+| vocatus            | Some of TronScript's batch code  |
+| ss64.com           | Incredible CMD info resource     |
+| robvanderwoude.com | Also amazing CMD info resource   |
+
+## Footnotes
+[1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
+
 | ------------------ | -------------------------------- |
 | Vyond              | Creators of the themes we love   |
 | http-party         | Creators of http-server          |
