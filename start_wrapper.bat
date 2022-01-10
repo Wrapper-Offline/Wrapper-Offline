@@ -17,7 +17,6 @@ title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
 if exist .git (
 	echo Checking for updates...
 	call utilities\PortableGit\bin\git.exe fetch --all
-	call utilities\PortableGit\bin\git.exe branch backup-master
 	echo Updating...
 	call utilities\PortableGit\bin\git.exe reset --hard origin/main
 ) else (
