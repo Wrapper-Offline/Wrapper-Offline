@@ -63,43 +63,6 @@ if not exist server ( goto error_location )
 :: Create checks folder if nonexistent
 if not exist "utilities\checks" md utilities\checks
 
-:: Operator, attention!
-if not exist "utilities\checks\disclaimer.txt" (
-	echo DISCLAIMER
-  echo:
-	echo Wrapper: Offline is a project to preserve the original GoAnimate flash-based themes.
-	echo We believe they should be archived for others to use and learn about in the future.
-	echo All business themes have been removed, please use Vyond Studio if you wish to get those.
-	echo This is still unlawful use of copyrighted material, but ^(in our opinion^) morally justifiable use.
-	echo:
-	echo We are not affiliated in any form with Vyond or GoAnimate Inc. We generate no profit from this.
-	echo We do not wish to promote piracy, and we avoid distributing content that is still in use by GoAnimate Inc.
-	echo We have tried to reduce any harm we could do to GoAnimate Inc while making this project.
-	echo:
-	echo Excluding Adobe Flash and GoAnimate Inc's assets, Wrapper: Offline is free/libre software.
-	echo You are free to redistribute and/or modify it under the terms of the MIT ^(aka Expat^) license,
-	echo except for some dependencies which have different licenses with slightly different rights.
-	echo Read the LICENSE file in Offline's base folder and the licenses in utilities/sourcecode for more info.
-	echo:
-	echo By continuing to use Wrapper: Offline, you acknowledge the nature of this project, and your right to use it.
-	echo If you object to any of this, feel free to close Wrapper: Offline now.
-	echo You will be allowed to accept 20 seconds after this message has appeared.
-	echo: 
-	PING -n 21 127.0.0.1>nul
-	echo If you still want to use Wrapper: Offline, press Y. If you no longer want to, press N.
-	:disclaimacceptretry
-	set /p ACCEPTCHOICE= Response:
-	echo:
-	if not '!acceptchoice!'=='' set acceptchoice=%acceptchoice:~0,1%
-	if /i "!acceptchoice!"=="y" goto disclaimaccepted
-	if /i "!acceptchoice!"=="n" exit
-	goto disclaimacceptretry
-	:disclaimaccepted
-	echo: 
-	echo Sorry for all the legalese, let's get back on track.
-	echo You've accepted the disclaimer. To reread it, remove this file. > utilities\checks\disclaimer.txt
-)
-
 :: Welcome, Director Ford!
 echo Wrapper: Offline
 echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
