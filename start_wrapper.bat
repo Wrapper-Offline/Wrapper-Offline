@@ -20,8 +20,12 @@ if exist .git (
 	call utilities\PortableGit\bin\git.exe fetch --all
 	echo Updating...
 	call utilities\PortableGit\bin\git.exe reset --hard origin/main
+	PING -n 3 127.0.0.1>nul
+	cls
 ) else (
 	echo Git not found. Skipping update.
+	PING -n 3 127.0.0.1>nul
+	cls
 )
 
 :: Lets variables work or something idk im not a nerd
