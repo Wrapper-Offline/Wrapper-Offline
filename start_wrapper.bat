@@ -14,7 +14,7 @@ title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
 
 :: check for updates
 
-if exist \.git (
+if exist .git (
 	echo Checking for updates...
 	call utilities\PortableGit\bin\git.exe fetch --all
 	call utilities\PortableGit\bin\git.exe branch backup-master
