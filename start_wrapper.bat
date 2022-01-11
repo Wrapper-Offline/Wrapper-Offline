@@ -16,9 +16,10 @@ title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
 
 pushd "%~dp0"
 if exist .git (
-	echo Checking for updates...
-	call utilities\PortableGit\bin\git.exe fetch --all
 	echo Updating...
+	call utilities\PortableGit\bin\git.exe checkout main
+	call utilities\PortableGit\bin\git.exe branch backup
+	call utilities\PortableGit\bin\git.exe fetch --all
 	call utilities\PortableGit\bin\git.exe reset --hard origin/main
 	PING -n 3 127.0.0.1>nul
 	cls
