@@ -15,16 +15,22 @@ title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
 :: check for updates
 
 pushd "%~dp0"
-if exist .git (
-	echo Updating...
-	call utilities\PortableGit\bin\git.exe checkout main
-	call utilities\PortableGit\bin\git.exe branch backup
-	call utilities\PortableGit\bin\git.exe fetch --all
-	call utilities\PortableGit\bin\git.exe reset --hard origin/main
-	PING -n 3 127.0.0.1>nul
-	cls
+if !AUTOUPDATE!==y ( 
+	pushd "%~dp0"
+	if exist .git (
+		echo Updating...
+		call utilities\PortableGit\bin\git.exe checkout main
+		call utilities\PortableGit\bin\git.exe fetch --all
+		call utilities\PortableGit\bin\git.exe reset --hard origin/main
+		PING -n 3 127.0.0.1>nul
+		cls
+	) else (
+		echo Git not found. Skipping update.
+		PING -n 3 127.0.0.1>nul
+		cls
+	)
 ) else (
-	echo Git not found. Skipping update.
+	echo Auto-updating is off. Skipping update.
 	PING -n 3 127.0.0.1>nul
 	cls
 )
