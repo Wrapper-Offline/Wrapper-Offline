@@ -97,36 +97,42 @@ if exist "wrapper\static\info-nowave.json" (
 ) else ( 
 	echo ^(5^) Waveforms are[91m OFF [0m
 )
+:: Skip updating
+if !AUTOUPDATE!==y (
+	echo ^(6^) Auto updating is[92m ON [0m
+) else ( 
+	echo ^(6^) Auto updating is[91m OFF [0m
+)
 :: Truncated Themelist
 if exist "wrapper\_THEMES\themelist-allthemes.xml" (
-	echo ^(6^) Truncated themelist is[92m ON [0m
+	echo ^(7^) Truncated themelist is[92m ON [0m
 ) else ( 
-	echo ^(6^) Truncated themelist is[91m OFF [0m
+	echo ^(7^) Truncated themelist is[91m OFF [0m
 )
 :: Discord RPC
 if exist "wrapper\main-norpc.js" (
-	echo ^(7^) Discord rich prescence is[92m ON [0m
+	echo ^(8^) Discord rich prescence is[92m ON [0m
 ) else ( 
-	echo ^(7^) Discord rich prescence is[91m OFF [0m
+	echo ^(8^) Discord rich prescence is[91m OFF [0m
 )
 :: Cepstral
 if exist "wrapper\tts\info-cepstral.json" (
-	echo ^(8^) Provider for Cepstral/VoiceForge voices is[92m VFProxy [0m
+	echo ^(9^) Provider for Cepstral/VoiceForge voices is[92m VFProxy [0m
 	if exist "wrapper\tts\load-seamus.js" (
-		echo     ^(9^) VFProxy server is[92m PHP Webserver ^(localhost:8181^) [0m
+		echo     ^(10^) VFProxy server is[92m PHP Webserver ^(localhost:8181^) [0m
 	) else (
 		if !CEPSTRAL!==y (
-			echo     ^(9^) VFProxy server is[91m seamus-server.tk [0m
+			echo     ^(10^) VFProxy server is[91m seamus-server.tk [0m
 		)
 	)
 ) else (
 	if !CEPSTRAL!==y (
-		echo ^(8^) Provider for Cepstral/VoiceForge voices is[91m Cepstral website [0m
+		echo ^(9^) Provider for Cepstral/VoiceForge voices is[91m Cepstral website [0m
 	)
 )
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-	echo ^(10^) Original LVM Character IDs are[91m OFF [0m
+	echo ^(11^) Original LVM Character IDs are[91m OFF [0m
 )
 :: Dev options
 :: These are really specific options that no casual user would ever really need
@@ -233,17 +239,36 @@ if "!choice!"=="?5" (
 	echo Turning this off will simply add a repeating pre-made pattern in place of true waveforms.
 	goto reaskoptionscreen
 )
-:: Waveforms
-if "!choice!"=="6" goto allthemechange
+:: Auto Update
+if "!choice!"=="6" (
+	set TOTOGGLE=AUTOUPDATE
+	if !AUTOUPDATE!==y (
+		set TOGGLETO=n
+	) else (
+		set TOGGLETO=y
+	)
+	set CFGLINE=38
+	goto toggleoption
+)
 if "!choice!"=="?6" (
+	echo By default, when you open start_wrapper.bat it 
+	echo will auto-update to the newest commit on Github.
+	echo This may be annoying to developers making modifications to the program, 
+	echo as when this is done it resets uncommitted work.
+	echo Turning this off will stop Wrapper from auto-updating.
+	goto reaskoptionscreen
+)
+:: Waveforms
+if "!choice!"=="7" goto allthemechange
+if "!choice!"=="?7" (
 	echo Cuts down the amount of themes that clog up the themelist in the videomaker.
 	echo Keeping this off is highly suggested.
 	echo However, if you want to see everything the program has to offer, turn this on.
 	goto reaskoptionscreen
 )
 :: Rich prescence
-if "!choice!"=="7" goto rpcchange
-if "!choice!"=="?7" (
+if "!choice!"=="8" goto rpcchange
+if "!choice!"=="?8" (
 	echo By default, Discord rich presence is enabled.
         echo:
 	echo It's used to show when you're using Wrapper: Offline
@@ -256,8 +281,8 @@ if "!choice!"=="?7" (
 	goto reaskoptionscreen
 )
 :: Cepstral
-if "!choice!"=="8" goto cepstralchange
-if "!choice!"=="?8" (
+if "!choice!"=="9" goto cepstralchange
+if "!choice!"=="?9" (
 	echo By default, Wrapper: Offline uses the included VFProxy
 	echo for the VoiceForge voices, as VoiceForge was turned
 	echo into a mobile app, causing the original API to be
@@ -274,8 +299,8 @@ if "!choice!"=="?8" (
 	echo from the actual Cepstral website's demo.
 	goto reaskoptionscreen
 )
-if "!choice!"=="9" goto vfproxyserverchange
-if "!choice!"=="?9" (
+if "!choice!"=="10" goto vfproxyserverchange
+if "!choice!"=="?10" (
 	echo This setting runs the localhost version of xomdjl_'s VFProxy.
 	echo This makes it easier to use without having to use an external server.
 	echo:
@@ -287,8 +312,8 @@ if "!choice!"=="?9" (
 )
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-	if "!choice!"=="10" goto extractchars
-	if "!choice!"=="?10" (
+	if "!choice!"=="11" goto extractchars
+	if "!choice!"=="?11" (
 		echo When first getting Wrapper: Offline, all non-stock characters are put into a single zip file.
 		echo This is because if they're all separate, extracting takes forever and is incredibly annoying.
 		echo If you wish to import characters made on the LVM when it was still up and hosted by Vyond,
