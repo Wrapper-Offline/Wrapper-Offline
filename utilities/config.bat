@@ -34,3 +34,5 @@ set DRYRUN=n
 :: Makes it so it uses the Cepstral website instead of VFProxy. Default: n
 set CEPSTRAL=n
 
+:: auto update (what do you think it does, obvious)
+set AUTOUPDATE=y
