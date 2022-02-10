@@ -721,7 +721,7 @@ popd
 
 :: Pause to allow startup
 :: Prevents the video list opening too fast
-PING -n 6 127.0.0.1>nul
+PING -n 16 127.0.0.1>nul
 
 :: Open Wrapper in preferred browser
 if !INCLUDEDCHROMIUM!==n (
