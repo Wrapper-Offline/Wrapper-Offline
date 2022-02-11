@@ -1,5 +1,5 @@
 /***
- * start wrapper: offline's server
+ * start wrapper: offline"s server
  */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
@@ -9,28 +9,28 @@ const url = require("url");
 /**
  * routes
  */
-const http = require('http');
-const asu = require('./asset/upload');
-const asl = require('./asset/load');
-const asL = require('./asset/list');
-const ast = require('./asset/thmb');
-const chr = require('./character/redirect');
-const pmc = require('./character/premade');
-const chl = require('./character/load');
-const chs = require('./character/save');
-const chu = require('./character/upload');
-const stl = require('./static/load');
-const stp = require('./static/page');
-const mvl = require('./movie/load');
-const mvL = require('./movie/list');
-const mvm = require('./movie/meta');
-const mvs = require('./movie/save');
-const mvt = require('./movie/thmb');
-const mvu = require('./movie/upload');
-const thl = require('./theme/load');
-const thL = require('./theme/list');
-const tsv = require('./tts/voices');
-const tsl = require('./tts/load');
+const http = require("http");
+const asu = require("./asset/upload");
+const asl = require("./asset/load");
+const asL = require("./asset/list");
+const ast = require("./asset/thmb");
+const chr = require("./character/redirect");
+const pmc = require("./character/premade");
+const chl = require("./character/load");
+const chs = require("./character/save");
+const chu = require("./character/upload");
+const stl = require("./static/load");
+const stp = require("./static/page");
+const mvl = require("./movie/load");
+const mvL = require("./movie/list");
+const mvm = require("./movie/meta");
+const mvs = require("./movie/save");
+const mvt = require("./movie/thmb");
+const mvu = require("./movie/upload");
+const thl = require("./theme/load");
+const thL = require("./theme/list");
+const tsv = require("./tts/voices");
+const tsl = require("./tts/load");
 
 const functions = [
 	asu,

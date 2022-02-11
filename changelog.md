@@ -7,6 +7,7 @@ This changelog is based off [Keep a Changelog](https://keepachangelog.com) and ~
 ### Changed
   - Rich presence now uses process.env instead of reassigning env.json to process.env
   - Removed build numbering
+  - Removed the .sh files in the wrapper folder
 ### Fixed
 
 ## Version 1.2.3 - 2021-03-06 - i am HUNGRY FOR UPDATES!!!
