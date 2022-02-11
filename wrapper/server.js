@@ -1,7 +1,14 @@
-const env = Object.assign(process.env,
-	require('./env'),
-	require('./config'));
+/***
+ * start wrapper: offline's server
+ */
+// assign config and env.json stuff to process.env
+const env = Object.assign(process.env, require("./env"), require("./config"));
+const http = require("http");
+const url = require("url");
 
+/**
+ * routes
+ */
 const http = require('http');
 const asu = require('./asset/upload');
 const asl = require('./asset/load');
@@ -24,8 +31,6 @@ const thl = require('./theme/load');
 const thL = require('./theme/list');
 const tsv = require('./tts/voices');
 const tsl = require('./tts/load');
-const evt = require('./events');
-const url = require('url');
 
 const functions = [
 	asu,
@@ -52,13 +57,27 @@ const functions = [
 	evt,
 ];
 
-// Creates an HTTP server
-module.exports = http.createServer((req, res) => {
-	const parsedUrl = url.parse(req.url, true);
-	//if (!parsedUrl.path.endsWith('/')) parsedUrl.path += '/';
-	const found = functions.find(f => f(req, res, parsedUrl));
-	if (!found) { res.statusCode = 404; res.end(); }
-}).listen(env.PORT || env.SERVER_PORT, console.log);
+/**
+ * create the server
+ */
+module.exports = http
+	.createServer((req, res) => {
+		try {
+			const parsedUrl = url.parse(req.url, true);
+			// run each route function until the correct one is found
+			const found = functions.find((f) => f(req, res, parsedUrl));
+			// log every request
+			console.log(req.method, parsedUrl.path);
+			if (!found) { // page not found
+				res.statusCode = 404;
+				res.end();
+			}
+		} catch (x) {
+			res.statusCode = 404;
+			res.end();
+		}
+	})
+	.listen(env.PORT || env.SERVER_PORT, console.log("Wrapper: Offline has started."))
 
-// 2epik4u is weird
-// update: still weird
+// 1 year of 1.3.0 development
+// thanks xom
