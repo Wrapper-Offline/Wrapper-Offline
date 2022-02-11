@@ -6,6 +6,7 @@ This changelog is based off [Keep a Changelog](https://keepachangelog.com) and ~
 ### Added
 ### Changed
   - Rich presence now uses process.env instead of reassigning env.json to process.env
+  - Rich presence toggle now uses an environment variable
   - Removed build numbering
   - Removed the .sh files in the wrapper folder
 ### Fixed

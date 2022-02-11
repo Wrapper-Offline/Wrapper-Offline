@@ -10,6 +10,7 @@ require("./server");
 if (process.env.DISCORD_RPC && process.env.DISCORD_RPC == "y") {
 	// get version number
 	const version = process.env.WRAPPER_VER;
+	const RPC = require("discord-rpc");
 	const rpc = new RPC.Client({
 		transport: "ipc"
 	});
