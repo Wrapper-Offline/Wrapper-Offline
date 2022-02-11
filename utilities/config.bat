@@ -8,10 +8,10 @@ if "%SUBSCRIPT%"=="" ( start notepad.exe config.bat & exit )
 endlocal
 
 :: Shows exactly Offline is doing, and never clears the screen. Useful for development and troubleshooting. Default: n
-set VERBOSEWRAPPER=n
+set VERBOSEWRAPPER=y
 
 :: Won't check for dependencies (flash, node, etc) and goes straight to launching. Useful for speedy launching post-install. Default: n
-set SKIPCHECKDEPENDS=n
+set SKIPCHECKDEPENDS=y
 
 :: Won't install dependencies, regardless of check results. Overridden by SKIPCHECKDEPENDS. Mostly useless, why did I add this again? Default: n
 set SKIPDEPENDINSTALL=n
@@ -36,3 +36,7 @@ set CEPSTRAL=n
 
 :: auto update (what do you think it does, obvious)
 set AUTOUPDATE=y
+
+:: discord rich presence
+set RPC=n
+

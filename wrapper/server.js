@@ -9,7 +9,6 @@ const url = require("url");
 /**
  * routes
  */
-const http = require("http");
 const asu = require("./asset/upload");
 const asl = require("./asset/load");
 const asL = require("./asset/list");
@@ -54,7 +53,6 @@ const functions = [
 	thL,
 	tsv,
 	tsl,
-	evt,
 ];
 
 /**
