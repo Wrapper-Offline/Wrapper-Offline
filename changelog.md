@@ -9,6 +9,7 @@ This changelog is based off [Keep a Changelog](https://keepachangelog.com) and ~
   - Rich presence toggle now uses an environment variable
   - Removed build numbering
   - Removed the .sh files in the wrapper folder
+  - Node.js installer is now 17.5.0
 ### Fixed
 
 ## Version 1.2.3 - 2021-03-06 - i am HUNGRY FOR UPDATES!!!
