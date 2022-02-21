@@ -1,3 +1,4 @@
+// Special Thanks To David's Tv Studio for helping us fix the code to store starters in the list. IK that you spent hours on that code. but i credited you lol.
 const caché = require('../data/caché');
 const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
