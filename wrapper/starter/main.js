@@ -38,14 +38,13 @@ module.exports = {
 		});
 	},
 	list() {
-		const array = [];
-		const last = fUtil.getLastFileIndex('starter-', '.xml');
-		for (let c = last; c >= 0; c--) {
-			const movie = fs.existsSync(fUtil.getFileIndex('starter-', '.xml', c));
-			const thumb = fs.existsSync(fUtil.getFileIndex('starter-', '.png', c));
-			if (movie && thumb) array.push(`s-${c}`);
+		const table = [];
+		var ids = fUtil.getValidFileIndicies('starter-', '.xml');
+		for (const i in ids) {
+			var id = `s-${ids[i]}`;
+			table.unshift({ id: id });
 		}
-		return array;
+		return table;
 	},
 	async meta(movieId) {
 		if (!movieId.startsWith('s-')) return;
