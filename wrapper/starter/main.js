@@ -1,5 +1,3 @@
-// Special Thanks To David's Tv Studio for the code to store starters in the list. i know that you spent hours on that code. but i credited you lol.
-// i typed in the rest. i only needed one code from you witch is storing starters in a list.
 const caché = require('../data/caché');
 const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
@@ -39,13 +37,12 @@ module.exports = {
 			isNaN(n) ? rej() : res(fs.readFileSync(fn));
 		});
 	},
-	// this is what i am talking about here.
 	list() {
 		const table = [];
-		var ids = fUtil.getValidFileIndicies('starter-', '.xml');
-		for (const i in ids) {
-			var id = `s-${ids[i]}`;
-			table.unshift({ id: id });
+		const last = fUtil.getValidFileIndicies('starter-', '.xml');
+		for (const i in last) {
+			var id = `s-${last[i]}`;
+			table.unshift({ id: id })
 		}
 		return table;
 	},
