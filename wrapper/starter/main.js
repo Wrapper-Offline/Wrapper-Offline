@@ -24,7 +24,7 @@ module.exports = {
 			parse.unpackZip(zip, thumb).then(data => {
 				writeStream.write(data, () => {
 					writeStream.close();
-					res("s-" + sId);
+					res('s-' + sId);
 				});
 			});
                 });
@@ -43,7 +43,7 @@ module.exports = {
 		for (let c = last; c >= 0; c--) {
 			const movie = fs.existsSync(fUtil.getFileIndex('starter-', '.xml', c));
 			const thumb = fs.existsSync(fUtil.getFileIndex('starter-', '.png', c));
-			if (movie && thumb) array.push(`m-${c}`);
+			if (movie && thumb) array.push(`s-${c}`);
 		}
 		return array;
 	},
