@@ -12,10 +12,6 @@ For support, the first thing you should do is read through faq.txt, it most like
 ## Dependencies
 This program relies on Flash, Node.js and http-server to work properly. SilentCMD is also used to suppress all the extra logging noise you'd only need for troubleshooting and development. These all have been included with the project (utilities folder) to ensure full offline operation and will be installed if missing. The "wrapper" folder and http-server have their own dependencies, but they are included as well.
 
-## You Will Have To Read This!
-This Thing Will Be A Seperate Thing Where My Theme a.k.a Yugandar's World And Joseph Animate Will Fix The (Your Library TAB AND The Starters Too)
-So It Will Be A True W:O 1.2.3 Version!
-
 # License
 Most of this project is free/libre software[1] under the MIT license. You have the freedom to run, change, and share this as much as you want.
 This includes:
@@ -63,6 +59,7 @@ Wrapper: Offline credits:
 | KrisAnimate      | Chromium parameter                                     |
 | narutofan420     | W:O installer and updater                              |
 | PoleyMagik       | Client Modifications                                   |
+| Joseph Animate 2021 | starters fix                                        |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name               | Contribution                     |
