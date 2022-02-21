@@ -1,4 +1,5 @@
-// Special Thanks To David's Tv Studio for helping us fix the code to store starters in the list. IK that you spent hours on that code. but i credited you lol.
+// Special Thanks To David's Tv Studio for helping us fix the code to store starters in the list. i know that you spent hours on that code. but i credited you lol.
+// i typed in the rest. i only needed one code from you witch is storing starters in a list.
 const caché = require('../data/caché');
 const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
@@ -46,34 +47,5 @@ module.exports = {
 			table.unshift({ id: id });
 		}
 		return table;
-	},
-	async meta(movieId) {
-		if (!movieId.startsWith('s-')) return;
-		const n = Number.parseInt(movieId.substr(2));
-		const fn = fUtil.getFileIndex('starter-', '.xml', n);
-
-		const fd = fs.openSync(fn, 'r');
-		const buffer = Buffer.alloc(256);
-		fs.readSync(fd, buffer, 0, 256, 0);
-		const begTitle = buffer.indexOf('<title>') + 16;
-		const endTitle = buffer.indexOf(']]></title>');
-		const title = buffer.slice(begTitle, endTitle).toString().trim().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-		const begDuration = buffer.indexOf('duration="') + 10;
-		const endDuration = buffer.indexOf('"', begDuration);
-		const duration = Number.parseFloat(
-			buffer.slice(begDuration, endDuration));
-		const min = ('' + ~~(duration / 60)).padStart(2, '0');
-		const sec = ('' + ~~(duration % 60)).padStart(2, '0');
-		const durationStr = `${min}:${sec}`;
-
-		fs.closeSync(fd);
-		return {
-			date: fs.statSync(fn).mtime,
-			durationString: durationStr,
-			duration: duration,
-			title: title,
-			id: movieId,
-		};
 	},
 }
