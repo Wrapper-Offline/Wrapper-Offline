@@ -1,4 +1,4 @@
-// Special Thanks To David's Tv Studio for helping us fix the code to store starters in the list. i know that you spent hours on that code. but i credited you lol.
+// Special Thanks To David's Tv Studio for the code to store starters in the list. i know that you spent hours on that code. but i credited you lol.
 // i typed in the rest. i only needed one code from you witch is storing starters in a list.
 const caché = require('../data/caché');
 const parse = require('../data/parse');
