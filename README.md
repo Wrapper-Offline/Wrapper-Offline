@@ -45,21 +45,21 @@ No members of the original team are officially working on Offline, even if they 
 
 Project Lead will have (PL) on their name and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point, or left the development team.
 Wrapper: Offline credits:
-| Name             | Contribution                                           |
-| ---------------- | -------------------------------------------------------|
-| GoTest334 (PL)   | Current Project Lead                                   |
-| Benson (D)       | Wrapper: Offline                                       |
-| NathanSaturnBOI  | Logo                                                   |
-| Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
-| VisualPlugin     | Text to speech voices                                  |
-| xomdjl_          | VFProxy, Text to speech voices                         |
-| creepyjokes2000  | Waveform fix, improved actions                         |
-| JoshAnimate      | Headgear fix                                           |
-| RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
-| KrisAnimate      | Chromium parameter                                     |
-| narutofan420     | W:O installer and updater                              |
-| PoleyMagik       | Client Modifications                                   |
-| Joseph Animate 2021 | starters fix                                        |
+| Name                | Contribution                                           |
+| ----------------    | -------------------------------------------------------|
+| GoTest334 (PL)      | Current Project Lead                                   |
+| Benson (D)          | Wrapper: Offline                                       |
+| NathanSaturnBOI     | Logo                                                   |
+| Blukas/GoTube (D)   | Import idea, Mega Comedy World 2                       |
+| VisualPlugin        | Text to speech voices                                  |
+| xomdjl_             | VFProxy, Text to speech voices                         |
+| creepyjokes2000     | Waveform fix, improved actions                         |
+| JoshAnimate         | Headgear fix                                           |
+| RegularSpark        | Fixing 1.2.3 to actually work, truncated themelist     |
+| KrisAnimate         | Chromium parameter                                     |
+| narutofan420        | W:O installer and updater                              |
+| PoleyMagik          | Client Modifications                                   |
+| Joseph Animate 2021 | starters fix                                           |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name               | Contribution                     |
