@@ -39,6 +39,7 @@ module.exports = {
 			isNaN(n) ? rej() : res(fs.readFileSync(fn));
 		});
 	},
+	// this is what i am talking about here.
 	list() {
 		const table = [];
 		var ids = fUtil.getValidFileIndicies('starter-', '.xml');
