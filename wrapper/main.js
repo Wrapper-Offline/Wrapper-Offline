@@ -30,5 +30,5 @@ if (process.env.DISCORD_RPC && process.env.DISCORD_RPC == "y") {
 	// connect rpc to app
 	rpc
 		.login({ clientId: "866340172874383370" })
-		.catch(console.log("RPC connection failed."));
+		.catch((e) => console.log("RPC connection failed."));
 }
