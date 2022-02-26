@@ -270,14 +270,14 @@ if "!choice!"=="?7" (
 if "!choice!"=="8" goto rpcchange
 if "!choice!"=="?8" (
 	echo By default, Discord rich presence is enabled.
-        echo:
+    echo:
 	echo It's used to show when you're using Wrapper: Offline
-        echo in your "Playing A Game" status on Discord, much like
-        echo how lots of modern computer games will show on your
-        echo Discord status when you're playing them.
-        echo:
+    echo in your "Playing A Game" status on Discord, much like
+    echo how lots of modern computer games will show on your
+    echo Discord status when you're playing them.
+    echo:
 	echo Turning this off will make Offline stop saying
-        echo when you're using it on Discord.
+    echo when you're using it on Discord.
 	goto reaskoptionscreen
 )
 :: Cepstral
@@ -301,7 +301,7 @@ if "!choice!"=="?9" (
 )
 if "!choice!"=="10" goto vfproxyserverchange
 if "!choice!"=="?10" (
-	echo This setting runs the localhost version of xomdjl_'s VFProxy.
+	echo This setting runs the localhost version of VFProxy.
 	echo This makes it easier to use without having to use an external server.
 	echo:
 	echo However, some people seem to be having problems with this.
@@ -547,27 +547,23 @@ if exist "themelist-allthemes.xml" (
 popd
 goto optionscreen
 
-::::::::::::::::::
-:: Discord RPC  ::
-::::::::::::::::::
+:::::::::::::::::
+:: Discord RPC ::
+:::::::::::::::::
 :rpcchange
-echo Toggling setting...
-pushd wrapper
-if exist "main-norpc.js" (
-	:: disable
-	ren main.js main-rpc.js
-	ren main-norpc.js main.js
-) else ( 
-	:: enable
-	ren main.js main-norpc.js
-	ren main-rpc.js main.js
+:: Set RPC
+set TOTOGGLE=RPC
+set CFGLINE=41
+if !RPC!==n (
+	set TOGGLETO=y
+) else (
+	set TOGGLETO=n
 )
-popd
-goto optionscreen
+goto toggleoption
 
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
+::::::::::::::
+:: Cepstral ::
+::::::::::::::
 :cepstralchange
 echo Toggling setting...
 pushd wrapper\tts
@@ -591,9 +587,9 @@ set CFGLINE=35
 goto toggleoption
 goto optionscreen
 
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
+::::::::::::::
+:: Cepstral ::
+::::::::::::::
 :vfproxyserverchange
 echo Toggling setting...
 pushd wrapper\tts

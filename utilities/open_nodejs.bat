@@ -4,8 +4,19 @@
 @echo off
 pushd "%~dp0"
 title NODE.JS HASN'T STARTED YET
+call config.bat
 pushd ..\wrapper
+
+:::::::::::::::::::
+:: Node.js stuff ::
+:::::::::::::::::::
+
+:: set environment variables
+set DISCORD_RPC=%RPC%
+:: start wrapper
 npm start
+
+:: this only happens if node crashes
 echo:
 echo If you see an error saying "npm is not recognized",
 echo please install Node.js from nodejs.org.

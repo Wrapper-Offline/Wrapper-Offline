@@ -48,16 +48,16 @@ Wrapper: Offline credits:
 | Name             | Contribution                                           |
 | ---------------- | -------------------------------------------------------|
 | GoTest334 (PL)   | Current Project Lead                                   |
-| Benson (D)       | Wrapper: Offline                                       |
+| Benson           | Wrapper: Offline                                       |
 | NathanSaturnBOI  | Logo                                                   |
 | Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
 | VisualPlugin     | Text to speech voices                                  |
 | xomdjl_          | VFProxy, Text to speech voices                         |
 | creepyjokes2000  | Waveform fix, improved actions                         |
 | JoshAnimate      | Headgear fix                                           |
-| RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
+| RegularSpark (D) | Fixing 1.2.3 to actually work, truncated themelist     |
 | KrisAnimate      | Chromium parameter                                     |
-| narutofan420     | W:O installer and updater                              |
+| tetradual (D)    | W:O indev branch                                       |
 | PoleyMagik       | Client Modifications                                   |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
