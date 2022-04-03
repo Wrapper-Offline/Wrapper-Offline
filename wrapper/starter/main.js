@@ -24,14 +24,14 @@ module.exports = {
 			parse.unpackZip(zip, thumb).then(data => {
 				writeStream.write(data, () => {
 					writeStream.close();
-					res('0' + sId);
+					res('0-' + sId);
 				});
 			});
                 });
 	},
 	thumb(movieId) {
 		return new Promise((res, rej) => {
-			if (!movieId.startsWith('0')) return;
+			if (!movieId.startsWith('0-')) return;
 			const n = Number.parseInt(movieId.substr(2));
 			const fn = fUtil.getFileIndex('starter-', '.png', n);
 			isNaN(n) ? rej() : res(fs.readFileSync(fn));
@@ -41,7 +41,7 @@ module.exports = {
 		const table = [];
 		var ids = fUtil.getValidFileIndicies('starter-', '.xml');
 		for (const i in ids) {
-			var id = `0${ids[i]}`;
+			var id = `0-${ids[i]}`;
 			table.unshift({ id: id });
 		}
 		return table;
