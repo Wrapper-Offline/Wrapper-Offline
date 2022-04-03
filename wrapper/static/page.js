@@ -200,6 +200,14 @@ module.exports = function (req, res, url) {
 	</header>
 	
 	<body style="margin:0px" onload="hideHeader()">${toObjectString(attrs, params)
-		}</body>${stuff.pages[url.pathname] || ''}`);
+		}</body>${stuff.pages[url.pathname] || ''}
+		
+        <form enctype='multipart/form-data' action='/upload_movie' method='post'>
+	         <input id='file' type="file" onchange="this.form.submit()" name='import' />
+        </form>
+
+        <form enctype='multipart/form-data' action='/upload_character' method='post'>
+	         <input id='file2' type="file" onchange="this.form.submit()" name='import' />
+        </form>`);
 	return true;
 }
