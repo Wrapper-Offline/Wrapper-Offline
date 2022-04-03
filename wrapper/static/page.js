@@ -125,8 +125,7 @@ module.exports = function (req, res, url) {
 	}
 	res.setHeader('Content-Type', 'text/html; charset=UTF-8');
 	Object.assign(params.flashvars, query);
-	res.end(`
-	<head>
+	res.end(`<head>
 		<script>
 			document.title='${title}',flashvars=${JSON.stringify(params.flashvars)}
 		</script>
