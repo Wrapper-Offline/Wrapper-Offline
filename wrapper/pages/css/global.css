@@ -1,6 +1,7 @@
 /***
 this css has the general header/footer layout stuff
 ***/
+@import url("./modern-normalize.css");
 
 /**
 general
@@ -8,13 +9,20 @@ general
 html, body {
 	background: #fff;
 	color: #474747;
-	font: 16px/1.5 'Sailec', Arial, sans-serif;
+	font: 15.5px/1.5 'Sailec', Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 }
 body {
-	display: flex; 
-	flex-direction: column; 
+	display: flex;
+	flex-direction: column;
+}
+main {
+	padding: 20px 40px;
+}
+html.dark, html.dark body {
+	background: #000000;
+	color: #ccc;
 }
 
 
@@ -26,50 +34,53 @@ header {
 	background: #1e1e1e;
 	color: #fff;
 	text-align: center;
-	padding-bottom: 13px;
+	padding-bottom: 15px;
 	padding: 0 15px;
 	display: flex;
 	justify-content: space-between;
 	flex-shrink: 0;
 }
 /* makes the header a set height when the window is 887px wide */
-@media (min-width: 887px) {
+@media (min-width: 890px) {
 	header {
 		padding-bottom: auto;
-		height: 44px;
+		height: 45px;
 	}
 }
 #logo {
-	margin-top: 4px;
+	margin-top: 5px;
 	height: 35px;
 }
 /* buttons */
 .button_big,
 .button_small {
 	/* style */
-	font-size: 14px;
+	font-size: 15px;
 	text-decoration: none;
 	color: #fff;
-	border-radius: 6px;
+	border-radius: 5px;
 	/* layout */
 	display: inline-block;
 	padding: 5px 10px;
-	margin: 6px 5px;
+	margin: 5px 5px;
 }
 .button_big:hover,
 .button_small:hover {
 	cursor: pointer;
 }
 /* small buttons */
-.button_small       { background: #333 }
-.button_small:hover { background: #444; color: #d85e27 }
+.button_small       { background: #000000; color: #ffffff; transition: 1s;
+ }
+.button_small:hover { background: #2c2c2c; color: #d85e27
+ }
 /* big buttons */
 .button_big {
-	background-color: #00FFFF;
-	width: 160px;
+	background-color: #ff7433;
+	width: 155px;
+	transition: 1s;
 }
 .button_big:hover {
-	text-decoration: underline;
+	background-color: #ff5100;
 }
 
 
@@ -77,7 +88,7 @@ header {
 header dropdowns
 **/
 /* change button margin/padding to fit dropdown */
-.dropdown_contain { padding: 0; margin: 6px 5px; }
+.dropdown_contain { padding: 0; margin: 5px 5px; }
 .dropdown_button { margin: 0; padding: 5px 10px; }
 .upload_button { margin: 0; padding: 5px 25px; }
 /* make dropdown appear on hover */
@@ -88,12 +99,12 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #444;
-	border-radius: 6px;
+	background-color: #2c2c2c;
+	border-radius: 5px;
 	/* layout */
 	width: 100%;
-	padding: 10px 0;
-	margin: 0;
+	padding: 5px 0;
+	margin: -10.5;
 	text-align: left;
 	/* hover stuff */
 	position: relative;
@@ -103,11 +114,12 @@ header dropdowns
 /* dropdown links */
 .dropdown_menu>a {
 	/* style */
+	font-size: 15.5px;
 	color: #ddd;
 	text-decoration: none;
 	/* layout */
 	display: block;
-	padding: 2px 20px;
+	padding: 0px 15px;
 }
 .dropdown_menu>a:hover {
 	background: #222;
@@ -118,16 +130,16 @@ header dropdowns
 .dropdown_menu>h2 {
 	/* style */
 	color: #fff;
-	font-size: 15px;
+	font-size: 20px;
 	/* layout */
 	margin:0;
-	padding:2px 20px;
+	padding:0 20px;
 }
 .dropdown_menu>hr {
-	border: 1px solid #222;
+	border: 1px solid #ff5100;
 	margin: 10px 0;
-}
 
+}
 
 /**
 footer
@@ -139,6 +151,18 @@ footer{
 	justify-content: space-between;
 	flex-shrink: 0;
 }
+ .fab, .fas {
+	padding: 5px;
+	font-size: 20.5px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 1px 0px;
+	border-radius: 50%;
+	transition: 1s;
+  }
+.fab:hover { color: orange;}
+.fas:hover { color: orange;}
 footer nav { margin:5px 10px}
 /* links */
 footer a {
@@ -146,10 +170,9 @@ footer a {
 	text-decoration:none;
 	margin: 0 10px;
 	font-weight: bold;
+	margin-top: 10%;
 }
-footer a:hover {
-	text-decoration: underline;
-}
+footer a:hover { color: orange;}
 
 /**
 font importing

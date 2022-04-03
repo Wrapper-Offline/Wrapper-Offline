@@ -1,125 +1,170 @@
+/***
+this css has the video list stuff
+***/
+
+/**
+basic table stuff
+**/
+/* the table itself */
 table {
-	width: 100%;
-	max-width: 100%;
-	margin-bottom: 127px;
-	margin-right: auto;
-	margin-left: auto;
+	/* style */
 	background-color: transparent;
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-size: 14px;
+	font-size: 15.5px;
+	/* layout */
+	width: 100%;
+	max-width: 100%;
+	margin-top: 70px;
+	margin-bottom: 125px;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-@media(min-width: 768px) {
+/* different table width */
+@media(min-width: 765px) {
 	table {
 		width: 750px;
 	}
 }
-
-@media(min-width: 992px) {
+@media(min-width: 990px) {
 	table {
 		width: 970px;
 	}
 }
-
 @media(min-width: 1200px) {
 	table {
-		width: 1170px;
+		width: 1150px;
 	}
 }
-
+/* table head */
 thead {
 	font-weight: 200;
-}
-
-td {
-	padding: 8px;
-	vertical-align: middle;
-	line-height: 1.42857143;
-}
-
-thead {
+	border-top: 1px solid #ddd;
 	border-bottom: 2px solid #ddd;
 }
-
+.dark thead {
+	border-top: 1px solid #303030;
+	border-bottom: 2px solid #303030;
+}
+/* all video rows */
 tbody>tr {
 	border-top: 0;
 	border-bottom: 1px solid #ddd;
 }
-
+.dark tbody>tr {
+	border-bottom: 1px solid #303030;
+}
 tbody>tr:hover {
-	background-color: #f5f5f5;
+	background: #f5f5f5;
+}
+.dark tbody>tr:hover {
+	background-color: #151515;
+}
+/* table data */
+td {
+	padding: 5px;
+	vertical-align: middle;
+	line-height: 1.5;
 }
 
+/**
+thumbnail
+**/
+/* thumbnail container */
 tr>:nth-child(1) {
-	width: 64px;
-}
-
-tr>:nth-child(1)>img {
-	height: 36px;
-}
-
-tr>:nth-child(1) {
+	width: 65px;
 	word-break: break-word;
 }
-
-tr>:nth-child(2) {
-	color: #999;
+/* the thumbnail */
+tr>:nth-child(1)>img {
+	height: 35px;
 }
 
+/**
+date modified
+**/
+/* date modified container */
 tr>:nth-child(3) {
-	width: 250px;
+	width: 140px;
 }
-
+/* everything inside the date modified container */
 tr>:nth-child(3)>* {
-	display: inline-block;
+	/* style */
 	text-align: center;
 	font-size: 12px;
-	width: 8.5px;
+	/* layout */
+	display: inline;
+	letter-spacing: 1.5px;
 }
 
+/**
+video data
+**/
+tr>:nth-child(2)>:nth-child(2) {
+	font-size: 12px;
+}
+
+/**
+buttons
+**/
+/* buttons container */
 tr>:nth-child(4) {
+	/* style */
 	font-family: 'GlyphiconsRegular';
 	text-decoration: none;
-	padding-top: 5px;
 	font-size: 14px;
-	width: 90px;
+	/* layout */
+	padding-top: 5px;
+	width: 120px;
 }
-
+/* the buttons */
 tr>:nth-child(4)>a {
-	display: inline-block;
+	/* style */
+	color: #3d3d3d;
 	text-decoration: none;
+	/* layout */
+	display: inline-block;
 	padding-right: 10px;
-	color: #474747;
 }
-
+.dark tr>:nth-child(4)>a {
+	color: #ccc;
+}
 tr>:nth-child(4)>a:hover {
 	color: #d85e27;
 }
-
+/* play button */
 tr>:nth-child(4)>:nth-child(1)::before {
 	content: '\E174';
 }
-
+/* edit button */
 tr>:nth-child(4)>:nth-child(2)::before {
 	content: '\E235';
 }
-
+/* download button */
 tr>:nth-child(4)>:nth-child(3)::before {
 	content: '\E182';
 }
+/* delete button */
+tr>:nth-child(4)>:nth-child(4)::before {
+	content: '\E017';
+}
 
+/**
+table footer stuff
+**/
 tfoot>tr>td {
 	text-align: center;
 	border: none;
 }
-
+/* load more */
 tfoot>tr>td>a {
+	/* style */
 	text-decoration: none;
-	color: #474747;
-	font-size: 14px;
+	color: #ffffff;
+	font-size: 15.5px;
 }
 
-form {
-	display: none;
-}
+/**
+file upload form
+**/
+form { display: none }
