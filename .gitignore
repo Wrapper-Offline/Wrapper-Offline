@@ -17,16 +17,9 @@ utilities/grounded_md5.txt
 utilities/md5.txt
 utilities/convmd5.txt
 utilities/originalcfname.txt
-server/characters/*
-server/characters/characters.zip
 server/store/3a981f5cb2739137/import/*
-server/store/3a981f5cb2739137/cc_store/family/cc_theme.xml
 server/store/3a981f5cb2739137/import/import.zip
 server/store/3a981f5cb2739137/import/theme.xml
-server/store/3a981f5cb2739137/business/*
-server/store/3a981f5cb2739137/whiteboard/*
-server/store/3a981f5cb2739137/infographics/*
-server/store/3a981f5cb2739137/commoncraft/*
 .DS_Store
 .DS_Store
 vfproxy/*
