@@ -10,4 +10,4 @@ echo:
 echo If you see an error saying "http-server is not recognized",
 echo please type "npm install http-server -g" in this window,
 echo press enter, and restart Wrapper: Offline.
-pause & exit
+pause & exit /B

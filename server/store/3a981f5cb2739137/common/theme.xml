@@ -19182,535 +19182,94 @@
 	<sound id="white_noise_18db_loop.mp3" name="FX - White noise 18db" downloadtype="progressive" subtype="soundeffect" duration="30877" enable="Y" is_premium="N" aid="27748" money="0" sharing="0"/>
 	<sound id="wind_blustery_01_loop.mp3" name="Ambience - Wind blustery" downloadtype="progressive" subtype="soundeffect" duration="21969" enable="Y" is_premium="N" aid="27749" money="0" sharing="0"/>
 	<sound id="young_girl_scream_01.mp3" name="FX - Scream - female" downloadtype="progressive" subtype="soundeffect" duration="731" enable="Y" is_premium="N" aid="27750" money="0" sharing="0"/>
-	<sound id="122_short_dance_of_the_sugar_plum_fairy_0061.mp3" name="Dance of the Sugar Plum Fairy" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28101" money="0" sharing="0">
-		<variation id="122_short_dance_of_the_sugar_plum_fairy_0019.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="18051" enable="Y" is_premium="N" aid="28102" money="0" sharing="0"/>
-		<variation id="122_short_dance_of_the_sugar_plum_fairy_0035.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34560" enable="Y" is_premium="N" aid="28103" money="0" sharing="0"/>
-	</sound>
-	<sound id="129_short_deck_the_hall_jazz_classic_0069.mp3" name="Deck the Hall (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="68728" enable="Y" is_premium="N" aid="28104" money="0" sharing="0">
-		<variation id="129_short_deck_the_hall_jazz_classic_0024.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24033" enable="Y" is_premium="N" aid="28105" money="0" sharing="0"/>
-		<variation id="129_short_deck_the_hall_jazz_classic_0041.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="40229" enable="Y" is_premium="N" aid="28106" money="0" sharing="0"/>
-	</sound>
-	<sound id="135_short_silent_night_2_0069.mp3" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="68441" enable="Y" is_premium="N" aid="28107" money="0" sharing="0">
-		<variation id="135_short_silent_night_2_0016.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15647" enable="Y" is_premium="N" aid="28108" money="0" sharing="0"/>
-		<variation id="135_short_silent_night_2_0031.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30642" enable="Y" is_premium="N" aid="28109" money="0" sharing="0"/>
-	</sound>
-	<sound id="129_short_we_wish_you_a_merry_christmas_jazz_classic_0070.mp3" name="We Wish You a Merry Christmas (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28110" money="0" sharing="0">
-		<variation id="129_short_we_wish_you_a_merry_christmas_jazz_classic_0024.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="23327" enable="Y" is_premium="N" aid="28111" money="0" sharing="0"/>
-		<variation id="129_short_we_wish_you_a_merry_christmas_jazz_classic_0041.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="40281" enable="Y" is_premium="N" aid="28112" money="0" sharing="0"/>
-	</sound>
-	<sound id="85_short_bossa_story_0061.mp3" name="Bossa Story" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28113" money="0" sharing="0">
-		<variation id="85_short_bossa_story_0016.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15464" enable="Y" is_premium="N" aid="28114" money="0" sharing="0"/>
-		<variation id="85_short_bossa_story_0031.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30250" enable="Y" is_premium="N" aid="28115" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_funky_mama_0063.mp3" name="Funky Mama" downloadtype="progressive" subtype="bgmusic" duration="62851" enable="Y" is_premium="N" aid="28116" money="0" sharing="0">
-		<variation id="12_short_funky_mama_0018.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="17972" enable="Y" is_premium="N" aid="28117" money="0" sharing="0"/>
-		<variation id="12_short_funky_mama_0034.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33672" enable="Y" is_premium="N" aid="28118" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_happy_go_lucky_0068.mp3" name="Happy Go Lucky" downloadtype="progressive" subtype="bgmusic" duration="67318" enable="Y" is_premium="N" aid="28119" money="0" sharing="0">
-		<variation id="12_short_happy_go_lucky_0023.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="22073" enable="Y" is_premium="N" aid="28120" money="0" sharing="0"/>
-		<variation id="12_short_happy_go_lucky_0039.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="38191" enable="Y" is_premium="N" aid="28121" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_havana_moon_0070.mp3" name="Havana Moon" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28122" money="0" sharing="0">
-		<variation id="12_short_havana_moon_0024.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24033" enable="Y" is_premium="N" aid="28123" money="0" sharing="0"/>
-		<variation id="12_short_havana_moon_0039.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="38165" enable="Y" is_premium="N" aid="28124" money="0" sharing="0"/>
-	</sound>
-	<sound id="116_short_imagine_anything_0061.mp3" name="Imagine Anything" downloadtype="progressive" subtype="bgmusic" duration="60160" enable="Y" is_premium="N" aid="28125" money="0" sharing="0">
-		<variation id="116_short_imagine_anything_0016.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15334" enable="Y" is_premium="N" aid="28126" money="0" sharing="0"/>
-		<variation id="116_short_imagine_anything_0030.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="29780" enable="Y" is_premium="N" aid="28127" money="0" sharing="0"/>
-	</sound>
-	<sound id="175_short_picnic_for_two_0062.mp3" name="Picnic For Two" downloadtype="progressive" subtype="bgmusic" duration="61231" enable="Y" is_premium="N" aid="28128" money="0" sharing="0">
-		<variation id="175_short_picnic_for_two_0017.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="16405" enable="Y" is_premium="N" aid="28129" money="0" sharing="0"/>
-		<variation id="175_short_picnic_for_two_0032.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31765" enable="Y" is_premium="N" aid="28130" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_secret_garden_0070.mp3" name="Secret Garden" downloadtype="progressive" subtype="bgmusic" duration="69642" enable="Y" is_premium="N" aid="28131" money="0" sharing="0">
-		<variation id="12_short_secret_garden_0026.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="25234" enable="Y" is_premium="N" aid="28132" money="0" sharing="0"/>
-		<variation id="12_short_secret_garden_0040.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="39628" enable="Y" is_premium="N" aid="28133" money="0" sharing="0"/>
-	</sound>
-	<sound id="156_short_smile_0071.mp3" name="Smile" downloadtype="progressive" subtype="bgmusic" duration="70243" enable="Y" is_premium="N" aid="28134" money="0" sharing="0">
-		<variation id="156_short_smile_0023.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="22230" enable="Y" is_premium="N" aid="28135" money="0" sharing="0"/>
-		<variation id="156_short_smile_0037.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="36650" enable="Y" is_premium="N" aid="28136" money="0" sharing="0"/>
-	</sound>
-	<sound id="136_full_smilin_0247.mp3" name="Smilin'" downloadtype="progressive" subtype="bgmusic" duration="246857" enable="Y" is_premium="N" aid="28137" money="0" sharing="0">
-		<variation id="136_short_smilin_0021.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20428" enable="Y" is_premium="N" aid="28138" money="0" sharing="0"/>
-		<variation id="136_short_smilin_0036.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="35997" enable="Y" is_premium="N" aid="28139" money="0" sharing="0"/>
-		<variation id="136_short_smilin_0069.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="68937" enable="Y" is_premium="N" aid="28140" money="0" sharing="0"/>
-	</sound>
-	<sound id="47_short_soul_mate_0062.mp3" name="Soul Mate" downloadtype="progressive" subtype="bgmusic" duration="61544" enable="Y" is_premium="N" aid="28141" money="0" sharing="0">
-		<variation id="47_short_soul_mate_0017.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="16771" enable="Y" is_premium="N" aid="28142" money="0" sharing="0"/>
-		<variation id="47_short_soul_mate_0034.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33620" enable="Y" is_premium="N" aid="28143" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_sunny_side_of_the_road_0067.mp3" name="Sunny Side Of The Road" downloadtype="progressive" subtype="bgmusic" duration="66482" enable="Y" is_premium="N" aid="28144" money="0" sharing="0">
-		<variation id="12_short_sunny_side_of_the_road_0022.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="21238" enable="Y" is_premium="N" aid="28145" money="0" sharing="0"/>
-		<variation id="12_short_sunny_side_of_the_road_0037.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="36937" enable="Y" is_premium="N" aid="28146" money="0" sharing="0"/>
-	</sound>
-	<sound id="116_short_turn_back_around_0061.mp3" name="Turn Back Around" downloadtype="progressive" subtype="bgmusic" duration="60186" enable="Y" is_premium="N" aid="28147" money="0" sharing="0">
-		<variation id="116_short_turn_back_around_0018.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="17763" enable="Y" is_premium="N" aid="28148" money="0" sharing="0"/>
-		<variation id="116_short_turn_back_around_0033.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32131" enable="Y" is_premium="N" aid="28149" money="0" sharing="0"/>
-	</sound>
-	<sound id="125_short_waikiki_0063.mp3" name="Waikiki" downloadtype="progressive" subtype="bgmusic" duration="63033" enable="Y" is_premium="N" aid="28150" money="0" sharing="0">
-		<variation id="125_short_waikiki_0017.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="17032" enable="Y" is_premium="N" aid="28151" money="0" sharing="0"/>
-		<variation id="125_short_waikiki_0033.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32549" enable="Y" is_premium="N" aid="28152" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_short_yellow_carousel_0069.mp3" name="Yellow Carousel" downloadtype="progressive" subtype="bgmusic" duration="68336" enable="Y" is_premium="N" aid="28153" money="0" sharing="0">
-		<variation id="12_short_yellow_carousel_0024.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="23458" enable="Y" is_premium="N" aid="28154" money="0" sharing="0"/>
-		<variation id="12_short_yellow_carousel_0038.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="37120" enable="Y" is_premium="N" aid="28155" money="0" sharing="0"/>
-	</sound>
-	<sound id="136_loop1_beautiful_day_0014.mp3" name="Beautiful Day" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28156" money="0" sharing="0">
-		<variation id="136_loop2_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28157" money="0" sharing="0"/>
-		<variation id="136_loop3_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28158" money="0" sharing="0"/>
-		<variation id="136_loop4_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28159" money="0" sharing="0"/>
-		<variation id="136_loop5_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28160" money="0" sharing="0"/>
-		<variation id="136_loop6_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28161" money="0" sharing="0"/>
-		<variation id="136_loop7_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28162" money="0" sharing="0"/>
-		<variation id="136_loop8_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28163" money="0" sharing="0"/>
-		<variation id="136_loop9_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28164" money="0" sharing="0"/>
-		<variation id="136_loop10_beautiful_day_0014.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28165" money="0" sharing="0"/>
-	</sound>
-	<sound id="12_loop9_field_of_dreams_0010.mp3" name="Field of Dreams" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28166" money="0" sharing="0">
-		<variation id="12_loop1_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28167" money="0" sharing="0"/>
-		<variation id="12_loop2_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28168" money="0" sharing="0"/>
-		<variation id="12_loop3_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28169" money="0" sharing="0"/>
-		<variation id="12_loop4_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28170" money="0" sharing="0"/>
-		<variation id="12_loop5_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28171" money="0" sharing="0"/>
-		<variation id="12_loop6_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28172" money="0" sharing="0"/>
-		<variation id="12_loop7_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28173" money="0" sharing="0"/>
-		<variation id="12_loop8_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28174" money="0" sharing="0"/>
-		<variation id="12_loop10_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28175" money="0" sharing="0"/>
-		<variation id="12_loop11_field_of_dreams_0010.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28176" money="0" sharing="0"/>
-	</sound>
-	<sound id="168_loop6_almost_back_to_life_0018.mp3" name="Almost Back to Life" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28177" money="0" sharing="0">
-		<variation id="168_loop1_almost_back_to_life_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28178" money="0" sharing="0"/>
-		<variation id="168_loop2_almost_back_to_life_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28179" money="0" sharing="0"/>
-		<variation id="168_loop3_almost_back_to_life_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28180" money="0" sharing="0"/>
-		<variation id="168_loop4_almost_back_to_life_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28181" money="0" sharing="0"/>
-		<variation id="168_loop5_almost_back_to_life_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28182" money="0" sharing="0"/>
-		<variation id="168_loop7_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28183" money="0" sharing="0"/>
-		<variation id="168_loop8_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28184" money="0" sharing="0"/>
-		<variation id="168_loop9_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28185" money="0" sharing="0"/>
-		<variation id="168_loop10_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28186" money="0" sharing="0"/>
-		<variation id="168_loop11_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28187" money="0" sharing="0"/>
-		<variation id="168_loop12_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28188" money="0" sharing="0"/>
-		<variation id="168_loop13_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28189" money="0" sharing="0"/>
-		<variation id="168_loop14_almost_back_to_life_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28190" money="0" sharing="0"/>
-	</sound>
-	<sound id="114_loop2_sliver_of_light_0018.mp3" name="Silver of Light" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28191" money="0" sharing="0">
-		<variation id="114_loop1_sliver_of_light_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8620" enable="Y" is_premium="N" aid="28192" money="0" sharing="0"/>
-		<variation id="114_loop3_sliver_of_light_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28193" money="0" sharing="0"/>
-		<variation id="114_loop4_sliver_of_light_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28194" money="0" sharing="0"/>
-		<variation id="114_loop5_sliver_of_light_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28195" money="0" sharing="0"/>
-		<variation id="114_loop6_sliver_of_light_0018.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28196" money="0" sharing="0"/>
-	</sound>
-	<sound id="174_loop3_happy_face_2_0009.mp3" name="Happy Face" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28197" money="0" sharing="0">
-		<variation id="174_loop1_happy_face_2_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28198" money="0" sharing="0"/>
-		<variation id="174_loop2_happy_face_2_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28199" money="0" sharing="0"/>
-		<variation id="174_loop4_happy_face_2_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28200" money="0" sharing="0"/>
-		<variation id="174_loop5_happy_face_2_0009.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28201" money="0" sharing="0"/>
-	</sound>
-	<sound id="acoustica_full.mp3" name="Acoustica" downloadtype="progressive" subtype="bgmusic" duration="135105" enable="Y" is_premium="N" aid="28202" money="0" sharing="0" min_ut="30">
-		<variation id="acoustica_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="28264" enable="Y" is_premium="N" aid="28203" money="0" sharing="0"/>
-		<variation id="acoustica_60_loop.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="61100" enable="Y" is_premium="N" aid="28204" money="0" sharing="0"/>
-		<variation id="acoustica_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="63033" enable="Y" is_premium="N" aid="28205" money="0" sharing="0"/>
-		<variation id="acoustica_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17476" enable="Y" is_premium="N" aid="28206" money="0" sharing="0"/>
-		<variation id="acoustica_loop_b.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17476" enable="Y" is_premium="N" aid="28207" money="0" sharing="0"/>
-		<variation id="acoustica_loop_c.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="17476" enable="Y" is_premium="N" aid="28208" money="0" sharing="0"/>
-		<variation id="acoustica_stinger.mp3" name="Stinger" downloadtype="progressive" subtype="bgmusic" duration="5512" enable="Y" is_premium="N" aid="28209" money="0" sharing="0"/>
-		<variation id="acoustica_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="3213" enable="Y" is_premium="N" aid="28210" money="0" sharing="0"/>
-	</sound>
-	<sound id="bakersfield_60.mp3" name="Bakersfield" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28211" money="0" sharing="0" min_ut="30">
-		<variation id="bakersfield_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="29727" enable="Y" is_premium="N" aid="28212" money="0" sharing="0"/>
-		<variation id="bakersfield_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="5590" enable="Y" is_premium="N" aid="28213" money="0" sharing="0"/>
-		<variation id="bakersfield_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="5590" enable="Y" is_premium="N" aid="28214" money="0" sharing="0"/>
-		<variation id="bakersfield_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="5590" enable="Y" is_premium="N" aid="28215" money="0" sharing="0"/>
-		<variation id="bakersfield_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="1228" enable="Y" is_premium="N" aid="28216" money="0" sharing="0"/>
-	</sound>
-	<sound id="barnfire_60.mp3" name="Barnfire" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28217" money="0" sharing="0" min_ut="30">
-		<variation id="barnfire_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31791" enable="Y" is_premium="N" aid="28218" money="0" sharing="0"/>
-		<variation id="barnfire_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28219" money="0" sharing="0"/>
-		<variation id="barnfire_loop_b_organ.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28220" money="0" sharing="0"/>
-		<variation id="barnfire_loop_c_organ.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28221" money="0" sharing="0"/>
-		<variation id="barnfire_tag_organ.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="4049" enable="Y" is_premium="N" aid="28222" money="0" sharing="0"/>
-	</sound>
-	<sound id="bluehenry60.mp3" name="Bluehenry" downloadtype="progressive" subtype="bgmusic" duration="60996" enable="Y" is_premium="N" aid="28223" money="0" sharing="0" min_ut="30">
-		<variation id="bluehenry30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30511" enable="Y" is_premium="N" aid="28224" money="0" sharing="0"/>
-	</sound>
-	<sound id="fruitbear_60.mp3" name="Fruitbear" downloadtype="progressive" subtype="bgmusic" duration="64183" enable="Y" is_premium="N" aid="28225" money="0" sharing="0" min_ut="30">
-		<variation id="fruitbear_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33280" enable="Y" is_premium="N" aid="28226" money="0" sharing="0"/>
-		<variation id="fruitbear_47loop.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="47256" enable="Y" is_premium="N" aid="28227" money="0" sharing="0"/>
-		<variation id="fruitbear_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7915" enable="Y" is_premium="N" aid="28228" money="0" sharing="0"/>
-		<variation id="fruitbear_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15778" enable="Y" is_premium="N" aid="28229" money="0" sharing="0"/>
-		<variation id="fruitbear_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7915" enable="Y" is_premium="N" aid="28230" money="0" sharing="0"/>
-		<variation id="fruitbear_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15778" enable="Y" is_premium="N" aid="28231" money="0" sharing="0"/>
-		<variation id="fruitbear_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="9613" enable="Y" is_premium="N" aid="28232" money="0" sharing="0"/>
-	</sound>
-	<sound id="healinghands_60.mp3" name="Healing Hands" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28233" money="0" sharing="0" min_ut="30">
-		<variation id="healinghands_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34743" enable="Y" is_premium="N" aid="28234" money="0" sharing="0"/>
-		<variation id="healinghands_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28235" money="0" sharing="0"/>
-		<variation id="healinghands_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28236" money="0" sharing="0"/>
-		<variation id="healinghands_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28237" money="0" sharing="0"/>
-		<variation id="healinghands_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28238" money="0" sharing="0"/>
-	</sound>
-	<sound id="hibiscus60.mp3" name="Hibiscus" downloadtype="progressive" subtype="bgmusic" duration="69042" enable="Y" is_premium="N" aid="28239" money="0" sharing="0" min_ut="30">
-		<variation id="hibiscus_loopa.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="12042" enable="Y" is_premium="N" aid="28240" money="0" sharing="0"/>
-		<variation id="hibiscus_loopb.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="12042" enable="Y" is_premium="N" aid="28241" money="0" sharing="0"/>
-		<variation id="hibiscus30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="39027" enable="Y" is_premium="N" aid="28242" money="0" sharing="0"/>
-	</sound>
-	<sound id="hillbilly_bootstomp_60.mp3" name="Hillbilly Bootstomp" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28243" money="0" sharing="0" min_ut="30">
-		<variation id="hillbilly_bootstomp_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33489" enable="Y" is_premium="N" aid="28244" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="55275" enable="Y" is_premium="N" aid="28245" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28246" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="4833" enable="Y" is_premium="N" aid="28247" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28248" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28249" money="0" sharing="0"/>
-		<variation id="hillbilly_bootstomp_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="8281" enable="Y" is_premium="N" aid="28250" money="0" sharing="0"/>
-	</sound>
-	<sound id="spoonful_of_ginger_60.mp3" name="Spoonful of Ginger" downloadtype="progressive" subtype="bgmusic" duration="61884" enable="Y" is_premium="N" aid="28251" money="0" sharing="0" min_ut="30">
-		<variation id="spoonful_of_ginger_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32392" enable="Y" is_premium="N" aid="28252" money="0" sharing="0"/>
-		<variation id="spoonful_of_ginger_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32601" enable="Y" is_premium="N" aid="28253" money="0" sharing="0"/>
-		<variation id="spoonful_of_ginger_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28254" money="0" sharing="0"/>
-		<variation id="spoonful_of_ginger_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28255" money="0" sharing="0"/>
-		<variation id="spoonful_of_ginger_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28256" money="0" sharing="0"/>
-		<variation id="spoonful_of_ginger_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28257" money="0" sharing="0"/>
-	</sound>
-	<sound id="sunnysideup_60.mp3" name="Sunny Side Up" downloadtype="progressive" subtype="bgmusic" duration="64758" enable="Y" is_premium="N" aid="28258" money="0" sharing="0" min_ut="30">
-		<variation id="sunnysideup_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32784" enable="Y" is_premium="N" aid="28259" money="0" sharing="0"/>
-		<variation id="sunnysideup_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32914" enable="Y" is_premium="N" aid="28260" money="0" sharing="0"/>
-		<variation id="sunnysideup_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28261" money="0" sharing="0"/>
-		<variation id="sunnysideup_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="16039" enable="Y" is_premium="N" aid="28262" money="0" sharing="0"/>
-		<variation id="sunnysideup_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28263" money="0" sharing="0"/>
-	</sound>
-	<sound id="test_of_time_full.mp3" name="Test of Time" downloadtype="progressive" subtype="bgmusic" duration="96627" enable="Y" is_premium="N" aid="28264" money="0" sharing="0" min_ut="30">
-		<variation id="test_of_time_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34952" enable="Y" is_premium="N" aid="28265" money="0" sharing="0"/>
-		<variation id="test_of_time_60v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62171" enable="Y" is_premium="N" aid="28266" money="0" sharing="0"/>
-		<variation id="test_of_time_60v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28267" money="0" sharing="0"/>
-		<variation id="test_of_time_78loop.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="79229" enable="Y" is_premium="N" aid="28268" money="0" sharing="0"/>
-		<variation id="test_of_time_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="26436" enable="Y" is_premium="N" aid="28269" money="0" sharing="0"/>
-		<variation id="test_of_time_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="26436" enable="Y" is_premium="N" aid="28270" money="0" sharing="0"/>
-		<variation id="test_of_time_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="26436" enable="Y" is_premium="N" aid="28271" money="0" sharing="0"/>
-		<variation id="test_of_time_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="7732" enable="Y" is_premium="N" aid="28272" money="0" sharing="0"/>
-	</sound>
-	<sound id="tongueandcheek_60.mp3" name="Tongue and Cheek" downloadtype="progressive" subtype="bgmusic" duration="57913" enable="Y" is_premium="N" aid="28273" money="0" sharing="0" min_ut="30">
-		<variation id="tongueandcheek_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34482" enable="Y" is_premium="N" aid="28274" money="0" sharing="0"/>
-		<variation id="tongueandcheek_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15647" enable="Y" is_premium="N" aid="28275" money="0" sharing="0"/>
-		<variation id="tongueandcheek_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15647" enable="Y" is_premium="N" aid="28276" money="0" sharing="0"/>
-		<variation id="tongueandcheek_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7837" enable="Y" is_premium="N" aid="28277" money="0" sharing="0"/>
-		<variation id="tongueandcheek_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="3944" enable="Y" is_premium="N" aid="28278" money="0" sharing="0"/>
-	</sound>
-	<sound id="tranceendentalblues_60.mp3" name="Trance-endental Blues" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28279" money="0" sharing="0" min_ut="30">
-		<variation id="tranceendentalblues_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33097" enable="Y" is_premium="N" aid="28280" money="0" sharing="0"/>
-		<variation id="tranceendentalblues_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34064" enable="Y" is_premium="N" aid="28281" money="0" sharing="0"/>
-		<variation id="tranceendentalblues_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="5669" enable="Y" is_premium="N" aid="28282" money="0" sharing="0"/>
-		<variation id="tranceendentalblues_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="11311" enable="Y" is_premium="N" aid="28283" money="0" sharing="0"/>
-		<variation id="tranceendentalblues_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="11337" enable="Y" is_premium="N" aid="28284" money="0" sharing="0"/>
-		<variation id="tranceendentalblues_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="19801" enable="Y" is_premium="N" aid="28285" money="0" sharing="0"/>
-	</sound>
-	<sound id="walkinthepark60.mp3" name="Walk in the Park" downloadtype="progressive" subtype="bgmusic" duration="62093" enable="Y" is_premium="N" aid="28286" money="0" sharing="0" min_ut="30">
-		<variation id="walkinthepark_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28287" money="0" sharing="0"/>
-		<variation id="walkinthepark_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28288" money="0" sharing="0"/>
-		<variation id="walkinthepark_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28289" money="0" sharing="0"/>
-		<variation id="walkinthepark_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28290" money="0" sharing="0"/>
-		<variation id="walkinthepark30_v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32731" enable="Y" is_premium="N" aid="28291" money="0" sharing="0"/>
-		<variation id="walkinthepark30_v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32026" enable="Y" is_premium="N" aid="28292" money="0" sharing="0"/>
-	</sound>
-	<sound id="avocado_inferno60.mp3" name="Avocado Inferno" downloadtype="progressive" subtype="bgmusic" duration="64653" enable="Y" is_premium="N" aid="28293" money="0" sharing="0" min_ut="30">
-		<variation id="avocado_inferno_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="6583" enable="Y" is_premium="N" aid="28294" money="0" sharing="0"/>
-		<variation id="avocado_inferno_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28295" money="0" sharing="0"/>
-		<variation id="avocado_inferno_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28296" money="0" sharing="0"/>
-		<variation id="avocado_inferno_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="8777" enable="Y" is_premium="N" aid="28297" money="0" sharing="0"/>
-		<variation id="avocado_inferno30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31843" enable="Y" is_premium="N" aid="28298" money="0" sharing="0"/>
-	</sound>
-	<sound id="lift_me_up_full.mp3" name="Lift Me Up" downloadtype="progressive" subtype="bgmusic" duration="157884" enable="Y" is_premium="N" aid="28299" money="0" sharing="0" min_ut="30">
-		<variation id="lift_me_up_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32470" enable="Y" is_premium="N" aid="28300" money="0" sharing="0"/>
-		<variation id="lift_me_up_60v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="65959" enable="Y" is_premium="N" aid="28301" money="0" sharing="0"/>
-		<variation id="lift_me_up_60v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="67187" enable="Y" is_premium="N" aid="28302" money="0" sharing="0"/>
-		<variation id="lift_me_up_80loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="82364" enable="Y" is_premium="N" aid="28303" money="0" sharing="0"/>
-		<variation id="lift_me_up_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="5642" enable="Y" is_premium="N" aid="28304" money="0" sharing="0"/>
-		<variation id="lift_me_up_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="11207" enable="Y" is_premium="N" aid="28305" money="0" sharing="0"/>
-		<variation id="lift_me_up_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="11207" enable="Y" is_premium="N" aid="28306" money="0" sharing="0"/>
-		<variation id="lift_me_up_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="22361" enable="Y" is_premium="N" aid="28307" money="0" sharing="0"/>
-		<variation id="lift_me_up_e.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="11207" enable="Y" is_premium="N" aid="28308" money="0" sharing="0"/>
-		<variation id="lift_me_up_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="10162" enable="Y" is_premium="N" aid="28309" money="0" sharing="0"/>
-	</sound>
-	<sound id="revival.mp3" name="Revival" downloadtype="progressive" subtype="bgmusic" duration="59455" enable="Y" is_premium="N" aid="28310" money="0" sharing="0" min_ut="30">
-		<variation id="revival_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28311" money="0" sharing="0"/>
-		<variation id="revival_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28312" money="0" sharing="0"/>
-		<variation id="revival_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28313" money="0" sharing="0"/>
-		<variation id="revival_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28314" money="0" sharing="0"/>
-		<variation id="revival30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="27429" enable="Y" is_premium="N" aid="28315" money="0" sharing="0"/>
-	</sound>
-	<sound id="smooth_steel_60.mp3" name="Smooth Steel" downloadtype="progressive" subtype="bgmusic" duration="59768" enable="Y" is_premium="N" aid="28316" money="0" sharing="0" min_ut="30">
-		<variation id="smooth_steel_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30145" enable="Y" is_premium="N" aid="28317" money="0" sharing="0"/>
-		<variation id="smooth_steel_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34847" enable="Y" is_premium="N" aid="28318" money="0" sharing="0"/>
-		<variation id="smooth_steel_67loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="56503" enable="Y" is_premium="N" aid="28319" money="0" sharing="0"/>
-	</sound>
-	<sound id="bullethead_60.mp3" name="Bullethead" downloadtype="progressive" subtype="bgmusic" duration="61074" enable="Y" is_premium="N" aid="28320" money="0" sharing="0" min_ut="30">
-		<variation id="bullethead_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32810" enable="Y" is_premium="N" aid="28321" money="0" sharing="0"/>
-		<variation id="bullethead_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60056" enable="Y" is_premium="N" aid="28322" money="0" sharing="0"/>
-		<variation id="bullethead_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14158" enable="Y" is_premium="N" aid="28323" money="0" sharing="0"/>
-		<variation id="bullethead_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14132" enable="Y" is_premium="N" aid="28324" money="0" sharing="0"/>
-		<variation id="bullethead_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14158" enable="Y" is_premium="N" aid="28325" money="0" sharing="0"/>
-		<variation id="bullethead_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14132" enable="Y" is_premium="N" aid="28326" money="0" sharing="0"/>
-	</sound>
-	<sound id="cornflower_60.mp3" name="Cornflower" downloadtype="progressive" subtype="bgmusic" duration="62380" enable="Y" is_premium="N" aid="28327" money="0" sharing="0" min_ut="30">
-		<variation id="cornflower_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="6426" enable="Y" is_premium="N" aid="28328" money="0" sharing="0"/>
-		<variation id="cornflower_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="6426" enable="Y" is_premium="N" aid="28329" money="0" sharing="0"/>
-		<variation id="cornflower_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9639" enable="Y" is_premium="N" aid="28330" money="0" sharing="0"/>
-	</sound>
-	<sound id="dirty_moonshine_full.mp3" name="Dirty Moonshine" downloadtype="progressive" subtype="bgmusic" duration="97437" enable="Y" is_premium="N" aid="28331" money="0" sharing="0" min_ut="30">
-		<variation id="dirty_moonshine_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33071" enable="Y" is_premium="N" aid="28332" money="0" sharing="0"/>
-		<variation id="dirty_moonshine_60_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="57861" enable="Y" is_premium="N" aid="28333" money="0" sharing="0"/>
-		<variation id="dirty_moonshine_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62642" enable="Y" is_premium="N" aid="28334" money="0" sharing="0"/>
-		<variation id="dirty_moonshine_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="92630" enable="Y" is_premium="N" aid="28335" money="0" sharing="0"/>
-	</sound>
-	<sound id="electric_rock_opus_full.mp3" name="Electric Rock Opus" downloadtype="progressive" subtype="bgmusic" duration="135262" enable="Y" is_premium="N" aid="28336" money="0" sharing="0" min_ut="30">
-		<variation id="electric_rock_opus_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="36310" enable="Y" is_premium="N" aid="28337" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32627" enable="Y" is_premium="N" aid="28338" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_60v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="67082" enable="Y" is_premium="N" aid="28339" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_60v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="67239" enable="Y" is_premium="N" aid="28340" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_90loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="96078" enable="Y" is_premium="N" aid="28341" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="13714" enable="Y" is_premium="N" aid="28342" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="13740" enable="Y" is_premium="N" aid="28343" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="13740" enable="Y" is_premium="N" aid="28344" money="0" sharing="0"/>
-		<variation id="electric_rock_opus_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="11860" enable="Y" is_premium="N" aid="28345" money="0" sharing="0"/>
-	</sound>
-	<sound id="fried_chicken_gobblers_full.mp3" name="Fried Chicken Gobblers" downloadtype="progressive" subtype="bgmusic" duration="99422" enable="Y" is_premium="N" aid="28346" money="0" sharing="0" min_ut="30">
-		<variation id="fried_chicken_gobblers_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32366" enable="Y" is_premium="N" aid="28347" money="0" sharing="0"/>
-		<variation id="fried_chicken_gobblers_60_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="59115" enable="Y" is_premium="N" aid="28348" money="0" sharing="0"/>
-		<variation id="fried_chicken_gobblers_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="61910" enable="Y" is_premium="N" aid="28349" money="0" sharing="0"/>
-		<variation id="fried_chicken_gobblers_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="96052" enable="Y" is_premium="N" aid="28350" money="0" sharing="0"/>
-	</sound>
-	<sound id="garageagogo60.mp3" name="Garage A-go-go" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28351" money="0" sharing="0" min_ut="30">
-		<variation id="garageagogo_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="6896" enable="Y" is_premium="N" aid="28352" money="0" sharing="0"/>
-		<variation id="garageagogo_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="13740" enable="Y" is_premium="N" aid="28353" money="0" sharing="0"/>
-		<variation id="garageagogo_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28354" money="0" sharing="0"/>
-		<variation id="garageagogo30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31269" enable="Y" is_premium="N" aid="28355" money="0" sharing="0"/>
-	</sound>
-	<sound id="isotope60.mp3" name="Isotope" downloadtype="progressive" subtype="bgmusic" duration="66534" enable="Y" is_premium="N" aid="28356" money="0" sharing="0" min_ut="30">
-		<variation id="isotope_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28357" money="0" sharing="0"/>
-		<variation id="isotope_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28358" money="0" sharing="0"/>
-		<variation id="isotope_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28359" money="0" sharing="0"/>
-		<variation id="isotope30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33437" enable="Y" is_premium="N" aid="28360" money="0" sharing="0"/>
-	</sound>
-	<sound id="mojorising60.mp3" name="Mojo Rising" downloadtype="progressive" subtype="bgmusic" duration="60735" enable="Y" is_premium="N" aid="28361" money="0" sharing="0" min_ut="30">
-		<variation id="mojorising_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9822" enable="Y" is_premium="N" aid="28362" money="0" sharing="0"/>
-		<variation id="mojorising_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9822" enable="Y" is_premium="N" aid="28363" money="0" sharing="0"/>
-		<variation id="mojorising_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9822" enable="Y" is_premium="N" aid="28364" money="0" sharing="0"/>
-		<variation id="mojorising_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9822" enable="Y" is_premium="N" aid="28365" money="0" sharing="0"/>
-		<variation id="mojorising30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31582" enable="Y" is_premium="N" aid="28366" money="0" sharing="0"/>
-	</sound>
-	<sound id="morningglory60.mp3" name="Morning Glory" downloadtype="progressive" subtype="bgmusic" duration="63843" enable="Y" is_premium="N" aid="28367" money="0" sharing="0" min_ut="30">
-		<variation id="morningglory_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28368" money="0" sharing="0"/>
-		<variation id="morningglory_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7419" enable="Y" is_premium="N" aid="28369" money="0" sharing="0"/>
-		<variation id="morningglory_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14811" enable="Y" is_premium="N" aid="28370" money="0" sharing="0"/>
-		<variation id="morningglory30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32104" enable="Y" is_premium="N" aid="28371" money="0" sharing="0"/>
-	</sound>
-	<sound id="pineapple_roadkill_60.mp3" name="Pineapple Roadkill" downloadtype="progressive" subtype="bgmusic" duration="64993" enable="Y" is_premium="N" aid="28372" money="0" sharing="0" min_ut="30">
-		<variation id="pineapple_roadkill_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="35788" enable="Y" is_premium="N" aid="28373" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60682" enable="Y" is_premium="N" aid="28374" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28375" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28376" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="10710" enable="Y" is_premium="N" aid="28377" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="8046" enable="Y" is_premium="N" aid="28378" money="0" sharing="0"/>
-		<variation id="pineapple_roadkill_tag.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="9221" enable="Y" is_premium="N" aid="28379" money="0" sharing="0"/>
-	</sound>
-	<sound id="tailhonker_60.mp3" name="Tailhonker" downloadtype="progressive" subtype="bgmusic" duration="55824" enable="Y" is_premium="N" aid="28380" money="0" sharing="0" min_ut="30">
-		<variation id="tailhonker_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7732" enable="Y" is_premium="N" aid="28381" money="0" sharing="0"/>
-		<variation id="tailhonker_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7732" enable="Y" is_premium="N" aid="28382" money="0" sharing="0"/>
-		<variation id="tailhonker_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="7706" enable="Y" is_premium="N" aid="28383" money="0" sharing="0"/>
-		<variation id="tailhonker_d.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15412" enable="Y" is_premium="N" aid="28384" money="0" sharing="0"/>
-	</sound>
-	<sound id="tallboy_60.mp3" name="Tallboy" downloadtype="progressive" subtype="bgmusic" duration="63216" enable="Y" is_premium="N" aid="28385" money="0" sharing="0" min_ut="30">
-		<variation id="tallboy_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33698" enable="Y" is_premium="N" aid="28386" money="0" sharing="0"/>
-		<variation id="tallboy_53loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="53159" enable="Y" is_premium="N" aid="28387" money="0" sharing="0"/>
-		<variation id="tallboy_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15778" enable="Y" is_premium="N" aid="28388" money="0" sharing="0"/>
-		<variation id="tallboy_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15778" enable="Y" is_premium="N" aid="28389" money="0" sharing="0"/>
-		<variation id="tallboy_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="9874" enable="Y" is_premium="N" aid="28390" money="0" sharing="0"/>
-	</sound>
+	<sound id="122_short_dance_of_the_sugar_plum_fairy_0061.mp3" name="Dance of the Sugar Plum Fairy" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28101" money="0" sharing="0"/>
+	<sound id="129_short_deck_the_hall_jazz_classic_0069.mp3" name="Deck the Hall (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="68728" enable="Y" is_premium="N" aid="28104" money="0" sharing="0"/>
+	<sound id="135_short_silent_night_2_0069.mp3" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="68441" enable="Y" is_premium="N" aid="28107" money="0" sharing="0"/>
+	<sound id="129_short_we_wish_you_a_merry_christmas_jazz_classic_0070.mp3" name="We Wish You a Merry Christmas (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28110" money="0" sharing="0"/>
+	<sound id="85_short_bossa_story_0061.mp3" name="Bossa Story" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28113" money="0" sharing="0"/>
+	<sound id="12_short_funky_mama_0063.mp3" name="Funky Mama" downloadtype="progressive" subtype="bgmusic" duration="62851" enable="Y" is_premium="N" aid="28116" money="0" sharing="0"/>
+	<sound id="12_short_happy_go_lucky_0068.mp3" name="Happy Go Lucky" downloadtype="progressive" subtype="bgmusic" duration="67318" enable="Y" is_premium="N" aid="28119" money="0" sharing="0"/>
+	<sound id="12_short_havana_moon_0070.mp3" name="Havana Moon" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28122" money="0" sharing="0"/>
+	<sound id="116_short_imagine_anything_0061.mp3" name="Imagine Anything" downloadtype="progressive" subtype="bgmusic" duration="60160" enable="Y" is_premium="N" aid="28125" money="0" sharing="0"/>
+	<sound id="175_short_picnic_for_two_0062.mp3" name="Picnic For Two" downloadtype="progressive" subtype="bgmusic" duration="61231" enable="Y" is_premium="N" aid="28128" money="0" sharing="0"/>
+	<sound id="12_short_secret_garden_0070.mp3" name="Secret Garden" downloadtype="progressive" subtype="bgmusic" duration="69642" enable="Y" is_premium="N" aid="28131" money="0" sharing="0"/>
+	<sound id="156_short_smile_0071.mp3" name="Smile" downloadtype="progressive" subtype="bgmusic" duration="70243" enable="Y" is_premium="N" aid="28134" money="0" sharing="0"/>
+	<sound id="136_full_smilin_0247.mp3" name="Smilin'" downloadtype="progressive" subtype="bgmusic" duration="246857" enable="Y" is_premium="N" aid="28137" money="0" sharing="0"/>
+	<sound id="47_short_soul_mate_0062.mp3" name="Soul Mate" downloadtype="progressive" subtype="bgmusic" duration="61544" enable="Y" is_premium="N" aid="28141" money="0" sharing="0"/>
+	<sound id="12_short_sunny_side_of_the_road_0067.mp3" name="Sunny Side Of The Road" downloadtype="progressive" subtype="bgmusic" duration="66482" enable="Y" is_premium="N" aid="28144" money="0" sharing="0"/>
+	<sound id="116_short_turn_back_around_0061.mp3" name="Turn Back Around" downloadtype="progressive" subtype="bgmusic" duration="60186" enable="Y" is_premium="N" aid="28147" money="0" sharing="0"/>
+	<sound id="125_short_waikiki_0063.mp3" name="Waikiki" downloadtype="progressive" subtype="bgmusic" duration="63033" enable="Y" is_premium="N" aid="28150" money="0" sharing="0"/>
+	<sound id="12_short_yellow_carousel_0069.mp3" name="Yellow Carousel" downloadtype="progressive" subtype="bgmusic" duration="68336" enable="Y" is_premium="N" aid="28153" money="0" sharing="0"/>
+	<sound id="136_loop1_beautiful_day_0014.mp3" name="Beautiful Day" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28156" money="0" sharing="0"/>
+	<sound id="12_loop9_field_of_dreams_0010.mp3" name="Field of Dreams" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28166" money="0" sharing="0"/>
+	<sound id="168_loop6_almost_back_to_life_0018.mp3" name="Almost Back to Life" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28177" money="0" sharing="0"/>
+	<sound id="114_loop2_sliver_of_light_0018.mp3" name="Silver of Light" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28191" money="0" sharing="0"/>
+	<sound id="174_loop3_happy_face_2_0009.mp3" name="Happy Face" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28197" money="0" sharing="0"/>
+	<sound id="acoustica_full.mp3" name="Acoustica" downloadtype="progressive" subtype="bgmusic" duration="135105" enable="Y" is_premium="N" aid="28202" money="0" sharing="0" min_ut="30"/>
+	<sound id="bakersfield_60.mp3" name="Bakersfield" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28211" money="0" sharing="0" min_ut="30"/>
+	<sound id="barnfire_60.mp3" name="Barnfire" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28217" money="0" sharing="0" min_ut="30"/>
+	<sound id="bluehenry60.mp3" name="Bluehenry" downloadtype="progressive" subtype="bgmusic" duration="60996" enable="Y" is_premium="N" aid="28223" money="0" sharing="0" min_ut="30"/>
+	<sound id="fruitbear_60.mp3" name="Fruitbear" downloadtype="progressive" subtype="bgmusic" duration="64183" enable="Y" is_premium="N" aid="28225" money="0" sharing="0" min_ut="30"/>
+	<sound id="healinghands_60.mp3" name="Healing Hands" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28233" money="0" sharing="0" min_ut="30"/>
+	<sound id="hibiscus60.mp3" name="Hibiscus" downloadtype="progressive" subtype="bgmusic" duration="69042" enable="Y" is_premium="N" aid="28239" money="0" sharing="0" min_ut="30"/>
+	<sound id="hillbilly_bootstomp_60.mp3" name="Hillbilly Bootstomp" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28243" money="0" sharing="0" min_ut="30"/>
+	<sound id="spoonful_of_ginger_60.mp3" name="Spoonful of Ginger" downloadtype="progressive" subtype="bgmusic" duration="61884" enable="Y" is_premium="N" aid="28251" money="0" sharing="0" min_ut="30"/>
+	<sound id="sunnysideup_60.mp3" name="Sunny Side Up" downloadtype="progressive" subtype="bgmusic" duration="64758" enable="Y" is_premium="N" aid="28258" money="0" sharing="0" min_ut="30"/>
+	<sound id="test_of_time_full.mp3" name="Test of Time" downloadtype="progressive" subtype="bgmusic" duration="96627" enable="Y" is_premium="N" aid="28264" money="0" sharing="0" min_ut="30"/>
+	<sound id="tongueandcheek_60.mp3" name="Tongue and Cheek" downloadtype="progressive" subtype="bgmusic" duration="57913" enable="Y" is_premium="N" aid="28273" money="0" sharing="0" min_ut="30"/>
+	<sound id="tranceendentalblues_60.mp3" name="Trance-endental Blues" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28279" money="0" sharing="0" min_ut="30"/>
+	<sound id="walkinthepark60.mp3" name="Walk in the Park" downloadtype="progressive" subtype="bgmusic" duration="62093" enable="Y" is_premium="N" aid="28286" money="0" sharing="0" min_ut="30"/>
+	<sound id="avocado_inferno60.mp3" name="Avocado Inferno" downloadtype="progressive" subtype="bgmusic" duration="64653" enable="Y" is_premium="N" aid="28293" money="0" sharing="0" min_ut="30"/>
+	<sound id="lift_me_up_full.mp3" name="Lift Me Up" downloadtype="progressive" subtype="bgmusic" duration="157884" enable="Y" is_premium="N" aid="28299" money="0" sharing="0" min_ut="30"/>
+	<sound id="revival.mp3" name="Revival" downloadtype="progressive" subtype="bgmusic" duration="59455" enable="Y" is_premium="N" aid="28310" money="0" sharing="0" min_ut="30"/>
+	<sound id="smooth_steel_60.mp3" name="Smooth Steel" downloadtype="progressive" subtype="bgmusic" duration="59768" enable="Y" is_premium="N" aid="28316" money="0" sharing="0" min_ut="30"/>
+	<sound id="bullethead_60.mp3" name="Bullethead" downloadtype="progressive" subtype="bgmusic" duration="61074" enable="Y" is_premium="N" aid="28320" money="0" sharing="0" min_ut="30"/>
+	<sound id="cornflower_60.mp3" name="Cornflower" downloadtype="progressive" subtype="bgmusic" duration="62380" enable="Y" is_premium="N" aid="28327" money="0" sharing="0" min_ut="30"/>
+	<sound id="dirty_moonshine_full.mp3" name="Dirty Moonshine" downloadtype="progressive" subtype="bgmusic" duration="97437" enable="Y" is_premium="N" aid="28331" money="0" sharing="0" min_ut="30"/>
+	<sound id="electric_rock_opus_full.mp3" name="Electric Rock Opus" downloadtype="progressive" subtype="bgmusic" duration="135262" enable="Y" is_premium="N" aid="28336" money="0" sharing="0" min_ut="30"/>
+	<sound id="fried_chicken_gobblers_full.mp3" name="Fried Chicken Gobblers" downloadtype="progressive" subtype="bgmusic" duration="99422" enable="Y" is_premium="N" aid="28346" money="0" sharing="0" min_ut="30"/>
+	<sound id="garageagogo60.mp3" name="Garage A-go-go" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28351" money="0" sharing="0" min_ut="30"/>
+	<sound id="isotope60.mp3" name="Isotope" downloadtype="progressive" subtype="bgmusic" duration="66534" enable="Y" is_premium="N" aid="28356" money="0" sharing="0" min_ut="30"/>
+	<sound id="mojorising60.mp3" name="Mojo Rising" downloadtype="progressive" subtype="bgmusic" duration="60735" enable="Y" is_premium="N" aid="28361" money="0" sharing="0" min_ut="30"/>
+	<sound id="morningglory60.mp3" name="Morning Glory" downloadtype="progressive" subtype="bgmusic" duration="63843" enable="Y" is_premium="N" aid="28367" money="0" sharing="0" min_ut="30"/>
+	<sound id="pineapple_roadkill_60.mp3" name="Pineapple Roadkill" downloadtype="progressive" subtype="bgmusic" duration="64993" enable="Y" is_premium="N" aid="28372" money="0" sharing="0" min_ut="30"/>
+	<sound id="tailhonker_60.mp3" name="Tailhonker" downloadtype="progressive" subtype="bgmusic" duration="55824" enable="Y" is_premium="N" aid="28380" money="0" sharing="0" min_ut="30"/>
+	<sound id="tallboy_60.mp3" name="Tallboy" downloadtype="progressive" subtype="bgmusic" duration="63216" enable="Y" is_premium="N" aid="28385" money="0" sharing="0" min_ut="30"/>
 	<sound id="blue_for_a_lady.mp3" name="Blue for a Lady" downloadtype="progressive" subtype="bgmusic" duration="148454" enable="Y" is_premium="N" aid="28391" money="0" sharing="0" team="1"/>
-	<sound id="dont_leave_me_full.mp3" name="Don't Leave Me" downloadtype="progressive" subtype="bgmusic" duration="158485" enable="Y" is_premium="N" aid="28392" money="0" sharing="0" team="1">
-		<variation id="dont_leave_me_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31843" enable="Y" is_premium="N" aid="28393" money="0" sharing="0"/>
-		<variation id="dont_leave_me_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="61675" enable="Y" is_premium="N" aid="28394" money="0" sharing="0"/>
-		<variation id="dont_leave_me_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="108016" enable="Y" is_premium="N" aid="28395" money="0" sharing="0"/>
-	</sound>
-	<sound id="easy_to_say_full.mp3" name="Easy to Say" downloadtype="progressive" subtype="bgmusic" duration="154122" enable="Y" is_premium="N" aid="28396" money="0" sharing="0" team="1">
-		<variation id="easy_to_say_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="38400" enable="Y" is_premium="N" aid="28397" money="0" sharing="0"/>
-		<variation id="easy_to_say_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="68493" enable="Y" is_premium="N" aid="28398" money="0" sharing="0"/>
-		<variation id="easy_to_say_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="63582" enable="Y" is_premium="N" aid="28399" money="0" sharing="0"/>
-		<variation id="easy_to_say_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="13688" enable="Y" is_premium="N" aid="28400" money="0" sharing="0"/>
-		<variation id="easy_to_say_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="41221" enable="Y" is_premium="N" aid="28401" money="0" sharing="0"/>
-		<variation id="easy_to_say_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="41169" enable="Y" is_premium="N" aid="28402" money="0" sharing="0"/>
-		<variation id="easy_to_say_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="10397" enable="Y" is_premium="N" aid="28403" money="0" sharing="0"/>
-	</sound>
-	<sound id="highway_drivin_full.mp3" name="Highway Drivin" downloadtype="progressive" subtype="bgmusic" duration="149577" enable="Y" is_premium="N" aid="28404" money="0" sharing="0" team="1">
-		<variation id="highway_drivin_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="34586" enable="Y" is_premium="N" aid="28405" money="0" sharing="0"/>
-		<variation id="highway_drivin_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="65567" enable="Y" is_premium="N" aid="28406" money="0" sharing="0"/>
-		<variation id="highway_drivin_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="72046" enable="Y" is_premium="N" aid="28407" money="0" sharing="0"/>
-		<variation id="highway_drivin_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24033" enable="Y" is_premium="N" aid="28408" money="0" sharing="0"/>
-		<variation id="highway_drivin_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24059" enable="Y" is_premium="N" aid="28409" money="0" sharing="0"/>
-		<variation id="highway_drivin_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="36023" enable="Y" is_premium="N" aid="28410" money="0" sharing="0"/>
-		<variation id="highway_drivin_intro.mp3" name="Intro" downloadtype="progressive" subtype="bgmusic" duration="1254" enable="Y" is_premium="N" aid="28411" money="0" sharing="0"/>
-		<variation id="highway_drivin_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="12460" enable="Y" is_premium="N" aid="28412" money="0" sharing="0"/>
-	</sound>
-	<sound id="jazz_inc.mp3" name="Jazz Inc" downloadtype="progressive" subtype="bgmusic" duration="110315" enable="Y" is_premium="N" aid="28413" money="0" sharing="0" team="1">
-		<variation id="jazz_inc_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32392" enable="Y" is_premium="N" aid="28414" money="0" sharing="0"/>
-		<variation id="jazz_inc_60_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60029" enable="Y" is_premium="N" aid="28415" money="0" sharing="0"/>
-		<variation id="jazz_inc_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="61518" enable="Y" is_premium="N" aid="28416" money="0" sharing="0"/>
-		<variation id="jazz_inc_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="86674" enable="Y" is_premium="N" aid="28417" money="0" sharing="0"/>
-		<variation id="jazz_inc_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="13375" enable="Y" is_premium="N" aid="28418" money="0" sharing="0"/>
-		<variation id="jazz_inc_loop_b.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="10031" enable="Y" is_premium="N" aid="28419" money="0" sharing="0"/>
-	</sound>
-	<sound id="midnight_motion_full.mp3" name="Midnight Motion" downloadtype="progressive" subtype="bgmusic" duration="170710" enable="Y" is_premium="N" aid="28420" money="0" sharing="0" team="1">
-		<variation id="midnight_motion_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="40490" enable="Y" is_premium="N" aid="28421" money="0" sharing="0"/>
-		<variation id="midnight_motion_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28422" money="0" sharing="0"/>
-		<variation id="midnight_motion_82.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="84376" enable="Y" is_premium="N" aid="28423" money="0" sharing="0"/>
-		<variation id="midnight_motion_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="19226" enable="Y" is_premium="N" aid="28424" money="0" sharing="0"/>
-		<variation id="midnight_motion_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="19252" enable="Y" is_premium="N" aid="28425" money="0" sharing="0"/>
-		<variation id="midnight_motion_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="38426" enable="Y" is_premium="N" aid="28426" money="0" sharing="0"/>
-	</sound>
+	<sound id="dont_leave_me_full.mp3" name="Don't Leave Me" downloadtype="progressive" subtype="bgmusic" duration="158485" enable="Y" is_premium="N" aid="28392" money="0" sharing="0" team="1"/>
+	<sound id="easy_to_say_full.mp3" name="Easy to Say" downloadtype="progressive" subtype="bgmusic" duration="154122" enable="Y" is_premium="N" aid="28396" money="0" sharing="0" team="1"/>
+	<sound id="highway_drivin_full.mp3" name="Highway Drivin" downloadtype="progressive" subtype="bgmusic" duration="149577" enable="Y" is_premium="N" aid="28404" money="0" sharing="0" team="1"/>
+	<sound id="jazz_inc.mp3" name="Jazz Inc" downloadtype="progressive" subtype="bgmusic" duration="110315" enable="Y" is_premium="N" aid="28413" money="0" sharing="0" team="1"/>
+	<sound id="midnight_motion_full.mp3" name="Midnight Motion" downloadtype="progressive" subtype="bgmusic" duration="170710" enable="Y" is_premium="N" aid="28420" money="0" sharing="0" team="1"/>
 	<sound id="misty_man.mp3" name="Misty Man" downloadtype="progressive" subtype="bgmusic" duration="138710" enable="Y" is_premium="N" aid="28427" money="0" sharing="0" team="1"/>
-	<sound id="more_than_you_think.mp3" name="More Than You Think" downloadtype="progressive" subtype="bgmusic" duration="115670" enable="Y" is_premium="N" aid="28428" money="0" sharing="0" team="1">
-		<variation id="more_than_you_think_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="36624" enable="Y" is_premium="N" aid="28429" money="0" sharing="0"/>
-		<variation id="more_than_you_think_60_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="59794" enable="Y" is_premium="N" aid="28430" money="0" sharing="0"/>
-		<variation id="more_than_you_think_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="67527" enable="Y" is_premium="N" aid="28431" money="0" sharing="0"/>
-		<variation id="more_than_you_think_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="107755" enable="Y" is_premium="N" aid="28432" money="0" sharing="0"/>
-		<variation id="more_than_you_think_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="18939" enable="Y" is_premium="N" aid="28433" money="0" sharing="0"/>
-		<variation id="more_than_you_think_loop_b.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="20167" enable="Y" is_premium="N" aid="28434" money="0" sharing="0"/>
-	</sound>
-	<sound id="night_driving_full.mp3" name="Night Driving" downloadtype="progressive" subtype="bgmusic" duration="105169" enable="Y" is_premium="N" aid="28435" money="0" sharing="0" team="1">
-		<variation id="night_driving_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30328" enable="Y" is_premium="N" aid="28436" money="0" sharing="0"/>
-		<variation id="night_driving_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60343" enable="Y" is_premium="N" aid="28437" money="0" sharing="0"/>
-		<variation id="night_driving_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="92029" enable="Y" is_premium="N" aid="28438" money="0" sharing="0"/>
-		<variation id="night_driving_stinger.mp3" name="Stinger" downloadtype="progressive" subtype="bgmusic" duration="15334" enable="Y" is_premium="N" aid="28439" money="0" sharing="0"/>
-	</sound>
-	<sound id="rainy_day_full.mp3" name="Rainy Day" downloadtype="progressive" subtype="bgmusic" duration="155246" enable="Y" is_premium="N" aid="28440" money="0" sharing="0" team="1">
-		<variation id="rainy_day_30v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31791" enable="Y" is_premium="N" aid="28441" money="0" sharing="0"/>
-		<variation id="rainy_day_30v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32209" enable="Y" is_premium="N" aid="28442" money="0" sharing="0"/>
-		<variation id="rainy_day_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="76878" enable="Y" is_premium="N" aid="28443" money="0" sharing="0"/>
-		<variation id="rainy_day_60v1.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="66220" enable="Y" is_premium="N" aid="28444" money="0" sharing="0"/>
-		<variation id="rainy_day_60v2.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62276" enable="Y" is_premium="N" aid="28445" money="0" sharing="0"/>
-		<variation id="rainy_day_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="48039" enable="Y" is_premium="N" aid="28446" money="0" sharing="0"/>
-		<variation id="rainy_day_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="47673" enable="Y" is_premium="N" aid="28447" money="0" sharing="0"/>
-		<variation id="rainy_day_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="11233" enable="Y" is_premium="N" aid="28448" money="0" sharing="0"/>
-	</sound>
-	<sound id="remember_last_time_full.mp3" name="Remember Last Time" downloadtype="progressive" subtype="bgmusic" duration="150700" enable="Y" is_premium="N" aid="28449" money="0" sharing="0" team="1">
-		<variation id="remember_last_time_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30616" enable="Y" is_premium="N" aid="28450" money="0" sharing="0"/>
-		<variation id="remember_last_time_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62171" enable="Y" is_premium="N" aid="28451" money="0" sharing="0"/>
-		<variation id="remember_last_time_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="57130" enable="Y" is_premium="N" aid="28452" money="0" sharing="0"/>
-		<variation id="remember_last_time_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24059" enable="Y" is_premium="N" aid="28453" money="0" sharing="0"/>
-		<variation id="remember_last_time_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24007" enable="Y" is_premium="N" aid="28454" money="0" sharing="0"/>
-		<variation id="remember_last_time_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="24007" enable="Y" is_premium="N" aid="28455" money="0" sharing="0"/>
-		<variation id="remember_last_time_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="14498" enable="Y" is_premium="N" aid="28456" money="0" sharing="0"/>
-	</sound>
+	<sound id="more_than_you_think.mp3" name="More Than You Think" downloadtype="progressive" subtype="bgmusic" duration="115670" enable="Y" is_premium="N" aid="28428" money="0" sharing="0" team="1"/>
+	<sound id="night_driving_full.mp3" name="Night Driving" downloadtype="progressive" subtype="bgmusic" duration="105169" enable="Y" is_premium="N" aid="28435" money="0" sharing="0" team="1"/>
+	<sound id="rainy_day_full.mp3" name="Rainy Day" downloadtype="progressive" subtype="bgmusic" duration="155246" enable="Y" is_premium="N" aid="28440" money="0" sharing="0" team="1"/>
+	<sound id="remember_last_time_full.mp3" name="Remember Last Time" downloadtype="progressive" subtype="bgmusic" duration="150700" enable="Y" is_premium="N" aid="28449" money="0" sharing="0" team="1"/>
 	<sound id="tigertails_full.mp3" name="Tigertails" downloadtype="progressive" subtype="bgmusic" duration="421146" enable="Y" is_premium="N" aid="28457" money="0" sharing="0" team="1"/>
-	<sound id="72_Minute_Summer_full.mp3" name="72 Minute Summer" downloadtype="progressive" subtype="bgmusic" duration="238838" enable="Y" is_premium="N" aid="28458" money="0" sharing="0" team="1">
-		<variation id="72_Minute_Summer_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32287" enable="Y" is_premium="N" aid="28459" money="0" sharing="0"/>
-		<variation id="72_Minute_Summer_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="63608" enable="Y" is_premium="N" aid="28460" money="0" sharing="0"/>
-	</sound>
+	<sound id="72_Minute_Summer_full.mp3" name="72 Minute Summer" downloadtype="progressive" subtype="bgmusic" duration="238838" enable="Y" is_premium="N" aid="28458" money="0" sharing="0" team="1"/>
 	<sound id="all_hat_and_no_cattle_full.mp3" name="All Hat and No Cattle" downloadtype="progressive" subtype="bgmusic" duration="173270" enable="Y" is_premium="N" aid="28461" money="0" sharing="0" team="1"/>
-	<sound id="Big_Steve_full.mp3" name="Big Steve" downloadtype="progressive" subtype="bgmusic" duration="186253" enable="Y" is_premium="N" aid="28462" money="0" sharing="0" team="1">
-		<variation id="Big_Steve_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30198" enable="Y" is_premium="N" aid="28463" money="0" sharing="0"/>
-		<variation id="Big_Steve_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60761" enable="Y" is_premium="N" aid="28464" money="0" sharing="0"/>
-	</sound>
-	<sound id="calypso_dance_full.mp3" name="Calypso Dance" downloadtype="progressive" subtype="bgmusic" duration="81633" enable="Y" is_premium="N" aid="28465" money="0" sharing="0" team="1">
-		<variation id="calypso_dance_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="29179" enable="Y" is_premium="N" aid="28466" money="0" sharing="0"/>
-		<variation id="calypso_dance_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="59246" enable="Y" is_premium="N" aid="28467" money="0" sharing="0"/>
-		<variation id="calypso_dance_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="75050" enable="Y" is_premium="N" aid="28468" money="0" sharing="0"/>
-		<variation id="calypso_dance_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="12042" enable="Y" is_premium="N" aid="28469" money="0" sharing="0"/>
-		<variation id="calypso_dance_loop_b.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="24033" enable="Y" is_premium="N" aid="28470" money="0" sharing="0"/>
-		<variation id="calypso_dance_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="9064" enable="Y" is_premium="N" aid="28471" money="0" sharing="0"/>
-	</sound>
-	<sound id="Conversation_full.mp3" name="Conversation" downloadtype="progressive" subtype="bgmusic" duration="298527" enable="Y" is_premium="N" aid="28472" money="0" sharing="0" team="1">
-		<variation id="Conversation_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30563" enable="Y" is_premium="N" aid="28473" money="0" sharing="0"/>
-		<variation id="Conversation_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60317" enable="Y" is_premium="N" aid="28474" money="0" sharing="0"/>
-	</sound>
-	<sound id="Ellen_Ripley_full.mp3" name="Ellen Ripley" downloadtype="progressive" subtype="bgmusic" duration="252735" enable="Y" is_premium="N" aid="28475" money="0" sharing="0" team="1">
-		<variation id="Ellen_Ripley_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30093" enable="Y" is_premium="N" aid="28476" money="0" sharing="0"/>
-		<variation id="Ellen_Ripley_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60160" enable="Y" is_premium="N" aid="28477" money="0" sharing="0"/>
-	</sound>
-	<sound id="first_dance_full.mp3" name="First Dance" downloadtype="progressive" subtype="bgmusic" duration="181342" enable="Y" is_premium="N" aid="28478" money="0" sharing="0" team="1">
-		<variation id="first_dance_15.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15491" enable="Y" is_premium="N" aid="28479" money="0" sharing="0"/>
-		<variation id="first_dance_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30433" enable="Y" is_premium="N" aid="28480" money="0" sharing="0"/>
-		<variation id="first_dance_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60656" enable="Y" is_premium="N" aid="28481" money="0" sharing="0"/>
-		<variation id="first_dance_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60003" enable="Y" is_premium="N" aid="28482" money="0" sharing="0"/>
-		<variation id="first_dance_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20036" enable="Y" is_premium="N" aid="28483" money="0" sharing="0"/>
-		<variation id="first_dance_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20036" enable="Y" is_premium="N" aid="28484" money="0" sharing="0"/>
-		<variation id="first_dance_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20062" enable="Y" is_premium="N" aid="28485" money="0" sharing="0"/>
-		<variation id="first_dance_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="10371" enable="Y" is_premium="N" aid="28486" money="0" sharing="0"/>
-	</sound>
+	<sound id="Big_Steve_full.mp3" name="Big Steve" downloadtype="progressive" subtype="bgmusic" duration="186253" enable="Y" is_premium="N" aid="28462" money="0" sharing="0" team="1"/>
+	<sound id="calypso_dance_full.mp3" name="Calypso Dance" downloadtype="progressive" subtype="bgmusic" duration="81633" enable="Y" is_premium="N" aid="28465" money="0" sharing="0" team="1"/>
+	<sound id="Conversation_full.mp3" name="Conversation" downloadtype="progressive" subtype="bgmusic" duration="298527" enable="Y" is_premium="N" aid="28472" money="0" sharing="0" team="1"/>
+	<sound id="Ellen_Ripley_full.mp3" name="Ellen Ripley" downloadtype="progressive" subtype="bgmusic" duration="252735" enable="Y" is_premium="N" aid="28475" money="0" sharing="0" team="1"/>
+	<sound id="first_dance_full.mp3" name="First Dance" downloadtype="progressive" subtype="bgmusic" duration="181342" enable="Y" is_premium="N" aid="28478" money="0" sharing="0" team="1"/>
 	<sound id="humbucker_full.mp3" name="Humbucker" downloadtype="progressive" subtype="bgmusic" duration="243905" enable="Y" is_premium="N" aid="28487" money="0" sharing="0" team="1"/>
-	<sound id="long_road_alt_full.mp3" name="Long Road" downloadtype="progressive" subtype="bgmusic" duration="103184" enable="Y" is_premium="N" aid="28488" money="0" sharing="0" team="1">
-		<variation id="long_road_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="31713" enable="Y" is_premium="N" aid="28489" money="0" sharing="0"/>
-		<variation id="long_road_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="65202" enable="Y" is_premium="N" aid="28490" money="0" sharing="0"/>
-		<variation id="long_road_full.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="98664" enable="Y" is_premium="N" aid="28491" money="0" sharing="0"/>
-	</sound>
-	<sound id="manana_full.mp3" name="Manana" downloadtype="progressive" subtype="bgmusic" duration="99030" enable="Y" is_premium="N" aid="28492" money="0" sharing="0" team="1">
-		<variation id="manana_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30041" enable="Y" is_premium="N" aid="28493" money="0" sharing="0"/>
-		<variation id="manana_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60029" enable="Y" is_premium="N" aid="28494" money="0" sharing="0"/>
-		<variation id="manana_full_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="88842" enable="Y" is_premium="N" aid="28495" money="0" sharing="0"/>
-		<variation id="manana_loop_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="22831" enable="Y" is_premium="N" aid="28496" money="0" sharing="0"/>
-		<variation id="manana_loop_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="19252" enable="Y" is_premium="N" aid="28497" money="0" sharing="0"/>
-		<variation id="manana_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="6870" enable="Y" is_premium="N" aid="28498" money="0" sharing="0"/>
-	</sound>
-	<sound id="maui_sun_full.mp3" name="Maui Sun" downloadtype="progressive" subtype="bgmusic" duration="202684" enable="Y" is_premium="N" aid="28499" money="0" sharing="0" team="1">
-		<variation id="maui_sun_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32052" enable="Y" is_premium="N" aid="28500" money="0" sharing="0"/>
-		<variation id="maui_sun_60_alt.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="73927" enable="Y" is_premium="N" aid="28501" money="0" sharing="0"/>
-		<variation id="maui_sun_60_loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="64000" enable="Y" is_premium="N" aid="28502" money="0" sharing="0"/>
-		<variation id="maui_sun_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="72908" enable="Y" is_premium="N" aid="28503" money="0" sharing="0"/>
-		<variation id="maui_sun_loop_a.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="10684" enable="Y" is_premium="N" aid="28504" money="0" sharing="0"/>
-		<variation id="maui_sun_loop_b.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="10684" enable="Y" is_premium="N" aid="28505" money="0" sharing="0"/>
-		<variation id="maui_sun_loop_c.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="10684" enable="Y" is_premium="N" aid="28506" money="0" sharing="0"/>
-	</sound>
-	<sound id="roll_on_full.mp3" name="Roll On" downloadtype="progressive" subtype="bgmusic" duration="223478" enable="Y" is_premium="N" aid="28507" money="0" sharing="0" team="1">
-		<variation id="roll_on_15.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="16039" enable="Y" is_premium="N" aid="28508" money="0" sharing="0"/>
-		<variation id="roll_on_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30433" enable="Y" is_premium="N" aid="28509" money="0" sharing="0"/>
-		<variation id="roll_on_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60865" enable="Y" is_premium="N" aid="28510" money="0" sharing="0"/>
-		<variation id="roll_on_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60056" enable="Y" is_premium="N" aid="28511" money="0" sharing="0"/>
-		<variation id="roll_on_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20036" enable="Y" is_premium="N" aid="28512" money="0" sharing="0"/>
-		<variation id="roll_on_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="20062" enable="Y" is_premium="N" aid="28513" money="0" sharing="0"/>
-	</sound>
-	<sound id="Shade_Tree_full.mp3" name="Shade Tree" downloadtype="progressive" subtype="bgmusic" duration="169195" enable="Y" is_premium="N" aid="28514" money="0" sharing="0" team="1">
-		<variation id="Shade_Tree_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30250" enable="Y" is_premium="N" aid="28515" money="0" sharing="0"/>
-		<variation id="Shade_Tree_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="75729" enable="Y" is_premium="N" aid="28516" money="0" sharing="0"/>
-	</sound>
+	<sound id="long_road_alt_full.mp3" name="Long Road" downloadtype="progressive" subtype="bgmusic" duration="103184" enable="Y" is_premium="N" aid="28488" money="0" sharing="0" team="1"/>
+	<sound id="manana_full.mp3" name="Manana" downloadtype="progressive" subtype="bgmusic" duration="99030" enable="Y" is_premium="N" aid="28492" money="0" sharing="0" team="1"/>
+	<sound id="maui_sun_full.mp3" name="Maui Sun" downloadtype="progressive" subtype="bgmusic" duration="202684" enable="Y" is_premium="N" aid="28499" money="0" sharing="0" team="1"/>
+	<sound id="roll_on_full.mp3" name="Roll On" downloadtype="progressive" subtype="bgmusic" duration="223478" enable="Y" is_premium="N" aid="28507" money="0" sharing="0" team="1"/>
+	<sound id="Shade_Tree_full.mp3" name="Shade Tree" downloadtype="progressive" subtype="bgmusic" duration="169195" enable="Y" is_premium="N" aid="28514" money="0" sharing="0" team="1"/>
 	<sound id="slingshot_full.mp3" name="Slingshot" downloadtype="progressive" subtype="bgmusic" duration="238106" enable="Y" is_premium="N" aid="28517" money="0" sharing="0" team="1"/>
-	<sound id="sometimes_full.mp3" name="Sometimes" downloadtype="progressive" subtype="bgmusic" duration="226586" enable="Y" is_premium="N" aid="28518" money="0" sharing="0" team="1">
-		<variation id="sometimes_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30224" enable="Y" is_premium="N" aid="28519" money="0" sharing="0"/>
-		<variation id="sometimes_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62772" enable="Y" is_premium="N" aid="28520" money="0" sharing="0"/>
-	</sound>
-	<sound id="steppin_out_full.mp3" name="Steppin Out" downloadtype="progressive" subtype="bgmusic" duration="181133" enable="Y" is_premium="N" aid="28521" money="0" sharing="0" team="1">
-		<variation id="steppin_out_15.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15125" enable="Y" is_premium="N" aid="28522" money="0" sharing="0"/>
-		<variation id="steppin_out_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30328" enable="Y" is_premium="N" aid="28523" money="0" sharing="0"/>
-		<variation id="steppin_out_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60003" enable="Y" is_premium="N" aid="28524" money="0" sharing="0"/>
-		<variation id="steppin_out_60loop.mp3" name="Loop" downloadtype="progressive" subtype="bgmusic" duration="60056" enable="Y" is_premium="N" aid="28525" money="0" sharing="0"/>
-		<variation id="steppin_out_a.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="14994" enable="Y" is_premium="N" aid="28526" money="0" sharing="0"/>
-		<variation id="steppin_out_b.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15020" enable="Y" is_premium="N" aid="28527" money="0" sharing="0"/>
-		<variation id="steppin_out_c.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="15020" enable="Y" is_premium="N" aid="28528" money="0" sharing="0"/>
-		<variation id="steppin_out_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="6896" enable="Y" is_premium="N" aid="28529" money="0" sharing="0"/>
-	</sound>
-	<sound id="these_things_full.mp3" name="These Things" downloadtype="progressive" subtype="bgmusic" duration="181238" enable="Y" is_premium="N" aid="28530" money="0" sharing="0" team="1">
-		<variation id="these_things_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="27716" enable="Y" is_premium="N" aid="28531" money="0" sharing="0"/>
-		<variation id="these_things_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="60029" enable="Y" is_premium="N" aid="28532" money="0" sharing="0"/>
-	</sound>
+	<sound id="sometimes_full.mp3" name="Sometimes" downloadtype="progressive" subtype="bgmusic" duration="226586" enable="Y" is_premium="N" aid="28518" money="0" sharing="0" team="1"/>
+	<sound id="steppin_out_full.mp3" name="Steppin Out" downloadtype="progressive" subtype="bgmusic" duration="181133" enable="Y" is_premium="N" aid="28521" money="0" sharing="0" team="1"/>
+	<sound id="these_things_full.mp3" name="These Things" downloadtype="progressive" subtype="bgmusic" duration="181238" enable="Y" is_premium="N" aid="28530" money="0" sharing="0" team="1"/>
 	<sound id="three_rings_full.mp3" name="Three Rings" downloadtype="progressive" subtype="bgmusic" duration="177058" enable="Y" is_premium="N" aid="28533" money="0" sharing="0" team="1"/>
-	<sound id="time_to_go_full.mp3" name="Time to Go" downloadtype="progressive" subtype="bgmusic" duration="116010" enable="Y" is_premium="N" aid="28534" money="0" sharing="0" team="1">
-		<variation id="time_to_go_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="33176" enable="Y" is_premium="N" aid="28535" money="0" sharing="0"/>
-		<variation id="time_to_go_45_loop.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="47856" enable="Y" is_premium="N" aid="28536" money="0" sharing="0"/>
-		<variation id="time_to_go_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="72046" enable="Y" is_premium="N" aid="28537" money="0" sharing="0"/>
-		<variation id="time_to_go_stinger.mp3" name="Stinger" downloadtype="progressive" subtype="bgmusic" duration="8594" enable="Y" is_premium="N" aid="28538" money="0" sharing="0"/>
-		<variation id="time_to_go_tag.mp3" name="Tag" downloadtype="progressive" subtype="bgmusic" duration="3056" enable="Y" is_premium="N" aid="28539" money="0" sharing="0"/>
-	</sound>
+	<sound id="time_to_go_full.mp3" name="Time to Go" downloadtype="progressive" subtype="bgmusic" duration="116010" enable="Y" is_premium="N" aid="28534" money="0" sharing="0" team="1"/>
 	<sound id="tip_sean_full.mp3" name="Tip Sean" downloadtype="progressive" subtype="bgmusic" duration="224601" enable="Y" is_premium="N" aid="28540" money="0" sharing="0" team="1"/>
-	<sound id="warm_sunshine_full.mp3" name="Warm Sunshine" downloadtype="progressive" subtype="bgmusic" duration="110707" enable="Y" is_premium="N" aid="28541" money="0" sharing="0" team="1">
-		<variation id="warm_sunshine_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="32104" enable="Y" is_premium="N" aid="28542" money="0" sharing="0"/>
-		<variation id="warm_sunshine_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62746" enable="Y" is_premium="N" aid="28543" money="0" sharing="0"/>
-	</sound>
-	<sound id="wide_water_full.mp3" name="Wide Water" downloadtype="progressive" subtype="bgmusic" duration="163788" enable="Y" is_premium="N" aid="28544" money="0" sharing="0" team="1">
-		<variation id="wide_water_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="38452" enable="Y" is_premium="N" aid="28545" money="0" sharing="0"/>
-		<variation id="wide_water_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="62981" enable="Y" is_premium="N" aid="28546" money="0" sharing="0"/>
-	</sound>
-	<sound id="winding_on_full.mp3" name="Winding On" downloadtype="progressive" subtype="bgmusic" duration="154540" enable="Y" is_premium="N" aid="28547" money="0" sharing="0" team="1">
-		<variation id="winding_on_30.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="30798" enable="Y" is_premium="N" aid="28548" money="0" sharing="0"/>
-		<variation id="winding_on_60.mp3" name="Short track" downloadtype="progressive" subtype="bgmusic" duration="57966" enable="Y" is_premium="N" aid="28549" money="0" sharing="0"/>
-	</sound>
+	<sound id="warm_sunshine_full.mp3" name="Warm Sunshine" downloadtype="progressive" subtype="bgmusic" duration="110707" enable="Y" is_premium="N" aid="28541" money="0" sharing="0" team="1"/>
+	<sound id="wide_water_full.mp3" name="Wide Water" downloadtype="progressive" subtype="bgmusic" duration="163788" enable="Y" is_premium="N" aid="28544" money="0" sharing="0" team="1"/>
+	<sound id="winding_on_full.mp3" name="Winding On" downloadtype="progressive" subtype="bgmusic" duration="154540" enable="Y" is_premium="N" aid="28547" money="0" sharing="0" team="1"/>
 	<sound id="kazoo_fanfare_03.mp3" name="FX - Kazoo - fanfare" downloadtype="progressive" subtype="soundeffect" duration="1332" enable="Y" is_premium="N" aid="28895" money="0" sharing="0"/>
 	<sound id="kazoo_you_lose_01.mp3" name="FX - Kazoo - you lose" downloadtype="progressive" subtype="soundeffect" duration="940" enable="Y" is_premium="N" aid="28896" money="0" sharing="0"/>
 	<sound id="orchestra_tuning_01.mp3" name="FX - Orchestra tuning" downloadtype="progressive" subtype="soundeffect" duration="10710" enable="Y" is_premium="N" aid="28897" money="0" sharing="0"/>

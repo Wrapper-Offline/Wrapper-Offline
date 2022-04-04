@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="../../favicon.ico" type="image/png" />
+		<title>Settings</title>
+		<meta name="description" content="Wrapper: Offline's settings" />
+		<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/global.css" />
+		<script src="../js/jquery.js"></script>
+		<script src="../js/global.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="/">
+				<h1 style="margin:0"><img id="logo" src="../img/list_logo.svg" alt="Wrapper: Offline" /></h1>
+			</a>
+		</header>
+		<main>			
+			<nav class="tabs_contain">
+				<div class="tab_buttons">
+					<h1 id="settings">Settings</h1>
+					<a href="#" data-triggers="features">Features</a>
+					<a href="#" data-triggers="appearance">Appearance</a>
+					<a href="#" data-triggers="library">My Library</a>
+				</div>
+				<nav class="tab" data-trigger="features">
+					<h2>Features</h2>
+					<p>Short themelist: <span id="shortthemelist"></span></p>
+				</nav>
+				<nav class="tab" data-trigger="appearance">
+					<h2>Appearance</h2>
+					<p>Dark mode: <span id="darkmode"></span></p>
+				</nav>
+				<nav class="tab" data-trigger="library">
+					<nav class="tabs_contain">
+						<div class="tab_buttons">
+							<h1>My Library</h1>
+							<a href="#" data-triggers="bg">Backgrounds</a>
+							<a href="#" data-triggers="starter">Starters</a>
+							<a href="#" data-triggers="char">Characters</a>
+							<a href="#" data-triggers="prop">Props</a>
+							<a href="#" data-triggers="sound">Sounds</a>
+						</div>
+					</nav>
+				</nav>
+			</nav>
+		</main>
+	</body>
+	<script>
+		// add indicator
+		function getSettingData(name) {
+			if (localStorage.getItem(name)) {
+				$("#" + name).css("color", "green");
+				$("#" + name).html("On");
+			} else {
+				$("#" + name).css("color", "red");
+				$("#" + name).html("Off");
+			}
+			return true;
+		}
+		// toggling
+		$("span").click(function (event) {
+			if (event.target.id == "darkmode")
+				toggleDarkMode();
+			if (!localStorage.getItem(event.target.id))
+				localStorage.setItem(event.target.id, 1);
+			else
+				localStorage.removeItem(event.target.id);
+			getSettingData(event.target.id);
+		});
+		getSettingData("darkmode");
+		getSettingData("shortthemelist");
+	</script>
+</html>

@@ -1,62 +1,75 @@
-const chars = require('../character/main');
-const caché = require('../data/caché');
-const fUtil = require('../fileUtil');
-const info = require('./info');
-const fs = require('fs');
-
-function getFilter(prefix, idPrefix, types) {
-	const typeSet = {}, files = [], ret = [];
-	types.forEach(v => {
-		const names = fUtil.getValidFileNames(prefix, `.${v}`);
-		typeSet[v] = true, files.concat(names);
-	});
-	for (let c = 0; c < files.length; c++) {
-		const path = files[c];
-		const dot = path.lastIndexOf('.');
-		const dash = path.lastIndexOf('-');
-		const num = Number.parseInt(path.substr(dash + 1, dot));
-		const ext = path.substr(dot + 1), id = `${idPrefix}-${num}.${ext}`;
-		ret.push({ id: id, path: path, ext: ext, });
-	}
-	return ret;
-}
+/***
+ * asset api
+ */
+const fs = require("fs");
+const database = require("../data/database"), DB = new database();
+const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
+const fUtil = require("../fileUtil");
 
 module.exports = {
-	loadGlobal(aId) {
-		const dot = aId.indexOf('.');
-		const dash = aId.indexOf('-');
-		const prefix = aId.substr(0, dash);
-		const num = aId.substr(dash + 1, dot);
-		const suffix = aId.substr(dot);
-		const path = fUtil.getFileIndex(prefix, suffix, num);
-		return fs.readFileSync(path);
+	delete(aId) {
+		// remove info from database
+		const db = DB.get();
+		const index = db.assets.findIndex(i => i.id == aId);
+		db.assets.splice(index, 1);
+		DB.save(db);
+		// find file by id and delete it
+		var match = false;
+		fs.readdirSync(`${folder}`)
+			.forEach(filename => {
+				if (filename.search(aId) !== -1) match = filename;
+			})
+		if (match) fs.unlinkSync(`${folder}/${match}`);
 	},
-	loadLocal(mId, aId) { return caché.load(mId, aId); },
-	saveLocal(buffer, mId, suff) { return caché.saveNew(buffer, mId, suff); },
-	getBackgrounds() { return getFilter('bg-', 'b', info.bg.filetypes); },
-	getProps() { return getFilter('prop-', 'p', info.prop.filetypes); },
-	getSounds() { return getFilter('sound-', 's', info.sound.filetypes); },
-	async chars(theme) {
-		switch (theme) {
-			case 'custom':
-				theme = 'family';
-				break;
-			case 'action':
-			case 'animal':
-			case 'space':
-			case 'vietnam':
-				theme = 'cc2';
-				break;
-		}
-
-		const table = [];
-		const ids = fUtil.getValidFileIndicies('char-', '.xml');
-		for (let c = 0; c < ids.length; c++) {
-			const v = ids[c];
-			const id = `c-${v}`;
-			if (theme == await chars.getTheme(id))
-				table.unshift({ theme: theme, id: id, });
-		}
-		return table;
+	list(type, subtype = null, tId = null) { // very simple thanks to the database
+		let aList = DB.get().assets.filter(i => i.type == type);
+		// more filters
+		if (subtype) aList = aList.filter(i => i.subtype == subtype);
+		if (tId) aList = aList.filter(i => i.themeId == tId);
+		return aList;
 	},
+	load(aId) { // look for match in folder
+		var match = false;
+		fs.readdirSync(`${folder}`)
+			.forEach(filename => {
+				if (filename.search(aId) !== -1) match = filename;
+			})
+		return match ? fs.readFileSync(`${folder}/${match}`) : null;
+	},
+	meta(aId) {
+		const met = DB.get().assets.find(i => i.id == aId);
+		if (!met) {
+			console.error("Asset metadata doesn't exist! Asset id: " + aId);
+			throw "Asset metadata doesn't exist!";
+		}
+		return met;
+	},
+	save(buf, { type, subtype, title, duration, ext, tId }) {
+		// save asset info
+		const aId = fUtil.generateId();
+		const db = DB.get();
+		db.assets.unshift({ // base info, can be modified by the user later
+			id: `${aId}.${ext}`,
+			enc_asset_id: aId,
+			themeId: tId,
+			type: type,
+			subtype: subtype,
+			title: title,
+			tags: "",
+			duration: duration
+		});
+		DB.save(db);
+		// save the file
+		fs.writeFileSync(`${folder}/${aId}.${ext}`, buf);
+		return aId;
+	},
+	update(newInf, aId) {
+		// set new info and save
+		const db = DB.get();
+		const met = db.assets.find(i => i.id == aId);
+		met.title = newInf.title;
+		met.tags = newInf.tags;
+		DB.save(db);
+		return true;
+	}
 };

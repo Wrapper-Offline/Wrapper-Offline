@@ -8,12 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css">
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
 	<link rel="stylesheet" type="text/css" href="../css/list.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/global.js"></script>
 </head>
 <body>
 
 <header>
 	<a href="/">
-		<h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.svg" alt="Wrapper: Offline"/></h1>
+		<h1 style="margin:0"><img id="logo" src="../img/list_logo.svg" alt="Wrapper: Offline"/></h1>
 	</a>
 	<nav id="headbuttons">
 		<div class="dropdown_contain button_small">
@@ -63,6 +65,11 @@
 		<a href="/go_full" class="button_big">MAKE A VIDEO</a>
 	</nav>
 </header>
+<div class="warning">
+	This version of Wrapper: Offline is beta software and must be used as such. Be advised that many things do not work in this stage of development, and anything can change at any time.
+	<br />
+	<b>Commit notes:</b> Things should be a lot more stable now. Postponed watermarks.
+</div>
 
 <main>
 	<table>
@@ -85,9 +92,10 @@
 
 <footer>
 	<nav id="foot-left">
-		<a>v1.2.3½</a>
+		<a>v1.3.0</a>
+		<a href="./settings.html">Settings</a>
 		<a href="https://localhost:4664/faq.html">FAQ</a>
-		<a href="https://discord.gg/yhGAetN">Wrapper Hub</a>
+		<a href="https://discord.gg/yhGAetN">W:O Discord</a>
 	</nav>
 
 	<nav id="foot-right">
@@ -108,15 +116,11 @@
 </body>
 
 <script>
-	const closeReq = new XMLHttpRequest();
-	closeReq.open('GET', '/events/close');
-	closeReq.send();
-
 	var json;
-	var tbody = document.getElementsByTagName('tbody')[0];
-	var loadMore = document.getElementById('load_more');
+	var tbody = document.getElementsByTagName("tbody")[0];
+	var loadMore = document.getElementById("load_more");
 	const listReq = new XMLHttpRequest();
-	listReq.open('GET', '/movieList');
+	listReq.open("GET", "/movieList");
 	listReq.send();
 
 	var C = 0;
@@ -130,8 +134,8 @@
 
 			const tbl = json[c];
 			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
-			tbody.insertAdjacentHTML('beforeend',
-				'<tr><td><img src="/movie_thumbs/' + tbl.id + '"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+			tbody.insertAdjacentHTML("beforeend",
+				`<tr><td><img src="/movie_thumbs/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date.match(/./g).join('</span><span>')}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/movies/${tbl.id}.xml" download="${tbl.title}"></a></td></tr>`);
 		}
 	}
 

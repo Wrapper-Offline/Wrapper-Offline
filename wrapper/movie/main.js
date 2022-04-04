@@ -1,9 +1,9 @@
-const caché = require('../data/caché');
 const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
 const fs = require('fs');
 const { timeLog } = require('console');
+const folder = `${__dirname}/../${process.env.SAVED_FOLDER}`;
 
 module.exports = {
 	/**
@@ -13,59 +13,30 @@ module.exports = {
 	 * @param {string} oldId
 	 * @returns {Promise<string>}
 	 */
-	save(movieZip, thumb, oldId, nëwId = oldId) {
-		if (thumb && nëwId.startsWith('m-')) {
-			const n = Number.parseInt(nëwId.substr(2));
-			const thumbFile = fUtil.getFileIndex('thumb-', '.png', n);
-			fs.writeFileSync(thumbFile, thumb);
-		}
-
+	save(movieZip, thumb, id) {
 		return new Promise((res, rej) => {
-			caché.transfer(oldId, nëwId);
-			const i = nëwId.indexOf('-');
-			const prefix = nëwId.substr(0, i);
-			const suffix = nëwId.substr(i + 1);
+			id ||= fUtil.generateId();
+
+			// save the thumbnail
+			if (thumb) fs.writeFileSync(`${folder}/${id}.png`, thumb);
+			// extract the movie xml and save it
 			const zip = nodezip.unzip(movieZip);
-			switch (prefix) {
-				case 'm': {
-					let path = fUtil.getFileIndex('movie-', '.xml', suffix);
-					let writeStream = fs.createWriteStream(path);
-					parse.unpackZip(zip, thumb, nëwId).then(data => {
-						writeStream.write(data, () => {
-							writeStream.close();
-							res(nëwId);
-						});
-					});
-					break;
-				}
-				default: rej();
-			}
+			let writeStream = fs.createWriteStream(`${folder}/${id}.xml`);
+			parse.unpackZip(zip, thumb, id).then(data => {
+				writeStream.write(data, () => {
+					writeStream.close();
+					res(id);
+				});
+			});
 		});
 	},
 	loadZip(mId) {
 		return new Promise((res, rej) => {
-			const i = mId.indexOf('-');
-			const prefix = mId.substr(0, i);
-			const suffix = mId.substr(i + 1);
-			switch (prefix) {
-				case 'e': {
-					caché.clear(mId);
-					let data = fs.readFileSync(`${exFolder}/${suffix}.zip`);
-					res(data.subarray(data.indexOf(80)));
-					break;
-				}
-				case 'm': {
-					let numId = Number.parseInt(suffix);
-					if (isNaN(numId)) rej();
-					let filePath = fUtil.getFileIndex('movie-', '.xml', numId);
-					if (!fs.existsSync(filePath)) rej();
+			let filePath = `${folder}/${mId}.xml`;
+			if (!fs.existsSync(filePath)) rej("Movie doesn't exist.");
 
-					const buffer = fs.readFileSync(filePath);
-					parse.packXml(buffer, mId).then(v => res(v));
-					break;
-				}
-				default: rej();
-			}
+			const buffer = fs.readFileSync(filePath);
+			parse.packXml(buffer, mId).then(v => res(v));
 		});
 	},
 	loadXml(movieId) {
@@ -90,28 +61,25 @@ module.exports = {
 			}
 		});
 	},
-	thumb(movieId) {
+	thumb(mId) {
 		return new Promise((res, rej) => {
-			if (!movieId.startsWith('m-')) return;
-			const n = Number.parseInt(movieId.substr(2));
-			const fn = fUtil.getFileIndex('thumb-', '.png', n);
-			isNaN(n) ? rej() : res(fs.readFileSync(fn));
+			const fn = `${folder}/${mId}.png`;
+			res(fs.readFileSync(fn));
 		});
 	},
 	list() {
 		const array = [];
-		const last = fUtil.getLastFileIndex('movie-', '.xml');
-		for (let c = last; c >= 0; c--) {
-			const movie = fs.existsSync(fUtil.getFileIndex('movie-', '.xml', c));
-			const thumb = fs.existsSync(fUtil.getFileIndex('thumb-', '.png', c));
-			if (movie && thumb) array.push(`m-${c}`);
-		}
+		fs.readdirSync(folder).forEach(fn => {
+			if (!fn.includes(".xml")) return;
+			const mId = fn.substring(0, fn.length - 4);
+			const movie = fs.existsSync(`${folder}/${mId}.xml`);
+			const thumb = fs.existsSync(`${folder}/${mId}.png`);
+			if (movie && thumb) array.push(mId);
+		});
 		return array;
 	},
-	async meta(movieId) {
-		if (!movieId.startsWith('m-')) return;
-		const n = Number.parseInt(movieId.substr(2));
-		const fn = fUtil.getFileIndex('movie-', '.xml', n);
+	async meta(mId) {
+		const fn = `${folder}/${mId}.xml`;
 
 		const fd = fs.openSync(fn, 'r');
 		const buffer = Buffer.alloc(256);
@@ -134,7 +102,7 @@ module.exports = {
 			durationString: durationStr,
 			duration: duration,
 			title: title,
-			id: movieId,
+			id: mId,
 		};
 	},
 }

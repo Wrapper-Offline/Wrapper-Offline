@@ -1,0 +1,109 @@
+/***
+this css has flash page styling
+***/
+
+/**
+general stuff
+**/
+main { display: flex; padding: 0 }
+.close-button:hover, 
+#close-button:hover { 
+	cursor: pointer; 
+	color: var(--blue); 
+}
+
+/**
+previewer
+**/
+#previewer {
+	/* style */
+	background: #fff;
+	box-shadow: 0 6px 20px 6px #00000040;
+	border-radius: 8px;
+	/* layout */
+	position: absolute;
+	padding: 20px 40px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#preview_head {
+	display: flex;
+	justify-content: space-between;
+}
+#preview_head * { margin: 0 0 20px }
+
+/**
+importer
+**/
+#import_head {
+	/* style */
+	background: #252525;
+	color: #fff;
+	/* layout */
+	text-align: center;
+	padding: 1px;
+}
+#import_head>:nth-child(1) {
+	display: flex;
+	justify-content: space-between;
+}
+#import_head>:nth-child(1)>h3 { margin: 6px; }
+#importer form { margin: 0 }
+#importer {
+	/* style */
+	background: #edf2f6;
+	box-shadow: 0px 0px 8px 0 #00000028;
+	/* layout */
+	z-index: 1;
+	display: none;
+	width: 400px;
+}
+html.dark #importer { background: #222 }
+/* queue */
+#importer-queue {  border-top: 1px solid #e2e7ed  }
+html.dark #importer-queue { border-color: #3a3a3a }
+.importer_asset {
+	border-bottom: 1px solid #e2e7ed;
+	margin-bottom: 5px;
+}
+html.dark .importer_asset { border-color: #3a3a3a }
+.asset_metadata {
+	display: flex;
+	padding: 7px;
+}
+/* asset icon */
+.asset_preview { height: 40px; margin-right: 6px }
+.asset_name {
+	padding: 1px 4px;
+	background-color: #00000011;
+	outline: #666 auto 2px;
+	margin: 0;
+	font-weight: bold;
+	font-size: 14px;
+}
+.asset_name:focus {
+	outline: var(--blue) auto 2px;
+}
+.importer_asset p {
+	color: #858e95;
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0;
+}
+.import_as {
+	background: #fff;
+}
+html.dark .importer_asset { border-color: #3a3a3a }
+.import_as a {
+	display: block;
+	padding: 5px 20px;
+	color: #505969;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	border-top: 1px solid #e2e7ed;
+}
+.import_as a:hover {
+	background: #f5f5f5;
+}

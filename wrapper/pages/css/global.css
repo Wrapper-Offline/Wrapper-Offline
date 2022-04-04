@@ -2,20 +2,29 @@
 this css has the general header/footer layout stuff
 ***/
 
+:root {
+	--blue: #2d4da9;
+}
+
 /**
 general
 **/
 html, body {
-	background: #fff;
+	background: #eee;
 	color: #474747;
 	font: 16px/1.5 'Sailec', Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 }
+html.dark, html.dark>body {
+	background: #222;
+	color: #eee;
+}
 body {
 	display: flex; 
 	flex-direction: column; 
 }
+main { padding: 20px 40px; height: 100%; }
 
 
 /**
@@ -23,11 +32,13 @@ header
 **/
 header {
 	/* style */
-	background: #1e1e1e;
+	background: #1a1a1a;
 	color: #fff;
 	text-align: center;
+	/* layout */
 	padding-bottom: 13px;
 	padding: 0 15px;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	flex-shrink: 0;
@@ -50,7 +61,8 @@ header {
 	font-size: 14px;
 	text-decoration: none;
 	color: #fff;
-	border-radius: 6px;
+	border-radius: 4px;
+	transition: 0.15s ease;
 	/* layout */
 	display: inline-block;
 	padding: 5px 10px;
@@ -61,16 +73,30 @@ header {
 	cursor: pointer;
 }
 /* small buttons */
-.button_small       { background: #333 }
-.button_small:hover { background: #444; color: #d85e27 }
+.button_small       { background: #2a2a2a }
+.button_small:hover { background: #2a2a3a; color: var(--blue) }
 /* big buttons */
 .button_big {
-	background-color: #d85e27;
+	background: var(--blue);
 	width: 160px;
 }
 .button_big:hover {
 	text-decoration: underline;
 }
+
+/**
+warning
+**/
+.warning {
+	/* style */
+	background: linear-gradient(#ffa, #abab73);
+	/* layout */
+	font-size: 14px;
+	text-align: center;
+	padding: 10px 100px;
+	width: 100%;
+}
+html.dark .warning { background: #1f1f1f; }
 
 
 /**
@@ -88,8 +114,8 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #444;
-	border-radius: 6px;
+	background-color: #2a2a3a;
+	border-radius: 4px;
 	/* layout */
 	width: 100%;
 	padding: 10px 0;
@@ -105,13 +131,14 @@ header dropdowns
 	/* style */
 	color: #ddd;
 	text-decoration: none;
+	transition: 0.15s ease;
 	/* layout */
 	display: block;
 	padding: 2px 20px;
 }
 .dropdown_menu>a:hover {
-	background: #222;
-	color: #d85e27;
+	background: #223;
+	color: var(--blue);
 	cursor: pointer;
 }
 /* dropdown header and separation */
@@ -124,16 +151,50 @@ header dropdowns
 	padding:2px 20px;
 }
 .dropdown_menu>hr {
-	border: 1px solid #222;
+	border: 1px solid #223;
 	margin: 10px 0;
 }
 
+/**
+tabs
+**/
+.tabs_contain {
+    border-radius: 6px;
+    display: flex;
+    height: 100%;
+    margin: auto auto;
+}
+.tab_buttons {
+	padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+.tab_buttons a {
+	/* style */
+	background: #353535;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: 0.15s ease;
+	/* layout */
+	padding: 8px 18px;
+	margin: 2px 0;
+}
+.tab_buttons a:hover    { background: #2a2a3a; color: var(--blue) }
+.tab_buttons a.selected { background: var(--blue); color: #fff }
+.tab { padding: 0 20px; display: none }
+#shortthemelist:hover,
+#darkmode:hover {
+	cursor: pointer;
+}
 
 /**
 footer
 **/
-footer{
-	background: #1e1e1e;
+footer {
+	background: linear-gradient(#333, #111);
+	box-shadow: 0 2px 10px 0 #000;
 	margin-top: auto; /* footer at the foot */
 	display: flex;
 	justify-content: space-between;

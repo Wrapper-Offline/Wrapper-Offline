@@ -636,32 +636,32 @@
 	</facial>
 	<bodyshape id="adam" name="Adam" default_action="stand" default_motion="walk" action_thumb="stand" facial_thumb="head_neutral" thumb_path="thumbnail.swf" enable="Y" tag="male">
 		<default_char>
-  <color r="ccSkinColor" oc="0xFFE1C4">0xFFCE95</color>
-  <color r="ccEyeLib">0xFFCE95</color>
-  <color r="ccEyeIris">0x000000</color>
-  <color r="ccGlassesFrame">0xBE10B0</color>
-  <color r="ccGlassesLens">0x737373</color>
-  <color r="ccMouthLip">0x891258</color>
-  <color r="ccMustache">0x000000</color>
-  <color r="ccBeard">0xFFFFFF</color>
-  <color r="ccEyebrow">0x996633</color>
-  <color r="ccHairMajor">0x996633</color>
-  <color r="ccHairMinor">0x640F0F</color>
-  <color r="ccUpperMain" oc="0x336699">0x993333</color>
-  <color r="ccUpperMinor" oc="0xE5E5E5">0xFFFFFF</color>
-  <color r="ccLowerMain" oc="0xCCBC9A">0xCC9966</color>
-  <color r="ccLowerMinor" oc="0xEEEEEE">0xFFFFFF</color>
-  <component type="bodyshape" component_id="adam" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="skeleton" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="upper_body" component_id="adam_005" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="lower_body" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="faceshape" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="hair" component_id="008" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="eyebrow" component_id="002" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="nose" component_id="004" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="eye" component_id="205" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="ear" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
-  <component type="mouth" component_id="201" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/>
+			<color r="ccSkinColor" oc="0xFFE1C4">0xFFCE95</color>
+			<color r="ccEyeLib">0xFFCE95</color>
+			<color r="ccEyeIris">0x000000</color>
+			<color r="ccGlassesFrame">0xBE10B0</color>
+			<color r="ccGlassesLens">0x737373</color>
+			<color r="ccMouthLip">0x891258</color>
+			<color r="ccMustache">0x000000</color>
+			<color r="ccBeard">0xFFFFFF</color>
+			<color r="ccEyebrow">0x996633</color>
+			<color r="ccHairMajor">0x996633</color>
+			<color r="ccHairMinor">0x640F0F</color>
+			<color r="ccUpperMain" oc="0x336699">0x993333</color>
+			<color r="ccUpperMinor" oc="0xE5E5E5">0xFFFFFF</color>
+			<color r="ccLowerMain" oc="0xCCBC9A">0xCC9966</color>
+			<color r="ccLowerMinor" oc="0xEEEEEE">0xFFFFFF</color>
+			<component type="ear" component_id="006" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="bodyshape" component_id="adam" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="skeleton" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="upper_body" component_id="adam_005" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="50" gopoints="0"/>
+			<component type="lower_body" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="40" gopoints="0"/>
+			<component type="faceshape" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="hair" component_id="008" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eye" component_id="004" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="eyebrow" component_id="003" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="nose" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
+			<component type="mouth" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0" gobucks="0" gopoints="0"/>
 		</default_char>
 		<action id="stand" name="Stand 1" loop="Y" totalframe="1" enable="Y" is_motion="N">
 			<selection type="facial" facial_id="head_neutral"/>
