@@ -25,7 +25,6 @@ module.exports = function (req, res, url) {
 		case 'POST': {
 			if (!url.path.startsWith('/goapi/getMovie/')) return;
 			res.setHeader('Content-Type', 'application/zip');
-			process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
 			movie.loadZip(url.query.movieId).then(b =>
 				res.end(Buffer.concat([base, b]))
