@@ -6,7 +6,7 @@ this css has the general header/footer layout stuff
 general
 **/
 html, body {
-	background: #fff;
+	background: #000000;
 	color: #000000;
 	font: 16px/1.5 'Sailec', Arial, sans-serif;
 	width: 100%;
@@ -17,6 +17,7 @@ body {
 	flex-direction: column; 
 }
 #video-info {
+  background: #fff;
   color: #474747;
 }
 
