@@ -65,7 +65,7 @@ header {
 .button_small:hover { background: #444; color: #d85e27 }
 /* big buttons */
 .button_big {
-	background-color: #d85e27;
+	background-color: #00FFFF;
 	width: 160px;
 }
 .button_big:hover {

@@ -4,6 +4,7 @@ const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
 const base = Buffer.alloc(1, 0);
 const asset = require('./main');
+const starter = require('../starter/main');
 
 async function listAssets(data, makeZip) {
 	var xmlString, files;
@@ -19,8 +20,20 @@ async function listAssets(data, makeZip) {
 			xmlString = `${header}<ugc more="0">${files.map(v => `<bg id="${v.id}"/>`)}</ugc>`;
 			break;
 		}
-		case 'prop':
-		default: {
+		case 'movie': {
+			files = starter.list()
+			xmlString = `${header}<ugc more="0">${files.map(v =>`
+			<movie id="${v.id}" path="/_SAVED/${
+				v.id}" numScene="1" title="${v.name}" thumbnail_url="/starter_thumbs/${
+					v.id}.png"><tags></tags></movie>`).join('')}</ugc>`;
+			break;
+		}
+		case 'prop': {
+			files = asset.getProps();
+			xmlString = `${header}<ugc more="0">${files.map(v => `<prop subtype="0" id="${v.id}" asset_url="/api_v2/assets/${v.id}"/>`)}</ugc>`;
+			break;
+		}
+		default: { // No File Type? Send in a blank response.
 			xmlString = `${header}<ugc more="0"></ugc>`;
 			break;
 		}
@@ -47,7 +60,9 @@ async function listAssets(data, makeZip) {
 
 module.exports = function (req, res, url) {
 	var makeZip = false; switch (url.path) {
-		case '/goapi/getUserAssets/': makeZip = true; break;
+		case '/goapi/getUserAssets/': 
+		case '/api_v2/assets/team':
+		case '/api_v2/assets/shared': { makeZip = true; break; }
 		case '/goapi/getUserAssetsXml/': break;
 		default: return;
 	}

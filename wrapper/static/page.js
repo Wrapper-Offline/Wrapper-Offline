@@ -125,8 +125,7 @@ module.exports = function (req, res, url) {
 	}
 	res.setHeader('Content-Type', 'text/html; charset=UTF-8');
 	Object.assign(params.flashvars, query);
-	res.end(`
-	<head>
+	res.end(`<head>
 		<script>
 			document.title='${title}',flashvars=${JSON.stringify(params.flashvars)}
 		</script>
@@ -148,7 +147,7 @@ module.exports = function (req, res, url) {
 	
 	<header id="header">
 		<a href="/">
-			<h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.svg" alt="Wrapper: Offline"/></h1>
+			<h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.png" alt="Wrapper: Offline"/></h1>
 		</a>
 		<nav id="headbuttons">
 			<div class="dropdown_contain button_small">
@@ -200,6 +199,14 @@ module.exports = function (req, res, url) {
 	</header>
 	
 	<body style="margin:0px" onload="hideHeader()">${toObjectString(attrs, params)
-		}</body>${stuff.pages[url.pathname] || ''}`);
+		}</body>${stuff.pages[url.pathname] || ''}
+		
+        <form style="display:none" enctype='multipart/form-data' action='/upload_movie' method='post'>
+	         <input id='file' type="file" onchange="this.form.submit()" name='import' />
+        </form>
+
+        <form style="display:none" enctype='multipart/form-data' action='/upload_character' method='post'>
+	         <input id='file2' type="file" onchange="this.form.submit()" name='import' />
+        </form>`);
 	return true;
 }

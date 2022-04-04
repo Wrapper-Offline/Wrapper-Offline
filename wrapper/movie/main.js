@@ -54,10 +54,20 @@ module.exports = {
 					res(data.subarray(data.indexOf(80)));
 					break;
 				}
+				case '0':
 				case 'm': {
 					let numId = Number.parseInt(suffix);
 					if (isNaN(numId)) rej();
-					let filePath = fUtil.getFileIndex('movie-', '.xml', numId);
+					switch (prefix) {
+						case '0': {
+							var filePath = fUtil.getFileIndex('starter-', '.xml', numId);
+							break;
+						}
+						case 'm': {
+							var filePath = fUtil.getFileIndex('movie-', '.xml', numId);
+							break;
+						}
+					}
 					if (!fs.existsSync(filePath)) rej();
 
 					const buffer = fs.readFileSync(filePath);
