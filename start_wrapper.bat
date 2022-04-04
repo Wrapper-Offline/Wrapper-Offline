@@ -1,10 +1,8 @@
 :: Wrapper: Offline Launcher
 :: Author: benson#0411
-:: Project Runner: GoTest334#9880
 :: License: MIT
-set WRAPPER_VER=1.2.3
-set WRAPPER_BLD=72
-title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
+set WRAPPER_VER=1.3.0
+title Wrapper: Offline v%WRAPPER_VER% [Initializing...]
 
 ::::::::::::::::::::
 :: Initialization ::
@@ -68,13 +66,10 @@ if not exist utilities ( goto error_location )
 if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
 
-:: Create checks folder if nonexistent
-if not exist "utilities\checks" md utilities\checks
-
 :: Welcome, Director Ford!
 echo Wrapper: Offline
-echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
-echo Version !WRAPPER_VER!, build !WRAPPER_BLD!
+echo A project from VisualPlugin adapted by the W:O team
+echo Version !WRAPPER_VER!
 echo:
 
 :: Confirm measurements to proceed.
@@ -111,7 +106,7 @@ if !VERBOSEWRAPPER!==n (
 	echo:
 )
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Checking dependencies...]
+title Wrapper: Offline v!WRAPPER_VER! [Checking dependencies...]
 
 :: Preload variables
 set NEEDTHEDEPENDERS=n
@@ -284,7 +279,7 @@ if !NEEDTHEDEPENDERS!==y (
 	goto skip_dependency_install
 )
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Installing dependencies...]
+title Wrapper: Offline v!WRAPPER_VER! [Installing dependencies...]
 
 :: Preload variables
 set INSTALL_FLAGS=ALLUSERS=1 /norestart
@@ -671,51 +666,30 @@ echo:
 :: Starting Wrapper ::
 ::::::::::::::::::::::
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Loading...]
+title Wrapper: Offline v!WRAPPER_VER! [Loading...]
 
 :: Close existing node apps
 :: Hopefully fixes EADDRINUSE errors??
 if !VERBOSEWRAPPER!==y (
-	if !CEPSTRAL!==n (
-		echo Closing any existing node and/or PHP apps...
-		if !DRYRUN!==n ( TASKKILL /IM node.exe /F )
-		if !DRYRUN!==n ( TASKKILL /IM php.exe /F )
-		echo:
-	) else (
-		echo Closing any existing node apps...
-		if !DRYRUN!==n ( TASKKILL /IM node.exe /F )
-	)
+	echo Closing any existing node apps...
+	if !DRYRUN!==n ( TASKKILL /IM node.exe /F )
+	echo:
 ) else (
-	if !CEPSTRAL!==n (
-		if !DRYRUN!==n ( TASKKILL /IM node.exe /F 2>nul )
-		if !DRYRUN!==n ( TASKKILL /IM php.exe /F 2>nul )
-	) else (
-		if !DRYRUN!==n ( TASKKILL /IM node.exe /F 2>nul )
-	)
+	if !DRYRUN!==n ( TASKKILL /IM node.exe /F 2>nul )
 )
 
-:: Start Node.js, http-server and PHP for VFProxy
-if !CEPSTRAL!==n (
-	echo Loading Node.js, http-server and PHP ^(for VFProxy only^)...
-) else (
-	echo Loading Node.js and http-server...
-)
+:: Start Node.js and http-server
+echo Loading Node.js and http-server...
 pushd utilities
 if !VERBOSEWRAPPER!==y (
-	if !DRYRUN!==n ( start /MIN open_http-server.bat )
-	if !DRYRUN!==n ( start /MIN open_nodejs.bat )
-	if !DRYRUN!==n ( 
-		if !CEPSTRAL!==n ( 
-			start /MIN open_vfproxy_php.bat
-		)
+	if !DRYRUN!==n (
+		start /MIN open_http-server.bat
+		start /MIN open_nodejs.bat
 	)
 ) else (
-	if !DRYRUN!==n ( start SilentCMD open_http-server.bat )
-	if !DRYRUN!==n ( start SilentCMD open_nodejs.bat )
-	if !DRYRUN!==n ( 
-		if !CEPSTRAL!==n (
-			start SilentCMD open_vfproxy_php.bat
-		)
+	if !DRYRUN!==n (
+		start SilentCMD open_http-server.bat
+		start SilentCMD open_nodejs.bat
 	)
 )
 popd
@@ -751,15 +725,15 @@ echo Wrapper: Offline has been started^^! The video list should now be open.
 :: Post-Start ::
 ::::::::::::::::
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^)
+title Wrapper: Offline v!WRAPPER_VER!
 if !VERBOSEWRAPPER!==y ( goto wrapperstarted )
 :wrapperstartedcls
 cls
 :wrapperstarted
 
 echo:
-echo Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) running
-echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
+echo Wrapper: Offline v!WRAPPER_VER! running
+echo A project from VisualPlugin adapted by the W:O team
 echo:
 if !VERBOSEWRAPPER!==n ( echo DON'T CLOSE THIS WINDOW^^! Use the quit option ^(0^) when you're done. )
 if !VERBOSEWRAPPER!==y ( echo Verbose mode is on, see the two extra CMD windows for extra output. )
@@ -768,8 +742,7 @@ if !JUSTIMPORTED!==y ( echo Note: You'll need to reload the editor for your file
 :: Hello, code wanderer. Enjoy seeing all the secret options easily instead of finding them yourself.
 echo:
 echo Enter 1 to reopen the video list
-echo Enter 2 to import a file
-echo Enter 3 to open the server page
+echo Enter 2 to open the server page
 echo Enter ? to open the FAQ
 echo Enter clr to clean up the screen
 echo Enter 0 to close Wrapper: Offline
@@ -781,26 +754,23 @@ set /p CHOICE=Choice:
 if "!choice!"=="0" goto exitwrapperconfirm
 set FUCKOFF=n
 if "!choice!"=="1" goto reopen_webpage
-if "!choice!"=="2" goto start_importer
-if "!choice!"=="3" goto open_server
+if "!choice!"=="2" goto open_server
 if "!choice!"=="?" goto open_faq
 if /i "!choice!"=="clr" goto wrapperstartedcls
 if /i "!choice!"=="cls" goto wrapperstartedcls
 if /i "!choice!"=="clear" goto wrapperstartedcls
 :: funni options
 if "!choice!"=="43" echo OH MY GOD. FOURTY THREE CHARS. NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO & goto wrapperidle
-if /i "!choice!"=="benson" echo watch benson on youtube & goto wrapperidle
+if /i "!choice!"=="benson" echo Child Groom & goto wrapperidle
 if /i "!choice!"=="ford" echo what up son & goto wrapperidle
 if /i "!choice!"=="no" echo stahp & goto wrapperidle
 if /i "!choice!"=="yes" echo Alright. & goto wrapperidle
 if /i "!choice!"=="fuck off" goto youfuckoff
 if /i "!choice!"=="fuck you" echo No, fuck you. & goto wrapperidle
 if /i "!choice!"=="sex" echo that's fake & goto wrapperidle
-if /i "!choice!"=="watch benson on youtube" goto w_a_t_c_h
 if /i "!choice!"=="browser slayer" goto slayerstestaments
 if /i "!choice!"=="patch" goto patchtime
 if /i "!choice!"=="random" goto sayarandom
-if /i "!choice!"=="narutofan420" echo i am narutofan420 i am a naruto fan i watch naruto i watched all 3 series and still watch it & goto wrapperidle
 if /i "!choice!"=="die" echo die please & goto wrapperidle
 if /i "!choice!"=="aaron doan" echo YOU^^!^^!^^! Noo Wrapper Is Patched Forever^^!^^!^^! Cries And Hits You So Many Times & goto wrapperidle
 if /i "!choice!"=="spark" echo WHY DID SOMEONE FUCK UP THE LAUNCHER? & goto wrapperidle
@@ -859,14 +829,6 @@ start explorer.exe wrapper-offline
 popd
 goto wrapperidle
 
-:start_importer
-echo Opening the importer...
-call utilities\import.bat
-cls
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^)
-set JUSTIMPORTED=y
-goto wrapperstartedcls
-
 :youfuckoff
 echo You fuck off.
 set FUCKOFF=y
@@ -887,15 +849,6 @@ TASKKILL /IM node.exe /F
 start "" /wait /B "%~F0" point_insertion
 exit
 
-:w_a_t_c_h
-echo watch benson on youtube
-echo watch benson on youtube
-echo watch benson on youtube
-echo watch benson on youtube
-echo watch benson on youtube
-echo wa
-goto wrapperidle
-
 :patchtime
 echo:
 echo would you like to patch whoper online
@@ -910,7 +863,7 @@ echo yes or no question here && goto patchtimeretry
 
 :sayarandom
 :: welcome to "inside jokes with no context" land
-set /a _rand=!RANDOM!*15/32767
+set /a _rand=!RANDOM!*17/32767
 if !_rand!==0 echo stress level ^>0
 if !_rand!==1 echo Something random.
 if !_rand!==2 echo oisjdoiajfgmafvdsdg
@@ -927,6 +880,7 @@ if !_rand!==12 echo try typing "with style" when exiting
 if !_rand!==13 echo elmo
 if !_rand!==14 echo gnorm gnat says: trans rights are human rights
 if !_rand!==15 echo wrapper inline
+if !_rand!==16 echo Ronald McDonald Orgy
 goto wrapperidle
 
 :slayerstestaments
@@ -1010,16 +964,14 @@ echo You must answer Yes or No. && goto exitwrapperretry
 
 :point_extraction
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down...]
+title Wrapper: Offline v!WRAPPER_VER! [Shutting down...]
 
-:: Shut down Node.js, PHP and http-server
+:: Shut down Node.js and http-server
 if !VERBOSEWRAPPER!==y (
 	if !DRYRUN!==n ( TASKKILL /IM node.exe /F )
-	if !DRYRUN!==n ( TASKKILL /IM php.exe /F )
 	echo:
 ) else (
 	if !DRYRUN!==n ( TASKKILL /IM node.exe /F 2>nul )
-	if !DRYRUN!==n ( TASKKILL /IM php.exe /F 2>nul )
 )
 
 :: This is where I get off.
@@ -1034,7 +986,7 @@ if !DRYRUN!==y ( echo Go wet your run next time. )
 pause & exit
 
 :exitwithstyle
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down... WITH STYLE]
+title Wrapper: Offline v!WRAPPER_VER! [Shutting down... WITH STYLE]
 echo SHUTTING DOWN THE WRAPPER OFFLINE
 PING -n 3 127.0.0.1>nul
 color 9b
@@ -1042,9 +994,6 @@ echo BEWEWEWEWWW PSSHHHH KSHHHHHHHHHHHHHH
 PING -n 3 127.0.0.1>nul
 TASKKILL /IM node.exe /F
 echo NODE DOT JS ANNIHILATED
-PING -n 3 127.0.0.1>nul
-TASKKILL /IM php.exe /F
-echo PHP DESTROYED
 PING -n 3 127.0.0.1>nul
 echo TIME TO ELIMINATE WRAPPER OFFLINE
 PING -n 3 127.0.0.1>nul
