@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme id="spacecitizen" name="Space Citizens" cc_theme_id="spacecitizen">
+	<background id="space01_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20514" money="0" sharing="0"/>
+	<background id="space16_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20529" money="0" sharing="0"/>
+	<background id="space15_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20528" money="0" sharing="0"/>
+	<background id="space14_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20527" money="0" sharing="0"/>
+	<background id="space13_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20526" money="0" sharing="0"/>
+	<background id="space12_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20525" money="0" sharing="0"/>
+	<background id="space11_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20524" money="0" sharing="0"/>
+	<background id="space10_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20523" money="0" sharing="0"/>
+	<background id="space09_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20522" money="0" sharing="0"/>
+	<background id="space08_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20521" money="0" sharing="0"/>
+	<background id="space07_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20520" money="0" sharing="0"/>
+	<background id="space06_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20519" money="0" sharing="0"/>
+	<background id="space05_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20518" money="0" sharing="0"/>
+	<background id="space04_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20517" money="0" sharing="0"/>
+	<background id="space03_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20516" money="0" sharing="0"/>
+	<background id="space02_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20515" money="0" sharing="0"/>
+	<background id="space17_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20530" money="0" sharing="0"/>
+	<compositebg id="cbg_space01" name="Space travel" enable="Y" default="N" thumb="space01.jpg" display_order="1" is_premium="N" money="0" sharing="0" aid="20531">
+	<bg id="cbg_space01_BG35" index="0">
+		<file>spacecitizen.space01_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space02" name="Space travel" enable="Y" default="N" thumb="space02.jpg" display_order="2" is_premium="N" money="0" sharing="0" aid="20532">
+	<bg id="cbg_space02_BG38" index="0">
+		<file>spacecitizen.space02_bg.swf</file>
+	</bg>
+	<prop id="cbg_space02_PROP11" index="1">
+		<file>spacecitizen.space02_prop01.swf</file>
+		<x>470</x>
+		<y>219</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space03" name="Snowy planet" enable="Y" default="N" thumb="space03.jpg" display_order="3" is_premium="N" money="0" sharing="0" aid="20533">
+	<bg id="cbg_space03_BG43" index="0">
+		<file>spacecitizen.space03_bg.swf</file>
+	</bg>
+	<prop id="cbg_space03_PROP13" index="1">
+		<file>spacecitizen.space03_prop01.swf</file>
+		<x>356</x>
+		<y>241</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space04" name="Snowy base" enable="Y" default="N" thumb="space04.jpg" display_order="4" is_premium="N" money="0" sharing="0" aid="20534">
+	<bg id="cbg_space04_BG48" index="0">
+		<file>spacecitizen.space04_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space05" name="Snowy base" enable="Y" default="N" thumb="space05.jpg" display_order="5" is_premium="N" money="0" sharing="0" aid="20535">
+	<bg id="cbg_space05_BG51" index="0">
+		<file>spacecitizen.space05_bg.swf</file>
+	</bg>
+	<prop id="PROP5" index="1">
+		<file>spacecitizen.space05_prop01.swf</file>
+		<x>325</x>
+		<y>318</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space08" name="Snowy base" enable="Y" default="N" thumb="space08.jpg" display_order="6" is_premium="N" money="0" sharing="0" aid="20538">
+	<bg id="cbg_space08_BG67" index="0">
+		<file>spacecitizen.space08_bg.swf</file>
+	</bg>
+	<prop id="cbg_space08_PROP21" index="1">
+		<file>spacecitizen.space08_prop01.swf</file>
+		<x>88</x>
+		<y>160</y>
+		<xscale>0.43</xscale>
+		<yscale>0.43</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space08_PROP19" index="2">
+		<file>spacecitizen.space08_prop01.swf</file>
+		<x>218</x>
+		<y>282</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space06" name="Hallway" enable="Y" default="N" thumb="space06.jpg" display_order="50" is_premium="N" money="0" sharing="0" aid="20536">
+	<bg id="cbg_space06_BG59" index="0">
+		<file>spacecitizen.space06_bg.swf</file>
+	</bg>
+	<prop id="cbg_space06_PROP17" index="1">
+		<file>spacecitizen.space06_prop01.swf</file>
+		<x>518</x>
+		<y>201</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space15" name="Lift lobby" enable="Y" default="N" thumb="space15.jpg" display_order="51" is_premium="N" money="0" sharing="0" aid="20545">
+	<bg id="cbg_space15_BG96" index="0">
+		<file>spacecitizen.space15_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space10" name="Bridge" enable="Y" default="N" thumb="space10.jpg" display_order="52" is_premium="N" money="0" sharing="0" aid="20540">
+	<bg id="cbg_space10_BG78" index="0">
+		<file>spacecitizen.space10_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space09" name="Cargo bay" enable="Y" default="N" thumb="space09.jpg" display_order="53" is_premium="N" money="0" sharing="0" aid="20539">
+	<bg id="cbg_space09_BG75" index="0">
+		<file>spacecitizen.space09_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space11" name="Sick bay" enable="Y" default="N" thumb="space11.jpg" display_order="54" is_premium="N" money="0" sharing="0" aid="20541">
+	<bg id="cbg_space11_BG81" index="0">
+		<file>spacecitizen.space11_bg.swf</file>
+	</bg>
+	<prop id="cbg_space11_PROP24" index="1">
+		<file>spacecitizen.space11_prop01.swf</file>
+		<x>401</x>
+		<y>243</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space07" name="Engineering" enable="Y" default="Y" thumb="space07.jpg" display_order="55" is_premium="N" money="0" sharing="0" aid="20537">
+	<bg id="cbg_space07_BG64" index="0">
+		<file>spacecitizen.space07_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space14" name="Volcanic planet" enable="Y" default="N" thumb="space14.jpg" display_order="71" is_premium="N" money="0" sharing="0" aid="20544">
+	<bg id="cbg_space14_BG93" index="0">
+		<file>spacecitizen.space14_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space12" name="Volcanic planet" enable="Y" default="N" thumb="space12.jpg" display_order="72" is_premium="N" money="0" sharing="0" aid="20542">
+	<bg id="cbg_space12_BG87" index="0">
+		<file>spacecitizen.space12_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space13" name="Volcanic planet" enable="Y" default="N" thumb="space13.jpg" display_order="73" is_premium="N" money="0" sharing="0" aid="20543">
+	<bg id="cbg_space13_BG90" index="0">
+		<file>spacecitizen.space13_bg.swf</file>
+	</bg>
+</compositebg>
+	<compositebg id="cbg_space17" name="Volcanic base" enable="Y" default="N" thumb="space17.jpg" display_order="74" is_premium="N" money="0" sharing="0" aid="20547">
+	<bg id="cbg_space17_BG26" index="0">
+		<file>spacecitizen.space17_bg.swf</file>
+	</bg>
+	<prop id="cbg_space17_PROP5" index="3">
+		<file>spacecitizen.space17_prop01.swf</file>
+		<x>454</x>
+		<y>98</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space17_PROP6" index="2">
+		<file>spacecitizen.space17_prop01.swf</file>
+		<x>263</x>
+		<y>107</y>
+		<xscale>0.77</xscale>
+		<yscale>0.77</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space17_PROP7" index="1">
+		<file>spacecitizen.space17_prop01.swf</file>
+		<x>102</x>
+		<y>113</y>
+		<xscale>0.51</xscale>
+		<yscale>0.51</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<compositebg id="cbg_space16" name="Volcanic base" enable="Y" default="N" thumb="space16.jpg" display_order="75" is_premium="N" money="0" sharing="0" aid="20546">
+	<bg id="cbg_space16_BG14" index="0">
+		<file>spacecitizen.space16_bg.swf</file>
+	</bg>
+	<prop id="cbg_space16_PROP1" index="1">
+		<file>spacecitizen.space16_prop02.swf</file>
+		<x>493</x>
+		<y>186</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+	<prop id="cbg_space16_PROP2" index="2">
+		<file>spacecitizen.space16_prop01.swf</file>
+		<x>382</x>
+		<y>303</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
+	<prop id="space10_prop01.swf" name="Captain seat" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20480" money="0" sharing="0"/>
+	<prop id="space10_prop02.swf" name="Captain seat" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20481" money="0" sharing="0"/>
+	<prop id="base01.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20482" money="0" sharing="0"/>
+	<prop id="base02.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20483" money="0" sharing="0"/>
+	<prop id="base03.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20484" money="0" sharing="0"/>
+	<prop id="energy_bar01.swf" name="Tank" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20485" money="0" sharing="0"/>
+	<prop id="explosion01.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20486" money="0" sharing="0"/>
+	<prop id="explosion02.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20487" money="0" sharing="0"/>
+	<prop id="explosion03.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20488" money="0" sharing="0"/>
+	<prop id="planet01.swf" name="Planet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20489" money="0" sharing="0"/>
+	<prop id="msp_spaceship02" name="Spaceship" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_spaceship02_ship02.swf" enable="Y" is_premium="N" aid="20490" money="0" sharing="0">
+		<state id="msp_spaceship02_ship02.swf" name="forward" enable="Y" default="Y"/>
+		<state id="msp_spaceship02_ship02_down.swf" name="side - take off" enable="Y"/>
+		<state id="msp_spaceship02_ship02_fire.swf" name="side - fire lasers" enable="Y"/>
+		<state id="msp_spaceship02_ship02_fire_b.swf" name="side - fire cannon" enable="Y"/>
+		<state id="msp_spaceship02_ship02_side.swf" name="side - forward" enable="Y"/>
+		<state id="msp_spaceship02_ship02_still.swf" name="side - still" enable="Y"/>
+		<state id="msp_spaceship02_ship02_topstill.swf" name="still" enable="Y"/>
+	</prop>
+	<prop id="msp_explosion" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_explosion_explosion01.swf" enable="Y" is_premium="N" aid="20498" money="0" sharing="0">
+		<state id="msp_explosion_explosion01.swf" name="loop" enable="Y" default="Y"/>
+		<state id="msp_explosion_explosion02.swf" name="multi" enable="Y"/>
+		<state id="msp_explosion_explosion03.swf" name="once" enable="Y"/>
+	</prop>
+	<prop id="msp_sci_ship01" name="Spaceship" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sci_ship01_ship01.swf" enable="Y" is_premium="N" aid="20502" money="0" sharing="0">
+		<state id="msp_sci_ship01_ship01.swf" name="forward" enable="Y" default="Y"/>
+		<state id="msp_sci_ship01_ship01_down.swf" name="side - take off" enable="Y"/>
+		<state id="msp_sci_ship01_ship01_fire.swf" name="side - fire lasers" enable="Y"/>
+		<state id="msp_sci_ship01_ship01_side.swf" name="side - forward" enable="Y"/>
+		<state id="msp_sci_ship01_ship01_still.swf" name="side - still" enable="Y"/>
+		<state id="msp_sci_ship01_ship01_topstill.swf" name="still" enable="Y"/>
+	</prop>
+	<prop id="05gun01_still.swf" name="Gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20509" money="0" sharing="0" handstyle="gun"/>
+	<prop id="05gun02_still.swf" name="Gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20510" money="0" sharing="0" handstyle="gun"/>
+	<prop id="05gun03_still.swf" name="Gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20511" money="0" sharing="0" handstyle="gun"/>
+	<prop id="05gun04_still.swf" name="Gun" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20512" money="0" sharing="0" handstyle="gun"/>
+	<prop id="space10_prop03.swf" name="Monitor" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20513" money="0" sharing="0"/>
+	<prop id="space02_prop01.swf" name="Earth" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20466" money="0" sharing="0"/>
+	<prop id="space03_prop01.swf" name="Mountains" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20467" money="0" sharing="0"/>
+	<prop id="space05_prop01.swf" name="Ice chunk" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20468" money="0" sharing="0"/>
+	<prop id="space06_prop01.swf" name="Red light" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20469" money="0" sharing="0"/>
+	<prop id="space08_prop01.swf" name="Weapon" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20470" money="0" sharing="0"/>
+	<prop id="space11_prop01.swf" name="Bed" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20471" money="0" sharing="0"/>
+	<prop id="space16_prop01.swf" name="Space device" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20472" money="0" sharing="0"/>
+	<prop id="space16_prop02.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20473" money="0" sharing="0"/>
+	<prop id="space17_prop01.swf" name="Lamp" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20474" money="0" sharing="0"/>
+	<prop id="space01_prop01.swf" name="Space ship" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20475" money="0" sharing="0"/>
+	<prop id="space03_prop02.swf" name="Base" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20476" money="0" sharing="0"/>
+	<prop id="space05_prop02.swf" name="Space ship" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20477" money="0" sharing="0"/>
+	<prop id="space06_prop02.swf" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20478" money="0" sharing="0"/>
+	<prop id="space06_prop03.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20479" money="0" sharing="0"/>
+</theme>

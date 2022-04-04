@@ -1,0 +1,13 @@
+{
+	"Server Thingy": {
+		"scope": "javascript,typescript",
+		"prefix": "xxx",
+		"body": [
+			"module.exports = function (req, res, url) {",
+			"if (req.method != '$1' || url.path != '$2') return;",
+			"return true;",
+			"}"
+		],
+		"description": "Log output to console"
+	}
+}
