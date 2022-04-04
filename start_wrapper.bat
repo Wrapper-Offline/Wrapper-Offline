@@ -1,5 +1,6 @@
 :: Wrapper: Offline Launcher
 :: Author: benson#0411
+:: Project Runner: GoTest334#9880
 :: License: MIT
 set WRAPPER_VER=1.3.0
 title Wrapper: Offline v%WRAPPER_VER% [Initializing...]
@@ -68,7 +69,7 @@ if not exist server ( goto error_location )
 
 :: Welcome, Director Ford!
 echo Wrapper: Offline
-echo A project from VisualPlugin adapted by the W:O team
+echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
 echo Version !WRAPPER_VER!
 echo:
 
