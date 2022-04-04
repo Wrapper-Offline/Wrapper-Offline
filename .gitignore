@@ -2,9 +2,6 @@
 wrapper/_CACHÉ/*
 wrapper/_SAVED/*
 wrapper/_THEMES/import.xml
-wrapper/main.js
-wrapper/main-rpc.js
-wrapper/main-norpc.js
 !_*/_NO_REMÖVE
 utilities/backups/*
 utilities/import_these/*
