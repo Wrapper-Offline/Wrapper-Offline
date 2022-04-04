@@ -62,7 +62,7 @@ header {
 }
 /* small buttons */
 .button_small       { background: #333 }
-.button_small:hover { background: #444; color: #d85e27 }
+.button_small:hover { background: #444; color: #00FFFF }
 /* big buttons */
 .button_big {
 	background-color: #00FFFF;
@@ -111,7 +111,7 @@ header dropdowns
 }
 .dropdown_menu>a:hover {
 	background: #222;
-	color: #d85e27;
+	color: #00FFFF;
 	cursor: pointer;
 }
 /* dropdown header and separation */
