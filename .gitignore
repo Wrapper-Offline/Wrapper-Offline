@@ -3,6 +3,7 @@ wrapper/_ASSETS/*
 wrapper/_CACHÉ/*
 wrapper/_SAVED/*
 wrapper/_THEMES/import.xml
+wrapper/node_modules/*
 !_*/_NO_REMÖVE
 utilities/backups/*
 utilities/import_these/*
