@@ -33,6 +33,17 @@ While completely unnecessary, if you decide to use your freedom to change the so
 ## Credits
 **Please do not contact anyone on the list for support, use the Discord server.**
 
+Redrawn:
+|Name          | Contribution         |
+| ------------ | -------------------- |
+| MiiArtisan   | Co-project lead and logo |
+| DazaSeal     | Co-project lead and frontend designer |
+| JosephAnimate2022 | Backend development and batch related stuff |
+| BluePeacocks | Developer
+| IdiotKid     | Developer
+| tonyanifire  | Developer
+
+
 Original Wrapper, Wrapper offline, and unaffiliated credits:
 | Name         | Contribution         |
 | ------------ | -------------------- |
@@ -45,7 +56,6 @@ Original Wrapper, Wrapper offline, and unaffiliated credits:
 | NathanSaturnBOI  | Logo                                                   |
 | Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
 | VisualPlugin     | Text to speech voices                                  |
-| xomdjl_          | VFProxy, Text to speech voices                         |
 | creepyjokes2000  | Waveform fix, improved actions                         |
 | JoshAnimate      | Headgear fix                                           |
 | RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
