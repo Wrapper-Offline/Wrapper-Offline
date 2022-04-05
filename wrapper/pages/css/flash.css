@@ -9,7 +9,7 @@ main { display: flex; padding: 0 }
 .close-button:hover, 
 #close-button:hover { 
 	cursor: pointer; 
-	color: var(--blue); 
+	color: var(--orange); 
 }
 
 /**
@@ -83,7 +83,7 @@ html.dark .importer_asset { border-color: #3a3a3a }
 	font-size: 14px;
 }
 .asset_name:focus {
-	outline: var(--blue) auto 2px;
+	outline: var(--orange) auto 2px;
 }
 .importer_asset p {
 	color: #858e95;

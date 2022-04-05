@@ -23,19 +23,15 @@ function toggleDarkMode() {
 window.addEventListener('load', event => {
 	$(".tab_buttons a").on("click", event => {
 		const clicked = $(event.target);
-		// get parent/siblings
-		const tabPanel = clicked.parents(".tabs_contain");
-		console.log(tabPanel);
-		const buttons = tabPanel.find(".tab_buttons").children("a");
-		const navs = tabPanel.children("nav");
-		// get clicked
-		const trig = clicked.attr("data-triggers");
-		const triggered = tabPanel.find(`[data-trigger=${trig}]`);
+		const num = clicked.attr("data-triggers");
+		// get siblings
+		const buttons = clicked.siblings("a");
+		const pages = clicked.parent().siblings();
 		// toggle button
 		buttons.removeClass("selected");
 		clicked.addClass("selected");
-		// show nav
-		navs.hide();
-		triggered.show();
+		// hide other pages and show current one
+		pages.hide()
+		$(pages[num]).show();
 	});
 })

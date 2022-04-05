@@ -20,28 +20,31 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a href="#" data-triggers="features">Features</a>
-					<a href="#" data-triggers="appearance">Appearance</a>
-					<a href="#" data-triggers="library">My Library</a>
+					<a class="selected" href="#" data-triggers="0">Features</a>
+					<a href="#" data-triggers="1">Appearance</a>
+					<a href="#" data-triggers="2">My Library</a>
 				</div>
-				<nav class="tab" data-trigger="features">
+				<nav class="tab" style="display:block">
 					<h2>Features</h2>
 					<p>Short themelist: <span id="shortthemelist"></span></p>
 				</nav>
-				<nav class="tab" data-trigger="appearance">
+				<nav class="tab">
 					<h2>Appearance</h2>
 					<p>Dark mode: <span id="darkmode"></span></p>
 				</nav>
-				<nav class="tab" data-trigger="library">
+				<nav class="tab">
 					<nav class="tabs_contain">
 						<div class="tab_buttons">
 							<h1>My Library</h1>
 							<a href="#" data-triggers="bg">Backgrounds</a>
-							<a href="#" data-triggers="starter">Starters</a>
 							<a href="#" data-triggers="char">Characters</a>
-							<a href="#" data-triggers="prop">Props</a>
 							<a href="#" data-triggers="sound">Sounds</a>
+							<a href="#" data-triggers="prop">Watermarks</a>
 						</div>
+						<nav class="tab">
+							<h2>Appearance</h2>
+							<p>Dark mode: <span id="darkmode"></span></p>
+						</nav>
 					</nav>
 				</nav>
 			</nav>

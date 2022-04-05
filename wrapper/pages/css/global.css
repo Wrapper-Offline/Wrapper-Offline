@@ -170,6 +170,10 @@ tabs
     flex-direction: column;
     min-width: 180px;
 }
+.tabs_contain h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
 .tab_buttons a {
 	/* style */
 	background: #353535;
