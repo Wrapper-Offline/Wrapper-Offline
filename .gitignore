@@ -1,50 +1,29 @@
 # General Wrapper Offline Stuff
+wrapper/_ASSETS/*
 wrapper/_CACHÉ/*
 wrapper/_SAVED/*
 wrapper/_THEMES/import.xml
-wrapper/main.js
-wrapper/main-rpc.js
-wrapper/main-norpc.js
+wrapper/node_modules/*
 !_*/_NO_REMÖVE
 utilities/backups/*
 utilities/import_these/*
-utilities/renders/*
-utilities/misc/temp/*
 utilities/grounded_messages/*
 utilities/config.bat
-utilities/checks/disclaimer.txt
-utilities/grounded_md5.txt
-utilities/md5.txt
-utilities/convmd5.txt
 utilities/originalcfname.txt
 server/characters/*
 server/characters/characters.zip
-server/store/3a981f5cb2739137/import/*
-server/store/3a981f5cb2739137/cc_store/family/cc_theme.xml
-server/store/3a981f5cb2739137/import/import.zip
-server/store/3a981f5cb2739137/import/theme.xml
-server/store/3a981f5cb2739137/business/*
-server/store/3a981f5cb2739137/whiteboard/*
-server/store/3a981f5cb2739137/infographics/*
-server/store/3a981f5cb2739137/commoncraft/*
 .DS_Store
 .DS_Store
 vfproxy/*
 bbbb/*
 
+# Ungoogled Chromium
+utilities/ungoogled-chromium/the_profile/*
+utilities/ungoogled-chromium/the_profile_initial/*
+utilities/ungoogled-chromium/the_profile/Crashpad/*
 # Personal Basilisk files
 utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/*
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/compatibility.ini
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/extensions.ini
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/extensions.json
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/places.sqlite
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/pluginreg.dat
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/prefs.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/sessionstore-backups/previous.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/sessionstore.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/startupCache/startupCache.4.little
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/user.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/xulstore.json
+
 
 
 # Logs
@@ -154,3 +133,4 @@ dist
 *.sfk
 *.sfap0
 utilities/config.bat
+wrapper/die.zip

@@ -19,7 +19,7 @@
 		"js-md5": "^0.7.3",
 		"mp3-duration": "^1.1.0",
 		"node-stream-zip": "^1.13.5",
-		"node-zip": "github:kyriosli/node-zip",
+		"node-zip": "^1.1.1",
 		"xmldoc": "^1.1.2"
 	}
 }
