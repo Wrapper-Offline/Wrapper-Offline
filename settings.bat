@@ -130,6 +130,12 @@ if exist "wrapper\tts\info-cepstral.json" (
 		echo ^(9^) Provider for Cepstral/VoiceForge voices is[91m Cepstral website [0m
 	)
 )
+:: Dark Mode
+if exist "wrapper\pages\css\global-light.css" (
+	echo ^(11^) Dark Mode is[92m ON [0m
+) else ( 
+	echo ^(11^) Dark Mode is[91m OFF [0m
+)
 :: Character solid archive
 if exist "server\characters\characters.zip" (
 	echo ^(11^) Original LVM Character IDs are[91m OFF [0m
@@ -310,16 +316,15 @@ if "!choice!"=="?10" (
 	echo or the seamus-server.tk host of VFProxy.
 	goto reaskoptionscreen
 )
-:: Character solid archive
-if exist "server\characters\characters.zip" (
-	if "!choice!"=="11" goto extractchars
-	if "!choice!"=="?11" (
-		echo When first getting Wrapper: Offline, all non-stock characters are put into a single zip file.
-		echo This is because if they're all separate, extracting takes forever and is incredibly annoying.
-		echo If you wish to import characters made on the LVM when it was still up and hosted by Vyond,
-		echo you can extract them here. They will still be compressed, just in separate files to be usable.
-		goto reaskoptionscreen
-	)
+:: Dark Mode
+if "!choice!"=="11" goto csschange
+if "!choice!"=="?11" (
+	echo By default, You are using light mode.
+        echo:
+	echo if the video list is too bright and is hurting your eyes, 
+	echo you can turn on this feature.
+        echo i hope you feel better from the brightness.
+	goto reaskoptionscreen
 )
 :: Dev options
 if /i "!choice!"=="masterkey" (
@@ -543,6 +548,24 @@ if exist "themelist-allthemes.xml" (
 	:: enable
 	ren themelist.xml themelist-allthemes.xml
 	ren themelist-lessthemes.xml themelist.xml
+)
+popd
+goto optionscreen
+
+:::::::::::::::
+:: Dark Mode ::
+:::::::::::::::
+:csschange
+echo Toggling setting...
+pushd wrapper\pages\css
+if exist "global-dark.css" (
+	:: disable
+	ren global.css global-light.css
+	ren global-dark.css global.css
+) else ( 
+	:: enable
+	ren global.css global-dark.css
+	ren global-light.css global.css
 )
 popd
 goto optionscreen
