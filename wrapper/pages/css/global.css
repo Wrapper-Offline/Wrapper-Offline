@@ -69,18 +69,18 @@ header {
 	cursor: pointer;
 }
 /* small buttons */
-.button_small       { background: #000000; color: #ffffff; transition: 1s;
+.button_small       { background: rgb(0, 30, 255); color: #ffffff; transition: 1s;
  }
-.button_small:hover { background: #2c2c2c; color: #d85e27
+.button_small:hover { background: rgb(40, 40, 255); color: #ffffff
  }
 /* big buttons */
 .button_big {
-	background-color: #ff7433;
+	background-color: orange;
 	width: 155px;
 	transition: 1s;
 }
 .button_big:hover {
-	background-color: #ff5100;
+	background-color: darkblue;
 }
 
 
@@ -99,7 +99,7 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #2c2c2c;
+	background-color: #000000;
 	border-radius: 5px;
 	/* layout */
 	width: 100%;
@@ -123,7 +123,7 @@ header dropdowns
 }
 .dropdown_menu>a:hover {
 	background: #222;
-	color: #d85e27;
+	color: #2d27d8;
 	cursor: pointer;
 }
 /* dropdown header and separation */
@@ -136,7 +136,7 @@ header dropdowns
 	padding:0 20px;
 }
 .dropdown_menu>hr {
-	border: 1px solid #ff5100;
+	border: 1px solid #0012b4;
 	margin: 10px 0;
 
 }
@@ -145,7 +145,7 @@ header dropdowns
 footer
 **/
 footer{
-	background: #1e1e1e;
+	background: #000000;
 	margin-top: auto; /* footer at the foot */
 	display: flex;
 	justify-content: space-between;
@@ -161,8 +161,8 @@ footer{
 	border-radius: 50%;
 	transition: 1s;
   }
-.fab:hover { color: orange;}
-.fas:hover { color: orange;}
+.fab:hover { color: blue;}
+.fas:hover { color: blue;}
 footer nav { margin:5px 10px}
 /* links */
 footer a {
@@ -172,7 +172,7 @@ footer a {
 	font-weight: bold;
 	margin-top: 10%;
 }
-footer a:hover { color: orange;}
+footer a:hover { color: blue;}
 
 /**
 font importing
