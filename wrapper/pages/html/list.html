@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="icon" href="../../favicon.ico" type="image/png">
+	<meta charset="UTF-8" />
+	<link rel="icon" href="./favicon.ico" type="image/png" />
 	<title>Video List</title>
-	<meta name="description" content="Wrapper: Offline's Video List">
+	<meta name="description" content="Redrawn" />
 	<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css">
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
 	<link rel="stylesheet" type="text/css" href="../css/list.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/global.js"></script>
+	<!-- todo: get these offline, or just use glyphicons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/b8ac9c2903.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
-	<a href="/">
-		<h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.png" alt="Wrapper: Offline"/></h1>
-	</a>
+	<a href="/"><h1 style="margin:0"><img id="logo" src="./pages/img/logo.svg" alt="Redrawn" /></h1></a>
 	<nav id="headbuttons">
-		<div class="dropdown_contain button_small">
-			<div class="dropdown_button upload_button">UPLOAD</div>
-			<nav class="dropdown_menu">
-				<a onclick="document.getElementById('file').click()">Movie</a>
-				<a onclick="document.getElementById('file2').click()">Character</a>
-			</nav>
-		</div>	
+		<a onclick="document.getElementById('file2').click()" class="button_small">UPLOAD A CHARACTER</a>
 		<div class="dropdown_contain button_small">
 			<div class="dropdown_button">CREATE A CHARACTER</div>
 			<nav class="dropdown_menu">
@@ -39,9 +36,14 @@
 				<a href="/cc?themeId=ninjaanime&bs=girl">Girl (Ninja)</a>
 				<hr />
 				<h2>Peepz</h2>
-				<a href="/cc?themeId=cc2&bs=default">Lil Peepz</a>
+				<a href="/cc?themeId=cc2&bs=default">Lil' Peepz</a>
 				<a href="/cc?themeId=chibi&bs=default">Chibi Peepz</a>
 				<a href="/cc?themeId=ninja&bs=default">Chibi Ninjas</a>
+				<hr />
+				<h2>Space Citizens</h2>
+				<a href="/cc?themeId=spacecitizen&bs=guy">Guy</a>
+				<a href="/cc?themeId=spacecitizen&bs=muscular_guy">Guy (Buff)</a>
+				<a href="/cc?themeId=spacecitizen&bs=girl">Girl</a>
 			</nav>
 		</div>
 		<div class="dropdown_contain button_small">
@@ -58,9 +60,11 @@
 				<a href="/cc_browser?themeId=cc2">Lil' Peepz</a>
 				<a href="/cc_browser?themeId=chibi">Chibi Peepz</a>
 				<a href="/cc_browser?themeId=ninja">Chibi Ninjas</a>
+				<hr />
+				<a href="/cc_browser?themeId=spacecitizen">Space Citizens</a>
 			</nav>
 		</div>
-		<a href="/go_full" class="button_big">MAKE A VIDEO</a>
+		<a href="/app/studio" class="button_big">MAKE A MOVIE</a>
 	</nav>
 </header>
 
@@ -69,6 +73,9 @@
 		<thead>
 			<tr>
 				<td></td>
+				<td>Movie Title</td>
+				<td>Date Modified</td>
+=======
 				<td id="video-info">Video Title</td>
 				<td id="video-info">Last Modified</td>
 				<td></td>
@@ -77,7 +84,7 @@
 		<tbody></tbody>
 		<tfoot>
 			<tr>
-				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+				<td colspan="125"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
 			</tr>
 		</tfoot>
 	</table>
@@ -85,42 +92,33 @@
 
 <footer>
 	<nav id="foot-left">
-		<a>v1.2.3½</a>
-		<a href="https://localhost:4664/faq.html">FAQ</a>
-		<a href="https://discord.gg/yhGAetN">Wrapper Hub</a>
+		<a href="./settings.html" class="fas fa-cog"></a>
+		<a href="./faq.html " class="fas fa-question-circle"></a>
+		<a href="https://discord.gg/yhGAetN" title="Join our community server!" class="fab fa-discord"></a>
 	</nav>
 
 	<nav id="foot-right">
-		<a href="https://localhost:4664">Server Page</a>
-		<a href="https://localhost:4664/caillou.html">Caillou</a>
+		<a href="./caillou.html">Caillou</a>
 	</nav>
 </footer>
 
-
-<form enctype='multipart/form-data' action='/upload_movie' method='post'>
+<form enctype='multipart/form-data' action='/api/movie/upload' method='post'>
 	<input id='file' type="file" onchange="this.form.submit()" name='import' />
 </form>
 
-<form enctype='multipart/form-data' action='/upload_character' method='post'>
+<form enctype='multipart/form-data' action='/api/character/upload' method='post'>
 	<input id='file2' type="file" onchange="this.form.submit()" name='import' />
 </form>
 
 </body>
 
 <script>
-	const closeReq = new XMLHttpRequest();
-	closeReq.open('GET', '/events/close');
-	closeReq.send();
-
-	var json;
+	// This loads the video list's content
 	var tbody = document.getElementsByTagName('tbody')[0];
 	var loadMore = document.getElementById('load_more');
-	const listReq = new XMLHttpRequest();
-	listReq.open('GET', '/movieList');
-	listReq.send();
 
 	var C = 0;
-	function loadRows() {
+	function loadRows(json) {
 		let c = C; C += 69;
 		for (; c < C; c++) {
 			if (c > json.length - 1) {
@@ -129,21 +127,31 @@
 			}
 
 			const tbl = json[c];
-			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
-			tbody.insertAdjacentHTML('beforeend',
-				'<tr><td><img src="/movie_thumbs/' + tbl.id + '"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+			const date = tbl.date.substr(0, 10)
+			const id = tbl.id.substr(2, 9);
+			tbody.innerHTML += '<tr id="' + tbl.id + '"><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>(#' + id + ') ' + tbl.durationString + '</div></div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a><a href="javascript:;" onclick="deleteMovie(\'' + tbl.id + '\')"></a></td></tr>';
 		}
 	}
-
-	loadMore.onclick = loadRows;
-	listReq.onreadystatechange = function (e) {
-		if (listReq.readyState != 4) return;
-		json = JSON.parse(listReq.responseText);
-		loadRows();
+	function noMovies(text = "You have not created any movies.") {
+		tbody.remove();
+		$("main").append(`<p style="text-align:center">${text}</p>`)
 	}
 
+	fetch('/ajax/movie/list').then((response) => {
+		response.json().then(data => {
+			if (Object.keys(item).length !== 0) loadRows(data);
+			else noMovies();
+
+		})
+	});
+
 	function popup(id) {
-		window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+		window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=723,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+	}
+
+	function deleteMovie(id) {
+		var deleteConfirm = confirm("Are you sure you want to delete this movie?");
+		if(deleteConfirm) fetch(`/deleteMovie/${id}`).then(() => document.getElementById(id).remove());
 	}
 </script>
 

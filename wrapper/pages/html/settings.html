@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="./favicon.ico" type="image/png" />
+	<title>Video List</title>
+	<meta name="description" content="Redrawn" />
+	<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../css/global.css" />
+	<script src="../js/jquery.js"></script>
+	<script src="../js/global.js"></script>
+</head>
+<body>
+
+<header>
+	<a href="/"><h1 style="margin:0"><img id="logo" src="./pages/img/logo.svg" alt="Wrapper: Offline" /></h1></a>
+</header>
+
+<main>
+
+<h1 id="settings">Settings</h1>
+<p>To toggle a setting, click the word "on" or "off" next to the setting you want to toggle.<br />
+	<b>You must reload for your settings to take effect.</b></p>
+
+<p>Dark mode: <span id="darkmode"></span></p>
+<p>Short themelist: <span id="shortthemelist"></span></p>
+
+
+</main>
+</body>
+
+<script>
+	// Add indicator
+	function getCookieData(cookieName) {
+		if($.cookie(cookieName)) {
+			$("#" + cookieName).css("color", "green");
+			$("#" + cookieName).html("On");
+		} else {
+			$("#" + cookieName).css("color", "red");
+			$("#" + cookieName).html("Off");
+		}
+		return true
+	}
+	// Toggling
+	$("span").click(function(event) {
+		if(!$.cookie(event.target.id))
+			$.cookie(event.target.id, 1)
+		else
+			$.removeCookie(event.target.id)
+	});
+	getCookieData("darkmode");
+	getCookieData("shortthemelist");
+</script>
+
+</html>
