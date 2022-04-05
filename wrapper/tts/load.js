@@ -4,13 +4,30 @@ const voices = require('./info').voices;
 const asset = require('../asset/main');
 const get = require('../request/get');
 const brotli = require('brotli');
-const fs = require("fs");
 const md5 = require("js-md5");
 const base64 = require("js-base64");
 const https = require('https');
 const http = require('http');
-const { exec } = require("child_process");
-const colder = `${__dirname}/../${process.env.CACHÉ_FOLDER}`;
+const Lame = require("node-lame").Lame;
+// a function that returns a promise that resolves to a buffer of the mp3 file
+/**function processVoice(voice, text) {
+	return new Promise((resolve, reject) => {
+		let url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${voice.lang}&total=1&idx=0&textlen=${text.length}&client=tw-ob`;
+		let req = http.get(url, (res) => {
+			let data = [];
+			res.on('data', (chunk) => {
+				data.push(chunk);
+			});
+			res.on('end', () => {
+				let buffer = Buffer.concat(data);
+				resolve(buffer);
+			});
+		});
+		req.on('error', (e) => {
+			reject(e);
+		});
+	});
+};**/
 
 function processVoice(voiceName, text) {
 	return new Promise((res, rej) => {
@@ -310,27 +327,24 @@ function processVoice(voiceName, text) {
 					voice: voice.arg,
 					email: null
 				}).toString();
-				https.get(
-					{
-						host: "api.voiceforge.com",
-						port: "443",
-						path: `/swift_engine?${q}`,
-					},
-					(r) => {
+				let url = `https://api.voiceforge.com/swift_engine?${q}`;
+				https.get(url, (r) => {
 						var buffers = [];
 						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
-							// save temp file and convert it to an mp3
-							fs.writeFileSync(`${colder}/tempTTS.wav`, Buffer.concat(buffers));
-							exec(`start data/lame/lame.exe -q0 -b128 --resample 16 "_CACHÉ/tempTTS.wav" "_CACHÉ/tempTTS.mp3"`, (err, stdout, stderr) => {
-								if (err) rej(err);
-								if (stderr) rej(stderr);
-								const buf = fs.readFileSync(`${colder}/tempTTS.mp3`);
-								// delete temp files
-								fs.unlinkSync(`${colder}/tempTTS.wav`);
-								fs.unlinkSync(`${colder}/tempTTS.mp3`);
-								res(buf);
-							})
+							const encoder = new Lame({
+								"output": "buffer",
+								"bitrate": 192
+							}).setBuffer(Buffer.concat(buffers));
+
+							encoder.
+
+							encoder.encode()
+								.then(() => {
+									const buffer = encoder.getBuffer();
+									res(buffer);
+								})
+								.catch(err => rej(err));
 						});
 						r.on("error", rej);
 					}
