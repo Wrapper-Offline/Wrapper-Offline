@@ -3,7 +3,7 @@ this css has the general header/footer layout stuff
 ***/
 
 :root {
-	--blue: #2d4da9;
+	--orange: #d85e27;
 }
 
 /**
@@ -74,10 +74,10 @@ header {
 }
 /* small buttons */
 .button_small       { background: #2a2a2a }
-.button_small:hover { background: #2a2a3a; color: var(--blue) }
+.button_small:hover { background: #2a2a3a; color: var(--orange) }
 /* big buttons */
 .button_big {
-	background: var(--blue);
+	background: var(--orange);
 	width: 160px;
 }
 .button_big:hover {
@@ -124,7 +124,7 @@ header dropdowns
 }
 .dropdown_menu>a:hover {
 	background: #223;
-	color: var(--blue);
+	color: var(--orange);
 	cursor: pointer;
 }
 /* dropdown header and separation */
@@ -167,8 +167,8 @@ tabs
 	padding: 8px 18px;
 	margin: 2px 0;
 }
-.tab_buttons a:hover    { background: #2a2a3a; color: var(--blue) }
-.tab_buttons a.selected { background: var(--blue); color: #fff }
+.tab_buttons a:hover    { background: #2a2a3a; color: var(--orange) }
+.tab_buttons a.selected { background: var(--orange); color: #fff }
 .tab { padding: 0 20px; display: none }
 #shortthemelist:hover,
 #darkmode:hover {
