@@ -18,19 +18,11 @@ server/characters/characters.zip
 vfproxy/*
 bbbb/*
 
+# Ungoogled Chromium
+
 # Personal Basilisk files
 utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/*
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/compatibility.ini
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/extensions.ini
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/extensions.json
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/places.sqlite
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/pluginreg.dat
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/prefs.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/sessionstore-backups/previous.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/sessionstore.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/startupCache/startupCache.4.little
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/user.js
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/xulstore.json
+
 
 
 # Logs
