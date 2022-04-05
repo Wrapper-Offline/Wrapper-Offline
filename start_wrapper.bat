@@ -874,7 +874,7 @@ goto wrapperidle
 
 :open_faq
 echo Opening the FAQ...
-start notepad.exe FAQ.txt
+start notepad.exe FAQ.md
 goto wrapperidle
 
 :wipe_save
