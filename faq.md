@@ -86,23 +86,11 @@ The cause of this is usually an error with http-server, the software Offline use
 
 ## A feature isn't here/working!
 
-### File uploading isn't working!
-It hasn't been added yet. It's never worked in any version of Wrapper, to my knowledge. There's a workaround beyond just using a standard video editor to add things after, although it's kinda tedious compared to the original file uploading system. Credit to GoTube for finding this! Go to the folder `wrapper-offline\server\store\3a981f5cb2739137\common\` and choose whichever folder for which type of thing you want. Add the file. For example, you can add a jpg/png into the prop folder, or an mp3 into the sound folder. Next, go to `wrapper-offline\wrapper\_THEMES` and open common.xml. Find a line that starts with the type of object you want (for example, props start with `<prop`.), and copy-paste it into a new line. Now modify your copied line to fit your item. The only part you _have_ to change is the `id` to whatever the name of your file is, but you should also change `name` to whatever you want the prop to be called. You could also add things like guns by changing `holdable` to 1. You can investigate this file further to make more complex custom props too, such as ones with different states.
-
-### Business Friendly and Whiteboard are missing!
-I go into this in more detail in the legalese section, but basically Vyond is still using them so I won't include them in Offline.
-
 ### Watermarks aren't working!
 This is likely tied to file uploading not working. You're likely better off either placing them over your video as a prop, or using a video editor to place them on your video. My recommendations are Kdenlive and OpenShot, both of them are libre software you can use for free.
 
 ### Some TTS voices won't generate!
 Some of them will never generate if your message is too long, as the current limit gives too much room and can go over what the voice services allow. If you're generating a short message and some voices still don't work, it may be possible that you've been rate-limited or a service has gone down. If all voices are not working, please check your internet connection.
-
-### Starters aren't working!
-I currently have no fix for this, you'll just have to either copy them directly from projects or recreate them.
-
-### Resizing set in the Character Creator breaks when playing!
-I currently have no fix for this, you'll just have to size them manually in the editor. Head resizing should be working fine, it's the size of the entire character that's broken.
 
 
 

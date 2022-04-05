@@ -2,6 +2,41 @@
 # Wrapper: Offline Changelog
 This changelog is based off [Keep a Changelog](https://keepachangelog.com) and ~~somewhat but not really~~ adheres to [Semantic Versioning](https://semver.org/). If you have no idea what that means, basically this changelog is formatted in a specific consistent way, and version numbers are formatted as X.Y.Z, X being a major not-backwards-compatible update, Y being a feature update, and X being bug fixes.
 
+## Version 1.3.0 - 2022-03-1or2? - the features everyone wants
+### Added
+  - Auto-update feature with Git
+  - Better method of passing config.bat settings to node
+  - File importing (finally!)
+  - Starters
+  - Video previewer
+  - Waveform saving/loading
+  - Real API settings
+    - Dark mode
+  - JSON support for POST body parser
+  - Local database for asset info
+  - Better logging to the console/error catching
+### Changed
+  - Char thumbs now load the files instead of being generated
+  - Improved CSS
+  - Movie/char/asset ids are just random strings
+  - Flash page generation uses Eta.js
+  - Remade character uploading
+  - Replaced VFProxy with a real fix
+  - Removed build numbering (fuck you xom!)
+  - Removed the useless .sh files in the wrapper folder
+  - Removed Google Wavenet voices
+  - Removed IBM Watson voices
+  - Removed Victoria from MCW
+  - Removed source code (get it online)
+  - Node.js installer is now 17.7.1
+  - Included FFDec is now 15.1.0
+### Fixed
+  - Polly voices
+  - Acapela voices (thanks VisualPlugin!)
+  - Character scaling from the CC
+  - Node crash windows now let you type into them
+  - Major parsing issues
+
 ## Version 1.2.3 - 2021-03-06 - i am HUNGRY FOR UPDATES!!!
 ### Added
   - Character browser

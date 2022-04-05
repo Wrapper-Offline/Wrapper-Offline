@@ -3,6 +3,13 @@ const nodezip = require('node-zip');
 const fs = require('fs');
 
 module.exports = {
+	/**
+	 * @summary generates a random id
+	 * @returns {string}
+	 */
+	generateId() {
+		return Math.random().toString(16).substring(2, 9);
+	},
 	/** 
 	 * 
 	 * @param {number} n 

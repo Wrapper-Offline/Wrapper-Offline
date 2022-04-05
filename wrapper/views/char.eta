@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title><% it.title %></title>
+	<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
+	<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+	<style>
+		body {
+			background: #eee;
+		}
+	</style>
+	<script>
+		function characterSaved() {
+			window.location = "/"
+		}
+	</script>
+</head>
+
+<body style="margin:0px">
+	<main>
+		<%~ it.object %>
+	</main>
+</body>
+
+</html>
