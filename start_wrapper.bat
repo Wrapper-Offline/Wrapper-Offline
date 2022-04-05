@@ -734,7 +734,7 @@ cls
 
 echo:
 echo Wrapper: Offline v!WRAPPER_VER! running
-echo A project from VisualPlugin adapted by the W:O team
+echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
 echo:
 if !VERBOSEWRAPPER!==n ( echo DON'T CLOSE THIS WINDOW^^! Use the quit option ^(0^) when you're done. )
 if !VERBOSEWRAPPER!==y ( echo Verbose mode is on, see the two extra CMD windows for extra output. )
