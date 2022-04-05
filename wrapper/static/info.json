@@ -22,27 +22,60 @@
 		},
 		"/crossdomain.xml": {
 			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
+				"Content-Type": "text/x-cross-domain-policy"
 			},
 			"content": "<cross-domain-policy><allow-access-from domain=\"*\"/></cross-domain-policy>"
 		},
-		"cc.swf": {},
-		"go_full.swf": {},
-		"favicon.ico": {},
-		"char_default.png": {
-			"content": "{\"message\":\"REQUEST_HAS_EXPIRED\"}"
+		"/cc.swf": {},
+		"/go_full.swf": {},
+		"/favicon.ico": {},
+		"/char-default\\.png": {
+			"headers": {
+				"Content-Type": "image/png"
+			},
+			"content": ""
 		},
-		"pages/html/(.*)": {
+		"/html/([^?]+html).*": {
+			"contentReplace": true,
+			"regexLink": "/html/$1",
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
-		"pages/css/(.*)": {
+		"/html/([^?]+).*": {
+			"regexLink": "/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/pages/html/([^?]+html).*": {
+			"contentReplace": true,
+			"regexLink": "pages/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/pages/html/([^?]+).*": {
+			"regexLink": "pages/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/pages/css/([^?]+css).*": {
+			"contentReplace": true,
+			"regexLink": "/pages/css/$1",
 			"headers": {
 				"Content-Type": "text/css; charset=UTF-8"
 			}
 		},
-		"pages/fonts/(.*)": {
+		"/pages/css/([^?]+).*": {
+			"regexLink": "/pages/css/$1",
+			"headers": {
+				"Content-Type": "text/css; charset=UTF-8"
+			}
+		},
+		"/pages/fonts/([^?]+).*": {
+			"regexLink": "/pages/fonts/$1",
 			"headers": {
 				"Content-Type": "application/font-woff; charset=UTF-8"
 			}
@@ -61,7 +94,12 @@
 			"headers": {
 				"Content-Type": "image/svg+xml; charset=UTF-8"
 			}
-		}
+		},
+		"pages/js/(.*)(js|JS)$": {
+            "headers": {
+                "Content-Type": "text/javascript; charset=UTF-8"
+            }
+        }
 	},
 	"POST": {
 		"/goapi/getUserWatermarks/": {
@@ -70,15 +108,75 @@
 			},
 			"content": "<?xml encoding=\"UTF-8\"?><watermarks><current/><preview/></watermarks>"
 		},
+		"/goapi/getUserFontList/": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
 		"/goapi/getMovieInfo/": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			},
 			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"visualplugin\"/></watermarks>"
+		},
+		"/api_v2/asset/get": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/goapi/rebuildTTS/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/goapi/getWaveform/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/goapi/saveWaveform/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/team": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/shared": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/pages/html/list.html": {
+			"headers": {
+				"Location": "/pages/html/list.html"
+			}
 		}
 	},
 	"pages": {
-		"/go_full": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/upload_asset'target='dummy'onchanged='(this.files[0]!=undefined)&&sub.click()'><input id='fileupload'name='import'type='file'/><input type='submit'value='submit'id='submit'/></form><script>interactiveTutorial={neverDisplay:function(){return true}};function studioLoaded(arg){console.log(arg)}function initPreviewPlayer(xml){confirm('Before proceeding, please make sure all your changes have been saved.')&&window.open('player?movieId='+flashvars.presaveId,'MsgWindow','width=1280,height=720,left='+(screen.width/2-640)+',top='+(screen.height/2-360))};function exitStudio(){window.location='pages/html/list.html'}const fu=document.getElementById('fileupload'),sub=document.getElementById('submit');function showImporter(){fu.click()};</script>",
+		"/go_full": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/upload_asset'target='dummy'><input type='text'name='params'/><input id='fileupload'name='import'type='file'onchange='importComplete(this)'accept='.mp3,.wav,.png,.jpg'/> <input type='submit'value='submit'id='submit'/></form><script>interactiveTutorial={neverDisplay:function(){return true}};function studioLoaded(arg){console.log(arg)}function exitStudio(){window.location='pages/html/list.html'}const fu=document.getElementById('fileupload'),sub=document.getElementById('submit');function showImporter(){fu.click()};function importComplete(obj){const file=obj.files[0];if(file!=undefined){const ext=file.name.substring(file.name.lastIndexOf('.')+1);var params=flashvars.presaveId+'.';if(ext=='mp3'||ext=='wav'){var c;while(c!='vo'&&c!='se'&&c!='mu'){c=prompt('Would you like to upload this as a voiceover (\"vo\"), sound effect (\"se\"), or as music (\"mu\")?').toLowerCase()}params+=c}else if(ext=='jpg'||ext=='png'){var c;while(c!='bg'&&c!='prop'){c=prompt('Would you like to upload this as a background (\"bg\") or as a prop (\"prop\")?').toLowerCase()}params+=c}obj.parentElement.firstChild.value=params+'.'+ext;sub.click();return true}}</script><div id=\"previewPlayerContainer\" style=\"display:none\"><div class=\"preview-player\" id=\"previewPlayer\"><h2>Preview Video</h2><div id=\"playerdiv\"></div><div id=\"h5-playerdiv\"></div><div class=\"buttons clearfix\"><button class=\"preview-button edit\" type=\"button\" onclick=\"switchBackToStudio()\">Back to editing</button></div><a class=\"close_btn\" href=\"#\" onclick=\"switchBackToStudio();return false\">×</a></div></div></div><script>interactiveTutorial={neverDisplay:function(){return true}};function studioLoaded(a){console.log(a)}function savePreviewData(b){previewPlayerTempData=b}function retrievePreviewPlayerData(){var b=previewPlayerTempData;previewPlayerTempData=\"\";return b}function switchBackToStudio(){$(\"#previewPlayerContainer\").hide();$(\"#playerdiv\").empty();$(\"#video_maker\").height(\"100%\");$(\"#video_maker\").width(\"100%\")}function loadLegacyPreview(){if(movieDataXmlStr===null){return}savePreviewData(movieDataXmlStr);createPreviewPlayer(\"playerdiv\",{height:360,width:640,player_url:\"https://davidb2007.github.io/vr-server/animation/414827163ad4eb60/player.swf\",quality:\"high\",wmode:\"transparent\"},{movieId:flashvars[\"presaveId\"],ut:\"60\",apiserver:\"/\",copyable:\"0\",isPublished:\"0\",ctc:\"go\",tlang:\"en_US\",autostart:\"1\",appCode:\"go\",is_slideshow:\"0\",is_emessage:\"0\",isEmbed:\"1\",utm_source:\"\",uid:\"\",isTemplate:\"1\",isInitFromExternal:1,storePath:\"https://localhost:4664/store/3a981f5cb2739137/<store>\",clientThemePath:\"https://localhost:4664/static/ad44370a650793d9/<client_theme>\",startFrame:previewStartFrame});$(\"body\").css(\"background-color: #0f0f0f\");$(\"#video_maker\").height(\"1px\");$(\"#video_maker\").width(\"1px\")}function checkPreviewServer(){return previewPlayer._connectionState===PreviewPlayerConstants.STATE_READY}function initPreviewPlayer(d,c,b,a){movieDataXmlStr=d;previewStartFrame=c;filmXmlStr=d.split(\"<filmxml>\")[1].split(\"</filmxml>\")[0];if(typeof c==\"undefined\"){c=1}else{c=Math.max(1,parseInt(c))}document.getElementById(\"previewPlayerContainer\").setAttribute(\"style\",\"\");loadLegacyPreview();if(!checkPreviewServer()&&(previewPlayerRetryCount>0)){previewPlayer.connect();previewPlayerRetryCount--}}function exitStudio(){window.location=\"pages/html/list.html\"};</script>",
+		"/go_full/tutorial": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/upload_asset'target='dummy'><input type='text'name='params'/><input id='fileupload'name='import'type='file'onchange='importComplete(this)'accept='.mp3,.wav,.png,.jpg'/><input type='submit'value='submit'id='submit'/></form><script>interactiveTutorial={neverDisplay:function(){return false}};function studioLoaded(arg){console.log(arg)}function exitStudio(){window.location='pages/html/list.html'}const fu=document.getElementById('fileupload'),sub=document.getElementById('submit');function showImporter(){fu.click()};function importComplete(obj){const file=obj.files[0];if(file!=undefined){const ext=file.name.substring(file.name.lastIndexOf('.')+1);var params=flashvars.presaveId+'.';if(ext=='mp3'||ext=='wav'){var c;while(c!='vo'&&c!='se'&&c!='mu'){c=prompt('Would you like to upload this as a voiceover (\"vo\"), sound effect (\"se\"), or as music (\"mu\")?').toLowerCase()}params+=c}else if(ext=='jpg'||ext=='png'){var c;while(c!='bg'&&c!='prop'){c=prompt('Would you like to upload this as a background (\"bg\") or as a prop (\"prop\")?').toLowerCase()}params+=c}obj.parentElement.firstChild.value=params+'.'+ext;sub.click();return true}}</script><div id=\"previewPlayerContainer\" style=\"display:none\"><div class=\"preview-player\" id=\"previewPlayer\"><h2>Preview Video</h2><div id=\"playerdiv\"></div><div id=\"h5-playerdiv\"></div><div class=\"buttons clearfix\"><button class=\"preview-button edit\" type=\"button\" onclick=\"switchBackToStudio()\">Back to editing</button></div><a class=\"close_btn\" href=\"#\" onclick=\"switchBackToStudio();return false\">×</a></div></div></div><script>interactiveTutorial={neverDisplay:function(){return false}};function studioLoaded(a){console.log(a)}function savePreviewData(b){previewPlayerTempData=b}function retrievePreviewPlayerData(){var b=previewPlayerTempData;previewPlayerTempData=\"\";return b}function switchBackToStudio(){$(\"#previewPlayerContainer\").hide();$(\"#playerdiv\").empty();$(\"#video_maker\").height(\"100%\");$(\"#video_maker\").width(\"100%\")}function loadLegacyPreview(){if(movieDataXmlStr===null){return}savePreviewData(movieDataXmlStr);createPreviewPlayer(\"playerdiv\",{height:360,width:640,player_url:\"https://davidb2007.github.io/vr-server/animation/414827163ad4eb60/player.swf\",quality:\"high\",wmode:\"transparent\"},{movieId:flashvars[\"presaveId\"],ut:\"60\",apiserver:\"/\",copyable:\"0\",isPublished:\"0\",ctc:\"go\",tlang:\"en_US\",autostart:\"1\",appCode:\"go\",is_slideshow:\"0\",is_emessage:\"0\",isEmbed:\"1\",utm_source:\"\",uid:\"\",isTemplate:\"1\",isInitFromExternal:1,storePath:\"https://localhost:4664/store/3a981f5cb2739137/<store>\",clientThemePath:\"https://localhost:4664/static/ad44370a650793d9/<client_theme>\",startFrame:previewStartFrame});$(\"body\").css(\"background-color: #0f0f0f\");$(\"#video_maker\").height(\"1px\");$(\"#video_maker\").width(\"1px\")}function checkPreviewServer(){return previewPlayer._connectionState===PreviewPlayerConstants.STATE_READY}function initPreviewPlayer(d,c,b,a){movieDataXmlStr=d;previewStartFrame=c;filmXmlStr=d.split(\"<filmxml>\")[1].split(\"</filmxml>\")[0];if(typeof c==\"undefined\"){c=1}else{c=Math.max(1,parseInt(c))}document.getElementById(\"previewPlayerContainer\").setAttribute(\"style\",\"\");loadLegacyPreview();if(!checkPreviewServer()&&(previewPlayerRetryCount>0)){previewPlayer.connect();previewPlayerRetryCount--}}function exitStudio(){window.location=\"pages/html/list.html\"};</script>",
 		"/cc": "<script>function characterSaved(){window.location='pages/html/list.html'}</script>"
 	}
 }
