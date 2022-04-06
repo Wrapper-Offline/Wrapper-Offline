@@ -6,10 +6,9 @@ this css has flash page styling
 general stuff
 **/
 main { display: flex; padding: 0 }
-.close-button:hover, 
-#close-button:hover { 
+.close-button:hover { 
 	cursor: pointer; 
-	color: var(--orange); 
+	color: var(--blue); 
 }
 
 /**
@@ -18,7 +17,6 @@ previewer
 #previewer {
 	/* style */
 	background: #fff;
-	box-shadow: 0 6px 20px 6px #00000040;
 	border-radius: 8px;
 	/* layout */
 	position: absolute;
@@ -27,6 +25,7 @@ previewer
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+html.dark #previewer { background: #333 }
 #preview_head {
 	display: flex;
 	justify-content: space-between;
