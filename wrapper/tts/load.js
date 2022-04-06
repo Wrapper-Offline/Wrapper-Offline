@@ -9,25 +9,6 @@ const base64 = require("js-base64");
 const https = require('https');
 const http = require('http');
 const Lame = require("node-lame").Lame;
-// a function that returns a promise that resolves to a buffer of the mp3 file
-/**function processVoice(voice, text) {
-	return new Promise((resolve, reject) => {
-		let url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${voice.lang}&total=1&idx=0&textlen=${text.length}&client=tw-ob`;
-		let req = http.get(url, (res) => {
-			let data = [];
-			res.on('data', (chunk) => {
-				data.push(chunk);
-			});
-			res.on('end', () => {
-				let buffer = Buffer.concat(data);
-				resolve(buffer);
-			});
-		});
-		req.on('error', (e) => {
-			reject(e);
-		});
-	});
-};**/
 
 function processVoice(voiceName, text) {
 	return new Promise((res, rej) => {
@@ -493,6 +474,15 @@ function processVoice(voiceName, text) {
 					`<speakExtended key='666'><voice>${voice.arg}</voice><text>${text}</text><audioFormat>mp3</audioFormat></speakExtended>`
 				);
 				break;
+			}
+			case "google": {
+				let url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=en&total=1&idx=0&textlen=${text.length}&client=tw-ob`;
+				https.get(url, (r) => {
+					var buffers = [];
+					r.on("data", (d) => buffers.push(d));
+					r.on("end", () => res(Buffer.concat(buffers)));
+					r.on("error", rej);
+				});
 			}
 		}
 	});
