@@ -337,8 +337,6 @@ function processVoice(voiceName, text) {
 								"bitrate": 192
 							}).setBuffer(Buffer.concat(buffers));
 
-							encoder.
-
 							encoder.encode()
 								.then(() => {
 									const buffer = encoder.getBuffer();
