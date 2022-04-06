@@ -1,5 +1,7 @@
 # Wrapper: Offline
-Wrapper: Offline is a GoAnimate Server Emulator carrying on the torch of [VisualPlugin's GoAnimate Wrapper project](https://github.com/GoAnimate-Wrapper) after it's shutdown in 2020. Unlike the original project, Offline can not be shut down by Vyond. Why? It's because Everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of Offline, we have also added other additional features and improvements compared to the original GoAnimate Wrapper project, and there will be more to come, as Offline will continue to get additional updates in the future.
+Wrapper: Offline is a GoAnimate Server Emulator carrying on the torch of [VisualPlugin's GoAnimate Wrapper project](https://github.com/GoAnimate-Wrapper) after it's shutdown in 2020. Unlike the original project, Offline can not be shut down by Vyond. Why? It's because everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of Offline, we have also added other additional features and improvements compared to the original GoAnimate Wrapper project, and there will be more to come, as Offline will continue to get additional updates in the future.
+
+[Find more info in the wiki.](https://github.com/Wrapper-Offline/Wrapper-Offline/wiki)
 
 ## Running / Installation
 To start Wrapper: Offline on Windows, open start_wrapper.bat. It'll automate just about everything for you and, well, start Wrapper: Offline. On your first run, you will likely need to right-click it and click "Run as Administrator". This allows it to properly install what it needs to run. After your initial run, you shouldn't need to do that again, you can start it as normal.
@@ -45,9 +47,9 @@ Wrapper: Offline credits:
 | Name                 | Contribution                                           |
 | -------------------- | -------------------------------------------------------|
 | GoTest334 (PL)       | Current Project Lead                                   |
-| Blukas/GoTube (D)    | Import idea, Mega Comedy World 2                       |
+| Blukas/GoTube (D)    | Beta testing, Mega Comedy World 2                      |
 | sparrkz (D)          | Fixing 1.2.3 to actually work, truncated themelist     |
-| octanuary (D)        | Stuff                                                  |
+| octanuary (D)        | Real importing, starters, text-to-speech voices        |
 | 2Epik4u (D)          | Stuff                                                  |
 | Benson (Child Groom) | Wrapper: Offline original Founder.                     |
 | NathanSaturnBOI      | Logo                                                   |

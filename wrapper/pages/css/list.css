@@ -53,9 +53,9 @@ tbody>tr {
 	border-top: 0;
 	border-bottom: 1px solid #ddd;
 }
-tbody>tr:hover { background: linear-gradient(#dedede, #f7f7f7) }
+tbody>tr:hover { background: #f7f7f7 }
 html.dark tbody>tr { border-color: #3a3a3a }
-html.dark tbody>tr:hover { background: linear-gradient(#0a0a0a, #050505) }
+html.dark tbody>tr:hover { background: #2b2b2b }
 
 tr>:nth-child(1) {
 	width: 64px;

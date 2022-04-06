@@ -24,7 +24,7 @@ body {
 	display: flex; 
 	flex-direction: column; 
 }
-main { padding: 20px 40px; height: 100%; }
+main { padding: 20px 40px; height: 100% }
 
 
 /**
@@ -83,20 +83,6 @@ header {
 .button_big:hover {
 	text-decoration: underline;
 }
-
-/**
-warning
-**/
-.warning {
-	/* style */
-	background: linear-gradient(#ffa, #abab73);
-	/* layout */
-	font-size: 14px;
-	text-align: center;
-	padding: 10px 100px;
-	width: 100%;
-}
-html.dark .warning { background: #1f1f1f; }
 
 
 /**
@@ -197,8 +183,7 @@ tabs
 footer
 **/
 footer {
-	background: linear-gradient(#333, #111);
-	box-shadow: 0 2px 10px 0 #000;
+	background: #1a1a1a;
 	margin-top: auto; /* footer at the foot */
 	display: flex;
 	justify-content: space-between;
