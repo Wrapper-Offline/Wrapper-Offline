@@ -9,8 +9,7 @@ utilities/config.bat
 .DS_Store
 vfproxy/*
 bbbb/*
-
-
+wrapper/node_modules
 # Logs
 logs
 *.log
@@ -117,4 +116,3 @@ dist
 # VEGAS audio waveform peak files
 *.sfk
 *.sfap0
-utilities/config.bat
