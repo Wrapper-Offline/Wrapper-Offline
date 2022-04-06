@@ -99,6 +99,12 @@
 				"Content-Type": "application/json"
 			},
 			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/goapi/getLatestAssetId/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "0"
 		}
 	},
 	"pages": {
