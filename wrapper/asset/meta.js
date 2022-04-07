@@ -9,12 +9,18 @@ module.exports = function (req, res, url) {
 	switch (url.path) {
 		case "/api_v2/asset/get": {
 			loadPost(req, res).then(data => {
-				const m = asset.meta(data.data.id);
-				// add shit that won't work for this wrap
-				m.share = { type: "none" };
-				m.published = "";
-				res.setHeader("Content-Type", "application/json");
-				res.end(JSON.stringify({ status: "ok", data: m }));
+				try {
+					const m = asset.meta(data.data.id);
+					// add shit that won't work for this wrap
+					m.share = { type: "none" };
+					m.published = "";
+					res.setHeader("Content-Type", "application/json");
+					res.end(JSON.stringify({ status: "ok", data: m }));
+				} catch (err) {
+					res.statusCode = 404;
+					res.setHeader("Content-Type", "application/json");
+					res.end(JSON.stringify({ status: "invalid_asset", data: "invalid" }));
+				}	
 			});
 			break;
 		}
