@@ -40,8 +40,8 @@ echo Enter 1 to update Wrapper: Offline
 echo Enter 0 to close the updater
 goto wrapperidle
 :nogit
-echo You have not downloaded Wrapper: Offline using the batch installer.
-echo Please download install_wrapper_offline.zip and run the batch file inside.
+echo You have not downloaded Wrapper: Offline using the installer... somehow??
+echo Please download the installer and run it https://wrapper-offline.ga/installer/installer_windows.exe.
 pause & exit
 :wrapperidle
 echo:
