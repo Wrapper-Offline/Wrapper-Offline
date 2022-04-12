@@ -2,7 +2,7 @@
 Wrapper: Offline is a GoAnimate Server Emulator carrying on the torch of [VisualPlugin's GoAnimate Wrapper project](https://github.com/GoAnimate-Wrapper) after it's shutdown in 2020. Unlike the original project, Offline can not be shut down by Vyond. Why? It's because of our twist on the GoAnimate Wrapper formula! Everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of Offline, we have also added other additional features and improvements compared to the original GoAnimate Wrapper project, and there will be more to come, as Offline will continue to get additional updates in the future.
 
 ## Running / Installation
-To start Wrapper: Offline on Windows, Download and run the installer at https://wrapper-offline.ga/ It'll automate just about everything for you and, well, start Wrapper: Offline.
+To start Wrapper: Offline on Windows, Download and run the installer at https://wrapper-offline.ga/. It'll automate just about everything for you and, well, install Wrapper: Offline.
 
 If you want to import videos and characters from the original Wrapper or any other clones of it, open its folder and drag the "_SAVED" folder into Offline's "wrapper" folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the "_SAVED" folder in Offline out before dragging the old one in. If you want to import character IDs from the original LVM, you can paste `&original_asset_id=[ID HERE]` at the end of the link for the matching character creator.
 
@@ -50,20 +50,20 @@ Wrapper: Offline credits:
 | [sparrkz (HD)](https://github.com/sparrkzz)           | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
 | [octanuary (D)](https://github.com/octanuary)         | Stuff                                                          |
 | [Blukas/GoTube (D)](https://github.com/theBlukas)     | Import idea, Mega Comedy World 2                               |
-| Benson (Child Groom)                                  | Wrapper: Offline                                               |
+| [Benson (Child Groom)](https://github.com/watchbenson)| Wrapper: Offline                                               |
 | [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo                                                           |
 | [VisualPlugin](https://github.com/Windows81)          | Text to speech voices                                          |
 | creepyjokes2000                                       | Waveform fix, improved actions                                 |
-| JoshAnimate                                           | Headgear fix                                                   |
+| [JoshAnimate](https://github.com/joshtoons2008)       | Headgear fix                                                   |
 | KrisAnimate                                           | Chromium parameter                                             |
 | [PoleyMagik](https://github.com/PoleyMagik)           | Client Modifications                                           |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
-| Name                                        | Contribution                     |
-| ------------------------------------------- | -------------------------------- |
-| [Vyond](https://vyond.com)                  | Creators of the themes we love   |
-| [http-party](https://github.com/http-party) | Creators of http-server          |
-| Stephan Brenner                             | Creator of SilentCMD             |
+| Name                                            | Contribution                     |
+| ----------------------------------------------- | -------------------------------- |
+| [Vyond](https://vyond.com)                      | Creators of the themes we love   |
+| [http-party](https://github.com/http-party)     | Creators of http-server          |
+| [Stephan Brenner](https://github.com/stbrenner) | Creator of SilentCMD             |
 
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
