@@ -7,7 +7,7 @@ To start Wrapper: Offline on Windows, Download and run the installer at https://
 If you want to import videos and characters from the original Wrapper or any other clones of it, open its folder and drag the "_SAVED" folder into Offline's "wrapper" folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the "_SAVED" folder in Offline out before dragging the old one in. If you want to import character IDs from the original LVM, you can paste `&original_asset_id=[ID HERE]` at the end of the link for the matching character creator.
 
 ## Updates & Support
-For support, the first thing you should do is read through faq.txt, it most likely has what you want to know. If you can't find what you need, you can join the [Discord server](https://discord.gg/Kf7BzSw). Joining the server is recommended, as there is a whole community to help you out. If you don't use Discord, you can email mailbenson@protonmail.com to get in contact with me directly, but don't expect nearly as quick of a response.
+For support, the first thing you should do is read through faq.txt, it most likely has what you want to know. If you can't find what you need, you can join the [Discord server](https://discord.gg/Kf7BzSw). Joining the server is recommended, as there is a whole community to help you out.
 
 ## Dependencies
 This program relies on Flash, Node.js and http-server to work properly. SilentCMD is also used to suppress all the extra logging noise you'd only need for troubleshooting and development. These all have been included with the project (utilities folder) to ensure full offline operation and will be installed if missing. The "wrapper" folder and http-server have their own dependencies, but they are included as well.
@@ -34,11 +34,11 @@ While completely unnecessary, if you decide to use your freedom to change the so
 **Please do not contact anyone on the list for support, use the Discord server.**
 
 Original Wrapper credits:
-| Name         | Contribution         |
-| ------------ | -------------------- |
-| VisualPlugin | GoAnimate Wrapper    |
-| CLarramore   | Bug fixes            |
-| PoleyMagik   | Asset Store Archive  |
+| Name                                         | Contribution         |
+| -------------------------------------------- | -------------------- |
+| [VisualPlugin](https://github.com/Windows81) | GoAnimate Wrapper    |
+| [CLarramore](https://github.com/CLarramore)  | Bug fixes            |
+| [PoleyMagik](https://github.com/PoleyMagik)  | Asset Store Archive  |
 
 No members of the original team are officially working on Offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
 
@@ -52,11 +52,11 @@ Wrapper: Offline credits:
 | [Blukas/GoTube (D)](https://github.com/theBlukas)     | Import idea, Mega Comedy World 2                               |
 | [Benson (Child Groom)](https://github.com/watchbenson)| Wrapper: Offline                                               |
 | [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo                                                           |
-| [VisualPlugin](https://github.com/Windows81)          | Text to speech voices                                          |
+| VisualPlugin                                          | Text to speech voices                                          |
 | creepyjokes2000                                       | Waveform fix, improved actions                                 |
 | [JoshAnimate](https://github.com/joshtoons2008)       | Headgear fix                                                   |
 | KrisAnimate                                           | Chromium parameter                                             |
-| [PoleyMagik](https://github.com/PoleyMagik)           | Client Modifications                                           |
+| PoleyMagik                                            | Client Modifications                                           |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name                                            | Contribution                     |
