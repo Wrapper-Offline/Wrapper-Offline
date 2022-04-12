@@ -192,14 +192,6 @@
 			"arg": "William",
 			"desc": "William"
 		},
-		"whispery": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "voiceforge",
-			"arg": "Whispery",
-			"desc": "Whispery"
-		},
 		"lawrence": {
 			"country": "GB",
 			"language": "en",
