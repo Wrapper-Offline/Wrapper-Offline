@@ -1,0 +1,21 @@
+{
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "name": "pace",
+  "description": "Command-line progress bar and progress metrics.  Helps you measure the 'pace' of a long-running script.",
+  "version": "0.0.4",
+  "homepage": "http://cantina.github.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cpsubrian/pace.git"
+  },
+  "main": "pace.js",
+  "scripts": {},
+  "dependencies": {
+    "charm": "~0.1.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
