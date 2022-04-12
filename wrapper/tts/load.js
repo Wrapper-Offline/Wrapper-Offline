@@ -460,11 +460,9 @@ function processVoice(voiceName, text) {
 						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
 							const xml = String.fromCharCode.apply(null, brotli.decompress(Buffer.concat(buffers)));
-							console.log(xml)
 							const beg = xml.indexOf("<url>") + 5;
-							const end = xml.indexOf("</url>", beg);
-							const loc = xml.substr(beg, end).toString();
-							console.log(loc)
+							const end = xml.lastIndexOf("</url>");
+							const loc = xml.substring(beg, end).toString();
 							get(loc).then(res).catch(rej);
 						});
 						r.on("error", rej);
