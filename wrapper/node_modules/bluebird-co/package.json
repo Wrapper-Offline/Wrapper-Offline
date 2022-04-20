@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      "bluebird-co@2.2.0",
+      "D:\\_Goanimate\\Wrapper-Offline-Public\\wrapper"
+    ]
+  ],
+  "_from": "bluebird-co@2.2.0",
+  "_id": "bluebird-co@2.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-4KSeY7axfjTJH0izk0t2mjd/vtc=",
+  "_location": "/bluebird-co",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "bluebird-co@2.2.0",
+    "name": "bluebird-co",
+    "escapedName": "bluebird-co",
+    "rawSpec": "2.2.0",
+    "saveSpec": null,
+    "fetchSpec": "2.2.0"
+  },
+  "_requiredBy": [
+    "/mp3-duration"
+  ],
+  "_resolved": "https://registry.npmjs.org/bluebird-co/-/bluebird-co-2.2.0.tgz",
+  "_spec": "2.2.0",
+  "_where": "D:\\_Goanimate\\Wrapper-Offline-Public\\wrapper",
+  "author": {
+    "name": "Aaron Trent",
+    "email": "novacrazy@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/novacrazy/bluebird-co/issues"
+  },
+  "description": "A set of yield handlers for Bluebird coroutines",
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-helper-define-map": "^6.4.5",
+    "babel-plugin-transform-async-to-generator": "^6.3.13",
+    "babel-plugin-transform-async-to-module-method": "^6.4.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.4.0",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.3.13",
+    "babel-plugin-transform-es2015-block-scoping": "^6.4.0",
+    "babel-plugin-transform-es2015-classes": "^6.4.5",
+    "babel-plugin-transform-es2015-computed-properties": "^6.4.0",
+    "babel-plugin-transform-es2015-constants": "^6.1.4",
+    "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+    "babel-plugin-transform-es2015-for-of": "^6.3.13",
+    "babel-plugin-transform-es2015-function-name": "^6.4.0",
+    "babel-plugin-transform-es2015-literals": "^6.3.13",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.4.5",
+    "babel-plugin-transform-es2015-parameters": "^6.4.5",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.3.13",
+    "babel-plugin-transform-es2015-spread": "^6.4.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.3.13",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-plugin-transform-undefined-to-void": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "co": "^4.6.0",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^0.7.0",
+    "matcha": "^0.6.1",
+    "mocha": "^2.4.5"
+  },
+  "homepage": "https://github.com/novacrazy/bluebird-co#readme",
+  "keywords": [
+    "bluebird",
+    "coroutines",
+    "yield",
+    "handler",
+    "async",
+    "await",
+    "es6",
+    "es7",
+    "iterables",
+    "generators"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "bluebird-co",
+  "peerDependencies": {
+    "bluebird": "^3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novacrazy/bluebird-co.git"
+  },
+  "scripts": {
+    "benchmark": "grunt build-benchmark && matcha benchmark/build/promises.js benchmark/build/arrays.js benchmark/build/iterables.js benchmark/build/objects.js benchmark/build/generators.js benchmark/build/thunks.js benchmark/build/errors.js",
+    "benchmark-save": "grunt build-benchmark && matcha -R csv  benchmark/build/promises.js benchmark/build/arrays.js benchmark/build/iterables.js benchmark/build/objects.js benchmark/build/generators.js benchmark/build/thunks.js benchmark/build/errors.js > benchmark/results.csv",
+    "btest": "grunt build-tests && mocha -b test/build",
+    "build": "grunt default",
+    "test": "mocha -b test/build"
+  },
+  "version": "2.2.0"
+}

@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      "audio-converter@1.0.13",
+      "D:\\_Goanimate\\Wrapper-Offline-Public\\wrapper"
+    ]
+  ],
+  "_from": "audio-converter@1.0.13",
+  "_id": "audio-converter@1.0.13",
+  "_inBundle": false,
+  "_integrity": "sha1-Iz4DS571PbJduKrse6sCw9GooGc=",
+  "_location": "/audio-converter",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "audio-converter@1.0.13",
+    "name": "audio-converter",
+    "escapedName": "audio-converter",
+    "rawSpec": "1.0.13",
+    "saveSpec": null,
+    "fetchSpec": "1.0.13"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/audio-converter/-/audio-converter-1.0.13.tgz",
+  "_spec": "1.0.13",
+  "_where": "D:\\_Goanimate\\Wrapper-Offline-Public\\wrapper",
+  "author": {
+    "name": "James Meyers"
+  },
+  "bin": {
+    "audio-converter": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/FullR/audio-converter/issues"
+  },
+  "dependencies": {
+    "commander": "^2.7.1",
+    "glob": "^5.0.15",
+    "lodash.chunk": "^4.0.6",
+    "lodash.uniq": "^4.3.0",
+    "mkdirp": "^0.5.1",
+    "pace": "0.0.4",
+    "q": "^1.2.0"
+  },
+  "description": "A utility tool for batch converting wave files to ogg/mp3. This tool currently depends on [SoX](http://sox.sourceforge.net/).",
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  },
+  "homepage": "https://github.com/FullR/audio-converter#readme",
+  "keywords": [
+    "sound",
+    "audio",
+    "convert",
+    "wave",
+    "ogg",
+    "mp3"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "audio-converter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FullR/audio-converter.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.13"
+}
