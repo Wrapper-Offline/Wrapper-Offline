@@ -1,61 +1,78 @@
-const loadPost = require('../request/post_body');
-const mp3Duration = require('mp3-duration');
-const voices = require('./info').voices;
-const asset = require('../asset/main');
-const get = require('../request/get');
-const brotli = require('brotli');
-const md5 = require("js-md5");
+// modules
 const base64 = require("js-base64");
+const brotli = require('brotli');
 const https = require('https');
 const http = require('http');
 const Lame = require("node-lame").Lame;
+const md5 = require("js-md5");
+const mp3Duration = require("mp3-duration");
+// vars
+// firefox is good
+const userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0";
+const voices = require("./info").voices;
+// stuff
+const asset = require("../asset/main");
+const get = require("../request/get");
+const loadPost = require("../request/post_body");
 
 function processVoice(voiceName, text) {
 	return new Promise((res, rej) => {
 		const voice = voices[voiceName];
 		switch (voice.source) {
 			case "polly": {
-				/**
-				 * Does a POST request to https://pollyvoices.com/.
-				 * The response is a redirect to /play/(id).mp3.
-				 * Then it gets the redirect link, removes the "/play" part and requests that URL, which returns the file.
-				 * 
-				 * Example: (path - method - data - headers (optional))
-				 * / - POST - text=(text)&voice=(voice)
-				 * 	   Redirected to /play/(id)
-				 * /(id) - GET
-				 *     File
-				 */
-				const params = new URLSearchParams({
-					"text": text,
-					"voice": voice.arg
-				}).toString();
+				// make sure it's under the char limit
+				const stext = text.substring(0, 249);
+
+				const body = JSON.stringify({
+					"Engine": "standard",
+					"Provider": voice.arg2,
+					"SpeechName": voice.desc,
+					"OutputFormat": "mp3",
+					"VoiceId": voice.arg,
+					"LanguageCode": voice.arg3,
+					"charsCount": stext.length,
+					"SampleRate": "24000",
+					"effect": "default",
+					"master_VC": "advanced",
+					"speed": "0",
+					"master_volume": "0",
+					"pitch": "0",
+					"Text": stext,
+					"TextType": "text",
+					"fileName": ""
+				});
 				var req = https.request(
 					{
-						hostname: "pollyvoices.com",
+						hostname: "voicemaker.in",
 						port: "443",
-						path: "/",
+						path: "/voice/standard",
 						method: "POST",
 						headers: {
-							"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-							"Content-Type": "application/x-www-form-urlencoded",
-							"Host": "pollyvoices.com",
-							"Origin": "https://pollyvoices.com",
-							"Referer": "https://pollyvoices.com/",
-							"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0"
+							"Accept": "application/json, text/javascript, */*; q=0.01",
+							"Content-Length": body.length,
+							"Content-Type": "application/json",
+							"Host": "voicemaker.in",
+							"Origin": "https://voicemaker.in",
+							"Referer": "https://voicemaker.in/",
+							"User-Agent": userAgent,
+							"X-Requested-With": "XMLHttpRequest"
 						}
 					},
 					(r) => {
-						const file = r.headers.location.substring(6);
-						r.on("data", (b) => {
-							get(`https://pollyvoices.com/${file}`)
-								.then(buffer => res(buffer, voice.desc))
+						let buffers = [];
+						r.on("data", (d) => buffers.push(d));
+						r.on("end", () => {
+							const json = JSON.parse(Buffer.concat(buffers).toString());
+							if (!json.success) rej(json.message);
+
+							get(`https://voicemaker.in/${json.path}`)
+								.then(res)
 								.catch(err => rej(err));
 						});
-						r.on("error", (err) => rej("Unable to generate TTS. Please check your internet connection."));
+						r.on("error", rej);
 					}
 				);
-				req.write(params);
+				req.write(body);
 				req.end();
 				break;
 			}
@@ -504,6 +521,9 @@ module.exports = function (req, res, url) {
 				const id = asset.save(buffer, meta);
 				res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
 			});
+		}).catch(e => {
+			console.log("Error generating TTS: " + e);
+			res.end(process.env.FAILURE_XML);
 		});
 	});
 	return true;
