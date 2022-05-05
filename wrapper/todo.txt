@@ -1,0 +1,7 @@
+- refactor movie parsing
+- remove old code
+- fix character uploading
+- asset library in the settings
+- polly voices
+- find a replacement for `discord-rpc`
+- fix theme chars 

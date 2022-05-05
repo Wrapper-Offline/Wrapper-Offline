@@ -1,13 +1,13 @@
-const xNumWidth = process.env.XML_NUM_WIDTH;
+// modules
+const fs = require("fs");
+const path = require("path");
+// vars
 const baseUrl = process.env.CHAR_BASE_URL;
-const fXml = process.env.FAILURE_XML;
-const fUtil = require("../fileUtil");
-const fw = process.env.FILE_WIDTH;
-const get = require('../request/get');
-const fs = require('fs');
-const themes = {};
+const folder = path.join(__dirname, "/../", process.env.ASSET_FOLDER);
+// stuff
 const database = require("../data/database"), DB = new database();
-const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
+const fUtil = require("../fileUtil");
+const get = require("../request/get");
 
 module.exports = {
 	/**
@@ -15,12 +15,10 @@ module.exports = {
 	 * @returns {Promise<string>}
 	 */
 	getTheme(buffer) {
-		return new Promise((res, rej) => {
-			const beg = buffer.indexOf(`theme_id="`) + 10;
-			const end = buffer.indexOf(`"`, beg);
-			const theme = buffer.subarray(beg, end).toString();
-			return theme;
-		});
+		console.log(buffer);
+		const beg = buffer.indexOf(`theme_id="`) + 10;
+		const end = buffer.indexOf(`"`, beg);
+		return buffer.slice(beg, end).toString();
 	},
 	list(tId) { // very simple thanks to the database
 		const aList = DB.get().assets.filter(i => i.type == "char" && i.themeId == tId);
@@ -30,26 +28,24 @@ module.exports = {
 	 * @param {string} id
 	 * @returns {Promise<Buffer>}
 	 */
-	load(id) {
-		return new Promise((res, rej) => {
-			try {
-				res(fs.readFileSync(`${folder}/${id}.xml`));
-			} catch (err) { // Blank prefix is left for compatibility purposes.
-				console.log("Character doesn't exist. Loading as stock char...")
-				const nId = Number.parseInt(id);
-				const xmlSubId = nId % fw, fileId = nId - xmlSubId;
-				const lnNum = fUtil.padZero(xmlSubId, xNumWidth);
-				const idPad0 = fUtil.padZero(fileId);
-				const url = `${baseUrl}/${idPad0}.txt`;
-				// check if txt exists
-				if (fs.existsSync(`../server/characters/${idPad0}.txt`)) {
-					get(url).then(b => {
-						var line = b.toString('utf8').split('\n').find(v => v.substr(0, xNumWidth) == lnNum);
-						line ? res(Buffer.from(line.substr(xNumWidth))) : rej(Buffer.from(fXml));
-					}).catch(e => rej(Buffer.from(fXml)));
-				} else rej()
+	async load(aId) {
+		try {
+			try { // custom characters
+				return Buffer.from(fs.readFileSync(`${folder}/${aId}.xml`));
+			} catch (err) { // stock characters
+				const nId = (aId.slice(0, -3) + "000").padStart(9, 0);
+				const chars = await get(`${baseUrl}/${nId}.txt`);
+
+				var line = chars
+					.toString("utf8")
+					.split("\n")
+					.find(v => v.substring(0, 3) == aId.slice(-3));
+				if (line) return Buffer.from(line.substring(3));
+				else throw "Character not found.";
 			}	
-		});
+		} catch (err) {
+			throw "Character not found."
+		}
 	},
 	/** 
 	 * @param {Buffer} buf
