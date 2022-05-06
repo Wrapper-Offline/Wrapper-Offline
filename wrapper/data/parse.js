@@ -4,16 +4,20 @@
  * if you don't know what's going on here, look at the lvm's code
  * ffdec does a great job with that
  */
+// modules
+const fs = require('fs');
+const nodezip = require('node-zip');
+const path = require("path");
+const xmldoc = require('xmldoc');
+// vars
 const themeFolder = process.env.THEME_FOLDER;
-const char = require('../character/main');
 const source = process.env.CLIENT_URL;
 const header = process.env.XML_HEADER;
+const store = process.env.STORE_URL;
+// stuff
+const char = require('../character/main');
 const get = require('../request/get');
 const fUtil = require('../fileUtil');
-const nodezip = require('node-zip');
-const store = process.env.STORE_URL;
-const xmldoc = require('xmldoc');
-const fs = require('fs');
 const asset = require('../asset/main');
 
 function name2Font(font) {
@@ -141,7 +145,6 @@ module.exports = {
 						pieces[pieces.length - 1] += `.${ext}`;
 
 						var fileName = pieces.join(".");
-						console.log(pieces);
 						if (!zip[fileName]) {
 							var buff = asset.load(pieces[2]);
 							var meta = asset.meta(pieces[2]);
@@ -179,9 +182,7 @@ module.exports = {
 
 								if (pieces[0] == "ugc") {
 									try {
-										console.log(pieces)
 										var fileName = pieces.join(".");
-										console.log(fileName)
 										if (!zip[fileName]) {
 											var buff = asset.load(pieces[2]);
 											var meta = asset.meta(pieces[2]);
@@ -197,7 +198,6 @@ module.exports = {
 									// add extension to filename
 
 									var fileName = pieces.join(".");
-									console.log(fileName)
 									if (!zip[fileName]) {
 										var buff = await get(`${store}/${pieces.join("/")}`);
 										fUtil.addToZip(zip, fileName, buff);
@@ -238,21 +238,19 @@ module.exports = {
 										});
 										// and add the character file
 										fUtil.addToZip(zip, filename + ".xml", buffer);
-
-										// finally, add a fake head file
-										fUtil.addToZip(zip, pieces.join("."), "<no></no>");
 										break;
 									}
 									default: {
+										const filepath = `${store}/${pieces.join("/")}`
 										const filename = pieces.join(".");
-		
 										
-										// and add the character file
-										fUtil.addToZip(zip, filename, char.load(id));
+										// add the character file
+										fUtil.addToZip(zip, filename, await get(filepath));
 										break;
 									}
 								}
 
+								// add props and heads
 								for (const e3I in elem2.children) {
 									const elem3 = elem2.children[e3I];
 									if (!elem3.children) continue;
@@ -281,76 +279,8 @@ module.exports = {
 								}
 
 								themes[themeId] = true;
-
-								console.log(pieces)
 								break;
 							}
-							/*case 'char': {
-								const val = elem2.childNamed('action').val;
-								const pieces = val.split('.');
-
-								let theme, fileName, buffer;
-								switch (pieces[pieces.length - 1]) {
-									case 'xml': {
-										theme = pieces[0];
-										const id = pieces[1];
-
-										try {
-											buffer = await char.load(id);
-											const meta = asset.meta(id);
-											fileName = `${theme}.char.${id}.xml`;
-											if (theme == 'ugc')
-												ugc += meta2Xml(meta);
-										} catch (e) {
-											console.log(e);
-										}
-										break;
-									}
-									case 'swf': {
-										theme = pieces[0];
-										const char = pieces[1];
-										const model = pieces[2];
-										const url = `${store}/${theme}/char/${char}/${model}.swf`;
-										fileName = `${theme}.char.${char}.${model}.swf`;
-										buffer = await get(url);
-										break;
-									}
-								}
-
-								for (const ptK in elem2.children) {
-									const part = elem2.children[ptK];
-									if (!part.children) continue;
-
-									var urlF, fileF;
-									switch (part.name) {
-										case 'head':
-											urlF = 'char';
-											fileF = 'prop';
-											break;
-										case 'prop':
-											urlF = 'prop';
-											fileF = 'prop';
-											break;
-										default:
-											continue;
-									}
-
-									const file = part.childNamed('file');
-									const slicesP = file.val.split('.');
-									slicesP.pop(), slicesP.splice(1, 0, urlF);
-									const urlP = `${store}/${slicesP.join('/')}.swf`;
-
-									slicesP.splice(1, 1, fileF);
-									const fileP = `${slicesP.join('.')}.swf`;
-									fUtil.addToZip(zip, fileP, await get(urlP));
-								}
-
-								if (buffer) {
-									themes[theme] = true;
-									fUtil.addToZip(zip, fileName, buffer);
-								}
-								break;
-							}**/
 							case 'bubbleAsset': {
 								const bubble = elem2.childNamed('bubble');
 								const text = bubble.childNamed('text');
