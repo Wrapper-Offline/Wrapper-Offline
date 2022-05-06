@@ -5,3 +5,4 @@
 - polly voices
 - find a replacement for `discord-rpc`
 - fix theme chars 
+- lil' peepz handheld props

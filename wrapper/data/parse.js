@@ -154,10 +154,10 @@ module.exports = {
 				}
 
 				case "scene": {
-					for (var e2I in elem.children) {
-						var elem2 = elem.children[e2I];
+					for (const e2I in elem.children) {
+						const elem2 = elem.children[e2I];
 
-						var tag = elem2.name;
+						let tag = elem2.name;
 						// change the tag to the one in the store folder
 						if (tag == "effectAsset") tag = "effect";
 
@@ -207,16 +207,13 @@ module.exports = {
 								break;
 							}
 							case "char": {
-								console.log("char pasre");
-								const file = elem2.childNamed("action")?.val;
-								if (!file) throw new Error("Invalid movie XML.");
+								let file = elem2.childNamed("action")?.val;
+								if (!file) continue;
 								const pieces = file.split(".");
 								const themeId = pieces[0];
 								const id = pieces[1];
 		
 								// fix the file name
-								// remove the action part (if it's a custom char)
-								if (themeId == "ugc") pieces.splice(2, 1);
 								// add the extension to the last key
 								const ext = pieces.pop();
 								pieces[pieces.length - 1] += "." + ext;
@@ -224,18 +221,26 @@ module.exports = {
 		
 								switch (themeId) {
 									case "ugc": {
-										const filename = pieces.join(".");
+										// make a clone of the array so we can splice
+										const peces = pieces.slice(0);
+										// remove the action part of the array
+										peces.splice(3, 1);
+
+										const filename = peces.join(".");
 										const buffer = await char.load(id);
 		
 										// add character meta
-										// i can't just select the character data because of stock chars
 										ugc += meta2Xml({
+											// i can't just select the character data because of stock chars
 											id: id,
 											type: "char",
 											themeId: char.getTheme(buffer)
 										});
 										// and add the character file
-										fUtil.addToZip(zip, filename, buffer);
+										fUtil.addToZip(zip, filename + ".xml", buffer);
+
+										// finally, add a fake head file
+										fUtil.addToZip(zip, pieces.join("."), "<no></no>");
 										break;
 									}
 									default: {
@@ -247,8 +252,105 @@ module.exports = {
 										break;
 									}
 								}
+
+								for (const e3I in elem2.children) {
+									const elem3 = elem2.children[e3I];
+									if (!elem3.children) continue;
+
+									var urlF, fileF;
+									switch (elem3.name) {
+										case 'head':
+											urlF = 'char';
+											fileF = 'prop';
+											break;
+										case 'prop':
+											fileF = urlF = 'prop';
+											break;
+										default:
+											continue;
+									}
+
+									file = elem3.childNamed('file');
+									const slicesP = file.val.split('.');
+									slicesP.pop(), slicesP.splice(1, 0, urlF);
+									const urlP = `${store}/${slicesP.join('/')}.swf`;
+
+									slicesP.splice(1, 1, fileF);
+									const fileP = `${slicesP.join('.')}.swf`;
+									fUtil.addToZip(zip, fileP, await get(urlP));
+								}
+
+								themes[themeId] = true;
+
+								console.log(pieces)
 								break;
 							}
+							/*case 'char': {
+								const val = elem2.childNamed('action').val;
+								const pieces = val.split('.');
+
+								let theme, fileName, buffer;
+								switch (pieces[pieces.length - 1]) {
+									case 'xml': {
+										theme = pieces[0];
+										const id = pieces[1];
+
+										try {
+											buffer = await char.load(id);
+											const meta = asset.meta(id);
+											fileName = `${theme}.char.${id}.xml`;
+											if (theme == 'ugc')
+												ugc += meta2Xml(meta);
+										} catch (e) {
+											console.log(e);
+										}
+										break;
+									}
+									case 'swf': {
+										theme = pieces[0];
+										const char = pieces[1];
+										const model = pieces[2];
+										const url = `${store}/${theme}/char/${char}/${model}.swf`;
+										fileName = `${theme}.char.${char}.${model}.swf`;
+										buffer = await get(url);
+										break;
+									}
+								}
+
+								for (const ptK in elem2.children) {
+									const part = elem2.children[ptK];
+									if (!part.children) continue;
+
+									var urlF, fileF;
+									switch (part.name) {
+										case 'head':
+											urlF = 'char';
+											fileF = 'prop';
+											break;
+										case 'prop':
+											urlF = 'prop';
+											fileF = 'prop';
+											break;
+										default:
+											continue;
+									}
+
+									const file = part.childNamed('file');
+									const slicesP = file.val.split('.');
+									slicesP.pop(), slicesP.splice(1, 0, urlF);
+									const urlP = `${store}/${slicesP.join('/')}.swf`;
+
+									slicesP.splice(1, 1, fileF);
+									const fileP = `${slicesP.join('.')}.swf`;
+									fUtil.addToZip(zip, fileP, await get(urlP));
+								}
+
+								if (buffer) {
+									themes[theme] = true;
+									fUtil.addToZip(zip, fileName, buffer);
+								}
+								break;
+							}**/
 							case 'bubbleAsset': {
 								const bubble = elem2.childNamed('bubble');
 								const text = bubble.childNamed('text');
