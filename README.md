@@ -47,7 +47,7 @@ Wrapper: Offline credits:
 | Name                                                  | Contribution                                                   |
 | ----------------------------------------------------- | -------------------------------------------------------------- |
 | [GoTest334 (PL)](https://github.com/GoTest334)        | Current Project Lead                                           |
-| [sparrkz (HD)](https://github.com/sparrkzz)           | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
+| [sparrkz](https://github.com/sparrkzz)                | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
 | [octanuary (D)](https://github.com/octanuary)         | Stuff                                                          |
 | [Blukas/GoTube (D)](https://github.com/theBlukas)     | Import idea, Mega Comedy World 2                               |
 | [Benson (Child Groom)](https://github.com/watchbenson)| Wrapper: Offline                                               |
