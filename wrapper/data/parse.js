@@ -108,7 +108,41 @@ module.exports = {
 		const zip = nodezip.create();
 		const themes = { common: true };
 		var ugc = `${header}<theme id="ugc" name="ugc">`;
-		fUtil.addToZip(zip, 'movie.xml', xmlBuffer);
+		fUtil.addToZip(zip, "movie.xml", xmlBuffer);
+
+		// this is common in this file
+		async function basicParse(file, tag) {
+			const pieces = file.split(".");
+			const themeId = pieces[0];
+
+			// add the extension to the last key
+			const ext = pieces.pop();
+			pieces[pieces.length - 1] += "." + ext;
+			// add the type to the filename
+			pieces.splice(1, 0, tag);
+
+			const filename = pieces.join(".");
+			switch (themeId) {
+				case "ugc": {
+					const id = pieces[2];
+					const buffer = asset.load(id);
+
+					// add asset meta
+					ugc += meta2Xml(asset.meta(id));
+					// and add the file
+					fUtil.addToZip(zip, filename, buffer);
+					break;
+				} default: {
+					const filepath = `${store}/${pieces.join("/")}`;
+
+					// add the file to the zip
+					fUtil.addToZip(zip, filename, await get(filepath));
+					break;
+				}
+			}
+
+			themes[themeId] = true;
+		}
 
 		// begin parsing the movie xml
 		const film = new xmldoc.XmlDocument(xmlBuffer);
@@ -116,32 +150,11 @@ module.exports = {
 			const elem = film.children[eI];
 
 			switch (elem.name) {
-				case 'sound': {
-					const val = elem.childNamed('sfile').val;
-
-					var pieces = val.split(".");
-					if (val.endsWith('.swf')) {
-						const pieces = val.split('.');
-						const theme = pieces[0], name = pieces[1];
-						const url = `${store}/${theme}/sound/${name}.swf`;
-						const fileName = `${theme}.sound.${name}.swf`;
-						const buffer = await get(url);
-						fUtil.addToZip(zip, fileName, buffer);
-					}
-					else if (val.startsWith('ugc.')) {
-						var ext = pieces.pop();
-						pieces.splice(1, 0, elem.name)
-						pieces[pieces.length - 1] += `.${ext}`;
-
-						var fileName = pieces.join(".");
-						if (!zip[fileName]) {
-							var buff = asset.load(pieces[2]);
-							var meta = asset.meta(pieces[2]);
-							fUtil.addToZip(zip, fileName, buff);
-							ugc += meta2Xml(meta);
-							themes[pieces[0]] = true;
-						}
-					}
+				case "sound": {
+					const file = elem.childNamed("sfile")?.val;
+					if (!file) continue;
+					
+					await basicParse(file, elem.name)
 					break;
 				}
 
@@ -162,36 +175,8 @@ module.exports = {
 							case "prop": {
 								const file = elem2.childNamed("file")?.val;
 								if (!file) continue;
-								const pieces = file.split(".");
-								const themeId = pieces[0];
-	
-								// add the extension to the last key
-								const ext = pieces.pop();
-								pieces[pieces.length - 1] += "." + ext;
-								// add the type to the filename
-								pieces.splice(1, 0, tag);
-
-								const filename = pieces.join(".");
-								switch (themeId) {
-									case "ugc": {
-										const id = pieces[2];
-										const buffer = asset.load(id);
-		
-										// add asset meta
-										ugc += meta2Xml(asset.meta(id));
-										// and add the file
-										fUtil.addToZip(zip, filename, buffer);
-										break;
-									} default: {
-										const filepath = `${store}/${pieces.join("/")}`;
-
-										// add the file to the zip
-										fUtil.addToZip(zip, filename, await get(filepath));
-										break;
-									}
-								}
-
-								themes[themeId] = true;
+								
+								await basicParse(file, tag);
 								break;
 							} case "char": {
 								let file = elem2.childNamed("action")?.val;
