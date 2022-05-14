@@ -18,7 +18,16 @@
 		<h1 style="margin:0"><img id="logo" src="../img/logo.svg" alt="Wrapper: Offline"/></h1>
 	</a>
 	<nav id="headbuttons">
-		<a class="button_big" onclick="document.getElementById('file2').click()">UPLOAD A CHAR</a>	
+		<!--<a class="button_small" onclick="document.getElementById('file2').click()">UPLOAD A CHAR</a>
+-->
+		<div class="dropdown_contain button_small">
+            <div class="dropdown_button upload_button">UPLOAD</div>
+            <nav class="dropdown_menu">
+                <a onclick="document.getElementById('file').click()">Movie</a>
+                <a onclick="document.getElementById('file2').click()">Character</a>
+            </nav>
+        </div>   	
+<!--		
 		<div class="dropdown_contain button_small">
 			<div class="dropdown_button">CREATE A CHARACTER</div>
 			<nav class="dropdown_menu">
@@ -39,9 +48,9 @@
 				<a href="/cc?themeId=chibi&bs=default">Chibi Peepz</a>
 				<a href="/cc?themeId=ninja&bs=default">Chibi Ninjas</a>
 			</nav>
-		</div>
+		</div>-->
 		<div class="dropdown_contain button_small">
-			<div class="dropdown_button">BROWSE CHARACTERS</div>
+			<div class="dropdown_button">CREATE A CHARACTER</div>
 			<nav class="dropdown_menu">
 				<h2>Comedy World</h2>
 				<a href="/cc_browser?themeId=family">Comedy World</a>
@@ -84,7 +93,7 @@
 		<a>v1.3.0</a>
 		<a href="./settings.html">Settings</a>
 		<a href="https://github.com/Wrapper-Offline/Wrapper-Offline/wiki">FAQ</a>
-		<a href="https://discord.gg/yhGAetN">W:O Discord</a>
+		<a href="https://discord.gg/yhGAetN">Discord</a>
 	</nav>
 
 	<nav id="foot-right">
