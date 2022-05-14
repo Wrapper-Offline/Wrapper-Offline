@@ -56,7 +56,7 @@ function name2Font(font) {
 			return "FontFileLOne";
 		case "Telex Regular":
 			return "FontFileTelex";
-		case '':
+		case "":
 		case null:
 			return '';
 		default:
@@ -96,17 +96,6 @@ function meta2Xml(v) {
 }
 
 module.exports = {
-	xml2caché(buffer) {
-		const xml = new xmldoc.XmlDocument(buffer);
-		const cachéRef = {}, elements = xml.children;
-		for (const eK in elements) {
-			var element = elements[eK];
-			if (element.name == 'asset')
-				cachéRef[element.attr.id] =
-					Buffer.from(element.val, 'base64');
-		}
-		return cachéRef;
-	},
 	/**
 	 * 
 	 * @param {Buffer} xmlBuffer 
@@ -124,7 +113,7 @@ module.exports = {
 		// begin parsing the movie xml
 		const film = new xmldoc.XmlDocument(xmlBuffer);
 		for (const eI in film.children) {
-			var elem = film.children[eI];
+			const elem = film.children[eI];
 
 			switch (elem.name) {
 				case 'sound': {
@@ -171,50 +160,45 @@ module.exports = {
 							case "bg":
 							case "effect":
 							case "prop": {
-								var file = elem2.childNamed("file");
+								const file = elem2.childNamed("file")?.val;
 								if (!file) continue;
-								var val = file.val;
-								// fix the file name for the lvm
-								var pieces = val.split(".");
-								var ext = pieces.pop();
+								const pieces = file.split(".");
+								const themeId = pieces[0];
+	
+								// add the extension to the last key
+								const ext = pieces.pop();
+								pieces[pieces.length - 1] += "." + ext;
+								// add the type to the filename
 								pieces.splice(1, 0, tag);
-								pieces[pieces.length - 1] += `.${ext}`;
 
-								if (pieces[0] == "ugc") {
-									try {
-										var fileName = pieces.join(".");
-										if (!zip[fileName]) {
-											var buff = asset.load(pieces[2]);
-											var meta = asset.meta(pieces[2]);
-											fUtil.addToZip(zip, fileName, buff);
-											ugc += meta2Xml(meta);
-											themes[pieces[0]] = true;
-										}
-									} catch (err) {
-										if (process.env.NODE_ENV == "dev") throw err;
-										console.error("Error getting asset: " + err);
-									}
-								} else {
-									// add extension to filename
+								const filename = pieces.join(".");
+								switch (themeId) {
+									case "ugc": {
+										const id = pieces[2];
+										const buffer = asset.load(id);
+		
+										// add asset meta
+										ugc += meta2Xml(asset.meta(id));
+										// and add the file
+										fUtil.addToZip(zip, filename, buffer);
+										break;
+									} default: {
+										const filepath = `${store}/${pieces.join("/")}`;
 
-									var fileName = pieces.join(".");
-									if (!zip[fileName]) {
-										var buff = await get(`${store}/${pieces.join("/")}`);
-										fUtil.addToZip(zip, fileName, buff);
-										themes[pieces[0]] = true;
+										// add the file to the zip
+										fUtil.addToZip(zip, filename, await get(filepath));
+										break;
 									}
 								}
+
+								themes[themeId] = true;
 								break;
-							}
-							case "char": {
+							} case "char": {
 								let file = elem2.childNamed("action")?.val;
 								if (!file) continue;
 								const pieces = file.split(".");
 								const themeId = pieces[0];
-								const id = pieces[1];
-		
-								// fix the file name
-								// add the extension to the last key
+
 								const ext = pieces.pop();
 								pieces[pieces.length - 1] += "." + ext;
 								pieces.splice(1, 0, elem2.name);
@@ -226,25 +210,22 @@ module.exports = {
 										// remove the action part of the array
 										peces.splice(3, 1);
 
-										const filename = peces.join(".");
+										const id = pieces[2];
 										const buffer = await char.load(id);
-		
-										// add character meta
+										const filename = peces.join(".");
+
 										ugc += meta2Xml({
 											// i can't just select the character data because of stock chars
 											id: id,
 											type: "char",
 											themeId: char.getTheme(buffer)
 										});
-										// and add the character file
 										fUtil.addToZip(zip, filename + ".xml", buffer);
 										break;
-									}
-									default: {
+									} default: {
 										const filepath = `${store}/${pieces.join("/")}`
 										const filename = pieces.join(".");
-										
-										// add the character file
+
 										fUtil.addToZip(zip, filename, await get(filepath));
 										break;
 									}

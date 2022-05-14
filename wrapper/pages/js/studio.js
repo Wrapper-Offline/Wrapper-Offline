@@ -156,12 +156,14 @@ class ImporterFile {
 		this.initialize();
 	}
 	initialize() {
-		this.el.find("[type]").on("click", (event) => {
+		this.el.find("[type]").on("click", event => {
 			const el = $(event.target);
 			const type = el.attr("type");
 			const t = this.typeFickser(type);
-			const name = $(event.target).parents('.importer_asset').find('.asset_name').text();
-			this.upload(name.replace(/\s/g, '_'), t);
+
+			// get file name
+			let name = el.parents(".importer_asset").find(".asset_name").text();			
+			this.upload(name, t);
 		});
 	}
 	typeFickser(type) {
@@ -170,18 +172,18 @@ class ImporterFile {
 			case "soundeffect":
 			case "voiceover": {
 				return { type: "sound", subtype: type };
-			}
-			case "bg":
+			} case "bg":
 			case "prop": {
 				return { type: type, subtype: 0 };
 			}
 		}
 	}
 	async upload(passedname, type) {
-		var name = passedname;
+		let name = passedname;
 		if (name == "")
 			name = "unnamed" + Math.random().toString().substring(2, 8); 
-		var b = new FormData();
+
+		let b = new FormData();
 		b.append("import", this.file);
 		b.append("name", name)
 		b.append("type", type.type);

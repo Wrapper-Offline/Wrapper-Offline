@@ -1,32 +1,39 @@
 /***
  * asset upload route
  */
+// modules
 const formidable = require("formidable");
 const fs = require("fs");
 const Lame = require("node-lame").Lame;
 const mp3Duration = require("mp3-duration");
+// stuff
 const asset = require("./main");
 
 module.exports = function (req, res, url) {
 	if (req.method != "POST") return;
-	switch (url.path) {
+
+	switch (url.pathname) {
 		case "/api/asset/upload": { // asset uploading
 			new formidable.IncomingForm().parse(req, (e, f, files) => {
-				if (!files.import || !f) {
+				if (!files.import || !f) { // validate the form data
 					res.statusCode = 400;
 					res.end();
 					return;
 				}
-				const path = files.import.path, buffer = fs.readFileSync(path);
+
+				const file = files.import;
+				const filepath = files.import.path, buffer = fs.readFileSync(filepath);
 
 				let name;
-				if (!f.name || f.name == "") 
-					name = files.import.name.substring(0, name.lastIndexOf("."));
-				else
+				if (!f.name || f.name == "") // default to the filename
+					name = file.name.substring(0, name.lastIndexOf("."));
+				else { // parse the name
 					name = f.name;
-				
-				console.log(files.import)
-				const ext = files.import.name.substring(name.lastIndexOf(".") + 1);
+					// replace invalid chars
+					name = name.replace(/[\s.]*/g, "_");
+				}
+
+				const ext = file.name.substring(file.name.lastIndexOf(".") + 1);
 				let meta = {
 					type: f.type,
 					subtype: f.subtype,
@@ -38,17 +45,16 @@ module.exports = function (req, res, url) {
 					case "sound": {
 						mp3Duration(buffer, (e, duration) => {
 							if (e || !duration) return;
-							Object.assign(meta, { duration: 1e3 * duration });
+							meta.duration = 1e3 * duration;
 							asset.save(buffer, meta);
 						});
 						break;
-					}
-					default: {
+					} default: {
 						asset.save(buffer, meta);
 						break;
 					}
 				}
-				fs.unlinkSync(path);
+				fs.unlinkSync(filepath);
 				res.end(JSON.stringify({ status: "ok" }));
 			});
 			return true;
@@ -63,8 +69,7 @@ module.exports = function (req, res, url) {
 					case true: {
 						buffer = Buffer.from(f.bytes, "base64");
 						break;
-					}
-					default: {
+					} default: {
 						const path = files.Filedata.path;
 						buffer = fs.readFileSync(path);
 						break;
