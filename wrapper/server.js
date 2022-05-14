@@ -1,8 +1,6 @@
 /***
  * start wrapper: offline"s server
  */
-// assign config and env.json stuff to process.env
-const env = Object.assign(process.env, require("./env"), require("./config"));
 const http = require("http");
 const url = require("url");
 
@@ -85,7 +83,7 @@ module.exports = http
 			res.end();
 		}
 	})
-	.listen(env.PORT || env.SERVER_PORT, console.log("Wrapper: Offline has started."))
+	.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."))
 
 // 1 year of 1.3.0 development
 // thanks xom

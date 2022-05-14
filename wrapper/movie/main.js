@@ -2,7 +2,6 @@ const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
 const fs = require('fs');
-const { timeLog } = require('console');
 const folder = `${__dirname}/../${process.env.SAVED_FOLDER}`;
 
 module.exports = {
@@ -48,13 +47,6 @@ module.exports = {
 				case 'm': {
 					const fn = fUtil.getFileIndex('movie-', '.xml', suffix);
 					fs.existsSync(fn) ? res(fs.readFileSync(fn)) : rej();
-					break;
-				}
-				case 'e': {
-					const fn = `${exFolder}/${suffix}.zip`;
-					if (!fs.existsSync(fn)) return rej();
-					parse.unpackZip(nodezip.unzip(fn))
-						.then(v => res(v)).catch(e => rej(e));
 					break;
 				}
 				default: rej();
