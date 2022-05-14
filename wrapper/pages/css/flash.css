@@ -37,7 +37,7 @@ importer
 **/
 #import_head {
 	/* style */
-	background: #252525;
+	background: #222c46;
 	color: #fff;
 	/* layout */
 	text-align: center;
@@ -59,6 +59,17 @@ importer
 	width: 400px;
 }
 html.dark #importer { background: #222 }
+/* refesh notice */
+.import_hint {
+	/* style */
+	background: #273762;
+	color: #fff;
+	/* layout */
+	text-align: center;
+	margin: 0;
+	padding: 6px 10px;
+	font-size: 13px;
+}
 /* queue */
 #importer-queue {  border-top: 1px solid #e2e7ed  }
 html.dark #importer-queue { border-color: #3a3a3a }
@@ -74,10 +85,12 @@ html.dark .importer_asset { border-color: #3a3a3a }
 /* asset icon */
 .asset_preview { height: 40px; margin-right: 6px }
 .asset_name {
-	padding: 1px 4px;
+	/* style */
 	background-color: #00000011;
 	outline: #666 auto 2px;
+	/* layout */
 	margin: 0;
+	padding: 1px 4px;
 	font-weight: bold;
 	font-size: 14px;
 }

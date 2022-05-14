@@ -23,15 +23,8 @@ module.exports = function (req, res, url) {
 
 				const file = files.import;
 				const filepath = files.import.path, buffer = fs.readFileSync(filepath);
-
-				let name;
-				if (!f.name || f.name == "") // default to the filename
-					name = file.name.substring(0, name.lastIndexOf("."));
-				else { // parse the name
-					name = f.name;
-					// replace invalid chars
-					name = name.replace(/[\s.]*/g, "_");
-				}
+				// default to the filename if the user didn't title it
+				let name = (!f.name || f.name == "") ? file.name.substring(0, name.lastIndexOf(".")) : f.name;
 
 				const ext = file.name.substring(file.name.lastIndexOf(".") + 1);
 				let meta = {

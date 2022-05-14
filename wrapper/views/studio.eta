@@ -27,6 +27,7 @@
 					<input id="importer-files" type="file" name="file" title="Upload Files" style="display:none" />
 				</form>
 			</nav>
+			<p class="import_hint">For assets to show up in the Video Maker, refresh the page.</p>
 			<div id="importer-queue"></div>
 		</nav>
 		<%~ it.object %>

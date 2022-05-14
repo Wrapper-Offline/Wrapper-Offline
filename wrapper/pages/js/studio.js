@@ -28,8 +28,7 @@ function showImporter() {
 			importerVisible = true;
 			importer.show();
 			if (!importer.data("importer"))
-				importer.data("importer", new AssetImporter(importer))
-			studio.openYourLibrary();
+				importer.data("importer", new AssetImporter(importer));
 		}
 	}
 	return true;
@@ -43,7 +42,7 @@ function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
 	filmXmlStr = dataXmlStr.split("<filmxml>")[1].split("</filmxml>")[0];
 	hideImporter(); // hide importer before previewing
 	previewer.css("display", "block");
-	studio.css("height", "0");
+	studio.css("height", "1px");
 }
 function retrievePreviewPlayerData() { return movieDataXmlStr }
 function hidePreviewer() {
@@ -195,9 +194,8 @@ class ImporterFile {
 			processData: false,
 			contentType: false,
 			dataType: "json"
-		}).done(d => {
-			studio[0].importerStatus("done");
-			this.el.fadeOut(() => this.el.remove())
-		}).catch(e => console.error("Import failed."))
+		})
+			.done(d => this.el.fadeOut(() => this.el.remove()))
+			.catch(e => console.error("Import failed. Error: " + e))
 	}
 }
