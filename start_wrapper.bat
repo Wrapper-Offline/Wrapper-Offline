@@ -198,7 +198,7 @@ if !JUSTIMPORTED!==y ( echo Note: You'll need to reload the editor for your file
 echo:
 echo Enter 1 to reopen the video list
 echo Enter 2 to import a file
-echo Enter 3 to open the server page
+echo Enter 3 to open Wrapper: Offline settings
 echo Enter ? to open the FAQ
 echo Enter clr to clean up the screen
 echo Enter 0 to close Wrapper: Offline
@@ -211,7 +211,7 @@ if "!choice!"=="0" goto exitwrapperconfirm
 set FUCKOFF=n
 if "!choice!"=="1" goto reopen_webpage
 if "!choice!"=="2" goto start_importer
-if "!choice!"=="3" goto open_server
+if "!choice!"=="3" goto open_settings
 if "!choice!"=="?" goto open_faq
 if /i "!choice!"=="clr" goto wrapperstartedcls
 if /i "!choice!"=="cls" goto wrapperstartedcls
@@ -280,6 +280,13 @@ if !INCLUDEDCHROMIUM!==n (
 	popd
 )
 goto wrapperidle
+
+:open_settings
+call settings.bat
+cls
+title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^)
+set JUSTIMPORTED=y
+goto wrapperstartedcls
 
 :open_files
 pushd ..
