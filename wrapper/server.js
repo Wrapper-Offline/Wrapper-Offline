@@ -26,7 +26,6 @@ const mvL = require("./movie/list");
 const mvm = require("./movie/meta");
 const mvs = require("./movie/save");
 const mvt = require("./movie/thmb");
-const mvu = require("./movie/upload");
 const thl = require("./theme/load");
 const thL = require("./theme/list");
 const tsv = require("./tts/voices");
@@ -54,7 +53,6 @@ const functions = [
 	mvm,
 	mvs,
 	mvt,
-	mvu,
 	thl,
 	thL,
 	tsv,
@@ -64,14 +62,25 @@ const functions = [
 ];
 
 /**
+ * asynchronous version of Array.prototype.find 
+ */
+Array.prototype.findAsync = async function(...params) {
+	for (let i = 0; i < this.length; i++) {
+		if (await this[i](...params) == true) 
+			return this[i];
+	}
+	return;
+}
+
+/**
  * create the server
  */
 module.exports = http
-	.createServer((req, res) => {
+	.createServer(async (req, res) => {
 		try {
 			const parsedUrl = url.parse(req.url, true);
 			// run each route function until the correct one is found
-			const found = functions.find((f) => f(req, res, parsedUrl));
+			const found = await functions.findAsync(req, res, parsedUrl);
 			// log every request
 			console.log(req.method, parsedUrl.path);
 			if (!found) { // page not found

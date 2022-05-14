@@ -4,7 +4,7 @@
 const loadPost = require("../request/post_body");
 const asset = require("./main");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	switch (req.method) {
 		case "GET": {
 			const match = req.url.match(/\/assets\/([^/]+)$/);

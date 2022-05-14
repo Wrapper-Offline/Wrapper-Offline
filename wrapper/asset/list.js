@@ -100,7 +100,7 @@ async function listAssets(data) {
 	return response;
 }
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	switch (url.path) {
 		case "/api_v2/assets/team":
 		case "/api_v2/assets/shared":

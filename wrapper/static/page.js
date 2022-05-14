@@ -14,7 +14,7 @@ function toObjectString(attrs, params) {
 	).join(' ')}>${toParamString(params)}</object>`;
 }
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != 'GET') return;
 	const query = url.query;
 

@@ -3,7 +3,7 @@
  */
 const movie = require("./main");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "GET" || url.path != "/movieList") return;
 	try {
 		Promise

@@ -1,7 +1,7 @@
 const loadPost = require('../request/post_body');
 const character = require('./main');
 
-module.exports = function (req, res) {
+module.exports = async function (req, res) {
 	switch (req.method) {
 		case "GET": {
 			const match = req.url.match(/\/characters\/([^.]+)(?:\.xml)?$/);

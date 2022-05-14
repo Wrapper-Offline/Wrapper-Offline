@@ -1,14 +1,19 @@
 /***
  * character upload route
  */
-const formidable = require("formidable");
+// modules
 const fs = require("fs");
 const char = require("./main");
 
-module.exports = function (req, res, url) {
-	if (req.method != "POST" || url.path != "/upload_character") return;
+module.exports = async function (req, res, url) {
+	if (req.method != "POST" || url.pathname != "/upload_character")
+		return;
+
+	const formidable = await import("formidable");
+
 	new formidable.IncomingForm().parse(req, (e, f, files) => {
-		const path = files.import.path, buffer = fs.readFileSync(path);
+		console.log(files.import[0].filepath);
+		const path = files.import[0].filepath, buffer = fs.readFileSync(path);
 		const meta = {
 			type: "char",
 			subtype: 0,

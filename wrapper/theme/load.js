@@ -2,7 +2,7 @@ const loadPost = require('../request/post_body');
 const folder = process.env.THEME_FOLDER;
 const fUtil = require('../fileUtil');
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != 'POST' || url.path != '/goapi/getTheme/') return;
 	loadPost(req, res).then(data => {
 		var theme = data.themeId;

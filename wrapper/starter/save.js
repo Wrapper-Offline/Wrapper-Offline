@@ -4,7 +4,7 @@
 const starter = require("./main");
 const loadPost = require("../request/post_body");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.path != "/goapi/saveTemplate/") return;
 	loadPost(req, res).then(data => {
 		var body = Buffer.from(data.body_zip, "base64");

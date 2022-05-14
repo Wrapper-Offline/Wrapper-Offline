@@ -2,15 +2,16 @@
  * asset upload route
  */
 // modules
-const formidable = require("formidable");
 const fs = require("fs");
 const Lame = require("node-lame").Lame;
 const mp3Duration = require("mp3-duration");
 // stuff
 const asset = require("./main");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
+
+	const formidable = await import("formidable");
 
 	switch (url.pathname) {
 		case "/api/asset/upload": { // asset uploading
@@ -21,12 +22,12 @@ module.exports = function (req, res, url) {
 					return;
 				}
 
-				const file = files.import;
-				const filepath = files.import.path, buffer = fs.readFileSync(filepath);
+				const file = files.import[0];
+				const path = file.filepath, buffer = fs.readFileSync(path);
 				// default to the filename if the user didn't title it
-				let name = (!f.name || f.name == "") ? file.name.substring(0, name.lastIndexOf(".")) : f.name;
+				let name = (!f.name || f.name == "") ? file.originalFilename.substring(0, name.lastIndexOf(".")) : f.name;
 
-				const ext = file.name.substring(file.name.lastIndexOf(".") + 1);
+				const ext = file.originalFilename.substring(file.originalFilename.lastIndexOf(".") + 1);
 				let meta = {
 					type: f.type,
 					subtype: f.subtype,
@@ -47,7 +48,7 @@ module.exports = function (req, res, url) {
 						break;
 					}
 				}
-				fs.unlinkSync(filepath);
+				fs.unlinkSync(path);
 				res.end(JSON.stringify({ status: "ok" }));
 			});
 			return true;

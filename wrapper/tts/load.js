@@ -503,7 +503,7 @@ function processVoice(voiceName, text) {
 	});
 }
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/') return;
 	loadPost(req, res).then(data => {
 		processVoice(data.voice, data.text).then(buffer => {

@@ -5,7 +5,7 @@ const movie = require("./main");
 const starter = require("../starter/main");
 const base = Buffer.alloc(1, 0);
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	switch (req.method) {
 		case "GET": {
 			const match = req.url.match(/\/movies\/([^.]+)(?:\.(zip|xml))?$/);

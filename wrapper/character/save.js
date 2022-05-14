@@ -4,7 +4,7 @@
 const loadPost = require("../request/post_body");
 const char = require("./main");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
 	switch (url.path) {
 		case "/goapi/saveCCCharacter/": { // save all

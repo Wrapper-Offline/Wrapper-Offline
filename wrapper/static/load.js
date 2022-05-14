@@ -1,7 +1,7 @@
 const stuff = require('./info');
 const fs = require('fs');
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	var methodLinks = stuff[req.method];
 	for (let linkIndex in methodLinks) {
 		var regex = new RegExp(linkIndex);

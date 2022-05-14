@@ -4,7 +4,7 @@
 const asset = require("./main");
 const loadPost = require("../request/post_body");
 
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/api_v2/asset/delete/") return;
 	loadPost(req, res).then(data => {
 		try {
