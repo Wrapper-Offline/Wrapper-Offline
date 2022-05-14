@@ -1,8 +1,11 @@
-/***
- * start wrapper: offline"s server
+/**
+ * start wrapper: offline's server
  */
+// modules
 const http = require("http");
 const url = require("url");
+// stuff
+const loadPost = require("./request/post_body");
 
 /**
  * routes
@@ -79,6 +82,8 @@ module.exports = http
 	.createServer(async (req, res) => {
 		try {
 			const parsedUrl = url.parse(req.url, true);
+			// parse post requests
+			if (req.method == "POST") req.body = await loadPost(req, res);
 			// run each route function until the correct one is found
 			const found = await functions.findAsync(req, res, parsedUrl);
 			// log every request

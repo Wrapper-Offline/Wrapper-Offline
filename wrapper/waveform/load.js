@@ -1,17 +1,22 @@
-/***
- * waveform load route
+/**
+ * route
+ * waveform loading
  */
-const loadPost = require("../request/post_body");
-const wf = require("./main");
+// stuff
+const Wf = require("./main");
 
 module.exports = async function (req, res, url) {
-	if (req.method != "POST" || url.path != "/goapi/getWaveform/") return;
-	loadPost(req, res).then(data => {
-		const wfId = data.wfid + ".wf"
+	if (req.method != "POST" || url.pathname != "/goapi/getWaveform/") {
+		return;
+	} else if (!req.body.wfid) {
+		res.statusCode = 400;
+		res.end();
+		return;
+	}
+	const wfId = req.body.wfid;
 
-		const b = wf.load(wfId)
-		b ? (res.statusCode = 200, res.end(b)) :
-			(res.statusCode = 404, res.end());
-	});
+	const waveform = Wf.load(wfId);
+	waveform ? (res.statusCode = 200, res.end(waveform)) :
+		(res.statusCode = 404, res.end());
 	return true;
 }

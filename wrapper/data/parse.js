@@ -301,6 +301,7 @@ module.exports = {
 			stream.on('end', async () => {
 				const time = new Date() - 0;
 				const main = Buffer.concat(pieces).slice(0, -7);
+				console.log(main.toString());
 				const xmlBuffers = [], assetHash = {};
 				const charMap = {}, charBuffers = {};
 				for (let c = 0, end; ; c = main.indexOf('ugc.', c) + 4) {

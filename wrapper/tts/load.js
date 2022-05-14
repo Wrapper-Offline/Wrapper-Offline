@@ -504,27 +504,26 @@ function processVoice(voiceName, text) {
 }
 
 module.exports = async function (req, res, url) {
-	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/') return;
-	loadPost(req, res).then(data => {
-		processVoice(data.voice, data.text).then(buffer => {
-			mp3Duration(buffer, (e, duration) => {
-				if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/')
+		return;
+	processVoice(req.body.voice, req.body.text).then(buffer => {
+		mp3Duration(buffer, (e, duration) => {
+			if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
 
-				const meta = {
-					type: "sound",
-					subtype: "tts",
-					title: `[${voices[data.voice].desc}] ${data.text}`,
-					duration: 1e3 * duration,
-					ext: "mp3",
-					tId: "ugc"
-				}
-				const id = asset.save(buffer, meta);
-				res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
-			});
-		}).catch(e => {
-			console.log("Error generating TTS: " + e);
-			res.end(process.env.FAILURE_XML);
+			const meta = {
+				type: "sound",
+				subtype: "tts",
+				title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
+				duration: 1e3 * duration,
+				ext: "mp3",
+				tId: "ugc"
+			}
+			const id = asset.save(buffer, meta);
+			res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
 		});
+	}).catch(e => {
+		console.log("Error generating TTS: " + e);
+		res.end(process.env.FAILURE_XML);
 	});
 	return true;
 }

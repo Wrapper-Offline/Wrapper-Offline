@@ -1,15 +1,22 @@
-/***
- * waveform save route
+/**
+ * route
+ * waveform saving
  */
-const loadPost = require("../request/post_body");
-const wf = require("./main");
+// stuff
+const Wf = require("./main");
 
 module.exports = async function (req, res, url) {
-	if (req.method != "POST" || url.path != "/goapi/saveWaveform/") return;
-	loadPost(req, res).then(data => {
-		const waveform = data.waveform, aId = data.wfid;
-		wf.save(waveform, aId);
-		res.end("0");
-	});
+	if (req.method != "POST" || url.pathname != "/goapi/saveWaveform/") {
+		return;
+	} else if (!req.body.waveform || !req.body.wfid) {
+		res.statusCode = 400;
+		res.end();
+		return;
+	}
+	const waveform = Buffer.from(req.body.waveform);
+	const wfId = req.body.wfid;
+
+	Wf.save(waveform, wfId);
+	res.end("0");
 	return true;
 }
