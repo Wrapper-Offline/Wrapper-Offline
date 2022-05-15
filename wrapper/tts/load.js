@@ -85,7 +85,7 @@ const processVoice = (voiceName, text) => {
 
 			shut up xomdjl
 			*/
-			case "nuance": {
+			case "nuance": { // working
 				var q = new URLSearchParams({
 					voice_name: voice.arg,
 					speak_text: text,
@@ -103,7 +103,7 @@ const processVoice = (voiceName, text) => {
 				);
 				break;
 			}
-			case "cepstral": {
+			case "cepstral": { // working
 				https.get('https://www.cepstral.com/en/demos', r => {
 					const cookie = r.headers['set-cookie'];
 					var q = new URLSearchParams({
@@ -303,24 +303,6 @@ const processVoice = (voiceName, text) => {
 				);
 				break;
 			}
-			case "acapelaOld": {
-				var q = new URLSearchParams({
-					inputText: base64.encode(text),
-				}).toString();
-				https.get(
-					{
-						host: "voice.reverso.net",
-						path: `/RestPronunciation.svc/v1/output=json/GetVoiceStream/voiceName=${voice.arg}?${q}`,
-					},
-					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => res(Buffer.concat(buffers)));
-						r.on("error", rej);
-					}
-				);
-				break;
-			}
 			case "voiceforge": { // working, requires lame installation
 				var q = new URLSearchParams({
 					"HTTP-X-API-KEY": "9a272b4",
@@ -345,7 +327,7 @@ const processVoice = (voiceName, text) => {
 				);
 				break;
 			}
-			case "svox": {
+			case "svox": { // working
 				var q = new URLSearchParams({
 					apikey: "e3a4477c01b482ea5acc6ed03b1f419f",
 					action: "convert",
@@ -420,7 +402,7 @@ const processVoice = (voiceName, text) => {
 					}).toString()
 				);
 				break;
-			} case "cereproc": { // not working
+			} case "cereproc": { // working
 				const req = https.request(
 					{
 						hostname: "www.cereproc.com",

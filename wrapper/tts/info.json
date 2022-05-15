@@ -62,7 +62,7 @@
 			"gender": "F",
 			"source": "voiceforge",
 			"arg": "Amy",
-			"desc": "Amy (Cepstral)"
+			"desc": "Amy (VF)"
 		},
 		"belle": {
 			"country": "US",
@@ -255,14 +255,6 @@
 			"source": "cepstral",
 			"arg": "Miguel",
 			"desc": "Miguel (Cepstral)"
-		},
-		"callieq": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "voiceforge",
-			"arg": "CallieQ",
-			"desc": "CallieQ"
 		},
 		"conrad": {
 			"country": "US",
