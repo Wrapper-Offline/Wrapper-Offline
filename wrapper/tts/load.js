@@ -17,12 +17,13 @@ const userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/201
 const voices = require("./info").voices;
 // stuff
 const asset = require("../asset/main");
+const { xmlFail } = require("../request/extend");
 const get = require("../request/get");
 const processVoice = (voiceName, text) => {
 	return new Promise((res, rej) => {
 		const voice = voices[voiceName];
 		switch (voice.source) {
-			case "polly": {
+			case "polly": { // working, stops working after some time
 				// make sure it's under the char limit
 				const stext = text.substring(0, 249);
 
@@ -82,7 +83,7 @@ const processVoice = (voiceName, text) => {
 			/* WARNING: NUANCE TTS API HAS BACKGROUND MUSIC
 
 
-			shut up xomdjl ~tetra
+			shut up xomdjl
 			*/
 			case "nuance": {
 				var q = new URLSearchParams({
@@ -129,7 +130,7 @@ const processVoice = (voiceName, text) => {
 				});
 				break;
 			}
-			case "vocalware": {
+			case "vocalware": { // working
 				var [eid, lid, vid] = voice.arg;
 				var cs = md5(`${eid}${lid}${vid}${text}1mp35883747uetivb9tb8108wfj`);
 				var q = new URLSearchParams({
@@ -150,8 +151,7 @@ const processVoice = (voiceName, text) => {
 						headers: {
 							Referer: "https://www.oddcast.com/",
 							Origin: "https://www.oddcast.com/",
-							"User-Agent":
-								"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+							"User-Agent": userAgent,
 						},
 					},
 					(r) => {
@@ -321,7 +321,7 @@ const processVoice = (voiceName, text) => {
 				);
 				break;
 			}
-			case "voiceforge": {
+			case "voiceforge": { // working, requires lame installation
 				var q = new URLSearchParams({
 					"HTTP-X-API-KEY": "9a272b4",
 					msg: text,
@@ -333,17 +333,12 @@ const processVoice = (voiceName, text) => {
 						var buffers = [];
 						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
-							const encoder = new Lame({
-								"output": "buffer",
-								"bitrate": 192
-							}).setBuffer(Buffer.concat(buffers));
+							const encoder = new Lame({ "output": "buffer" })
+								.setBuffer(Buffer.concat(buffers));
 
 							encoder.encode()
-								.then(() => {
-									const buffer = encoder.getBuffer();
-									res(buffer);
-								})
-								.catch(err => rej(err));
+								.then(() => res(encoder.getBuffer()))
+								.catch(rej);
 						});
 						r.on("error", rej);
 					}
@@ -394,7 +389,6 @@ const processVoice = (voiceName, text) => {
 							const beg = html.indexOf("/tmp/");
 							const end = html.indexOf(".mp3", beg) + 4;
 							const sub = html.subarray(beg, end).toString();
-							const loc = `https://readloud.net${sub}`;
 
 							https.get(
 								{
@@ -471,27 +465,34 @@ const processVoice = (voiceName, text) => {
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/')
+	if (req.method != "POST" || url.path != "/goapi/convertTextToSoundAsset/") {
 		return;
-	processVoice(req.body.voice, req.body.text)
-		.then(buffer => {
-			mp3Duration(buffer, (e, duration) => {
-				if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+	} else if (!req.body.voice || !req.body.text) {
+		res.statusCode = 400;
+		res.end();
+		return;
+	}
 
-				const meta = {
-					type: "sound",
-					subtype: "tts",
-					title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
-					duration: 1e3 * duration,
-					ext: "mp3",
-					tId: "ugc"
-				}
-				const id = asset.save(buffer, meta);
-				res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
-			});
-		}).catch(e => {
-			console.log("Error generating TTS: " + e);
-			res.end(process.env.FAILURE_XML);
+	try {
+		const buffer = await processVoice(req.body.voice, req.body.text);
+		mp3Duration(buffer, (e, duration) => {
+			if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+
+			const meta = {
+				type: "sound",
+				subtype: "tts",
+				title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
+				duration: 1e3 * duration,
+				ext: "mp3",
+				tId: "ugc"
+			}
+			const id = asset.save(buffer, meta);
+			res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
 		});
+	} catch (err) {
+		console.error("Error generating TTS: " + err);
+		res.statusCode = 500;
+		res.end("1" + xmlFail("Internal server error."));
+	};
 	return true;
 }

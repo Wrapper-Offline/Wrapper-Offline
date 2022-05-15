@@ -472,6 +472,14 @@
 			"arg": "Zach",
 			"desc": "Zach"
 		},
+		"obama": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Obama",
+			"desc": "Obama"
+		},
 		"birgit": {
 			"country": "DE",
 			"language": "de",
