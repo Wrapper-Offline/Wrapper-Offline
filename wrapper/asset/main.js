@@ -3,7 +3,7 @@
  */
 const fs = require("fs");
 const database = require("../data/database"), DB = new database();
-const folder = `${__dirname}/../../${process.env.ASSET_FOLDER}`;
+const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
 const fUtil = require("../fileUtil");
 
 module.exports = {

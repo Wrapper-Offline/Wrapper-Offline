@@ -2,7 +2,7 @@ const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
 const fs = require('fs');
-const folder = `${__dirname}/../../${process.env.SAVED_FOLDER}`;
+const folder = `${__dirname}/../${process.env.SAVED_FOLDER}`;
 
 module.exports = {
 	/**

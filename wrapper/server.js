@@ -22,9 +22,8 @@ const chl = require("./character/load");
 const chs = require("./character/save");
 const chu = require("./character/upload");
 const sts = require("./starter/save");
-// these should only used for online lvms
-//const Stl = require("./static/load");
-//const Stp = require("./static/page");
+const Stl = require("./static/load");
+const Stp = require("./static/page");
 const mvl = require("./movie/load");
 const mvL = require("./movie/list");
 const mvm = require("./movie/meta");
@@ -50,8 +49,8 @@ const functions = [
 	chs,
 	chu,
 	sts,
-	//Stl,
-	//Stp,
+	Stl,
+	Stp,
 	mvl,
 	mvL,
 	mvm,
@@ -79,33 +78,26 @@ Array.prototype.findAsync = async function(...params) {
 /**
  * create the server
  */
-module.exports = {
-	apiServer() {
-		http
-			.createServer(async (req, res) => {
-				try {
-					const parsedUrl = url.parse(req.url, true);
-					// parse post requests
-					if (req.method == "POST") req.body = await loadPost(req, res);
-					// run each route function until the correct one is found
-					const found = await functions.findAsync(req, res, parsedUrl);
-					// log every request
-					console.log(req.method, parsedUrl.path);
-					if (!found) { // page not found
-						res.statusCode = 404;
-						res.end();
-					}
-				} catch (x) {
-					res.statusCode = 404;
-					res.end();
-				}
-			})
-			.listen(process.env.SERVER_PORT);
-	},
-	assetServer() {
-		
-	}
-}
+module.exports = http
+	.createServer(async (req, res) => {
+		try {
+			const parsedUrl = url.parse(req.url, true);
+			// parse post requests
+			if (req.method == "POST") req.body = await loadPost(req, res);
+			// run each route function until the correct one is found
+			const found = await functions.findAsync(req, res, parsedUrl);
+			// log every request
+			console.log(req.method, parsedUrl.path);
+			if (!found) { // page not found
+				res.statusCode = 404;
+				res.end();
+			}
+		} catch (x) {
+			res.statusCode = 404;
+			res.end();
+		}
+	})
+	.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."))
 
 // 1 year of 1.3.0 development
 // thanks xom

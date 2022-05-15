@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports = class {
 	constructor() {
-		this.path = `${__dirname}/../../${process.env.ASSET_FOLDER}/database.json`;
+		this.path = `${__dirname}/../${process.env.ASSET_FOLDER}/database.json`;
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
 			console.error("Database doesn't exist! Creating...")
