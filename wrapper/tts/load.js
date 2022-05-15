@@ -1,8 +1,13 @@
+/**
+ * route
+ * tts generation
+ */
+// TODO: convert all of this to the fetch api
 // modules
 const base64 = require("js-base64");
-const brotli = require('brotli');
-const https = require('https');
-const http = require('http');
+const brotli = require("brotli");
+const https = require("https");
+const http = require("http");
 const Lame = require("node-lame").Lame;
 const md5 = require("js-md5");
 const mp3Duration = require("mp3-duration");
@@ -13,8 +18,7 @@ const voices = require("./info").voices;
 // stuff
 const asset = require("../asset/main");
 const get = require("../request/get");
-
-function processVoice(voiceName, text) {
+const processVoice = (voiceName, text) => {
 	return new Promise((res, rej) => {
 		const voice = voices[voiceName];
 		switch (voice.source) {
@@ -369,40 +373,7 @@ function processVoice(voiceName, text) {
 					}
 				);
 				break;
-			}
-			/*
-			case "acapela": {
-				var q = new URLSearchParams({
-					cl_login: "VAAS_MKT",
-					req_snd_type: "",
-					req_voice: voice.arg,
-					cl_app: "seriousbusiness",
-					req_text: text,
-					cl_pwd: "M5Awq9xu",
-				}).toString();
-				http.get(
-					{
-						host: "vaassl3.acapela-group.com",
-						path: `/Services/AcapelaTV/Synthesizer?${q}`,
-					},
-					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => {
-							const html = Buffer.concat(buffers);
-							const beg = html.indexOf("&snd_url=") + 9;
-							const end = html.indexOf("&", beg);
-							const sub = html.subarray(beg + 4, end).toString();
-							if (!sub.startsWith("://")) return rej();
-							get(`https${sub}`).then(res).catch(rej);
-						});
-						r.on("error", rej);
-					}
-				);
-				break;
-			}
-			*/
-			case "readloud": {
+			} case "readloud": { // working
 				const req = https.request(
 					{
 						host: "readloud.net",
@@ -455,8 +426,7 @@ function processVoice(voiceName, text) {
 					}).toString()
 				);
 				break;
-			}
-			case "cereproc": {
+			} case "cereproc": { // not working
 				const req = https.request(
 					{
 						hostname: "www.cereproc.com",
@@ -489,15 +459,6 @@ function processVoice(voiceName, text) {
 				);
 				break;
 			}
-			case "google": {
-				let url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=en&total=1&idx=0&textlen=${text.length}&client=tw-ob`;
-				https.get(url, (r) => {
-					var buffers = [];
-					r.on("data", (d) => buffers.push(d));
-					r.on("end", () => res(Buffer.concat(buffers)));
-					r.on("error", rej);
-				});
-			}
 		}
 	});
 }
@@ -512,24 +473,25 @@ function processVoice(voiceName, text) {
 module.exports = async function (req, res, url) {
 	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/')
 		return;
-	processVoice(req.body.voice, req.body.text).then(buffer => {
-		mp3Duration(buffer, (e, duration) => {
-			if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+	processVoice(req.body.voice, req.body.text)
+		.then(buffer => {
+			mp3Duration(buffer, (e, duration) => {
+				if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
 
-			const meta = {
-				type: "sound",
-				subtype: "tts",
-				title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
-				duration: 1e3 * duration,
-				ext: "mp3",
-				tId: "ugc"
-			}
-			const id = asset.save(buffer, meta);
-			res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
+				const meta = {
+					type: "sound",
+					subtype: "tts",
+					title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
+					duration: 1e3 * duration,
+					ext: "mp3",
+					tId: "ugc"
+				}
+				const id = asset.save(buffer, meta);
+				res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)
+			});
+		}).catch(e => {
+			console.log("Error generating TTS: " + e);
+			res.end(process.env.FAILURE_XML);
 		});
-	}).catch(e => {
-		console.log("Error generating TTS: " + e);
-		res.end(process.env.FAILURE_XML);
-	});
 	return true;
 }

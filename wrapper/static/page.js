@@ -163,7 +163,7 @@ module.exports = async function (req, res, url) {
 	Object.assign(params.flashvars, query);
 
 	res.setHeader("Content-Type", "text/html; charset=UTF-8");
-	res.end(await eta.renderFile(path.join(__dirname, "../", filename), {
+	res.end(await eta.renderFile(path.join(__dirname, "../views", filename), {
 		object: toObjectString(attrs, params),
 		title: title
 	}));

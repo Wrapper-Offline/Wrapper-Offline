@@ -16,22 +16,20 @@ const fUtil = require("../fileUtil");
  * @param {url.UrlWithParsedQuery} url 
  * @returns {boolean | void}
  */
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getThemeList/")
 		return;
 
 	const xmlPath = path.join(folder, "themelist.xml");
-	fUtil.zippy(xmlPath, "themelist.xml")
-		.then(buf => {
-			res.setHeader("Content-Type", "application/zip");
-			res.end(buf);
-		})
-		.catch(err => {
-			console.error("Error generating themelist ZIP: " + err);
-			res.statusCode = 500;
-			res.end("1");
-		});
-	
+	try {
+		const zip = await fUtil.zippy(xmlPath, "themelist.xml");
+		res.setHeader("Content-Type", "application/zip");
+		res.end(zip);
+	} catch (err) {
+		console.error("Error generating themelist ZIP: " + err);
+		res.statusCode = 500;
+		res.end("1");
+	}
 	// remember, this is in Array.prototype.findAsync()!
 	return true;
 }

@@ -1,13 +1,36 @@
-const movie = require("./main");
+/**
+ * route
+ * movie thumbnails
+ */
+// stuff
+const Movie = require("./main");
+
+/**
+ * Returns a movie thumbnail.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
-	if (req.method != "GET" || !url.path.startsWith("/movie_thumbs")) return;
-	movie.thumb(url.path.substr(url.path.lastIndexOf("/") + 1))
-		.then(v => {
-			res.setHeader("Content-Type", "image/png");
-			res.statusCode = 200; res.end(v);
-		})
-		.catch(() => {
-			res.statusCode = 400; res.end();
-		});
+	if (req.method != "GET" || !url.pathname.startsWith("/file/movie/thumb/"))
+		return;
+	const mId = url.pathname.substr(url.pathname.lastIndexOf("/") + 1);
+	if (!mId || mId == "") {
+		res.statusCode = 400;
+		res.end();
+		return;
+	}
+
+	try {
+		const mThmb = await Movie.thumb(mId);
+		res.setHeader("Content-Type", "image/png");
+		res.statusCode = 200;
+		res.end(mThmb);
+	} catch (err) {
+		res.statusCode = 404;
+		res.end();
+		return;
+	}
 	return true;
 }

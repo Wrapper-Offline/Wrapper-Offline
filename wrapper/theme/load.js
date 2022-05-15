@@ -16,7 +16,7 @@ const fUtil = require("../fileUtil");
  * @param {url.UrlWithParsedQuery} url 
  * @returns {boolean | void}
  */
-module.exports = function (req, res, url) {
+module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getTheme/") {
 		return;
 	} else if (!req.body.themeId) {
@@ -24,20 +24,19 @@ module.exports = function (req, res, url) {
 		res.end();
 		return;
 	}
-	
 	let theme = req.body.themeId;
 	if (theme == "family") theme = "custom";
+
 	const xmlPath = path.join(folder, `${theme}.xml`);
-	fUtil.zippy(xmlPath, "theme.xml")
-		.then(buf => {
-			res.setHeader("Content-Type", "application/zip");
-			res.end(buf);
-		})
-		.catch(err => {
-			if (process.env.NODE_ENV == "dev") throw new Error(err);
-			console.error("Error generating theme ZIP: " + err);
-			res.statusCode = 500;
-			res.end("1");
-		});
+	try {
+		const zip = await fUtil.zippy(xmlPath, "theme.xml");
+		res.setHeader("Content-Type", "application/zip");
+		res.end(zip);
+	} catch (err) {
+		if (process.env.NODE_ENV == "dev") throw new Error(err);
+		console.error("Error generating theme ZIP: " + err);
+		res.statusCode = 500;
+		res.end("1");
+	}
 	return true;
 }
