@@ -5,7 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 // vars
-const folder = path.join(__dirname, "../", process.env.CACHÉ_FOLDER);
+const folder = path.join(__dirname, "../../", process.env.CACHÉ_FOLDER);
 
 module.exports = {
 	/**

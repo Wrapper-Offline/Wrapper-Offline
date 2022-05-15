@@ -1,4 +1,5 @@
 const stuff = require('./info');
+const path = require('./path');
 const fs = require('fs');
 
 module.exports = async function (req, res, url) {
@@ -9,7 +10,7 @@ module.exports = async function (req, res, url) {
 			var t = methodLinks[linkIndex];
 			var link = t.regexLink ? url.path.replace(regex, t.regexLink) : t.link || url.path;
 			var headers = t.headers;
-			var path = `./${link}`;
+			const path = `./${link}`;
 
 			try {
 				for (var headerName in headers || {}) {
@@ -22,6 +23,7 @@ module.exports = async function (req, res, url) {
 					fs.createReadStream(path).pipe(res);
 				else throw null;
 			} catch (e) {
+				console.log(e);
 				res.statusCode = t.statusCode || 404;
 				res.end();
 			}
