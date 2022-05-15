@@ -5,6 +5,13 @@
 // stuff
 const Wf = require("./main");
 
+/**
+ * Loads a waveform file.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getWaveform/") {
 		return;

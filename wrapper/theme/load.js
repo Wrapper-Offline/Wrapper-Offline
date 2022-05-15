@@ -9,6 +9,13 @@ const folder = path.join(__dirname, "../", process.env.THEME_FOLDER);
 // stuff
 const fUtil = require("../fileUtil");
 
+/**
+ * Zips a theme XML.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getTheme/") {
 		return;

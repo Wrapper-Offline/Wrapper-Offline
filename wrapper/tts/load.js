@@ -13,7 +13,6 @@ const voices = require("./info").voices;
 // stuff
 const asset = require("../asset/main");
 const get = require("../request/get");
-const loadPost = require("../request/post_body");
 
 function processVoice(voiceName, text) {
 	return new Promise((res, rej) => {
@@ -503,6 +502,13 @@ function processVoice(voiceName, text) {
 	});
 }
 
+/**
+ * Returns a generated voice using TTS demos.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/')
 		return;

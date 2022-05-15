@@ -9,6 +9,13 @@ const folder = path.join(__dirname, "../", process.env.THEME_FOLDER);
 // stuff
 const fUtil = require("../fileUtil");
 
+/**
+ * Zips the themelist XML.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getThemeList/")
 		return;
@@ -24,5 +31,7 @@ module.exports = function (req, res, url) {
 			res.statusCode = 500;
 			res.end("1");
 		});
+	
+	// remember, this is in Array.prototype.findAsync()!
 	return true;
 }
