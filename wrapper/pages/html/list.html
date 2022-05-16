@@ -133,7 +133,7 @@
 			const tbl = json[c];
 			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
 			tbody.insertAdjacentHTML("beforeend",
-				`<tr><td><img src="/file/movie/thumb/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date.match(/./g).join('</span><span>')}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/file/movie/file/${tbl.id}" download="${tbl.title}"></a></td></tr>`);
+				`<tr><td><img src="/file/movie/thumb/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date.match(/./g).join('</span><span>')}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a></td></tr>`);
 		}
 	}
 

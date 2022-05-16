@@ -7,45 +7,22 @@ const nodezip = require("node-zip");
 const path = require("path");
 // vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
+const base = Buffer.alloc(1, 0);
 // stuff
 const fUtil = require("../fileUtil");
 const parse = require("./parse");
 
 module.exports = {
-	loadZip(mId) {
-		return new Promise((res, rej) => {
-			let filePath = `${folder}/${mId}.xml`;
-			if (!fs.existsSync(filePath)) rej("Movie doesn't exist.");
-
-			const buffer = fs.readFileSync(filePath);
-			parse.packXml(buffer, mId).then(v => res(v));
-		});
-	},
-	loadXml(movieId) {
-		return new Promise((res, rej) => {
-			const i = movieId.indexOf('-');
-			const prefix = movieId.substr(0, i);
-			const suffix = movieId.substr(i + 1);
-			switch (prefix) {
-				case 'm': {
-					const fn = fUtil.getFileIndex('movie-', '.xml', suffix);
-					fs.existsSync(fn) ? res(fs.readFileSync(fn)) : rej();
-					break;
-				}
-				default: rej();
-			}
-		});
-	},
-	thumb(mId) {
-		return new Promise((res, rej) => {
-			const fn = `${folder}/${mId}.png`;
-			res(fs.readFileSync(fn));
-		});
-	},
+	/**
+	 * Not what you think it is.
+	 * It's just a list of movie IDs.
+	 * @returns {string[]}
+	 */
 	list() {
 		const array = [];
 		fs.readdirSync(folder).forEach(fn => {
 			if (!fn.includes(".xml")) return;
+			// check if the movie and thumbnail exists
 			const mId = fn.substring(0, fn.length - 4);
 			const movie = fs.existsSync(`${folder}/${mId}.xml`);
 			const thumb = fs.existsSync(`${folder}/${mId}.png`);
@@ -53,30 +30,49 @@ module.exports = {
 		});
 		return array;
 	},
+
+	/**
+	 * Parses a saved movie for the LVM.
+	 * @param {string} mId 
+	 * @param {boolean} isGet 
+	 * @returns {Buffer}
+	 */
+	async load(mId, isGet = true) {
+		const filepath = path.join(folder, `${mId}.xml`);
+		if (!fs.existsSync(filepath)) throw new Error("Movie doesn't exist.");
+
+		const buffer = fs.readFileSync(filepath);
+		const parsed = await parse(buffer);
+		return isGet ? parsed : Buffer.concat([base, parsed]);
+	},
+
+	/**
+	 * Gets movie metadata from an XML.
+	 * @param {string} mId 
+	 * @returns {{
+	 * 	date: Date,
+	 *  durationString: string,
+	 * 	duration: number,
+	 * 	title: string,
+	 * 	id: string
+	 * }} 
+	 */
 	async meta(mId) {
-		const fn = `${folder}/${mId}.xml`;
+		const filepath = path.join(folder, `${mId}.xml`);
+		const buffer = fs.readFileSync(filepath);
+		const meta = buffer.slice(0, buffer.indexOf("</meta>")).toString().trim();
 
-		const fd = fs.openSync(fn, 'r');
-		const buffer = Buffer.alloc(256);
-		fs.readSync(fd, buffer, 0, 256, 0);
-		const begTitle = buffer.indexOf('<title>') + 16;
-		const endTitle = buffer.indexOf(']]></title>');
-		const title = buffer.slice(begTitle, endTitle).toString().trim();
-
-		const begDuration = buffer.indexOf('duration="') + 10;
-		const endDuration = buffer.indexOf('"', begDuration);
-		const duration = Number.parseFloat(
-			buffer.slice(begDuration, endDuration));
+		// get the duration string
+		const duration = Number.parseFloat(meta.betstring('duration="', '"'));
 		const min = ('' + ~~(duration / 60)).padStart(2, '0');
 		const sec = ('' + ~~(duration % 60)).padStart(2, '0');
 		const durationStr = `${min}:${sec}`;
 
-		fs.closeSync(fd);
 		return {
-			date: fs.statSync(fn).mtime,
+			date: fs.statSync(filepath).mtime,
 			durationString: durationStr,
 			duration: duration,
-			title: title,
+			title: meta.betstring("<title><![CDATA[", "]]>"),
 			id: mId,
 		};
 	},
@@ -101,5 +97,17 @@ module.exports = {
 			writeStream.close();
 			return mId;
 		});
+	},
+
+	/**
+	 * Looks for a match in the _SAVED folder.
+	 * If there's no match found, it returns null.
+	 * @param {string} wfId 
+	 * @returns {Buffer | null}
+	 */
+	thumb(mId) { // look for match in folder
+		const match = fs.readdirSync(folder)
+			.find(file => file.includes(`${mId}.png`));
+		return match ? fs.readFileSync(path.join(folder, match)) : null;
 	},
 }

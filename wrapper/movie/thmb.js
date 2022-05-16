@@ -18,7 +18,7 @@ module.exports = async function (req, res, url) {
 	if (!mId || mId == "") {
 		res.statusCode = 400;
 		res.end();
-		return;
+		return true;
 	}
 
 	try {
@@ -29,7 +29,6 @@ module.exports = async function (req, res, url) {
 	} catch (err) {
 		res.statusCode = 404;
 		res.end();
-		return;
 	}
 	return true;
 }

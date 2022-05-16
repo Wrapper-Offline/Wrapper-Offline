@@ -11,6 +11,20 @@ const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
 
+/**
+ * custom stuff
+ */
+/**
+ * Gets a substring between two strings.
+ * @param {string} beg 
+ * @param {string} end 
+ * @returns {string}
+ */
+String.prototype.betstring = function(beg, end) {
+	const begI = this.indexOf(beg) + beg.length;
+	const endI = this.indexOf(end, begI);
+	return this.substring(begI, endI);
+};
 
 /**
  * initialization
