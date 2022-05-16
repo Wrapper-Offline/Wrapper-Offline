@@ -447,12 +447,11 @@ const processVoice = (voiceName, text) => {
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != "POST" || url.path != "/goapi/convertTextToSoundAsset/") {
-		return;
-	} else if (!req.body.voice || !req.body.text) {
+	if (req.method != "POST" || url.pathname != "/goapi/convertTextToSoundAsset/") return;
+	else if (!req.body.voice || !req.body.text) {
 		res.statusCode = 400;
 		res.end();
-		return;
+		return true;
 	}
 
 	try {

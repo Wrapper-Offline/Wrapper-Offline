@@ -6,7 +6,7 @@ const database = require("../data/database"), DB = new database();
 const nodezip = require("node-zip");
 const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
 const fUtil = require("../fileUtil");
-const parse = require("../data/parse");
+const parse = require("../movie/parse");
 
 module.exports = {
 	load(mId) {

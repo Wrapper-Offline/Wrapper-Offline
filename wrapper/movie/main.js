@@ -1,34 +1,17 @@
-const parse = require('../data/parse');
-const fUtil = require('../fileUtil');
-const nodezip = require('node-zip');
-const fs = require('fs');
-const folder = `${__dirname}/../${process.env.SAVED_FOLDER}`;
+/**
+ * movie api
+ */
+// module
+const fs = require("fs");
+const nodezip = require("node-zip");
+const path = require("path");
+// vars
+const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
+// stuff
+const fUtil = require("../fileUtil");
+const parse = require("./parse");
 
 module.exports = {
-	/**
-	 *
-	 * @param {Buffer} movieZip
-	 * @param {string} nëwId
-	 * @param {string} oldId
-	 * @returns {Promise<string>}
-	 */
-	save(movieZip, thumb, id) {
-		return new Promise((res, rej) => {
-			id ||= fUtil.generateId();
-
-			// save the thumbnail
-			if (thumb) fs.writeFileSync(`${folder}/${id}.png`, thumb);
-			// extract the movie xml and save it
-			const zip = nodezip.unzip(movieZip);
-			let writeStream = fs.createWriteStream(`${folder}/${id}.xml`);
-			parse.unpackZip(zip, thumb, id).then(data => {
-				writeStream.write(data, () => {
-					writeStream.close();
-					res(id);
-				});
-			});
-		});
-	},
 	loadZip(mId) {
 		return new Promise((res, rej) => {
 			let filePath = `${folder}/${mId}.xml`;
@@ -78,7 +61,7 @@ module.exports = {
 		fs.readSync(fd, buffer, 0, 256, 0);
 		const begTitle = buffer.indexOf('<title>') + 16;
 		const endTitle = buffer.indexOf(']]></title>');
-		const title = buffer.slice(begTitle, endTitle).toString().trim().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+		const title = buffer.slice(begTitle, endTitle).toString().trim();
 
 		const begDuration = buffer.indexOf('duration="') + 10;
 		const endDuration = buffer.indexOf('"', begDuration);
@@ -96,5 +79,27 @@ module.exports = {
 			title: title,
 			id: mId,
 		};
+	},
+
+	/**
+	 * Extracts the movie XML from a zip and saves it.
+	 * @param {Buffer} body 
+	 * @param {Buffer} thumb 
+	 * @param {string} mId 
+	 * @returns {Promise<string>}
+	 */
+	async save(body, thumb, mId = fUtil.generateId()) {
+		// save the thumbnail on manual saves
+		if (thumb) fs.writeFileSync(path.join(folder, `${mId}.png`), thumb);
+		// extract the movie xml and save it
+		const zip = nodezip.unzip(body);
+		const xmlStream = zip["movie.xml"].toReadStream();
+
+		let writeStream = fs.createWriteStream(path.join(folder, `${mId}.xml`));
+		xmlStream.on("data", b => writeStream.write(b));
+		xmlStream.on("end", async () => {
+			writeStream.close();
+			return mId;
+		});
 	},
 }

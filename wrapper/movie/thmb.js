@@ -13,8 +13,7 @@ const Movie = require("./main");
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != "GET" || !url.pathname.startsWith("/file/movie/thumb/"))
-		return;
+	if (req.method != "GET" || !url.pathname.startsWith("/file/movie/thumb/")) return;
 	const mId = url.pathname.substr(url.pathname.lastIndexOf("/") + 1);
 	if (!mId || mId == "") {
 		res.statusCode = 400;
@@ -24,8 +23,8 @@ module.exports = async function (req, res, url) {
 
 	try {
 		const mThmb = await Movie.thumb(mId);
-		res.setHeader("Content-Type", "image/png");
 		res.statusCode = 200;
+		res.setHeader("Content-Type", "image/png");
 		res.end(mThmb);
 	} catch (err) {
 		res.statusCode = 404;

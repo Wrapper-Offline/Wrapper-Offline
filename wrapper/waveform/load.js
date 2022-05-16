@@ -13,12 +13,11 @@ const Wf = require("./main");
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != "POST" || url.pathname != "/goapi/getWaveform/") {
-		return;
-	} else if (!req.body.wfid) {
+	if (req.method != "POST" || url.pathname != "/goapi/getWaveform/") return;
+	else if (!req.body.wfid) {
 		res.statusCode = 400;
 		res.end();
-		return;
+		return true;
 	}
 	const wfId = req.body.wfid;
 

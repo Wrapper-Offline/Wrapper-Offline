@@ -17,8 +17,7 @@ const fUtil = require("../fileUtil");
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != "POST" || url.pathname != "/goapi/getThemeList/")
-		return;
+	if (req.method != "POST" || url.pathname != "/goapi/getThemeList/") return;
 
 	const xmlPath = path.join(folder, "themelist.xml");
 	try {
@@ -26,6 +25,7 @@ module.exports = async function (req, res, url) {
 		res.setHeader("Content-Type", "application/zip");
 		res.end(zip);
 	} catch (err) {
+		if (process.env.NODE_ENV == "dev") throw err;
 		console.error("Error generating themelist ZIP: " + err);
 		res.statusCode = 500;
 		res.end("1");
