@@ -23,7 +23,6 @@ module.exports = async function (req, res, url) {
 
 	try {
 		const mThmb = await Movie.thumb(mId);
-		res.statusCode = 200;
 		res.setHeader("Content-Type", "image/png");
 		res.end(mThmb);
 	} catch (err) {

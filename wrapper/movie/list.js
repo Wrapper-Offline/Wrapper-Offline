@@ -1,18 +1,34 @@
-/***
- * movie list route
+/**
+ * route
+ * movie listing
  */
+// stuff
 const movie = require("./main");
 
+/**
+ * Returns a list of movies and their metadata.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
-	if (req.method != "GET" || url.path != "/movieList") return;
+	if (req.method != "GET" || url.pathname != "/movieList") return;
+
 	try {
 		Promise
-			.all(movie.list().map(movie.meta))
-			.then(a => res.end(JSON.stringify(a.sort((a, b) => new Date(b.date) - new Date(a.date)))));
+			.all(movie.list().map(movie.meta)) // get movie meta instead
+			.then(a => {
+				// sort it from newest to oldest
+				const sorted = a.sort((a, b) => new Date(b.date) - new Date(a.date));
+				res.setHeader("Content-Type", "application/json");
+				res.end(JSON.stringify(sorted));
+			});
 	} catch (err) {
 		if (process.env.NODE_ENV == "dev") throw err;
 		console.error("Error listing movies: " + err)
-		res.end("{[]}")
+		res.statusCode = 500;
+		res.end("{[]}");
 	}
 	return true;
 }

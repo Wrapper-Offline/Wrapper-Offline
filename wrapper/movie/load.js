@@ -2,9 +2,16 @@
  * route
  * movie loading
  */
+// stuff
 const Movie = require("./main");
 
-
+/**
+ * Loads a movie.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
 	let mId, isGet = false;
 	switch (req.method) {
@@ -34,7 +41,6 @@ module.exports = async function (req, res, url) {
 
 	try {
 		const buf = await Movie.load(mId, isGet);
-		res.statusCode = 200;
 		res.setHeader("Content-Type", "application/zip");
 		res.end(buf);
 	} catch (err) {
