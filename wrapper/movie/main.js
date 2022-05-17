@@ -53,14 +53,15 @@ module.exports = {
 	 * 	date: Date,
 	 *  durationString: string,
 	 * 	duration: number,
+	 *  sceneCount?: count,
 	 * 	title: string,
 	 * 	id: string
 	 * }} 
 	 */
-	async meta(mId) {
+	async meta(mId, getSc = false) {
 		const filepath = path.join(folder, `${mId}.xml`);
 		const buffer = fs.readFileSync(filepath);
-		const meta = buffer.slice(0, buffer.indexOf("</meta>")).toString().trim();
+		const meta = buffer.slice(0, buffer.indexOf("<studio>")).toString().trim();
 
 		// get the duration string
 		const duration = Number.parseFloat(meta.betstring('duration="', '"'));
@@ -68,10 +69,21 @@ module.exports = {
 		const sec = ('' + ~~(duration % 60)).padStart(2, '0');
 		const durationStr = `${min}:${sec}`;
 
+		let count = 0;
+		if (getSc) { // get the scene count
+			count = 1;
+			let index = 0;
+			while (buffer.indexOf('id="SCENE', index) > -1) {
+				index += buffer.indexOf('id="SCENE', index);
+				count++;
+			}
+		}
+
 		return {
 			date: fs.statSync(filepath).mtime,
 			durationString: durationStr,
 			duration: duration,
+			sceneCount: count,
 			title: meta.betstring("<title><![CDATA[", "]]>"),
 			id: mId,
 		};
@@ -84,7 +96,9 @@ module.exports = {
 	 * @param {string} mId 
 	 * @returns {Promise<string>}
 	 */
-	async save(body, thumb, mId = fUtil.generateId()) {
+	async save(body, thumb, mId) {
+		mId ||= fUtil.generateId();
+
 		// save the thumbnail on manual saves
 		if (thumb) fs.writeFileSync(path.join(folder, `${mId}.png`), thumb);
 		// extract the movie xml and save it

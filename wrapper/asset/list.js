@@ -45,7 +45,7 @@ async function listAssets(data) {
 				"status": "ok",
 				"data": {
 					"xml": `${header}<ugc more="0">${files
-						.map(v => `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="1" title="${v.name}" thumbnail_url="/assets/${v.id}.png"><tags></tags></movie>`)
+						.map(v => `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="${v.sceneCount}" title="${v.title}" thumbnail_url="/file/movie/thumb/${v.id}"><tags></tags></movie>`)
 						.join("")}</ugc>`
 				}
 			};
@@ -105,14 +105,14 @@ module.exports = async function (req, res, url) {
 		case "/api_v2/assets/team":
 		case "/api_v2/assets/shared":
 		case "/api_v2/assets/imported": {
-			loadPost(req, res).then(data => listAssets(data.data)).then(a => {
+			listAssets(req.body.data).then(a => {
 				res.setHeader("Content-Type", "application/json"), res.end(JSON.stringify(a));
 			});
 			return true;
 			break;
 		}
 		case "/goapi/getUserAssetsXml/": {
-			loadPost(req, res).then(data => listAssets(data)).then(a => {
+			llistAssets(req.body).then(a => {
 				res.setHeader("Content-Type", "text/html; charset=UTF-8"), res.end(a);
 			});
 			return true;

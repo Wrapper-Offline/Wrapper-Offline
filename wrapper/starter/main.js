@@ -1,53 +1,64 @@
-/***
+/**
  * starter api
  */
+// module
 const fs = require("fs");
-const database = require("../data/database"), DB = new database();
 const nodezip = require("node-zip");
-const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
+const path = require("path");
+// vars
+const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
+// stuff
+const database = require("../data/database"), DB = new database();
+const { meta } = require("../movie/main.js");
 const fUtil = require("../fileUtil");
-const parse = require("../movie/parse");
 
 module.exports = {
-	load(mId) {
-		return new Promise((res, rej) => {
-			let filePath = `${folder}/${mId}.xml`;
-			console.log(filePath);
-			if (!fs.existsSync(filePath)) rej("Starter doesn't exist.");
+	/**
+	 * Extracts the movie XML from a zip and saves it.
+	 * @param {Buffer} body 
+	 * @param {Buffer} thumb 
+	 * @param {string} mId 
+	 * @returns {Promise<string>}
+	 */
+	async save(body, thumb, mId) {
+		return new Promise((resolve, reject) => {
+			mId ||= fUtil.generateId();
 
-			const buffer = fs.readFileSync(filePath);
-			parse.packXml(buffer, mId).then(v => res(v));
-		});
-	},
-	save(movieZip, thumb, id) {
-		return new Promise((res, rej) => {
-			// save starter info
-			id ||= fUtil.generateId();
-			const db = DB.get();
-			db.assets.push({
-				id: id,
-				enc_asset_id: id,
-				type: "movie",
-				title: "Untitled",
-				published: "",
-				share: {
-					type: "none"
-				},
-				tags: "",
-				file: `${id}.xml`
-			});
-			DB.save(db);
 			// save the thumbnail
-			fs.writeFileSync(`${folder}/${id}.png`, thumb);
+			fs.writeFileSync(path.join(folder, `${mId}.png`), thumb);
 			// extract the movie xml and save it
-			const zip = nodezip.unzip(movieZip);
-			let writeStream = fs.createWriteStream(`${folder}/${id}.xml`);
-			parse.unpackZip(zip, thumb, id).then(data => {
-				writeStream.write(data, () => {
-					writeStream.close();
-					res(id);
-				});
+			const zip = nodezip.unzip(body);
+			const xmlStream = zip["movie.xml"].toReadStream();
+
+			let writeStream = fs.createWriteStream(path.join(folder, `${mId}.xml`));
+			xmlStream.on("data", b => writeStream.write(b));
+			xmlStream.on("end", async () => {
+				writeStream.close();
+
+				// save starter info
+				meta(mId, true)
+					.then(mMeta => {
+
+						console.log(mMeta);
+						const db = DB.get();
+						db.assets.push({
+							id: mId,
+							enc_asset_id: mId,
+							type: "movie",
+							title: mMeta.title,
+							sceneCount: mMeta.sceneCount,
+							published: "",
+							share: {
+								type: "none"
+							},
+							tags: "",
+							file: `${mId}.xml`
+						});
+						console.log(db.assets);
+						DB.save(db);
+						resolve(mId);
+					});
 			});
 		});
-	},
-};
+	}
+}

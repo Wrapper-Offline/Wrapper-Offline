@@ -8,9 +8,8 @@ module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
 	switch (url.path) {
 		case "/api_v2/asset/get": {
-			loadPost(req, res).then(data => {
 				try {
-					const m = asset.meta(data.data.id);
+					const m = asset.meta(req.body.data.id);
 					// add shit that won't work for this wrap
 					m.share = { type: "none" };
 					m.published = "";
@@ -21,7 +20,7 @@ module.exports = async function (req, res, url) {
 					res.setHeader("Content-Type", "application/json");
 					res.end(JSON.stringify({ status: "invalid_asset", data: "invalid" }));
 				}	
-			});
+			
 			break;
 		}
 		case "/api_v2/asset/update/": {
