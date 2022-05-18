@@ -38,8 +38,6 @@ module.exports = {
 				// save starter info
 				meta(mId, true)
 					.then(mMeta => {
-
-						console.log(mMeta);
 						const db = DB.get();
 						db.assets.push({
 							id: mId,
@@ -47,14 +45,9 @@ module.exports = {
 							type: "movie",
 							title: mMeta.title,
 							sceneCount: mMeta.sceneCount,
-							published: "",
-							share: {
-								type: "none"
-							},
 							tags: "",
 							file: `${mId}.xml`
 						});
-						console.log(db.assets);
 						DB.save(db);
 						resolve(mId);
 					});

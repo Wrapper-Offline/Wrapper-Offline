@@ -1,9 +1,14 @@
-const loadPost = require('../request/post_body');
+/**
+ * route
+ * asset listing
+ */
+// vars
 const header = process.env.XML_HEADER;
-const asset = require('./main');
+// stuff
+const Asset = require("./main");
 
 async function listAssets(data) {
-	var response, files;
+	var xml, files;
 	switch (data.type) {
 		case "char": {
 			var themeId;
@@ -21,104 +26,59 @@ async function listAssets(data) {
 					break;
 				}
 			}
-			files = asset.list("char", 0, themeId);
-			response = `${header}<ugc more="0">${files
+			files = Asset.list(data);
+			xml = `${header}<ugc more="0">${files
 				.map(v => `<char id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" cc_theme_id="${v.themeId}" thumbnail_url="/assets/${v.id}.png" copyable="Y"><tags>${v.tags}</tags></char>`)
 				.join("")}</ugc>`;
 			break;
-		}
-		case "bg": {
-			files = asset.list("bg");
-			response = {
-				"status": "ok",
-				"data": {
-					"xml": `${header}<ugc more="0">${files
-						.map(v => `<background subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" asset_url="/assets/${v.id}"/>`)
-						.join("")}</ugc>`
-				}
-			};
+		} default: {
+			files = Asset.list(data);
+			xml = `${header}<ugc more="0">${
+				files.map(v => Asset.meta2Xml(v)).join("")
+			}</ugc>`;
 			break;
 		}
-		case "movie": {
-			files = asset.list("movie");
-			response = {
-				"status": "ok",
-				"data": {
-					"xml": `${header}<ugc more="0">${files
-						.map(v => `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="${v.sceneCount}" title="${v.title}" thumbnail_url="/file/movie/thumb/${v.id}"><tags></tags></movie>`)
-						.join("")}</ugc>`
-				}
-			};
-			break;
-		}
-		case "prop": {
-			if (data.subtype) {
-				files = asset.list("prop", "video");
-				response = {
-					"status": "ok",
-					"data": {
-						"xml": `${header}<ugc more="0">${files
-							.map(v => `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.id}"/>`)
-							.join("")}</ugc>`
-					}
-				};
-			} else {
-				files = asset.list("prop");
-				response = {
-					"status": "ok",
-					"data": {
-						"xml": `${header}<ugc more="0">${files
-							.map(v => `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.id}"/>`)
-							.join("")}<folder id="fidogd" name="DIE"/></ugc>`
-					}
-				};
-			}
-			break;
-		}
-		case "sound": {
-			files = asset.list("sound");
-			response = {
-				"status": "ok",
-				"data": {
-					"xml": `${header}<ugc more="0">${files
-						.map(v => `<sound subtype="${v.subtype}" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" duration="${v.duration}" downloadtype="progressive"/>`)
-						.join("")}</ugc>`
-				}
-			};
-			break;
-		}
-		default: { // no type? send a blank response
-			response = {
-				"status": "ok",
-				"data": {
-					"xml": `${header}<ugc more="0"></ugc>`
-				}
-			};
-			break;
-		}
-	};
-	return response;
+	}
+	return xml;
 }
 
+/**
+ * Returns a list of assets and their metadata.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
+	if (req.method != "POST") return;
+
 	switch (url.path) {
 		case "/api_v2/assets/team":
 		case "/api_v2/assets/shared":
 		case "/api_v2/assets/imported": {
-			listAssets(req.body.data).then(a => {
-				res.setHeader("Content-Type", "application/json"), res.end(JSON.stringify(a));
-			});
-			return true;
+			if (!req.body.data.type) {
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+
+			res.setHeader("Content-Type", "application/json");
+			res.end(JSON.stringify({
+				status: "ok",
+				data: { xml: await listAssets(req.body.data) }
+			}));
 			break;
-		}
-		case "/goapi/getUserAssetsXml/": {
-			llistAssets(req.body).then(a => {
-				res.setHeader("Content-Type", "text/html; charset=UTF-8"), res.end(a);
-			});
-			return true;
+		} case "/goapi/getUserAssetsXml/": {
+			if (!req.body.type) {
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+			
+			res.setHeader("Content-Type", "text/html; charset=UTF-8");
+			res.end(await listAssets(req.data));
 			break;
-		}
-		default:
-			return;
-	}
+		} default: return;
+	}	
+	return true;
 }

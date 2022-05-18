@@ -3,7 +3,7 @@
  * movie listing
  */
 // stuff
-const movie = require("./main");
+const Movie = require("./main");
 
 /**
  * Returns a list of movies and their metadata.
@@ -17,7 +17,7 @@ module.exports = async function (req, res, url) {
 
 	try {
 		Promise
-			.all(movie.list().map(movie.meta)) // get movie meta instead
+			.all(Movie.list().map(async v => await Movie.meta(v))) // get movie meta instead
 			.then(a => {
 				// sort it from newest to oldest
 				const sorted = a.sort((a, b) => new Date(b.date) - new Date(a.date));

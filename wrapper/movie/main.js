@@ -61,21 +61,29 @@ module.exports = {
 	async meta(mId, getSc = false) {
 		const filepath = path.join(folder, `${mId}.xml`);
 		const buffer = fs.readFileSync(filepath);
-		const meta = buffer.slice(0, buffer.indexOf("<studio>")).toString().trim();
+
+		// title
+		const title = buffer.slice(
+			buffer.indexOf("<title>") + 16,
+			buffer.indexOf("]]></title>")
+		).toString().trim();
 
 		// get the duration string
-		const duration = Number.parseFloat(meta.betstring('duration="', '"'));
+		const durBeg = buffer.indexOf('duration="') + 10;
+		const duration = Number.parseFloat(buffer.slice(
+			durBeg,
+			buffer.indexOf('"', durBeg)
+		).toString().trim());
 		const min = ('' + ~~(duration / 60)).padStart(2, '0');
 		const sec = ('' + ~~(duration % 60)).padStart(2, '0');
 		const durationStr = `${min}:${sec}`;
 
 		let count = 0;
 		if (getSc) { // get the scene count
-			count = 1;
 			let index = 0;
-			while (buffer.indexOf('id="SCENE', index) > -1) {
-				index += buffer.indexOf('id="SCENE', index);
+			while (buffer.indexOf('<scene id=', index) > -1) {
 				count++;
+				index += buffer.indexOf('<scene id=', index);
 			}
 		}
 
@@ -84,7 +92,7 @@ module.exports = {
 			durationString: durationStr,
 			duration: duration,
 			sceneCount: count,
-			title: meta.betstring("<title><![CDATA[", "]]>"),
+			title: title,
 			id: mId,
 		};
 	},

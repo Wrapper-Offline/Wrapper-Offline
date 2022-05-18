@@ -63,36 +63,7 @@ function name2Font(font) {
 	}
 }
 
-function meta2Xml(v) {
-	let response;
-	switch (v.type) {
-		case "char": {
-			response = `<char id="${v.id}" enc_asset_id="${v.id}" name="Untitled" cc_theme_id="${v.themeId}" thumbnail_url="char_default.png" copyable="Y"><tags/></char>`;
-			break;
-		}
-		case "bg": {
-			response = `<background subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" asset_url="/assets/${v.id}"/>`
-			break;
-		}
-		case "movie": {
-			response = `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="1" title="${v.name}" thumbnail_url="/assets/${v.id}.png"><tags></tags></movie>`;
-			break;
-		}
-		case "prop": {
-			if (v.subtype == "video") {
-				response = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
-			} else {
-				response = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
-			}
-			break;
-		}
-		case "sound": {
-			response = `<sound subtype="${v.subtype}" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" duration="${v.duration}" downloadtype="progressive"/>`;
-			break;
-		}
-	};
-	return response;
-}
+
 
 /**
  * Parses a movie XML by adding files to a ZIP.
@@ -125,7 +96,7 @@ module.exports = async function(xmlBuffer) {
 				const buffer = asset.load(id);
 
 				// add asset meta
-				ugc += meta2Xml(asset.meta(id));
+				ugc += asset.meta2Xml(asset.meta(id));
 				// and add the file
 				fUtil.addToZip(zip, filename, buffer);
 				break;
@@ -196,7 +167,7 @@ module.exports = async function(xmlBuffer) {
 									const buffer = await char.load(id);
 									const filename = peces.join(".");
 
-									ugc += meta2Xml({
+									ugc += asset.meta2Xml({
 										// i can't just select the character data because of stock chars
 										id: id,
 										type: "char",

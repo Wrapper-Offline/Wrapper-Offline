@@ -1,41 +1,59 @@
-/***
- * asset metadata route
+/**
+ * route
+ * asset metadata
  */
-const asset = require("./main");
-const loadPost = require("../request/post_body");
+// stuff
+const Asset = require("./main");
 
+/**
+ * Returns an asset's metadata or updates it.
+ * @param {http.IncomingMessage} req 
+ * @param {http.OutgoingMessage} res 
+ * @param {url.UrlWithParsedQuery} url 
+ * @returns {boolean | void}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
+
 	switch (url.path) {
-		case "/api_v2/asset/get": {
-				try {
-					const m = asset.meta(req.body.data.id);
-					// add shit that won't work for this wrap
-					m.share = { type: "none" };
-					m.published = "";
-					res.setHeader("Content-Type", "application/json");
-					res.end(JSON.stringify({ status: "ok", data: m }));
-				} catch (err) {
-					res.statusCode = 404;
-					res.setHeader("Content-Type", "application/json");
-					res.end(JSON.stringify({ status: "invalid_asset", data: "invalid" }));
-				}	
-			
+		case "/api_v2/asset/get": { // we're getting the metadata
+			if (!req.body.data.id && !req.body.data.starter_id) {
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+
+			res.setHeader("Content-Type", "application/json");
+			try {
+				const meta = Asset.meta(req.body.data.id || req.body.data.starter_id);
+				// add useless shit
+				meta.share = { type: "none" };
+				meta.published = "";
+				res.end(JSON.stringify({
+					status: "ok",
+					data: meta
+				}));
+			} catch (err) {
+				res.statusCode = 404;
+				res.end("{'status':'error'}");
+			}
 			break;
-		}
-		case "/api_v2/asset/update/": {
-			loadPost(req, res).then(data => {
-				const status = asset.update(data.data, data.data.id);
-				if (status)
-					res
-						.setHeader("Content-Type", "application/json")
-						.end(JSON.stringify({ status: "ok" }));
-				else res.statusCode = 404, res.end();
-			});
+		} case "/api_v2/asset/update/": { // we're updating it
+			if (!req.body.data.id && !req.body.data.starter_id) {
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+
+			try {
+				Asset.update(req.body.data.id || req.body.data.starter_id, req.body.data);
+				res.end("{'status':'ok'}");
+			} catch (err) {
+				res.statusCode = 404;
+				res.end("{'status':'error'}");
+			}
 			break;
-		}
-		default:
-			return;
+		} default: return;
 	}
 	return true;
 }

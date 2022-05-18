@@ -1,9 +1,13 @@
-/***
+/**
  * asset api
  */
+// module
 const fs = require("fs");
+const path = require("path");
+// vars
+const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
+// stuff
 const database = require("../data/database"), DB = new database();
-const folder = `${__dirname}/../${process.env.ASSET_FOLDER}`;
 const fUtil = require("../fileUtil");
 
 module.exports = {
@@ -21,29 +25,78 @@ module.exports = {
 			})
 		if (match) fs.unlinkSync(`${folder}/${match}`);
 	},
-	list(type, subtype = null, tId = null) { // very simple thanks to the database
-		let aList = DB.get().assets.filter(i => i.type == type);
-		// more filters
-		if (subtype) aList = aList.filter(i => i.subtype == subtype);
-		if (tId) aList = aList.filter(i => i.themeId == tId);
-		return aList;
+
+	/**
+	 * Gets a list of assets from the database, and filters it.
+	 * @param {object} filters
+	 * @returns {object[]}
+	 */
+	list(filters) { // very simple thanks to the database
+		let filtered = DB.get().assets.filter(i => {
+			for (const [key, value] of Object.entries(filters)) {
+				if (i[key] && i[key] != value) return false;
+			}
+			return true;
+		});
+		return filtered;
 	},
+
+	/**
+	 * Looks for a match in the _ASSETS folder.
+	 * If there's no match found, it returns null.
+	 * @param {string} wfId 
+	 * @returns {Buffer | null}
+	 */
 	load(aId) { // look for match in folder
-		var match = false;
-		fs.readdirSync(`${folder}`)
-			.forEach(filename => {
-				if (filename.search(aId) !== -1) match = filename;
-			})
-		return match ? fs.readFileSync(`${folder}/${match}`) : null;
+		const match = fs.readdirSync(folder)
+			.find(file => file.includes(aId));
+		return match ? fs.readFileSync(path.join(folder, match)) : null;
 	},
+
+	/**
+	 * Returns asset metadata from the database.
+	 * @param {string} aId 
+	 * @returns {object}
+	 */
 	meta(aId) {
-		const met = DB.get().assets.find(i => i.id == aId);
-		if (!met) {
-			console.error("Asset metadata doesn't exist! Asset id: " + aId);
-			throw "Asset metadata doesn't exist!";
-		}
-		return met;
+		const meta = DB.get().assets.find(i => i.id == aId);
+		if (!meta) throw new Error("Asset doesn't exist.");
+		return meta;
 	},
+
+	meta2Xml(v) {
+		let xml;
+		switch (v.type) {
+			case "char": {
+				xml = `<char id="${v.id}" enc_asset_id="${v.id}" name="Untitled" cc_theme_id="${v.themeId}" thumbnail_url="char_default.png" copyable="Y"><tags/></char>`;
+				break;
+			} case "bg": {
+				xml = `<background subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" asset_url="/assets/${v.id}"/>`
+				break;
+			} case "movie": {
+				xml = `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="${v.sceneCount}" title="${v.title}" thumbnail_url="/file/movie/thumb/${v.id}"><tags></tags></movie>`;
+				break;
+			} case "prop": {
+				if (v.subtype == "video") {
+					xml = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
+				} else {
+					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
+				}
+				break;
+			} case "sound": {
+				xml = `<sound subtype="${v.subtype}" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" duration="${v.duration}" downloadtype="progressive"/>`;
+				break;
+			}
+		}
+		return xml;
+	},
+
+	/**
+	 * Saves the asset and its metadata.
+	 * @param {Buffer} buf 
+	 * @param {object} param1 
+	 * @returns {string}
+	 */
 	save(buf, { type, subtype, title, duration, ext, tId }) {
 		// save asset info
 		const aId = fUtil.generateId();
@@ -60,16 +113,22 @@ module.exports = {
 		});
 		DB.save(db);
 		// save the file
-		fs.writeFileSync(`${folder}/${aId}.${ext}`, buf);
+		fs.writeFileSync(path.join(folder, `${aId}.${ext}`), buf);
 		return aId;
 	},
-	update(newInf, aId) {
+
+	/**
+	 * Updates an asset's metadata.
+	 * It cannot replace the asset itself.
+	 * @param {string} aId 
+	 * @param {object} newMet 
+	 * @returns {void}
+	 */
+	update(aId, newMet) {
 		// set new info and save
 		const db = DB.get();
-		const met = db.assets.find(i => i.id == aId);
-		met.title = newInf.title;
-		met.tags = newInf.tags;
+		const met = this.meta(aId);
+		Object.assign(met, newMet);
 		DB.save(db);
-		return true;
 	}
 };
