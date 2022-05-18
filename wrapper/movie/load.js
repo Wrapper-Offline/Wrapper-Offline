@@ -16,14 +16,9 @@ module.exports = async function (req, res, url) {
 	let mId, isGet = false;
 	switch (req.method) {
 		case "GET": {
-			if (!url.pathname.startsWith("/file/movie/file/")) return;
-			mId = url.pathname.substr(url.pathname.lastIndexOf("/") + 1);
-			if (!mId || mId == "") {
-				res.statusCode = 400;
-				res.end();
-				return true;
-			}
-
+			const match = req.url.match(/\/file\/movie\/file\/([^/]+)$/);
+			if (!match) return;
+			mId = match[1];
 			isGet = true;
 			break;
 		} case "POST": {
@@ -33,7 +28,6 @@ module.exports = async function (req, res, url) {
 				res.end();
 				return true;
 			}
-
 			mId = url.query.movieId;
 			break;
 		} default: return;

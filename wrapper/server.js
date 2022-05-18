@@ -4,8 +4,7 @@
 // modules
 const http = require("http");
 const url = require("url");
-// stuff
-const loadPost = require("./request/post_body");
+const formidable = require("formidable");
 
 /**
  * routes
@@ -83,7 +82,15 @@ module.exports = http
 		try {
 			const parsedUrl = url.parse(req.url, true);
 			// parse post requests
-			if (req.method == "POST") req.body = await loadPost(req, res);
+			if (req.method == "POST") {
+				await new Promise((resolve, reject) =>
+					new formidable.IncomingForm().parse(req, async (e, f, files) => {
+						req.body = f;
+						req.files = files;
+						resolve();
+					}
+				));
+			}
 			// run each route function until the correct one is found
 			const found = await functions.findAsync(req, res, parsedUrl);
 			// log every request

@@ -11,46 +11,42 @@ const asset = require("./main");
 module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
 
-	const formidable = await import("formidable");
-
 	switch (url.pathname) {
 		case "/api/asset/upload": { // asset uploading
-			new formidable.IncomingForm().parse(req, (e, f, files) => {
-				if (!files.import || !f) { // validate the form data
-					res.statusCode = 400;
-					res.end();
-					return;
-				}
+			if (!req.files.import || !req.body) { // validate the form data
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+			const file = req.files.import;
+			const path = file.filepath, buffer = fs.readFileSync(path);
 
-				const file = files.import[0];
-				const path = file.filepath, buffer = fs.readFileSync(path);
-				// default to the filename if the user didn't title it
-				let name = (!f.name || f.name == "") ? file.originalFilename.substring(0, name.lastIndexOf(".")) : f.name;
+			// default to the filename if the user didn't title it
+			let name = (!req.body.name || req.body.name == "") ? file.originalFilename.substring(0, name.lastIndexOf(".")) : req.body.name;
 
-				const ext = file.originalFilename.substring(file.originalFilename.lastIndexOf(".") + 1);
-				let meta = {
-					type: f.type,
-					subtype: f.subtype,
-					title: name,
-					ext: ext,
-					tId: "ugc"
-				};
-				switch (f.type) {
-					case "sound": {
-						mp3Duration(buffer, (e, duration) => {
-							if (e || !duration) return;
-							meta.duration = 1e3 * duration;
-							asset.save(buffer, meta);
-						});
-						break;
-					} default: {
+			const ext = file.originalFilename.substring(file.originalFilename.lastIndexOf(".") + 1);
+			let meta = {
+				type: req.body.type,
+				subtype: req.body.subtype,
+				title: name,
+				ext: ext,
+				tId: "ugc"
+			};
+			switch (req.body.type) {
+				case "sound": {
+					mp3Duration(buffer, (e, duration) => {
+						if (e || !duration) return;
+						meta.duration = 1e3 * duration;
 						asset.save(buffer, meta);
-						break;
-					}
+					});
+					break;
+				} default: {
+					asset.save(buffer, meta);
+					break;
 				}
-				fs.unlinkSync(path);
-				res.end(JSON.stringify({ status: "ok" }));
-			});
+			}
+			fs.unlinkSync(path);
+			res.end(JSON.stringify({ status: "ok" }));
 			return true;
 		}
 		case "/goapi/saveSound/": { // asset uploading

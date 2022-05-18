@@ -11,19 +11,21 @@ const database = require("../data/database"), DB = new database();
 const fUtil = require("../fileUtil");
 
 module.exports = {
+	/**
+	 * Deletes an asset.
+	 * @param {string} aId 
+	 */
 	delete(aId) {
 		// remove info from database
 		const db = DB.get();
-		const index = db.assets.findIndex(i => i.id == aId);
+		const index = this.find(aId, { getIndex : true});
 		db.assets.splice(index, 1);
 		DB.save(db);
 		// find file by id and delete it
-		var match = false;
-		fs.readdirSync(`${folder}`)
-			.forEach(filename => {
-				if (filename.search(aId) !== -1) match = filename;
-			})
-		if (match) fs.unlinkSync(`${folder}/${match}`);
+		const match = fs.readdirSync(folder)
+			.find(file => file.includes(aId));
+		if (match) fs.readFileSync(path.join(folder, match));
+
 	},
 
 	/**
@@ -58,8 +60,9 @@ module.exports = {
 	 * @param {string} aId 
 	 * @returns {object}
 	 */
-	meta(aId) {
-		const meta = DB.get().assets.find(i => i.id == aId);
+	meta(aId, { getIndex = false }) {
+		const callback = i => i.id == aId;
+		const meta = DB.get().assets[getIndex ? "findIndex" : "find"](callback);
 		if (!meta) throw new Error("Asset doesn't exist.");
 		return meta;
 	},
@@ -80,7 +83,7 @@ module.exports = {
 				if (v.subtype == "video") {
 					xml = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
 				} else {
-					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
+					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/assets/${v.id}"/>`;
 				}
 				break;
 			} case "sound": {

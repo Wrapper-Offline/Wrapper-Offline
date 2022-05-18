@@ -13,13 +13,9 @@ const Movie = require("./main");
  * @returns {boolean | void}
  */
 module.exports = async function (req, res, url) {
-	if (req.method != "GET" || !url.pathname.startsWith("/file/movie/thumb/")) return;
-	const mId = url.pathname.substr(url.pathname.lastIndexOf("/") + 1);
-	if (!mId || mId == "") {
-		res.statusCode = 400;
-		res.end();
-		return true;
-	}
+	const match = req.url.match(/\/file\/movie\/thumb\/([^/]+)$/);
+	if (!match) return;
+	const mId = match[1];
 
 	try {
 		const mThmb = await Movie.thumb(mId);
