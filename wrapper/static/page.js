@@ -4,6 +4,7 @@
  */
 // modules
 const eta = require("eta");
+const fs = require("fs");
 const path = require("path");
 // stuff
 function toAttrString(table) {
@@ -36,136 +37,150 @@ module.exports = async function (req, res, url) {
 	const STORE_URL = process.env.STORE_URL.replace("127.0.0.1", "localhost");
 	const CLIENT_URL = process.env.CLIENT_URL.replace("127.0.0.1", "localhost");
 
-	let attrs, params, title, filename;
+	let extra, filename;
 	switch (url.pathname) {
 		case "/cc": {
-			title = "Character Creator";
 			filename = "char";
-			attrs = {
-				data: SWF_URL + "/cc.swf",
-				type: "application/x-shockwave-flash", 
-				id: "char_creator", 
-				width: "960", 
-				height: "600", 
-				style:"display:block;margin-left:auto;margin-right:auto;",
-			};
-			params = {
-				flashvars: {
-					"appCode": "go",
-					"ctc": "go",
-					"isEmbed": 1,
-					"isLogin": "Y",
-					"m_mode": "school",
-					"page": "",
-					"siteId": "go",
-					"tlang": "en_US",
-					"ut": 60,
-					// options
-					"bs": "adam",
-					"original_asset_id": query["id"] || "",
-					"themeId": "family",
-					// paths
-					"apiserver": "/",
-					"storePath": STORE_URL + "/<store>",
-					"clientThemePath": CLIENT_URL + "/<client_theme>"
+			extra = {
+				title: "Character Creator",
+				attrs: {
+					data: SWF_URL + "/cc.swf",
+					type: "application/x-shockwave-flash", 
+					id: "char_creator", 
+					width: "960", 
+					height: "600", 
+					style:"display:block;margin-left:auto;margin-right:auto;",
 				},
-				allowScriptAccess: "always",
-				movie: SWF_URL + "/cc.swf",
+				params: {
+					flashvars: {
+						"appCode": "go",
+						"ctc": "go",
+						"isEmbed": 1,
+						"isLogin": "Y",
+						"m_mode": "school",
+						"page": "",
+						"siteId": "go",
+						"tlang": "en_US",
+						"ut": 60,
+						// options
+						"bs": "adam",
+						"original_asset_id": query["id"] || "",
+						"themeId": "family",
+						// paths
+						"apiserver": "/",
+						"storePath": STORE_URL + "/<store>",
+						"clientThemePath": CLIENT_URL + "/<client_theme>"
+					},
+					allowScriptAccess: "always",
+					movie: SWF_URL + "/cc.swf",
+				},
+				object: toObjectString
 			};
 			break;
 		} case "/cc_browser": {
-			title = "Character Browser";
 			filename = "char";
-			attrs = {
-				data: SWF_URL + "/cc_browser.swf",
-				type: "application/x-shockwave-flash",
-				id: "char_creator",
-				width: '100%', 
-				height: '600', 
-				style:'display:block;margin-left:auto;margin-right:auto;',
-			};
-			params = {
-				flashvars: {
-					apiserver: "/",
-					storePath: STORE_URL + "/<store>",
-					clientThemePath: CLIENT_URL + "/<client_theme>",
-					original_asset_id: query["id"] || null,
-					themeId: "family",
-					ut: 60,
-					appCode: "go",
-					page: "",
-					siteId: "go",
-					m_mode: "school",
-					isLogin: "Y",
-					retut: 1,
-					goteam_draft_only: 1,
-					isEmbed: 1,
-					ctc: "go",
-					tlang: "en_US",
-					lid: 13,
+			extra = {
+				title: "Character Browser",
+				attrs: {
+					data: SWF_URL + "/cc_browser.swf",
+					type: "application/x-shockwave-flash",
+					id: "char_creator",
+					width: '100%', 
+					height: '600', 
+					style:'display:block;margin-left:auto;margin-right:auto;',
 				},
-				allowScriptAccess: "always",
-				movie: SWF_URL + "/cc_browser.swf"
+				params: {
+					flashvars: {
+						apiserver: "/",
+						storePath: STORE_URL + "/<store>",
+						clientThemePath: CLIENT_URL + "/<client_theme>",
+						original_asset_id: query["id"] || null,
+						themeId: "family",
+						ut: 60,
+						appCode: "go",
+						page: "",
+						siteId: "go",
+						m_mode: "school",
+						isLogin: "Y",
+						retut: 1,
+						goteam_draft_only: 1,
+						isEmbed: 1,
+						ctc: "go",
+						tlang: "en_US",
+						lid: 13,
+					},
+					allowScriptAccess: "always",
+					movie: SWF_URL + "/cc_browser.swf"
+				},
+				object: toObjectString
 			};
 			break;
 		} case "/go_full": {
-			title = "Video Editor";
 			filename = "studio";
-			attrs = {
-				data: SWF_URL + "/go_full.swf",
-				type: "application/x-shockwave-flash", width: "100%", height: "100%",
-			};
-			params = {
-				flashvars: {
-					appCode: "go",
-					collab: 0,
-					ctc: "go",
-					goteam_draft_only: 1,
-					isLogin: "Y",
-					isWide: 1,
-					lid: 0,
-					nextUrl: "/",
-					page: "",
-					retut: 1,
-					siteId: "go",
-					tray: "custom",
-					tlang: "en_US",
-					ut: 60,
-					apiserver: "http://localhost:4343/",
-					storePath: STORE_URL + "/<store>",
-					clientThemePath: CLIENT_URL + "/<client_theme>",
+			extra = {
+				title: "Video Editor",
+				attrs: {
+					data: SWF_URL + "/go_full.swf",
+					type: "application/x-shockwave-flash", width: "100%", height: "100%",
 				},
-				allowScriptAccess: "always",
+				params: {
+					flashvars: {
+						appCode: "go",
+						collab: 0,
+						ctc: "go",
+						goteam_draft_only: 1,
+						isLogin: "Y",
+						isWide: 1,
+						lid: 0,
+						nextUrl: "/",
+						page: "",
+						retut: 1,
+						siteId: "go",
+						tray: "custom",
+						tlang: "en_US",
+						ut: 60,
+						apiserver: "http://localhost:4343/",
+						storePath: STORE_URL + "/<store>",
+						clientThemePath: CLIENT_URL + "/<client_theme>",
+					},
+					allowScriptAccess: "always",
+				},
+				object: toObjectString
 			};
 			break;
 		} case "/player": {
-			title = 'Video Player';
 			filename = "player";
-			attrs = {
-				data: SWF_URL + '/player.swf',
-				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
-			};
-			params = {
-				flashvars: {
-					'apiserver': '/', 'storePath': STORE_URL + '/<store>', 'ut': 60,
-					'autostart': 1, 'isWide': 1, 'clientThemePath': CLIENT_URL + '/<client_theme>',
+			extra = {
+				title: "Video Player",
+				attrs: {
+					data: SWF_URL + '/player.swf',
+					type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 				},
-				allowScriptAccess: 'always',
-				allowFullScreen: 'true',
+				params: {
+					flashvars: {
+						'apiserver': '/', 'storePath': STORE_URL + '/<store>', 'ut': 60,
+						'autostart': 1, 'isWide': 1, 'clientThemePath': CLIENT_URL + '/<client_theme>',
+					},
+					allowScriptAccess: 'always',
+					allowFullScreen: 'true',
+				},
+				object: toObjectString
 			};
 			break;
-		}
-
-		// not the page we want
-		default: return;
+		} default: {
+			filename = url.pathname + ".eta";
+			extra = {};
+			if (fs.existsSync(path.join(__dirname, "../views", filename))) break;
+			else return;
+		};
 	}
 	// add the query to the flashvars
-	Object.assign(params.flashvars, query);
+	Object.assign(extra.params?.flashvars || {}, query);
 
 	res.setHeader("Content-Type", "text/html; charset=UTF-8");
 	res.end(await eta.renderFile(path.join(__dirname, "../views", filename), {
-		object: toObjectString(attrs, params),
-		title: title
+		env: process.env,
+		extra: extra
 	}));
 	return true;
 }

@@ -1,51 +1,54 @@
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="/favicon.ico" type="image/png" />
+		<title><%= it.extra.title %></title>
+		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/filesize.js"></script>
+		<script src="/pages/js/global.js"></script>
+		<style>
+			body {
+				background: #eee;
+			}
 
-<head>
-	<title><% it.title %></title>
-	<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-	<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-	<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
-	<script src="/pages/js/jquery.js"></script>
-	<script src="/pages/js/filesize.js"></script>
-	<script src="/pages/js/global.js"></script>
-	<style>
-		body {
-			background: #eee;
-		}
-	</style>
-</head>
+		</style>
+	</head>
 
-<body style="margin:0px">
-	<main>
-		<nav id="importer">
-			<nav id="import_head">
-				<div>
-					<label id="import-toggle" for="importer-files" class="button_big">UPLOAD FILES</label>
-					<h3 class="close-button" onclick="hideImporter()">✖</h3>
-				</div>
-				<form>
-					<input id="importer-files" type="file" name="file" title="Upload Files" style="display:none" />
-				</form>
+	<body style="margin:0px">
+		<main>
+			<nav id="importer">
+				<nav id="import_head">
+					<div>
+						<label id="import-toggle" for="importer-files" class="button_big">UPLOAD FILES</label>
+						<h3 class="close-button" onclick="hideImporter()">✖</h3>
+					</div>
+					<form>
+						<input id="importer-files" type="file" name="file" title="Upload Files" style="display:none" />
+					</form>
+				</nav>
+				<p class="import_hint">For assets to show up in the Video Maker, refresh the page.</p>
+				<div id="importer-queue"></div>
 			</nav>
-			<p class="import_hint">For assets to show up in the Video Maker, refresh the page.</p>
-			<div id="importer-queue"></div>
-		</nav>
-		<%~ it.object %>
-	</main>
-	<div id="previewer" style="display:none">
-		<div id="preview_head">
-			<h2 id="preview-video">Preview Video</h2>
-			<h2 class="close-button" onclick="hidePreviewer()">✖</h2>
+			<%~ it.extra.object(it.extra.attrs, it.extra.params) %>
+		</main>
+		<div id="previewer" style="display:none">
+			<div id="preview_head">
+				<h2 id="preview-video">Preview Video</h2>
+				<h2 class="close-button" onclick="hidePreviewer()">✖</h2>
+			</div>
+			<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
+				width="800" height="450">
+				<param name="flashvars"
+					value="apiserver=/&amp;isEmbed=1&amp;tlang=en_US&amp;isInitFromExternal=1&amp;startFrame=previewStartFrame&amp;autostart=1&amp;storePath=<%= it.env.STORE_URL %>/&lt;store&gt;&amp;clientThemePath=<%= it.env.CLIENT_URL %>/&lt;client_theme&gt;" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="allowFullScreen" value="true" />
+			</object>
 		</div>
-		<object id="preview_player" data="http://localhost:4664/animation/414827163ad4eb60/player.swf" type="application/x-shockwave-flash" width="800" height="450">
-			<param name="flashvars" value="apiserver=/&amp;isEmbed=1&amp;tlang=en_US&amp;isInitFromExternal=1&amp;startFrame=previewStartFrame&amp;autostart=1&amp;storePath=http://localhost:4664/store/3a981f5cb2739137/&lt;store&gt;&amp;clientThemePath=http://localhost:4664/static/ad44370a650793d9/&lt;client_theme&gt;" />
-			<param name="allowScriptAccess" value="always" />
-			<param name="allowFullScreen" value="true" />
-		</object>
-	</div>
-</body>
+	</body>
 
-<script src="/pages/js/flash.js"></script>
-<script src="/pages/js/studio.js"></script>
-
+	<script src="/pages/js/flash.js"></script>
+	<script src="/pages/js/studio.js"></script>
 </html>

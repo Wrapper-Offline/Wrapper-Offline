@@ -1,0 +1,12 @@
+<footer>
+	<nav id="foot-left">
+		<a>v1.3.0</a>
+		<a href="/settings">Settings</a>
+		<a href="https://github.com/Wrapper-Offline/Wrapper-Offline/wiki">FAQ</a>
+		<a href="https://discord.gg/yhGAetN">Discord</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a href="http://localhost:4664">Server Page</a>
+	</nav>
+</footer>

@@ -2,14 +2,14 @@
 	"GET": {
 		"/index.html": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "list"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
 		"/$": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "list"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -38,11 +38,6 @@
 		"favicon.ico": {},
 		"char_default.png": {
 			"content": ""
-		},
-		"pages/html/(.*)": {
-			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
-			}
 		},
 		"pages/css/(.*)": {
 			"headers": {

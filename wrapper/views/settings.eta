@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html></html>
 	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="../../favicon.ico" type="image/png" />
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png" />
 		<title>Settings</title>
-		<meta name="description" content="Wrapper: Offline's settings" />
-		<link rel="stylesheet" type="text/css" href="../css/modern-normalize.css" />
-		<link rel="stylesheet" type="text/css" href="../css/global.css" />
-		<script src="../js/jquery.js"></script>
-		<script src="../js/global.js"></script>
+		<meta name="description" content="Wrapper: Offline's settings"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
+		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/global.js"></script>
 	</head>
+
 	<body>
-		<header>
-			<a href="/">
-				<h1 style="margin:0"><img id="logo" src="../img/logo.svg" alt="Wrapper: Offline" /></h1>
-			</a>
-		</header>
+		<%~ includeFile("./includes/header") %>
+
 		<main>			
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
@@ -49,7 +47,10 @@
 				</nav>
 			</nav>
 		</main>
+
+		<%~ includeFile("./includes/footer") %>
 	</body>
+
 	<script>
 		getSettingData();
 
