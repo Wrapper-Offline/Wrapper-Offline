@@ -1,5 +1,16 @@
 {
-        "SWF_URL": "https://127.0.0.1:4664/animation/414827163ad4eb60",
-        "STORE_URL": "https://127.0.0.1:4664/store/3a981f5cb2739137",
-        "CLIENT_URL": "https://127.0.0.1:4664/static/ad44370a650793d9"
+	"SWF_URL": "http://127.0.0.1:4664/animation/414827163ad4eb60",
+	"STORE_URL": "http://127.0.0.1:4664/store/3a981f5cb2739137",
+	"CLIENT_URL": "http://127.0.0.1:4664/static/ad44370a650793d9",
+	"CHAR_BASE_URL": "http://127.0.0.1:4664/characters",
+	"THUMB_BASE_URL": "http://127.0.0.1:4664/thumbnails",
+	"XML_HEADER": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+	"SERVER_PORT": 4343,
+	"STATIC_PORT": 4664,
+	"ASSET_FOLDER": "./_ASSETS",
+	"CACHÉ_FOLDER": "./_CACHÉ",
+	"PREMADE_FOLDER": "./_PREMADE",
+	"SAVED_FOLDER": "./_SAVED",
+	"THEME_FOLDER": "./_THEMES",
+	"WRAPPER_VER": "1.3.0"
 }

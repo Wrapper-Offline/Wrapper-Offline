@@ -108,17 +108,15 @@ if !VERBOSEWRAPPER!==y (
 	if !DRYRUN!==n ( TASKKILL /IM node.exe /F 2>nul )
 )
 
-:: Start Node.js and http-server
-echo Loading Node.js and http-server...
+:: Start Node.js
+echo Loading Node.js...
 pushd utilities
 if !VERBOSEWRAPPER!==y (
 	if !DRYRUN!==n (
-		start /MIN open_http-server.bat
 		start /MIN open_nodejs.bat
 	)
 ) else (
 	if !DRYRUN!==n (
-		start SilentCMD open_http-server.bat
 		start SilentCMD open_nodejs.bat
 	)
 )
@@ -204,8 +202,8 @@ if /i "!choice!"=="random" goto sayarandom
 if /i "!choice!"=="die" echo die please & goto wrapperidle
 if /i "!choice!"=="aaron doan" echo YOU^^!^^!^^! Noo Wrapper Is Patched Forever^^!^^!^^! Cries And Hits You So Many Times & goto wrapperidle
 if /i "!choice!"=="spark" echo WHY DID SOMEONE FUCK UP THE LAUNCHER? & goto wrapperidle
-if /i "!choice!"=="xom" echo I break wrapper and i dont fix it HAHAHAHAHHA
-if /i "!choice!"=="GoTest334" ehco Attention nightshift personnel. Please report to your assigned post.
+if /i "!choice!"=="xom" echo I break wrapper and i dont fix it HAHAHAHAHHA & goto wrapperidle
+if /i "!choice!"=="GoTest334" ehco Attention nightshift personnel. Please report to your assigned post. goto wrapperidle
 :: dev options
 if /i "!choice!"=="amnesia" goto wipe_save
 if /i "!choice!"=="restart" goto restart
@@ -237,18 +235,18 @@ goto wrapperidle
 if !INCLUDEDCHROMIUM!==n (
 	if !CUSTOMBROWSER!==n (
 		echo Opening the server page in your default browser...
-		start https://localhost:4664
+		start http://localhost:4664
 	) else (
 		echo Opening the server page in your set browser...
-		start !CUSTOMBROWSER! https://localhost:4664 >nul
+		start !CUSTOMBROWSER! http://localhost:4664 >nul
 	)
 ) else (
 	echo Opening the server page using included Chromium...
 	pushd utilities\ungoogled-chromium
 	if !APPCHROMIUM!==y (
-		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile --app=https://localhost:4664 >nul
+		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile --app=http://localhost:4664 >nul
 	) else (
-		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile https://localhost:4664 >nul
+		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile http://localhost:4664 >nul
 	)
 	popd
 )
@@ -398,7 +396,7 @@ echo You must answer Yes or No. && goto exitwrapperretry
 
 title Wrapper: Offline v!WRAPPER_VER! [Shutting down...]
 
-:: Shut down Node.js and http-server
+:: Shut down Node.js
 if !VERBOSEWRAPPER!==y (
 	if !DRYRUN!==n ( TASKKILL /IM node.exe /F )
 	echo:

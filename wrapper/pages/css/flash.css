@@ -8,7 +8,7 @@ general stuff
 main { display: flex; padding: 0 }
 .close-button:hover { 
 	cursor: pointer; 
-	color: var(--blue); 
+	color: var(--primary); 
 }
 
 /**

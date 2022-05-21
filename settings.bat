@@ -226,7 +226,7 @@ if "!choice!"=="4" (
 	goto toggleoption
 )
 if "!choice!"=="?4" (
-	echo Turning this off skips checking for Flash, Node.js, http-server, and if the HTTPS cert is installed.
+	echo Turning this off skips checking for Flash and Node.js.
 	echo This is automatically disabled when Offline launches and finds all dependencies.
 	echo If you're on a new computer, or having issues with security messages, you may wanna turn this back on.
 	goto reaskoptionscreen

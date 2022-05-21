@@ -121,6 +121,39 @@ module.exports = {
 	},
 
 	/**
+	 * Saves the asset and its metadata.
+	 * @param {fs.ReadStream} fileStream 
+	 * @param {object} param1 
+	 * @returns {string}
+	 */
+	async saveStream(fileStream, { type, subtype, title, duration, ext, tId }) {
+		// save asset info
+		const aId = fUtil.generateId();
+		const db = DB.get();
+		db.assets.unshift({ // base info, can be modified by the user later
+			id: `${aId}.${ext}`,
+			enc_asset_id: aId,
+			themeId: tId,
+			type: type,
+			subtype: subtype,
+			title: title,
+			tags: "",
+			duration: duration
+		});
+		DB.save(db);
+		// save the file
+		console.log("STREAM NOW");
+		//console.log(fileStream);
+		let writeStream = fs.createWriteStream(path.join(folder, `${aId}.${ext}`));
+		fileStream.resume();
+		fileStream.on("data", b => writeStream.write(b));
+		fileStream.on("end", async () => {
+			writeStream.close();
+			return aId;
+		});
+	},
+
+	/**
 	 * Updates an asset's metadata.
 	 * It cannot replace the asset itself.
 	 * @param {string} aId 

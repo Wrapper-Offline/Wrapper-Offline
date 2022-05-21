@@ -52,6 +52,7 @@ html.dark thead { border-color: #3a3a3a }
 tbody>tr {
 	border-top: 0;
 	border-bottom: 1px solid #ddd;
+	transition: var(--transition);
 }
 tbody>tr:hover { background: #f7f7f7 }
 html.dark tbody>tr { border-color: #3a3a3a }
@@ -95,7 +96,7 @@ tr>:nth-child(4)>a {
 	color: #474747;
 }
 tr>:nth-child(4)>a:hover {
-	color: #d85e27 !important;
+	color: var(--primary) !important;
 }
 html.dark tr>:nth-child(4)>a { color: #eee }
 

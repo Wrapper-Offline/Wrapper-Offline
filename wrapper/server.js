@@ -5,6 +5,7 @@
 const http = require("http");
 const url = require("url");
 const formidable = require("formidable");
+const static = require("node-static");
 
 /**
  * routes
@@ -77,34 +78,45 @@ Array.prototype.findAsync = async function(...params) {
 /**
  * create the server
  */
-module.exports = http
-	.createServer(async (req, res) => {
-		try {
-			const parsedUrl = url.parse(req.url, true);
-			// parse post requests
-			if (req.method == "POST") {
-				await new Promise((resolve, reject) =>
-					new formidable.IncomingForm().parse(req, async (e, f, files) => {
-						req.body = f;
-						req.files = files;
-						resolve();
+module.exports = {
+	apiServer() {
+		http
+			.createServer(async (req, res) => {
+				try {
+					const parsedUrl = url.parse(req.url, true);
+					// parse post requests
+					if (req.method == "POST") {
+						await new Promise((resolve, reject) =>
+							new formidable.IncomingForm().parse(req, async (e, f, files) => {
+								req.body = f;
+								req.files = files;
+								resolve();
+							}
+						));
 					}
-				));
-			}
-			// run each route function until the correct one is found
-			const found = await functions.findAsync(req, res, parsedUrl);
-			// log every request
-			console.log(req.method, parsedUrl.path);
-			if (!found) { // page not found
-				res.statusCode = 404;
-				res.end();
-			}
-		} catch (x) {
-			res.statusCode = 404;
-			res.end();
-		}
-	})
-	.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."))
+					// run each route function until the correct one is found
+					const found = await functions.findAsync(req, res, parsedUrl);
+					// log every request
+					console.log(req.method, parsedUrl.path);
+					if (!found) { // page not found
+						res.statusCode = 404;
+						res.end();
+					}
+				} catch (x) {
+					res.statusCode = 404;
+					res.end();
+				}
+			})
+			.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));
+	},
+	staticServer() {
+		const file = new static.Server("../server")
+		http
+			.createServer((req, res) => 
+				req.addListener("end", () => file.serve(req, res)).resume())
+			.listen(process.env.STATIC_PORT);
+	}
+}
 
 // 1 year of 1.3.0 development
 // thanks xom

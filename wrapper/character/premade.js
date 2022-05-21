@@ -1,13 +1,7 @@
-const loadPost = require('../request/post_body');
-const folder = process.env.PREMADE_FOLDER;
-const fs = require('fs');
 
 module.exports = async function (req, res, url) {
-	if (req.method != 'POST' || url.path != '/goapi/getCCPreMadeCharacters') return;
-	loadPost(req, res).then(data => {
-		res.setHeader('Content-Type', 'text/html; charset=UTF-8');
-		const p = `${folder}/${data.themeId}.xml`;
-		fs.createReadStream(p).pipe(res);
-	});
+	if (req.method != "POST" || url.pathname != "/goapi/getCCPreMadeCharacters") return;
+	
+	res.end();
 	return true;
 }

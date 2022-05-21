@@ -3,7 +3,8 @@ this css has the general header/footer layout stuff
 ***/
 
 :root {
-	--blue: #d85e27; /* ACTUALLY ORANGE */
+	--primary: #d85e27;
+	--transition: .15s ease;
 }
 
 /**
@@ -62,7 +63,7 @@ header {
 	text-decoration: none;
 	color: #fff;
 	border-radius: 4px;
-	transition: 0.15s ease;
+	transition: var(--transition);
 	/* layout */
 	display: inline-block;
 	padding: 5px 10px;
@@ -74,10 +75,10 @@ header {
 }
 /* small buttons */
 .button_small       { background: #2a2a2a }
-.button_small:hover { background: #2a2a3a; color: var(--blue) }
+.button_small:hover { background: #333; color: var(--primary) }
 /* big buttons */
 .button_big {
-	background: var(--blue);
+	background: var(--primary);
 	width: 160px;
 }
 .button_big:hover {
@@ -100,7 +101,7 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #2a2a3a;
+	background-color: #333;
 	border-radius: 4px;
 	/* layout */
 	width: 100%;
@@ -117,14 +118,14 @@ header dropdowns
 	/* style */
 	color: #ddd;
 	text-decoration: none;
-	transition: 0.15s ease;
+	transition: var(--transition);
 	/* layout */
 	display: block;
 	padding: 2px 20px;
 }
 .dropdown_menu>a:hover {
-	background: #223;
-	color: var(--blue);
+	background: #2a2a2a;
+	color: var(--primary);
 	cursor: pointer;
 }
 /* dropdown header and separation */
@@ -137,7 +138,7 @@ header dropdowns
 	padding:2px 20px;
 }
 .dropdown_menu>hr {
-	border: 1px solid #223;
+	border: 1px solid #222;
 	margin: 10px 0;
 }
 
@@ -166,13 +167,13 @@ tabs
 	color: #fff;
 	text-decoration: none;
 	border-radius: 5px;
-	transition: 0.15s ease;
+	transition: var(--transition);
 	/* layout */
 	padding: 8px 18px;
 	margin: 2px 0;
 }
-.tab_buttons a:hover    { background: #2a2a3a; color: var(--blue) }
-.tab_buttons a.selected { background: var(--blue); color: #fff }
+.tab_buttons a:hover    { background: #2a2a3a; color: var(--primary) }
+.tab_buttons a.selected { background: var(--primary); color: #fff }
 .tab { padding: 0 20px; display: none }
 #shortthemelist:hover,
 #darkmode:hover {

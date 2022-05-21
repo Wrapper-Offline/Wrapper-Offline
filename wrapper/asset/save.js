@@ -1,5 +1,6 @@
-/***
- * asset upload route
+/**
+ * route
+ * asset saving
  */
 // modules
 const fs = require("fs");
@@ -13,18 +14,22 @@ module.exports = async function (req, res, url) {
 
 	switch (url.pathname) {
 		case "/api/asset/upload": { // asset uploading
-			if (!req.files.import || !req.body) { // validate the form data
+			const file = req.files.import;
+			if (!file || !req.body) { // validate the form data
 				res.statusCode = 400;
 				res.end();
 				return true;
 			}
-			const file = req.files.import;
-			const path = file.filepath, buffer = fs.readFileSync(path);
+			const origName = file.originalFilename;
+			const [filename, ext] = origName.splitIndex(origName.lastIndexOf("."));
+			console.log(filename);
+			console.log(ext);
+			const name = req.body.name || filename;
+			const path = file.filepath, stream = fs.createReadStream(path);
+			stream.on("end", () => console.log("EEEEEEEEEEE"));
 
-			// default to the filename if the user didn't title it
-			let name = (!req.body.name || req.body.name == "") ? file.originalFilename.substring(0, name.lastIndexOf(".")) : req.body.name;
+			console.log("stream")
 
-			const ext = file.originalFilename.substring(file.originalFilename.lastIndexOf(".") + 1);
 			let meta = {
 				type: req.body.type,
 				subtype: req.body.subtype,
@@ -32,21 +37,33 @@ module.exports = async function (req, res, url) {
 				ext: ext,
 				tId: "ugc"
 			};
+
+			let aId;
 			switch (req.body.type) {
 				case "sound": {
-					mp3Duration(buffer, (e, duration) => {
+					// get the sound duration
+					mp3Duration(stream, async (e, duration) => {
 						if (e || !duration) return;
 						meta.duration = 1e3 * duration;
-						asset.save(buffer, meta);
+						aId = await asset.saveStream(stream, meta);
 					});
 					break;
 				} default: {
-					asset.save(buffer, meta);
+					aId = await asset.saveStream(stream, meta);
 					break;
 				}
 			}
-			fs.unlinkSync(path);
-			res.end(JSON.stringify({ status: "ok" }));
+			//fs.unlinkSync(path);
+			res.end(JSON.stringify({
+				status: "ok", 
+				data: {
+					id: aId,
+					enc_asset_id: aId,
+					file: aId + `.${ext}`,
+					title: name,
+					tags: ""
+				}
+			}));
 			return true;
 		}
 		case "/goapi/saveSound/": { // asset uploading

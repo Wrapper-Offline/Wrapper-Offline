@@ -457,7 +457,7 @@ module.exports = async function (req, res, url) {
 	try {
 		const buffer = await processVoice(req.body.voice, req.body.text);
 		mp3Duration(buffer, (e, duration) => {
-			if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+			if (e || !duration) throw new Error(e);
 
 			const meta = {
 				type: "sound",

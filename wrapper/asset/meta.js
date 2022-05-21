@@ -15,7 +15,7 @@ const Asset = require("./main");
 module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
 
-	switch (url.path) {
+	switch (url.pathname) {
 		case "/api_v2/asset/get": { // we're getting the metadata
 			if (!req.body.data.id && !req.body.data.starter_id) {
 				res.statusCode = 400;

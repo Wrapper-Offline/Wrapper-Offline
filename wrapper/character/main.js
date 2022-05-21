@@ -1,3 +1,6 @@
+/**
+ * character api
+ */
 // modules
 const fs = require("fs");
 const path = require("path");
@@ -24,6 +27,7 @@ module.exports = {
 		const aList = DB.get().assets.filter(i => i.type == "char" && i.themeId == tId);
 		return aList;
 	},
+
 	/**
 	 * @param {string} id
 	 * @returns {Promise<Buffer>}
@@ -31,7 +35,7 @@ module.exports = {
 	async load(aId) {
 		try {
 			try { // custom characters
-				return Buffer.from(fs.readFileSync(`${folder}/${aId}.xml`));
+				return fs.readFileSync(`${folder}/${aId}.xml`);
 			} catch (err) { // stock characters
 				const nId = (aId.slice(0, -3) + "000").padStart(9, 0);
 				const chars = await get(`${baseUrl}/${nId}.txt`);
@@ -47,6 +51,7 @@ module.exports = {
 			throw "Character not found."
 		}
 	},
+
 	/** 
 	 * @param {Buffer} buf
 	 * @param {string} id

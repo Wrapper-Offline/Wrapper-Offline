@@ -3,7 +3,7 @@
  * asset loading
  */
 // stuff
-const asset = require("./main");
+const Asset = require("./main");
 
 /**
  * Loads an asset file.
@@ -19,19 +19,24 @@ module.exports = async function (req, res, url) {
 			if (!match) return;
 
 			const aId = match[1]; // get asset id
-			const b = asset.load(aId);
+			const b = Asset.load(aId);
 			b ? (res.statusCode = 200, res.end(b)) :
 				(res.statusCode = 404, res.end());
 			return true;
 		}
 
 		case "POST": {
-			switch (url.path) {
+			switch (url.pathname) {
 				case "/goapi/getAssetEx/":
 				case "/goapi/getAsset/": {
 					const aId = req.body.assetId || req.body.enc_asset_id;
+					if (!aId) {
+						res.statusCode = 400;
+						res.end();
+						return true;
+					}
 	
-					const b = asset.load(aId);
+					const b = Asset.load(aId);
 					if (b) {
 						res.setHeader("Content-Length", b.length);
 						res.setHeader("Content-Type", "audio/mp3");
@@ -41,8 +46,7 @@ module.exports = async function (req, res, url) {
 						res.end();
 					};
 					return true;
-				}
-				default: return;
+				} default: return;
 			}
 		}
 		default: return;
