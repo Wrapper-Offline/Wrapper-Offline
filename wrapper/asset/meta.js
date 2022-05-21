@@ -49,6 +49,7 @@ module.exports = async function (req, res, url) {
 				Asset.update(req.body.data.id || req.body.data.starter_id, req.body.data);
 				res.end("{'status':'ok'}");
 			} catch (err) {
+				console.error("Error updating asset:", err);
 				res.statusCode = 404;
 				res.end("{'status':'error'}");
 			}

@@ -18,14 +18,14 @@ module.exports = {
 	delete(aId) {
 		// remove info from database
 		const db = DB.get();
-		const index = this.find(aId, { getIndex : true});
+		const index = this.meta(aId, { getIndex: true });
 		db.assets.splice(index, 1);
 		DB.save(db);
 		// find file by id and delete it
 		const match = fs.readdirSync(folder)
-			.find(file => file.includes(aId));
-		if (match) fs.unlinkSync(path.join(folder, match));
-
+			.filter(file => file.includes(aId));
+		if (match) match.forEach(filename => 
+			fs.unlinkSync(path.join(folder, filename)));
 	},
 
 	/**
@@ -63,7 +63,7 @@ module.exports = {
 	meta(aId, { getIndex } = {}) {
 		const callback = i => i.id == aId;
 		const meta = DB.get().assets[getIndex ? "findIndex" : "find"](callback);
-		if (!meta) throw new Error("Asset doesn't exist.");
+		if (typeof meta != "number" && !meta) throw new Error("Asset doesn't exist.");
 		return meta;
 	},
 
@@ -163,8 +163,8 @@ module.exports = {
 	update(aId, newMet) {
 		// set new info and save
 		const db = DB.get();
-		const met = this.meta(aId);
-		Object.assign(met, newMet);
+		const index = this.meta(aId, { getIndex: true });
+		Object.assign(db.assets[index], newMet);
 		DB.save(db);
 	}
 };

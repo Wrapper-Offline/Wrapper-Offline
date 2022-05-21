@@ -8,6 +8,12 @@ const base = Buffer.alloc(1, "0");
 const Character = require("./main");
 const { xmlFail } = require("../request/extend");
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
 module.exports = async function (req, res) {
 	let cId;
 	switch (req.method) {

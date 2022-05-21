@@ -71,8 +71,8 @@ module.exports = {
 		});
 		DB.save(db);
 		// save the file
-		fs.writeFileSync(`${folder}/${cId}.xml`, buf);
-		fs.writeFileSync(`${folder}/${cId}.png`, thumb);
+		fs.writeFileSync(path.join(folder, `${cId}.xml`), buf);
+		fs.writeFileSync(path.join(folder, `${cId}.png`), thumb);
 		return cId;
 	}
 }

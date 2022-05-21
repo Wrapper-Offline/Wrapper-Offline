@@ -13,14 +13,13 @@ module.exports = async function (req, res, url) {
 	}
 
 	try {
-		asset.delete(data.data.id);
-		res
-			.setHeader("Content-Type", "application/json")
-			.end(JSON.stringify({ status: "ok" }));
+		asset.delete(req.body.data.id);
+		res.setHeader("Content-Type", "application/json");
+		res.end("{'status':'ok'}");
 	} catch (err) {
-		console.error("Error deleting asset: " + err);
+		console.error("Error deleting asset:", err);
 		res.statusCode = 500;
-		res.end();
+		res.end("{'status':'error'}");
 	}
 
 	return true;
