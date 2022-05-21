@@ -1,7 +1,7 @@
 /**
  * asset api
  */
-// module
+// modules
 const fs = require("fs");
 const path = require("path");
 // vars
@@ -24,7 +24,7 @@ module.exports = {
 		// find file by id and delete it
 		const match = fs.readdirSync(folder)
 			.find(file => file.includes(aId));
-		if (match) fs.readFileSync(path.join(folder, match));
+		if (match) fs.unlinkSync(path.join(folder, match));
 
 	},
 
@@ -60,13 +60,18 @@ module.exports = {
 	 * @param {string} aId 
 	 * @returns {object}
 	 */
-	meta(aId, { getIndex = false }) {
+	meta(aId, { getIndex } = {}) {
 		const callback = i => i.id == aId;
 		const meta = DB.get().assets[getIndex ? "findIndex" : "find"](callback);
 		if (!meta) throw new Error("Asset doesn't exist.");
 		return meta;
 	},
 
+	/**
+	 * Converts an object to a metadata XML.
+	 * @param {any[]} v 
+	 * @returns {string}
+	 */
 	meta2Xml(v) {
 		let xml;
 		switch (v.type) {
@@ -122,11 +127,11 @@ module.exports = {
 
 	/**
 	 * Saves the asset and its metadata.
-	 * @param {fs.ReadStream} fileStream 
+	 * @param {fs.ReadStream} readStream 
 	 * @param {object} param1 
 	 * @returns {string}
 	 */
-	saveStream(fileStream, { type, subtype, title, duration, ext, tId }) {
+	saveStream(readStream, { type, subtype, title, duration, ext, tId }) {
 		// save asset info
 		const aId = fUtil.generateId();
 		const db = DB.get();
@@ -143,11 +148,8 @@ module.exports = {
 		DB.save(db);
 		// save the file
 		let writeStream = fs.createWriteStream(path.join(folder, `${aId}.${ext}`));
-		fileStream.resume();
-		fileStream.on("data", b => writeStream.write(b));
-		fileStream.on("end", async () => {
-			writeStream.close();
-		});
+		readStream.resume();
+		readStream.pipe(writeStream);
 		return aId;
 	},
 

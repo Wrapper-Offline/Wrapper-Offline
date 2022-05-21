@@ -8,9 +8,9 @@ const defaultTypes = {
 };
 
 /**
- * @param {http.IncomingMessage} req
- * @param {http.ServerResponse} res
- * @param {url.UrlWithParsedQuery} url
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
  * @returns {boolean}
  */
 module.exports = async function (req, res, url) {
@@ -24,8 +24,7 @@ module.exports = async function (req, res, url) {
 		case "/copy": {
 			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
 			break;
-		}
-		default: {
+		} default: {
 			const type = url.query.type || defaultTypes[theme] || "";
 			redirect = `/cc?themeId=${theme}&bs=${type}`;
 			break;

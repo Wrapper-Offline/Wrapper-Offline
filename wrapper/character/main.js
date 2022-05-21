@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 // vars
 const baseUrl = process.env.CHAR_BASE_URL;
-const folder = path.join(__dirname, "/../", process.env.ASSET_FOLDER);
+const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
 // stuff
 const database = require("../data/database"), DB = new database();
 const fUtil = require("../fileUtil");
@@ -14,21 +14,18 @@ const get = require("../request/get");
 
 module.exports = {
 	/**
-	 * @param {string} id
-	 * @returns {Promise<string>}
+	 * Looks for a theme in a character XML.
+	 * @param {Buffer} buffer
+	 * @returns {string}
 	 */
 	getTheme(buffer) {
-		console.log(buffer);
 		const beg = buffer.indexOf(`theme_id="`) + 10;
 		const end = buffer.indexOf(`"`, beg);
 		return buffer.slice(beg, end).toString();
 	},
-	list(tId) { // very simple thanks to the database
-		const aList = DB.get().assets.filter(i => i.type == "char" && i.themeId == tId);
-		return aList;
-	},
 
 	/**
+	 * Tries to find a character in the _SAVED folder. If there's no match, it tries to find it in the character dump.
 	 * @param {string} id
 	 * @returns {Promise<Buffer>}
 	 */
@@ -52,42 +49,30 @@ module.exports = {
 		}
 	},
 
-	/** 
-	 * @param {Buffer} buf
-	 * @param {string} id
-	 * @returns {Promise<string>}
+	/**
+	 * Saves the character and its metadata.
+	 * @param {Buffer} buf 
+	 * @param {Buffer} thumb 
+	 * @param {object} param1 
+	 * @returns {string}
 	 */
-	save(buf, { type, subtype, title, ext, tId }) {
+	save(buf, thumb, { type, subtype, title, tId }) {
 		// save asset info
-		const id = fUtil.generateId();
+		const cId = fUtil.generateId();
 		const db = DB.get();
 		db.assets.unshift({ // base info, can be modified by the user later
-			id: id,
-			enc_asset_id: id,
+			id: cId,
+			enc_asset_id: cId,
 			themeId: tId,
 			type: type,
 			subtype: subtype,
 			title: title,
-			published: "",
-			share: {
-				type: "none"
-			},
-			tags: "",
-			file: `${id}.${ext}`
+			tags: ""
 		});
 		DB.save(db);
 		// save the file
-		fs.writeFileSync(`${folder}/${id}.${ext}`, buf);
-		return id;
-	},
-	/** 
-	 * @param {Buffer} buf
-	 * @param {string} id
-	 * @returns {string}
-	 */
-	saveThumb(buf, id) {
-		// save the file
-		fs.writeFileSync(`${folder}/${id}.png`, buf);
-		return id;
-	},
+		fs.writeFileSync(`${folder}/${cId}.xml`, buf);
+		fs.writeFileSync(`${folder}/${cId}.png`, thumb);
+		return cId;
+	}
 }

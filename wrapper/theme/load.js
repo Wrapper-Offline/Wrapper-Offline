@@ -18,15 +18,12 @@ const fUtil = require("../fileUtil");
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getTheme/") return;
-	console.log("Wgdfg");
-	
-	if (!req.body.themeId) {
+	else if (!req.body.themeId) {
 		res.statusCode = 400;
 		res.end();
 		return true;
 	}
-	console.log("Wgdfg")
-	let theme = req.body.themeId;
+	const theme = req.body.themeId;
 
 	const xmlPath = path.join(folder, `${theme}.xml`);
 	try {

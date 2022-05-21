@@ -11,7 +11,7 @@ async function listAssets(data) {
 	var xml, files;
 	switch (data.type) {
 		case "char": {
-			var themeId;
+			let themeId;
 			switch (data.themeId) { // fix theme id
 				case "custom": {
 					themeId = "family";
@@ -26,7 +26,11 @@ async function listAssets(data) {
 					break;
 				}
 			}
-			files = Asset.list(data);
+			files = Asset.list({
+				themeId: themeId,
+				type: "char",
+				subtype: 0,
+			});
 			xml = `${header}<ugc more="0">${files
 				.map(v => `<char id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" cc_theme_id="${v.themeId}" thumbnail_url="/assets/${v.id}.png" copyable="Y"><tags>${v.tags}</tags></char>`)
 				.join("")}</ugc>`;
