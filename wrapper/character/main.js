@@ -56,7 +56,7 @@ module.exports = {
 	 * @param {object} param1 
 	 * @returns {string}
 	 */
-	save(buf, thumb, { type, subtype, title, tId }) {
+	save(buf, { type, subtype, title, tId }) {
 		// save asset info
 		const cId = fUtil.generateId();
 		const db = DB.get();
@@ -82,6 +82,10 @@ module.exports = {
 		}
 		// save the file
 		fs.writeFileSync(path.join(folder, `${cId}.xml`), buf);
+		return cId;
+	},
+
+	saveThumb(cId, thumb) {
 		fs.writeFileSync(path.join(folder, `${cId}.png`), thumb);
 		return cId;
 	},

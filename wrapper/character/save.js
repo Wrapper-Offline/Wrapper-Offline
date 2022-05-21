@@ -32,7 +32,8 @@ module.exports = async function (req, res, url) {
 				tId: req.body.themeId
 			};
 			try {
-				const id = Char.save(body, thumb, meta);
+				const id = Char.save(body, meta);
+				Char.save(thumb, meta)
 				res.end("0" + id);
 			} catch (err) {
 				console.error("Error saving character:", err);

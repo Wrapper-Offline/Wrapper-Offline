@@ -15,13 +15,11 @@ const Char = require("./main");
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/upload_character") return;
 
-	console.log(files.import[0].filepath);
-	const path = files.import[0].filepath, buffer = fs.readFileSync(path);
+	const path = req.files.import.filepath, buffer = fs.readFileSync(path);
 	const meta = {
 		type: "char",
 		subtype: 0,
 		title: "Untitled",
-		ext: "xml",
 		tId: Char.getTheme(buffer)
 	};
 	try {
@@ -34,7 +32,7 @@ module.exports = async function (req, res, url) {
 		res.setHeader("Location", url);
 		res.end();
 	} catch (err) {
-		console.error("Error uploading character: " + err);
+		console.error("Error uploading character:", err);
 		res.statusCode = 500;
 		res.end("00");
 	}

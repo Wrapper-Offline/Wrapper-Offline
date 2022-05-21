@@ -93,12 +93,17 @@ module.exports = async function(xmlBuffer) {
 		switch (themeId) {
 			case "ugc": {
 				const id = pieces[2];
-				const buffer = asset.load(id);
+				try {
+					const buffer = asset.load(id);
 
-				// add asset meta
-				ugc += asset.meta2Xml(asset.meta(id));
-				// and add the file
-				fUtil.addToZip(zip, filename, buffer);
+					// add asset meta
+					ugc += asset.meta2Xml(asset.meta(id));
+					// and add the file
+					fUtil.addToZip(zip, filename, buffer);
+				} catch (e) {
+					console.error(`Could not find asset ${id}, continuing video parse.`);
+					return;
+				}
 				break;
 			} default: {
 				const filepath = `${store}/${pieces.join("/")}`;
@@ -164,16 +169,21 @@ module.exports = async function(xmlBuffer) {
 									peces.splice(3, 1);
 
 									const id = pieces[2];
-									const buffer = await char.load(id);
-									const filename = peces.join(".");
+									try {
+										const buffer = await char.load(id);
+										const filename = peces.join(".");
 
-									ugc += asset.meta2Xml({
-										// i can't just select the character data because of stock chars
-										id: id,
-										type: "char",
-										themeId: char.getTheme(buffer)
-									});
-									fUtil.addToZip(zip, filename + ".xml", buffer);
+										ugc += asset.meta2Xml({
+											// i can't just select the character data because of stock chars
+											id: id,
+											type: "char",
+											themeId: char.getTheme(buffer)
+										});
+										fUtil.addToZip(zip, filename + ".xml", buffer);
+									} catch (e) {
+										console.error(`Could not find character ${id}, continuing video parse.`);
+										continue;
+									}
 									break;
 								} default: {
 									const filepath = `${store}/${pieces.join("/")}`

@@ -57,6 +57,10 @@
 		$("span").click(function (event) {
 			if (event.target.id == "darkmode")
 				toggleDarkMode();
+			else if (event.target["data-meth"] == "localStorage")
+				togLocStor(event.target.id);
+			else
+				togCookie(event.target.id);
 		});
 
 		function togLocStor(name) {
@@ -66,18 +70,27 @@
 				localStorage.removeItem(name);
 			getSettingData();
 		}
+		function togCookie(name) {
+			if ($.cookie(name) == 1)
+				$.cookie(name, 0);
+			else
+				$.cookie(name, 1);
+			getSettingData();
+		}
 		// add indicator
 		function getSettingData() {
-			const toggles = $("span#");
+			const toggles = $("span");
+			console.log(toggles);
 
-			toggles.each(() => {
-				const name = $(this).attr("id");
+			toggles.each(function (i) {
+				const elem = $(this);
+				const name = elem.attr("id");
 				if (localStorage.getItem(name)) {
-					$("#" + name).css("color", "green");
-					$("#" + name).html("On");
+					elem.css("color", "green");
+					elem.html("On");
 				} else {
-					$("#" + name).css("color", "red");
-					$("#" + name).html("Off");
+					elem.css("color", "red");
+					elem.html("Off");
 				}
 			})
 			return true;
