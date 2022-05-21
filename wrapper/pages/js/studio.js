@@ -114,6 +114,7 @@ class AssetImporter {
 				`).appendTo(this.queue);
 				break;
 			}
+			case "swf":
 			case "jpg":
 			case "png": {
 				validFileType = true;
@@ -132,6 +133,7 @@ class AssetImporter {
 						</div>
 					</div>
 				`).appendTo(this.queue);
+				if (ext == "swf") break;
 				const fr = new FileReader();
 				fr.addEventListener("load", e => {
 					el.find("img").attr("src", e.target.result);

@@ -29,23 +29,23 @@ module.exports = {
 	 * @param {string} id
 	 * @returns {Promise<Buffer>}
 	 */
-	async load(aId) {
+	async load(cId) {
 		try {
 			try { // custom characters
-				return fs.readFileSync(`${folder}/${aId}.xml`);
+				return fs.readFileSync(path.join(folder, `${cId}.xml`));
 			} catch (err) { // stock characters
-				const nId = (aId.slice(0, -3) + "000").padStart(9, 0);
+				const nId = (cId.slice(0, -3) + "000").padStart(9, 0);
 				const chars = await get(`${baseUrl}/${nId}.txt`);
 
 				var line = chars
 					.toString("utf8")
 					.split("\n")
-					.find(v => v.substring(0, 3) == aId.slice(-3));
+					.find(v => v.substring(0, 3) == cId.slice(-3));
 				if (line) return Buffer.from(line.substring(3));
-				else throw "Character not found.";
+				else throw new Error("Character not found.");
 			}	
 		} catch (err) {
-			throw "Character not found."
+			throw new Error("Character not found.");
 		}
 	},
 

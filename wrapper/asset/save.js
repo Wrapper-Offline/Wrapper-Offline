@@ -70,7 +70,7 @@ module.exports = async function (req, res, url) {
 			}));
 			return true;
 		}
-		case "/goapi/saveSound/": { // asset uploading
+		/*case "/goapi/saveSound/": { // sound recording/uploading through the lvm
 				let isRecord = false;
 				if (req.body.bytes) isRecord = true;
 
@@ -118,7 +118,7 @@ module.exports = async function (req, res, url) {
 					});
 			
 			return true;
-		}
+		}*/
 		default: return;
 	}
 }
