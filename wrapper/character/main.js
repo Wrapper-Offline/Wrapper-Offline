@@ -70,9 +70,27 @@ module.exports = {
 			tags: ""
 		});
 		DB.save(db);
+		// fix handheld props for freeaction themes
+		if (this.isFA(tId)) {
+			const end = buf.indexOf(">", buf.indexOf("<cc_char"));
+			const newChar = Buffer.concat([
+				buf.slice(0, end),
+				Buffer.from(" version=\"2.0\""),
+				buf.slice(end)
+			]);
+			buf = newChar;
+		}
 		// save the file
 		fs.writeFileSync(path.join(folder, `${cId}.xml`), buf);
 		fs.writeFileSync(path.join(folder, `${cId}.png`), thumb);
 		return cId;
+	},
+
+	isFA(themeId) {
+		switch (themeId) {
+			case "family":
+				return false;
+		}
+		return true;
 	}
 }
