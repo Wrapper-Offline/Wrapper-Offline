@@ -3,6 +3,7 @@
  * character saving
  */
 // stuff
+const { meta } = require("../asset/main");
 const Char = require("./main");
 
 /**
@@ -42,7 +43,23 @@ module.exports = async function (req, res, url) {
 			}
 			return true;
 		} case "/goapi/saveCCThumbs/": { // save thumbs
-			res.end(00)
+			if (!req.body.thumbdata || !req.body.assetId) {
+				res.statusCode = 400;
+				res.end();
+				return true;
+			}
+			const cId = req.body.assetId;
+			const thumb = Buffer.from(req.body.thumbdata, "base64");
+
+			try {
+				meta(cId);
+				Char.saveThumb(cId, thumb)
+				res.end("0" + id);
+			} catch (err) {
+				console.error("Error saving character thumb:", cId, err);
+				res.statusCode = 500;
+				res.end("1");
+			}
 			return true;
 		} default: return;
 	}

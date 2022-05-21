@@ -24,8 +24,8 @@ module.exports = async function (req, res, url) {
 	};
 	try {
 		// save the char
-		const id = Char.save(buffer, meta);
-		const url = `/cc?themeId=family&original_asset_id=${id}`;
+		Char.save(buffer, meta);
+		const url = `/cc_browser?themeId=${meta.tId}`;
 		fs.unlinkSync(path);
 		// redirect the user
 		res.statusCode = 302;

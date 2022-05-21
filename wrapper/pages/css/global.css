@@ -141,6 +141,8 @@ header dropdowns
 	border: 1px solid #222;
 	margin: 10px 0;
 }
+/* character upload */
+form[action="/upload_character"] { display: none }
 
 /**
 tabs
