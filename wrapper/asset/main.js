@@ -126,7 +126,7 @@ module.exports = {
 	 * @param {object} param1 
 	 * @returns {string}
 	 */
-	async saveStream(fileStream, { type, subtype, title, duration, ext, tId }) {
+	saveStream(fileStream, { type, subtype, title, duration, ext, tId }) {
 		// save asset info
 		const aId = fUtil.generateId();
 		const db = DB.get();
@@ -142,15 +142,13 @@ module.exports = {
 		});
 		DB.save(db);
 		// save the file
-		console.log("STREAM NOW");
-		//console.log(fileStream);
 		let writeStream = fs.createWriteStream(path.join(folder, `${aId}.${ext}`));
 		fileStream.resume();
 		fileStream.on("data", b => writeStream.write(b));
 		fileStream.on("end", async () => {
 			writeStream.close();
-			return aId;
 		});
+		return aId;
 	},
 
 	/**

@@ -69,8 +69,12 @@ const functions = [
  */
 Array.prototype.findAsync = async function(...params) {
 	for (let i = 0; i < this.length; i++) {
-		if (await this[i](...params) == true) 
-			return this[i];
+		try {
+			const result = await this[i](...params) == true;
+			if (result) return this[i];
+		} catch (err) {
+			throw err;
+		}
 	}
 	return;
 }

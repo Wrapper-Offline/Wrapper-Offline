@@ -83,12 +83,9 @@
 </body>
 
 <script>
-	var json;
-	var tbody = document.getElementsByTagName("tbody")[0];
-	var loadMore = document.getElementById("load_more");
-	const listReq = new XMLHttpRequest();
-	listReq.open("GET", "/movieList");
-	listReq.send();
+	let json;
+	var tbody = $("tbody");
+	var loadMore = $("#load_more");
 
 	var C = 0;
 	function loadRows() {
@@ -100,18 +97,19 @@
 			}
 
 			const tbl = json[c];
-			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
-			tbody.insertAdjacentHTML("beforeend",
-				`<tr><td><img src="/file/movie/thumb/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date.match(/./g).join('</span><span>')}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a></td></tr>`);
+			const date = tbl.date.split("T")[0];
+			const time = tbl.date.split("T")[1].substring(0, 8);
+
+			tbody.append(
+				`<tr><td><img src="/file/movie/thumb/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date}, ${time}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a></td></tr>`);
 		}
 	}
 
 	loadMore.onclick = loadRows;
-	listReq.onreadystatechange = function (e) {
-		if (listReq.readyState != 4) return;
-		json = JSON.parse(listReq.responseText);
+	$.get("/movieList", data => {
+		json = data;
 		loadRows();
-	}
+	});
 
 	function popup(id) {
 		window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));

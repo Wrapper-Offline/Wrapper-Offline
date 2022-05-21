@@ -20,36 +20,34 @@ module.exports = async function (req, res, url) {
 				res.end();
 				return true;
 			}
+			// get the filename and extension
 			const origName = file.originalFilename;
-			const [filename, ext] = origName.splitIndex(origName.lastIndexOf("."));
-			console.log(filename);
-			console.log(ext);
-			const name = req.body.name || filename;
+			const dotIn = origName.lastIndexOf(".");
+			const filename = origName.substring(0, dotIn);
+			const ext = origName.substring(dotIn + 1);
+			// read the file
 			const path = file.filepath, stream = fs.createReadStream(path);
-			stream.on("end", () => console.log("EEEEEEEEEEE"));
-
-			console.log("stream")
+			stream.pause();
 
 			let meta = {
 				type: req.body.type,
 				subtype: req.body.subtype,
-				title: name,
+				title: req.body.name || filename,
 				ext: ext,
 				tId: "ugc"
 			};
-
 			let aId;
 			switch (req.body.type) {
 				case "sound": {
 					// get the sound duration
-					mp3Duration(stream, async (e, duration) => {
-						if (e || !duration) return;
+					mp3Duration(path, async (e, duration) => {
+						if (e || !duration) return console.error("Error getting sound duration:", e);
 						meta.duration = 1e3 * duration;
-						aId = await asset.saveStream(stream, meta);
+						aId = asset.saveStream(stream, meta);
 					});
 					break;
 				} default: {
-					aId = await asset.saveStream(stream, meta);
+					aId = asset.saveStream(stream, meta);
 					break;
 				}
 			}
@@ -60,24 +58,23 @@ module.exports = async function (req, res, url) {
 					id: aId,
 					enc_asset_id: aId,
 					file: aId + `.${ext}`,
-					title: name,
+					title: meta.title,
 					tags: ""
 				}
 			}));
 			return true;
 		}
 		case "/goapi/saveSound/": { // asset uploading
-			new formidable.IncomingForm().parse(req, (e, f, files) => {
 				let isRecord = false;
-				if (f.bytes) isRecord = true;
+				if (req.body.bytes) isRecord = true;
 
 				let buffer;
 				switch (isRecord) {
 					case true: {
-						buffer = Buffer.from(f.bytes, "base64");
+						buffer = Buffer.from(req.body.bytes, "base64");
 						break;
 					} default: {
-						const path = files.Filedata.path;
+						const path = req.files.Filedata.path;
 						buffer = fs.readFileSync(path);
 						break;
 					}
@@ -85,8 +82,8 @@ module.exports = async function (req, res, url) {
 				
 				let meta = {
 					type: "sound",
-					subtype: f.subtype,
-					title: f.title,
+					subtype: req.body.subtype,
+					title: req.body.title,
 					ext: "mp3",
 					tId: "ugc"
 				};
@@ -109,11 +106,11 @@ module.exports = async function (req, res, url) {
 						});
 					})
 					.catch(err => {
-						if (process.env.NODE_ENV == "dev") throw err;
+						//if (process.env.NODE_ENV == "dev") throw err;
 						console.error("Error saving sound: " + err)
 						res.end(process.env.FAILURE_XML)
 					});
-			});
+			
 			return true;
 		}
 		default: return;
