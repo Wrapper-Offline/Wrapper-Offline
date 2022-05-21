@@ -2,8 +2,15 @@
  * route
  * asset metadata
  */
-const asset = require("./main");
+// stuff
+const Asset = require("./main");
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/api_v2/asset/delete/") return;
 	else if (!req.body.data.id) {
@@ -13,7 +20,7 @@ module.exports = async function (req, res, url) {
 	}
 
 	try {
-		asset.delete(req.body.data.id);
+		Asset.delete(req.body.data.id);
 		res.setHeader("Content-Type", "application/json");
 		res.end("{'status':'ok'}");
 	} catch (err) {

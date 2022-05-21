@@ -5,7 +5,7 @@
 // vars
 const base = Buffer.alloc(1, "0");
 // stuff
-const Character = require("./main");
+const Char = require("./main");
 const { xmlFail } = require("../request/extend");
 
 /**
@@ -33,7 +33,7 @@ module.exports = async function (req, res) {
 
 	console.log("Loading character: " + cId);
 	try {
-		const buf = await Character.load(cId);
+		const buf = await Char.load(cId);
 		res.setHeader("Content-Type", "text/html; charset=UTF-8");
 		res.end(Buffer.concat([base, buf]));
 	} catch (err) {

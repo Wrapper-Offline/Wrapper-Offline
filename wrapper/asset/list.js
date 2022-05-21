@@ -38,8 +38,7 @@ async function listAssets(data) {
 		} default: {
 			files = Asset.list(data);
 			xml = `${header}<ugc more="0">${
-				files.map(v => Asset.meta2Xml(v)).join("")
-			}</ugc>`;
+				files.map(v => Asset.meta2Xml(v)).join("")}</ugc>`;
 			break;
 		}
 	}
@@ -47,11 +46,10 @@ async function listAssets(data) {
 }
 
 /**
- * Returns a list of assets and their metadata.
- * @param {http.IncomingMessage} req 
- * @param {http.OutgoingMessage} res 
- * @param {url.UrlWithParsedQuery} url 
- * @returns {boolean | void}
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;

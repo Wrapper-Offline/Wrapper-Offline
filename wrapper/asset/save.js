@@ -9,6 +9,12 @@ const mp3Duration = require("mp3-duration");
 // stuff
 const asset = require("./main");
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST") return;
 

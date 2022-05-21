@@ -3,8 +3,15 @@
  */
 // modules
 const fs = require("fs");
-const char = require("./main");
+// stuff
+const Char = require("./main");
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/upload_character") return;
 
@@ -15,11 +22,11 @@ module.exports = async function (req, res, url) {
 		subtype: 0,
 		title: "Untitled",
 		ext: "xml",
-		tId: char.getTheme(buffer)
+		tId: Char.getTheme(buffer)
 	};
 	try {
 		// save the char
-		const id = char.save(buffer, meta);
+		const id = Char.save(buffer, meta);
 		const url = `/cc?themeId=family&original_asset_id=${id}`;
 		fs.unlinkSync(path);
 		// redirect the user

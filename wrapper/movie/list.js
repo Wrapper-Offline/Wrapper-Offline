@@ -6,11 +6,10 @@
 const Movie = require("./main");
 
 /**
- * Returns a list of movies and their metadata.
- * @param {http.IncomingMessage} req 
- * @param {http.OutgoingMessage} res 
- * @param {url.UrlWithParsedQuery} url 
- * @returns {boolean | void}
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "GET" || url.pathname != "/movieList") return;
