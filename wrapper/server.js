@@ -27,6 +27,7 @@ const Stp = require("./static/page");
 const mvl = require("./movie/load");
 const mvL = require("./movie/list");
 const mvm = require("./movie/meta");
+const mvr = require("./movie/repair");
 const mvs = require("./movie/save");
 const mvt = require("./movie/thmb");
 const thl = require("./theme/load");
@@ -54,6 +55,7 @@ const functions = [
 	mvl,
 	mvL,
 	mvm,
+	mvr,
 	mvs,
 	mvt,
 	thl,

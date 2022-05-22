@@ -150,7 +150,6 @@ tabs
 .tabs_contain {
     border-radius: 6px;
     display: flex;
-    height: 100%;
     margin: auto auto;
 }
 .tab_buttons {

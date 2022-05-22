@@ -39,11 +39,24 @@ module.exports = {
 	 */
 	async load(mId, isGet = true) {
 		const filepath = path.join(folder, `${mId}.xml`);
-		if (!fs.existsSync(filepath)) throw new Error("Movie doesn't exist.");
+		if (!fs.existsSync(filepath)) throw new Error("Movie not found.");
 
 		const buffer = fs.readFileSync(filepath);
-		const parsed = await parse(buffer);
+		const parsed = await parse.pack(buffer);
 		return isGet ? parsed : Buffer.concat([base, parsed]);
+	},
+
+	/**
+	 * For when you don't need to parse a movie.
+	 * @param {string} mId 
+	 * @returns {Buffer}
+	 */
+	loadXML(mId) {
+		const filepath = path.join(folder, `${mId}.xml`);
+		if (!fs.existsSync(filepath)) throw new Error("Movie not found.");
+
+		const buffer = fs.readFileSync(filepath);
+		return buffer;
 	},
 
 	/**
@@ -98,6 +111,17 @@ module.exports = {
 	},
 
 	/**
+	 * @param {string} mId 
+	 * @returns {void}
+	 */
+	async repair(mId) {
+		const oldXML = this.loadXML(mId);
+		const newXML = await parse.repair(oldXML);
+
+		this.saveXML(newXML, mId);
+	},
+
+	/**
 	 * Extracts the movie XML from a zip and saves it.
 	 * @param {Buffer} body 
 	 * @param {Buffer} thumb 
@@ -119,6 +143,14 @@ module.exports = {
 			writeStream.close();
 			return mId;
 		});
+	},
+
+	saveXML(body, mId) {
+		const filepath = path.join(folder, `${mId}.xml`);
+		// check if the movie exists
+		if (!fs.existsSync(filepath)) throw new Error("Movie not found.");
+		// save the file
+		fs.writeFileSync(filepath, body);
 	},
 
 	/**

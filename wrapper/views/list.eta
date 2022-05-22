@@ -58,7 +58,24 @@
 				const time = tbl.date.split("T")[1].substring(0, 8);
 
 				tbody.append(
-					`<tr><td><img src="/file/movie/thumb/${tbl.id}"></td><td><div>${tbl.title}</div><div>${tbl.durationString}</div></div></td><td><span>${date}, ${time}</span></td><td><a href="javascript:;" onclick="popup('${tbl.id}')"></a><a href="/go_full?movieId=${tbl.id}"></a><a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a></td></tr>`
+					`<tr>
+						<td>
+							<img src="/file/movie/thumb/${tbl.id}">
+						</td>
+						<td>
+							<div>${tbl.title}</div>
+							<div>${tbl.durationString}</div>
+						</td>
+						<td>
+							<span>${date}, ${time}</span>
+						</td>
+						<td>
+							<a href="javascript:;" onclick="popup('${tbl.id}')"></a>
+							<a href="/go_full?movieId=${tbl.id}"></a>
+							<a href="/api/movie/repair/${tbl.id}"></a>
+							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
+						</td>
+					</tr>`
 				);
 			}
 		}
