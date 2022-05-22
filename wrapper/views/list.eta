@@ -16,7 +16,7 @@
 		<%~ includeFile("./includes/header") %>
 
 		<main>
-			<table>
+			<table class="full_screen">
 				<thead>
 					<tr>
 						<td></td>

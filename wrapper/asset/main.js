@@ -33,7 +33,7 @@ module.exports = {
 	 * @param {object} filters
 	 * @returns {object[]}
 	 */
-	list(filters) { // very simple thanks to the database
+	list(filters = {}) { // very simple thanks to the database
 		let filtered = DB.get().assets.filter(i => {
 			for (const [key, value] of Object.entries(filters)) {
 				if (i[key] && i[key] != value) return false;

@@ -80,6 +80,10 @@ module.exports = async function (req, res, url) {
 			res.setHeader("Content-Type", "text/html; charset=UTF-8");
 			res.end(await listAssets(req.body));
 			break;
+		} case "/api/asset/list": {			
+			res.setHeader("Content-Type", "application/json");
+			res.end(JSON.stringify(Asset.list()));
+			break;
 		} default: return;
 	}	
 	return true;

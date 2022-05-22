@@ -263,6 +263,11 @@ module.exports =  {
 		return await zip.zip();
 	},
 
+	/**
+	 * Removed non-existent assets from a movie XML. This is useful for fixing movies that won't load due to an asset deletion.
+	 * @param {Buffer} xmlBuffer 
+	 * @returns {Buffer}
+	 */
 	async repair(xmlBuffer) {
 		if (xmlBuffer.length == 0) throw null;
 
@@ -321,6 +326,6 @@ module.exports =  {
 			}
 		}
 
-		return film.toString();
+		return film.toString({ compressed: true });
 	}
 };
