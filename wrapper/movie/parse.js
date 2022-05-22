@@ -277,7 +277,7 @@ module.exports =  {
 				case "ugc": {
 					const id = pieces[1];
 					if (!asset.exists(id)) {
-						console.error(`Error detected at ${id}, removing from XML...`);
+						console.error(`${id} doesn't exist, removing from XML...`);
 						return false;
 					}
 					break;
