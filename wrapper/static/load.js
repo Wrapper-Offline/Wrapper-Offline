@@ -22,8 +22,7 @@ module.exports = async function (req, res, url) {
 					fs.createReadStream(path).pipe(res);
 				else throw null;
 			} catch (e) {
-				res.statusCode = t.statusCode || 404;
-				res.end();
+				return;
 			}
 			return true;
 		}

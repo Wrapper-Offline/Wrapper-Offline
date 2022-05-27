@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<%~ includeFile("./includes/header") %>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
 			<table class="full_screen">
@@ -34,7 +34,7 @@
 			</table>
 		</main>
 
-		<%~ includeFile("./includes/footer") %>
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script>

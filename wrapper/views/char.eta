@@ -19,7 +19,7 @@
 	</head>
 
 	<body style="margin:0px">
-		<%~ includeFile("./includes/header") %>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
 			<%~ it.extra.object(it.extra.attrs, it.extra.params) %>

@@ -178,9 +178,17 @@ module.exports = async function (req, res, url) {
 	Object.assign(extra.params?.flashvars || {}, query);
 
 	res.setHeader("Content-Type", "text/html; charset=UTF-8");
-	res.end(await eta.renderFile(path.join(__dirname, "../views", filename), {
-		env: process.env,
-		extra: extra
-	}));
+	try {
+		const filepath = path.join(__dirname, "../views", filename);
+		const file = Buffer.from(await eta.renderFile(filepath, {
+			env: process.env,
+			extra: extra
+		}));
+		res.end(file);
+	} catch (e) {
+		console.error("Error rendering page:", e);
+		res.statusCode = 500;
+		res.end();
+	}
 	return true;
 }

@@ -38,7 +38,6 @@ module.exports = async function (req, res, url) {
 					const b = Asset.load(aId);
 					if (b) {
 						res.setHeader("Content-Length", b.length);
-						res.setHeader("Content-Type", "audio/mp3");
 						res.end(b);
 					} else {
 						res.statusCode = 404;

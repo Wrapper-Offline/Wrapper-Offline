@@ -61,9 +61,10 @@ module.exports = async function (req, res, url) {
 			res.end(JSON.stringify({
 				status: "ok", 
 				data: {
-					id: aId,
+					subtype: meta.subtype,
+					id: `${aId}.${ext}`,
 					enc_asset_id: aId,
-					file: aId + `.${ext}`,
+					file: `${aId}.${ext}`,
 					title: meta.title,
 					tags: ""
 				}

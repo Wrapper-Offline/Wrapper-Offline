@@ -21,5 +21,4 @@ if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
 // start server
-server.apiServer();
-server.staticServer();
+server();

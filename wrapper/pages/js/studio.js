@@ -184,6 +184,9 @@ class ImporterFile {
 		if (name == "")
 			name = "unnamed" + Math.random().toString().substring(2, 8); 
 
+		// set the importer icon
+		studio[0].importerStatus("processing");
+
 		let b = new FormData();
 		b.append("import", this.file);
 		b.append("name", name)
@@ -197,7 +200,16 @@ class ImporterFile {
 			contentType: false,
 			dataType: "json"
 		})
-			.done(d => this.el.fadeOut(() => this.el.remove()))
+			.done(d => {
+				if (d.status == "ok") {
+					studio[0].importerStatus("done");
+					console.log(d)
+					studio[0].importerUploadComplete(type.type, d.data.id, d.data);
+					console.log("when?")
+				} else alert("Error importing asset.");
+				// remove element
+				this.el.fadeOut(() => this.el.remove());
+			})
 			.catch(e => console.error("Import failed. Error: " + e))
 	}
 }

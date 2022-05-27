@@ -108,7 +108,7 @@ module.exports =  {
 					const filepath = `${store}/${pieces.join("/")}`;
 
 					// add the file to the zip
-					fUtil.addToZip(zip, filename, await get(filepath));
+					fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 					break;
 				}
 			}
@@ -188,7 +188,7 @@ module.exports =  {
 										const filepath = `${store}/${pieces.join("/")}`
 										const filename = pieces.join(".");
 
-										fUtil.addToZip(zip, filename, await get(filepath));
+										fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 										break;
 									}
 								}
@@ -218,7 +218,7 @@ module.exports =  {
 
 									slicesP.splice(1, 1, fileF);
 									const fileP = `${slicesP.join('.')}.swf`;
-									fUtil.addToZip(zip, fileP, await get(urlP));
+									fUtil.addToZip(zip, fileP, fs.readFileSync(urlP));
 								}
 
 								themes[themeId] = true;
@@ -229,7 +229,7 @@ module.exports =  {
 								const text = bubble.childNamed('text');
 								const font = `${name2Font(text.attr.font)}.swf`;
 								const fontSrc = `${source}/go/font/${font}`;
-								fUtil.addToZip(zip, font, await get(fontSrc));
+								fUtil.addToZip(zip, font, fs.readFileSync(fontSrc));
 								break;
 							}
 						}

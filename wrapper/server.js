@@ -67,62 +67,49 @@ const functions = [
 ];
 
 /**
- * asynchronous version of Array.prototype.find 
- */
-Array.prototype.findAsync = async function(...params) {
-	for (let i = 0; i < this.length; i++) {
-		try {
-			const result = await this[i](...params) == true;
-			if (result) return this[i];
-		} catch (err) {
-			throw err;
-		}
-	}
-	return;
-}
-
-/**
  * create the server
  */
-module.exports = {
-	apiServer() {
-		http
-			.createServer(async (req, res) => {
-				try {
-					const parsedUrl = url.parse(req.url, true);
-					// parse post requests
-					if (req.method == "POST") {
-						await new Promise((resolve, reject) =>
-							new formidable.IncomingForm().parse(req, async (e, f, files) => {
-								req.body = f;
-								req.files = files;
-								resolve();
-							}
-						));
-					}
-					// run each route function until the correct one is found
-					const found = await functions.findAsync(req, res, parsedUrl);
-					// log every request
-					console.log(req.method, parsedUrl.path);
-					if (!found) { // page not found
-						res.statusCode = 404;
-						res.end();
-					}
-				} catch (x) {
-					res.statusCode = 404;
-					res.end();
+module.exports = function () {
+	const file = new static.Server("../server");
+	http
+		.createServer(async (req, res) => {
+			try {
+				const parsedUrl = url.parse(req.url, true);
+				// parse post requests
+				if (req.method == "POST") {
+					await new Promise((resolve, reject) =>
+						new formidable.IncomingForm().parse(req, async (e, f, files) => {
+							req.body = f;
+							req.files = files;
+							resolve();
+						}
+					));
 				}
-			})
-			.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));
-	},
-	staticServer() {
-		const file = new static.Server("../server")
-		http
-			.createServer((req, res) => 
-				req.addListener("end", () => file.serve(req, res)).resume())
-			.listen(process.env.STATIC_PORT);
-	}
-}
+				// run each route function until the correct one is found
+				let found = false;
+				for (let i = 0; i < functions.length; i++) {
+					const result = await functions[i](req, res, parsedUrl);
+					if (result) {
+						found = true;
+						break;
+					}
+				}
+				if (!found) { // page not found
+					req.addListener("end", () =>
+						file.serve(req, res)
+					).resume();
+					// don't log static files
+					return;
+				}
+				// log every request
+				console.log(req.method, parsedUrl.path);
+			} catch (x) {
+				res.statusCode = 404;
+				res.end();
+			}
+		})
+		.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));
+};
 
 // 1 year of 1.3.0 development
 // thanks xom

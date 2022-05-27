@@ -35,7 +35,7 @@ module.exports = {
 				return fs.readFileSync(path.join(folder, `${cId}.xml`));
 			} catch (err) { // stock characters
 				const nId = (cId.slice(0, -3) + "000").padStart(9, 0);
-				const chars = await get(`${baseUrl}/${nId}.txt`);
+				const chars = fs.readFileSync(`${baseUrl}/${nId}.txt`);
 
 				var line = chars
 					.toString("utf8")

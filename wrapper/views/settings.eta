@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<%~ includeFile("./includes/header") %>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>			
 			<nav class="tabs_contain">
@@ -53,7 +53,7 @@
 			</nav>
 		</main>
 
-		<%~ includeFile("./includes/footer") %>
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script>
