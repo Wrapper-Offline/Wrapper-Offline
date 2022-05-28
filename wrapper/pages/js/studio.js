@@ -41,6 +41,18 @@ function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
 	movieDataXmlStr = dataXmlStr;
 	filmXmlStr = dataXmlStr.split("<filmxml>")[1].split("</filmxml>")[0];
 	hideImporter(); // hide importer before previewing
+	// update flashvars
+	const flashvars = new URLSearchParams({
+		apiserver: "/",
+		isEmbed: 1,
+		tlang: "en_US",
+		isInitFromExternal: 1,
+		startFrame: startFrame,
+		autostart: 1,
+		storePath: STORE_URL + "/<store>",
+		clientThemePath: CLIENT_URL + "/<client_theme>",
+	}).toString();
+	previewer.find("object param[name='flashvars']").attr("value", flashvars);
 	previewer.css("display", "block");
 	studio.css("height", "1px");
 }
@@ -86,11 +98,10 @@ class AssetImporter {
 		})
 	}
 	addFiles(file) { //adds a file to the queue
-		//image importing
 		const ext = file.name.substring(file.name.lastIndexOf(".") + 1);
 		const maxsize = this.config.maxsize;
 		if (maxsize && file.size > maxsize) return; // check if file is too large
-		var validFileType = false;
+		let validFileType = false;
 		let el;
 		switch (ext) {
 			case "mp3":
@@ -109,9 +120,10 @@ class AssetImporter {
 							<a href="#" type="bgmusic">Music</a>
 							<a href="#" type="soundeffect">Sound effect</a>
 							<a href="#" type="voiceover">Voiceover</a>
+							<a href="#" action="cancel">Cancel</a>
 						</div>
 					</div>
-				`).appendTo(this.queue);
+				`.trim()).appendTo(this.queue);
 				break;
 			}
 			case "swf":
@@ -130,15 +142,10 @@ class AssetImporter {
 						<div class="import_as">
 							<a href="#" type="bg">Background</a>
 							<a href="#" type="prop">Prop</a>
+							<a href="#" action="cancel">Cancel</a>
 						</div>
 					</div>
-				`).appendTo(this.queue);
-				if (ext == "swf") break;
-				const fr = new FileReader();
-				fr.addEventListener("load", e => {
-					el.find("img").attr("src", e.target.result);
-				})
-				fr.readAsDataURL(file);
+				`.trim()).appendTo(this.queue);
 				break;
 			}
 		}
@@ -163,8 +170,22 @@ class ImporterFile {
 			const t = this.typeFickser(type);
 
 			// get file name
-			let name = el.parents(".importer_asset").find(".asset_name").text();			
+			let name = el.parents(".importer_asset").find(".asset_name").text();
 			this.upload(name, t);
+		});
+		this.el.on("click", "[action]", event => {
+			const el = $(event.target);
+			const action = el.attr("action");
+
+			switch (action) {
+				case "add-to-scene": {
+					studio[0].importerAddAsset(this.meta.type, this.meta.id);
+					break;
+				} case "cancel": {
+					this.el.fadeOut(() => this.el.remove());
+					break;
+				}
+			}
 		});
 	}
 	typeFickser(type) {
@@ -173,16 +194,15 @@ class ImporterFile {
 			case "soundeffect":
 			case "voiceover": {
 				return { type: "sound", subtype: type };
-			} case "bg":
-			case "prop": {
+			} default: {
 				return { type: type, subtype: 0 };
 			}
 		}
 	}
-	async upload(passedname, type) {
+	upload(passedname, type) {
 		let name = passedname;
 		if (name == "")
-			name = "unnamed" + Math.random().toString().substring(2, 8); 
+			name = "unnamed" + Math.random().toString().substring(2, 8);
 
 		// set the importer icon
 		studio[0].importerStatus("processing");
@@ -202,10 +222,23 @@ class ImporterFile {
 		})
 			.done(d => {
 				if (d.status == "ok") {
+					this.meta = d.data;
+
+					// alert the studio
 					studio[0].importerStatus("done");
-					console.log(d)
 					studio[0].importerUploadComplete(type.type, d.data.id, d.data);
-					console.log("when?")
+
+					// update html
+					if (type.subtype == 0) {
+						if (this.ext != "swf") 
+							this.el.find("img").attr("src", `/assets/${d.data.id}`);
+						// change the subtypes to an add to scene button
+						this.el.find(".import_as").html(`
+							<a href='#' action='add-to-scene'>Add to scene</a>
+							<a href="#" action="cancel">Close</a>
+						`);
+						return;
+					}
 				} else alert("Error importing asset.");
 				// remove element
 				this.el.fadeOut(() => this.el.remove());

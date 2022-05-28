@@ -46,10 +46,13 @@ module.exports = async function (req, res, url) {
 			switch (req.body.type) {
 				case "sound": {
 					// get the sound duration
-					mp3Duration(path, async (e, duration) => {
-						if (e || !duration) return console.error("Error getting sound duration:", e);
-						meta.duration = 1e3 * duration;
-						aId = asset.saveStream(stream, meta);
+					await new Promise((resolve, rej) => {
+						mp3Duration(path, async (e, duration) => {
+							if (e || !duration) return console.error("Error getting sound duration:", e);
+							meta.duration = 1e3 * duration;
+							aId = asset.saveStream(stream, meta);
+							resolve();
+						});
 					});
 					break;
 				} default: {
@@ -61,10 +64,12 @@ module.exports = async function (req, res, url) {
 			res.end(JSON.stringify({
 				status: "ok", 
 				data: {
+					type: meta.type,
 					subtype: meta.subtype,
 					id: `${aId}.${ext}`,
-					enc_asset_id: aId,
+					enc_asset_id: `${aId}.${ext}`,
 					file: `${aId}.${ext}`,
+					duration: meta.duration,
 					title: meta.title,
 					tags: ""
 				}

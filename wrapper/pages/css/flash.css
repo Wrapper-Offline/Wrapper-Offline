@@ -5,6 +5,10 @@ this css has flash page styling
 /**
 general stuff
 **/
+html, body { /* disable dark mode */
+	background-color: #eee !important;
+	color: #474747 !important;
+}
 main { display: flex; padding: 0 }
 .close-button:hover { 
 	cursor: pointer; 
@@ -25,7 +29,6 @@ previewer
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-html.dark #previewer { background: #333 }
 #preview_head {
 	display: flex;
 	justify-content: space-between;
@@ -35,55 +38,47 @@ html.dark #previewer { background: #333 }
 /**
 importer
 **/
+#importer {
+	/* style */
+	box-shadow: 0 0 8px #00000028;
+	/* layout */
+	z-index: 1;
+	display: none;
+	min-width: 320px;
+}
+/* header */
 #import_head {
 	/* style */
 	background: #222c46;
 	color: #fff;
 	/* layout */
+	margin-bottom: 5px;
 	text-align: center;
-	padding: 1px;
-}
-#import_head>:nth-child(1) {
 	display: flex;
 	justify-content: space-between;
 }
-#import_head>:nth-child(1)>h3 { margin: 6px; }
-#importer form { margin: 0 }
-#importer {
-	/* style */
-	background: #edf2f6;
-	box-shadow: 0px 0px 8px 0 #00000028;
-	/* layout */
-	z-index: 1;
-	display: none;
-	width: 400px;
-}
-html.dark #importer { background: #222 }
-/* refesh notice */
-.import_hint {
-	/* style */
-	background: #273762;
-	color: #fff;
-	/* layout */
-	text-align: center;
-	margin: 0;
-	padding: 6px 10px;
-	font-size: 13px;
-}
+#import_head>h3 { margin: 6px }
+#importer form { display: none }
 /* queue */
-#importer-queue {  border-top: 1px solid #e2e7ed  }
-html.dark #importer-queue { border-color: #3a3a3a }
 .importer_asset {
-	border-bottom: 1px solid #e2e7ed;
+	background: #edf2f6;
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
 	margin-bottom: 5px;
 }
-html.dark .importer_asset { border-color: #3a3a3a }
 .asset_metadata {
 	display: flex;
 	padding: 7px;
 }
 /* asset icon */
-.asset_preview { height: 40px; margin-right: 6px }
+.asset_preview { 
+	margin-right: 6px;
+	/* scale image to fit */
+	overflow: hidden;
+	object-fit: contain;
+	height: 40px;
+	width: 40px;
+}
 .asset_name {
 	/* style */
 	background-color: #00000011;
@@ -95,18 +90,16 @@ html.dark .importer_asset { border-color: #3a3a3a }
 	font-size: 14px;
 }
 .asset_name:focus {
-	outline: var(--orange) auto 2px;
+	outline: var(--primary) auto 2px;
 }
 .importer_asset p {
 	color: #858e95;
-	font-weight: 400;
 	font-size: 12px;
 	margin: 0;
 }
 .import_as {
 	background: #fff;
 }
-html.dark .importer_asset { border-color: #3a3a3a }
 .import_as a {
 	display: block;
 	padding: 5px 20px;
