@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list version="1.0">
 	<fvm_meta theme_code="" is_biz="0" />
-	<theme id="business" name="Modern World" thumb="" cc_theme_id="business" />
 	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="custom" />
 	<theme id="action" name="Lil' Peepz" thumb="" cc_theme_id="action" />
+	<theme id="business" name="Business Friendly" thumb="" cc_theme_id="business" />
 	<theme id="politics2" name="White Houserz" thumb="" cc_theme_id="politics2" />
 	<theme id="retro" name="Cartoon Classics" thumb="ann-stand.swf" cc_theme_id="retro" />
 	<theme id="anime" name="Anime" thumb="" cc_theme_id="anime" />

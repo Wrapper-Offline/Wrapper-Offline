@@ -7,12 +7,13 @@
 // modules
 const fs = require("fs");
 const nodezip = require("node-zip");
+const path = require("path");
 const xmldoc = require("xmldoc");
 // vars
 const themeFolder = process.env.THEME_FOLDER;
-const source = process.env.CLIENT_URL;
+const source = path.join(__dirname, "../../server", process.env.CLIENT_URL);
+const store = path.join(__dirname, "../../server", process.env.STORE_URL);
 const header = process.env.XML_HEADER;
-const store = process.env.STORE_URL;
 // stuff
 const char = require("../character/main");
 const get = require("../request/get");
@@ -201,6 +202,7 @@ module.exports =  {
 									var urlF, fileF;
 									switch (elem3.name) {
 										case 'head':
+											if (themeId == "ugc") continue;
 											urlF = 'char';
 											fileF = 'prop';
 											break;
