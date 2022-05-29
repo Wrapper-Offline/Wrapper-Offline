@@ -10,6 +10,7 @@ const static = require("node-static");
 /**
  * routes
  */
+// this is stupid
 const asd = require("./asset/delete");
 const asa = require("./asset/save");
 const asl = require("./asset/load");
@@ -24,6 +25,7 @@ const chu = require("./character/upload");
 const sts = require("./starter/save");
 const Stl = require("./static/load");
 const Stp = require("./static/page");
+const mvd = require("./movie/delete");
 const mvl = require("./movie/load");
 const mvL = require("./movie/list");
 const mvm = require("./movie/meta");
@@ -36,7 +38,6 @@ const tsv = require("./tts/voices");
 const tsl = require("./tts/load");
 const wal = require("./waveform/load");
 const was = require("./waveform/save");
-
 const functions = [
 	asd,
 	asa,
@@ -52,6 +53,7 @@ const functions = [
 	sts,
 	Stl,
 	Stp,
+	mvd,
 	mvl,
 	mvL,
 	mvm,

@@ -14,6 +14,19 @@ const parse = require("./parse");
 
 module.exports = {
 	/**
+	 * Deletes a movie.
+	 * @param {string} mId 
+	 */
+	delete(mId) {
+		console.log(mId.length);
+		// find files by id and delete them
+		const match = fs.readdirSync(folder)
+			.filter(file => file.includes(mId));
+		if (match) match.forEach(filename => 
+			fs.unlinkSync(path.join(folder, filename)));
+	},
+
+	/**
 	 * Not what you think it is.
 	 * It's just a list of movie IDs.
 	 * @returns {string[]}

@@ -39,31 +39,35 @@
 
 	<script>
 		let json;
-		var tbody = $("tbody");
-		var loadMore = $("#load_more");
+		const tbody = $("tbody");
+		const loadMore = $("#load_more");
 
-		var C = 0;
-
+		let C = 0;
 		function loadRows() {
+			// load only 69 rows
 			let c = C;
 			C += 69;
 			for (; c < C; c++) {
+				// we reached the end
 				if (c > json.length - 1) {
 					loadMore.remove();
 					break;
 				}
 
 				const tbl = json[c];
+				// make the date and time less confusing to read
 				const date = tbl.date.split("T")[0];
 				const time = tbl.date.split("T")[1].substring(0, 8);
+				// escape the title
+				const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 				tbody.append(
-					`<tr>
+					`<tr id="${tbl.id}">
 						<td>
-							<img src="/file/movie/thumb/${tbl.id}">
+							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
 						</td>
 						<td>
-							<div>${tbl.title}</div>
+							<div>${title}</div>
 							<div>${tbl.durationString}</div>
 						</td>
 						<td>
@@ -72,19 +76,41 @@
 						<td>
 							<a href="javascript:;" onclick="popup('${tbl.id}')"></a>
 							<a href="/go_full?movieId=${tbl.id}"></a>
-							<a href="/api/movie/repair/${tbl.id}"></a>
 							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
+							<a href="#" onclick="destructive('${tbl.id}', 'repair')"></a>
+							<a href="#" onclick="destructive('${tbl.id}', 'delete')"></a>
 						</td>
 					</tr>`
 				);
 			}
 		}
 
+		// i want more movies
 		loadMore.onclick = loadRows;
+
+
 		$.get("/movieList", data => {
 			json = data;
 			loadRows();
 		});
+
+		function destructive(mId, act) {
+			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
+
+			if (yesno)
+				$.get(`/api/movie/${act}/${mId}`, data => {
+					if (data.status == "ok") {
+						switch (act) {
+							case "repair":
+								window.location = `/player?movieId=${mId}`;
+								break;
+							case "delete":
+								$(`#${mId}`).fadeOut(() => $(`#${mId}`).remove());
+								break;
+						}
+					} else alert("Guess you're stuck with your movie.");
+				});
+		}
 
 		function popup(id) {
 			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +

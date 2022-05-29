@@ -273,12 +273,15 @@ module.exports =  {
 	async repair(xmlBuffer) {
 		if (xmlBuffer.length == 0) throw null;
 
-		function basicParse(file) {
+		function basicParse(file, tag) {
 			const pieces = file.split(".");
 			const themeId = pieces[0];
 
-			const ext = pieces.pop();
-			pieces[pieces.length - 1] += "." + ext;
+			let ext;
+			if (tag != "char") {
+				ext = pieces.pop();
+				pieces[pieces.length - 1] += "." + ext;
+			} else pieces.splice(2, 2);
 
 			switch (themeId) {
 				case "ugc": {
@@ -305,20 +308,20 @@ module.exports =  {
 					
 					if (!basicParse(file)) film.children.splice(eI, 1);;
 					break;
-				}
-
-				case "scene": {
+				} case "scene": {
 					for (const e2I in elem.children) {
 						const elem2 = elem.children[e2I];
+						const tag = elem2.name;
 
-						switch (elem2.name) {
+						switch (tag) {
 							case "bg":
+							case "char":
 							case "effectAsset":
 							case "prop": {
-								const file = elem2.childNamed("file")?.val;
+								const file = elem2.childNamed(tag != "char" ? "file" : "action")?.val;
 								if (!file) continue;
 								
-								if (!basicParse(file)) elem.children.splice(e2I, 1);
+								if (!basicParse(file, tag)) elem.children.splice(e2I, 1);
 								break;
 							} default: break;
 						}
