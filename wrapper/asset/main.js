@@ -46,25 +46,24 @@ module.exports = {
 	/**
 	 * Looks for a match in the _ASSETS folder and returns the file buffer.
 	 * If there's no match found, it returns null.
-	 * @param {string} wfId 
+	 * @param {string} aId 
 	 * @returns {Buffer | null}
 	 */
 	load(aId) { // look for match in folder
-		const match = fs.readdirSync(folder)
-			.find(file => file.includes(aId));
+		const match = this.exists(aId);
 		return match ? fs.readFileSync(path.join(folder, match)) : null;
 	},
 
 	/**
 	 * Looks for a match in the _ASSETS folder.
 	 * If there's no match found, it returns null.
-	 * @param {string} wfId 
+	 * @param {string} aId 
 	 * @returns {Buffer | null}
 	 */
 	exists(aId) { // look for match in folder
 		const match = fs.readdirSync(folder)
 			.find(file => file.includes(aId));
-		return match ? true : false;
+		return match || false;
 	},
 
 	/**

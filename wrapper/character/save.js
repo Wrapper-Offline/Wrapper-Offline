@@ -34,7 +34,7 @@ module.exports = async function (req, res, url) {
 			};
 			try {
 				const id = Char.save(body, meta);
-				Char.save(thumb, meta)
+				Char.saveThumb(id, thumb)
 				res.end("0" + id);
 			} catch (err) {
 				console.error("Error saving character:", err);

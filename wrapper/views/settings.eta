@@ -82,11 +82,12 @@
 							${(() => {
 									switch (tbl.type) {
 										case "sound":
-											return `<img src="/pages/img/importer/sound.png" alt="Sound" />`;
-											break;
+											return `<img src="/pages/img/importer/sound.png" alt="Sound"/>`;
 										case "bg":
 										case "prop":
-											return `<img src="/assets/${tbl.id}">`;
+											return `<img src="/assets/${tbl.id}"/>`;
+										case "char":
+											return `<img src="/assets/${tbl.id}.png"/>`;
 									}
 							})()}
 						</td>

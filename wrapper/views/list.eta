@@ -80,7 +80,7 @@
 							<a href="#" onclick="destructive('${tbl.id}', 'repair')"></a>
 							<a href="#" onclick="destructive('${tbl.id}', 'delete')"></a>
 						</td>
-					</tr>`
+					</tr>`.trim()
 				);
 			}
 		}
