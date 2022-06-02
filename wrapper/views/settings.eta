@@ -63,8 +63,7 @@
 		var tbody = $("tbody");
 		var loadMore = $("#load_more");
 
-		var C = 0;
-
+		let C = 0;
 		function loadRows() {
 			let c = C;
 			C += 69;
@@ -96,10 +95,7 @@
 							<div>${tbl.type} | ${tbl.subtype}</div>
 						</td>
 						<td></td>
-						<td>
-							<a href="/api/movie/repair/${tbl.id}"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
-						</td>
+						<td></td>
 					</tr>`.trim()
 				);
 			}

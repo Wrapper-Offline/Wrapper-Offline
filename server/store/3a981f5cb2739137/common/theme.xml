@@ -19313,126 +19313,344 @@
 	<sound id="theater_audience_laughter_01.mp3" name="FX - Audience laughter" downloadtype="progressive" subtype="soundeffect" duration="6870" enable="Y" is_premium="N" aid="31435" money="0" sharing="0"/>
 	<sound id="water_bubbling_long_04.mp3" name="FX - Bubbling" downloadtype="progressive" subtype="soundeffect" duration="24607" enable="Y" is_premium="N" aid="31436" money="0" sharing="0"/>
 	<sound id="whistle_11.mp3" name="FX - Whistle" downloadtype="progressive" subtype="soundeffect" duration="758" enable="Y" is_premium="N" aid="31437" money="0" sharing="0"/>
-	<bubble id="blank11" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362" money="0" sharing="0" hasTail="0" display_order="1">
-	<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF"/>
-	<text rgb="0" font="OstrichSansMedium" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank12" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30363" money="0" sharing="0" hasTail="0" display_order="2">
-	<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF"/>
-	<text rgb="0" font="Telex Regular" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank13" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30364" money="0" sharing="0" hasTail="0" display_order="3">
-	<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF"/>
-	<text rgb="0" font="Lato" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank14" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30365" money="0" sharing="0" hasTail="0" display_order="4">
-	<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF"/>
-	<text rgb="0" font="Raleway" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank17" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="31728" money="0" sharing="0" hasTail="0" display_order="5">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Gochi Hand" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank3" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="17685" money="0" sharing="0" hasTail="0" display_order="6">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Glegoo" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank16" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="31727" money="0" sharing="0" hasTail="0" display_order="7">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Satisfy" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank7" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="20464" money="0" sharing="0" hasTail="0" display_order="8">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Lilita One" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank15" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="31726" money="0" sharing="0" hasTail="0" display_order="9">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Mouse Memoirs" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="3431" money="0" sharing="0" hasTail="0" display_order="10">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Arial" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank18" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="31729" money="0" sharing="0" hasTail="0" display_order="10">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Patrick Hand" size="20" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank8" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="20465" money="0" sharing="0" hasTail="0" display_order="11">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Caveat" size="20" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank6" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="17688" money="0" sharing="0" hasTail="0" display_order="12">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Noto" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="ellipse" x="-90" y="-45" w="180" h="90" rotate="0" type="ELLIPSE" enable="Y" is_premium="N" aid="3425" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="roundRect" x="-90" y="-45" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="Y" is_premium="N" aid="3426" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="rect" x="-90" y="-45" w="180" h="90" rotate="0" type="RECTANGULAR" enable="Y" is_premium="N" aid="3427" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="cloud" x="-90" y="-45" w="180" h="90" rotate="0" type="CLOUD" enable="Y" is_premium="N" aid="3428" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="heart" x="-90" y="-45" w="180" h="90" rotate="0" type="HEART" enable="Y" is_premium="N" aid="3429" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="boom" x="-130" y="-65" w="260" h="130" rotate="0" type="BOOM" enable="Y" is_premium="N" aid="3430" money="0" sharing="0" hasTail="0" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="0" taily="0"/>
-	<text rgb="0" font="Coming Soon" size="24" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blanktail" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANKTAIL" enable="Y" is_premium="N" aid="9152" money="0" sharing="0" hasTail="1" display_order="20">
-	<body rgb="0x000000" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Lilita One" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="ellipse2" x="-90" y="-45" w="180" h="90" rotate="0" type="ELLIPSE" enable="Y" is_premium="N" money="0" sharing="0" hasTail="0" colorStyle="2" aid="17295" display_order="20">
-	<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="roundRect2" x="-90" y="-45" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="Y" is_premium="N" money="0" sharing="0" hasTail="0" colorStyle="2" aid="17296" display_order="20">
-	<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="rect2" x="-90" y="-45" w="180" h="90" rotate="0" type="RECTANGULAR" enable="Y" is_premium="N" money="0" sharing="0" hasTail="0" colorStyle="2" aid="17297" display_order="20">
-	<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="cloud2" x="-90" y="-45" w="180" h="90" rotate="0" type="CLOUD" enable="Y" is_premium="N" money="0" sharing="0" hasTail="0" colorStyle="2" aid="17298" display_order="20">
-	<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="heart2" x="-90" y="-45" w="180" h="90" rotate="0" type="HEART" enable="Y" is_premium="N" money="0" sharing="0" hasTail="0" colorStyle="2" aid="17299" display_order="20">
-	<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65"/>
-	<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank2" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17684" money="0" sharing="0" hasTail="0" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Wood Stamp" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank4" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17686" money="0" sharing="0" hasTail="0" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Honey Script" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank5" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17687" money="0" sharing="0" hasTail="0" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="I hate Comic Sans" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank9" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="23104" money="0" sharing="0" hasTail="0" display_order="20">
-	<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65"/>
-	<text rgb="0" font="Claire Hand" size="20" align="center" bold="true" italic="false">Double-click to input text</text>
-</bubble>
-	<bubble id="blank10" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="23105" money="0" sharing="0" hasTail="0" display_order="20">
-	<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF"/>
-	<text rgb="0" font="Blambot Casual" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
-</bubble>
+	<bubble id="Accidental Presidency" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N"
+		aid="30362" money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Accidental Presidency" size="20" align="center" bold="false" italic="false">Double-click to
+			input text</text>
+	</bubble>
+	<bubble id="Arial" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Arial" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
+	</bubble>
+	<bubble id="Bangers" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Bangers" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
+	</bubble>
+	<bubble id="Berkshire" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Berkshire" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="BlackoutMidnight" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="BlackoutMidnight" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="BlackoutSunrise" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="BlackoutSunrise" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Blambot Casual" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N"
+		aid="30362" money="0" sharing="0" hasTail="1" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Blambot Casual" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="BodoniXT" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="BodoniXT" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
+	</bubble>
+	<bubble id="Brawler" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Brawler" size="20" align="center" bold="false" italic="false">Double-click to input text</text>
+	</bubble>
+	<bubble id="Budmo Jiggler" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N"
+		aid="30362" money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Budmo Jiggler" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Budmo Jigglish" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N"
+		aid="30362" money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Budmo Jigglish" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Caveat" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Caveat" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Claire Hand" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="1" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Claire Hand" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Comic Book" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Comic Book" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Coming Soon" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="1" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Coming Soon" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Creepster" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Creepster" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Existence Light" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Existence Light" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Glegoo" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Glegoo" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="HeartlandRegular" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="HeartlandRegular" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Honey Script" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Honey Script" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="I hate Comic Sans" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="I hate Comic Sans" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Impact Label" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Impact Label" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Junction" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Junction" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="LeagueGothic" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="LeagueGothic" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="LeagueSpartan" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="LeagueSpartan" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Lato" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Lato" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Lilita One" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Lilita One" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="loco tv" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="loco tv" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Mail Ray Stuff" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Mail Ray Stuff" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Noto" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Noto" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="OstrichSansMedium" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="OstrichSansMedium" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Oswald" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Oswald" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Poiret One" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Poiret One" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Prociono" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Prociono" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Raleway" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Raleway" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Shanghai" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Shanghai" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Telex Regular" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Telex Regular" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Tokyo Robot Intl BB" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Tokyo Robot Intl BB" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Walter" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Walter" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="Wood Stamp" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="Y" is_premium="N" aid="30362"
+		money="0" sharing="0" hasTail="0" display_order="1">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Wood Stamp" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="ellipse" x="-90" y="-45" w="180" h="90" rotate="0" type="ELLIPSE" enable="Y" is_premium="N" aid="3425"
+		money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="roundRect" x="-90" y="-45" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="Y" is_premium="N"
+		aid="3426" money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="rect" x="-90" y="-45" w="180" h="90" rotate="0" type="RECTANGULAR" enable="Y" is_premium="N" aid="3427"
+		money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="cloud" x="-90" y="-45" w="180" h="90" rotate="0" type="CLOUD" enable="Y" is_premium="N" aid="3428"
+		money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="heart" x="-90" y="-45" w="180" h="90" rotate="0" type="HEART" enable="Y" is_premium="N" aid="3429"
+		money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="boom" x="-130" y="-65" w="260" h="130" rotate="0" type="BOOM" enable="Y" is_premium="N" aid="3430"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="0" taily="0" />
+		<text rgb="0" font="Coming Soon" size="24" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blanktail" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANKTAIL" enable="Y" is_premium="N" aid="9152"
+		money="0" sharing="0" hasTail="1" display_order="20">
+		<body rgb="0x000000" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Lilita One" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="ellipse2" x="-90" y="-45" w="180" h="90" rotate="0" type="ELLIPSE" enable="Y" is_premium="N" money="0"
+		sharing="0" hasTail="0" colorStyle="2" aid="17295" display_order="20">
+		<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="roundRect2" x="-90" y="-45" w="180" h="90" rotate="0" type="ROUNDRECTANGULAR" enable="Y" is_premium="N"
+		money="0" sharing="0" hasTail="0" colorStyle="2" aid="17296" display_order="20">
+		<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="rect2" x="-90" y="-45" w="180" h="90" rotate="0" type="RECTANGULAR" enable="Y" is_premium="N" money="0"
+		sharing="0" hasTail="0" colorStyle="2" aid="17297" display_order="20">
+		<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="cloud2" x="-90" y="-45" w="180" h="90" rotate="0" type="CLOUD" enable="Y" is_premium="N" money="0"
+		sharing="0" hasTail="0" colorStyle="2" aid="17298" display_order="20">
+		<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="heart2" x="-90" y="-45" w="180" h="90" rotate="0" type="HEART" enable="Y" is_premium="N" money="0"
+		sharing="0" hasTail="0" colorStyle="2" aid="17299" display_order="20">
+		<body rgb="0xFFFFFF" shadow="0" linergb="0x666666" tailx="90" taily="65" />
+		<text rgb="0" font="Coming Soon" size="14" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blank2" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17684"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Wood Stamp" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blank4" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17686"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Honey Script" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blank5" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="17687"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="I hate Comic Sans" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blank9" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="23104"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body rgb="0xFFFFFF" linergb="0" tailx="90" taily="65" />
+		<text rgb="0" font="Claire Hand" size="20" align="center" bold="true" italic="false">Double-click to input
+			text</text>
+	</bubble>
+	<bubble id="blank10" x="-90" y="-45" w="180" h="90" rotate="0" type="BLANK" enable="N" is_premium="N" aid="23105"
+		money="0" sharing="0" hasTail="0" display_order="20">
+		<body taily="65" tailx="90" linergb="0" rgb="0xFFFFFF" />
+		<text rgb="0" font="Blambot Casual" size="20" align="center" bold="false" italic="false">Double-click to input
+			text</text>
+	</bubble>
 	<effect id="ncc_jp_sakura.swf" type="ANIME" resize="false" move="false" name="Sakura" enable="Y" is_premium="N" aid="23194" money="0" sharing="0" display_order="0"/>
 	<effect id="ncc_sci002fx.swf" type="ANIME" resize="false" move="false" name="Snow storm" enable="Y" is_premium="N" aid="23186" money="0" sharing="0" display_order="0"/>
 	<effect id="ncc_sci003fx.swf" type="ANIME" resize="false" move="false" name="Screenviewer" enable="Y" is_premium="N" aid="23187" money="0" sharing="0" display_order="0"/>
