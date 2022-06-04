@@ -1,0 +1,42 @@
+/***
+this css has the create page stuff
+***/
+
+/**
+main
+**/
+main {
+	padding: 20px 40px;
+	text-align: center;
+}
+
+
+/**
+theme
+**/
+.theme {
+	/* style */
+	background: #353535;
+	border-radius: 4px;
+	transition: .15s ease;
+	/* layout */
+	display: inline-table;
+	margin: 5px;	
+	padding: 3px;
+	padding-bottom: 6px;
+}
+.theme:hover { background: #454545 }
+.theme img {
+	border-radius: 4px;
+	margin-bottom: 6px;
+	display: block;
+}
+.theme:hover>a,
+.theme:hover>a:visited {
+	color: var(--primary);
+}
+.theme>a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0;
+}

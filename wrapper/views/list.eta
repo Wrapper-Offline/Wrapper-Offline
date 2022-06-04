@@ -5,7 +5,6 @@
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
 		<title>Video List</title>
 		<meta name="description" content="Wrapper: Offline's Video List"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/list.css">
 		<script src="/pages/js/jquery.js"></script>

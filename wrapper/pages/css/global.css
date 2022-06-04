@@ -2,6 +2,8 @@
 this css has the general header/footer layout stuff
 ***/
 
+@import url("./modern-normalize.css");
+
 :root {
 	--primary: #d85e27;
 	--transition: .15s ease;

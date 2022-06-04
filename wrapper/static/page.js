@@ -40,7 +40,7 @@ module.exports = async function (req, res, url) {
 	let extra, filename;
 	switch (url.pathname) {
 		case "/cc": {
-			filename = "char";
+			filename = "app/char";
 			extra = {
 				title: "Character Creator",
 				attrs: {
@@ -78,7 +78,7 @@ module.exports = async function (req, res, url) {
 			};
 			break;
 		} case "/cc_browser": {
-			filename = "char";
+			filename = "app/char";
 			extra = {
 				title: "Character Browser",
 				attrs: {
@@ -116,7 +116,7 @@ module.exports = async function (req, res, url) {
 			};
 			break;
 		} case "/go_full": {
-			filename = "studio";
+			filename = "app/studio";
 			extra = {
 				title: "Video Editor",
 				attrs: {
@@ -149,7 +149,7 @@ module.exports = async function (req, res, url) {
 			};
 			break;
 		} case "/player": {
-			filename = "player";
+			filename = "app/player";
 			extra = {
 				title: "Video Player",
 				attrs: {
@@ -170,8 +170,10 @@ module.exports = async function (req, res, url) {
 		} default: {
 			filename = url.pathname + ".eta";
 			extra = {};
-			if (fs.existsSync(path.join(__dirname, "../views", filename))) break;
-			else return;
+			if (!filename.startsWith("/app/") &&
+			fs.existsSync(path.join(__dirname, "../views", filename)))
+				break;
+			return;
 		};
 	}
 	// add the query to the flashvars
