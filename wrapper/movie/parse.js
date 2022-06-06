@@ -206,6 +206,7 @@ module.exports =  {
 											urlF = 'char';
 											fileF = 'prop';
 											break;
+										case "wear":
 										case 'prop':
 											fileF = urlF = 'prop';
 											break;
@@ -215,6 +216,9 @@ module.exports =  {
 
 									file = elem3.childNamed('file');
 									const slicesP = file.val.split('.');
+
+									if (slicesP[0] == "ugc") continue;
+
 									slicesP.pop(), slicesP.splice(1, 0, urlF);
 									const urlP = `${store}/${slicesP.join('/')}.swf`;
 
