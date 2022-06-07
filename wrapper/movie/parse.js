@@ -202,7 +202,6 @@ module.exports =  {
 									var urlF, fileF;
 									switch (elem3.name) {
 										case 'head':
-											if (themeId == "ugc") continue;
 											urlF = 'char';
 											fileF = 'prop';
 											break;
