@@ -464,7 +464,7 @@ module.exports = async function (req, res, url) {
 				title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
 				duration: 1e3 * duration,
 				ext: "mp3",
-				tId: "ugc"
+				themeId: "ugc"
 			}
 			const id = asset.save(buffer, meta);
 			res.end(`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`)

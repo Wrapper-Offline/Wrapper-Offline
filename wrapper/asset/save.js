@@ -40,7 +40,7 @@ module.exports = async function (req, res, url) {
 				subtype: req.body.subtype,
 				title: req.body.name || filename,
 				ext: ext,
-				tId: "ugc"
+				themeId: "ugc"
 			};
 			let aId;
 			switch (req.body.type) {
@@ -55,24 +55,25 @@ module.exports = async function (req, res, url) {
 						});
 					});
 					break;
+				} case "prop": {
+					let p = req.body.ptype;
+					// verify the prop type
+					if (p != "placeable" &&
+					p != "wearable" &&
+					p != "holdable")
+						p = "placeable";
+
+					meta.ptype = p;
 				} default: {
 					aId = asset.saveStream(stream, meta);
 					break;
 				}
 			}
-			//fs.unlinkSync(path);
+
+			meta.id = meta.enc_asset_id = meta.file = `${aId}.${ext}`;
 			res.end(JSON.stringify({
 				status: "ok", 
-				data: {
-					type: meta.type,
-					subtype: meta.subtype,
-					id: `${aId}.${ext}`,
-					enc_asset_id: `${aId}.${ext}`,
-					file: `${aId}.${ext}`,
-					duration: meta.duration,
-					title: meta.title,
-					tags: ""
-				}
+				data: meta
 			}));
 			return true;
 		}

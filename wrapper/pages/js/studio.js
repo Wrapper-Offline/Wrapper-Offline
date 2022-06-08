@@ -164,13 +164,30 @@ class ImporterFile {
 		this.initialize();
 	}
 	initialize() {
-		this.el.find("[type]").on("click", event => {
+		this.el.find("[type]").on("click", async event => {
 			const el = $(event.target);
 			const type = el.attr("type");
-			const t = this.typeFickser(type);
+			let t = this.typeFickser(type);
 
-			// get file name
-			let name = el.parents(".importer_asset").find(".asset_name").text();
+			if (t.type == "prop") {
+				// wait for the prop type to be selected
+				await new Promise((resolve, reject) => {
+					this.el.find(".import_as").html(`
+						<a href='#' ptype='holdable'>Handheld</a>
+						<a href='#' ptype='wearable'>Headgear</a>
+						<a href='#' ptype='placeable'>Other Prop</a>
+						<a href="#" action="cancel">Close</a>
+					`.trim());
+					this.el.on("click", "[ptype]", event => {
+						const el = $(event.target);
+						t.ptype = el.attr("ptype");
+						resolve();
+					});
+				});
+			}
+
+			// get the title
+			let name = this.el.find(".asset_name").text();
 			this.upload(name, t);
 		});
 		this.el.on("click", "[action]", event => {
@@ -212,6 +229,7 @@ class ImporterFile {
 		b.append("name", name)
 		b.append("type", type.type);
 		b.append("subtype", type.subtype);
+		b.append("ptype", type.ptype || "");
 		$.ajax({
 			url: "/api/asset/upload",
 			method: "POST",
@@ -236,7 +254,7 @@ class ImporterFile {
 						this.el.find(".import_as").html(`
 							<a href='#' action='add-to-scene'>Add to scene</a>
 							<a href="#" action="cancel">Close</a>
-						`);
+						`.trim());
 						return;
 					}
 				} else alert("Error importing asset.");

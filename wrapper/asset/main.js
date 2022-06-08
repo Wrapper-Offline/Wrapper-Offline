@@ -58,7 +58,7 @@ module.exports = {
 	 * Looks for a match in the _ASSETS folder.
 	 * If there's no match found, it returns null.
 	 * @param {string} aId 
-	 * @returns {Buffer | null}
+	 * @returns {string | null}
 	 */
 	exists(aId) { // look for match in folder
 		const match = fs.readdirSync(folder)
@@ -99,7 +99,7 @@ module.exports = {
 				if (v.subtype == "video") {
 					xml = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
 				} else {
-					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/assets/${v.id}"/>`;
+					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" ${v.ptype}="1" facing="left" width="0" height="0" asset_url="/assets/${v.id}"/>`;
 				}
 				break;
 			} case "sound": {
@@ -113,52 +113,48 @@ module.exports = {
 	/**
 	 * Saves the asset and its metadata.
 	 * @param {Buffer} buf 
-	 * @param {object} param1 
+	 * @param {object} meta 
 	 * @returns {string}
 	 */
-	save(buf, { type, subtype, title, duration, ext, tId }) {
+	save(buf, meta) {
 		// save asset info
 		const aId = fUtil.generateId();
 		const db = DB.get();
-		db.assets.unshift({ // base info, can be modified by the user later
-			id: `${aId}.${ext}`,
+		let newMeta = {
+			id: `${aId}.${meta.ext}`,
 			enc_asset_id: aId,
-			themeId: tId,
-			type: type,
-			subtype: subtype,
-			title: title,
-			tags: "",
-			duration: duration
-		});
+			tags: ""
+		};
+		delete meta.ext;
+		Object.assign(newMeta, meta);
+		db.assets.unshift(newMeta);
 		DB.save(db);
 		// save the file
-		fs.writeFileSync(path.join(folder, `${aId}.${ext}`), buf);
+		fs.writeFileSync(path.join(folder, newMeta.id), buf);
 		return aId;
 	},
 
 	/**
 	 * Saves the asset and its metadata.
 	 * @param {fs.ReadStream} readStream 
-	 * @param {object} param1 
+	 * @param {object} meta 
 	 * @returns {string}
 	 */
-	saveStream(readStream, { type, subtype, title, duration, ext, tId }) {
+	saveStream(readStream, meta) {
 		// save asset info
 		const aId = fUtil.generateId();
 		const db = DB.get();
-		db.assets.unshift({ // base info, can be modified by the user later
-			id: `${aId}.${ext}`,
+		let newMeta = {
+			id: `${aId}.${meta.ext}`,
 			enc_asset_id: aId,
-			themeId: tId,
-			type: type,
-			subtype: subtype,
-			title: title,
-			tags: "",
-			duration: duration
-		});
+			tags: ""
+		};
+		delete meta.ext;
+		Object.assign(newMeta, meta);
+		db.assets.unshift(newMeta);
 		DB.save(db);
 		// save the file
-		let writeStream = fs.createWriteStream(path.join(folder, `${aId}.${ext}`));
+		let writeStream = fs.createWriteStream(path.join(folder, newMeta.id));
 		readStream.resume();
 		readStream.pipe(writeStream);
 		return aId;

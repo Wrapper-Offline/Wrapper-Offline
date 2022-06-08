@@ -106,6 +106,7 @@ module.exports = function () {
 				// log every request
 				console.log(req.method, parsedUrl.path);
 			} catch (x) {
+				console.error(x);
 				res.statusCode = 404;
 				res.end();
 			}

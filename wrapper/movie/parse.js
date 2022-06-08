@@ -90,28 +90,24 @@ module.exports =  {
 			pieces.splice(1, 0, tag);
 
 			const filename = pieces.join(".");
-			switch (themeId) {
-				case "ugc": {
-					const id = pieces[2];
-					try {
-						const buffer = asset.load(id);
+			if (themeId == "ugc") {
+				const id = pieces[2];
+				try {
+					const buffer = asset.load(id);
 
-						// add asset meta
-						ugc += asset.meta2Xml(asset.meta(id));
-						// and add the file
-						fUtil.addToZip(zip, filename, buffer);
-					} catch (e) {
-						console.error(`Warning: Could not find asset ${id}, this may cause the movie to not load.`);
-						return;
-					}
-					break;
-				} default: {
-					const filepath = `${store}/${pieces.join("/")}`;
-
-					// add the file to the zip
-					fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
-					break;
+					// add asset meta
+					ugc += asset.meta2Xml(asset.meta(id));
+					// and add the file
+					fUtil.addToZip(zip, filename, buffer);
+				} catch (e) {
+					console.error(`WARNING: Couldn't find asset ${id}.`);
+					return;
 				}
+			} else {
+				const filepath = `${store}/${pieces.join("/")}`;
+
+				// add the file to the zip
+				fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 			}
 
 			themes[themeId] = true;
@@ -151,7 +147,9 @@ module.exports =  {
 								
 								await basicParse(file, tag);
 								break;
-							} case "char": {
+							}
+							
+							case "char": {
 								let file = elem2.childNamed("action")?.val;
 								if (!file) continue;
 								const pieces = file.split(".");
@@ -161,37 +159,31 @@ module.exports =  {
 								pieces[pieces.length - 1] += "." + ext;
 								pieces.splice(1, 0, elem2.name);
 		
-								switch (themeId) {
-									case "ugc": {
-										// make a clone of the array so we can splice
-										const peces = pieces.slice(0);
-										// remove the action part of the array
-										peces.splice(3, 1);
+								if (themeId == "ugc") {
+									// remove the action from the array
+									pieces.splice(3, 1);
 
-										const id = pieces[2];
-										try {
-											const buffer = await char.load(id);
-											const filename = peces.join(".");
-
-											ugc += asset.meta2Xml({
-												// i can't just select the character data because of stock chars
-												id: id,
-												type: "char",
-												themeId: char.getTheme(buffer)
-											});
-											fUtil.addToZip(zip, filename + ".xml", buffer);
-										} catch (e) {
-											console.error(`Could not find character ${id}, continuing video parse.`);
-											continue;
-										}
-										break;
-									} default: {
-										const filepath = `${store}/${pieces.join("/")}`
+									const id = pieces[2];
+									try {
+										const buffer = await char.load(id);
 										const filename = pieces.join(".");
 
-										fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
-										break;
+										ugc += asset.meta2Xml({
+											// i can't just select the character data because of stock chars
+											id: id,
+											type: "char",
+											themeId: char.getTheme(buffer)
+										});
+										fUtil.addToZip(zip, filename + ".xml", buffer);
+									} catch (e) {
+										console.error(`WARNING: Couldn't find asset ${id}.`);
+										continue;
 									}
+								} else {
+									const filepath = `${store}/${pieces.join("/")}`
+									const filename = pieces.join(".");
+
+									fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 								}
 
 								// add props and heads
@@ -199,7 +191,7 @@ module.exports =  {
 									const elem3 = elem2.children[e3I];
 									if (!elem3.children) continue;
 
-									var urlF, fileF;
+									let urlF, fileF;
 									switch (elem3.name) {
 										case 'head':
 											urlF = 'char';
@@ -213,17 +205,21 @@ module.exports =  {
 											continue;
 									}
 
-									file = elem3.childNamed('file');
-									const slicesP = file.val.split('.');
+									file = elem3.childNamed("file");
+									const slicesP = file.val.split(".");
 
+									// 
 									if (slicesP[0] == "ugc") continue;
 
 									slicesP.pop(), slicesP.splice(1, 0, urlF);
-									const urlP = `${store}/${slicesP.join('/')}.swf`;
+									const urlP = `${store}/${slicesP.join("/")}.swf`;
 
 									slicesP.splice(1, 1, fileF);
-									const fileP = `${slicesP.join('.')}.swf`;
+									const fileP = `${slicesP.join(".")}.swf`;
 									fUtil.addToZip(zip, fileP, fs.readFileSync(urlP));
+
+
+									themes[slicesP[0]] = true;
 								}
 
 								themes[themeId] = true;
