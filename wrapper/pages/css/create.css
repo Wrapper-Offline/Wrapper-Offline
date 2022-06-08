@@ -16,7 +16,7 @@ theme
 **/
 .theme {
 	/* style */
-	background: #353535;
+	background: #ddd;
 	border-radius: 4px;
 	transition: .15s ease;
 	/* layout */
@@ -25,7 +25,8 @@ theme
 	padding: 3px;
 	padding-bottom: 6px;
 }
-.theme:hover { background: #454545 }
+.theme:hover { opacity: 0.8; }
+html.dark .theme { background: #353535 }
 .theme img {
 	border-radius: 4px;
 	margin-bottom: 6px;
@@ -36,7 +37,8 @@ theme
 	color: var(--primary);
 }
 .theme>a {
-	color: #fff;
+	color: #474747;
 	text-decoration: none;
 	margin: 0;
 }
+html.dark .theme>a { color: #eee }

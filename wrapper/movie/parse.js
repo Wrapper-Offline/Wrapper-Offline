@@ -180,51 +180,40 @@ module.exports =  {
 										continue;
 									}
 								} else {
-									const filepath = `${store}/${pieces.join("/")}`
+									const filepath = `${store}/${pieces.join("/")}`;
 									const filename = pieces.join(".");
 
 									fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 								}
 
-								// add props and heads
 								for (const e3I in elem2.children) {
 									const elem3 = elem2.children[e3I];
 									if (!elem3.children) continue;
 
-									let urlF, fileF;
-									switch (elem3.name) {
-										case 'head':
-											urlF = 'char';
-											fileF = 'prop';
-											break;
-										case "wear":
-										case 'prop':
-											fileF = urlF = 'prop';
-											break;
-										default:
-											continue;
+									// add props and head stuff
+									file = elem3.childNamed("file")?.val;
+									if (!file) continue;
+									const pieces2 = file.split(".");
+
+									// headgears and handhelds
+									if (elem3.name != "head") {
+										await basicParse(file, "prop");
+									} else { // heads
+										pieces2.pop(), pieces2.splice(1, 0, "char");
+										const filepath = `${store}/${pieces2.join("/")}.swf`;
+
+										pieces2.splice(1, 1, "prop");
+										const filename = `${pieces2.join(".")}.swf`;
+										fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 									}
 
-									file = elem3.childNamed("file");
-									const slicesP = file.val.split(".");
-
-									// 
-									if (slicesP[0] == "ugc") continue;
-
-									slicesP.pop(), slicesP.splice(1, 0, urlF);
-									const urlP = `${store}/${slicesP.join("/")}.swf`;
-
-									slicesP.splice(1, 1, fileF);
-									const fileP = `${slicesP.join(".")}.swf`;
-									fUtil.addToZip(zip, fileP, fs.readFileSync(urlP));
-
-
-									themes[slicesP[0]] = true;
+									themes[pieces2[0]] = true;
 								}
 
 								themes[themeId] = true;
 								break;
 							}
+
 							case 'bubbleAsset': {
 								const bubble = elem2.childNamed('bubble');
 								const text = bubble.childNamed('text');
