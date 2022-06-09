@@ -37,8 +37,13 @@ async function listAssets(data) {
 			break;
 		} default: {
 			files = Asset.list(data);
-			xml = `${header}<ugc more="0">${
-				files.map(v => Asset.meta2Xml(v)).join("")}</ugc>`;
+			xml = JSON.stringify({
+				status: "ok",
+				data: {
+					xml: `${header}<ugc more="0">${
+						files.map(v => Asset.meta2Xml(v)).join("")}</ugc>`
+				}
+			});
 			break;
 		}
 	}
@@ -58,33 +63,23 @@ module.exports = async function (req, res, url) {
 		case "/api_v2/assets/team":
 		case "/api_v2/assets/shared":
 		case "/api_v2/assets/imported": {
-			if (!req.body.data.type) {
-				res.statusCode = 400;
-				res.end();
-				return true;
-			}
+			body = req.body.data;
 
 			res.setHeader("Content-Type", "application/json");
-			res.end(JSON.stringify({
-				status: "ok",
-				data: { xml: await listAssets(req.body.data) }
-			}));
 			break;
 		} case "/goapi/getUserAssetsXml/": {
-			if (!req.body.type) {
-				res.statusCode = 400;
-				res.end();
-				return true;
-			}
-			
+			body = req.body;
+
 			res.setHeader("Content-Type", "text/html; charset=UTF-8");
-			res.end(await listAssets(req.body));
-			break;
-		} case "/api/asset/list": {			
-			res.setHeader("Content-Type", "application/json");
-			res.end(JSON.stringify(Asset.list()));
 			break;
 		} default: return;
-	}	
+	}
+	if (!body.type) {
+		res.statusCode = 400;
+		res.end();
+		return true;
+	}
+
+	res.end(await listAssets(body));
 	return true;
 }

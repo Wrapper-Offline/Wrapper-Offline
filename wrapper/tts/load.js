@@ -25,41 +25,22 @@ const processVoice = (voiceName, text) => {
 		switch (voice.source) {
 			case "polly": { // working, stops working after some time
 				// make sure it's under the char limit
-				const stext = text.substring(0, 249);
+				text = text.substring(0, 2999);
 
-				const body = JSON.stringify({
-					"Engine": "standard",
-					"Provider": voice.arg2,
-					"SpeechName": voice.desc,
-					"OutputFormat": "mp3",
-					"VoiceId": voice.arg,
-					"LanguageCode": voice.arg3,
-					"charsCount": stext.length,
-					"SampleRate": "24000",
-					"effect": "default",
-					"master_VC": "advanced",
-					"speed": "0",
-					"master_volume": "0",
-					"pitch": "0",
-					"Text": stext,
-					"TextType": "text",
-					"fileName": ""
-				});
+				const body = new URLSearchParams({
+					msg: text,
+					lang: voice.arg,
+					source: "ttsmp3"
+				}).toString();
 				var req = https.request(
 					{
-						hostname: "voicemaker.in",
+						hostname: "ttsmp3.com",
 						port: "443",
-						path: "/voice/standard",
+						path: "/makemp3_new.php",
 						method: "POST",
 						headers: {
-							"Accept": "application/json, text/javascript, */*; q=0.01",
 							"Content-Length": body.length,
-							"Content-Type": "application/json",
-							"Host": "voicemaker.in",
-							"Origin": "https://voicemaker.in",
-							"Referer": "https://voicemaker.in/",
-							"User-Agent": userAgent,
-							"X-Requested-With": "XMLHttpRequest"
+							"Content-type": "application/x-www-form-urlencoded"
 						}
 					},
 					(r) => {
@@ -67,11 +48,11 @@ const processVoice = (voiceName, text) => {
 						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
 							const json = JSON.parse(Buffer.concat(buffers).toString());
-							if (!json.success) rej(json.message);
+							if (json.Error != 0) rej(json.Text);
 
-							get(`https://voicemaker.in/${json.path}`)
+							get(json.URL)
 								.then(res)
-								.catch(err => rej(err));
+								.catch(rej);
 						});
 						r.on("error", rej);
 					}
@@ -447,21 +428,22 @@ const processVoice = (voiceName, text) => {
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/convertTextToSoundAsset/") return;
-	else if (!req.body.voice || !req.body.text) {
+	const { voice, text } = req.body;
+	if (!voice || !text) {
 		res.statusCode = 400;
 		res.end();
 		return true;
 	}
 
 	try {
-		const buffer = await processVoice(req.body.voice, req.body.text);
+		const buffer = await processVoice(voice, text);
 		mp3Duration(buffer, (e, duration) => {
 			if (e || !duration) throw new Error(e);
 
 			const meta = {
 				type: "sound",
 				subtype: "tts",
-				title: `[${voices[req.body.voice].desc}] ${req.body.text}`,
+				title: `[${voices[voice].desc}] ${text}`,
 				duration: 1e3 * duration,
 				ext: "mp3",
 				themeId: "ugc"
