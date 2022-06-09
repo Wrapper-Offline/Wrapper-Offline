@@ -25,10 +25,9 @@ module.exports = async function (req, res, url) {
 		res.end(zip);
 	} catch (err) {
 		if (process.env.NODE_ENV == "dev") throw err;
-		console.error("Error generating themelist ZIP: " + err);
+		console.error("Error generating themelist ZIP:", err);
 		res.statusCode = 500;
 		res.end("1");
 	}
-	// remember, this is in Array.prototype.findAsync()!
 	return true;
 }

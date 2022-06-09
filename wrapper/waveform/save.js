@@ -13,13 +13,12 @@ const Wf = require("./main");
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/saveWaveform/") return;
-	else if (!req.body.waveform || !req.body.wfid) {
+	const { wfid: wfId, waveform } = req.body;
+	if (!waveform || !wfId) {
 		res.statusCode = 400;
 		res.end();
 		return true;
 	}
-	const waveform = Buffer.from(req.body.waveform);
-	const wfId = req.body.wfid;
 
 	Wf.save(waveform, wfId);
 	res.end("0");

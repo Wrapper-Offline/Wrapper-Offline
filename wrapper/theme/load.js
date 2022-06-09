@@ -17,21 +17,20 @@ const fUtil = require("../fileUtil");
  */
 module.exports = async function (req, res, url) {
 	if (req.method != "POST" || url.pathname != "/goapi/getTheme/") return;
-	else if (!req.body.themeId) {
+	const { themeId: tId } = req.body;
+	if (!req.body.themeId) {
 		res.statusCode = 400;
 		res.end();
 		return true;
 	}
-	const theme = req.body.themeId;
 
-	const xmlPath = path.join(folder, `${theme}.xml`);
+	const xmlPath = path.join(folder, `${tId}.xml`);
 	try {
 		const zip = await fUtil.zippy(xmlPath, "theme.xml");
 		res.setHeader("Content-Type", "application/zip");
 		res.end(zip);
 	} catch (err) {
-		if (process.env.NODE_ENV == "dev") throw err;
-		console.error("Error generating theme ZIP: " + err);
+		console.error("Error generating theme ZIP:", err);
 		res.statusCode = 500;
 		res.end("1");
 	}
