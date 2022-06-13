@@ -6,7 +6,5 @@
 		<a href="https://discord.gg/yhGAetN">Discord</a>
 	</nav>
 
-	<nav id="foot-right">
-		<a href="http://localhost:4664">Server Page</a>
-	</nav>
+	<nav id="foot-right"></nav>
 </footer>

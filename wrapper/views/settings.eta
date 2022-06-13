@@ -20,7 +20,6 @@
 					<h1 id="settings">Settings</h1>
 					<a class="selected" href="#" data-triggers="0">Features</a>
 					<a href="#" data-triggers="1">Appearance</a>
-					<a href="#" data-triggers="2">My Library</a>
 				</div>
 				<nav class="tab" style="display:block">
 					<h2>Features</h2>
@@ -30,25 +29,6 @@
 					<h2>Appearance</h2>
 					<p>Dark mode: <span id="darkmode" data-meth="localStorage"></span></p>
 				</nav>
-				<nav class="tab">
-					<h2>My Library</h2>
-					<table>
-						<thead>
-							<tr>
-								<td></td>
-								<td>Asset Title</td>
-								<td></td>
-								<td></td>
-							</tr>
-						</thead>
-						<tbody></tbody>
-						<tfoot>
-							<tr>
-								<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
-							</tr>
-						</tfoot>
-					</table>
-				</nav>
 			</nav>
 		</main>
 
@@ -56,89 +36,30 @@
 	</body>
 
 	<script>
+		const getSetting = (name) =>
+			localStorage.getItem(name) || $.cookie(name);
+
 		getSettingData();
 
-		let json;
-		var tbody = $("tbody");
-		var loadMore = $("#load_more");
-
-		let C = 0;
-		function loadRows() {
-			let c = C;
-			C += 69;
-			for (; c < C; c++) {
-				if (c > json.length - 1) {
-					loadMore.remove();
-					break;
-				}
-
-				const tbl = json[c];
-
-				tbody.append(
-					`<tr>
-						<td>
-							${(() => {
-									switch (tbl.type) {
-										case "sound":
-											return `<img src="/pages/img/importer/sound.png" alt="Sound"/>`;
-										case "bg":
-										case "prop":
-											return `<img src="/assets/${tbl.id}"/>`;
-										case "char":
-											return `<img src="/assets/${tbl.id}.png"/>`;
-									}
-							})()}
-						</td>
-						<td>
-							<div>${tbl.title}</div>
-							<div>${tbl.type} | ${tbl.subtype}</div>
-						</td>
-						<td></td>
-						<td></td>
-					</tr>`.trim()
-				);
-			}
-		}
-
-		loadMore.onclick = loadRows;
-		$.post("/api/asset/list", data => {
-			json = data;
-			loadRows();
-		});
 
 		// toggling
 		$("span").click(event => {
 			if (event.target.id == "darkmode")
 				toggleDarkMode();
-			else if (event.target["data-meth"] == "localStorage")
+			if (event.target["data-meth"] == "localStorage")
 				togLocStor(event.target.id);
 			else
 				togCookie(event.target.id);
 		});
 
-		function togLocStor(name) {
-			if (!localStorage.getItem(name))
-				localStorage.setItem(name, 1);
-			else
-				localStorage.removeItem(name);
-			getSettingData();
-		}
-		function togCookie(name) {
-			if ($.cookie(name) == 1)
-				$.cookie(name, 0);
-			else
-				$.cookie(name, 1);
-			getSettingData();
-		}
 		// add indicator
 		function getSettingData() {
 			const toggles = $("span");
-			console.log(toggles);
 
 			toggles.each(function (i) {
 				const elem = $(this);
 				const name = elem.attr("id");
-				if (localStorage.getItem(name)) {
+				if (getSetting(name)) {
 					elem.css("color", "green");
 					elem.html("On");
 				} else {
@@ -147,6 +68,20 @@
 				}
 			})
 			return true;
+		}
+		function togLocStor(name) {
+			if (getSetting(name))
+				localStorage.removeItem(name);
+			else
+				localStorage.setItem(name, 1);
+			getSettingData();
+		}
+		function togCookie(name) {
+			if (getSetting(name))
+				$.removeCookie(name);
+			else
+				$.cookie(name, 1);
+			getSettingData();
 		}
 	</script>
 </html>
