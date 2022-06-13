@@ -82,12 +82,12 @@ set WRAPRESET=y
 
 :: Reset _SAVED folder
 rd /q /s wrapper\_SAVED || set ERROR_DELSAVE=y
-md wrapper\_SAVED
 
 :: Reset _CACHE folder
 rd /q /s wrapper\_CACHÉ || set ERROR_DELCACHE=y
-md wrapper\_CACHÉ
-copy NUL "wrapper\_CACHÉ\_NO_REMÖVE"
+
+:: Reset imported assets
+rd /q /s wrapper\_ASSETS || set ERROR_DELIMPORT=y
 
 :: Reset checks folder
 rd /q /s utilities\checks || set ERROR_DELCHECKS=y
@@ -128,6 +128,12 @@ echo:>> utilities\config.bat
 echo :: Runs through all of the scripts code, while never launching or installing anything. Useful for development. Default: n>> utilities\config.bat
 echo set DRYRUN=n>> utilities\config.bat
 echo:>> utilities\config.bat
+echo :: auto update (what do you think it does, obvious)>> utilities\config.bat
+echo set AUTOUPDATE=y>> utilities\config.bat
+echo:>> utilities\config.bat
+echo :: discord rpc>> utilities\config.bat
+echo set RPC=n>> utilities\config.bat
+echo:>> utilities\config.bat
 
 :: Reset Chromium profile
 rd /q /s utilities\ungoogled-chromium\the_profile || set ERROR_DELCHROME=y
@@ -136,26 +142,6 @@ robocopy utilities\ungoogled-chromium\the_profile_initial utilities\ungoogled-ch
 
 :: Reset SilentCMD (unnecessary but might as well)
 del /q /s utilities\SilentCMD.exe.config || set ERROR_DELSILENTCMD=y
-
-:: Reset imported assets
-pushd server\store\3a981f5cb2739137\ || set ERROR_DELIMPORT=y & goto skipimportreset
-rd /q /s import || set ERROR_DELIMPORT=y & goto skipimportreset
-md import || set ERROR_DELIMPORT=y & goto skipimportreset
-pushd import
-echo ^<?xml version="1.0" encoding="utf-8"?^> >>theme.xml
-echo ^<theme id="import" name="Imported Assets" cc_theme_id="import"^> >>theme.xml
-echo ^<^^!--Sorry that there's no indenting, I couldn't get the import script to keep that.--^> >>theme.xml
-echo ^<^^!--Also, be sure to leave a blank line before ^<theme^>, otherwise the import script breaks.--^> >>theme.xml
-echo ^<char id="327068788" name="the benson apparition" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y"^> >>theme.xml
-echo ^<tags^>family,every,copy,of,wrapper,offline,is,_free,software,but,is,also,_cat:personalized^</tags^> >>theme.xml
-echo ^</char^> >>theme.xml
-echo:>>theme.xml
-echo ^</theme^> >>theme.xml
-popd
-utilities\7za.exe a "server\store\3a981f5cb2739137\import\import.zip" "server\store\3a981f5cb2739137\import\theme.xml" >nul || set ERROR_DELIMPORT=y & goto skipimportreset
-del /q /s utilities\import_these || set ERROR_DELIMPORT=y & goto skipimportreset
-md utilities\import_these || set ERROR_DELIMPORT=y & goto skipimportreset
-:skipimportreset
 
 
 echo Reset log:

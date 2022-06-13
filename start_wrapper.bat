@@ -12,29 +12,6 @@ title Wrapper: Offline v%WRAPPER_VER% [Initializing...]
 :: Stop commands from spamming stuff, cleans up the screen
 @echo off && cls
 
-:: check for updates
-
-pushd "%~dp0"
-if !AUTOUPDATE!==y ( 
-	pushd "%~dp0"
-	if exist .git (
-		echo Updating...
-		call utilities\PortableGit\bin\git.exe checkout main
-		call utilities\PortableGit\bin\git.exe fetch --all
-		call utilities\PortableGit\bin\git.exe reset --hard origin/main
-		PING -n 3 127.0.0.1>nul
-		cls
-	) else (
-		echo Git not found. Skipping update.
-		PING -n 3 127.0.0.1>nul
-		cls
-	)
-) else (
-	echo Auto-updating is off. Skipping update.
-	PING -n 3 127.0.0.1>nul
-	cls
-)
-
 :: Lets variables work or something idk im not a nerd
 SETLOCAL ENABLEDELAYEDEXPANSION
 
@@ -91,6 +68,28 @@ goto configcopy
 if not exist utilities\config.bat ( echo Something is horribly wrong. You may be in a read-only system/admin folder. & pause & exit )
 call utilities\config.bat
 :configavailable
+
+:: check for updates
+pushd "%~dp0"
+if !AUTOUPDATE!==y ( 
+	pushd "%~dp0"
+	if exist .git (
+		echo Updating...
+		call utilities\PortableGit\bin\git.exe checkout main
+		call utilities\PortableGit\bin\git.exe fetch --all
+		call utilities\PortableGit\bin\git.exe reset --hard origin/main
+		PING -n 3 127.0.0.1>nul
+		cls
+	) else (
+		echo Git not found. Skipping update.
+		PING -n 3 127.0.0.1>nul
+		cls
+	)
+) else (
+	echo Auto-updating is off. Skipping update.
+	PING -n 3 127.0.0.1>nul
+	cls
+)
 
 ::::::::::::::::::::::
 :: Starting Wrapper ::
