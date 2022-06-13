@@ -1,19 +1,21 @@
 {
-	"GET": {
+	"ALL": {
 		"/index.html": {
 			"headers": {
-				"Location": "list"
+				"Location": "/list"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
-		"/$": {
+		"^/$": {
 			"headers": {
-				"Location": "list"
+				"Location": "/list"
 			},
 			"statusCode": 302,
 			"content": ""
-		},
+		}
+	},
+	"GET": {
 		"/goapi/getAssetTags": {
 			"headers": {
 				"Content-Type": "application/json"
@@ -22,7 +24,7 @@
 		},
 		"/account/logo": {
 			"headers": {
-				"Location": "/pages/html/settings.html"
+				"Location": "/settings"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -39,12 +41,12 @@
 		"char_default.png": {
 			"content": ""
 		},
-		"pages/css/(.*)": {
+		"pages/css/(.*)(css|CSS)$": {
 			"headers": {
 				"Content-Type": "text/css; charset=UTF-8"
 			}
 		},
-		"pages/fonts/(.*)": {
+		"pages/fonts/(.*)(woff|WOFF)$": {
 			"headers": {
 				"Content-Type": "application/font-woff; charset=UTF-8"
 			}
@@ -64,7 +66,7 @@
 				"Content-Type": "image/svg+xml; charset=UTF-8"
 			}
 		},
-		"pages/js/(.*)": {
+		"pages/js/(.*)(js|JS)$": {
 			"headers": {
 				"Content-Type": "text/javascript; charset=UTF-8"
 			}

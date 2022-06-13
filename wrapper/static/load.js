@@ -2,11 +2,12 @@ const stuff = require('./info');
 const fs = require('fs');
 
 module.exports = async function (req, res, url) {
-	var methodLinks = stuff[req.method];
-	for (let linkIndex in methodLinks) {
+	const methodLinks = stuff[req.method];
+	const combLinks = Object.assign(stuff.ALL, methodLinks);
+	for (let linkIndex in combLinks) {
 		var regex = new RegExp(linkIndex);
-		if (regex.test(url.path)) {
-			var t = methodLinks[linkIndex];
+		if (url.path.match(regex)) {
+			var t = combLinks[linkIndex];
 			var link = t.regexLink ? url.path.replace(regex, t.regexLink) : t.link || url.path;
 			var headers = t.headers;
 			var path = `./${link}`;

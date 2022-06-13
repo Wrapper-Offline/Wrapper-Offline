@@ -5,13 +5,14 @@ const studio = $("#obj");
 /**
  * studio functions
  */
-interactiveTutorial = { // hide interactive tutorial
+const tutorialReload = (new URLSearchParams(window.location.search)).get("tutorial");
+interactiveTutorial = {
 	neverDisplay: function() {
-		return true;
+		return tutorialReload ? false : true;
 	}
 };
 function studioLoaded(arg) { console.log(arg) }
-function exitStudio() { window.location = "/" }
+function exitStudio() { window.location = "/list" }
 
 /**
  * show and hide widgets

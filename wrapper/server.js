@@ -29,7 +29,8 @@ const mvd = require("./movie/delete");
 const mvl = require("./movie/load");
 const mvL = require("./movie/list");
 const mvm = require("./movie/meta");
-const mvr = require("./movie/repair");
+const mvr = require("./movie/redirect");
+const mvR = require("./movie/repair")
 const mvs = require("./movie/save");
 const mvt = require("./movie/thmb");
 const thl = require("./theme/load");
@@ -58,6 +59,7 @@ const functions = [
 	mvL,
 	mvm,
 	mvr,
+	mvR,
 	mvs,
 	mvt,
 	thl,

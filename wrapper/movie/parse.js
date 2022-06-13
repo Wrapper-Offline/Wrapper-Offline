@@ -224,11 +224,15 @@ module.exports =  {
 							}
 
 							case 'bubbleAsset': {
-								const bubble = elem2.childNamed('bubble');
-								const text = bubble.childNamed('text');
-								const font = `${name2Font(text.attr.font)}.swf`;
-								const fontSrc = `${source}/go/font/${font}`;
-								fUtil.addToZip(zip, font, fs.readFileSync(fontSrc));
+								const bubble = elem2.childNamed("bubble");
+								const text = bubble.childNamed("text");
+
+								// arial doesn't need to be added
+								if (text.attr.font == "Arial") continue;
+
+								const filename = `${name2Font(text.attr.font)}.swf`;
+								const filepath = `${source}/go/font/${filename}`;
+								fUtil.addToZip(zip, filename, fs.readFileSync(filepath));
 								break;
 							}
 						}
