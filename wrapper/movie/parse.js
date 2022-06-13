@@ -79,7 +79,7 @@ module.exports =  {
 		fUtil.addToZip(zip, "movie.xml", xmlBuffer);
 
 		// this is common in this file
-		async function basicParse(file, tag) {
+		async function basicParse(file, type, subtype) {
 			const pieces = file.split(".");
 			const themeId = pieces[0];
 
@@ -87,7 +87,7 @@ module.exports =  {
 			const ext = pieces.pop();
 			pieces[pieces.length - 1] += "." + ext;
 			// add the type to the filename
-			pieces.splice(1, 0, tag);
+			pieces.splice(1, 0, type);
 
 			const filename = pieces.join(".");
 			if (themeId == "ugc") {
@@ -99,6 +99,14 @@ module.exports =  {
 					ugc += asset.meta2Xml(asset.meta(id));
 					// and add the file
 					fUtil.addToZip(zip, filename, buffer);
+
+					// add video thumbnails
+					if (type == "prop" && subtype == "video") {
+						pieces[2] = pieces[2].slice(0, -3) + "png";
+						const filename = pieces.join(".")
+						const buffer = asset.load(pieces[2]);
+						fUtil.addToZip(zip, filename, buffer);
+					}
 				} catch (e) {
 					console.error(`WARNING: Couldn't find asset ${id}.`);
 					return;
@@ -145,7 +153,7 @@ module.exports =  {
 								const file = elem2.childNamed("file")?.val;
 								if (!file) continue;
 								
-								await basicParse(file, tag);
+								await basicParse(file, tag, elem2.attr.subtype);
 								break;
 							}
 							
@@ -199,6 +207,7 @@ module.exports =  {
 									if (elem3.name != "head") {
 										await basicParse(file, "prop");
 									} else { // heads
+										if (pieces2[0] == "ugc") continue;
 										pieces2.pop(), pieces2.splice(1, 0, "char");
 										const filepath = `${store}/${pieces2.join("/")}.swf`;
 

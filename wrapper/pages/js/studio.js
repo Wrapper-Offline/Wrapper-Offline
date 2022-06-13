@@ -73,7 +73,7 @@ class AssetImporter {
 		this.initialize();
 	}
 	initialize() {
-		this.importer.find("#importer-files").on("change", event => {
+		this.importer.find("#importer-files").on("input", event => {
 			//uploads every file
 			var fileUpload = document.getElementById("importer-files");
 			for (var i = 0; i < fileUpload.files.length; i++) {
@@ -148,6 +148,25 @@ class AssetImporter {
 				`.trim()).appendTo(this.queue);
 				break;
 			}
+			case "mp4": {
+				validFileType = true;
+				el = $(`
+					<div class="importer_asset">
+						<div class="asset_metadata">
+							<img class="asset_preview" src="/pages/img/importer/video.png" />
+							<div>
+								<h4 contenteditable="true" class="asset_name">${file.name}</h4>
+								<p class="asset_subtype">${filesize(file.size)} | Video</p>
+							</div>
+						</div>
+						<div class="import_as">
+							<a href="#" type="video">Import</a>
+							<a href="#" action="cancel">Cancel</a>
+						</div>
+					</div>
+				`.trim()).appendTo(this.queue);
+				break;
+			}
 		}
 		if (!validFileType) {
 			console.error("Invalid file type!");
@@ -169,7 +188,7 @@ class ImporterFile {
 			const type = el.attr("type");
 			let t = this.typeFickser(type);
 
-			if (t.type == "prop") {
+			if (t.type == "prop" && t.subtype != "video") {
 				// wait for the prop type to be selected
 				await new Promise((resolve, reject) => {
 					this.el.find(".import_as").html(`
@@ -196,7 +215,7 @@ class ImporterFile {
 
 			switch (action) {
 				case "add-to-scene": {
-					studio[0].importerAddAsset(this.meta.type, this.meta.id);
+					studio[0].importerAddAsset(this.meta.type, this.meta.file);
 					break;
 				} case "cancel": {
 					this.el.fadeOut(() => this.el.remove());
@@ -211,6 +230,8 @@ class ImporterFile {
 			case "soundeffect":
 			case "voiceover": {
 				return { type: "sound", subtype: type };
+			} case "video": {
+				return { type: "prop", subtype: type };
 			} default: {
 				return { type: type, subtype: 0 };
 			}
@@ -240,16 +261,21 @@ class ImporterFile {
 		})
 			.done(d => {
 				if (d.status == "ok") {
-					this.meta = d.data;
+					this.id = d.data.file;
+
+					// why
+					const importType = type.subtype == "video" ? "video" : type.type;
+					const thumbUrl = `${window.location.origin}/assets/${d.data.file.slice(0, -3) + "png"}`;
+					d.data.thumbnail = thumbUrl;
 
 					// alert the studio
 					studio[0].importerStatus("done");
-					studio[0].importerUploadComplete(type.type, d.data.id, d.data);
+					studio[0].importerUploadComplete(importType, d.data.file, d.data);
 
-					// update html
+					// update html for images
 					if (type.subtype == 0) {
 						if (this.ext != "swf") 
-							this.el.find("img").attr("src", `/assets/${d.data.id}`);
+							this.el.find("img").attr("src", `/assets/${d.data.file}`);
 						// change the subtypes to an add to scene button
 						this.el.find(".import_as").html(`
 							<a href='#' action='add-to-scene'>Add to scene</a>
@@ -261,6 +287,6 @@ class ImporterFile {
 				// remove element
 				this.el.fadeOut(() => this.el.remove());
 			})
-			.catch(e => console.error("Import failed. Error: " + e))
+			.catch(e => console.error("Import failed. Error:", e))
 	}
 }

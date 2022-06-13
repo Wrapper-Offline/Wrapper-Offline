@@ -97,7 +97,7 @@ module.exports = {
 				break;
 			} case "prop": {
 				if (v.subtype == "video") {
-					xml = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" asset_url="/api_v2/assets/${v.file}"/>`;
+					xml = `<prop subtype="video" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" placeable="1" facing="left" width="${v.width}" height="${v.height}" asset_url="/assets/${v.id}" thumbnail_url="/assets/${v.id.slice(0, -3) + "png"}"/>`;
 				} else {
 					xml = `<prop subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" ${v.ptype}="1" facing="left" width="0" height="0" asset_url="/assets/${v.id}"/>`;
 				}
@@ -118,11 +118,10 @@ module.exports = {
 	 */
 	save(buf, meta) {
 		// save asset info
-		const aId = fUtil.generateId();
+		const aId = `${fUtil.generateId()}.${meta.ext}`;
 		const db = DB.get();
 		let newMeta = {
-			id: `${aId}.${meta.ext}`,
-			enc_asset_id: aId,
+			id: aId,
 			tags: ""
 		};
 		delete meta.ext;
@@ -130,7 +129,7 @@ module.exports = {
 		db.assets.unshift(newMeta);
 		DB.save(db);
 		// save the file
-		fs.writeFileSync(path.join(folder, newMeta.id), buf);
+		fs.writeFileSync(path.join(folder, aId), buf);
 		return aId;
 	},
 
@@ -142,11 +141,10 @@ module.exports = {
 	 */
 	saveStream(readStream, meta) {
 		// save asset info
-		const aId = fUtil.generateId();
+		const aId = `${fUtil.generateId()}.${meta.ext}`;
 		const db = DB.get();
 		let newMeta = {
-			id: `${aId}.${meta.ext}`,
-			enc_asset_id: aId,
+			id: aId,
 			tags: ""
 		};
 		delete meta.ext;
@@ -154,7 +152,7 @@ module.exports = {
 		db.assets.unshift(newMeta);
 		DB.save(db);
 		// save the file
-		let writeStream = fs.createWriteStream(path.join(folder, newMeta.id));
+		let writeStream = fs.createWriteStream(path.join(folder, aId));
 		readStream.resume();
 		readStream.pipe(writeStream);
 		return aId;

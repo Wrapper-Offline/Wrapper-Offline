@@ -14,10 +14,10 @@ const Asset = require("./main");
 module.exports = async function (req, res, url) {
 	switch (req.method) {
 		case "GET": {
-			const match = req.url.match(/\/assets\/([^/]+)$/);
+			const match = req.url.match(/\/(assets|goapi\/getAsset)\/([^/]+)$/);
 			if (!match) return;
 
-			const aId = match[1]; // get asset id
+			const aId = match[2]; // get asset id
 			const b = Asset.load(aId);
 			b ? (res.statusCode = 200, res.end(b)) :
 				(res.statusCode = 404, res.end());

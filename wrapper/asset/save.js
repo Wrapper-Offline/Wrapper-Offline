@@ -3,6 +3,11 @@
  * asset saving
  */
 // modules
+const ffmPath = require("@ffmpeg-installer/ffmpeg").path;
+const ffpPath = require("@ffprobe-installer/ffprobe").path;
+const ffmpeg = require("fluent-ffmpeg");
+ffmpeg.setFfmpegPath(ffmPath);
+ffmpeg.setFfprobePath(ffpPath);
 const fs = require("fs");
 const Lame = require("node-lame").Lame;
 const mp3Duration = require("mp3-duration");
@@ -43,34 +48,79 @@ module.exports = async function (req, res, url) {
 				themeId: "ugc"
 			};
 			let aId;
-			switch (req.body.type) {
+			switch (meta.type) {
 				case "sound": {
 					// get the sound duration
 					await new Promise((resolve, rej) => {
 						mp3Duration(path, async (e, duration) => {
-							if (e || !duration) return console.error("Error getting sound duration:", e);
+							if (e || !duration) rej("Error getting sound duration:", e);
 							meta.duration = 1e3 * duration;
 							aId = asset.saveStream(stream, meta);
 							resolve();
 						});
 					});
+					meta.downloadtype = "progressive";
 					break;
 				} case "prop": {
-					let p = req.body.ptype;
+					let { ptype } = req.body;
 					// verify the prop type
-					if (p != "placeable" &&
-					p != "wearable" &&
-					p != "holdable")
-						p = "placeable";
+					switch (ptype) {
+						case "placeable":
+						case "wearable":
+						case "holdable":
+							break;
+						default: ptype = "placeable";
+					}
 
-					meta.ptype = p;
+					if (meta.subtype == "video") {
+						meta.ext = "flv";
+						const oldPath = `${process.env.CACHÉ_FOLDER}/t.mp4`;
+						const newPath = `${process.env.CACHÉ_FOLDER}/t.flv`;
+						await new Promise((resolve, rej) => {
+							// save the temp files
+							const writeStream = fs.createWriteStream(oldPath);
+							stream.resume();
+							stream.pipe(writeStream);
+
+							// convert the video to an flv
+							ffmpeg(oldPath)
+								.ffprobe((e, data) => {
+									if (e) rej(e);
+									meta.width = data.streams[0].width;
+									meta.height = data.streams[0].height;
+
+									// convert the video to an flv
+									ffmpeg(oldPath)
+										.output(newPath)
+										.on("end", () => {
+											const buffer = fs.readFileSync(newPath);
+											aId = asset.save(buffer, meta);
+
+											// save the first frame
+											ffmpeg(oldPath)
+												.seek("0:00")
+												.output(`${process.env.ASSET_FOLDER}/${aId.slice(0, -3) + "png"}`)
+												.outputOptions("-frames", "1")
+												.on("end", () => resolve(aId))
+												.run();
+										})
+										.on("error", (e) => rej("Error converting video:", e))
+										.run();
+								});
+						});
+						fs.unlinkSync(oldPath);
+						fs.unlinkSync(newPath);
+						break;
+					}
+
+					meta.ptype = ptype;
 				} default: {
 					aId = asset.saveStream(stream, meta);
 					break;
 				}
 			}
 
-			meta.id = meta.enc_asset_id = meta.file = `${aId}.${ext}`;
+			meta.enc_asset_id = meta.file = aId;
 			res.end(JSON.stringify({
 				status: "ok", 
 				data: meta

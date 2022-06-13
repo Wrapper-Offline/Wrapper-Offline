@@ -64,6 +64,7 @@ module.exports = async function (req, res, url) {
 		case "/api_v2/assets/shared":
 		case "/api_v2/assets/imported": {
 			body = req.body.data;
+			if (body.type == "prop") body.subtype ||= 0;
 
 			res.setHeader("Content-Type", "application/json");
 			break;
