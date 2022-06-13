@@ -26,7 +26,7 @@ module.exports = class {
 	get() { this.refresh(); return this.json }
 	save(newData) {
 		try {
-			fs.writeFileSync(this.path, JSON.stringify(newData, null, "\t"));
+			fs.writeFileSync(this.path, JSON.stringify(newData, null, "\t"), { recursive: true });
 			return true;
 		} catch (err) {
 			console.error("Error saving DB:", err);
