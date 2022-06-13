@@ -8,8 +8,8 @@ ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
 ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 const { Readable } = require("stream");
 const fs = require("fs");
-const Lame = require("node-lame").Lame;
 const mp3Duration = require("mp3-duration");
+const sharp = require("sharp");
 // stuff
 const asset = require("./main");
 
@@ -59,6 +59,21 @@ module.exports = async function (req, res, url) {
 						});
 					});
 					meta.downloadtype = "progressive";
+					break;
+				} case "bg": {
+					await new Promise((resolve, rej) => {
+						let buffers = [];
+						stream.resume();
+						stream.on("data", b => buffers.push(b));
+						stream.on("end", async () => {
+							const buf = Buffer.concat(buffers);
+							const buffer = await sharp(buf)
+								.resize({ width: 550, height: 310 })
+								.toBuffer();
+							aId = asset.save(buffer, meta);
+							resolve();
+						});
+					});
 					break;
 				} case "prop": {
 					let { ptype } = req.body;

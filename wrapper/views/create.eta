@@ -29,6 +29,12 @@
 					Lil' Peepz
 				</a>
 			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('business', 'business')">
+					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
+					Business Friendly
+				</a>
+			</div>
 			<div class="theme">
 				<a href="#" onclick="redirect('retro')">
 					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
