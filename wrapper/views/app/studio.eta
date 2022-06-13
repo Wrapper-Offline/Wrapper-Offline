@@ -29,7 +29,7 @@
 					<label id="import-toggle" for="importer-files" class="button_big">UPLOAD FILES</label>
 					<h3 class="close-button" onclick="hideImporter()">✖</h3>
 					<form>
-						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.png,.jpg,.mp4" style="display:none" />
+						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 					</form>
 				</nav>
 				<div id="importer-queue"></div>

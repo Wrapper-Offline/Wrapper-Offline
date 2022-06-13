@@ -3,11 +3,10 @@
  * asset saving
  */
 // modules
-const ffmPath = require("@ffmpeg-installer/ffmpeg").path;
-const ffpPath = require("@ffprobe-installer/ffprobe").path;
 const ffmpeg = require("fluent-ffmpeg");
-ffmpeg.setFfmpegPath(ffmPath);
-ffmpeg.setFfprobePath(ffpPath);
+ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
+ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
+const { Readable } = require("stream");
 const fs = require("fs");
 const Lame = require("node-lame").Lame;
 const mp3Duration = require("mp3-duration");
@@ -127,55 +126,60 @@ module.exports = async function (req, res, url) {
 			}));
 			return true;
 		}
-		/*case "/goapi/saveSound/": { // sound recording/uploading through the lvm
-				let isRecord = false;
-				if (req.body.bytes) isRecord = true;
+		case "/goapi/saveSound/": { // sound recording/uploading through the lvm
+			isRecord = req.body.bytes ? true : false;
 
-				let buffer;
-				switch (isRecord) {
-					case true: {
-						buffer = Buffer.from(req.body.bytes, "base64");
-						break;
-					} default: {
-						const path = req.files.Filedata.path;
-						buffer = fs.readFileSync(path);
-						break;
-					}
-				}
-				
-				let meta = {
-					type: "sound",
-					subtype: req.body.subtype,
-					title: req.body.title,
-					ext: "mp3",
-					tId: "ugc"
-				};
-
-				const encoder = new Lame({
-					"output": "buffer",
-					"bitrate": 192
-				}).setBuffer(buffer);
-				// we're just going to guess it's not an mp3
-				encoder.encode()
-					.then(() => {
-						const buf = encoder.getBuffer();
-						mp3Duration(buf, (e, duration) => {
-							if (e || !duration) return;
-							Object.assign(meta, { duration: 1e3 * duration });
-							const id = asset.save(buf, meta);
-							res.end(
-								`0<response><asset><id>${id}.mp3</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${meta.subtype}</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}.mp3</file></asset></response>`
-							);
-						});
-					})
-					.catch(err => {
-						//if (process.env.NODE_ENV == "dev") throw err;
-						console.error("Error saving sound: " + err)
-						res.end(process.env.FAILURE_XML)
-					});
+			let oldStream, stream, ext;
+			if (isRecord) {
+				const buffer = Buffer.from(req.body.bytes, "base64");
+				oldStream = Readable.from(buffer);
+				ext = "ogg";
+			} else {
+				// read the file
+				const path = req.files.Filedata.filepath
+				oldStream = fs.createReadStream(path);
+				// get the extension
+				const origName = req.body.Filename;
+				const dotIn = origName.lastIndexOf(".");
+				ext = origName.substring(dotIn + 1);
+			}
 			
-			return true;
-		}*/
+			let meta = {
+				type: "sound",
+				subtype: req.body.subtype,
+				title: req.body.title,
+				ext: "mp3",
+				themeId: "ugc"
+			};
+			
+			if (ext !== "mp3") {
+				await new Promise((resolve, rej) => {
+					// convert the sound to an mp3
+					const command = ffmpeg(oldStream)
+						.inputFormat(ext)
+						.toFormat("mp3")
+						.on("error", (e) => rej("Error converting video:", e));
+					stream = command.pipe();
+					resolve();
+				});
+			} else stream = oldStream;
+
+			let buffers = [];
+			stream.resume();
+			stream.on("data", b => buffers.push(b));
+			stream.on("end", () => {
+				const buf = Buffer.concat(buffers);
+				mp3Duration(buf, (e, duration) => {
+					if (e || !duration) return;
+					meta.duration = 1e3 * duration;
+					const aId = asset.save(buf, meta);
+					res.end(
+						`0<response><asset><id>${aId}</id><enc_asset_id>${aId}</enc_asset_id><type>sound</type><subtype>${meta.subtype}</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${aId}</file></asset></response>`
+					);
+				});
+				return true;
+			});
+		}
 		default: return;
 	}
 }

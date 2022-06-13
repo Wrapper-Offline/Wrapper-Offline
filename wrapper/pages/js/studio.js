@@ -127,6 +127,7 @@ class AssetImporter {
 				break;
 			}
 			case "swf":
+			case "gif":
 			case "jpg":
 			case "png": {
 				validFileType = true;
