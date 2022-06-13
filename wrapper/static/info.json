@@ -97,6 +97,18 @@
 			},
 			"content": "{\"status\":\"ok\",\"data\":[]}"
 		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":{}}"
+		},
 		"/goapi/getLatestAssetId/": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"

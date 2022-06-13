@@ -12,7 +12,6 @@ interactiveTutorial = {
 	}
 };
 function studioLoaded(arg) { console.log(arg) }
-function exitStudio() { window.location = "/list" }
 
 /**
  * show and hide widgets

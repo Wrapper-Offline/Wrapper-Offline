@@ -10,16 +10,7 @@
             },
             "name": "Video List",
             "type": "url",
-            "url": "http://localhost:4343/pages/html/list.html"
-         }, {
-            "date_added": "13238064774933672",
-            "id": "6",
-            "meta_info": {
-               "last_visited_desktop": "13238064774933672"
-            },
-            "name": "Assets Server",
-            "type": "url",
-            "url": "https://localhost:4664/"
+            "url": "http://localhost:4343/list"
          } ],
          "date_added": "13238064742070672",
          "date_modified": "13238064774933672",
