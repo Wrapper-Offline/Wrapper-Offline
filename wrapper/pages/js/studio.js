@@ -188,9 +188,9 @@ class ImporterFile {
 		this.el.find("[type]").on("click", async event => {
 			const el = $(event.target);
 			const type = el.attr("type");
-			let t = this.typeFickser(type);
+			Object.assign(this, this.typeFickser(type));
 
-			if (t.type == "prop" && t.subtype != "video") {
+			if (this.type == "prop" && this.subtype != "video") {
 				// wait for the prop type to be selected
 				await new Promise((resolve, reject) => {
 					this.el.find(".import_as").html(`
@@ -201,7 +201,7 @@ class ImporterFile {
 					`.trim());
 					this.el.on("click", "[ptype]", event => {
 						const el = $(event.target);
-						t.ptype = el.attr("ptype");
+						this.ptype = el.attr("ptype");
 						resolve();
 					});
 				});
@@ -209,7 +209,7 @@ class ImporterFile {
 
 			// get the title
 			let name = this.el.find(".asset_name").text();
-			this.upload(name, t);
+			this.upload(name);
 		});
 		this.el.on("click", "[action]", event => {
 			const el = $(event.target);
@@ -217,7 +217,7 @@ class ImporterFile {
 
 			switch (action) {
 				case "add-to-scene": {
-					studio[0].importerAddAsset(this.meta.type, this.meta.file);
+					studio[0].importerAddAsset(this.type, this.id);
 					break;
 				} case "cancel": {
 					this.el.fadeOut(() => this.el.remove());
@@ -239,7 +239,7 @@ class ImporterFile {
 			}
 		}
 	}
-	upload(passedname, type) {
+	upload(passedname) {
 		let name = passedname;
 		if (name == "")
 			name = "unnamed" + Math.random().toString().substring(2, 8);
@@ -250,9 +250,9 @@ class ImporterFile {
 		let b = new FormData();
 		b.append("import", this.file);
 		b.append("name", name)
-		b.append("type", type.type);
-		b.append("subtype", type.subtype);
-		b.append("ptype", type.ptype || "");
+		b.append("type", this.type);
+		b.append("subtype", this.subtype);
+		b.append("ptype", this.ptype || "");
 		$.ajax({
 			url: "/api/asset/upload",
 			method: "POST",
@@ -266,7 +266,7 @@ class ImporterFile {
 					this.id = d.data.file;
 
 					// why
-					const importType = type.subtype == "video" ? "video" : type.type;
+					const importType = this.subtype == "video" ? "video" : this.type;
 					const thumbUrl = `${window.location.origin}/assets/${d.data.file.slice(0, -3) + "png"}`;
 					d.data.thumbnail = thumbUrl;
 
@@ -275,7 +275,7 @@ class ImporterFile {
 					studio[0].importerUploadComplete(importType, d.data.file, d.data);
 
 					// update html for images
-					if (type.subtype == 0) {
+					if (this.subtype == 0) {
 						if (this.ext != "swf") 
 							this.el.find("img").attr("src", `/assets/${d.data.file}`);
 						// change the subtypes to an add to scene button

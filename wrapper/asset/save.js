@@ -68,7 +68,7 @@ module.exports = async function (req, res, url) {
 						stream.on("end", async () => {
 							const buf = Buffer.concat(buffers);
 							const buffer = await sharp(buf)
-								.resize({ width: 550, height: 310 })
+								.resize(550, 354, { fit: "fill" })
 								.toBuffer();
 							aId = asset.save(buffer, meta);
 							resolve();
