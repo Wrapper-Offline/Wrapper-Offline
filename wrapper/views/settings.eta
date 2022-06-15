@@ -18,13 +18,8 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a class="selected" href="#" data-triggers="0">Features</a>
-					<a href="#" data-triggers="1">Appearance</a>
+					<a href="#" data-triggers="0">Appearance</a>
 				</div>
-				<nav class="tab" style="display:block">
-					<h2>Features</h2>
-					<p>Short themelist: <span id="shortthemelist"></span></p>
-				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
 					<p>Dark mode: <span id="darkmode" data-meth="localStorage"></span></p>

@@ -20,12 +20,12 @@ module.exports = async function (req, res, url) {
 		type: "char",
 		subtype: 0,
 		title: "Untitled",
-		tId: Char.getTheme(buffer)
+		themeId: Char.getTheme(buffer)
 	};
 	try {
 		// save the char
-		Char.save(buffer, meta);
-		const url = `/cc_browser?themeId=${meta.tId}`;
+		Char.save(buffer, meta, true);
+		const url = `/cc_browser?themeId=${meta.themeId}`;
 		fs.unlinkSync(path);
 		// redirect the user
 		res.statusCode = 302;

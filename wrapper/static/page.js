@@ -49,27 +49,27 @@ module.exports = async function (req, res, url) {
 					id: "char_creator", 
 					width: "960", 
 					height: "600", 
-					style:"display:block;margin-left:auto;margin-right:auto;",
+					class: "char_object"
 				},
 				params: {
 					flashvars: {
-						"appCode": "go",
-						"ctc": "go",
-						"isEmbed": 1,
-						"isLogin": "Y",
-						"m_mode": "school",
-						"page": "",
-						"siteId": "go",
-						"tlang": "en_US",
-						"ut": 60,
+						appCode: "go",
+						ctc: "go",
+						isEmbed: 1,
+						isLogin: "Y",
+						m_mode: "school",
+						page: "",
+						siteId: "go",
+						tlang: "en_US",
+						ut: 60,
 						// options
-						"bs": "adam",
-						"original_asset_id": query["id"] || "",
-						"themeId": "family",
+						bs: "adam",
+						original_asset_id: query["id"] || "",
+						themeId: "family",
 						// paths
-						"apiserver": "/",
-						"storePath": STORE_URL + "/<store>",
-						"clientThemePath": CLIENT_URL + "/<client_theme>"
+						apiserver: "/",
+						storePath: STORE_URL + "/<store>",
+						clientThemePath: CLIENT_URL + "/<client_theme>"
 					},
 					allowScriptAccess: "always",
 					movie: SWF_URL + "/cc.swf",
@@ -87,27 +87,25 @@ module.exports = async function (req, res, url) {
 					id: "char_creator",
 					width: '100%', 
 					height: '600', 
-					style:'display:block;margin-left:auto;margin-right:auto;',
+					class: "char_object"
 				},
 				params: {
 					flashvars: {
-						apiserver: "/",
-						storePath: STORE_URL + "/<store>",
-						clientThemePath: CLIENT_URL + "/<client_theme>",
-						original_asset_id: query["id"] || null,
-						themeId: "family",
-						ut: 60,
 						appCode: "go",
+						ctc: "go",
+						isEmbed: 1,
+						isLogin: "Y",
+						m_mode: "school",
 						page: "",
 						siteId: "go",
-						m_mode: "school",
-						isLogin: "Y",
-						retut: 1,
-						goteam_draft_only: 1,
-						isEmbed: 1,
-						ctc: "go",
 						tlang: "en_US",
-						lid: 13,
+						ut: 60,
+						// options
+						themeId: "family",
+						// paths
+						apiserver: "/",
+						storePath: STORE_URL + "/<store>",
+						clientThemePath: CLIENT_URL + "/<client_theme>"
 					},
 					allowScriptAccess: "always",
 					movie: SWF_URL + "/cc_browser.swf"

@@ -30,7 +30,7 @@ module.exports = async function (req, res, url) {
 				type: "char",
 				subtype: 0,
 				title: "Untitled",
-				tId: req.body.themeId
+				themeId: req.body.themeId
 			};
 			try {
 				const id = Char.save(body, meta);
@@ -54,7 +54,7 @@ module.exports = async function (req, res, url) {
 			try {
 				meta(cId);
 				Char.saveThumb(cId, thumb)
-				res.end("0" + id);
+				res.end("0" + cId);
 			} catch (err) {
 				console.error("Error saving character thumb:", cId, err);
 				res.statusCode = 500;

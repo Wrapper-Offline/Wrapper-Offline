@@ -50,27 +50,23 @@ module.exports = {
 	},
 
 	/**
-	 * Saves the character and its metadata.
-	 * @param {Buffer} buf 
-	 * @param {Buffer} thumb 
-	 * @param {object} param1 
+	 * saves the character and its metadata
+	 * @param {Buffer} buf a buffer of a character xml
+	 * @param {Buffer} thumb a thumbnail of the character in PNG format
+	 * @param {object} meta character metadata, must contain type, subtype, title, and themeId
+	 * @param {boolean} isV2 specifies if the 'version="2.0"' should be added to the xml
 	 * @returns {string}
 	 */
-	save(buf, { type, subtype, title, tId }) {
+	save(buf, meta, isV2 = false) {
 		// save asset info
 		const cId = fUtil.generateId();
 		const db = DB.get();
-		db.assets.unshift({ // base info, can be modified by the user later
-			id: cId,
-			themeId: tId,
-			type: type,
-			subtype: subtype,
-			title: title,
-			tags: ""
-		});
+		meta.id = cId;
+		meta.tags = "";
+		db.assets.unshift(meta);
 		DB.save(db);
 		// fix handheld props for freeaction themes
-		if (this.isFA(tId)) {
+		if (this.isFA(meta.themeId) && !isV2) {
 			const end = buf.indexOf(">", buf.indexOf("<cc_char"));
 			const newChar = Buffer.concat([
 				buf.slice(0, end),
@@ -84,9 +80,15 @@ module.exports = {
 		return cId;
 	},
 
+	/**
+	 * saves a character thumbnail
+	 * @param {string} cId the character id
+	 * @param {Buffer} thumb a thumbnail of the character in PNG format
+	 * @returns {void}
+	 */
 	saveThumb(cId, thumb) {
 		fs.writeFileSync(path.join(folder, `${cId}.png`), thumb);
-		return cId;
+		return;
 	},
 
 	isFA(themeId) {

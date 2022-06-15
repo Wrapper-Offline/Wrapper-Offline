@@ -16,6 +16,15 @@ main { display: flex; padding: 0 }
 }
 
 /**
+objects
+**/
+.char_object {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
 previewer
 **/
 #previewer {
