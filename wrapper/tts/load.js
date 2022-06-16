@@ -8,7 +8,8 @@ const base64 = require("js-base64");
 const brotli = require("brotli");
 const https = require("https");
 const http = require("http");
-const Lame = require("node-lame").Lame;
+const ffmpeg = require("fluent-ffmpeg");
+ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
 const md5 = require("js-md5");
 const mp3Duration = require("mp3-duration");
 // vars
@@ -285,7 +286,7 @@ const processVoice = (voiceName, text) => {
 				break;
 			}
 			case "voiceforge": { // working, requires lame installation
-				var q = new URLSearchParams({
+				const q = new URLSearchParams({
 					"HTTP-X-API-KEY": "9a272b4",
 					msg: text,
 					voice: voice.arg,
@@ -293,19 +294,17 @@ const processVoice = (voiceName, text) => {
 				}).toString();
 				let url = `https://api.voiceforge.com/swift_engine?${q}`;
 				https.get(url, (r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => {
-							const encoder = new Lame({ "output": "buffer" })
-								.setBuffer(Buffer.concat(buffers));
-
-							encoder.encode()
-								.then(() => res(encoder.getBuffer()))
-								.catch(rej);
-						});
-						r.on("error", rej);
-					}
-				);
+					let buffers = [];
+					const command = ffmpeg(r)
+						.inputFormat("wav")
+						.toFormat("mp3")
+						.on("error", rej);
+					const stream = command.pipe();
+					stream.on("data", b => buffers.push(b));
+					stream.on("end", () => {
+						res(Buffer.concat(buffers));
+					});
+				});
 				break;
 			}
 			case "svox": { // working

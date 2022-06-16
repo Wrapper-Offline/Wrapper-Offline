@@ -173,7 +173,7 @@ module.exports = async function (req, res, url) {
 					const command = ffmpeg(oldStream)
 						.inputFormat(ext)
 						.toFormat("mp3")
-						.on("error", (e) => rej("Error converting video:", e));
+						.on("error", (e) => rej("Error converting audio:", e));
 					stream = command.pipe();
 					resolve();
 				});

@@ -21,14 +21,14 @@
 	<theme id="fullenergy" name="Full Energy" thumb=""/>
 	<theme id="akon" name="AKON" />
 	<theme id="ben10" name="Ben 10" />
-	<theme id="botdf" name="Blood on the Dance Floor (Unused)" cc_theme_id="botdf" />
+	<theme id="botdf" name="Blood on the Dance Floor" cc_theme_id="botdf" />
 	<theme id="bunny" name="It's Happy Bunny" enable="N" />
 	<theme id="chowder" name="Chowder" enable="N" />
 	<theme id="domo" name="Domo" enable="N" />
 	<theme id="monkeytalk" name="SuperRica &amp; Rashy" enable="N" />
 	<theme id="sf" name="Street Fighter" enable="N" />
 	<theme id="startrek" name="Star Trek Quogs" enable="N" />
-	<theme id="street" name="Street (Unused)" enable="N" />
+	<theme id="street" name="Street" enable="N" />
 	<theme id="underdog" name="Saturday Morning TV" enable="N" />
 	<theme id="willie" name="Willie Nelson" enable="N" />
 	<theme id="toonadv" name="Toon Adventure" enable="N" />
