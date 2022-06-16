@@ -15,35 +15,41 @@ function processVoice(voiceName, text) {
 		const voice = voices[voiceName];
 		switch (voice.source) {
 			case "polly": {
-				https.get('https://voicemaker.in/', r => {
-					const cookie = r.headers['set-cookie'];
-					var req = https.request({
-						hostname: "voicemaker.in",
+				// make sure it's under the char limit
+				text = text.substring(0, 2999);
+
+				const body = new URLSearchParams({
+					msg: text,
+					lang: voice.arg,
+					source: "ttsmp3"
+				}).toString();
+				var req = https.request(
+					{
+						hostname: "ttsmp3.com",
 						port: "443",
-						path: "/voice/standard",
+						path: "/makemp3_new.php",
 						method: "POST",
 						headers: {
-							"content-type": "application/json",
-							cookie: cookie,
-							"csrf-token": "",
-							origin: "https://voicemaker.in",
-							referer: "https://voicemaker.in/",
-							"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
-							"x-requested-with": "XMLHttpRequest",
-						},
+							"Content-Length": body.length,
+							"Content-type": "application/x-www-form-urlencoded"
+						}
 					},
 					(r) => {
-						var buffers = [];
-						r.on("data", (b) => buffers.push(b));
+						let buffers = [];
+						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
-							var json = JSON.parse(Buffer.concat(buffers));
-							get(`https://voicemaker.in${json.path.replace(".", "")}`).then(res).catch(rej);
+							const json = JSON.parse(Buffer.concat(buffers).toString());
+							if (json.Error != 0) rej(json.Text);
+
+							get(json.URL)
+								.then(res)
+								.catch(rej);
 						});
 						r.on("error", rej);
-					});
-					req.write(`{"Engine":"${voice.polly_engine}","Provider":"ai101","OutputFormat":"mp3","VoiceId":"${voice.arg}","LanguageCode":"${voice.language}-${voice.country}","SampleRate":"22050","effect":"default","master_VC":"advanced","speed":"0","master_volume":"0","pitch":"0","Text":"${text}","TextType":"text","fileName":""}`);
-					req.end();
-				});
+					}
+				);
+				req.write(body);
+				req.end();
 				break;
 			}
 			/* WARNING: NUANCE TTS API HAS BACKGROUND MUSIC */
