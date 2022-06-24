@@ -75,9 +75,9 @@ if !AUTOUPDATE!==y (
 	pushd "%~dp0"
 	if exist .git (
 		echo Updating...
-		call utilities\PortableGit\bin\git.exe checkout main
+		call utilities\PortableGit\bin\git.exe checkout beta
 		call utilities\PortableGit\bin\git.exe fetch --all
-		call utilities\PortableGit\bin\git.exe reset --hard origin/main
+		call utilities\PortableGit\bin\git.exe reset --hard origin/beta
 		PING -n 3 127.0.0.1>nul
 		cls
 	) else (
