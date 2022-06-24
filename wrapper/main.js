@@ -1,15 +1,20 @@
 /***
  * Wrapper: Offline
  */
-// assign config and env.json stuff to process.env
-const env = Object.assign(process.env, require("./env"), require("./config"));
 // modules
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import { join } from "path";
+import RPC from "discord-rpc";
+// assign config and env.json stuff to process.env
+const env = JSON.parse(fs.readFileSync("./env.json"));
+const config = JSON.parse(fs.readFileSync("./config.json"));
+Object.assign(process.env, env, config);
 // vars
-const assets = path.join(__dirname, env.ASSET_FOLDER);
-const cache = path.join(__dirname, env.CACHÉ_FOLDER);
-const saved = path.join(__dirname, env.SAVED_FOLDER);
+const assets = join(env.ASSET_FOLDER);
+const cache = join(env.CACHÉ_FOLDER);
+const saved = join(env.SAVED_FOLDER);
+// stuff
+import server from "./server.js";
 
 /**
  * initialization
@@ -18,8 +23,7 @@ const saved = path.join(__dirname, env.SAVED_FOLDER);
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
-// start server
-const server = require("./server");
+// start the server
 server();
 
 /**
@@ -28,7 +32,6 @@ server();
 if (process.env.DISCORD_RPC && process.env.DISCORD_RPC == "y") {
 	// get version number
 	const version = process.env.WRAPPER_VER;
-	const RPC = require("discord-rpc");
 	const rpc = new RPC.Client({
 		transport: "ipc"
 	});

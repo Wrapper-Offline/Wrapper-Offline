@@ -2,16 +2,15 @@
  * start wrapper: offline's server
  */
 // modules
-const http = require("http");
-const url = require("url");
-const formidable = require("formidable");
-const static = require("node-static");
+const httpz = require("httpz");
+//const formidable = require("formidable");
+//const static = require("node-static");
 
 /**
  * routes
  */
 // this is stupid
-const asd = require("./asset/delete");
+/*const asd = require("./asset/delete");
 const asa = require("./asset/save");
 const asl = require("./asset/load");
 const asL = require("./asset/list");
@@ -68,12 +67,12 @@ const functions = [
 	tsl,
 	wal,
 	was
-];
+];*/
 
 /**
  * create the server
  */
-module.exports = function () {
+/**module.exports = function () {
 	const file = new static.Server("../server");
 	http
 		.createServer(async (req, res) => {
@@ -114,7 +113,18 @@ module.exports = function () {
 			}
 		})
 		.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));
-};
+};**/
+
+
+export default function startServer() {
+	const server = new httpz.Server();
+
+	server.route("*", "*", async (req, res) => {
+		if (!res.writableEnded) {
+			
+		}
+	})
+}
 
 // 1 year of 1.3.0 development
 // thanks xom
