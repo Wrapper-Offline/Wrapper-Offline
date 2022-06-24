@@ -24,6 +24,10 @@ function toObjectString(attrs, params) {
 const group = new httpz.Group();
 
 group
+	// themelist page
+	.route("GET", "/create", (req, res) =>
+		res.render("create", {}))
+	// flash pages
 	.route("GET", "/cc", async (req, res) => {
 		let flashvars = {
 			appCode: "go",
