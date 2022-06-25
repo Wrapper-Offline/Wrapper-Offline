@@ -1,5 +1,6 @@
-/***
+/**
  * Wrapper: Offline
+ * License: MIT
  */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
@@ -10,6 +11,8 @@ const path = require("path");
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
+// stuff
+const server = require("./server");
 
 /**
  * initialization
@@ -18,8 +21,7 @@ const saved = path.join(__dirname, env.SAVED_FOLDER);
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
-// start server
-const server = require("./server");
+// start the server
 server();
 
 /**

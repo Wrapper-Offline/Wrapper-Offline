@@ -5,6 +5,7 @@ const httpz = require("httpz");
  * request body
  * @param {httpz.Request} req
  * @param {httpz.Response} res
+ * @param {Function} next 
  * @returns {void}
  */
 module.exports = async function reqBody(req, res, next) {
@@ -17,4 +18,4 @@ module.exports = async function reqBody(req, res, next) {
 			}
 		));
 	next();
-}
+};

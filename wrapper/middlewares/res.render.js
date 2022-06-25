@@ -6,6 +6,7 @@ const path = require("path");
  * Renders a view using Eta.js.
  * @param {httpz.Request} req
  * @param {httpz.Response} res
+ * @param {Function} next 
  * @returns {void}
  */
 module.exports = function resRender(req, res, next) {
@@ -19,4 +20,4 @@ module.exports = function resRender(req, res, next) {
 		res.end(file);
     };
     next();
-}
+};

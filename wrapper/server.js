@@ -2,16 +2,19 @@
  * start wrapper: offline's server
  */
 // modules
+const fs = require("fs");
 const httpz = require("httpz");
 const static = require("node-static");
 // stuff
 const routes = require("./controllers");
 const reqBody = require("./middlewares/req.body");
 const resRender = require("./middlewares/res.render");
+const resTime = require("./middlewares/res.time");
 const fakeRoutes = require("./controllers/info.json");
 
 /**
- * create the server
+ * Starts the GoAPI server.
+ * @returns {void}
  */
 module.exports = function () {
 	const server = new httpz.Server();
@@ -21,6 +24,7 @@ module.exports = function () {
 		// add middlewares
 		.add(reqBody)
 		.add(resRender)
+		.add(resTime)
 		// add routes
 		.add(routes)
 		// handle 404s
