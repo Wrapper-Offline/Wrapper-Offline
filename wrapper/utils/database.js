@@ -19,11 +19,21 @@ module.exports = class {
 			return baseDb;
 		}
 	}
+
 	refresh() { // refresh the database vars
 		const data = fs.readFileSync(this.path);
 		this.json = JSON.parse(data);
 	}
-	get() { this.refresh(); return this.json }
+
+	/**
+	 * 
+	 * @returns {{ assets: [], watermarks: [] }}
+	 */
+	get() {
+		this.refresh();
+		return this.json
+	}
+
 	save(newData) {
 		try {
 			fs.writeFileSync(this.path, JSON.stringify(newData, null, "\t"), { recursive: true });

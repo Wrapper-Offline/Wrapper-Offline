@@ -8,7 +8,7 @@ const path = require("path");
 const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
 // stuff
 const database = require("../data/database"), DB = new database();
-const fUtil = require("../fileUtil");
+const fUtil = require("../utils/fileUtil");
 
 module.exports = {
 	/**
@@ -18,14 +18,22 @@ module.exports = {
 	delete(aId) {
 		// remove info from database
 		const db = DB.get();
-		const index = this.meta(aId, { getIndex: true });
+		const index = this.getIndex(aId);
 		db.assets.splice(index, 1);
 		DB.save(db);
-		// find file by id and delete it
-		const match = fs.readdirSync(folder)
-			.filter(file => file.includes(aId));
-		if (match) match.forEach(filename => 
-			fs.unlinkSync(path.join(folder, filename)));
+
+		// delete the actual file
+		fs.unlinkSync(path.join(folder, aId));
+
+		// delete video thumbnails
+		const { subtype } = db.assets[index];
+		if (
+			subtype == "char" ||
+			subtype == "video"
+		) {
+			const thumbId = aId.slice(0, -3) + "png";
+			fs.unlinkSync(path.join(folder, thumbId));
+		}
 	},
 
 	/**
@@ -34,9 +42,12 @@ module.exports = {
 	 * @returns {object[]}
 	 */
 	list(filters = {}) { // very simple thanks to the database
-		let filtered = DB.get().assets.filter(i => {
+		const list = DB.get().assets;
+		const filtered = list.filter((val) => {
 			for (const [key, value] of Object.entries(filters)) {
-				if (i[key] && i[key] != value) return false;
+				if (val[key] && val[key] != value) {
+					return false;
+				}
 			}
 			return true;
 		});
@@ -47,23 +58,23 @@ module.exports = {
 	 * Looks for a match in the _ASSETS folder and returns the file buffer.
 	 * If there's no match found, it returns null.
 	 * @param {string} aId 
-	 * @returns {Buffer | null}
+	 * @returns {Buffer}
 	 */
-	load(aId) { // look for match in folder
-		const match = this.exists(aId);
-		return match ? fs.readFileSync(path.join(folder, match)) : null;
+	load(aId) {
+		const filepath = path.join(folder, aId);
+		const buffer = fs.readFileSync(filepath);
+		return buffer;
 	},
 
 	/**
-	 * Looks for a match in the _ASSETS folder.
-	 * If there's no match found, it returns null.
+	 * Checks if the file exists.
 	 * @param {string} aId 
-	 * @returns {string | null}
+	 * @returns {boolean}
 	 */
-	exists(aId) { // look for match in folder
-		const match = fs.readdirSync(folder)
-			.find(file => file.includes(aId));
-		return match || false;
+	exists(aId) {
+		const filepath = path.join(folder, aId);
+		const exists = fs.existsSync(filepath);
+		return exists;
 	},
 
 	/**
@@ -71,10 +82,34 @@ module.exports = {
 	 * @param {string} aId 
 	 * @returns {object}
 	 */
-	meta(aId, { getIndex } = {}) {
-		const callback = i => i.id == aId;
-		const meta = DB.get().assets[getIndex ? "findIndex" : "find"](callback);
-		if (typeof meta != "number" && !meta) throw new Error("Asset doesn't exist.");
+	get(aId) {
+		const db = DB.get();
+		const meta = db.assets.find((i) => (
+			i.id == aId
+		));
+		
+		if (!meta) {
+			throw new Error("Asset doesn't exist.");
+		}
+
+		return meta;
+	},
+
+	/**
+	 * Returns asset metadata from the database.
+	 * @param {string} aId 
+	 * @returns {number}
+	 */
+	getIndex(aId) {
+		const db = DB.get();
+		const meta = db.assets.findIndex((i) => (
+			i.id == aId
+		));
+		
+		if (!meta) {
+			throw new Error("Asset doesn't exist.");
+		}
+
 		return meta;
 	},
 
@@ -111,65 +146,35 @@ module.exports = {
 	},
 
 	/**
-	 * Saves the asset and its metadata.
-	 * @param {Buffer} buf 
-	 * @param {object} meta 
-	 * @returns {string}
-	 */
-	save(buf, meta) {
-		// save asset info
-		const aId = `${fUtil.generateId()}.${meta.ext}`;
-		const db = DB.get();
-		let newMeta = {
-			id: aId,
-			tags: ""
-		};
-		delete meta.ext;
-		Object.assign(newMeta, meta);
-		db.assets.unshift(newMeta);
-		DB.save(db);
-		// save the file
-		fs.writeFileSync(path.join(folder, aId), buf);
-		return aId;
-	},
-
-	/**
-	 * Saves the asset and its metadata.
+	 * Saves an asset.
 	 * @param {fs.ReadStream} readStream 
-	 * @param {object} meta 
+	 * @param {string} ext
+	 * @param {object} info 
 	 * @returns {string}
 	 */
-	saveStream(readStream, meta) {
-		// save asset info
-		const aId = `${fUtil.generateId()}.${meta.ext}`;
+	save(readStream, ext, info) {
 		const db = DB.get();
-		let newMeta = {
-			id: aId,
-			tags: ""
-		};
-		delete meta.ext;
-		Object.assign(newMeta, meta);
-		db.assets.unshift(newMeta);
+		info.id = `${fUtil.generateId()}.${ext}`;
+		db.assets.unshift(info);
 		DB.save(db);
 		// save the file
-		let writeStream = fs.createWriteStream(path.join(folder, aId));
+		let writeStream = fs.createWriteStream(path.join(folder, info.id));
 		readStream.resume();
 		readStream.pipe(writeStream);
-		return aId;
+		return info.id;
 	},
 
 	/**
-	 * Updates an asset's metadata.
+	 * Updates an asset's info.
 	 * It cannot replace the asset itself.
 	 * @param {string} aId 
-	 * @param {object} newMet 
+	 * @param {object} info 
 	 * @returns {void}
 	 */
-	update(aId, newMet) {
-		// set new info and save
+	update(aId, info) {
 		const db = DB.get();
-		const index = this.meta(aId, { getIndex: true });
-		Object.assign(db.assets[index], newMet);
+		const index = this.getIndex(aId);
+		Object.assign(db.assets[index], info);
 		DB.save(db);
 	}
 };

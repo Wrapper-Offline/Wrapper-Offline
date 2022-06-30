@@ -3,6 +3,9 @@
  */
 // modules
 const httpz = require("httpz");
+// stuff
+const Char = require("../models/char");
+
 // create the group
 const group = new httpz.Group();
 
@@ -25,7 +28,7 @@ group
 		
 		res.redirect(redirect);
 	})
-	.route("POST", "/goapi/saveCCCharacter", async (req, res) => {
+	.route("POST", "/goapi/saveCCCharacter/", async (req, res) => {
 		res.assert(
 			req.body.body,
 			req.body.thumbdata,
@@ -41,15 +44,9 @@ group
 			title: "Untitled",
 			themeId: req.body.themeId
 		};
-		try {
-			const id = Char.save(body, meta);
-			Char.saveThumb(id, thumb)
-			res.end("0" + id);
-		} catch (err) {
-			console.error("Error saving character:", err);
-			res.statusCode = 500;
-			res.end("1");
-		}
+		const id = Char.save(body, meta);
+		Char.saveThumb(id, thumb)
+		res.end("0" + id);
 	})
 
 module.exports = group;
