@@ -13,25 +13,28 @@ const fUtil = require("../utils/fileUtil");
 module.exports = {
 	/**
 	 * Deletes an asset.
-	 * @param {string} aId 
+	 * @param {string} id 
 	 */
-	delete(aId) {
+	delete(id) {
 		// remove info from database
 		const db = DB.get();
-		const index = this.getIndex(aId);
+		const index = this.getIndex(id);
 		db.assets.splice(index, 1);
 		DB.save(db);
 
-		// delete the actual file
-		fs.unlinkSync(path.join(folder, aId));
+		// ugh
+		const { type, subtype } = db.assets[index];
+		if (type == "char") id += ".xml";
 
-		// delete video thumbnails
-		const { subtype } = db.assets[index];
+		// delete the actual file
+		fs.unlinkSync(path.join(folder, id));
+
+		// delete video and char thumbnails
 		if (
-			subtype == "char" ||
+			type == "char" ||
 			subtype == "video"
 		) {
-			const thumbId = aId.slice(0, -3) + "png";
+			const thumbId = id.slice(0, -3) + "png";
 			fs.unlinkSync(path.join(folder, thumbId));
 		}
 	},

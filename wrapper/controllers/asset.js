@@ -16,12 +16,26 @@ const group = new httpz.Group();
 
 function listAssets(filters) {
 	const files = Asset.list(filters);
-	console.log(files)
 	return `${header}<ugc more="0">${
 		files.map(Asset.meta2Xml).join("")}</ugc>`;
 }
 
 group
+	// delete
+	.route("POST", "/api_v2/asset/delete/", (req, res) => {
+		const id = req.body.data.id || req.body.data.starter_id;
+		res.assert(id, 400, { status: "error" });
+
+		try {
+			Asset.delete(id);
+			res.json({ status: "ok" });
+		} catch (e) {
+			console.log("Error deleting asset:", e);
+			res.statusCode = 404;
+			res.json({ status: "error" });
+		}
+	})
+	// list
 	.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 		res.assert(
 			req.body.type,
@@ -33,23 +47,27 @@ group
 
 		let themeId;
 		switch (req.body.themeId) {
-			case "custom": themeId = "family"; break;
-			case "action": themeId = "cc2"; break;
+			case "custom":
+				themeId = "family"; break;
+			case "action":
+			case "animal":
+			case "botdf":
+			case "space":
+				themeId = "cc2"; break;
+			default: themeId = req.body.themeId;
 		}
 
 		const filters = {
 			themeId,
 			type: "char"
-		}
-		console.log(filters.themeId)
+		};
 		res.setHeader("Content-Type", "application/xml");
 		res.end(listAssets(filters));
 	})
 	.route("POST", "/api_v2/assets/imported", (req, res) => {
-		res.assert(req.body.data.type, 400, "1Missing one or more fields.");
+		res.assert(req.body.data.type, 400, { status: "error" });
 		req.body.data.subtype ||= 0;
 
-		res.setHeader("Content-Type", "application/json");
 		res.json({
 			status: "ok",
 			data: {
@@ -57,9 +75,10 @@ group
 			}
 		});
 	})
+	// load
 	.route(
 		"*",
-		["/goapi/getAsset/", /\/assets\/([\S]+)/],
+		["/goapi/getAsset/", "/goapi/getAssetEx/", /\/assets\/([\S]+)/],
 		async (req, res) => {
 			const url = req.parsedUrl.pathname;
 			const id = url.charAt(1) == "a" ?
@@ -71,18 +90,56 @@ group
 				res.setHeader("Content-Type", mime.contentType(id));
 				readStream.pipe(res);
 			} catch (e) {
+				console.log("Error loading asset:", e);
 				res.status(404).end();
 			}
 		}
 	)
+	// meta
+	//  #get
+	.route("POST", "/api_v2/asset/get", (req, res) => {
+		const id = req.body.data.id || req.body.data.starter_id;
+		res.assert(id, 400, { status: "error" });
+
+		try {
+			const info = Asset.get(id);
+			// add stuff that will never be useful for an offline lvm clone
+			info.share = { type: "none" };
+			info.published = "";
+			res.json({
+				status: "ok",
+				data: info
+			});
+		} catch (e) {
+			console.log("Error getting asset info:", e);
+			res.statusCode = 404;
+			res.json({ status: "error", data: "That doesn't seem to exist." });
+		}
+	})
+	//  #update
+	.route("POST", "/api_v2/asset/update/", (req, res) => {
+		const id = req.body.data.id || req.body.data.starter_id;
+		res.assert(id, 400, { status: "error" });
+
+		try {
+			Asset.update(id, req.body.data);
+			res.json({ status: "ok" });
+		} catch (e) {
+			console.log("Error updating asset:", e);
+			console.log("It's not like anyone will see this anyway...");
+
+			res.statusCode = 404;
+			res.json({ status: "error" });
+		}
+	})
+	// save
 	.route("POST", "/api/asset/upload", async (req, res) => {
 		const file = req.files.import;
 		res.assert(
 			file,
 			req.body.type,
 			req.body.subtype,
-			400,
-			'{status:"error"}'
+			400, { status: "error" }
 		);
 		// get the filename and extension
 		const origName = file.originalFilename;
