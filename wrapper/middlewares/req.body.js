@@ -9,6 +9,7 @@ const httpz = require("httpz");
  * @returns {void}
  */
 module.exports = async function reqBody(req, res, next) {
+	req.body = {};
 	if (req.method == "POST")
 		await new Promise((resolve, reject) =>
 			new formidable.IncomingForm().parse(req, async (e, f, files) => {

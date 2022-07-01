@@ -1,7 +1,7 @@
 /**
  * rich presence
  */
-console.log(process.env.DISCORD_RPC)
+
 if (!!process.env.DISCORD_RPC) {
 	// modules
 	const RPC = require("discord-rpc");

@@ -3,6 +3,7 @@
  */
 // modules
 const httpz = require("httpz");
+const discord = require("../utils/discord");
 // vars
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 // stuff
@@ -25,10 +26,13 @@ const group = new httpz.Group();
 
 group
 	// themelist page
-	.route("GET", "/create", (req, res) =>
-		res.render("create", {}))
+	.route("GET", "/create", (req, res) => {
+		discord("Choosing a Theme");
+		res.render("create", {});
+	})
 	// flash pages
 	.route("GET", "/cc", async (req, res) => {
+		discord("Character Creator");
 		let flashvars = {
 			appCode: "go",
 			ctc: "go",
@@ -68,6 +72,7 @@ group
 		});
 	})
 	.route("GET", "/cc_browser", async (req, res) => {
+		discord("Character Browser");
 		let flashvars = {
 			appCode: "go",
 			ctc: "go",
@@ -105,6 +110,7 @@ group
 		});
 	})
 	.route("GET", "/go_full", async (req, res) => {
+		discord("Video Maker");
 		let flashvars = {
 			appCode: "go",
 			collab: 0,
@@ -138,6 +144,7 @@ group
 		});
 	})
 	.route("GET", "/player", async (req, res) => {
+		discord("Video Player");
 		let flashvars = {
 			autostart: 1,
 			isWide: 1,

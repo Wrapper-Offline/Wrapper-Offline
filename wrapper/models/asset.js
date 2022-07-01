@@ -7,7 +7,7 @@ const path = require("path");
 // vars
 const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
 // stuff
-const database = require("../data/database"), DB = new database();
+const database = require("../utils/database"), DB = new database();
 const fUtil = require("../utils/fileUtil");
 
 module.exports = {
@@ -58,12 +58,17 @@ module.exports = {
 	 * Looks for a match in the _ASSETS folder and returns the file buffer.
 	 * If there's no match found, it returns null.
 	 * @param {string} aId 
-	 * @returns {Buffer}
+	 * @returns {fs.ReadStream}
 	 */
-	load(aId) {
-		const filepath = path.join(folder, aId);
-		const buffer = fs.readFileSync(filepath);
-		return buffer;
+	load(id) {
+		if (this.exists(id)) {
+			const filepath = path.join(folder, id);
+			const readStream = fs.createReadStream(filepath);
+
+			return readStream;
+		} else {
+			throw new Error("Asset doesn't exist.");
+		}
 	},
 
 	/**
@@ -122,7 +127,7 @@ module.exports = {
 		let xml;
 		switch (v.type) {
 			case "char": {
-				xml = `<char id="${v.id}" enc_asset_id="${v.id}" name="Untitled" cc_theme_id="${v.themeId}" thumbnail_url="char_default.png" copyable="Y"><tags/></char>`;
+				xml = `<char id="${v.id}" enc_asset_id="${v.id}" name="${v.title || "Untitled"}" cc_theme_id="${v.themeId}" thumbnail_url="/assets/${v.id}.png" copyable="Y"><tags>${v.tags || ""}</tags></char>`;
 				break;
 			} case "bg": {
 				xml = `<background subtype="0" id="${v.id}" enc_asset_id="${v.id}" name="${v.title}" enable="Y" asset_url="/assets/${v.id}"/>`
@@ -153,15 +158,18 @@ module.exports = {
 	 * @returns {string}
 	 */
 	save(readStream, ext, info) {
-		const db = DB.get();
-		info.id = `${fUtil.generateId()}.${ext}`;
-		db.assets.unshift(info);
-		DB.save(db);
-		// save the file
-		let writeStream = fs.createWriteStream(path.join(folder, info.id));
-		readStream.resume();
-		readStream.pipe(writeStream);
-		return info.id;
+		return new Promise((res, rej) => {
+			const db = DB.get();
+			info.id = `${fUtil.generateId()}.${ext}`;
+			db.assets.unshift(info);
+			DB.save(db);
+			// save the file
+			let writeStream = fs.createWriteStream(path.join(folder, info.id));
+			readStream.resume();
+			readStream.pipe(writeStream);
+			// wait for the stream to end
+			readStream.on("end", () => res(info.id));
+		});
 	},
 
 	/**
