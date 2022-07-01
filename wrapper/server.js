@@ -64,4 +64,6 @@ module.exports = function () {
 			}
 		})
 		.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));
+	
+	return server;
 };

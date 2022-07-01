@@ -6,7 +6,8 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "node main.js"
+		"start": "node main.js",
+		"test": "mocha"
 	},
 	"main": "index.js",
 	"dependencies": {
@@ -24,5 +25,10 @@
 		"node-zip": "github:kyriosli/node-zip",
 		"sharp": "^0.30.6",
 		"xmldoc": "^1.1.2"
+	},
+	"devDependencies": {
+		"js-base64": "^3.7.2",
+		"mocha": "^10.0.0",
+		"supertest": "^6.2.3"
 	}
 }
