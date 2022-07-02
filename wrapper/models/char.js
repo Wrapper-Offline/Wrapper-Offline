@@ -46,10 +46,8 @@ module.exports = {
 	 */
 	save(buf, info, isV2 = false) {
 		// save asset info
-		const db = DB.get();
 		info.id = fUtil.generateId();
-		db.assets.unshift(info);
-		DB.save(db);
+		DB.insert("assets", info);
 
 		// fix handheld props for freeaction themes
 		if (this.isFA(info.themeId) && !isV2) {

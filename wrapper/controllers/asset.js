@@ -8,6 +8,7 @@ const mime = require("mime-types");
 // vars
 const header = process.env.XML_HEADER;
 // stuff
+const database = require("../utils/database"), DB = new database();
 const Asset = require("../models/asset");
 const rFileUtil = require("../utils/realFileUtil");
 
@@ -15,7 +16,7 @@ const rFileUtil = require("../utils/realFileUtil");
 const group = new httpz.Group();
 
 function listAssets(filters) {
-	const files = Asset.list(filters);
+	const files = DB.select("assets", filters);
 	return `${header}<ugc more="0">${
 		files.map(Asset.meta2Xml).join("")}</ugc>`;
 }
@@ -27,7 +28,7 @@ group
 		res.assert(id, 400, { status: "error" });
 
 		try {
-			Asset.delete(id);
+			DB.delete("assets", id);
 			res.json({ status: "ok" });
 		} catch (e) {
 			console.log("Error deleting asset:", e);
@@ -106,7 +107,7 @@ group
 		res.assert(id, 400, { status: "error" });
 
 		try {
-			const info = Asset.get(id);
+			const info = DB.get("assets", id);
 			// add stuff that will never be useful for an offline lvm clone
 			info.share = { type: "none" };
 			info.published = "";
@@ -126,7 +127,7 @@ group
 		res.assert(id, 400, { status: "error" });
 
 		try {
-			Asset.update(id, req.body.data);
+			DB.update("assets", id, req.body.data);
 			res.json({ status: "ok" });
 		} catch (e) {
 			console.log("Error updating asset:", e);

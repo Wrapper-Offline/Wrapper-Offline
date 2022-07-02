@@ -16,14 +16,10 @@ module.exports = {
 	 * @param {string} id 
 	 */
 	delete(id) {
-		// remove info from database
-		const db = DB.get();
-		const index = this.getIndex(id);
-		db.assets.splice(index, 1);
-		DB.save(db);
+		const { type, subtype } = DB.get("assets", id).data;
+		DB.delete("assets", id);
 
 		// ugh
-		const { type, subtype } = db.assets[index];
 		if (type == "char") id += ".xml";
 
 		// delete the actual file
@@ -37,24 +33,6 @@ module.exports = {
 			const thumbId = id.slice(0, -3) + "png";
 			fs.unlinkSync(path.join(folder, thumbId));
 		}
-	},
-
-	/**
-	 * Gets a list of assets from the database, and filters it.
-	 * @param {object} filters
-	 * @returns {object[]}
-	 */
-	list(filters = {}) { // very simple thanks to the database
-		const list = DB.get().assets;
-		const filtered = list.filter((val) => {
-			for (const [key, value] of Object.entries(filters)) {
-				if (val[key] && val[key] != value) {
-					return false;
-				}
-			}
-			return true;
-		});
-		return filtered;
 	},
 
 	/**
@@ -83,42 +61,6 @@ module.exports = {
 		const filepath = path.join(folder, aId);
 		const exists = fs.existsSync(filepath);
 		return exists;
-	},
-
-	/**
-	 * Returns asset metadata from the database.
-	 * @param {string} aId 
-	 * @returns {object}
-	 */
-	get(aId) {
-		const db = DB.get();
-		const meta = db.assets.find((i) => (
-			i.id == aId
-		));
-		
-		if (!meta) {
-			throw new Error("Asset doesn't exist.");
-		}
-
-		return meta;
-	},
-
-	/**
-	 * Returns asset metadata from the database.
-	 * @param {string} aId 
-	 * @returns {number}
-	 */
-	getIndex(aId) {
-		const db = DB.get();
-		const meta = db.assets.findIndex((i) => (
-			i.id == aId
-		));
-		
-		if (!meta) {
-			throw new Error("Asset doesn't exist.");
-		}
-
-		return meta;
 	},
 
 	/**
@@ -162,10 +104,8 @@ module.exports = {
 	 */
 	save(readStream, ext, info) {
 		return new Promise((res, rej) => {
-			const db = DB.get();
 			info.id = `${fUtil.generateId()}.${ext}`;
-			db.assets.unshift(info);
-			DB.save(db);
+			DB.insert("assets", info)
 			// save the file
 			let writeStream = fs.createWriteStream(path.join(folder, info.id));
 			readStream.resume();
@@ -173,19 +113,5 @@ module.exports = {
 			// wait for the stream to end
 			readStream.on("end", () => res(info.id));
 		});
-	},
-
-	/**
-	 * Updates an asset's info.
-	 * It cannot replace the asset itself.
-	 * @param {string} aId 
-	 * @param {object} info 
-	 * @returns {void}
-	 */
-	update(aId, info) {
-		const db = DB.get();
-		const index = this.getIndex(aId);
-		Object.assign(db.assets[index], info);
-		DB.save(db);
 	}
 };
