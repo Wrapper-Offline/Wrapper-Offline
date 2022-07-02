@@ -12,7 +12,7 @@ const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
 // stuff
-const server = require("./server");
+
 const discord = require("./utils/discord");
 
 /**
@@ -23,4 +23,5 @@ if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
 // start the server
+const server = require("./server");
 server();

@@ -7,6 +7,7 @@ const httpz = require("httpz");
 const app = require("./app");
 const asset = require("./asset");
 const char = require("./char");
+const movie = require("./movie");
 const theme = require("./theme");
 const discord = require("../utils/discord");
 
@@ -22,6 +23,7 @@ group
 	.add(app)
 	.add(asset)
 	.add(char)
+	.add(movie)
 	.add(theme);
 
 module.exports = group;

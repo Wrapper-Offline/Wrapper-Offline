@@ -9,8 +9,9 @@ const path = require("path");
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
 const base = Buffer.alloc(1, 0);
 // stuff
+const database = require("../utils/database"), DB = new database();
 const fUtil = require("../utils/fileUtil");
-const parse = require("./parse");
+const parse = require("../utils/parse");
 
 module.exports = {
 	/**
@@ -27,22 +28,10 @@ module.exports = {
 	},
 
 	/**
-	 * Not what you think it is.
-	 * It's just a list of movie IDs.
-	 * @returns {string[]}
+	 * Gets a list of movies from the database.
+	 * @returns {object[]}
 	 */
-	list() {
-		const array = [];
-		fs.readdirSync(folder).forEach(fn => {
-			if (!fn.includes(".xml")) return;
-			// check if the movie and thumbnail exists
-			const mId = fn.substring(0, fn.length - 4);
-			const movie = fs.existsSync(`${folder}/${mId}.xml`);
-			const thumb = fs.existsSync(`${folder}/${mId}.png`);
-			if (movie && thumb) array.push(mId);
-		});
-		return array;
-	},
+	list: () => DB.get().movies,
 
 	/**
 	 * Parses a saved movie for the LVM.
@@ -52,7 +41,6 @@ module.exports = {
 	 */
 	async load(mId, isGet = true) {
 		const filepath = path.join(folder, `${mId}.xml`);
-		if (!fs.existsSync(filepath)) throw new Error("Movie not found.");
 
 		const buffer = fs.readFileSync(filepath);
 		const parsed = await parse.pack(buffer);
@@ -76,14 +64,14 @@ module.exports = {
 		const buffer = fs.readFileSync(filepath);
 
 		// title
-		const title = buffer.slice(
+		const title = buffer.subarray(
 			buffer.indexOf("<title>") + 16,
 			buffer.indexOf("]]></title>")
 		).toString().trim();
 
 		// get the duration string
 		const durBeg = buffer.indexOf('duration="') + 10;
-		const duration = Number.parseFloat(buffer.slice(
+		const duration = Number.parseFloat(buffer.subarray(
 			durBeg,
 			buffer.indexOf('"', durBeg)
 		).toString().trim());
@@ -101,11 +89,11 @@ module.exports = {
 		}
 
 		return {
+			duration,
+			title,
 			date: fs.statSync(filepath).mtime,
 			durationString: durationStr,
-			duration: duration,
 			sceneCount: count,
-			title: title,
 			id: mId,
 		};
 	},
@@ -117,20 +105,38 @@ module.exports = {
 	 * @param {string} mId 
 	 * @returns {Promise<string>}
 	 */
-	async save(body, thumb, mId) {
-		mId ||= fUtil.generateId();
+	async save(body, thumb, id) {
+		return new Promise((resolve, reject) => {
+			id ||= fUtil.generateId();
 
-		// save the thumbnail on manual saves
-		if (thumb) fs.writeFileSync(path.join(folder, `${mId}.png`), thumb);
-		// extract the movie xml and save it
-		const zip = nodezip.unzip(body);
-		const xmlStream = zip["movie.xml"].toReadStream();
+			// save the thumbnail on manual saves
+			if (thumb) {
+				fs.writeFileSync(path.join(folder, `${id}.png`), thumb);
+			}
+			// extract the movie xml and save it
+			const zip = nodezip.unzip(body);
+			const xmlStream = zip["movie.xml"].toReadStream();
 
-		let writeStream = fs.createWriteStream(path.join(folder, `${mId}.xml`));
-		xmlStream.on("data", b => writeStream.write(b));
-		xmlStream.on("end", async () => {
-			writeStream.close();
-			return mId;
+			let writeStream = fs.createWriteStream(path.join(folder, `${id}.xml`));
+			xmlStream.on("data", b => writeStream.write(b));
+			xmlStream.on("end", async () => {
+				writeStream.close((e) => {
+					if (e) throw e;
+
+					this.meta(id, true).then((info) => {
+						const db = DB.get();
+						db.movies.push({
+							id,
+							duration: info.durationString,
+							date: info.date,
+							title: info.title,
+							sceneCount: info.sceneCount,
+						});
+						DB.save(db);
+						resolve(id);
+					});
+				});
+			});
 		});
 	},
 
