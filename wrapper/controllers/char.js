@@ -16,9 +16,16 @@ group
 		const { assetId: id } = req.body;
 		res.assert(id, 400, "Missing one or more fields.");
 
-		const buf = Char.load(id);
-		res.setHeader("Content-Type", "application/xml");
-		res.end(Buffer.concat([base, buf]));
+		console.log(`Loading character #${id}...`);
+		try {
+			const buf = Char.load(id);
+			res.setHeader("Content-Type", "application/xml");
+			res.end(Buffer.concat([base, buf]));
+		} catch (e) {
+			console.log("But nobody came.");
+			res.status(404);
+			res.end("1");
+		}
 	})
 	.route("POST", "/goapi/getCCPreMadeCharacters", (req, res) => res.end())
 	.route("POST", "/goapi/saveCCCharacter/", (req, res) => {

@@ -11,9 +11,51 @@ const Movie = require("../models/movie");
 const group = new httpz.Group();
 
 group
+	// delete
+	.route("GET", /\/api\/movie\/delete\/([^/]+)$/, async (req, res) => {
+		const id = req.matches[1];
+
+		console.log(`(Warning!) Deleting movie #${id}`);
+		try {
+			await Movie.delete(id);
+			res.json({ status: "ok" });
+		} catch (e) {
+			console.error("This movie just won't die!", e);
+			res.status(404);
+			res.json({ status: "error" });
+		}
+	})
 	// list
 	.route("GET", "/api/movies/list", (req, res) => {
 		res.json(DB.select("movies"));
+	})
+	// load
+	.route(
+		"*",
+		["/goapi/getMovie/", /\/file\/movie\/file\/([^/]+)$/],
+		async (req, res) => {
+			const isGet = req.method == "GET";
+			const id = isGet ?
+				req.matches[1] :
+				req.query.movieId;
+			res.assert(id, 400, "");
+			
+			try {
+				const buf = await Movie.load(id, isGet);
+				res.setHeader("Content-Type", "application/zip");
+				res.end(buf);
+			} catch (e) {
+				console.log("Error loading movie:", e);
+				res.status(404);
+				res.end();
+			}
+		}
+	)
+	// redirect
+	.route("*", /\/videomaker\/full\/(\w+)\/tutorial$/, (req, res) => {
+		const theme = req.matches[1];
+
+		res.redirect(`/go_full?tray=${theme}&tutorial=0`);
 	})
 	// save
 	.route("POST", "/goapi/saveMovie/", async (req, res) => {
@@ -25,8 +67,8 @@ group
 		const thumb = trigAutosave ?
 			null : Buffer.from(req.body.thumbnail_large, "base64");
 
-		const mId = await Movie.save(body, thumb, req.body.movieId)
-		res.end("0" + mId);
+		const id = await Movie.save(body, thumb, req.body.movieId)
+		res.end("0" + id);
 	})
 	// thumb
 	.route("*", /\/file\/movie\/thumb\/([^/]+)$/, (req, res) => {

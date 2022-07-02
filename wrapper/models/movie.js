@@ -16,28 +16,27 @@ const parse = require("../utils/parse");
 module.exports = {
 	/**
 	 * Deletes a movie.
-	 * @param {string} mId 
+	 * @param {string} id 
 	 */
-	delete(mId) {
-		console.log(mId.length);
-		// find files by id and delete them
-		const match = fs.readdirSync(folder)
-			.filter(file => file.includes(mId));
-		if (match) match.forEach(filename => 
-			fs.unlinkSync(path.join(folder, filename)));
+	delete(id) {
+		DB.delete("movies", id);
+
+		// delete the actual file
+		fs.unlinkSync(path.join(folder, `${id}.xml`));
+		fs.unlinkSync(path.join(folder, `${id}.png`));
 	},
 
 	/**
 	 * Parses a saved movie for the LVM.
 	 * @param {string} mId 
 	 * @param {boolean} isGet 
-	 * @returns {Buffer}
+	 * @returns {Promise<Buffer>}
 	 */
 	async load(mId, isGet = true) {
 		const filepath = path.join(folder, `${mId}.xml`);
 
 		const buffer = fs.readFileSync(filepath);
-		const parsed = await parse.pack(buffer);
+		const parsed = await parse(buffer);
 		return isGet ? parsed : Buffer.concat([base, parsed]);
 	},
 

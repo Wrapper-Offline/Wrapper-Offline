@@ -42,10 +42,6 @@ module.exports = class GoDatabase {
 	 * @param {string} id Id to look for.
 	 */
 	delete(from, id) {
-		if (!data) {
-			throw new Error("Must input new data to save.");
-		}
-
 		const { index } = this.get(from, id);
 
 		this.json[from].splice(index, 1);
