@@ -1,11 +1,13 @@
 // modules
 const fs = require("fs");
+const path = require("path");
 // vars
-const baseDb = { assets: [], watermarks: [] };
+const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
+const baseDb = { assets: [], movies: [], folders: [], watermarks: [] };
 
 module.exports = class {
 	constructor() {
-		this.path = `${__dirname}/../${process.env.ASSET_FOLDER}/database.json`;
+		this.path = path.join(folder, "database.json");
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
 			console.error("Database doesn't exist! Creating...");
@@ -14,7 +16,7 @@ module.exports = class {
 		try {
 			this.refresh();
 		} catch (err) {
-			console.error("Error loading DB: ", err)
+			console.error("Error loading DB:", err)
 			// return the base db
 			return baseDb;
 		}

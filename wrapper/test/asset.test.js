@@ -5,6 +5,7 @@ const base64 = require("js-base64");
 const fs = require("fs");
 const path = require("path");
 const request = require("supertest");
+const xmldoc = require("xmldoc");
 // stuff
 const server = require("../server")();
 
@@ -63,6 +64,28 @@ describe("Asset", () => {
 				}
 
 				done();
+			});
+	});
+	it("/goapi/getUserAssetsXml/", (done) => {
+		request(server.server)
+			.post("/goapi/getUserAssetsXml/")
+			.send({
+				type: "char",
+				subtype: 0,
+				themeId: "family"
+			})
+			.end((e, res) => {
+				if (e) {
+					done(e);
+				}
+
+				const list = new xmldoc.XmlDocument(res.text);
+
+				if (list.childWithAttribute("id", id)) {
+					done();
+				} else {
+					done(new Error("it's not listed"));
+				}
 			});
 	});
 });

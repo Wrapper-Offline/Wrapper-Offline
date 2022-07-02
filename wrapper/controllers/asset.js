@@ -78,7 +78,11 @@ group
 	// load
 	.route(
 		"*",
-		["/goapi/getAsset/", "/goapi/getAssetEx/", /\/assets\/([\S]+)/],
+		[
+			"/goapi/getAsset/",
+			"/goapi/getAssetEx/",
+			/\/(assets|goapi\/getAsset)\/([\S]+)/
+		],
 		async (req, res) => {
 			const url = req.parsedUrl.pathname;
 			const id = url.charAt(1) == "a" ?
@@ -98,7 +102,7 @@ group
 	// meta
 	//  #get
 	.route("POST", "/api_v2/asset/get", (req, res) => {
-		const id = req.body.data.id || req.body.data.starter_id;
+		const id = req.body?.data.id || req.body?.data.starter_id;
 		res.assert(id, 400, { status: "error" });
 
 		try {
