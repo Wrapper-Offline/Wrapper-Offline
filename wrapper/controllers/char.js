@@ -12,8 +12,9 @@ const Char = require("../models/char");
 const group = new httpz.Group();
 
 group
+	// load
 	.route("POST", "/goapi/getCcCharCompositionXml/", (req, res) => {
-		const { assetId: id } = req.body;
+		const id = req.body.assetId;
 		res.assert(id, 400, "Missing one or more fields.");
 
 		console.log(`Loading character #${id}...`);
@@ -27,7 +28,27 @@ group
 			res.end("1");
 		}
 	})
+	// premade
 	.route("POST", "/goapi/getCCPreMadeCharacters", (req, res) => res.end())
+	// redirect
+	.route("GET", /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/, (req, res) => {
+		let [, theme, mode, id] = req.matches;
+			
+		let redirect;
+		switch (mode) {
+			case "/copy": {
+				redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
+				break;
+			} default: {
+				const type = req.query.type || defaultTypes[theme] || "";
+				redirect = `/cc?themeId=${theme}&bs=${type}`;
+				break;
+			}
+		}
+		
+		res.redirect(redirect);
+	})
+	// save
 	.route("POST", "/goapi/saveCCCharacter/", (req, res) => {
 		res.assert(
 			req.body.body,
@@ -47,23 +68,6 @@ group
 		const id = Char.save(body, meta);
 		Char.saveThumb(id, thumb)
 		res.end("0" + id);
-	})
-	.route("GET", /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/, (req, res) => {
-		let [, theme, mode, id] = req.matches;
-			
-		let redirect;
-		switch (mode) {
-			case "/copy": {
-				redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
-				break;
-			} default: {
-				const type = req.query.type || defaultTypes[theme] || "";
-				redirect = `/cc?themeId=${theme}&bs=${type}`;
-				break;
-			}
-		}
-		
-		res.redirect(redirect);
 	});
 
 module.exports = group;

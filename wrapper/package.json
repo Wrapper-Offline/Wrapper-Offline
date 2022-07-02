@@ -24,6 +24,7 @@
 		"node-static": "^0.7.11",
 		"node-zip": "github:kyriosli/node-zip",
 		"sharp": "^0.30.6",
+		"tempfile": "^4.0.0",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {

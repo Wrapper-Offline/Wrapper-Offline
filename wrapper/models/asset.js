@@ -97,7 +97,7 @@ module.exports = {
 
 	/**
 	 * Saves an asset.
-	 * @param {fs.ReadStream} readStream 
+	 * @param {fs.ReadStream | string} readStream 
 	 * @param {string} ext
 	 * @param {object} info 
 	 * @returns {string}
@@ -108,6 +108,12 @@ module.exports = {
 			DB.insert("assets", info)
 			// save the file
 			let writeStream = fs.createWriteStream(path.join(folder, info.id));
+
+			if (typeof readStream == "string") {
+				// it's a file path
+				readStream = fs.createReadStream(readStream);
+				readStream.pause();
+			}
 			readStream.resume();
 			readStream.pipe(writeStream);
 			// wait for the stream to end

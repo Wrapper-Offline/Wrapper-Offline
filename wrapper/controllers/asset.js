@@ -1,5 +1,5 @@
 /**
- * app routes
+ * asset routes
  */
 // modules
 const fs = require("fs");

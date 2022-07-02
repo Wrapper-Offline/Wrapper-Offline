@@ -1,5 +1,5 @@
 /**
- * app routes
+ * movie routes
  */
 // modules
 const httpz = require("httpz");
