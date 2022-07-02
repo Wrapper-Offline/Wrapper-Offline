@@ -67,7 +67,7 @@
 						</td>
 						<td>
 							<div>${title}</div>
-							<div>${tbl.durationString}</div>
+							<div>${tbl.duration}</div>
 						</td>
 						<td>
 							<span>${date}, ${time}</span>
@@ -88,7 +88,7 @@
 		loadMore.onclick = loadRows;
 
 
-		$.get("/movieList", data => {
+		$.get("/api/movies/list", data => {
 			json = data;
 			loadRows();
 		});

@@ -28,12 +28,6 @@ module.exports = {
 	},
 
 	/**
-	 * Gets a list of movies from the database.
-	 * @returns {object[]}
-	 */
-	list: () => DB.get().movies,
-
-	/**
 	 * Parses a saved movie for the LVM.
 	 * @param {string} mId 
 	 * @param {boolean} isGet 
@@ -123,16 +117,19 @@ module.exports = {
 				writeStream.close((e) => {
 					if (e) throw e;
 
-					this.meta(id, true).then((info) => {
-						const db = DB.get();
-						db.movies.push({
+					this.meta(id, true).then((meta) => {
+						const info = {
 							id,
-							duration: info.durationString,
-							date: info.date,
-							title: info.title,
-							sceneCount: info.sceneCount,
-						});
-						DB.save(db);
+							duration: meta.durationString,
+							date: meta.date,
+							title: meta.title,
+							sceneCount: meta.sceneCount,
+						}
+						try {
+							DB.update("movies", id, info);
+						} catch (e) {
+							DB.insert("movies", info);
+						}
 						resolve(id);
 					});
 				});
@@ -141,14 +138,17 @@ module.exports = {
 	},
 
 	/**
-	 * Looks for a match in the _SAVED folder.
-	 * If there's no match found, it returns null.
-	 * @param {string} wfId 
-	 * @returns {Buffer | null}
+	 * Returns a stream of a movie thumbnail.
+	 * @param {string} id 
+	 * @returns {fs.readStream}
 	 */
-	thumb(mId) { // look for match in folder
-		const match = fs.readdirSync(folder)
-			.find(file => file.includes(`${mId}.png`));
-		return match ? fs.readFileSync(path.join(folder, match)) : null;
+	thumb(id) { // look for match in folder
+		const filepath = path.join(folder, `${id}.png`);
+		if (fs.existsSync(filepath)) {
+			const readStream = fs.createReadStream(filepath);
+			return readStream;
+		} else {
+			throw new Error("Movie doesn't exist.");
+		}
 	},
 }

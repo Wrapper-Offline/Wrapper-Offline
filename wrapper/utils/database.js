@@ -74,6 +74,7 @@ module.exports = class GoDatabase {
 		const object = json.find((i, ind) => {
 			if (i.id == id) {
 				index = ind;
+				return true;
 			}
 		});
 

@@ -16,7 +16,7 @@ const group = new httpz.Group();
 
 group
 	// add all the routes
-	.route("GET", "/", (req, res) => {
+	.route("*", "/", (req, res) => {
 		discord("Video List");
 		res.render("list", {});
 	})

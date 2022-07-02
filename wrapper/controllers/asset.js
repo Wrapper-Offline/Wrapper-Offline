@@ -8,8 +8,8 @@ const mime = require("mime-types");
 // vars
 const header = process.env.XML_HEADER;
 // stuff
-const database = require("../utils/database"), DB = new database();
 const Asset = require("../models/asset");
+const database = require("../utils/database"), DB = new database();
 const rFileUtil = require("../utils/realFileUtil");
 
 // create the group
