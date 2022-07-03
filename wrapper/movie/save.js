@@ -4,6 +4,7 @@
  */
 // stuff
 const Movie = require("./main");
+const Fs = require("fs");
 
 /**
  * @param {import("http").IncomingMessage} req
@@ -18,10 +19,11 @@ module.exports = async function (req, res, url) {
 		res.end();
 		return true;
 	}
+	const autoThumb = Fs.readFileSync(process.env.THUMB_URL);
 	const trigAutosave = req.body.is_triggered_by_autosave;
 	if (trigAutosave && !req.body.movieId) return res.end("0");
 	const body = Buffer.from(req.body.body_zip, "base64");
-	const thumb = trigAutosave ? null : Buffer.from(req.body.thumbnail_large, "base64");
+	const thumb = trigAutosave ? autoThumb : Buffer.from(req.body.thumbnail_large, "base64");
 
 	try {
 		const mId = await Movie.save(body, thumb, req.body.movieId)
