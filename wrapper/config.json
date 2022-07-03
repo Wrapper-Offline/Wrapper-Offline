@@ -4,6 +4,7 @@
 	"CLIENT_URL": "/static/ad44370a650793d9",
 	"CHAR_BASE_URL": "../server/characters",
 	"THUMB_BASE_URL": "../server/thumbnails",
+	"THUMB_URL": "./pages/preThumbs/thumb.png",
 	"XML_HEADER": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
 	"SERVER_PORT": 4343,
 	"STATIC_PORT": 4664,
