@@ -11,7 +11,7 @@ module.exports = class GoDatabase {
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
 			console.error("Database doesn't exist! Creating...");
-			this.save(baseDb);
+			this.#save(baseDb);
 
 			try {
 				this.#refresh();
