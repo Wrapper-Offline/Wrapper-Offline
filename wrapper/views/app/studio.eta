@@ -26,7 +26,7 @@
 		<main>
 			<nav id="importer">
 				<nav id="import_head">
-					<label id="import-toggle" for="importer-files" class="button_big">UPLOAD FILES</label>
+					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
 					<h3 class="close-button" onclick="hideImporter()">✖</h3>
 					<form>
 						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
@@ -37,16 +37,22 @@
 			<%~ it.object(it.attrs, it.params) %>
 		</main>
 		<div id="previewer" style="display:none">
-			<div id="preview_head">
+			<div id="preview-inside">
 				<h2 id="preview-video">Preview Video</h2>
-				<h2 class="close-button" onclick="hidePreviewer()">✖</h2>
+			
+				<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
+					width="640" height="360">
+					<param name="flashvars" />
+					<param name="allowScriptAccess" value="always" />
+					<param name="allowFullScreen" value="true" />
+				</object>
+				<div class="buttons">
+					<button class="preview-button edit" type="button" onclick="hidePreviewer();">Back to editing</button>
+					<button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>
+				</div>
+
+				<a class="close-button" onclick="hidePreviewer()">×</a>
 			</div>
-			<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
-				width="800" height="450">
-				<param name="flashvars" />
-				<param name="allowScriptAccess" value="always" />
-				<param name="allowFullScreen" value="true" />
-			</object>
 		</div>
 	</body>
 

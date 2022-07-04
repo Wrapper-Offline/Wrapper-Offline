@@ -1,6 +1,7 @@
 const importer = $("#importer");
 const previewer = $("#previewer");
 const studio = $("#obj");
+const body = $("body");
 
 /**
  * studio functions
@@ -49,17 +50,20 @@ function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
 		isInitFromExternal: 1,
 		startFrame: startFrame,
 		autostart: 1,
+		isPreview: 1,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>",
 	}).toString();
 	previewer.find("object param[name='flashvars']").attr("value", flashvars);
 	previewer.css("display", "block");
 	studio.css("height", "1px");
+	body.css("background-color", "#262d3f");
 }
 function retrievePreviewPlayerData() { return movieDataXmlStr }
 function hidePreviewer() {
 	previewer.css("display", "none");
 	studio.css("height", "");
+	body.css("background-color", "");
 }
 
 /**
