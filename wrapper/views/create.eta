@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title>Video List</title>
+		<meta name="description" content="Wrapper: Offline's create page"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
+		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/global.js"></script>
+	</head>
+
+	<body>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
+
+		<main>
+			<h1>Select a theme</h1>
+
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('custom', 'family')">
+					<img src="/pages/img/themes/custom.jpg" alt="Comedy World">
+					Comedy World
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('action', 'cc2')">
+					<img src="/pages/img/themes/action.jpg" alt="Lil' Peepz">
+					Lil' Peepz
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('business', 'business')">
+					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
+					Business Friendly
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('retro')">
+					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
+					Cartoon Classics
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('politics2')">
+					<img src="/pages/img/themes/politics2.jpg" alt="White Houserz">
+					White Houserz
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('stick')">
+					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
+					Stick Figure
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('anime', 'anime')">
+					<img src="/pages/img/themes/anime.jpg" alt="Anime">
+					Anime
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('ninjaanime', 'ninjaanime')">
+					<img src="/pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
+					Ninja Anime
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('spacecitizen', 'spacecitizen')">
+					<img src="/pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
+					Space Citizens
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('chibi', 'chibi')">
+					<img src="/pages/img/themes/chibi.jpg" alt="Chibi Peepz">
+					Chibi Peepz
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('ninja', 'ninja')">
+					<img src="/pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
+					Chibi Ninjas
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('animal', 'cc2')">
+					<img src="/pages/img/themes/animal.jpg" alt="Lil' Petz World">
+					Lil' Petz World
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('space', 'cc2')">
+					<img src="/pages/img/themes/space.jpg" alt="Space Peepz">
+					Space Peepz
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('fullenergy')">
+					<img src="/pages/img/themes/fullenergy.png" alt="Full Energy">
+					<div>Full Energy</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('politic')">
+					<img src="/pages/img/themes/politic.png" alt="Politics & Celebrity">
+					<div>Politics & Celebrity</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('bizmodels')">
+					<img src="/pages/img/themes/bizmodels.jpg" alt="Business Models">
+					Business Models
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('sticklybiz')">
+					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
+					Stickly Business
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('christmas')">
+					<img src="/pages/img/themes/christmas.png" alt="Holiday & Seasonal">
+					<div>Holiday & Seasonal</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('monstermsh')">
+					<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
+					<div>Monsters Mayhem</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('akon')">
+					<img src="/pages/img/themes/akon.jpg" alt="AKON&#8482;">
+					AKON&#8482;
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('ben10')">
+					<img src="/pages/img/themes/ben10.png" alt="Ben 10&#8482;">
+					Ben 10&#8482;
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('botdf', 'cc2')">
+					<img src="/pages/img/themes/botdf.jpg" alt="Blood on the Dance Floor&#8482;">
+					<div>Blood on the Dance Floor&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('bunny')">
+					<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
+					<div>It's Happy Bunny&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('chowder')">
+					<img src="/pages/img/themes/chowder.png" alt="Chowder&#8482;">
+					<div>Chowder&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('domo')">
+					<img src="/pages/img/themes/domo.png" alt="Domo&#8482;">
+					<div>Domo&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('monkeytalk')">
+					<img src="/pages/img/themes/monkeytalk.png" alt="SuperRica & Rashy&#8482;">
+					<div>SuperRica & Rashy&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('sf')">
+					<img src="/pages/img/themes/sf.png" alt="Street Fighter&#8482;">
+					<div>Street Fighter&#8482;</div>
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('startrek')">
+					<img src="/pages/img/themes/startrek.jpg" alt="Star Trek&#8482; Quogs">
+					<div>Star Trek&#8482; Quogs</div>
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<a href="#" onclick="redirect('toonadv', 'cctoonadv')">
+					<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
+					Toon Adventure&#8482;
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('underdog')">
+					<img src="/pages/img/themes/underdog.png" alt="Underdog&#8482;">
+					Underdog&#8482;
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('willie')">
+					<img src="/pages/img/themes/willie.jpg" alt="Willie Nelson&#8482;">
+					Willie Nelson&#8482;
+				</a>
+			</div>
+			<div class="theme">
+				<a href="#" onclick="redirect('street')">
+					<img src="/pages/img/themes/street.png" alt="Street">
+					Street
+				</a>
+			</div>
+		</main>
+
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
+	</body>
+
+	<script>
+		// filter the list
+		const params = new URLSearchParams(window.location.search);
+		// default to all themes
+		const filter = params.get("filter") || "vl";
+		if (filter == "cc")
+			$(".theme").not("[data-has-cc]").hide();
+
+		function redirect(tId, ccId = false) {
+			if (filter == "cc") {
+				window.location.href = `./cc_browser?themeId=${ccId}`;
+				return;
+			}
+			window.location.href = `./go_full?tray=${tId}`;
+		}
+
+	</script>
+
+</html>

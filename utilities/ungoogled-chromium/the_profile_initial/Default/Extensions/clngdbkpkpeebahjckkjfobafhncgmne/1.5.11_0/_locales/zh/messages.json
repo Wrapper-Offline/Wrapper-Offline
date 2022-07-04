@@ -1,0 +1,211 @@
+{
+   "addStyleLabel": {
+      "description": "Label for the button to go to the add style page",
+      "message": "编写新的样式"
+   },
+   "addStyleTitle": {
+      "description": "Title of the page for adding styles",
+      "message": "添加样式"
+   },
+   "appliesAdd": {
+      "description": "Label for the button to add an 'applies' entry",
+      "message": "添加"
+   },
+   "appliesDisplay": {
+      "description": "Text on the manage screen to describe what the style applies to",
+      "message": "应用到: $applies$",
+      "placeholders": {
+         "applies": {
+            "content": "$1"
+         }
+      }
+   },
+   "appliesDisplayTruncatedSuffix": {
+      "description": "Text added to appliesDisplay when there are more sites for the style than are displayed",
+      "message": "以及更多"
+   },
+   "appliesDomainOption": {
+      "description": "Option to make the style apply to the entered string as a domain",
+      "message": "指定域上的URL"
+   },
+   "appliesHelp": {
+      "description": "Help text for 'applies to' section",
+      "message": "使用“应用到”来控制这个样式应用到哪些地址上。"
+   },
+   "appliesLabel": {
+      "description": "Label for 'applies to' fields on the edit/add screen",
+      "message": "应用到"
+   },
+   "appliesRegexpOption": {
+      "description": "Option to make the style apply to the entered string as a regular expression",
+      "message": "匹配正则的URL"
+   },
+   "appliesRemove": {
+      "description": "Label for the button to remove an 'applies' entry",
+      "message": "移除"
+   },
+   "appliesSpecify": {
+      "description": "Label for the button to make a style apply only to specific sites",
+      "message": "指定站点"
+   },
+   "appliesToEverything": {
+      "description": "Text displayed for styles that apply to all sites",
+      "message": "所有站点"
+   },
+   "appliesUrlOption": {
+      "description": "Option to make the style apply to the entered string as a URL",
+      "message": "地址"
+   },
+   "appliesUrlPrefixOption": {
+      "description": "Option to make the style apply to the entered string as a URL prefix",
+      "message": "以指定地址开始"
+   },
+   "checkAllUpdates": {
+      "description": "Label for the button to check all styles for updates",
+      "message": "检查所有样式的更新"
+   },
+   "checkForUpdate": {
+      "description": "Label for the button to check a single style for an update",
+      "message": "检查更新"
+   },
+   "checkingForUpdate": {
+      "description": "Text to display when checking a style for an update",
+      "message": "检查中..."
+   },
+   "deleteStyleConfirm": {
+      "description": "Confirmation before deleting a style",
+      "message": "确定要删除这个样式吗?"
+   },
+   "deleteStyleLabel": {
+      "description": "Label for the button to delete a style",
+      "message": "删除"
+   },
+   "description": {
+      "description": "Extension description",
+      "message": "Stylus，一个用户样式管理器，帮助您重新定义网页样式。Stylus易于为Google，Facebook，Youtube，Orkut以及其它各类型网站安装样式和主题。"
+   },
+   "disableStyleLabel": {
+      "description": "Label for the button to disable a style",
+      "message": "禁用"
+   },
+   "editStyleHeading": {
+      "description": "Title of the page for editing styles",
+      "message": "编辑样式"
+   },
+   "editStyleLabel": {
+      "description": "Label for the button to go to the edit style page",
+      "message": "编辑"
+   },
+   "editStyleTitle": {
+      "description": "Title of the page for editing styles",
+      "message": "编辑样式 $stylename$",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "enableStyleLabel": {
+      "description": "Label for the button to enable a style",
+      "message": "启用"
+   },
+   "findStylesForSite": {
+      "description": "Text for a link that gets a list of styles for the current site",
+      "message": "查找更多适合此站点的样式"
+   },
+   "helpAlt": {
+      "description": "Alternate text for help buttons",
+      "message": "帮助"
+   },
+   "installUpdate": {
+      "description": "Label for the button to install an update for a single style",
+      "message": "安装更新"
+   },
+   "manageHeading": {
+      "description": "Heading for the manage page",
+      "message": "已安装的样式"
+   },
+   "noStylesForSite": {
+      "description": "Text displayed when no styles are installed for the current site",
+      "message": "当前站点上没有已安装的样式"
+   },
+   "openManage": {
+      "description": "Link to open the manage page.",
+      "message": "管理已安装样式"
+   },
+   "sectionAdd": {
+      "description": "Label for the button to add a section",
+      "message": "添加新节"
+   },
+   "sectionCode": {
+      "description": "Label for the code for a section",
+      "message": "代码"
+   },
+   "sectionRemove": {
+      "description": "Label for the button to remove a section",
+      "message": "移除节"
+   },
+   "styleCancelEditLabel": {
+      "description": "Label for cancel button for style editing",
+      "message": "返回到管理"
+   },
+   "styleChangesNotSaved": {
+      "description": "Text for the prompt when changes are made to a style and the user tries to leave without saving",
+      "message": "您已经修改了此样式，但尚未保存"
+   },
+   "styleEnabledLabel": {
+      "description": "Label for the enabled state of styles",
+      "message": "已启用"
+   },
+   "styleInstall": {
+      "description": "Confirmation when installing a style",
+      "message": "安装 '$stylename$' 到 Stylus?",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "styleMissingName": {
+      "description": "Error displayed when user saves without providing a name",
+      "message": "请输入名称"
+   },
+   "styleSaveLabel": {
+      "description": "Label for save button for style editing",
+      "message": "保存"
+   },
+   "styleToMozillaFormatHelp": {
+      "description": "Help info for the Mozilla format header section that converts the code to/from Mozilla format",
+      "message": "用于Firefox上的Stylish的Mozilla格式样式代码可以在 userstyles.org 上提交"
+   },
+   "styleUpdate": {
+      "description": "Confirmation when updating a style",
+      "message": "你確定要更新 '$stylename$' 嗎？",
+      "placeholders": {
+         "stylename": {
+            "content": "$1"
+         }
+      }
+   },
+   "updateCheckFailBadResponseCode": {
+      "description": "Text that displays when an update check failed because the response code indicates an error",
+      "message": "更新失败: 服务器了返回代码 $code$。",
+      "placeholders": {
+         "code": {
+            "content": "$1"
+         }
+      }
+   },
+   "updateCheckFailServerUnreachable": {
+      "description": "Text that displays when an update check failed because the update server is unreachable",
+      "message": "更新失败: 服务器无法访问."
+   },
+   "updateCheckSucceededNoUpdate": {
+      "description": "Text that displays when an update check completed and no update is available",
+      "message": "已经是最新的."
+   },
+   "updateCompleted": {
+      "description": "Text that displays when an update completed",
+      "message": "更新完成."
+   }
+}

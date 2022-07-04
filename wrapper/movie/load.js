@@ -1,37 +1,45 @@
-const movie = require('./main');
-const base = Buffer.alloc(1, 0);
+/**
+ * route
+ * movie loading
+ */
+// stuff
+const Movie = require("./main");
 
-module.exports = function (req, res, url) {
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
+module.exports = async function (req, res, url) {
+	let mId, isGet = false;
 	switch (req.method) {
-		case 'GET': {
-			const match = req.url.match(/\/movies\/([^.]+)(?:\.(zip|xml))?$/);
+		case "GET": {
+			const match = req.url.match(/\/file\/movie\/file\/([^/]+)$/);
 			if (!match) return;
-
-			var id = match[1], ext = match[2];
-			switch (ext) {
-				case 'zip':
-					res.setHeader('Content-Type', 'application/zip');
-					movie.loadZip(id).then(v => { res.statusCode = 200, res.end(v) })
-						.catch(e => { res.statusCode = 404, res.end() })
-					break;
-				default:
-					res.setHeader('Content-Type', 'text/xml');
-					movie.loadXml(id).then(v => { res.statusCode = 200, res.end(v) })
-						.catch(e => { res.statusCode = 404, res.end() })
+			mId = match[1];
+			isGet = true;
+			break;
+		} case "POST": {
+			if (!url.pathname.startsWith("/goapi/getMovie/")) return;
+			else if (!url.query.movieId) {
+				res.statusCode = 400;
+				res.end();
+				return true;
 			}
-			return true;
-		}
-
-		case 'POST': {
-			if (!url.path.startsWith('/goapi/getMovie/')) return;
-			res.setHeader('Content-Type', 'application/zip');
-			process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-
-			movie.loadZip(url.query.movieId).then(b =>
-				res.end(Buffer.concat([base, b]))
-			).catch(e => res.end('1'));
-			return true;
-		}
-		default: return;
+			mId = url.query.movieId;
+			break;
+		} default: return;
 	}
+
+	try {
+		const buf = await Movie.load(mId, isGet);
+		res.setHeader("Content-Type", "application/zip");
+		res.end(buf);
+	} catch (err) {
+		console.error(err);
+		res.statusCode = 404;
+		res.end();
+	}
+	return true;
 }

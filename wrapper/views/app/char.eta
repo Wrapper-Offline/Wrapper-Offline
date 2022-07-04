@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title><%= it.extra.title %></title>
+		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<style>
+			body {
+				background: #eee;
+			}
+		</style>
+		<script>
+			function characterSaved() {
+				window.location = "/"
+			}
+		</script>
+	</head>
+
+	<body>
+		<%~ includeFile("../includes/header", { env: it.env }) %>
+
+		<main>
+			<%~ it.extra.object(it.extra.attrs, it.extra.params) %>
+		</main>
+
+		<%~ includeFile("../includes/footer", { env: it.env }) %>
+	</body>
+</html>

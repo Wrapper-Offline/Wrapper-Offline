@@ -1,24 +1,33 @@
 {
-	"GET": {
+	"ALL": {
 		"/index.html": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "/list"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
-		"/$": {
+		"^/$": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "/list"
 			},
 			"statusCode": 302,
 			"content": ""
-		},
+		}
+	},
+	"GET": {
 		"/goapi/getAssetTags": {
 			"headers": {
 				"Content-Type": "application/json"
 			},
-			"content": "111"
+			"content": "[]"
+		},
+		"/account/logo": {
+			"headers": {
+				"Location": "/settings"
+			},
+			"statusCode": 302,
+			"content": ""
 		},
 		"/crossdomain.xml": {
 			"headers": {
@@ -30,19 +39,14 @@
 		"go_full.swf": {},
 		"favicon.ico": {},
 		"char_default.png": {
-			"content": "{\"message\":\"REQUEST_HAS_EXPIRED\"}"
+			"content": ""
 		},
-		"pages/html/(.*)": {
-			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
-			}
-		},
-		"pages/css/(.*)": {
+		"pages/css/(.*)(css|CSS)$": {
 			"headers": {
 				"Content-Type": "text/css; charset=UTF-8"
 			}
 		},
-		"pages/fonts/(.*)": {
+		"pages/fonts/(.*)(woff|WOFF)$": {
 			"headers": {
 				"Content-Type": "application/font-woff; charset=UTF-8"
 			}
@@ -61,24 +65,59 @@
 			"headers": {
 				"Content-Type": "image/svg+xml; charset=UTF-8"
 			}
+		},
+		"pages/js/(.*)(js|JS)$": {
+			"headers": {
+				"Content-Type": "text/javascript; charset=UTF-8"
+			}
 		}
 	},
 	"POST": {
-		"/goapi/getUserWatermarks/": {
-			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
-			},
-			"content": "<?xml encoding=\"UTF-8\"?><watermarks><current/><preview/></watermarks>"
-		},
 		"/goapi/getMovieInfo/": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			},
 			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"visualplugin\"/></watermarks>"
+		},
+		"/goapi/getUserFontList/": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\"}"
+		},
+		"/api_v2/team/members": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/studio_preference/get": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":{}}"
+		},
+		"/goapi/getLatestAssetId/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "0"
 		}
 	},
 	"pages": {
-		"/go_full": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/upload_asset'target='dummy'onchanged='(this.files[0]!=undefined)&&sub.click()'><input id='fileupload'name='import'type='file'/><input type='submit'value='submit'id='submit'/></form><script>interactiveTutorial={neverDisplay:function(){return true}};function studioLoaded(arg){console.log(arg)}function initPreviewPlayer(xml){confirm('Before proceeding, please make sure all your changes have been saved.')&&window.open('player?movieId='+flashvars.presaveId,'MsgWindow','width=1280,height=720,left='+(screen.width/2-640)+',top='+(screen.height/2-360))};function exitStudio(){window.location='pages/html/list.html'}const fu=document.getElementById('fileupload'),sub=document.getElementById('submit');function showImporter(){fu.click()};</script>",
+		"/go_full": "",
 		"/cc": "<script>function characterSaved(){window.location='pages/html/list.html'}</script>"
 	}
 }

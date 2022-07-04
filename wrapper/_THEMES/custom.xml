@@ -4299,9 +4299,6 @@
 	<char id="324728788" name="Simslover163" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:Submissions</tags>
 	</char>
-	<char id="328797992" name="Victoria" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
-		<tags>family,_free,_cat:Submissions</tags>
-	</char>
 	<char id="327764688" name="KingRay" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:Submissions</tags>
 	</char>
@@ -4533,17 +4530,20 @@
 		<tags>family,_free,_cat:GoAnimators</tags>
 	</char>
 
-	<char id="327068826" name="Benson (Creator of Wrapper Offline & Helper with Mega CW 2.0)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
-		<tags>family,wocredits,mcwcredits,watchbensononyoutube,_free,_cat:The Credits</tags>
+	<char id="327068826" name="Benson (Creator of Wrapper Offline &amp; Helper with Mega CW 2.0)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+		<tags>family,wocredits,mcwcredits,childgroom,_free,_cat:The Credits</tags>
 	</char>
-	<char id="400001006" name="GoTube (Creator of Mega CW & Mega CW 2.0)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001006" name="GoTube (Creator of Mega CW &amp; Mega CW 2.0)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,wocredits,mcwcredits,_free,_cat:The Credits</tags>
 	</char>
-	<char id="400001007" name="2Epik4u (Mega CW Beta Tester & Supporter)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001007" name="2Epik4u (Mega CW Beta Tester &amp; Supporter)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,mcwcredits,_free,_cat:The Credits</tags>
 	</char>
-	<char id="400001013" name="GoTest334 (Mega CW Beta Tester)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001013" name="GoTest334 (Wrapper: Offline Project Runner &amp; Mega CW Beta Tester)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,mcwcredits,_free,_cat:The Credits</tags>
+	</char>
+	<char id="400001035" name="Octanuary (Creator of Wrapper: Offline (Revision))" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+		<tags>family,worcredits,_free,_cat:The Credits</tags>
 	</char>
 
 	<char id="327412169" name="Made by GoTube" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">

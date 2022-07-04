@@ -110,29 +110,14 @@ if exist "wrapper\_THEMES\themelist-allthemes.xml" (
 	echo ^(7^) Truncated themelist is[91m OFF [0m
 )
 :: Discord RPC
-if exist "wrapper\main-norpc.js" (
-	echo ^(8^) Discord rich prescence is[92m ON [0m
+if !RPC!==y (
+	echo ^(8^) Discord rich presence is[92m ON [0m
 ) else ( 
-	echo ^(8^) Discord rich prescence is[91m OFF [0m
-)
-:: Cepstral
-if exist "wrapper\tts\info-cepstral.json" (
-	echo ^(9^) Provider for Cepstral/VoiceForge voices is[92m VFProxy [0m
-	if exist "wrapper\tts\load-seamus.js" (
-		echo     ^(10^) VFProxy server is[92m PHP Webserver ^(localhost:8181^) [0m
-	) else (
-		if !CEPSTRAL!==y (
-			echo     ^(10^) VFProxy server is[91m seamus-server.tk [0m
-		)
-	)
-) else (
-	if !CEPSTRAL!==y (
-		echo ^(9^) Provider for Cepstral/VoiceForge voices is[91m Cepstral website [0m
-	)
+	echo ^(8^) Discord rich presence is[91m OFF [0m
 )
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-	echo ^(11^) Original LVM Character IDs are[91m OFF [0m
+	echo ^(9^) Original LVM Character IDs are[91m OFF [0m
 )
 :: Dev options
 :: These are really specific options that no casual user would ever really need
@@ -173,7 +158,7 @@ if "!choice!"=="1" (
 	goto toggleoption
 )
 if "!choice!"=="?1" (
-	echo When enabled, two extra windows with more info about what Offline is doing.
+	echo When enabled, an extra window opens with more info about what Offline is doing.
 	echo The launcher will also say more about what it's doing, and never clear itself.
 	echo Mostly meant for troubleshooting and development. Default setting is off.
 	goto reaskoptionscreen
@@ -226,7 +211,7 @@ if "!choice!"=="4" (
 	goto toggleoption
 )
 if "!choice!"=="?4" (
-	echo Turning this off skips checking for Flash, Node.js, http-server, and if the HTTPS cert is installed.
+	echo Turning this off skips checking for Flash and Node.js.
 	echo This is automatically disabled when Offline launches and finds all dependencies.
 	echo If you're on a new computer, or having issues with security messages, you may wanna turn this back on.
 	goto reaskoptionscreen
@@ -247,7 +232,7 @@ if "!choice!"=="6" (
 	) else (
 		set TOGGLETO=y
 	)
-	set CFGLINE=38
+	set CFGLINE=35
 	goto toggleoption
 )
 if "!choice!"=="?6" (
@@ -266,54 +251,20 @@ if "!choice!"=="?7" (
 	echo However, if you want to see everything the program has to offer, turn this on.
 	goto reaskoptionscreen
 )
-:: Rich prescence
+:: Rich presence
 if "!choice!"=="8" goto rpcchange
 if "!choice!"=="?8" (
 	echo By default, Discord rich presence is enabled.
-        echo:
-	echo It's used to show when you're using Wrapper: Offline
-        echo in your "Playing A Game" status on Discord, much like
-        echo how lots of modern computer games will show on your
-        echo Discord status when you're playing them.
-        echo:
-	echo Turning this off will make Offline stop saying
-        echo when you're using it on Discord.
-	goto reaskoptionscreen
-)
-:: Cepstral
-if "!choice!"=="9" goto cepstralchange
-if "!choice!"=="?9" (
-	echo By default, Wrapper: Offline uses the included VFProxy
-	echo for the VoiceForge voices, as VoiceForge was turned
-	echo into a mobile app, causing the original API to be
-	echo deleted. Someone managed to hack the APK and find the
-	echo link, but it outputs in WAV only, so we made a PHP
-	echo wrapper for it ^(VFProxy^) which is intended to bypass
-	echo ratelimits and automatically convert it to MP3 using LAME.
-	echo:
-	echo However, some people seem to be having issues with getting
-	echo it working without any problem.
-	echo:
-	echo Toggling this setting will make it so Wrapper: Offline no
-	echo longer launches VFProxy and instead gets the Cepstral voices
-	echo from the actual Cepstral website's demo.
-	goto reaskoptionscreen
-)
-if "!choice!"=="10" goto vfproxyserverchange
-if "!choice!"=="?10" (
-	echo This setting runs the localhost version of xomdjl_'s VFProxy.
-	echo This makes it easier to use without having to use an external server.
-	echo:
-	echo However, some people seem to be having problems with this.
-	echo:
-	echo Toggling this setting will allow you to use either the localhost VFProxy
-	echo or the seamus-server.tk host of VFProxy.
+    echo:
+	echo It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,
+    echo much like how lots of modern computer games will show on your Discord status when you're playing
+    echo them. Turning this off will make Offline stop saying when you're using it on Discord.
 	goto reaskoptionscreen
 )
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-	if "!choice!"=="11" goto extractchars
-	if "!choice!"=="?11" (
+	if "!choice!"=="9" goto extractchars
+	if "!choice!"=="?9" (
 		echo When first getting Wrapper: Offline, all non-stock characters are put into a single zip file.
 		echo This is because if they're all separate, extracting takes forever and is incredibly annoying.
 		echo If you wish to import characters made on the LVM when it was still up and hosted by Vyond,
@@ -547,75 +498,19 @@ if exist "themelist-allthemes.xml" (
 popd
 goto optionscreen
 
-::::::::::::::::::
-:: Discord RPC  ::
-::::::::::::::::::
+:::::::::::::::::
+:: Discord RPC ::
+:::::::::::::::::
 :rpcchange
-echo Toggling setting...
-pushd wrapper
-if exist "main-norpc.js" (
-	:: disable
-	ren main.js main-rpc.js
-	ren main-norpc.js main.js
-) else ( 
-	:: enable
-	ren main.js main-norpc.js
-	ren main-rpc.js main.js
-)
-popd
-goto optionscreen
-
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
-:cepstralchange
-echo Toggling setting...
-pushd wrapper\tts
-if exist "info-cepstral.json" (
-	:: disable
-	ren info.json info-vfproxy.json
-	ren info-cepstral.json info.json
-) else ( 
-	:: enable
-	ren info.json info-cepstral.json
-	ren info-vfproxy.json info.json
-)
-popd
-set TOTOGGLE=CEPSTRAL
-if !CEPSTRAL!==n (
+:: Set RPC
+set TOTOGGLE=RPC
+set CFGLINE=38
+if !RPC!==n (
 	set TOGGLETO=y
 ) else (
 	set TOGGLETO=n
 )
-set CFGLINE=35
 goto toggleoption
-goto optionscreen
-
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
-:vfproxyserverchange
-echo Toggling setting...
-pushd wrapper\tts
-if exist "load-seamus.js" (
-	:: disable
-	ren load.js load-localvfproxy.js
-	ren load-seamus.js load.js
-) else ( 
-	:: enable
-	ren load.js load-seamus.js
-	ren load-localvfproxy.js load.js
-)
-popd
-set TOTOGGLE=CEPSTRAL
-if !CEPSTRAL!==n (
-	set TOGGLETO=y
-) else (
-	set TOGGLETO=n
-)
-set CFGLINE=35
-goto toggleoption
-goto optionscreen
 
 ::::::::::::::::::::::::
 :: Extract Characters ::

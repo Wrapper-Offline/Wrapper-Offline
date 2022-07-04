@@ -1,20 +1,30 @@
-const loadPost = require('../request/post_body');
-const mp3Duration = require('mp3-duration');
-const voices = require('./info').voices;
-const asset = require('../asset/main');
-const get = require('../request/get');
-const qs = require('querystring');
-const brotli = require('brotli');
-const md5 = require("js-md5");
+/**
+ * route
+ * tts generation
+ */
+// TODO: convert all of this to the fetch api
+// modules
 const base64 = require("js-base64");
-const https = require('https');
-const http = require('http');
-
-function processVoice(voiceName, text) {
+const brotli = require("brotli");
+const https = require("https");
+const http = require("http");
+const ffmpeg = require("fluent-ffmpeg");
+ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
+const md5 = require("js-md5");
+const mp3Duration = require("mp3-duration");
+// vars
+// firefox is good
+const userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0";
+const voices = require("./info").voices;
+// stuff
+const asset = require("../asset/main");
+const { xmlFail } = require("../request/extend");
+const get = require("../request/get");
+const processVoice = (voiceName, text) => {
 	return new Promise((res, rej) => {
 		const voice = voices[voiceName];
 		switch (voice.source) {
-			case "polly": {
+			case "polly": { // working, stops working after some time
 				// make sure it's under the char limit
 				text = text.substring(0, 2999);
 
@@ -52,36 +62,40 @@ function processVoice(voiceName, text) {
 				req.end();
 				break;
 			}
-			/* WARNING: NUANCE TTS API HAS BACKGROUND MUSIC */
-            case "nuance": {
-                var q = qs.encode({
-                    voice_name: voice.arg,
-                    speak_text: text,
-                });
-                https.get({
-                        host: "voicedemo.codefactoryglobal.com",
-                        path: `/generate_audio.asp?${q}`,
-                    },
-                    (r) => {
-                        var buffers = [];
-                        r.on("data", (d) => buffers.push(d));
-                        r.on("end", () => res(Buffer.concat(buffers)));
-                        r.on("error", rej);
-                    }
-                );
-                break;
-            }
-			case "cepstral": {
+			/* WARNING: NUANCE TTS API HAS BACKGROUND MUSIC
+
+
+			shut up xomdjl
+			*/
+			case "nuance": { // working
+				var q = new URLSearchParams({
+					voice_name: voice.arg,
+					speak_text: text,
+				}).toString();
+				https.get({
+						host: "voicedemo.codefactoryglobal.com",
+						path: `/generate_audio.asp?${q}`,
+					},
+					(r) => {
+						var buffers = [];
+						r.on("data", (d) => buffers.push(d));
+						r.on("end", () => res(Buffer.concat(buffers)));
+						r.on("error", rej);
+					}
+				);
+				break;
+			}
+			case "cepstral": { // working
 				https.get('https://www.cepstral.com/en/demos', r => {
 					const cookie = r.headers['set-cookie'];
-					var q = qs.encode({
+					var q = new URLSearchParams({
 						voiceText: text,
 						voice: voice.arg,
 						createTime: 666,
 						rate: 170,
 						pitch: 1,
 						sfx: 'none',
-					});
+					}).toString();
 					var buffers = [];
 					var req = https.get({
 						host: 'www.cepstral.com',
@@ -98,10 +112,10 @@ function processVoice(voiceName, text) {
 				});
 				break;
 			}
-			case "vocalware": {
+			case "vocalware": { // working
 				var [eid, lid, vid] = voice.arg;
 				var cs = md5(`${eid}${lid}${vid}${text}1mp35883747uetivb9tb8108wfj`);
-				var q = qs.encode({
+				var q = new URLSearchParams({
 					EID: voice.arg[0],
 					LID: voice.arg[1],
 					VID: voice.arg[2],
@@ -111,7 +125,7 @@ function processVoice(voiceName, text) {
 					ACC: 5883747,
 					cache_flag: 3,
 					CS: cs,
-				});
+				}).toString();
 				var req = https.get(
 					{
 						host: "cache-a.oddcast.com",
@@ -119,30 +133,8 @@ function processVoice(voiceName, text) {
 						headers: {
 							Referer: "https://www.oddcast.com/",
 							Origin: "https://www.oddcast.com/",
-							"User-Agent":
-								"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+							"User-Agent": userAgent,
 						},
-					},
-					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => res(Buffer.concat(buffers)));
-						r.on("error", rej);
-					}
-				);
-				break;
-			}
-			case "watson": {
-				var q = qs.encode({
-					text: text,
-					voice: voice.arg,
-					download: true,
-					accept: "audio/mp3",
-				});
-				https.get(
-					{
-						host: "text-to-speech-demo.ng.bluemix.net",
-						path: `/api/v3/synthesize?${q}`,
 					},
 					(r) => {
 						var buffers = [];
@@ -200,7 +192,7 @@ function processVoice(voiceName, text) {
 								}
 							);
 							req.end(
-								qs.encode({
+								new URLSearchParams({
 									req_voice: voice.arg,
 									cl_pwd: "",
 									cl_vers: "1-30",
@@ -211,95 +203,112 @@ function processVoice(voiceName, text) {
 									cl_env: "ACAPELA_VOICES",
 									prot_vers: 2,
 									cl_app: "AcapelaGroup_WebDemo_Android",
-								})
+								}).toString()
 							);
 						});
 					}
 				);
 				req.end(
-					qs.encode({
+					new URLSearchParams({
 						json: `{"googleid":"${email}"`,
-					})
+					}).toString()
 				);
 				break;
 			} */
-            case "acapela": {
-                var buffers = [];
-                var req = https.request({
-                        hostname: "acapela-box.com",
-                        path: "/AcaBox/dovaas.php",
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-							Cookie: "AcaBoxLogged=logged; AcaBoxUsername=goaniwrap; acabox=92s39r5vu676g5ekqehbu2o0f2; AcaBoxFirstname=Keegan",
-							Origin: "https://acapela-box.com",
-                            Referer: "https://acapela-box.com/AcaBox/index.php",
-							"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
-                        },
-                    },
-                    (r) => {
-                        r.on("data", (b) => buffers.push(b));
-                        r.on("end", () => {
-                            var json = JSON.parse(Buffer.concat(buffers));
-							get(`${json.snd_url}`).then(res).catch(rej);
-                        });
-                    }
-                );
-                req.write(qs.encode({
-                    text: text,
-                    voice: voice.arg,
-					listen: 1,
-					format: "MP3",
-					codecMP3: 1,
-					spd: 180,
-					vct: 100,
-					byline: 0,
-					ts: 666
-                }));
-                req.end();
-                break;
-            }
-			case "acapelaOld": {
-				var q = qs.encode({
-					inputText: base64.encode(text),
-				});
-				https.get(
+			case "acapela": {
+				var buffers = [];
+				var acapelaArray = [];
+				for (var c = 0; c < 15; c++) acapelaArray.push(~~(65 + Math.random() * 26));
+				var email = `${String.fromCharCode.apply(null, acapelaArray)}@gmail.com`;
+				var req = https.request(
 					{
-						host: "voice.reverso.net",
-						path: `/RestPronunciation.svc/v1/output=json/GetVoiceStream/voiceName=${voice.arg}?${q}`,
+						hostname: "acapelavoices.acapela-group.com",
+						path: "/index/getnonce",
+						method: "POST",
+						headers: {
+							"Content-Type": "application/x-www-form-urlencoded",
+						},
 					},
 					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => res(Buffer.concat(buffers)));
-						r.on("error", rej);
+						r.on("data", (b) => buffers.push(b));
+						r.on("end", () => {
+							var nonce = JSON.parse(Buffer.concat(buffers)).nonce;
+							var req = http.request(
+								{
+									hostname: "acapela-group.com",
+									port: "8080",
+									path: "/webservices/1-34-01-Mobility/Synthesizer",
+									method: "POST",
+									headers: {
+										"Content-Type": "application/x-www-form-urlencoded",
+									},
+								},
+								(r) => {
+									var buffers = [];
+									r.on("data", (d) => buffers.push(d));
+									r.on("end", () => {
+										const html = Buffer.concat(buffers);
+										const beg = html.indexOf("&snd_url=") + 9;
+										const end = html.indexOf("&", beg);
+										const sub = html.subarray(beg, end).toString();
+										http.get(sub, (r) => {
+											r.on("data", (d) => buffers.push(d));
+											r.on("end", () => {
+												res(Buffer.concat(buffers));
+											});
+										});
+									});
+									r.on("error", rej);
+								}
+							);
+							req.end(
+								new URLSearchParams({
+									req_voice: voice.arg,
+									cl_pwd: "",
+									cl_vers: "1-30",
+									req_echo: "ON",
+									cl_login: "AcapelaGroup",
+									req_comment: `{"nonce":"${nonce}","user":"${email}"}`,
+									req_text: text,
+									cl_env: "ACAPELA_VOICES",
+									prot_vers: 2,
+									cl_app: "AcapelaGroup_WebDemo_Android",
+								}).toString()
+							);
+						});
 					}
+				);
+				req.end(
+					new URLSearchParams({
+						json: `{"googleid":"${email}"`,
+					}).toString()
 				);
 				break;
 			}
-			case "voiceforge": {
-				/* Special thanks to ItsCrazyScout for helping us find the new VoiceForge link and being kind enough to host xom's VFProxy on his site! */
-				var q = qs.encode({
-					voice: voice.arg,
+			case "voiceforge": { // working, requires lame installation
+				const q = new URLSearchParams({
+					"HTTP-X-API-KEY": "9a272b4",
 					msg: text,
+					voice: voice.arg,
+					email: null
+				}).toString();
+				let url = `https://api.voiceforge.com/swift_engine?${q}`;
+				https.get(url, (r) => {
+					let buffers = [];
+					const command = ffmpeg(r)
+						.inputFormat("wav")
+						.toFormat("mp3")
+						.on("error", rej);
+					const stream = command.pipe();
+					stream.on("data", b => buffers.push(b));
+					stream.on("end", () => {
+						res(Buffer.concat(buffers));
+					});
 				});
-				http.get(
-					{
-						host: "localhost",
-						port: "8181",
-						path: `/vfproxy/speech.php?${q}`,
-					},
-					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => res(Buffer.concat(buffers)));
-						r.on("error", rej);
-					}
-				);
 				break;
 			}
-			case "svox": {
-				var q = qs.encode({
+			case "svox": { // working
+				var q = new URLSearchParams({
 					apikey: "e3a4477c01b482ea5acc6ed03b1f419f",
 					action: "convert",
 					format: "mp3",
@@ -307,7 +316,7 @@ function processVoice(voiceName, text) {
 					speed: 0,
 					text: text,
 					version: "0.2.99",
-				});
+				}).toString();
 				https.get(
 					{
 						host: "api.ispeech.org",
@@ -321,65 +330,7 @@ function processVoice(voiceName, text) {
 					}
 				);
 				break;
-			}
-			case "wavenet": {
-                var req = https.request({
-                        hostname: "texttospeechapi.wideo.co",
-                        path: "/api/wideo-text-to-speech",
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-							Origin: "https://texttospeech.wideo.co",
-							Referer: "https://texttospeech.wideo.co/",
-							"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
-                        },
-                    },
-                    (r) => {
-						var buffers = [];
-						r.on("data", (b) => buffers.push(b));
-                        r.on("end", () => {
-							var json = JSON.parse(Buffer.concat(buffers));
-							get(`${json.url}`).then(res).catch(rej);
-						});
-						r.on("error", rej);
-					});
-					req.write(`{"data":{"text":"${text}","speed":1,"voice":"${voice.arg}"}}`);
-					req.end();
-					break;
-			}
-			/*
-			case "acapela": {
-				var q = qs.encode({
-					cl_login: "VAAS_MKT",
-					req_snd_type: "",
-					req_voice: voice.arg,
-					cl_app: "seriousbusiness",
-					req_text: text,
-					cl_pwd: "M5Awq9xu",
-				});
-				http.get(
-					{
-						host: "vaassl3.acapela-group.com",
-						path: `/Services/AcapelaTV/Synthesizer?${q}`,
-					},
-					(r) => {
-						var buffers = [];
-						r.on("data", (d) => buffers.push(d));
-						r.on("end", () => {
-							const html = Buffer.concat(buffers);
-							const beg = html.indexOf("&snd_url=") + 9;
-							const end = html.indexOf("&", beg);
-							const sub = html.subarray(beg + 4, end).toString();
-							if (!sub.startsWith("://")) return rej();
-							get(`https${sub}`).then(res).catch(rej);
-						});
-						r.on("error", rej);
-					}
-				);
-				break;
-			}
-			*/
-			case "readloud": {
+			} case "readloud": { // working
 				const req = https.request(
 					{
 						host: "readloud.net",
@@ -400,7 +351,6 @@ function processVoice(voiceName, text) {
 							const beg = html.indexOf("/tmp/");
 							const end = html.indexOf(".mp3", beg) + 4;
 							const sub = html.subarray(beg, end).toString();
-							const loc = `https://readloud.net${sub}`;
 
 							https.get(
 								{
@@ -423,17 +373,16 @@ function processVoice(voiceName, text) {
 					}
 				);
 				req.end(
-					qs.encode({
+					new URLSearchParams({
 						but1: text,
 						butS: 0,
 						butP: 0,
 						butPauses: 0,
 						but: "Submit",
-					})
+					}).toString()
 				);
 				break;
-			}
-			case "cereproc": {
+			} case "cereproc": { // working
 				const req = https.request(
 					{
 						hostname: "www.cereproc.com",
@@ -453,9 +402,9 @@ function processVoice(voiceName, text) {
 						r.on("data", (d) => buffers.push(d));
 						r.on("end", () => {
 							const xml = String.fromCharCode.apply(null, brotli.decompress(Buffer.concat(buffers)));
-							const beg = xml.indexOf("https://cerevoice.s3.amazonaws.com/");
-							const end = xml.indexOf(".mp3", beg) + 4;
-							const loc = xml.substr(beg, end - beg).toString();
+							const beg = xml.indexOf("<url>") + 5;
+							const end = xml.lastIndexOf("</url>");
+							const loc = xml.substring(beg, end).toString();
 							get(loc).then(res).catch(rej);
 						});
 						r.on("error", rej);
@@ -470,18 +419,41 @@ function processVoice(voiceName, text) {
 	});
 }
 
-module.exports = function (req, res, url) {
-	if (req.method != 'POST' || url.path != '/goapi/convertTextToSoundAsset/') return;
-	loadPost(req, res).then(data => {
-		processVoice(data.voice, data.text).then(buffer => {
-			mp3Duration(buffer, (e, duration) => {
-				if (e || !duration) return res.end(1 + process.env.FAILURE_XML);
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
+module.exports = async function (req, res, url) {
+	if (req.method != "POST" || url.pathname != "/goapi/convertTextToSoundAsset/") return;
+	const { voice, text } = req.body;
+	if (!voice || !text) {
+		res.statusCode = 400;
+		res.end();
+		return true;
+	}
 
-				const title = `[${voices[data.voice].desc}] ${data.text}`;
-				const id = asset.saveLocal(buffer, data.presaveId, '-tts.mp3');
-				res.end(`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${title}</title><published>0</published><tags></tags><duration>${1e3 * duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`)
-			});
+	try {
+		const buffer = await processVoice(voice, text);
+		mp3Duration(buffer, (e, duration) => {
+			if (e || !duration) throw new Error(e);
+
+			const meta = {
+				type: "sound",
+				subtype: "tts",
+				title: `[${voices[voice].desc}] ${text}`,
+				duration: 1e3 * duration,
+				ext: "mp3",
+				themeId: "ugc"
+			}
+			const id = asset.save(buffer, meta);
+			res.end(`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`)
 		});
-	});
+	} catch (err) {
+		console.error("Error generating TTS: " + err);
+		res.statusCode = 500;
+		res.end("1" + xmlFail("Internal server error."));
+	};
 	return true;
 }

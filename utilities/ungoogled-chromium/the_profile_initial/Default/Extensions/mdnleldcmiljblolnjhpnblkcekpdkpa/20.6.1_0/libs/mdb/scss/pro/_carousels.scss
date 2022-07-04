@@ -1,0 +1,132 @@
+// CAROUSELS PRO
+.carousel-multi-item {
+  margin-bottom: $carousel-multi-item-mb;
+
+  .carousel-inner .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+  }
+
+  &.v-2 {
+
+    .carousel-inner .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+      display: flex;
+    }
+
+    .carousel-item-right.active,
+    .carousel-item-next {
+      transform: translateX(33%);
+    }
+
+    .carousel-item-left.active,
+    .carousel-item-prev {
+      transform: translateX(-33%);
+    }
+
+    .carousel-item-right,
+    .carousel-item-left {
+      transform: translateX(0);
+    }
+  }
+
+  .carousel-indicators li {
+    height: $carousel-multi-item-indicators-li-height;
+    width: $carousel-multi-item-indicators-li-width;
+    max-width: $carousel-multi-item-indicators-li-max-width;
+    background-color: $primary-color;
+    margin-bottom: $carousel-multi-item-indicators-li-mb;
+  }
+
+  .carousel-indicators .active {
+    height: $carousel-multi-item-indicators-active-height;
+    width: $carousel-multi-item-indicators-active-width;
+    max-width: $carousel-multi-item-indicators-active-max-width;
+    background-color: $primary-color;
+    border-radius: $carousel-multi-item-indicators-active-border-radius;
+  }
+
+  .controls-top {
+    text-align: center;
+    margin-bottom: $carousel-multi-item-controls-top-mb;
+
+    .btn-floating {
+      background: $primary-color;
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: $carousel-multi-item-indicators-mb;
+  }
+
+  .card-cascade.narrower {
+    margin-top: $carousel-multi-item-card-cascade-narrower-mt;
+    margin-bottom: $carousel-multi-item-card-cascade-narrower-mb;
+  }
+
+  @media (min-width: 768px) {
+    .col-md-4 {
+      float: left;
+      width: 33.333333%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-screen) {
+  .carousel-multi-item {
+    .carousel-indicators li {
+      margin-bottom: $carousel-multi-item-medium-screen-mb;
+    }
+  }
+}
+
+// Carousel with thumbnails
+.carousel-thumbnails {
+  margin-bottom: $carousel-thumbnails-mb;
+
+  .carousel-indicators {
+    margin-bottom: $carousel-thumbnails-indicators-mb;
+    position: absolute;
+
+    li {
+      height: auto;
+      width: $carousel-thumbnails-indicators-li-width;
+      max-width: $carousel-thumbnails-indicators-li-max-width;
+      border: none;
+    }
+
+    .active {
+      @extend .white;
+      height: auto;
+      width: auto;
+      opacity: $carousel-thumbnails-indicators-active-opacity;
+    }
+
+    img {
+      max-width: $carousel-thumbnails-indicators-li-max-width;
+      height: auto;
+      overflow: hidden;
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .carousel-thumbnails {
+    margin-bottom: $carousel-thumbnails-sm-mb;
+
+    .carousel-indicators {
+      margin-bottom: $carousel-thumbnails-indicators-sm-mb;
+    }
+  }
+}
+
+//Fix for testimontials
+.wrapper-carousel-fix .carousel-fade .active.carousel-item-left,
+.wrapper-carousel-fix .carousel-fade .active.carousel-item-right {
+  transition: transform 0.6s ease;
+  transition-property: opacity;
+}

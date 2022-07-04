@@ -1,43 +1,44 @@
-const loadPost = require('../request/post_body');
-const character = require('./main');
+/**
+ * route
+ * character loading
+ */
+// vars
+const base = Buffer.alloc(1, "0");
+// stuff
+const Char = require("./main");
+const { xmlFail } = require("../request/extend");
 
-module.exports = function (req, res) {
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
+module.exports = async function (req, res, url) {
+	let cId;
 	switch (req.method) {
-		case 'GET': {
+		case "GET": {
 			const match = req.url.match(/\/characters\/([^.]+)(?:\.xml)?$/);
 			if (!match) return;
+			cId = match[1];
 
-			var id = match[1];
-			res.setHeader('Content-Type', 'text/xml');
-			process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-			character.load(id).then(v => { res.statusCode = 200, res.end(v) })
-				.catch(e => { res.statusCode = 404, res.end(e) })
-			return true;
-		}
+			break;
+		} case "POST": {
+			if (url.pathname != "/goapi/getCcCharCompositionXml/") return;
+			cId = req.body.assetId || req.body.original_asset_id;
 
-		case 'POST': {
-			if (req.url != '/goapi/getCcCharCompositionXml/') return;
-			loadPost(req, res).then(async data => {
-				console.log("Loading character: "+data.assetId||data.original_asset_id)
-				res.setHeader('Content-Type', 'text/html; charset=UTF-8');
-				process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-				character.load(data.assetId || data.original_asset_id)
-					.then(v => { res.statusCode = 200, res.end(0 + v) })
-					//.catch(e => { res.statusCode = 404, res.end(1 + e) })
-					//why send a 404 when you can watch benson on youtube
-					.catch(
-						() => character.load('a-327068826')
-						.then(v => {
-							console.log("Couldn't find that character, but it's okay, we loaded Benson instead."),
-							res.statusCode = 200, res.end(0 + v)
-						})
-					).catch(e => {
-						console.log("But nobody came."),
-						res.statusCode = 404, res.end(1 + e)
-					});
-			});
-			return true;
-		}
-		default: return;
+			break;
+		} default: return;
+	}
+
+	console.log("Loading character: " + cId);
+	try {
+		const buf = await Char.load(cId);
+		res.setHeader("Content-Type", "text/html; charset=UTF-8");
+		res.end(Buffer.concat([base, buf]));
+	} catch (err) {
+		console.log("But nobody came.")
+		res.statusCode = 404;
+		res.end("1" + xmlFail("Character not found."));
 	}
 }

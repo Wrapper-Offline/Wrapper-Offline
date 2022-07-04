@@ -1,0 +1,219 @@
+// Cards basic
+.card {
+  &.card-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    [class*="rgba-"] {
+      border-radius: $md-card-border-radius;
+    }
+  }
+  // Cascading cards
+  &.card-cascade {
+    .view {
+      &.view-cascade {
+        box-shadow: $z-depth-1-half;
+        border-radius: $md-card-border-radius;
+        &.gradient-card-header {
+          @extend .white-text;
+          padding: $card-cascade-header-gradient-py $card-cascade-header-gradient-px;
+          text-align: center;
+          .card-header-title {
+            font-weight: 500;
+          }
+          .btn-floating {
+            background-color: $card-cascade-header-gradient-btn-floating-bgc;
+          }
+        }
+      }
+    }
+    &.wider {
+      box-shadow: none;
+      background-color: transparent;
+      .view {
+        &.view-cascade {
+          z-index: 2;
+        }
+      }
+      .card-body {
+        &.card-body-cascade {
+          box-shadow: $z-depth-1;
+          margin-left: $card-cascade-wider-card-body-mx;
+          margin-right: $card-cascade-wider-card-body-mx;
+          background: $card-cascade-wider-card-body-bg;
+          z-index: 1;
+          border-radius: 0 0 $md-card-border-radius $md-card-border-radius;
+        }
+      }
+      &.reverse {
+        .card-body {
+          &.card-body-cascade {
+            z-index: 3;
+            margin-top: $card-cascade-reverse-mt;
+            border-radius: $md-card-border-radius;
+            box-shadow: $z-depth-1-half;
+          }
+        }
+      }
+    }
+    &.narrower {
+      margin-top: $card-cascade-narrower-mt;
+      .view {
+        &.view-cascade {
+          margin-left: $card-cascade-narrowe-view-mx;
+          margin-right: $card-cascade-narrowe-view-mx;
+          margin-top: $card-cascade-narrower-view-mt;
+        }
+      }
+    }
+    &.panel-cascade {
+      .view {
+        text-align: center;
+        color: $panel-cascade-view-color;
+      }
+      .list-group {
+        .list-group-item {
+          margin-bottom: 0;
+          border: 0;
+          border-bottom: 1px solid $panel-cascade-list-group-item-border-bottom;
+          color: $panel-cascade-list-group-item-color;
+          &:hover {
+            background-color: $panel-cascade-list-group-item-bgc;
+          }
+        }
+      }
+    }
+  }
+  .btn-action {
+    margin-top: $card-btn-action-my;
+    margin-bottom: $card-btn-action-my;
+  }
+  .activator {
+    position: absolute;
+    right: 0;
+    font-size: $card-activator-font-size;
+  }
+  .card-reveal {
+    position: absolute;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    .content {
+      position: relative;
+    }
+  }
+  &.ovf-hidden {
+    overflow: hidden;
+  }
+  .card-share {
+    position: relative;
+    .social-reveal {
+      position: absolute;
+      top: $card-share-social-reveal-top;
+      right: $card-share-social-reveal-right;
+      visibility: hidden;
+      width: auto;
+      transform: translateZ(0);
+      transform: translateX(0);
+      transition: $card-share-social-reveal-transition;
+    }
+    .social-reveal-active {
+      z-index: 11;
+      visibility: visible;
+      transform: translateZ(0);
+      transform: translateX(-48px);
+      transition: $card-share-social-reveal-transition;
+    }
+  }
+}
+
+// Title and close button
+.card .card-reveal .card-title,
+.card-wrapper .card-rotating .card-title {
+  cursor: pointer;
+}
+.card .card-reveal .card-title i,
+.card-wrapper .card-rotating .card-title i {
+  color: $card-reveal-title-i-color;
+  position: absolute;
+  right: $card-reveal-title-i-right;
+}
+
+// Rotating card
+.card-wrapper {
+  perspective: $card-wrapper-perspective;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  .card-up {
+    height: $card-up-img-size;
+    overflow: hidden;
+    img {
+      vertical-align: middle;
+    }
+  }
+  .avatar {
+    display: block;
+    margin-top: $card-avatar-margin-top;
+    overflow: hidden;
+    width: $card-up-size;
+  }
+  .avatar {
+    img {
+      border: 5px solid $white-base;
+      background: none repeat scroll 0 0 $white-base;
+      width: 100%;
+    }
+  }
+  .card-rotating {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    .face {
+      width: 100%;
+      position: absolute;
+      background: $white-base;
+      backface-visibility: hidden;
+      z-index: 2;
+    }
+    &.flipped {
+      transform: rotateY(180deg);
+    }
+    .front {
+      z-index: 1;
+    }
+    .back {
+      transform: rotateY(-180deg);
+    }
+    .front,
+    .back {
+      transition: 1s;
+    }
+  }
+}
+
+// Testimonial card
+.testimonial-card {
+  .card-up {
+    overflow: hidden;
+    height: $card-up-size;
+    border-top-left-radius: $md-card-border-radius;
+    border-top-right-radius: $md-card-border-radius;
+  }
+  .avatar {
+    border-radius: $border-radius-circle;
+    width: $card-up-size;
+    margin-top: $card-avatar-margin-top;
+    overflow: hidden;
+    border: 5px solid $white-base;
+  }
+  .avatar img {
+    width: 100%;
+  }
+  .card-body {
+    text-align: center;
+  }
+}

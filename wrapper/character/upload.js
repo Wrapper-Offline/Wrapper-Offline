@@ -1,20 +1,40 @@
-const formidable = require('formidable');
-const parse = require('../data/parse');
-const fUtil = require('../fileUtil');
-const fs = require('fs');
+/**
+ * character upload route
+ */
+// modules
+const fs = require("fs");
+// stuff
+const Char = require("./main");
 
-module.exports = function (req, res, url) {
-	if (req.method != 'POST' || url.path != '/upload_character') return;
-	new formidable.IncomingForm().parse(req, (e, f, files) => {
-		const path = files.import.path, buffer = fs.readFileSync(path);
-		const numId = fUtil.getNextFileId('char-', '.xml');
-		parse.unpackCharXml(buffer, numId);
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ * @param {import("url").UrlWithParsedQuery} url
+ * @returns {boolean}
+ */
+module.exports = async function (req, res, url) {
+	if (req.method != "POST" || url.pathname != "/upload_character") return;
+
+	const path = req.files.import.filepath, buffer = fs.readFileSync(path);
+	const meta = {
+		type: "char",
+		subtype: 0,
+		title: "Untitled",
+		themeId: Char.getTheme(buffer)
+	};
+	try {
+		// save the char
+		Char.save(buffer, meta, true);
+		const url = `/cc_browser?themeId=${meta.themeId}`;
 		fs.unlinkSync(path);
-
+		// redirect the user
 		res.statusCode = 302;
-		const url = `/cc?themeId=family&original_asset_id=c-${numId}`
-		res.setHeader('Location', url);
+		res.setHeader("Location", url);
 		res.end();
-	});
+	} catch (err) {
+		console.error("Error uploading character:", err);
+		res.statusCode = 500;
+		res.end("00");
+	}
 	return true;
 }

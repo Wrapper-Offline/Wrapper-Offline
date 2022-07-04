@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png" />
+		<title>Settings</title>
+		<meta name="description" content="Wrapper: Offline's settings"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/list.css"/>
+		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/global.js"></script>
+	</head>
+
+	<body>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
+
+		<main>			
+			<nav class="tabs_contain">
+				<div class="tab_buttons">
+					<h1 id="settings">Settings</h1>
+					<a href="#" data-triggers="0">Appearance</a>
+				</div>
+				<nav class="tab">
+					<h2>Appearance</h2>
+					<p>Dark mode: <span id="darkmode" data-meth="localStorage"></span></p>
+				</nav>
+			</nav>
+		</main>
+
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
+	</body>
+
+	<script>
+		const getSetting = (name) =>
+			localStorage.getItem(name);
+
+		getSettingData();
+
+
+		// toggling
+		$("span").click(event => {
+			if (event.target.id == "darkmode")
+				toggleDarkMode();
+			togLocStor(event.target.id);
+		});
+
+		// add indicator
+		function getSettingData() {
+			const toggles = $("span");
+
+			toggles.each(function (i) {
+				const elem = $(this);
+				const name = elem.attr("id");
+				if (getSetting(name)) {
+					elem.css("color", "green");
+					elem.html("On");
+				} else {
+					elem.css("color", "red");
+					elem.html("Off");
+				}
+			})
+			return true;
+		}
+		function togLocStor(name) {
+			if (getSetting(name))
+				localStorage.removeItem(name);
+			else
+				localStorage.setItem(name, 1);
+			getSettingData();
+		}
+	</script>
+</html>

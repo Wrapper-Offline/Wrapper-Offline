@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html id="stylus" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loading...</title>
+
+  <link href="global.css" rel="stylesheet">
+  <link href="install-usercss/install-usercss.css" rel="stylesheet">
+
+  <script src="js/polyfill.js"></script>
+  <script src="js/promisify.js"></script>
+  <script src="js/msg.js"></script>
+  <script src="js/messaging.js"></script>
+  <script src="js/prefs.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/localization.js"></script>
+  <script src="js/script-loader.js"></script>
+  <script src="js/storage-util.js"></script>
+  <script src="content/style-injector.js"></script>
+  <script src="content/apply.js"></script>
+  <script src="vendor/semver-bundle/semver.js"></script>
+
+  <link href="msgbox/msgbox.css" rel="stylesheet">
+  <script src="msgbox/msgbox.js"></script>
+
+  <link href="vendor/codemirror/lib/codemirror.css" rel="stylesheet">
+  <script src="vendor/codemirror/lib/codemirror.js"></script>
+  <script src="vendor/codemirror/keymap/sublime.js"></script>
+  <script src="vendor/codemirror/keymap/emacs.js"></script>
+  <script src="vendor/codemirror/keymap/vim.js"></script>
+
+  <script src="vendor/codemirror/mode/css/css.js"></script>
+  <script src="vendor/codemirror/addon/search/searchcursor.js"></script>
+
+  <link href="vendor/codemirror/addon/fold/foldgutter.css" rel="stylesheet" />
+  <script src="vendor/codemirror/addon/fold/foldcode.js"></script>
+  <script src="vendor/codemirror/addon/fold/foldgutter.js"></script>
+  <script src="vendor/codemirror/addon/fold/brace-fold.js"></script>
+  <script src="vendor/codemirror/addon/fold/indent-fold.js"></script>
+
+  <link  href="vendor-overwrites/colorpicker/colorpicker.css" rel="stylesheet">
+  <script src="vendor-overwrites/colorpicker/colorconverter.js"></script>
+  <script src="vendor-overwrites/colorpicker/colorview.js"></script>
+
+  <script src="edit/codemirror-default.js"></script>
+  <link rel="stylesheet" href="edit/codemirror-default.css">
+</head>
+<body id="stylus-install-usercss">
+  <div class="container">
+    <div id="header">
+      <div id="header-content-wrapper">
+        <h1>
+          <span class="meta-name"></span>
+          <small class="meta-version"></small>
+        </h1>
+        <div class="actions">
+          <h2 class="installed" i18n-text="installButtonInstalled"></h2>
+          <button class="install" i18n-text="installButton"></button>
+          <p id="live-reload-install-hint" hidden></p>
+          <label class="set-update-url">
+            <input type="checkbox">
+            <svg class="svg-icon checked"><use xlink:href="#svg-icon-checked"/></svg>
+            <span i18n-text="installUpdateFromLabel"></span>
+            <p></p>
+          </label>
+          <label class="live-reload">
+            <input type="checkbox">
+            <svg class="svg-icon checked"><use xlink:href="#svg-icon-checked"/></svg>
+            <span i18n-text="liveReloadLabel"></span>
+          </label>
+        </div>
+        <p class="meta-description"></p>
+        <div>
+          <h3 i18n-text="author"></h3>
+          <span class="meta-author"></span>
+        </div>
+        <div>
+          <h3 i18n-text="license"></h3>
+          <span class="meta-license"></span>
+        </div>
+        <div class="external-link"></div>
+        <div id="applies-to-wrapper">
+          <h3 i18n-text="appliesLabel"></h3>
+          <ul class="applies-to">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="warnings"></div>
+    </div>
+  </div>
+
+  <script src="install-usercss/install-usercss.js"></script>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important;">
+    <symbol id="svg-icon-checked" viewBox="0 0 1000 1000">
+      <path fill-rule="evenodd" d="M983.2,184.3L853,69.8c-4-3.5-9.3-5.3-14.5-5c-5.3,0.4-10.3,2.8-13.8,6.8L352.3,609.2L184.4,386.9c-3.2-4.2-8-7-13.2-7.8c-5.3-0.8-10.6,0.6-14.9,3.9L18,487.5c-8.8,6.7-10.6,19.3-3.9,28.1L325,927.2c3.6,4.8,9.3,7.7,15.3,8c0.2,0,0.5,0,0.7,0c5.8,0,11.3-2.5,15.1-6.8L985,212.6C992.3,204.3,991.5,191.6,983.2,184.3z"/>
+    </symbol>
+  </svg>
+
+</body>
+</html>

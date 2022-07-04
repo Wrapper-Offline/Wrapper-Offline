@@ -1,0 +1,116 @@
+// Range input
+.range-field {
+  position: relative;
+  input[type=range] {
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: $input-range-my $input-range-mx;
+    padding: 0;
+    &:focus {
+      outline: none;
+    }
+    + .thumb {
+      position: absolute;
+      border: none;
+      height: 0;
+      width: 0;
+      border-radius: $border-radius-circle;
+      background-color: $primary-color;
+      top: $input-range-thumb-top;
+      margin-left: $input-range-thumb-margin-left;
+      transform-origin: $input-range-transform-origin;
+      transform: $input-range-transform;
+      .value {
+        display: block;
+        width: $input-range-thumb-value-width;
+        text-align: center;
+        color: $primary-color;
+        font-size: 0;
+        transform: $input-range-thumb-value-transform;
+      }
+      &.active {
+        border-radius: $border-radius-circle $border-radius-circle $border-radius-circle 0;
+        .value {
+          color: $white-base;
+          margin-left: $input-range-active-value-ml;
+          margin-top: $input-range-active-value-mt;
+          font-size: $input-range-active-value-font-size;
+        }
+      }
+    }
+    // Webkit
+    appearance: none;
+    &::-webkit-slider-runnable-track {
+      height: $slider-runnable-track-height;
+      background: $slider-runnable-track-bg;
+      border: none;
+    }
+    &::-webkit-slider-thumb {
+      appearance: none;
+      border: none;
+      height: $slider-thumb-height;
+      width: $slider-thumb-width;
+      border-radius: $border-radius-circle;
+      background-color: $primary-color;
+      transform-origin: $input-range-transform-origin;
+      margin: $slider-thumb-mt 0 0 0;
+      transition: $slider-thumb-transition;
+    }
+    &:focus::-webkit-slider-runnable-track {
+      background: $slider-runnable-track-focus-bg;
+    }
+    // Firefox
+    border: 1px solid $white-base; /* fix for FF unable to apply focus style bug  */
+    &::-moz-range-track { /*required for proper track sizing in FF*/
+      height: $slider-runnable-track-height;
+      background: $slider-runnable-track-bg;
+      border: none;
+    }
+    &::-moz-range-thumb {
+      border: none;
+      height: $slider-thumb-height;
+      width: $slider-thumb-width;
+      border-radius: $border-radius-circle;
+      background: $primary-color;
+      margin-top: $slider-thumb-mt;
+    }
+    &:-moz-focusring { /*hide the outline behind the border*/
+      outline: 1px solid $white-base;
+      outline-offset: -1px;
+    }
+    &:focus::-moz-range-track {
+      background: $slider-runnable-track-bg;
+    }
+    // IE 10+
+    &::-ms-track {
+      height: $slider-runnable-track-height;
+      background: transparent; /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+      border-color: transparent; /*leave room for the larger thumb to overflow with a transparent border */
+      border-width: $slider-border-width 0;
+      color: transparent; /*remove default tick marks*/
+    }
+    &::-ms-fill-lower {
+      background: $slider-runnable-track-bg;
+    }
+    &::-ms-fill-upper {
+      background: $slider-runnable-track-bg;
+    }
+    &::-ms-thumb {
+      border: none;
+      height: $slider-thumb-height;
+      width: $slider-thumb-width;
+      border-radius: $border-radius-circle;
+      background: $primary-color;
+    }
+    &:focus::-ms-fill-lower {
+      background: $slider-runnable-track-bg;
+    }
+    &:focus::-ms-fill-upper {
+      background: $slider-runnable-track-bg;
+    }
+  }
+}

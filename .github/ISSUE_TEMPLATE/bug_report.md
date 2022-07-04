@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve Wrapper Offline
+about: Create a report to help us improve
 title: ''
 labels: ''
 assignees: ''
@@ -27,7 +27,7 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. windows]
  - Browser [e.g. balistic, ungoogled chrome]
  - Version [e.g. beta, stable]
- - NPM Crash Log [Turn on Verbose Mode to see NPM]
+
 
 **Additional context**
 Add any other context about the problem here.

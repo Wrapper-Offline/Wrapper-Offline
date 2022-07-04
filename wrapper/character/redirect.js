@@ -1,29 +1,31 @@
-const http = require("http");
+/**
+ * route
+ * character redirects
+ */
 const defaultTypes = {
 	family: "adam",
-	anime: "guy",
+	anime: "guy"
 };
 
 /**
- * @param {http.IncomingMessage} req
- * @param {http.ServerResponse} res
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
  * @param {import("url").UrlWithParsedQuery} url
  * @returns {boolean}
  */
-module.exports = function (req, res, url) {
-	if (req.method != "GET" || !url.pathname.startsWith("/go/character_creator")) return;
-	var match = /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/.exec(url.pathname);
+module.exports = async function (req, res, url) {
+	if (req.method != "GET") return;
+	const match = url.pathname.match(/\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/);
 	if (!match) return;
-	[, theme, mode, id] = match;
+	let [, theme, mode, id] = match;
 
-	var redirect;
+	let redirect;
 	switch (mode) {
 		case "/copy": {
-			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substr(1)}`;
+			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
 			break;
-		}
-		default: {
-			var type = url.query.type || defaultTypes[theme] || "";
+		} default: {
+			const type = url.query.type || defaultTypes[theme] || "";
 			redirect = `/cc?themeId=${theme}&bs=${type}`;
 			break;
 		}

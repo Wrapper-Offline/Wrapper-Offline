@@ -1245,63 +1245,6 @@
 		<action id="think.swf" name="Think" loop="Y" totalframe="75" enable="Y" aid="4859"/>
 		<action id="cry.swf" name="Cry" loop="Y" totalframe="24" enable="Y" aid="4860"/>
 	</char>
-	<char id="imagenyMatchBoy" name="Match Boy (Imageny's Mod)" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="4806" money="0" sharing="0">
-		<action id="stand.swf" name="Stand" loop="Y" totalframe="72" enable="Y" aid="4807"/>
-		<motion id="walk.swf" name="Walk" loop="Y" totalframe="8" enable="Y" aid="4808"/>
-		<action id="angry.swf" name="angry" loop="Y" totalframe="50" enable="Y" aid="4809"/>
-		<action id="confused.swf" name="confused" loop="Y" totalframe="70" enable="Y" aid="4810"/>
-		<action id="excited.swf" name="excited" loop="Y" totalframe="75" enable="Y" aid="4811"/>
-		<action id="scared.swf" name="scared" loop="Y" totalframe="2" enable="Y" aid="4812"/>
-		<action id="furious.swf" name="furious" loop="Y" totalframe="100" enable="Y" aid="4813"/>
-		<action id="happy.swf" name="happy" loop="Y" totalframe="60" enable="Y" aid="4814"/>
-		<action id="in_love.swf" name="In love" loop="Y" totalframe="100" enable="Y" aid="4815"/>
-		<action id="sad.swf" name="sad" loop="N" totalframe="70" enable="Y" aid="4816"/>
-		<action id="scheming.swf" name="scheming" loop="Y" totalframe="75" enable="Y" aid="4817"/>
-		<action id="shocked.swf" name="shocked" loop="Y" totalframe="2" enable="Y" aid="4818"/>
-		<action id="shy.swf" name="shy" loop="Y" totalframe="50" enable="Y" aid="4819"/>
-		<action id="desperate.swf" name="desperate" loop="Y" totalframe="43" enable="Y" aid="4820"/>
-		<action id="bored.swf" name="bored" loop="Y" totalframe="130" enable="Y" aid="4821"/>
-		<action id="dance.swf" name="Dance" loop="Y" totalframe="44" enable="Y" aid="4822"/>
-		<action id="die.swf" name="Die" loop="N" totalframe="72" enable="Y" aid="4823"/>
-		<action id="fart.swf" name="Fart" loop="Y" totalframe="48" enable="N" aid="4824"/>
-		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="54" enable="Y" aid="4825"/>
-		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="3" enable="Y" aid="4826"/>
-		<action id="talk.swf" name="Talk" loop="Y" totalframe="48" enable="Y" aid="4827"/>
-		<action id="threaten.swf" name="Become Threatened" loop="Y" totalframe="2" enable="Y" aid="4828"/>
-		<action id="propose.swf" name="Propose (a)" loop="Y" totalframe="40" enable="Y" aid="4829"/>
-		<action id="propose02.swf" name="Propose (b)" loop="Y" totalframe="45" enable="Y" aid="4830"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="42" enable="Y" aid="4831"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="50" enable="Y" aid="4832"/>
-		<action id="kill06.swf" name="Kill" loop="Y" totalframe="20" enable="Y" aid="4833"/>
-	</char>
-	<char id="imagenyMatchGirl" name="Match Girl (Imageny's Mod)" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="4834" money="0" sharing="0">
-		<action id="stand.swf" name="Stand" loop="Y" totalframe="4" enable="Y" aid="4835"/>
-		<motion id="walk.swf" name="Walk" loop="Y" totalframe="58" enable="Y" aid="4836"/>
-		<action id="angry.swf" name="angry" loop="Y" totalframe="50" enable="Y" aid="4837"/>
-		<action id="confused.swf" name="confused" loop="Y" totalframe="70" enable="Y" aid="4838"/>
-		<action id="excited.swf" name="excited" loop="Y" totalframe="75" enable="Y" aid="4839"/>
-		<action id="scared.swf" name="scared" loop="Y" totalframe="2" enable="Y" aid="4840"/>
-		<action id="furious.swf" name="furious" loop="Y" totalframe="100" enable="Y" aid="4841"/>
-		<action id="happy.swf" name="happy" loop="Y" totalframe="60" enable="Y" aid="4842"/>
-		<action id="in_love.swf" name="In love" loop="Y" totalframe="100" enable="Y" aid="4843"/>
-		<action id="sad.swf" name="sad" loop="N" totalframe="70" enable="Y" aid="4844"/>
-		<action id="scheming.swf" name="scheming" loop="Y" totalframe="75" enable="Y" aid="4845"/>
-		<action id="shocked.swf" name="shocked" loop="Y" totalframe="2" enable="Y" aid="4846"/>
-		<action id="desperate.swf" name="desperate" loop="Y" totalframe="43" enable="Y" aid="4847"/>
-		<action id="bored.swf" name="bored" loop="Y" totalframe="130" enable="Y" aid="4848"/>
-		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="35" enable="Y" aid="4849"/>
-		<action id="talk.swf" name="Talk" loop="Y" totalframe="50" enable="Y" aid="4850"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="35" enable="Y" aid="4851"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="70" enable="Y" aid="4852"/>
-		<action id="shy.swf" name="Shy" loop="Y" totalframe="16" enable="Y" aid="4853"/>
-		<action id="dance01.swf" name="Dance (a)" loop="Y" totalframe="25" enable="Y" aid="4854"/>
-		<action id="dance02.swf" name="Dance (b)" loop="Y" totalframe="13" enable="Y" aid="4855"/>
-		<action id="greeting.swf" name="Greeting (a)" loop="Y" totalframe="65" enable="Y" aid="4856"/>
-		<action id="greeting02.swf" name="Greeting (b)" loop="Y" totalframe="75" enable="Y" aid="4857"/>
-		<action id="sing.swf" name="Sing" loop="Y" totalframe="24" enable="Y" aid="4858"/>
-		<action id="think.swf" name="Think" loop="Y" totalframe="75" enable="Y" aid="4859"/>
-		<action id="cry.swf" name="Cry" loop="Y" totalframe="24" enable="Y" aid="4860"/>
-	</char>
 	<char id="blue_snuggle" name="Blue Snuggie" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="5945" money="0" sharing="0">
 		<action id="standing.swf" name="standing" loop="Y" totalframe="44" enable="Y" aid="5946"/>
 		<motion id="walk.swf" name="walk" loop="Y" totalframe="30" enable="Y" aid="5947"/>

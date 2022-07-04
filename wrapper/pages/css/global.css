@@ -2,20 +2,32 @@
 this css has the general header/footer layout stuff
 ***/
 
+@import url("./modern-normalize.css");
+
+:root {
+	--primary: #d85e27;
+	--transition: .15s ease;
+}
+
 /**
 general
 **/
 html, body {
-	background: #fff;
+	background: #eee;
 	color: #474747;
 	font: 16px/1.5 'Sailec', Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 }
+html.dark, html.dark>body {
+	background: #222;
+	color: #eee;
+}
 body {
 	display: flex; 
 	flex-direction: column; 
 }
+main { padding: 20px 40px }
 
 
 /**
@@ -23,11 +35,13 @@ header
 **/
 header {
 	/* style */
-	background: #1e1e1e;
+	background: #1a1a1a;
 	color: #fff;
 	text-align: center;
+	/* layout */
 	padding-bottom: 13px;
 	padding: 0 15px;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	flex-shrink: 0;
@@ -50,7 +64,8 @@ header {
 	font-size: 14px;
 	text-decoration: none;
 	color: #fff;
-	border-radius: 6px;
+	border-radius: 4px;
+	transition: var(--transition);
 	/* layout */
 	display: inline-block;
 	padding: 5px 10px;
@@ -61,11 +76,11 @@ header {
 	cursor: pointer;
 }
 /* small buttons */
-.button_small       { background: #333 }
-.button_small:hover { background: #444; color: #d85e27 }
+.button_small       { background: #2a2a2a }
+.button_small:hover { background: #333; color: var(--primary) }
 /* big buttons */
 .button_big {
-	background-color: #d85e27;
+	background: var(--primary);
 	width: 160px;
 }
 .button_big:hover {
@@ -88,8 +103,8 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #444;
-	border-radius: 6px;
+	background-color: #333;
+	border-radius: 4px;
 	/* layout */
 	width: 100%;
 	padding: 10px 0;
@@ -105,13 +120,14 @@ header dropdowns
 	/* style */
 	color: #ddd;
 	text-decoration: none;
+	transition: var(--transition);
 	/* layout */
 	display: block;
 	padding: 2px 20px;
 }
 .dropdown_menu>a:hover {
-	background: #222;
-	color: #d85e27;
+	background: #2a2a2a;
+	color: var(--primary);
 	cursor: pointer;
 }
 /* dropdown header and separation */
@@ -127,13 +143,51 @@ header dropdowns
 	border: 1px solid #222;
 	margin: 10px 0;
 }
+/* character upload */
+form[action="/upload_character"] { display: none }
 
+/**
+tabs
+**/
+.tabs_contain {
+    border-radius: 6px;
+    display: flex;
+    margin: auto auto;
+}
+.tab_buttons {
+	padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+.tabs_contain h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.tab_buttons a {
+	/* style */
+	background: #353535;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: var(--transition);
+	/* layout */
+	padding: 8px 18px;
+	margin: 2px 0;
+}
+.tab_buttons a:hover    { background: #2a2a3a; color: var(--primary) }
+.tab_buttons a.selected { background: var(--primary); color: #fff }
+.tab { padding: 0 20px; display: none }
+#shortthemelist:hover,
+#darkmode:hover {
+	cursor: pointer;
+}
 
 /**
 footer
 **/
-footer{
-	background: #1e1e1e;
+footer {
+	background: #1a1a1a;
 	margin-top: auto; /* footer at the foot */
 	display: flex;
 	justify-content: space-between;

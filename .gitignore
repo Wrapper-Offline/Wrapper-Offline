@@ -2,30 +2,14 @@
 wrapper/_ASSETS/*
 wrapper/_CACHÉ/*
 wrapper/_SAVED/*
-wrapper/_THEMES/import.xml
-wrapper/node_modules/*
 !_*/_NO_REMÖVE
 utilities/backups/*
-utilities/import_these/*
-utilities/grounded_messages/*
 utilities/config.bat
-utilities/originalcfname.txt
-server/characters/*
-server/characters/characters.zip
 .DS_Store
 .DS_Store
 vfproxy/*
 bbbb/*
-
-# Ungoogled Chromium
-utilities/ungoogled-chromium/the_profile/*
-utilities/ungoogled-chromium/the_profile_initial/*
-utilities/ungoogled-chromium/the_profile/Crashpad/*
-# Personal Basilisk files
-utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/*
-
-
-
+wrapper/node_modules
 # Logs
 logs
 *.log
@@ -132,5 +116,4 @@ dist
 # VEGAS audio waveform peak files
 *.sfk
 *.sfap0
-utilities/config.bat
-wrapper/die.zip
+wrapper/.vscode/settings.json

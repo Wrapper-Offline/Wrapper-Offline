@@ -1,0 +1,1127 @@
+// Variables Pro
+$border-radius-rounded: 10em !default;
+
+// Accordion
+$accordion-card-header-padding-y:      1rem !default;
+$accordion-card-header-padding-x:      1.5rem !default;
+$accordion-rotate-icon-transform:      rotate(180deg) !default;
+$accordion-link-hover-transition:      ease-in-out .3s !default;
+$accordion-card-body-line-height:      1.7 !default;
+$accordion-card-body-color:            #626262 !default;
+$accordion-card-body-font-size:        .9rem !default;
+
+// Animations
+$animations-pro-transform:             $accordion-rotate-icon-transform !default;
+$animations-pro-transition:            all 150ms ease-in 0s !default;
+
+// Autocomplete
+$autocomplete-margin-bottom:           1px !default;
+$autocomplete-clear-top:               .5rem !default;
+$autocomplete-clear-color:             #a6a6a6 !default;
+$autocomplete-wrap-max-height:         210px !default;
+$autocomplete-wrap-li-padding-y:       12px !default;
+$autocomplete-wrap-li-padding-x:       15px !default;
+$autocomplete-wrap-li-font-size:       .875rem !default;
+$autocomplete-wrap-li-hover-bg:        $grey-lighten-3 !default;
+$form-inline-autocomplete-width:       15rem !default;
+
+// Buttons
+$btn-floating-width:                   47px !default;
+$btn-floating-height:                  $btn-floating-width !default;
+$btn-floating-icon-size:               1.25rem !default;
+$btn-floating-line-height:             $btn-floating-width !default;
+
+$btn-floating-width-sm:                $btn-floating-width / 1.3 !default;
+$btn-floating-height-sm:               $btn-floating-width-sm !default;
+$btn-floating-icon-size-sm:            $btn-floating-icon-size / 1.3 !default;
+$btn-floating-line-height-sm:          $btn-floating-width-sm !default;
+
+$btn-floating-width-lg:                $btn-floating-width * 1.3 !default;
+$btn-floating-height-lg:               $btn-floating-width-lg !default;
+$btn-floating-icon-size-lg:            $btn-floating-icon-size * 1.3 !default;
+$btn-floating-line-height-lg:          $btn-floating-width-lg !default;
+
+$btn-floating-transtion:               $transition-basic !default;
+$btn-floating-margin:                  10px !default;
+$btn-floating-border-radius:           $border-radius-circle !default;
+
+$fixed-action-btn-right:               35px !default;
+$fixed-action-btn-bottom:              $fixed-action-btn-right !default;
+$fixed-action-btn-padding-top:         $autocomplete-wrap-li-padding-x !default;
+$fixed-action-btn-ul-bottom:           64px !default;
+$fixed-action-btn-li-margin-bottom:    $autocomplete-wrap-li-padding-x !default;
+
+$btn-rounded-border-radius:            $border-radius-rounded !default;
+
+// Social buttons
+$btn-counter-margin-top:               0px !default;
+$btn-sm-counter-margin-top:            8px !default;
+$btn-md-counter-margin-top:            5px !default;
+$btn-lg-counter-margin-top:            -4px !default;
+$btn-counter-margin-left:              -23px !default;
+$btn-counter-border-radius:            $border-radius-rounded !default;
+$btn-counter-padding-y:                $autocomplete-margin-bottom !default;
+$btn-counter-padding-x:                7px !default;
+$btn-counter-bgc:                      rgb(254, 18, 18) !default;
+$btn-counter-font-size:                11px !default;
+
+$icons-sm-margin:                      $autocomplete-clear-top !default;
+$icons-sm-padding:                     $icons-sm-margin !default;
+$icons-sm-font-size:                   1.2rem !default;
+
+// Blog
+$blog-comment-date-text-color:         #666666 !default;
+$personal-sm-transition-duration:      .2s !default;
+$personal-sm-hover-transform:          scale(1.2) !default;
+
+// Cards
+$card-up-size:                         120px !default;
+$card-up-img-size:                     200px !default;
+$card-avatar-margin-top:               -60px !default;
+$card-wrapper-min-height:              500px !default;
+$card-wrapper-perspective:             800px !default;
+$card-rotating-transform-style:        preserve-3d !default;
+$card-front-effect-click-transform:    rotateY(180deg) !default;
+$card-back-effect-click-transform:     rotateY(0) !default;
+$card-front-back-transition:           1s !default;
+$card-back-transform:                  rotateY(-180deg) !default;
+
+$card-cascade-wider-card-body-mx:                 4% !default;
+$card-cascade-wider-card-body-bg:                 $white !default;
+$card-cascade-reverse-mt:                         -1rem !default;
+$card-cascade-narrower-mt:                        $btn-floating-icon-size !default;
+$card-cascade-narrowe-view-mx:                    $card-cascade-wider-card-body-mx !default;
+$card-cascade-narrower-view-mt:                   -1.25rem !default;
+$card-cascade-header-gradient-py:                 1.6rem !default;
+$card-cascade-header-gradient-px:                 $accordion-card-header-padding-y !default;
+$card-cascade-header-gradient-btn-floating-bgc:   rgba($white, .2) !default;
+
+$card-btn-action-my:                              -1.44rem !default;
+$card-activator-font-size:                        $icons-sm-font-size !default;
+$card-reveal-title-i-color:                       $grey-base !default;
+$card-reveal-title-i-right:                       .63rem !default;
+$card-share-social-reveal-top:                    $card-btn-action-my !default;
+$card-share-social-reveal-right:                  1.88rem !default;
+$card-share-social-reveal-transition-ease:        ease ;
+$card-share-social-reveal-transition:             transform .35s $card-share-social-reveal-transition-ease !default;
+
+$panel-cascade-view-color:                        $white !default;
+$panel-cascade-list-group-item-border-bottom:     $grey-lighten-3 !default;
+$panel-cascade-list-group-item-color:           #495057 !default;
+$panel-cascade-list-group-item-bgc:               $panel-cascade-list-group-item-border-bottom !default;
+
+// Charts
+$min-chart-width:                      110px !default;
+$min-chart-height:                     $min-chart-width !default;
+$min-chart-margin:                     50px !default;
+$min-chart-line-height:                $min-chart-width !default;
+$min-chart-percent-margin:             .1em !default;
+$min-chart-percent-font-size:          .8rem !default;
+
+// Forms
+$form-header-color:                    $white !default;
+$form-header-mt:                       -3.13rem !default;
+$form-header-mb:                       3rem !default;
+$form-header-padding:                  $accordion-card-header-padding-y !default;
+$form-header-border-radius:            $border-radius-base !default;
+
+// File input
+$file-path-wrapper-padding-left:       $btn-floating-margin !default;
+$file-path-wrapper-height:             2.5rem !default;
+$file-input-path:                      2.1rem !default;
+$file-input-filter:                    alpha(opacity=0) !default;
+
+// Input group
+$input-group-text-checkbox-pl:        18px !default;
+$input-group-text-checkbox-height:    20px !default;
+$input-group-text-radio-pl:           24px !default;
+$input-group-text-radio-height:       $input-group-text-radio-pl !default;
+
+// Range input
+$input-range-my:                      $autocomplete-wrap-li-padding-x !default;
+$input-range-mx:                      $btn-counter-margin-top !default;
+$input-range-thumb-top:               $btn-floating-margin !default;
+$input-range-thumb-margin-left:       -6px !default;
+$input-range-transform-origin:        50% 50% !default;
+$input-range-transform:               rotate(-45deg) !default;
+$input-range-thumb-value-width:       30px !default;
+$input-range-thumb-value-transform:   rotate(45deg) !default;
+$input-range-active-value-ml:         -$autocomplete-margin-bottom !default;
+$input-range-active-value-mt:         $btn-sm-counter-margin-top !default;
+$input-range-active-value-font-size:  $btn-floating-margin !default;
+$slider-runnable-track-height:        3px !default;
+$slider-runnable-track-bg:            #c2c0c2 !default;
+$slider-thumb-height:                 14px !default;
+$slider-thumb-width:                  $slider-thumb-height !default;
+$slider-thumb-mt:                     -5px !default;
+$slider-thumb-transition:             .3s !default;
+$slider-runnable-track-focus-bg:      #ccc !default;
+$slider-border-width:                 6px !default;
+
+// Chips
+$chip-height:                         32px !default;
+$chip-font-size:                      13px !default;
+$chip-font-weight:                    500 !default;
+$chip-font-color:                     rgba($black-base, .6) !default;
+$chip-line-height:                    $chip-height !default;
+$chip-padding-right:                  $autocomplete-wrap-li-padding-y !default;
+$chip-br:                             16px !default;
+$chip-background-color:               $blue-grey-lighten-5 !default;
+$chip-margin-bottom:                  $accordion-card-header-padding-y !default;
+$chip-margin-right:                   $accordion-card-header-padding-y !default;
+$chip-img-margin-right:               $btn-sm-counter-margin-top !default;
+$chip-img-margin-left:                -12px !default;
+$chip-img-height:                     $chip-height !default;
+$chip-img-width:                      $chip-height !default;
+$chip-close-font-size:                $chip-br !default;
+$chip-close-line-height:              $chip-height !default;
+$chip-close-padding-left:             $btn-sm-counter-margin-top !default;
+
+$chips-margin-bottom:                 $input-range-thumb-value-width !default;
+$chips-min-height:                    45px !default;
+$chips-padding-bottom:                $accordion-card-header-padding-y !default;
+$chips-input-font-color:              $chip-font-color !default;
+$chips-input-font-size:               $chip-font-size !default;
+$chips-input-font-weight:             $chip-font-weight !default;
+$chips-input-height:                  $chip-height !default;
+$chips-input-margin-right:            $input-group-text-checkbox-height !default;
+$chips-input-line-height:             $chip-height !default;
+$chips-input-width:                   $card-up-size !default;
+
+// Tabs
+$tabs-padding:                        .7rem !default;
+$tabs-margin-x:                       $accordion-card-header-padding-y !default;
+$tabs-margin-y:                       -20px !default;
+$pills-padding:                       .6rem !default;
+$nav-tabs-pills-bgc:                  $default-color !default;
+$nav-tabs-border-radius:              $border-radius-base !default;
+$nav-link-transition:                 all .4s !default;
+$nav-link-active-bgc:                 rgba($black, .2) !default;
+$nav-link-active-transition:          all $card-front-back-transition !default;
+$nav-item-disabled-link-color:      #6c757d !default;
+$tab-content-padding:                 $accordion-card-header-padding-y !default;
+$tab-content-pt:                      2rem !default;
+$md-pills-nav-link-border-radius:     2px !default;
+$md-pills-nav-link-color:             #666666 !default;
+
+// Tabs classic
+$classic-tabs-padding-y:              $input-group-text-checkbox-height !default;
+$classic-tabs-padding-x:              $input-group-text-radio-pl !default;
+$classic-tabs-font-size:              $chip-font-size !default;
+$classic-tabs-color:                  rgba($white, .7) !default;
+$classic-tabs-margin-left:            56px !default;
+$classic-tabs-border-radius:          .3rem !default;
+$classic-tabs-li-a-active-border-bottom: $slider-runnable-track-height !default;
+
+// Skins
+$skins: () !default;
+$skins: map-merge((
+  "white": (
+    "skin-primary-color":      #4285F4,
+    "skin-navbar":             $white,
+    "skin-footer-color":       #6f7178,
+    "skin-accent":             #4285F4,
+    "skin-flat":               #F9F9F9,
+    "skin-sidenav-item":       #4285F4,
+    "skin-sidenav-item-hover": rgba($black-base, .05),
+    "skin-gradient-start":     #ababab,
+    "skin-gradient-end":       $white,
+    "skin-mask-slight":        rgba($white, .5),
+    "skin-mask-light":         rgba($white, .65),
+    "skin-mask-strong":        rgba($white, .8),
+    "skin-sn-child":           #4285F4,
+    "skin-btn-primary":        #4285F4,
+    "skin-btn-secondary":      #fc685f,
+    "skin-btn-default":        #454545,
+    "skin-text":               #424242
+  ),
+  "black": (
+    "skin-primary-color":      #2AD1A3,
+    "skin-navbar":             #222,
+    "skin-footer-color":       #222,
+    "skin-accent":             #2AD1A3,
+    "skin-flat":               #222,
+    "skin-sidenav-item":       #2AD1A3,
+    "skin-sidenav-item-hover": #2AD1A3,
+    "skin-gradient-start":     #000,
+    "skin-gradient-end":       #616161,
+    "skin-mask-slight":        rgba($black, .5),
+    "skin-mask-light":         rgba($black, .65),
+    "skin-mask-strong":        rgba($black, .8),
+    "skin-sn-child":           #2AD1A3,
+    "skin-btn-primary":        #2AD1A3,
+    "skin-btn-secondary":      #0f478a,
+    "skin-btn-default":        #222222,
+    "skin-text":               $white
+  ),
+  "cyan": (
+    "skin-primary-color":      #4fada7,
+    "skin-navbar":             #114861,
+    "skin-footer-color":       #114861,
+    "skin-accent":             #f0b247,
+    "skin-flat":               #24879d,
+    "skin-sidenav-item":       rgba(29, 65, 82, .8),
+    "skin-sidenav-item-hover": rgba(29, 65, 82, .8),
+    "skin-gradient-start":     #114861,
+    "skin-gradient-end":       #45b0c0,
+    "skin-mask-slight":        rgba(21, 78, 96, .5),
+    "skin-mask-light":         rgba(21, 78, 96, .65),
+    "skin-mask-strong":        rgba(21, 78, 96, .8),
+    "skin-sn-child":           #ffa742,
+    "skin-btn-primary":        #ffa742,
+    "skin-btn-secondary":      #45b0c0,
+    "skin-btn-default":        #114861,
+    "skin-text":               $white
+  ),
+  "mdb": (
+    "skin-primary-color":      #33b5e5,
+    "skin-navbar":             #243a51,
+    "skin-footer-color":       #243a51,
+    "skin-accent":             #33b5e5,
+    "skin-flat":               #224562,
+    "skin-sidenav-item":       rgba(72, 198, 255, .8),
+    "skin-sidenav-item-hover": rgba(72, 198, 255, .8),
+    "skin-gradient-start":     #0e2135,
+    "skin-gradient-end":       #2c76b8,
+    "skin-mask-slight":        rgba(13, 36, 60, .5),
+    "skin-mask-light":         rgba(13, 36, 60, .65),
+    "skin-mask-strong":        rgba(13, 36, 60, .8),
+    "skin-sn-child":           #67d5ff,
+    "skin-btn-primary":        #33b5e5,
+    "skin-btn-secondary":      #0e3d67,
+    "skin-btn-default":        #1a6398,
+    "skin-text":               $white
+  ),
+  "deep-purple": (
+    "skin-primary-color":      #d0637c,
+    "skin-navbar":             #7f7e91,
+    "skin-footer-color":       #7f7e91,
+    "skin-accent":             #ac85f0,
+    "skin-flat":               #372e5f,
+    "skin-sidenav-item":       rgba(176, 139, 240, .5),
+    "skin-sidenav-item-hover": rgba(176, 139, 240, .5),
+    "skin-gradient-start":     #2e1f49,
+    "skin-gradient-end":       #a47fe3,
+    "skin-mask-slight":        rgba(36,  9,   56,  .5),
+    "skin-mask-light":         rgba(36,  9,   56,  .65),
+    "skin-mask-strong":        rgba(36,  9,   56,  .88),
+    "skin-sn-child":           #c9abfc,
+    "skin-btn-primary":        #ac85f0,
+    "skin-btn-secondary":      #6e4ca3,
+    "skin-btn-default":        #372e5f,
+    "skin-text":               $white
+  ),
+  "navy-blue": (
+    "skin-primary-color":      #309e9e,
+    "skin-navbar":             #353b50,
+    "skin-footer-color":       #353b50,
+    "skin-accent":             #40c6c6,
+    "skin-flat":               #4c5678,
+    "skin-sidenav-item":       rgba(37, 207, 207, .8),
+    "skin-sidenav-item-hover": rgba(37, 207, 207, .8),
+    "skin-gradient-start":     #222735,
+    "skin-gradient-end":       #4f68a6,
+    "skin-mask-slight":        rgba(14, 15,  32,  .5),
+    "skin-mask-light":         rgba(14, 15,  32,  .65),
+    "skin-mask-strong":        rgba(14, 15,  32,  .8),
+    "skin-sn-child":           #40c6c6,
+    "skin-btn-primary":        #40c6c6,
+    "skin-btn-secondary":      #7e51b4,
+    "skin-btn-default":        #293756,
+    "skin-text":               $white
+  ),
+  "pink": (
+    "skin-primary-color":      #bd5d70,
+    "skin-navbar":             #535466,
+    "skin-footer-color":       #535466,
+    "skin-accent":             #9fa0ae,
+    "skin-flat":               #aa5077,
+    "skin-sidenav-item":       rgba(0,   0,   0,   .4),
+    "skin-sidenav-item-hover": rgba(0,   0,   0,   .4),
+    "skin-gradient-start":     #812b5a,
+    "skin-gradient-end":       #f28cc0,
+    "skin-mask-slight":        rgba(152, 47,  88,  .5),
+    "skin-mask-light":         rgba(152, 47,  88,  .65),
+    "skin-mask-strong":        rgba(152, 47,  88,  .8),
+    "skin-sn-child":           #ffb0e6,
+    "skin-btn-primary":        #601f39,
+    "skin-btn-secondary":      #e7649d,
+    "skin-btn-default":        #535466,
+    "skin-text":               $white
+  ),
+  "indigo": (
+    "skin-primary-color":      #7f82c5,
+    "skin-navbar":             #9095aa,
+    "skin-footer-color":       #9095aa,
+    "skin-accent":             #fd668c,
+    "skin-flat":               #404f9f,
+    "skin-sidenav-item":       rgba(250, 80,  121, .8),
+    "skin-sidenav-item-hover": rgba(250, 80,  121, .8),
+    "skin-gradient-start":     #272d6e,
+    "skin-gradient-end":       #90a8ff,
+    "skin-mask-slight":        rgba(35,  65,  134, .5),
+    "skin-mask-light":         rgba(35,  65,  134, .65),
+    "skin-mask-strong":        rgba(35,  65,  134, .8),
+    "skin-sn-child":           #ff89ac,
+    "skin-btn-primary":        #fd668c,
+    "skin-btn-secondary":      #3c61ae,
+    "skin-btn-default":        #9095aa,
+    "skin-text":               $white
+  ),
+  "light-blue": (
+    "skin-primary-color":      #3d799c,
+    "skin-navbar":             #3f5c80,
+    "skin-footer-color":       #3f5c80,
+    "skin-accent":             #b4c2c9,
+    "skin-flat":               #6a9ed3,
+    "skin-sidenav-item":       rgba(29,  54,  86,  .6),
+    "skin-sidenav-item-hover": rgba(29,  54,  86,  .6),
+    "skin-gradient-start":     #69adf4,
+    "skin-gradient-end":       #69adf4,
+    "skin-mask-slight":        rgba(87,  134, 180, .5),
+    "skin-mask-light":         rgba(87,  134, 180, .65),
+    "skin-mask-strong":        rgba(87,  134, 180, .8),
+    "skin-sn-child":           #aadeff,
+    "skin-btn-primary":        #ff4a67,
+    "skin-btn-secondary":      #64c3f0,
+    "skin-btn-default":        #2d486a,
+    "skin-text":               $white
+  ),
+  "grey": (
+    "skin-primary-color":      #2b2b2b,
+    "skin-navbar":             #44474b,
+    "skin-footer-color":       #44474b,
+    "skin-accent":             #75c1f0,
+    "skin-flat":               #a5a4a4,
+    "skin-sidenav-item":       rgba(0,   0,   0,   .4),
+    "skin-sidenav-item-hover": rgba(0,   0,   0,   .4),
+    "skin-gradient-start":     #383838,
+    "skin-gradient-end":       #a5a4a4,
+    "skin-mask-slight":        rgba(121, 121, 121, .5),
+    "skin-mask-light":         rgba(121, 121, 121, .65),
+    "skin-mask-strong":        rgba(121, 121, 121, .8),
+    "skin-sn-child":           #afdffc,
+    "skin-btn-primary":        #46aded,
+    "skin-btn-secondary":      #7d8488,
+    "skin-btn-default":        #353637,
+    "skin-text":               $white
+  )
+), $skins);
+
+$skins-side-nav-hover-transition: all .3s linear !default;
+$skins-border-color: rgba(153,153,153, .3) !default;
+$skins-white-search-border-bottom: $autocomplete-margin-bottom !default;
+
+// Dropdown
+$dropdown-bg-color:                   $white !default;
+$dropdown-hover-bg-color:             $grey-lighten-3 !default;
+$dropdown-color:                      $primary-color !default;
+$dropdown-item-height:                40px !default;
+$dropdown-menu-padding:               $autocomplete-clear-top !default;
+$dropdown-item-font-size:             $font-small !default;
+$dropdown-item-disabled-color:        #868e96 !default;
+$dropdown-item-transition:            all .1s linear !default;
+$dropdown-menu-animated-animation-duration: .55s !default;
+$dropdown-menu-animated-animation-timing-function: $card-share-social-reveal-transition-ease !default;
+
+// Material select
+$material-select-wrapper-input-dropdown-height:                         2.9rem !default;
+$material-select-wrapper-input-dropdown-line-height:                    $material-select-wrapper-input-dropdown-height !default;
+$material-select-wrapper-input-dropdown-font-size:                      $accordion-card-header-padding-y !default;
+$material-select-wrapper-input-dropdown-margin:                         .94rem !default;
+$material-select-wrapper-input-dropdown-disabled-color:                 rgba($black, .3) !default;
+$material-select-wrapper-input-dropdown-disabled-border-bottom-color:   $material-select-wrapper-input-dropdown-disabled-color !default;
+
+$material-select-wrapper-search-wrap-py:                                $accordion-card-header-padding-y !default;
+$material-select-wrapper-search-wrap-mx:                                $tabs-padding !default;
+$material-select-wrapper-search-wrap-input-pb:                          .4rem !default;
+$material-select-wrapper-span-caret-top:                                $accordion-card-header-padding-y !default;
+$material-select-wrapper-span-caret-font-size:                          $card-reveal-title-i-right !default;
+$material-select-wrapper-span-caret-label-top:                          -.88rem !default;
+
+$material-select-dropdown-li-img-my:                                    $classic-tabs-border-radius !default;
+$material-select-dropdown-li-img-mx:                                    .75rem !default;
+$material-select-dropdown-li-optgroup-selected-span:                    rgba($black, .7) !default;
+$material-select-dropdown-li-optgroup-span:                             rgba($black, .4) !default;
+$material-select-multiple-select-dropdown-height:                       $card-reveal-title-i-right !default;
+
+$material-select-dropdown-content-min-width:                            6.25rem !default;
+$material-select-dropdown-content-max-height:                           40.625rem !default;
+$material-select-dropdown-content-li-color:                             $black !default;
+$material-select-dropdown-content-li-line-height:                       1.3rem !default;
+$material-select-dropdown-content-li-span-font-size:                    $accordion-card-body-font-size !default;
+$material-select-dropdown-content-li-span-padding:                      $autocomplete-clear-top !default;
+
+$material-select-colorful-dropdown-content-padding:                     $autocomplete-clear-top !default;
+$material-select-colorful-dropdown-content-li-active-color:             $white !default;
+$material-select-colorful-dropdown-content-li-hover-transition:         .15s !default;
+$material-select-colorful-dropdown-content-li-hover-border-radius:      $border-radius-base !default;
+
+// SideNav Variables
+$sidenav-breakpoint:                1440px !default;
+$hide-sidenav:                      "only screen and (max-width: #{$sidenav-breakpoint})" !default;
+$navbar-avatar-height:              $fixed-action-btn-right   !default;
+$navbar-double-small-padding:       4px    !default;
+$navbar-double-font-size:           $autocomplete-wrap-li-padding-x   !default;
+$navbar-breadcrumb-dn-padding:      $accordion-card-header-padding-y   !default;
+$navbar-button-collapse-left:       $btn-floating-margin   !default;
+$navbar-button-collapse-font-size:  $accordion-card-header-padding-x !default;
+$navbar-button-collapse-fs-sm:      1.4rem !default;
+$navbar-button-collapse-mx:         $btn-floating-margin   !default;
+$sidenav-padding-bottom:            3.75rem !default;
+$sidenav-width:                     $form-inline-autocomplete-width  !default;
+$sidenav-background-color:          #2c2f34 !default;
+$collapsible-hover-bgc:             rgba($black, .15) !default;
+$collapsible-li-border-radius:      $md-pills-nav-link-border-radius !default;
+$collapsible-header-hover-bgc:      rgba($white, .15) !default;
+$collapsible-header-active-bgc:     $collapsible-header-hover-bgc !default;
+$sidenav-collapsible-a-font-size:   $min-chart-percent-font-size !default;
+$sidenav-collapsible-a-height:      36px !default;
+$sidenav-collapsible-a-line-height: $sidenav-collapsible-a-height !default;
+$sidenav-fa-margin-right:           $chip-font-size !default;
+$sidenav-collapsible-body-a-pl:     $btn-floating-width !default;
+$sidenav-collapsible-body-a-bgc:    $collapsible-hover-bgc !default;
+$sidenav-a-font-size:               $accordion-card-header-padding-y !default;
+$sidenav-a-height:                  $classic-tabs-margin-left !default;
+$sidenav-a-line-height:             $sidenav-a-height !default;
+$sidenav-padding-left:              $input-group-text-checkbox-height !default;
+
+$sidenav-logo-wrapper-height:                     8.75rem !default;
+$sidenav-logo-wrapper-width:                      $sidenav-width !default;
+$sidenav-logo-wrapper-img-px:                     $min-chart-margin !default;
+$sidenav-logo-wrapper-img-py:                     20% !default;
+$sidenav-logo-wrapper-medium-img-height:          80px !default;
+$sidenav-logo-wrapper-medium-img-py:              7% !default;
+
+$sidenav-sn-avatar-wrapper-px:                    33% !default;
+$sidenav-sn-avatar-wrapper-max-width:             90px !default;
+$sidenav-sn-avatar-wrapper-py:                    10% !default;
+$sidenav-sn-avatar-wrapper-medium-px:             40% !default;
+$sidenav-sn-avatar-wrapper-medium-max-width:      $sidenav-logo-wrapper-img-px !default;
+
+$sidenav-bg-width:                                $sidenav-width !default;
+$sidenav-collapsible-mt:                          $accordion-card-header-padding-y !default;
+$sidenav-rotate-icon-top:                         $min-chart-percent-font-size !default;
+$sidenav-rotate-icon-mr:                          $btn-floating-icon-size !default;
+$sidenav-logo-wrapper-border-bottom-color:        rgba($white, .65) !default;
+$sidenav-ad-avatar-wrapper-img-max-width:         $sidenav-padding-bottom !default;
+$sidenav-ad-avatar-wrapper-img-padding:           $btn-floating-icon-size $card-reveal-title-i-right !default;
+$sidenav-ad-avatar-wrapper-p-font-size:           $material-select-wrapper-input-dropdown-margin !default;
+$sidenav-ad-avatar-wrapper-p-padding:             $btn-floating-icon-size !default;
+$sidenav-about-padding:                           $accordion-card-header-padding-y !default;
+$sidenav-social-li-padding:                       $pills-padding !default;
+$sidenav-social-fa-font-size:                     $accordion-card-body-font-size !default;
+$sidenav-social-fa-color:                       #dbe4e7 !default;
+$sidenav-social-fa-color-hover:                 #AFC4CB !default;
+$sidenav-social-fa-transition:                    $slider-thumb-transition !default;
+$sidenav-search-form-input-padding-left:          $card-share-social-reveal-right !default;
+
+$sidenav-light-bgc:                             #e5e5e5                 !default;
+$sidenav-light-color:                           #555                    !default;
+$sidenav-light-border-bottom-color:               $skins-border-color       !default;
+$sidenav-light-collapsible-body-a-bgc:            rgba($black-base, .1)     !default;
+$sidenav-light-collapsible-header-hover-bgc:      rgba($black-base, .05)    !default;
+$sidenav-light-collapsible-header-active-color:   $primary-color            !default;
+
+$drag-target-width:                               $btn-floating-margin      !default;
+$sidenav-overlay:                                 rgba($black-base, .5)     !default;
+
+// LIGHT BOX
+$pswp__show-hide-transition-duration:    333ms !default;
+$pswp__controls-transition-duration:     $pswp__show-hide-transition-duration !default;
+$pswp__background-color:                 $black !default;
+$pswp__placeholder-color:              #222 !default;
+$pswp__box-sizing-border-box:            true !default; // disable .pswp * { box-sizing:border-box } (in case you already have it in your site css)
+$pswp__root-z-index:                     1500 !default;
+$pswp__assets-path:                      "" !default; // path to skin assets folder (preloader, PNG and SVG sprite)
+$pswp__error-text-color:                 $slider-runnable-track-focus-bg !default; // "Image not loaded" text color
+$pswp__include-minimal-style:            $pswp__box-sizing-border-box !default;
+$mdb-lightbox-figure-img-transition:     opacity .4s !default;
+$mdb-lightbox-figure-img-hover-opacity:  .8 !default;
+$mdb-lightbox-no-margin-padding:         $autocomplete-clear-top !default;
+$pswp__button-background:                url(#{$image-path}/lightbox/default-skin.png) !default;
+$pswp__button-background-image:          url(#{$image-path}/lightbox/default-skin.svg) !default;
+$pswp__preloader__icn-background:        url(#{$image-path}/lightbox/preloader.gif) !default;
+
+// Date Picker
+$datepicker-color-mdb:                #999999 !default;
+$datepicker-box-padding:                .125rem !default;
+$datepicker-weekday-bg:                 darken($primary-color, $sidenav-logo-wrapper-medium-img-py) !default;
+$datepicker-date-bg:                    $primary-color !default;
+$datepicker-year:                       rgba($white, .4) !default;
+$datepicker-focus:                      rgba($black, .05) !default;
+$datepicker-selected:                   $primary-color !default;
+$datepicker-selected-outfocus:          desaturate(lighten($primary-color, 35%), 15%) !default;
+
+$datepicker-header-mb:                  $btn-floating-icon-size !default;
+$datepicker-date-display-font-weight:   300 !default;
+$datepicker-date-display-pb:            .9375rem !default;
+$datepicker-date-display-mb:            $accordion-card-header-padding-y !default;
+
+$datepicker-weekday-display-font-weight:     200 !default;
+$datepicker-weekday-display-padding:        .625rem !default;
+$datepicker-weekday-display-letter-spacing: .5 !default;
+$datepicker-weekday-display-font-size:      $accordion-card-header-padding-y !default;
+$datepicker-weekday-display-mb:             $datepicker-date-display-pb !default;
+
+$datepicker-month-display-font-size:        $tab-content-pt !default;
+$datepicker-day-display-font-size:          4.5rem !default;
+$datepicker-day-display-font-weight:        400 !default;
+$datepicker-year-display-font-size:         1.8rem !default;
+
+$datepicker-year-ml:                        .25em !default;
+$datepicker-year-mr:                        $datepicker-year-ml !default;
+
+$datepicker-select-month-height:            2em !default;
+$datepicker-select-month-ml:                $datepicker-year-ml !default;
+$datepicker-select-month-mr:                $datepicker-year-ml !default;
+$datepicker-select-year:                    30% !default;
+
+$datepicker-select-month-browser-width:     $sidenav-sn-avatar-wrapper-medium-px !default;
+$datepicker-select-year-browser-width:      25% !default;
+
+$datepicker-nav-prev-next-py:               .5em !default;
+$datepicker-nav-prev-next-px:               1.55em !default;
+$datepicker-nav-prev-next-width:            1em !default;
+$datepicker-nav-prev-next-height:           $datepicker-nav-prev-next-width !default;
+
+$datepicker-nav-prev-next-bt:               $datepicker-nav-prev-next-py !default;
+$datepicker-nav-prev-next-bb:               $datepicker-nav-prev-next-py !default;
+$datepicker-nav-prev-next-br:               .75em !default;
+$datepicker-nav-prev-next-br-color:       #676767 !default;
+
+$datepicker-nav-prev-left:                  -1em !default;
+$datepicker-nav-prev-pr:                    1.25em !default;
+
+$datepicker-nav-next-right:                 $datepicker-nav-prev-left !default;
+$datepicker-nav-next-pf:                    $datepicker-nav-prev-pr !default;
+$datepicker-nav-next-border-left:           $datepicker-nav-prev-next-br !default;
+
+$datepicker-table-font-size:                $accordion-card-header-padding-y !default;
+$datepicker-table-width:                    100% !default;
+$datepicker-table-mt:                       $datepicker-nav-prev-next-br !default;
+$datepicker-table-mb:                       $datepicker-nav-prev-next-py !default;
+
+$datepicker-table-weekday-width:            14% !default;
+$datepicker-table-weekday-font-size:        .9em !default;
+$datepicker-table-weekday-padding-bottom:   $datepicker-year-ml !default;
+$datepicker-table-weekday-font-weight:      $chip-font-weight !default;
+$datepicker-table-weekday-padding-bottom:   $datepicker-nav-prev-next-py !default;
+
+$datepicker-table-day-today-letter-spacing: -.3 !default;
+$datepicker-table-day-today-py:             $material-select-dropdown-li-img-mx !default;
+$datepicker-table-day-today-font-weight:    $datepicker-day-display-font-weight !default;
+$datepicker-table-day-today-border:         $autocomplete-margin-bottom !default;
+
+$datepicker-table-day-infocus-color:            #595959 !default;
+$datepicker-table-day-infocus-letter-spacing:     $datepicker-table-day-today-letter-spacing !default;
+$datepicker-table-day-infocus-py:                 $material-select-dropdown-li-img-mx !default;
+$datepicker-table-day-infocus-font-weight:        $datepicker-day-display-font-weight !default;
+$datepicker-table-day-infocus-color:              $autocomplete-margin-bottom !default;
+$datepicker-table-day-infocus-hover-font-weight:  $chip-font-weight !default;
+
+$datepicker-table-day-outfocus-py:                $material-select-dropdown-li-img-mx !default;
+$datepicker-table-day-outfocus-hover-color:     #dddddd !default;
+$datepicker-table-day-outfocus-hover-font-weight: $chip-font-weight !default;
+
+$datepicker-table-day-selected-hover-border-radius: 50% !default;
+$datepicker-table-day-selected-hover-transform:     scale(.9) !default;
+$datepicker-table-day-higlighted-color:           #bbbbbb !default;
+
+$datepicker-footer-py:                              .3125rem !default;
+$datepicker-footer-px:                              $datepicker-weekday-display-padding !default;
+
+$datepicker-footer-today-clear-button-border:       $autocomplete-margin-bottom !default;
+$datepicker-footer-today-clear-button-font-size:    .8em !default;
+$datepicker-footer-today-clear-button-padding:      $accordion-card-header-padding-y 0 $tabs-padding 0 !default;
+$datepicker-footer-today-clear-button-font-weight:  700 !default;
+$datepicker-footer-today-clear-button-width:        $sidenav-sn-avatar-wrapper-px !default;
+
+$datepicker-footer-today-clear-button-hover-color: #b1dcfb !default;
+$datepicker-footer-today-clear-button-before-mr:     .45em !default;
+
+$datepicker-footer-today-button-before-top:        -.05em !default;
+$datepicker-footer-today-button-before-bt:         .66em !default;
+$datepicker-footer-today-button-before-bt-color: #0059bc !default;
+$datepicker-footer-today-button-before-bl:         $datepicker-footer-today-button-before-bt !default;
+
+$datepicker-footer-clear-button-before-top:        -.25em !default;
+$datepicker-footer-clear-button-before-width:      $datepicker-footer-today-button-before-bt !default;
+$datepicker-footer-clear-button-before-bt-color: #ee2200 !default;
+$datepicker-footer-clear-button-before-bl:         $slider-runnable-track-height !default;
+
+$datepicker-footer-close-button-before-top:        -.1em !default;
+$datepicker-footer-close-button-before-font-size:  1.1em !default;
+$datepicker-footer-close-button-before-mr:         .35em !default;
+$datepicker-footer-close-button-before-color:    #777777 !default;
+$datepicker-calender-padding:                      0 $accordion-card-header-padding-y !default;
+
+// Default time picker
+$timepicker-color-mdb: #666666 !default;
+$timepicker-pickerlist-padding:                    $datepicker-nav-prev-next-br 0 4.2em !default;
+$timepicker-pickerlistitem-breakpoint:             46.75em !default;
+
+$timepicker-pickerlistitem-border-bottom:               $autocomplete-margin-bottom !default;
+$timepicker-pickerlistitem-border-top:                  $autocomplete-margin-bottom !default;
+$timepicker-pickerlistitem-border-color:                $datepicker-table-day-outfocus-hover-color !default;
+$timepicker-pickerlistitem-mb:                          -1px !default;
+$timepicker-pickerlistitem-padding:                     $datepicker-nav-prev-next-br $datepicker-nav-prev-pr !default;
+$timepicker-pickerlistitem-media-padding:               $datepicker-nav-prev-next-py $datepicker-nav-prev-next-width !default;
+
+$timepicker-pickerlistitem-hover-bg:                    $datepicker-footer-today-clear-button-hover-color !default;
+$timepicker-pickerlistitem-hover-border-color:        #0089ec !default;
+
+$timepicker-pickerlistitem-highlighted-border-color:    $timepicker-pickerlistitem-hover-border-color !default;
+$timepicker-pickerlistitem-highlighted-hover-bg:        $timepicker-pickerlistitem-hover-bg !default;
+$timepicker-pickerlistitem-selected-hover-bg:           $timepicker-pickerlistitem-hover-border-color !default;
+
+$timepicker-pickerlistitem-disabled-hover-color:        $datepicker-table-day-outfocus-hover-color !default;
+
+$timepicker-pickertime-button-clear-width:              80% !default;
+$timepicker-pickertime-button-clear-mt:                 $datepicker-nav-prev-next-width !default;
+$timepicker-pickertime-button-clear-padding:            $datepicker-nav-prev-next-width $datepicker-nav-prev-pr !default;
+$timepicker-pickertime-button-clear-font-weight:        $chip-font-weight !default;
+$timepicker-pickertime-button-clear-font-size:          .67em !default;
+
+$timepicker-pickertime-button-clear-hover-bg:           $timepicker-pickerlistitem-hover-bg !default;
+$timepicker-pickertime-button-clear-hover-border-color: $datepicker-footer-clear-button-before-bt-color !default;
+
+$timepicker-pickertime-button-clear-before-top:         $datepicker-footer-clear-button-before-top !default;
+$timepicker-pickertime-button-clear-before-font-size:   $datepicker-nav-prev-pr !default;
+$timepicker-pickertime-button-clear-before-font-weight: $datepicker-footer-today-clear-button-font-weight !default;
+
+$timepicker-pickertime-frame-min-width:                 16rem !default;
+$timepicker-pickertime-frame-max-width:                 20rem !default;
+
+$timepicker-pickerbox-font-size:                        $datepicker-nav-prev-next-width !default;
+$timepicker-pickerbox-bg:                             #f2f2f2 !default;
+$timepicker-pickerbox-breakpoint:                       40.125em !default;
+$timepicker-pickerbox-breakpoint-mb:                    5em !default;
+
+$timepicker-pickerdate-display-pb:                      $datepicker-date-display-pb !default;
+$timepicker-pickerdate-display-font-weight:             $datepicker-date-display-font-weight !default;
+$timepicker-pickerdate-display-mb:                      $accordion-card-header-padding-y !default;
+
+$timepicker-clockpicker-display-height:                 5.3125rem !default;
+$timepicker-clockpicker-display-font-size:              4.375rem !default;
+$timepicker-clockpicker-display-padding:                $datepicker-weekday-display-padding !default;
+$timepicker-clockpicker-display-color:                #b2dfdb !default;
+$timepicker-clockpicker-display-animate-name:           pulse !default;
+
+$timepicker-clockpicker-display-am-pm-pl:               $datepicker-footer-py !default;
+$timepicker-clockpicker-display-am-pm-height:           $timepicker-clockpicker-display-height !default;
+
+$timepicker-clockpicker-span-am-pm-font-size:           1.4375rem !default;
+$timepicker-clockpicker-span-am-pm-line-height:         1.5625rem !default;
+$timepicker-clockpicker-span-am-pm-color:               $timepicker-clockpicker-display-color !default;
+
+$timepicker-clockpicker-span-hours-animation-duration:  500ms !default;
+$timepicker-clockpicker-span-hours-transition:          color $timepicker-clockpicker-span-hours-animation-duration !default;
+
+$timepicker-keyframes-transform-pulse:                  scale3d(1, 1, 1) !default;
+$timepicker-keyframes-transform-pulse-middle:           scale3d(1.1, 1.1, 1.1) !default;
+
+$timepicker-clockpicker-plate-border-radius:            $datepicker-table-day-selected-hover-border-radius !default;
+$timepicker-clockpicker-plate-width:                    16.875rem !default;
+$timepicker-clockpicker-plate-height:                   $timepicker-clockpicker-plate-width !default;
+$timepicker-clockpicker-plate-margin-top:               $btn-floating-icon-size !default;
+
+$timepicker-clockpicker-canvas-width:                   $timepicker-clockpicker-plate-width !default;
+$timepicker-clockpicker-canvas-height:                  $timepicker-clockpicker-plate-width !default;
+$timepicker-clockpicker-canvas-left:                    $timepicker-pickerlistitem-mb !default;
+$timepicker-clockpicker-canvas-top:                     $timepicker-pickerlistitem-mb !default;
+
+$timepicker-clockpicker-dial-transition-transform:      transform 350ms !default;
+$timepicker-clockpicker-dial-transition-opacity:        opacity 350ms !default;
+
+$timepicker-clockpicker-dial-tick-border-radius:        $datepicker-table-day-selected-hover-border-radius !default;
+$timepicker-clockpicker-dial-tick-line-height:          $file-path-wrapper-height !default;
+$timepicker-clockpicker-dial-tick-width:                $file-path-wrapper-height !default;
+$timepicker-clockpicker-dial-tick-height:               $file-path-wrapper-height !default;
+$timepicker-clockpicker-dial-tick-transition:           background-color 300ms !default;
+$timepicker-clockpicker-dial-tick-hover-bg:             rgba($teal-base, 0) !default;
+$timepicker-clockpicker-dial-tick-hover-bg-opacity:     rgba($teal-base, .25) !default;
+
+$timepicker-clockpicker-dial-out-transform:             scale(1.2, 1.2) !default;
+$timepicker-clockpicker-dial-out-transform-minutes:     scale(.8, .8) !default;
+$timepicker-clockpicker-canvas-transition:              opacity 300ms !default;
+
+$timepicker-clockpicker-canvas-stroke:                  $timepicker-clockpicker-dial-tick-hover-bg-opacity !default;
+$timepicker-clockpicker-canvas-stroke-width:            1 !default;
+$timepicker-clockpicker-canvas-out-opacity:             .25 !default;
+$timepicker-clockpicker-canvas-bearing-fill:            rgba($teal-darken-4, .75) !default;
+$timepicker-clockpicker-canvas-fg-fill:                 rgba($teal-darken-4, 0) !default;
+$timepicker-clockpicker-canvas-fg-active-fill:          rgba($teal-darken-4, .5) !default;
+$timepicker-clockpicker-canvas-bg-fill:                 $timepicker-clockpicker-dial-tick-hover-bg-opacity !default;
+$timepicker-clockpicker-canvas-bg-trans-fill:           $timepicker-clockpicker-dial-tick-hover-bg-opacity !default;
+
+$timepicker-clockpicker-am-pm-block-mt:                 -.625rem !default;
+$timepicker-clockpicker-am-pm-block-height:             3.125rem !default;
+$timepicker-clockpicker-button-am-button-height:        2.8125rem !default;
+$timepicker-clockpicker-button-am-button-width:         $timepicker-clockpicker-button-am-button-height !default;
+$timepicker-clockpicker-button-pm-button-height:        $timepicker-clockpicker-button-am-button-height !default;
+$timepicker-clockpicker-button-pm-button-width:         $timepicker-clockpicker-button-am-button-height !default;
+
+$timepicker-clockpicker-btn-floating-focus-bg:          lighten($primary-color, 5%) !default;
+$timepicker-clockpicker-btn-floating-active-bg:         darken($primary-color, $sidenav-logo-wrapper-img-py) !default;
+
+$timepicker-clockpicker-footer-button-mt:               $datepicker-date-display-pb !default;
+$timepicker-clockpicker-footer-button-active-bg:        $timepicker-clockpicker-dial-tick-hover-bg-opacity !default;
+
+$timepicker-darktheme-clockpicker-plate-bg:             rgba($pink-accent-2, 0) !default;
+$timepicker-darktheme-clockpicker-plate-active-bg:      rgba($pink-accent-2, .25) !default;
+
+$timepicker-darktheme-clockpicker-canvas-line-stroke:   $timepicker-darktheme-clockpicker-plate-active-bg !default;
+
+$timepicker-darktheme-clockpicker-canvas-fg-fill:         $timepicker-darktheme-clockpicker-plate-bg !default;
+$timepicker-darktheme-clockpicker-canvas-active-fg-fill:  rgba($pink-accent-2, .5) !default;
+
+$timepicker-darktheme-clockpicker-canvas-bg-fill:         $timepicker-darktheme-clockpicker-plate-active-bg !default;
+$timepicker-darktheme-clockpicker-canvas-bg-trans-fill:   $timepicker-darktheme-clockpicker-canvas-active-fg-fill !default;
+
+$timepicker-darktheme-clockpicker-button-active-bg:       $timepicker-darktheme-clockpicker-plate-active-bg !default;
+
+// Default time & date picker
+$pickerframe-wrap-box-breakpoint:                         28.875em !default;
+$pickerframe-mb-breakpoint:                               $timepicker-pickerbox-breakpoint !default;
+$pickerframe-pos-breakpoint:                              35.875em !default;
+
+$pickerinput-active-border-color:                         $timepicker-pickerlistitem-hover-border-color !default;
+$picker-font-size:                                        $accordion-card-header-padding-y !default;
+$picker-font-line-height:                                 1.2 !default;
+
+$picker-holder-transition-bg:                             background .15s ease-out !default;
+$picker-holder-transition-top:                            top 0s .15s !default;
+
+$picker-frame-min-width:                                  $timepicker-pickertime-frame-min-width !default;
+$picker-frame-max-width:                                  20.3125rem !default;
+$picker-frame-width:                                      18.75rem !default;
+$picker-frame-max-height:                                 21.875rem !default;
+$picker-frame-filter:                                     $file-input-filter !default;
+$picker-frame-transition:                                 all .15s ease-out !default;
+$picker-frame-media-bottom:                               -100% !default;
+$picker-frame-media-max-height:                           $timepicker-pickertime-button-clear-width !default;
+$picker-frame-media-mb:                                   7.5% !default;
+
+$picker-box-border:                                       $autocomplete-margin-bottom  !default;
+$picker-box-border-color:                                 $datepicker-footer-close-button-before-color !default;
+$picker-box-border-top-color:                            #898989 !default;
+$picker-box-border-radius:                                $btn-md-counter-margin-top $btn-md-counter-margin-top 0 0 !default;
+$picker-box-box-shadow:                                   0 $material-select-dropdown-li-img-mx 2.25rem $accordion-card-header-padding-y rgba($black, .24) !default;
+
+$picker-opened-holder-bg:                                 rgba($black, .32) !default;
+$picker-opened-holder-transition:                         $picker-holder-transition-bg !default;
+$picker-opened-holder-zoom:                               $timepicker-clockpicker-canvas-stroke-width !default;
+$picker-opened-frame-filter:                              alpha(opacity=100) !default;
+$picker-opened-frame-opacity:                             $timepicker-clockpicker-canvas-stroke-width !default;
+$picker-opened-frame-media-top:                           $sidenav-sn-avatar-wrapper-py !default;
+
+$picker-custom-materialize-styles:                        $autocomplete-margin-bottom solid $blue-lighten-5 !default;
+
+// Default date picker
+$pickerweekday-padb-breakpoint:                           33.875em !default;
+
+// Ecommerce components
+$collection-card-stripe-bottom:                           $form-header-mb !default;
+$collection-card-stripe-padding:                          $icons-sm-font-size !default;
+$collection-card-stripe-dark-bgc:                         $material-select-dropdown-li-optgroup-selected-span !default;
+$collection-card-stripe-dark-a-p-color:                   $grey-lighten-3 !default;
+$collection-card-stripe-light-bgc:                        $classic-tabs-color !default;
+$collection-card-stripe-light-a-p-color:                  $grey-darken-3 !default;
+$collection-card-stripe-letter-spacing:                   .25rem !default;
+
+$ecommerce-rating-color:                                  $amber-darken-2 !default;
+$ecommerce-card-footer-discount-color:                    $grey-base !default;
+$ecommerce-card-footer-a-color:                           $grey-darken-1 !default;
+$ecommerce-card-footer-a-hover-transition:                .4s !default;
+$ecommerce-card-footer-a-hover-color:                     $red-accent-4 !default;
+$ecommerce-card-footer-a-active-color:                    $ecommerce-card-footer-a-hover-color !default;
+$ecommerce-product-table-btn-sm-py:                       $classic-tabs-border-radius !default;
+$ecommerce-product-table-btn-sm-px:                       $pills-padding !default;
+
+// Toasts
+$toast-message-a-hover-color:                             $slider-runnable-track-focus-bg !default;
+$toast-close-button-right:                                -.3em !default;
+$toast-close-button-top:                                  $toast-close-button-right !default;
+$toast-close-button-font-size:                            $btn-floating-icon-size !default;
+$toast-close-button-text-shadow:                          0 $autocomplete-margin-bottom 0 !default;
+$toast-close-button-opacity:                              $mdb-lightbox-figure-img-hover-opacity !default;
+$toast-close-button-filter:                               alpha(opacity=80) !default;
+$toast-close-button-hover-opacity:                        .4 !default;
+$toast-close-button-hover-filter:                         alpha(opacity=40) !default;
+$toast-top-bottom-left-right-size:                        $autocomplete-wrap-li-padding-y !default;
+$toast-container-margin:                                  $slider-border-width !default;
+$toast-container-py:                                      $autocomplete-wrap-li-padding-x !default;
+$toast-container-pr:                                      $toast-container-py !default;
+$toast-container-pl:                                      $sidenav-logo-wrapper-img-px !default;
+$toast-container-width:                                   $picker-frame-width !default;
+$toast-container-opacity:                                 .95 !default;
+$toast-container-filter:                                  alpha(opacity=95) !default;
+$toast-container-hover-transition:                        .45s !default;
+$toast-container-hover-opacity:                           $timepicker-clockpicker-canvas-stroke-width !default;
+$toast-container-hover-filter:                            $picker-opened-frame-filter !default;
+$toast-container-top-full-width:                          96% !default;
+$toast-bgc:                                             #030303 !default;
+$toast-progress-height:                                   $navbar-double-small-padding !default;
+$toast-progress-opacity:                                  $toast-close-button-hover-opacity !default;
+$toast-progress-filter:                                   $toast-close-button-hover-filter !default;
+
+// Magazine section
+$magazine-single-news-border-bottom:                    $grey-lighten-2 !default;
+
+// Pricing section
+$pricing-card-option-padding:                           $file-path-wrapper-height !default;
+$pricing-card-price-padding-top:                        3.94rem !default;
+$pricing-card-number-font-size:                         5rem !default;
+$pricing-card-number-padding:                           $accordion-card-header-padding-x !default;
+$pricing-card-number-before-font-size:                  $card-share-social-reveal-right !default;
+$pricing-card-number-before-margin-left:                -1.2rem !default;
+$pricing-card-number-before-margin-top:                 $tabs-padding !default;
+$pricing-card-number-after-font-size:                   $pricing-card-number-before-font-size !default;
+$pricing-card-number-after-margin-top:                  $form-header-mb !default;
+$pricing-card-version-padding:                          $accordion-card-header-padding-y !default;
+$pricing-card-version-bgc:                              $material-select-wrapper-input-dropdown-disabled-color !default;
+$pricing-card-striped-padding:                          $accordion-card-header-padding-y !default;
+$pricing-card-striped-li-border-bottom-color:           rgba($grey-lighten-3, .298039) !default;
+$pricing-card-striped-li-border-bottom-color-darker:    rgba($datepicker-color-mdb, .298039) !default;
+$pricing-card-striped-li-margin-bottom:                 $accordion-card-header-padding-y !default;
+$pricing-card-green-striped-li-border-color:          #33c28a !default;
+$pricing-card-orange-striped-li-border-color:         #e97d63 !default;
+$pricing-card-purple-striped-li-border-color:         #963c94 !default;
+$pricing-card-dark-bgc:                               #28283f !default;
+$pricing-card-circle-border-color:                      $grey-lighten-2 !default;
+$pricing-card-circle-height:                            7.5rem !default;
+$pricing-card-circle-width:                             $pricing-card-circle-height !default;
+$pricing-card-circle-border-radius:                     $border-radius-circle !default;
+$pricing-card-circle-icon-font-size:                    4rem !default;
+
+// Team section
+$team-section-avatar-max-width:                         $card-up-img-size !default;
+$team-section-avatar-circle-max-width:                  150px !default;
+
+// Testimonials section
+$testimonial-carousel-control-top:                      $datepicker-table-day-selected-hover-border-radius !default;
+$testimonial-carousel-control-transform:                translateY(-35%) !default;
+$testimonial-carousel-control-font-size:                $pricing-card-number-font-size !default;
+$testimonial-carousel-control-color:                    $chip-font-color !default;
+$testimonial-carousel-control-hover-transition:         .4s !default;
+$testimonial-carousel-control-hover-color:              $black-base !default;
+$testimonial-carousel-control-mx:                       6% !default;
+$testimonial-carousel-avatar-max-width:                 170px !default;
+$testimonial-carousel-mx:                               23% !default;
+
+// Contact section
+$contact-section-form-btn-floating-bottom:              $form-header-mb !default;
+$contact-section-bgc:                                 #103f6d !default;
+$contact-section-fa-color:                            #6b89a5 !default;
+
+// Templates section
+$fixed-sn-double-nav-main-footer-pl:                    $sidenav-width !default;
+$fixed-sn-double-nav-main-pt:                           5.5rem !default;
+$fixed-sn-double-nav-main-small-mx:                     2% !default;
+$fixed-sn-double-nav-main-medium-mx:                    5% !default;
+$fixed-sn-double-nav-main-large-mx:                     $testimonial-carousel-control-mx !default;
+
+$hidden-sn-main-pt:                                     $fixed-sn-double-nav-main-pt !default;
+$hidden-sn-main-btn-collapse-font-size:                 $navbar-button-collapse-fs-sm !default;
+$hidden-sn-main-btn-collapse-mr:                        $datepicker-weekday-display-padding !default;
+$hidden-sn-main-btn-collapse-ml:                        -.375rem !default;
+
+// Carousel
+$carousel-thumbnails-mb:                                $pricing-card-number-font-size !default;
+$carousel-thumbnails-indicators-mb:                     -4.69rem !default;
+$carousel-thumbnails-sm-mb:                             $sidenav-padding-bottom !default;
+$carousel-thumbnails-indicators-sm-mb:                  -3.44rem !default;
+$carousel-thumbnails-indicators-li-width:               $material-select-dropdown-content-min-width !default;
+$carousel-thumbnails-indicators-li-max-width:           $carousel-thumbnails-indicators-li-width !default;
+$carousel-thumbnails-indicators-active-opacity:         1 !default;
+
+$carousel-multi-item-mb:                                $pricing-card-number-font-size !default;
+$carousel-multi-item-indicators-mb:                     -2em !default;
+$carousel-multi-item-indicators-li-height:              $btn-floating-icon-size !default;
+$carousel-multi-item-indicators-li-width:               $carousel-multi-item-indicators-li-height !default;
+$carousel-multi-item-indicators-li-max-width:           $carousel-multi-item-indicators-li-width !default;
+$carousel-multi-item-indicators-li-mb:                  -3.75rem !default;
+$carousel-multi-item-indicators-active-height:          1.56rem !default;
+$carousel-multi-item-indicators-active-width:           $carousel-multi-item-indicators-active-height !default;
+$carousel-multi-item-indicators-active-max-width:       $carousel-multi-item-indicators-active-width !default;
+$carousel-multi-item-indicators-active-border-radius:   $border-radius-circle !default;
+$carousel-multi-item-controls-top-mb:                   $card-share-social-reveal-right !default;
+$carousel-multi-item-card-cascade-narrower-mt:          $btn-floating-icon-size !default;
+$carousel-multi-item-card-cascade-narrower-mb:          $classic-tabs-border-radius !default;
+$carousel-multi-item-medium-screen-mb:                  -1.88rem !default;
+
+// Advanced table with checkboxes
+$advanced-table-a-mr:                                   $accordion-card-header-padding-y !default;
+$advanced-table-fieldset-label-height:                  $material-select-wrapper-input-dropdown-margin !default;
+
+// Scrollbar
+$scrollbar-color-mdb:                                   $datepicker-color-mdb !default;
+$scrollbar-color-mdb-grey:                              #aaaaaa !default;
+$scrollbar-ps-xrail-opacity:                            .9 !default;
+$scrollbar-ps-scrollbar-xrail-x-border-radius:          .375rem !default;
+$scrollbar-ps-scrollbar-xrail-x-bottom:                 $datepicker-box-padding !default;
+$scrollbar-ps-scrollbar-yrail-y-right:                  $datepicker-box-padding !default;
+
+$scrollbar-ps-scrollbar-inscrolling-opacity:            $scrollbar-ps-xrail-opacity !default;
+
+$scrollbar-ps-scrollbar-scrollbar-y-border-radius:      $scrollbar-ps-scrollbar-xrail-x-border-radius !default;
+
+$scrollbar-ps-hover-inscrolling-xrail-opacity:          $scrollbar-ps-xrail-opacity !default;
+$scrollbar-ps-hover-scrollbar-y-rail-opacity:           .6 !default;
+
+$scrollbar-scrollbar-transition-s:                      $personal-sm-transition-duration;
+$scrollbar-transition-bg:                               background-color $scrollbar-scrollbar-transition-s linear !default;
+$scrollbar-transition-opacity:                          opacity $scrollbar-scrollbar-transition-s linear !default;
+$scrollbar-transition-width:                            width $scrollbar-scrollbar-transition-s ease-in-out !default;
+$scrollbar-transition-height:                           height $scrollbar-scrollbar-transition-s linear !default;
+$scrollbar-transition-border-radius:                    border-radius $scrollbar-scrollbar-transition-s ease-in-out !default;
+
+// Scrollspy
+$Scrollspy-color-mdb: #666666 !default;
+$scrollspy-padding:                                     0 $accordion-card-header-padding-y !default;
+$scrollspy-padding-half:                                $autocomplete-clear-top !default;
+$scrollspy-padding-top:                                 $datepicker-weekday-display-padding !default;
+$scrollspy-padding-bottom:                              $datepicker-weekday-display-padding !default;
+
+$scrollspy-navpills-naviteam-hover-border-left:         .0625rem !default;
+$scrollspy-navpills-naviteam-active-border-left:        $datepicker-box-padding !default;
+
+$scrollspy-dotted-top:                                  $datepicker-table-day-selected-hover-border-radius !default;
+$scrollspy-dotted-transform:                            translateY(-50%) !default;
+$scrollspy-dotted-bg:                                   rgba($black, .55) !default;
+$scrollspy-example-padding:                             $accordion-card-header-padding-y !default;
+
+// Switch
+$switch-input-checkbox-checked-lever-after-left:        $accordion-card-header-padding-x !default;
+
+$switch-lever-mr:                                       $datepicker-weekday-display-padding !default;
+$switch-lever-margin:                                   0 $accordion-card-header-padding-y !default;
+$switch-lever-border-radius-small:                      $datepicker-date-display-pb !default;
+
+$switch-lever-after-border-radius-high:                 1.3125rem !default;
+
+$switch-lever-after-box-shadow-darker:                  0 $scrollspy-navpills-naviteam-hover-border-left .1875rem $scrollspy-navpills-naviteam-hover-border-left rgba($black-base, .4) !default;
+$switch-lever-after-box-shadow-lighter:                 0 0 0 $datepicker-date-display-pb rgba($black-base, .08) !default;
+$switch-lever-after-box-shadow-transp:                  0 0 0 $datepicker-date-display-pb transparentize(map-get($switch-colors, "bg"), .9) !default;
+
+$switch-lever-after-left:                               -.3125rem !default;
+$switch-lever-after-top:                                -.1875rem !default;
+
+$switch-lever-after-transition-bg:                      background .3s $card-share-social-reveal-transition-ease !default;
+$switch-lever-after-transition-left:                    left .3s $card-share-social-reveal-transition-ease !default;
+$switch-lever-after-transition-box:                     box-shadow $card-front-back-transition $card-share-social-reveal-transition-ease !default;
+
+// Checkbox
+$checkbox-label-pl:                                     $fixed-action-btn-right !default;
+$checkbox-label-height:                                 $timepicker-clockpicker-span-am-pm-line-height !default;
+$checkbox-label-line-height:                            $checkbox-label-height !default;
+$checkbox-label-before-after-width:                     $input-group-text-checkbox-pl !default;
+$checkbox-label-before-after-height:                    $checkbox-label-before-after-width !default;
+$checkbox-label-before-after-border-width:              2px !default;
+$checkbox-label-before-after-border-color:            #8a8a8a !default;
+$checkbox-label-before-after-border-radius:             $autocomplete-margin-bottom !default;
+$checkbox-label-before-after-mt:                        $slider-runnable-track-height !default;
+$checkbox-label-before-after-transition:                $personal-sm-transition-duration !default;
+
+$checkbox-checked-label-before-top:                     $btn-lg-counter-margin-top !default;
+$checkbox-checked-label-before-left:                    $slider-thumb-mt !default;
+$checkbox-checked-label-before-width:                   $autocomplete-wrap-li-padding-y !default;
+$checkbox-checked-label-before-height:                  1.375rem !default;
+$checkbox-checked-label-before-transform:               rotate(40deg) !default;
+$checkbox-checked-label-before-transform-origin:        $datepicker-table-width $datepicker-table-width !default;
+
+$checkbox-indeterminate-label-before-top:               -11px !default;
+$checkbox-indeterminate-label-before-left:              $chip-img-margin-left !default;
+$checkbox-indeterminate-label-before-width:             $btn-floating-margin !default;
+$checkbox-indeterminate-label-before-height:            $checkbox-checked-label-before-height !default;
+$checkbox-indeterminate-label-before-transform:         rotate(90deg) !default;
+
+$checkbox-filled-in-border-radius:                          $border-radius-base !default;
+$checkbox-filled-in-transition-border:                      border .25s !default;
+$checkbox-filled-in-transition-background-color:            background-color .25s !default;
+$checkbox-filled-in-transition-time-dot-one-second:         .1s !default;
+$checkbox-filled-in-transition-width:                       width .20s $checkbox-filled-in-transition-time-dot-one-second !default;
+$checkbox-filled-in-transition-height:                      height .20s $checkbox-filled-in-transition-time-dot-one-second!default;
+$checkbox-filled-in-transition-top:                         top .20s $checkbox-filled-in-transition-time-dot-one-second !default;
+$checkbox-filled-in-transition-left:                        left .20s $checkbox-filled-in-transition-time-dot-one-second !default;
+$checkbox-filled-in-unchecked-label-before-border-width:    $slider-runnable-track-height !default;
+$checkbox-filled-in-unchecked-label-before-left:            $slider-border-width !default;
+$checkbox-filled-in-unchecked-label-before-top:             $btn-floating-margin !default;
+$checkbox-filled-in-unchecked-label-before-transform:       rotateZ(37deg) !default;
+$checkbox-filled-in-unchecked-label-after-height:           $input-group-text-checkbox-height !default;
+$checkbox-filled-in-unchecked-label-after-width:            $checkbox-filled-in-unchecked-label-after-height !default;
+
+$checkbox-filled-in-checked-label-before-left:              $autocomplete-margin-bottom !default;
+$checkbox-filled-in-checked-label-before-width:             $btn-sm-counter-margin-top !default;
+$checkbox-filled-in-checked-label-before-height:            $chip-font-size !default;
+
+//Progress
+$progress-height-mdb:                                       $collection-card-stripe-letter-spacing !default;
+$progress-margin-bottom:                                    $accordion-card-header-padding-y !default;
+
+$progress-bar-height:                                       $progress-height-mdb !default;
+$progress-bar-animated-transition:                          width 2s ease-in-out !default;
+
+$progress-indeterminate-before-animation:                   indeterminate 2.1s cubic-bezier(.650, .815, .735, .395) infinite !default;
+
+$progress-indeterminate-after-animation:                    indeterminate 2.1s cubic-bezier(.165, .840, .440, 1.000) infinite !default;
+$progress-indeterminate-after-animation-delay:              1.15s !default;
+
+$progress-preloader-width:                                  $form-header-mb !default;
+$progress-preloader-height:                                 $form-header-mb !default;
+
+$progress-preloader-small-width:                            2.25rem !default;
+$progress-preloader-small-height:                           $progress-preloader-small-width !default;
+$progress-preloader-big-width:                              $pricing-card-circle-icon-font-size !default;
+$progress-preloader-big-height:                             $pricing-card-circle-icon-font-size !default;
+$progress-preloader-active-animation:                       container-rotate 1568ms linear infinite !default;
+$progress-preloader-crazy-animation:                        $pswp__show-hide-transition-duration !default;
+
+$progress-spinner-gap-left:                                 45% !default;
+$progress-spinner-gap-width:                                $sidenav-sn-avatar-wrapper-py !default;
+$progress-spinner-gap-circle-width:                         1000% !default;
+$progress-spinner-gap-circle-left:                          -450% !default;
+
+$progress-spinner-circle-clipper-width:                     $datepicker-table-day-selected-hover-border-radius !default;
+
+$progress-spinner-circle-clipper-circle-width:              200% !default;
+$progress-spinner-circle-clipper-circle-border-width:       .1875rem !default;
+$progress-spinner-circle-clipper-circle-border-radius:      $datepicker-table-day-selected-hover-border-radius !default;
+
+$progress-spinner-circle-clipper-left-circle-transform:     rotate(129deg) !default;
+
+$progress-spinner-circle-clipper-right-circle-left:         $picker-frame-media-bottom !default;
+$progress-spinner-circle-clipper-right-circle-transform:    rotate(-129deg) !default;
+
+$progress-active-cubic:                                     cubic-bezier(.4, .0, .2, 1) !default;
+$progress-active-curve:                                     $progress-active-cubic infinite both !default;
+$progress-active-spinner-layer-time:                        5332ms !default;
+$progress-active-spinner-layer:                             $progress-active-spinner-layer-time $progress-active-curve !default;
+$progress-active-spinner-main:                              fill-unfill-rotate $progress-active-spinner-layer !default;
+$progress-active-spinner-blue:                              blue-fade-in-out $progress-active-spinner-layer !default;
+$progress-active-spinner-red:                               red-fade-in-out $progress-active-spinner-layer !default;
+$progress-active-spinner-yellow:                            yellow-fade-in-out $progress-active-spinner-layer !default;
+$progress-active-spinner-green:                             green-fade-in-out $progress-active-spinner-layer !default;
+
+$progress-active-circle-layer-time:                         1333ms !default;
+$progress-active-circle-left-spin:                          left-spin $progress-active-circle-layer-time $progress-active-curve !default;
+$progress-active-circle-right-spin:                         right-spin $progress-active-circle-layer-time $progress-active-curve !default;
+
+$progress-spinner-container-animation-rotate:               container-rotate 1568ms linear infinite !default;
+$progress-spinner-container-animation-fade:                 fade-out 400ms $progress-active-cubic !default;
+
+// Radio Buttons
+$radio-fill-color:                                          $primary-color !default;
+$radio-empty-color:                                       #5a5a5a !default;
+$radio-label-pl:                                            $checkbox-label-pl !default;
+$radio-label-height:                                        $checkbox-label-height !default;
+$radio-label-line-height:                                   $radio-label-height !default;
+$radio-label-transition:                                    .28s $card-share-social-reveal-transition-ease !default;
+$radio-label-before-after-margin:                           $navbar-double-small-padding !default;
+$radio-label-before-after-width:                            $chip-br !default;
+$radio-label-before-after-height:                           $radio-label-before-after-width !default;
+$radio-label-border-radius:                                 $border-radius-circle !default;
+$radio-label-border-width:                                  $checkbox-label-before-after-border-width !default;
+$radio-label-checked-transform:                             scale(1.02) !default;
+$radio-label-with-gap-checked-transform:                    scale(.5) !default;

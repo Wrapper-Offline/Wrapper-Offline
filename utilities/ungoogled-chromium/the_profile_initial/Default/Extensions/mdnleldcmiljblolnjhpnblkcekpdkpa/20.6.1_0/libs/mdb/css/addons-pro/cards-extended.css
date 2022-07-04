@@ -1,0 +1,285 @@
+.card.promoting-card .fa {
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
+  .card.promoting-card .fa[class*="fa-"]:hover {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    cursor: pointer; }
+
+.card.weather-card .collapse-content a.collapsed:after {
+  content: 'Expand'; }
+
+.card.weather-card .collapse-content a:not(.collapsed):after {
+  content: 'Collapse'; }
+
+.card.weather-card .degree:after {
+  content: "°C";
+  position: absolute;
+  font-size: 3rem;
+  margin-top: .9rem;
+  font-weight: 400; }
+
+.card.gradient-card {
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+  .card.gradient-card .first-content .card-title {
+    font-weight: 500; }
+  .card.gradient-card .second-content {
+    display: none; }
+  .card.gradient-card .third-content {
+    display: none; }
+  .card.gradient-card .card-body {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 0;
+    padding-top: 0; }
+  .card.gradient-card .card-image {
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem; }
+    .card.gradient-card .card-image .mask {
+      -webkit-border-radius: .25rem;
+      border-radius: .25rem; }
+  .card.gradient-card:focus-within {
+    margin-top: 3rem;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+    .card.gradient-card:focus-within .card-image {
+      -webkit-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      width: 7rem;
+      height: 7rem;
+      margin-top: -2rem;
+      margin-left: 1rem;
+      -webkit-border-radius: .25rem;
+      border-radius: .25rem;
+      margin-bottom: 2rem; }
+      .card.gradient-card:focus-within .card-image .mask {
+        -webkit-border-radius: .25rem;
+        border-radius: .25rem; }
+    .card.gradient-card:focus-within .card-body {
+      -webkit-transition: all .7s ease-in-out;
+      -o-transition: all .7s ease-in-out;
+      transition: all .7s ease-in-out;
+      visibility: visible;
+      opacity: 1;
+      overflow: visible;
+      padding-bottom: 1.25rem;
+      padding-top: 1.25rem;
+      height: auto;
+      -webkit-border-radius: .25rem;
+      border-radius: .25rem; }
+      .card.gradient-card:focus-within .card-body .progress {
+        height: .4rem; }
+        .card.gradient-card:focus-within .card-body .progress .progress-bar {
+          height: .4rem; }
+    .card.gradient-card:focus-within .first-content {
+      display: none; }
+    .card.gradient-card:focus-within .second-content {
+      display: block; }
+    .card.gradient-card:focus-within .third-content {
+      display: block;
+      margin-top: -6rem; }
+  @media (max-device-width: 1025px) {
+    .card.gradient-card:hover {
+      margin-top: 3rem;
+      -webkit-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out; }
+      .card.gradient-card:hover .card-image {
+        -webkit-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        width: 7rem;
+        height: 7rem;
+        margin-top: -2rem;
+        margin-left: 1rem;
+        -webkit-border-radius: .25rem;
+        border-radius: .25rem;
+        margin-bottom: 2rem;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+        .card.gradient-card:hover .card-image .mask {
+          -webkit-border-radius: .25rem;
+          border-radius: .25rem; }
+      .card.gradient-card:hover .card-body {
+        -webkit-transition: all .7s ease-in-out;
+        -o-transition: all .7s ease-in-out;
+        transition: all .7s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+        overflow: visible;
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+        height: auto;
+        -webkit-border-radius: .25rem;
+        border-radius: .25rem; }
+        .card.gradient-card:hover .card-body .progress {
+          height: .4rem; }
+          .card.gradient-card:hover .card-body .progress .progress-bar {
+            height: .4rem; }
+      .card.gradient-card:hover .first-content {
+        display: none; }
+      .card.gradient-card:hover .second-content {
+        display: block; }
+      .card.gradient-card:hover .third-content {
+        display: block;
+        margin-top: -6rem; } }
+
+.card.booking-card .rating {
+  font-size: .7rem; }
+
+.card.chart-card .classic-tabs .nav li a.active {
+  border-bottom: 2px solid;
+  -webkit-transition: width .5s ease, background-color .5s ease;
+  -o-transition: width .5s ease, background-color .5s ease;
+  transition: width .5s ease, background-color .5s ease; }
+
+.card.chart-card .classic-tabs .nav.tabs-white li a {
+  color: #757575;
+  font-weight: 500; }
+  .card.chart-card .classic-tabs .nav.tabs-white li a.active {
+    color: #673ab7; }
+
+.card.chart-card .btn-deep-purple-accent {
+  background-color: #b388ff;
+  margin-top: -65px; }
+  .card.chart-card .btn-deep-purple-accent i {
+    color: #000 !important; }
+
+.card.chart-card .btn-teal-accent {
+  background-color: #1de9b6;
+  margin-top: -65px; }
+  .card.chart-card .btn-teal-accent i {
+    color: #000 !important; }
+
+.card.colorful-card .indigo-accent-text {
+  color: #304ffe; }
+
+.card.colorful-card .btn-indigo-accent {
+  background-color: #304ffe; }
+
+.card.colorful-card .yellow-darken-text {
+  color: #fdd835; }
+
+.card.colorful-card .testimonial-card .avatar {
+  width: 55px;
+  margin-top: -30px;
+  border: 3px solid #fff; }
+  .card.colorful-card .testimonial-card .avatar img {
+    width: 50px;
+    height: 50px; }
+
+.card.colorful-card .brown-darken-text {
+  color: #3e2723; }
+
+.card.colorful-card .btn-red-lighten {
+  background-color: #ffcdd2; }
+
+.card.panels-card .hour {
+  font-size: .8rem;
+  margin-top: .3rem; }
+
+.card-wrapper.card-action {
+  min-height: 640px; }
+  @media (max-width: 450px) {
+    .card-wrapper.card-action {
+      min-height: 790px; } }
+
+.card-form .md-form input[type=text]:focus:not([readonly]),
+.card-form .md-form input[type=email]:focus:not([readonly]),
+.card-form .md-form input[type=password]:focus:not([readonly]) {
+  -webkit-box-shadow: 0 1px 0 0 #fff;
+  box-shadow: 0 1px 0 0 #fff;
+  border-bottom: 1px solid #fff; }
+
+.card-form .card-form-2 {
+  -webkit-border-top-left-radius: 21px;
+  border-top-left-radius: 21px;
+  -webkit-border-top-right-radius: 21px;
+  border-top-right-radius: 21px;
+  margin-top: -35px; }
+  .card-form .card-form-2 .form-check-input[type=checkbox].filled-in:checked + label:after,
+  .card-form .card-form-2 label.btn input[type=checkbox].filled-in:checked + label:after {
+    background-color: #e53935;
+    border: 2px solid #e53935; }
+  .card-form .card-form-2 .btn-outline-red-accent {
+    border: 2px solid #e53935;
+    background-color: transparent;
+    color: #e53935; }
+  .card-form .card-form-2 .pink-accent-text {
+    color: #c51162; }
+
+.z-depth-1-bottom {
+  -webkit-box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.16); }
+
+.md-calendar {
+  background-color: #69004b; }
+  .md-calendar .weekdays,
+  .md-calendar .days {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .md-calendar .weekdays li,
+    .md-calendar .days li {
+      text-align: center;
+      width: 13.6%;
+      padding: .9rem 0; }
+  .md-calendar .days li {
+    margin-bottom: .5rem;
+    font-size: .9rem; }
+    .md-calendar .days li.active {
+      background-color: #fb0025; }
+      .md-calendar .days li.active.rounded-right {
+        -webkit-border-top-right-radius: 50% !important;
+        border-top-right-radius: 50% !important;
+        -webkit-border-bottom-right-radius: 50% !important;
+        border-bottom-right-radius: 50% !important; }
+      .md-calendar .days li.active.rounded-left {
+        -webkit-border-top-left-radius: 50% !important;
+        border-top-left-radius: 50% !important;
+        -webkit-border-bottom-left-radius: 50% !important;
+        border-bottom-left-radius: 50% !important; }
+  .md-calendar .red-checkbox .form-check-input[type=checkbox].filled-in:checked + label:after {
+    background-color: #fb0025;
+    border: 2px solid #fb0025; }
+  .md-calendar .red-checkbox .form-check-input[type=checkbox].filled-in:not(:checked) + label:after {
+    border: 2px solid #fb0025; }
+  .md-calendar .purple-checkbox .form-check-input[type=checkbox].filled-in:checked + label:after {
+    background-color: #69004b;
+    border: 2px solid #69004b; }
+  .md-calendar .purple-checkbox .form-check-input[type=checkbox].filled-in:not(:checked) + label:after {
+    border: 2px solid #69004b; }
+  .md-calendar .blue-checkbox .form-check-input[type=checkbox].filled-in:checked + label:after {
+    background-color: #0d47a1;
+    border: 2px solid #0d47a1; }
+  .md-calendar .blue-checkbox .form-check-input[type=checkbox].filled-in:not(:checked) + label:after {
+    border: 2px solid #0d47a1; }
+  .md-calendar .teal-checkbox .form-check-input[type=checkbox].filled-in:checked + label:after {
+    background-color: #00695c;
+    border: 2px solid #00695c; }
+  .md-calendar .teal-checkbox .form-check-input[type=checkbox].filled-in:not(:checked) + label:after {
+    border: 2px solid #00695c; }
+  .md-calendar .unique-checkbox .form-check-input[type=checkbox].filled-in:checked + label:after {
+    background-color: #3F729B;
+    border: 2px solid #3F729B; }
+  .md-calendar .unique-checkbox .form-check-input[type=checkbox].filled-in:not(:checked) + label:after {
+    border: 2px solid #3F729B; }

@@ -1,0 +1,14 @@
+<header>
+	<a href="/">
+		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1>
+	</a>
+	<nav id="headbuttons">
+		<a class="button_small" onclick="document.getElementById('file').click()">UPLOAD A CHAR</a>
+		<a href="/create?filter=cc" class="button_small">CREATE A CHARACTER</a>
+		<a href="/create" class="button_big">MAKE A VIDEO</a>
+	</nav>
+</header>
+
+<form enctype='multipart/form-data' action='/upload_character' method='post'>
+	<input id='file' type="file" onchange="this.form.submit()" name='import' />
+</form>
