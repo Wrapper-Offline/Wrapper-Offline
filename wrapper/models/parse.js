@@ -15,9 +15,9 @@ const source = path.join(__dirname, "../../server", process.env.CLIENT_URL);
 const store = path.join(__dirname, "../../server", process.env.STORE_URL);
 const header = process.env.XML_HEADER;
 // stuff
-const char = require("../models/char");
+const char = require("./char");
 const fUtil = require("../utils/fileUtil");
-const asset = require("../models/asset");
+const asset = require("./asset");
 
 function name2Font(font) {
 	switch (font) {

@@ -61,8 +61,7 @@ group
 			});
 		} catch (e) {
 			console.error("Error generating TTS:", e);
-			res.status(500);
-			res.end("1" + "Internal server error.");
+			res.end(`1<error><code>ERR_ASSET_404</code><message>${e}</message><text></text></error>`);
 		};
 	});
 

@@ -11,7 +11,7 @@ const base = Buffer.alloc(1, 0);
 // stuff
 const database = require("../utils/database"), DB = new database();
 const fUtil = require("../utils/fileUtil");
-const parse = require("../utils/parse");
+const parse = require("../models/parse");
 
 module.exports = {
 	/**
