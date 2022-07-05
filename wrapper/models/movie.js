@@ -9,7 +9,7 @@ const path = require("path");
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
 const base = Buffer.alloc(1, 0);
 // stuff
-const database = require("../utils/database"), DB = new database();
+const database = require("../data/database"), DB = new database();
 const fUtil = require("../utils/fileUtil");
 const parse = require("../models/parse");
 

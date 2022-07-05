@@ -9,6 +9,6 @@
 	</nav>
 </header>
 
-<form enctype='multipart/form-data' action='/upload_character' method='post'>
+<form enctype='multipart/form-data' action='/api/char/upload' method='post'>
 	<input id='file' type="file" onchange="this.form.submit()" name='import' />
 </form>

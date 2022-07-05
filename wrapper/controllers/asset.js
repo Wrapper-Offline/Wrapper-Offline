@@ -9,7 +9,7 @@ const mime = require("mime-types");
 const header = process.env.XML_HEADER;
 // stuff
 const Asset = require("../models/asset");
-const database = require("../utils/database"), DB = new database();
+const database = require("../data/database"), DB = new database();
 const rFileUtil = require("../utils/realFileUtil");
 
 // create the group
@@ -87,7 +87,7 @@ group
 		async (req, res) => {
 			const url = req.parsedUrl.pathname;
 			const id = url.charAt(1) == "a" ?
-				req.matches[1] :
+				req.matches[2] :
 				req.body.assetId || "go away";
 
 			try {

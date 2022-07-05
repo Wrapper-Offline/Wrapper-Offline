@@ -10,7 +10,7 @@ const routes = require("./controllers");
 const reqBody = require("./middlewares/req.body");
 const resRender = require("./middlewares/res.render");
 const resTime = require("./middlewares/res.time");
-const fakeRoutes = require("./controllers/info.json");
+const fakeRoutes = require("./data/routes.json");
 
 /**
  * Starts the GoAPI server.
@@ -58,9 +58,17 @@ module.exports = function () {
 			}
 			// still no match, try serving a static file
 			if (!res.writableEnded) {
-				req.addListener("end", () =>
-					file.serve(req, res)
-				).resume();
+				if (req.method != "GET" && req.method != "HEAD") {
+					file.serveFile("/404.html", 404, {}, req, res);
+				} else {
+					req.addListener("end", () => {
+						file.serve(req, res, (e) => {
+							if (e && (e.status === 404)) {
+								file.serveFile("/404.html", 404, {}, req, res);
+							}
+						})
+					}).resume();
+				}
 			}
 		})
 		.listen(process.env.SERVER_PORT, console.log("Wrapper: Offline has started."));

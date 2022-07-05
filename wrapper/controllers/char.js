@@ -2,6 +2,7 @@
  * character routes
  */
 // modules
+const fs = require("fs");
 const httpz = require("httpz");
 // vars
 const base = Buffer.alloc(1, "0");
@@ -68,6 +69,30 @@ group
 		const id = Char.save(body, meta);
 		Char.saveThumb(id, thumb)
 		res.end("0" + id);
+	})
+	// upload
+	.route("*", "/api/char/upload", (req, res) => {
+		const file = req.files.import;
+		res.assert(file, 400, { status: "error" });
+		const origName = file.originalFilename;
+		const path = file.filepath, buffer = fs.readFileSync(path);
+
+		const meta = {
+			type: "char",
+			subtype: 0,
+			title: origName || "Untitled",
+			themeId: Char.getTheme(buffer)
+		};
+		try {
+			Char.save(buffer, meta, true);
+			fs.unlinkSync(path);
+			const url = `/cc_browser?themeId=${meta.themeId}`;
+			res.redirect(url);
+		} catch (e) {
+			console.error("Error uploading character:", e);
+			res.statusCode = 500;
+			res.json({ status: "error" });
+		}
 	});
 
 module.exports = group;

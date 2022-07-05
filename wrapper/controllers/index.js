@@ -20,6 +20,10 @@ group
 		discord("Video List");
 		res.render("list", {});
 	})
+	.route("*", "/settings", (req, res) => {
+		discord("Settings");
+		res.render("settings", {});
+	})
 	// add all the routes
 	.add(app)
 	.add(asset)
