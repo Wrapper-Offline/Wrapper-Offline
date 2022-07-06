@@ -8,7 +8,7 @@ const path = require("path");
 // vars
 const folder = path.join(__dirname, "../../server", process.env.STORE_URL);
 // stuff
-const fUtil = require("../utils/fileUtil");
+const fUtil = require("../../utils/fileUtil");
 
 // create the group
 const group = new httpz.Group();

@@ -9,8 +9,8 @@ const mime = require("mime-types");
 const header = process.env.XML_HEADER;
 // stuff
 const Asset = require("../models/asset");
-const database = require("../data/database"), DB = new database();
-const rFileUtil = require("../utils/realFileUtil");
+const database = require("../../data/database"), DB = new database();
+const rFileUtil = require("../../utils/realFileUtil");
 
 // create the group
 const group = new httpz.Group();

@@ -9,7 +9,7 @@ utilities/config.bat
 .DS_Store
 vfproxy/*
 bbbb/*
-wrapper/node_modules
+node_modules
 # Logs
 logs
 *.log

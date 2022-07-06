@@ -8,8 +8,8 @@ const path = require("path");
 const baseUrl = process.env.CHAR_BASE_URL;
 const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
 // stuff
-const database = require("../data/database"), DB = new database();
-const fUtil = require("../utils/fileUtil");
+const database = require("../../data/database"), DB = new database();
+const fUtil = require("../../utils/fileUtil");
 
 module.exports = {
 	/**

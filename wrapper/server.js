@@ -18,7 +18,7 @@ const fakeRoutes = require("./data/routes.json");
  */
 module.exports = function () {
 	const server = new httpz.Server();
-	const file = new static.Server("../server");
+	const file = new static.Server("./server");
 	
 	server
 		// add middlewares

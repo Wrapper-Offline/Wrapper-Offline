@@ -10,7 +10,7 @@ let tempfile;
 const info = require("../data/voices");
 // stuff
 const Asset = require("../models/asset");
-const fileUtil = require("../utils/realFileUtil");
+const fileUtil = require("../../utils/realFileUtil");
 const processVoice = require("../models/tts");
 
 // create the group

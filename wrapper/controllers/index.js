@@ -10,7 +10,7 @@ const char = require("./char");
 const movie = require("./movie");
 const theme = require("./theme");
 const tts = require("./tts");
-const discord = require("../utils/discord");
+const discord = require("../../utils/discord");
 
 // create the group
 const group = new httpz.Group();

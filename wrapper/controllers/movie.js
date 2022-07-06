@@ -4,7 +4,7 @@
 // modules
 const httpz = require("httpz");
 // stuff
-const database = require("../data/database"), DB = new database();
+const database = require("../../data/database"), DB = new database();
 const Movie = require("../models/movie");
 
 // create the group
