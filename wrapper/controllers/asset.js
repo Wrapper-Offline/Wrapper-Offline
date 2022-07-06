@@ -107,7 +107,7 @@ group
 		res.assert(id, 400, { status: "error" });
 
 		try {
-			const info = DB.get("assets", id);
+			const info = DB.get("assets", id).data;
 			// add stuff that will never be useful for an offline lvm clone
 			info.share = { type: "none" };
 			info.published = "";

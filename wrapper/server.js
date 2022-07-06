@@ -61,13 +61,13 @@ module.exports = function () {
 				if (req.method != "GET" && req.method != "HEAD") {
 					file.serveFile("/404.html", 404, {}, req, res);
 				} else {
-					req.addListener("end", () => {
+					req.addListener("end", () =>
 						file.serve(req, res, (e) => {
 							if (e && (e.status === 404)) {
 								file.serveFile("/404.html", 404, {}, req, res);
 							}
 						})
-					}).resume();
+					).resume();
 				}
 			}
 		})

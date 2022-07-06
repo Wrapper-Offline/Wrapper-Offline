@@ -42,7 +42,7 @@ module.exports = {
 
 	/**
 	 * Gets movie metadata from an XML.
-	 * @param {string} mId 
+	 * @param {string} id the movie id
 	 * @returns {{
 	 * 	date: Date,
 	 *  durationString: string,
@@ -52,8 +52,8 @@ module.exports = {
 	 * 	id: string
 	 * }} 
 	 */
-	async meta(mId, getSc = false) {
-		const filepath = path.join(folder, `${mId}.xml`);
+	async meta(id) {
+		const filepath = path.join(folder, `${id}.xml`);
 		const buffer = fs.readFileSync(filepath);
 
 		// title
@@ -73,32 +73,31 @@ module.exports = {
 		const durationStr = `${min}:${sec}`;
 
 		let count = 0;
-		if (getSc) { // get the scene count
-			let index = 0;
-			while (buffer.indexOf('<scene id=', index) > -1) {
-				count++;
-				index += buffer.indexOf('<scene id=', index);
-			}
+		let pos = buffer.indexOf('<scene id=');
+		while (pos > -1) {
+			count++;
+			pos = buffer.indexOf('<scene id=', pos + 10);
 		}
 
 		return {
+			id,
 			duration,
 			title,
 			date: fs.statSync(filepath).mtime,
 			durationString: durationStr,
 			sceneCount: count,
-			id: mId,
 		};
 	},
 
 	/**
 	 * Extracts the movie XML from a zip and saves it.
-	 * @param {Buffer} body 
-	 * @param {Buffer} thumb 
-	 * @param {string} mId 
+	 * @param {Buffer} body the movie xml
+	 * @param {Buffer} thumb movie thumbnail in .png format
+	 * @param {string} mId movie id, if overwriting an old one
+	 * @param {boolean} starter is it a starter
 	 * @returns {Promise<string>}
 	 */
-	async save(body, thumb, id) {
+	async save(body, thumb, id, starter) {
 		return new Promise((resolve, reject) => {
 			id ||= fUtil.generateId();
 
@@ -116,7 +115,8 @@ module.exports = {
 				writeStream.close((e) => {
 					if (e) throw e;
 
-					this.meta(id, true).then((meta) => {
+					this.meta(id).then((meta) => {
+						let type;
 						const info = {
 							id,
 							duration: meta.durationString,
@@ -124,10 +124,18 @@ module.exports = {
 							title: meta.title,
 							sceneCount: meta.sceneCount,
 						}
+						if (starter) {
+							info.type = "movie";
+							type = "assets";
+						} else {
+							type = "movies";
+						}
+
 						try {
-							DB.update("movies", id, info);
+							DB.update(type, id, info);
 						} catch (e) {
-							DB.insert("movies", info);
+							console.log("This movie does not exist in the database. Inserting...", e);
+							DB.insert(type, info);
 						}
 						resolve(id);
 					});

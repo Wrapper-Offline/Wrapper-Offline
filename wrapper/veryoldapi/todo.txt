@@ -1,4 +1,0 @@
-- refactor movie parsing
-- asset library in the settings
-- polly voices
-- find a replacement for `discord-rpc`

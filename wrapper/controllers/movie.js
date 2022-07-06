@@ -58,6 +58,7 @@ group
 		res.redirect(`/go_full?tray=${theme}&tutorial=0`);
 	})
 	// save
+	//  #movies
 	.route("POST", "/goapi/saveMovie/", async (req, res) => {
 		res.assert(req.body.body_zip, 400, "1");
 		const trigAutosave = req.body.is_triggered_by_autosave;
@@ -68,6 +69,15 @@ group
 			null : Buffer.from(req.body.thumbnail_large, "base64");
 
 		const id = await Movie.save(body, thumb, req.body.movieId)
+		res.end("0" + id);
+	})
+	//  #starter
+	.route("POST", "/goapi/saveTemplate/", async (req, res) => {
+		res.assert(req.body.body_zip, req.body.thumbnail_large, 400, "1");
+		const body = Buffer.from(req.body.body_zip, "base64");
+		const thumb = Buffer.from(req.body.thumbnail_large, "base64");
+
+		const id = await Movie.save(body, thumb, req.body.movieId, true)
 		res.end("0" + id);
 	})
 	// thumb

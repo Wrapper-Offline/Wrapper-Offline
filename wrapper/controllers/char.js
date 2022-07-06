@@ -8,6 +8,7 @@ const httpz = require("httpz");
 const base = Buffer.alloc(1, "0");
 // stuff
 const Char = require("../models/char");
+const { exists } = require("../models/asset");
 
 // create the group
 const group = new httpz.Group();
@@ -50,6 +51,7 @@ group
 		res.redirect(redirect);
 	})
 	// save
+	//  #all
 	.route("POST", "/goapi/saveCCCharacter/", (req, res) => {
 		res.assert(
 			req.body.body,
@@ -67,8 +69,25 @@ group
 			themeId: req.body.themeId
 		};
 		const id = Char.save(body, meta);
-		Char.saveThumb(id, thumb)
+		Char.saveThumb(id, thumb);
 		res.end("0" + id);
+	})
+	//  #thumbs
+	.route("POST", "/goapi/saveCCThumbs/", (req, res) => {
+		const id = req.body.assetId;
+		res.assert(
+			req.body.thumbdata,
+			id,
+			400, "Missing one or more fields."
+		);
+		const thumb = Buffer.from(req.body.thumbdata, "base64");
+
+		if (exists(`${id}.xml`)) {
+			Char.saveThumb(id, thumb);
+			res.end("0" + id);
+		} else {
+			res.end("1");
+		}
 	})
 	// upload
 	.route("*", "/api/char/upload", (req, res) => {
