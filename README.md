@@ -31,41 +31,5 @@ The source code for compiled programs are all stored in utilities\sourcecode, an
 
 Flash Player (utilities folder) and GoAnimate's original assets (server folder) are proprietary and do not grant you these rights, but if they did, this project wouldn't need to exist. Requestly, an addon included in Offline's browser, is sadly proprietary software, but you're free to remove the Chromium profile and use a fresh one if this bothers you. Requestly is primarily included because of how popular it is with our community.
 
-## Credits
-**Please do not contact anyone directly on the list for support, use the Discord server.**
-
-Original Wrapper credits:
-| Name                                         | Contribution         |
-| -------------------------------------------- | -------------------- |
-| [VisualPlugin](https://github.com/Windows81) | GoAnimate Wrapper    |
-| [CLarramore](https://github.com/CLarramore)  | Bug fixes            |
-| [PoleyMagik](https://github.com/PoleyMagik)  | Asset Store Archive  |
-
-No members of the original team are officially working on Offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
-
-The current Project Lead will have (PL) on their name, the current Head of Development with have (HD) on their name, and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point, or left the development team.
-Wrapper: Offline credits:
-| Name                                                  | Contribution                                                   |
-| ----------------------------------------------------- | -------------------------------------------------------------- |
-| [GoTest334 (PL)](https://github.com/GoTest334)        | Current project lead                                           |
-| [Blukas/GoTube (D)](https://github.com/theBlukas)     | Beta testing, Mega Comedy World 2                              |
-| [sparrkz](https://github.com/sparrkzz)                | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
-| [octanuary (D)](https://github.com/octanuary)         | Real importing, starters, API changes                          |
-| 2Epik4u (D)                                           | Stuff                                                          |
-| [Benson (Child Groom)](https://github.com/watchbenson)| Creator of Wrapper: Offline                                    |
-| [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo                                                           |
-| VisualPlugin                                          | Text to speech voices                                          |
-| creepyjokes2000                                       | Waveform fix, improved actions                                 |
-| [JoshAnimate](https://github.com/joshtoons2008)       | Headgear fix                                                   |
-| KrisAnimate                                           | Chromium parameter                                             |
-| PoleyMagik                                            | Client Modifications                                           |
-
-These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
-| Name                                            | Contribution                     |
-| ----------------------------------------------- | -------------------------------- |
-| [Vyond](https://vyond.com)                      | Creators of the themes we love   |
-| [http-party](https://github.com/http-party)     | Creators of http-server          |
-| [Stephan Brenner](https://github.com/stbrenner) | Creator of SilentCMD             |
-
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
