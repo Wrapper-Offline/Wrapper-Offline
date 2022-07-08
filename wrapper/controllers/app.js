@@ -7,6 +7,7 @@ const discord = require("../../utils/discord");
 // vars
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 // stuff
+const reqIsStudio = require("../middlewares/req.isStudio");
 function toAttrString(table) {
 	return typeof (table) == "object" ? new URLSearchParams(table).toString() : table.replace(/"/g, "\\\"");
 }
@@ -25,6 +26,17 @@ function toObjectString(attrs, params) {
 const group = new httpz.Group();
 
 group
+	.add(reqIsStudio)
+	// video list
+	.route("*", "/", (req, res) => {
+		discord("Video List");
+		res.render("list", {});
+	})
+	// settings
+	.route("*", "/settings", (req, res) => {
+		discord("Settings");
+		res.render("settings", {});
+	})
 	// themelist page
 	.route("GET", "/create", (req, res) => {
 		discord("Choosing a Theme");

@@ -7,7 +7,6 @@ const env = Object.assign(process.env, require("./env"), require("./config"));
 // modules
 const { app, BrowserWindow, Menu } = require("electron");
 const fs = require("fs");
-const open = require("open");
 const path = require("path");
 // vars
 const assets = path.join(__dirname, env.ASSET_FOLDER);
@@ -55,20 +54,17 @@ const createWindow = () => {
 		icon: path.join(__dirname, "./server/favicon.ico"),
 		webPreferences: {
 			plugins: true,
-			nodeIntegration: true,
-			enableRemoteModule: true,
-			contextIsolation: true,
-			webSecurity: false
+			contextIsolation: true
 		}
 	});
+	// use it in external scripts
+	process.env.MAIN_WINDOW_ID = mainWindow.id;
+	// clear the menu bar
 	Menu.setApplicationMenu(Menu.buildFromTemplate([]));
 
-	//mainWindow.loadFile("./LICENSE");
 	mainWindow.loadURL("http://localhost:4343");
 
 	mainWindow.on("closed", () => mainWindow = null);
-
-	mainWindow.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {

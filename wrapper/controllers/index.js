@@ -10,20 +10,11 @@ const char = require("./char");
 const movie = require("./movie");
 const theme = require("./theme");
 const tts = require("./tts");
-const discord = require("../../utils/discord");
 
 // create the group
 const group = new httpz.Group();
 
 group
-	.route("*", "/", (req, res) => {
-		discord("Video List");
-		res.render("list", {});
-	})
-	.route("*", "/settings", (req, res) => {
-		discord("Settings");
-		res.render("settings", {});
-	})
 	// add all the routes
 	.add(app)
 	.add(asset)

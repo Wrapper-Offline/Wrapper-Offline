@@ -23,8 +23,6 @@
 	</head>
 
 	<body style="margin:0px">
-		<%~ includeFile("../includes/header", { env: it.env }) %>
-
 		<main>
 			<nav id="importer">
 				<nav id="import_head">
