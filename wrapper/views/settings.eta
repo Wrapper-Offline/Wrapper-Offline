@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title>Settings</title>
+		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/list.css"/>

@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title>Video Editor</title>
+		<title>Video Editor - Wrapper: Offline</title>
 		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
@@ -23,6 +23,8 @@
 	</head>
 
 	<body style="margin:0px">
+		<%~ includeFile("../includes/header", { env: it.env }) %>
+
 		<main>
 			<nav id="importer">
 				<nav id="import_head">

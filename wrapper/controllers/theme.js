@@ -2,7 +2,6 @@
  * theme routes
  */
 // modules
-const assert = require("node:assert");
 const httpz = require("httpz");
 const path = require("path");
 // vars
@@ -17,7 +16,6 @@ group
 	// list
 	.route("POST", "/goapi/getThemeList/", async (req, res) => {
 		const xmlPath = path.join(folder, "themelist.xml");
-		console.log(xmlPath);
 		const zip = await fUtil.zippy(xmlPath, "themelist.xml");
 		res.setHeader("Content-Type", "application/zip");
 		res.end(zip);
@@ -25,7 +23,7 @@ group
 	// load
 	.route("POST", "/goapi/getTheme/", async (req, res) => {
 		const id = req.body.themeId;
-		assert(id, "Missing one or more fields.");
+		res.assert(id, 500, "Missing one or more fields.");
 
 		const xmlPath = path.join(folder, `${id}/theme.xml`);
 		const zip = await fUtil.zippy(xmlPath, "theme.xml");

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Video List</title>
+		<title>Create - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's create page"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">

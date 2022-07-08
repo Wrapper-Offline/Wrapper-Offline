@@ -25,9 +25,14 @@ html.dark, html.dark>body {
 }
 body {
 	display: flex; 
-	flex-direction: column; 
+	flex-direction: column;
+	overflow: hidden;
 }
-main { padding: 20px 40px; height: 100% }
+main {
+	padding: 20px 40px;
+	height: 100%;
+	overflow: auto;
+}
 
 
 /**
@@ -47,7 +52,7 @@ header {
 	flex-shrink: 0;
 }
 /* makes the header a set height when the window is 887px wide */
-@media (min-width: 887px) {
+@media (min-width: 735px) {
 	header {
 		padding-bottom: auto;
 		height: 44px;
@@ -144,7 +149,7 @@ header dropdowns
 	margin: 10px 0;
 }
 /* character upload */
-form[action="/upload_character"] { display: none }
+form[action="/api/char/upload"] { display: none }
 
 /**
 tabs

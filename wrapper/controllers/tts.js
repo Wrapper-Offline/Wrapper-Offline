@@ -4,8 +4,7 @@
 // modules
 const fs = require("fs");
 const httpz = require("httpz");
-let tempfile;
-(async () => tempfile = (await import("tempfile")).default)();
+const tempfile = require("tempfile");
 // vars
 const info = require("../data/voices");
 // stuff
