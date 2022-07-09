@@ -13,6 +13,7 @@ module.exports = function resRender(req, res, next) {
 	switch (req.parsedUrl.pathname.substring(1, 4) || "home") {
 		case "sta":
 		case "sto":
+		case "ani":
 		case "pag":
 		case "goa":
 		case "api":
