@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<theme id="toonadv" name="Toon Adventure">
+<theme id="toonadv" name="Toon Adventure" cc_theme_id="cctoonadventure">
 	<char id="blossom" name="Blossom" thumb="standing.swf" facing="left" default="standing.swf" motion="walk.swf" enable="Y" is_premium="N" aid="10245" money="200" sharing="100">
 		<category name="Emotion">
 			<action id="excited.swf" name="Excited" loop="Y" totalframe="38" enable="Y" aid="10246"/>

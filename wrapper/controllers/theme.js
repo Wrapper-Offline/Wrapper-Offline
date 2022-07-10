@@ -7,6 +7,7 @@ const path = require("path");
 // vars
 const folder = path.join(__dirname, "../../server", process.env.STORE_URL);
 // stuff
+const database = require("../../data/database"), DB = new database(true);
 const fUtil = require("../../utils/fileUtil");
 
 // create the group
@@ -15,7 +16,11 @@ const group = new httpz.Group();
 group
 	// list
 	.route("POST", "/goapi/getThemeList/", async (req, res) => {
-		const xmlPath = path.join(folder, "themelist.xml");
+		const truncated = DB.select().TRUNCATED_THEMELIST;
+		const filepath = truncated ? 
+			"themelist.xml" : 
+			"themelist-allthemes.xml";
+		const xmlPath = path.join(folder, filepath);
 		const zip = await fUtil.zippy(xmlPath, "themelist.xml");
 		res.setHeader("Content-Type", "application/zip");
 		res.end(zip);

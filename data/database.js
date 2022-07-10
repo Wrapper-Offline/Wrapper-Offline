@@ -3,15 +3,23 @@ const fs = require("fs");
 const path = require("path");
 // vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
-const baseDb = { assets: [], movies: [], folders: [], watermarks: [] };
+let baseDb = { assets: [], movies: [], folders: [], watermarks: [] };
 
 module.exports = class GoDatabase {
-	constructor() {
-		this.path = path.join(folder, "database.json");
+	constructor(isSettings = false) {
+		if (isSettings) {
+			this.path = path.join(folder, "settings.json");
+			baseDb = {
+				DISCORD_RPC: false, // 
+				TRUNCATED_THEMELIST: true // Cuts down the amount of themes that clog up the themelist in the videomaker.
+			};
+		} else {
+			this.path = path.join(folder, "database.json");
+		}
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
 			console.error("Database doesn't exist! Creating...");
-			this.#save(baseDb);
+			this.save(baseDb);
 
 			try {
 				this.#refresh();
@@ -26,7 +34,7 @@ module.exports = class GoDatabase {
 		this.json = JSON.parse(data);
 	}
 
-	#save(newData) {
+	save(newData) {
 		try {
 			fs.writeFileSync(this.path, JSON.stringify(newData, null, "\t"));
 			return true;
@@ -45,7 +53,7 @@ module.exports = class GoDatabase {
 		const { index } = this.get(from, id);
 
 		this.json[from].splice(index, 1);
-		this.#save(this.json);
+		this.save(this.json);
 	}
 
 	/**
@@ -92,7 +100,7 @@ module.exports = class GoDatabase {
 	insert(into, data) {
 		this.#refresh();
 		this.json[into].unshift(data);
-		this.#save(this.json);
+		this.save(this.json);
 	}
 
 	/**
@@ -134,6 +142,6 @@ module.exports = class GoDatabase {
 		const { index } = this.get(from, id);
 
 		Object.assign(this.json[from][index], data);
-		this.#save(this.json);
+		this.save(this.json);
 	}
 };
