@@ -15,15 +15,6 @@ if (!!process.env.DISCORD_RPC) {
 	} = process.env;
 	const startTime = new Date();
 
-
-	// set rpc activity when started
-	rpc
-		.on("ready", () => setRPC("Idling"))
-		// connect rpc to app
-		.login({ clientId })
-		.catch((e) => console.log("RPC connection failed."));
-
-	module.exports = setRPC;
 	function setRPC(state) {
 		rpc.setActivity({
 			state,
@@ -35,7 +26,22 @@ if (!!process.env.DISCORD_RPC) {
 			smallImagetext: "Wrapper: Offline",
 		});
 	}
+
+	module.exports = new Promise((res, rej) => {
+		// set rpc activity when started
+		rpc
+			.on("ready", () => {
+				setRPC("Idling");
+				res(setRPC);
+			})
+			// connect rpc to app
+			.login({ clientId })
+			.catch((e) => {
+				console.log("RPC connection failed.");
+				res(() => true);
+			});
+	});
 	return;
 }
 // set a blank function so we don't have to check if it's enabled
-module.exports = function () {};
+module.exports = new Promise((res) => res());

@@ -10,11 +10,11 @@ const nodezip = require("node-zip");
 const path = require("path");
 const xmldoc = require("xmldoc");
 // vars
-const themeFolder = process.env.THEME_FOLDER;
 const source = path.join(__dirname, "../../server", process.env.CLIENT_URL);
 const store = path.join(__dirname, "../../server", process.env.STORE_URL);
 const header = process.env.XML_HEADER;
 // stuff
+const database = require("../../data/database"), DB = new database();
 const char = require("./char");
 const fUtil = require("../../utils/fileUtil");
 const asset = require("./asset");
@@ -91,22 +91,28 @@ module.exports = async function (xmlBuffer) {
 		if (themeId == "ugc") {
 			const id = pieces[2];
 			try {
-				const buffer = asset.load(id);
+				let buffers = [];
+				asset
+					.load(id)
+					.on("data", (c) => buffers.push(c))
+					.on("end", () => {
+						const buffer = Buffer.concat(buffers);
 
-				// add asset meta
-				ugc += asset.meta2Xml(asset.meta(id));
-				// and add the file
-				fUtil.addToZip(zip, filename, buffer);
+						// add asset meta
+						ugc += asset.meta2Xml(DB.get("assets", id).data);
+						// and add the file
+						fUtil.addToZip(zip, filename, buffer);
 
-				// add video thumbnails
-				if (type == "prop" && subtype == "video") {
-					pieces[2] = pieces[2].slice(0, -3) + "png";
-					const filename = pieces.join(".")
-					const buffer = asset.load(pieces[2]);
-					fUtil.addToZip(zip, filename, buffer);
-				}
+						// add video thumbnails
+						if (type == "prop" && subtype == "video") {
+							pieces[2] = pieces[2].slice(0, -3) + "png";
+							const filename = pieces.join(".")
+							const buffer = asset.load(pieces[2]);
+							fUtil.addToZip(zip, filename, buffer);
+						}
+					});
 			} catch (e) {
-				console.error(`WARNING: Couldn't find asset ${id}.`);
+				console.error("WARNING:", e);
 				return;
 			}
 		} else {
@@ -253,7 +259,7 @@ module.exports = async function (xmlBuffer) {
 	const themeKs = Object.keys(themes);
 	themeKs.forEach(t => {
 		if (t == 'ugc') return;
-		const file = fs.readFileSync(`${themeFolder}/${t}.xml`);
+		const file = fs.readFileSync(`${store}/${t}/theme.xml`);
 		fUtil.addToZip(zip, `${t}.xml`, file);
 	});
 

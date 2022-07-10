@@ -6,7 +6,7 @@ const fs = require("fs");
 const nodezip = require("node-zip");
 const path = require("path");
 // vars
-const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
+const folder = path.join(__dirname, "../../", process.env.SAVED_FOLDER);
 const base = Buffer.alloc(1, 0);
 // stuff
 const database = require("../../data/database"), DB = new database();

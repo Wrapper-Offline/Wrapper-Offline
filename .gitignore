@@ -1,7 +1,8 @@
 # General Wrapper Offline Stuff
-wrapper/_ASSETS/*
-wrapper/_CACHÉ/*
-wrapper/_SAVED/*
+_ASSETS/*
+_CACHÉ/*
+_SAVED/*
+_SAVED/database.json
 !_*/_NO_REMÖVE
 utilities/backups/*
 utilities/config.bat

@@ -5,8 +5,8 @@
 const fs = require("fs");
 const path = require("path");
 // vars
-const baseUrl = process.env.CHAR_BASE_URL;
-const folder = path.join(__dirname, "../", process.env.ASSET_FOLDER);
+const baseUrl = path.join(__dirname, "../../", process.env.CHAR_BASE_URL);
+const folder = path.join(__dirname, "../../", process.env.ASSET_FOLDER);
 // stuff
 const database = require("../../data/database"), DB = new database();
 const fUtil = require("../../utils/fileUtil");

@@ -3,7 +3,9 @@
  */
 // modules
 const httpz = require("httpz");
-const discord = require("../../utils/discord");
+let discord;
+require("../../utils/discord")
+	.then((f) => discord = f);
 // vars
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 // stuff

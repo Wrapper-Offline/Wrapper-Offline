@@ -1,5 +1,8 @@
 const { BrowserWindow, Menu } = require("electron");
 const httpz = require("httpz");
+const assetUrl = String.fromCharCode(...[97, 115, 115]); // "/assets/<id>".substring(1, 4);
+// It's a naughty word
+// I'm not supposed to say it
 
 /**
  * Sets the status bar for the Video Editor.
@@ -17,6 +20,7 @@ module.exports = function resRender(req, res, next) {
 		case "pag":
 		case "goa":
 		case "api":
+		case assetUrl:
 			return next();
 	}
 

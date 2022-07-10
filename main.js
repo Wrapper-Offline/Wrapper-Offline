@@ -61,24 +61,27 @@ const createWindow = () => {
 	});
 	// use it in external scripts
 	process.env.MAIN_WINDOW_ID = mainWindow.id;
+
+	// initialize stuff
 	// clear the menu bar
 	Menu.setApplicationMenu(Menu.buildFromTemplate([]));
-
+	// load the video list
 	mainWindow.loadURL("http://localhost:4343");
-
 	mainWindow.on("closed", () => mainWindow = null);
+
+	// debug stuff
+	if (env.NODE_ENV == "development") {
+		mainWindow.webContents.openDevTools();
+	}
 };
 
 app.whenReady().then(() => {
-	createWindow();
+	// wait for the server
+	setTimeout(createWindow, 2000);
 });
 app.on("window-all-closed", () => {
-	// On macOS it is common for applications and their menu bar
-	// to stay active until the user quits explicitly with Cmd + Q
 	if (process.platform !== "darwin") app.quit();
 });
 app.on("activate", () => {
-	// On macOS it"s common to re-create a window in the app when the
-	// dock icon is clicked and there are no other windows open.
 	if (mainWindow === null) createWindow();
 });
