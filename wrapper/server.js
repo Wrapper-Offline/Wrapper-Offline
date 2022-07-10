@@ -74,7 +74,7 @@ const functions = [
  * create the server
  */
 module.exports = function () {
-	const file = new static.Server("../server");
+	const file = new static.Server("../server", { cache: 2 });
 	http
 		.createServer(async (req, res) => {
 			try {
