@@ -7,6 +7,7 @@
 	"private": true,
 	"scripts": {
 		"start": "electron . --unhandled-rejections=strict",
+		"buildwin": "npx electron-packager . --ignore=^/server",
 		"test": "mocha"
 	},
 	"main": "main.js",
@@ -31,6 +32,7 @@
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
+		"electron-packager": "^15.5.1",
 		"js-base64": "^3.7.2",
 		"mocha": "^10.0.0",
 		"supertest": "^6.2.3"

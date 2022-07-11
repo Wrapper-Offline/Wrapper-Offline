@@ -4,6 +4,7 @@
 // modules
 const fs = require("fs");
 const httpz = require("httpz");
+const path = require("path");
 const static = require("node-static");
 // stuff
 const routes = require("./controllers");
@@ -18,7 +19,7 @@ const fakeRoutes = require("./data/routes.json");
  */
 module.exports = function () {
 	const server = new httpz.Server();
-	const file = new static.Server("./server", { cache: 2 });
+	const file = new static.Server(path.join(__dirname, "../server"), { cache: 2 });
 	
 	server
 		// add middlewares
