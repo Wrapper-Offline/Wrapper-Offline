@@ -31,7 +31,8 @@
 	<theme id="street" name="Street" enable="N" />
 	<theme id="underdog" name="Saturday Morning TV" enable="N" />
 	<theme id="willie" name="Willie Nelson" enable="N" />
-	<theme id="toonadv" name="Toon Adventure" cc_theme_id="cctoonadventure" enable="N" />
+	<theme id="toonadv" name="Toon Adventure" enable="N" />
+	<theme id="cctoonadventure" name="Toon Adventure CC" enable="N" />
 	<theme id="common" name="Common" thumb="matchboy-stand.swf" cc_theme_id="common"/>
 	<word>ChildGroom</word>
 	<whiteword />

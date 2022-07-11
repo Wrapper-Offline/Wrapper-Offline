@@ -186,7 +186,7 @@
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('toonadv', 'cctoonadv')">
+				<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
 					<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
 					Toon Adventure&#8482;
 				</a>

@@ -93,7 +93,9 @@ module.exports = {
 	 */
 	isFA(themeId) {
 		switch (themeId) {
-			case "family": return false;
+			case "cctoonadventure":
+			case "family":
+				return false;
 		}
 		return true;
 	}

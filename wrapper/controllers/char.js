@@ -6,6 +6,11 @@ const fs = require("fs");
 const httpz = require("httpz");
 // vars
 const base = Buffer.alloc(1, "0");
+const defaultTypes = {
+	family: "adam",
+	anime: "guy",
+	cctoonadventure: "default"
+};
 // stuff
 const Char = require("../models/char");
 const { exists } = require("../models/asset");
