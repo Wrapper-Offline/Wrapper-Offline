@@ -5,7 +5,7 @@
 /**
  * set dark mode
  */
-if (localStorage.getItem("darkmode")) {
+if (localStorage.getItem("DARK_MODE") == "true") {
 	toggleDarkMode();
 }
 

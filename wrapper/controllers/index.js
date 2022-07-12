@@ -9,6 +9,7 @@ const asset = require("./asset");
 const char = require("./char");
 const movie = require("./movie");
 const theme = require("./theme");
+const settings = require("./settings");
 const tts = require("./tts");
 
 // create the group
@@ -21,6 +22,7 @@ group
 	.add(char)
 	.add(movie)
 	.add(theme)
+	.add(settings)
 	.add(tts);
 
 module.exports = group;

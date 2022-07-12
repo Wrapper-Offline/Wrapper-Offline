@@ -18,11 +18,30 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a href="#" data-triggers="0">Appearance</a>
+					<a href="#" class="selected" data-triggers="0">Features</a>
+					<a href="#" data-triggers="1">Appearance</a>
 				</div>
+				<nav class="tab" style="display:block">
+					<h2>Features</h2>
+
+					<h3>Discord rich presence</h3>
+					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
+					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
+					them. Turning this off will make Offline stop saying when you're using it on Discord.</p>
+					<span id="DISCORD_RPC"></span>
+
+					<h3>Truncated themelist</h3>
+					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
+					Keeping this off is highly suggested.<br/>
+					However, if you want to see everything the program has to offer, turn this on.</p>
+					<span id="TRUNCATED_THEMELIST"></span>
+				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
-					<p>Dark mode: <span id="darkmode" data-meth="localStorage"></span></p>
+
+					<h3>Dark mode</h3>
+					<p>Self-explanatory. Makes the Video List dark.</p>
+					<span id="DARK_MODE" data-local="true"></span>
 				</nav>
 			</nav>
 		</main>
@@ -31,52 +50,63 @@
 	</body>
 
 	<script>
-		const getSetting = (name) =>
-			localStorage.getItem(name) || $.cookie(name);
+		// this is a mess of type conversion
 
-		getSettingData();
+		/**
+		 * list
+		 */
+		let list = [];
+		for (const elem of $("span")) list.push(elem.id);
 
-
-		// toggling
-		$("span").click(event => {
-			if (event.target.id == "darkmode")
-				toggleDarkMode();
-			if (event.target["data-meth"] == "localStorage")
-				togLocStor(event.target.id);
-			else
-				togCookie(event.target.id);
+		$.getJSON("/api/settings/list", (d) => {
+			for (const [key, val] of Object.entries(d)) {
+				const index = list.indexOf(key);
+				if (index < 0) {
+					continue;
+				}
+				list.splice(index, 1);
+				show(key, val);
+			}
+			// get local settings
+			list.forEach((key) => {
+				show(key, localStorage.getItem(key) == "true");
+			});
 		});
 
-		// add indicator
-		function getSettingData() {
-			const toggles = $("span");
+		/**
+		 * toggle
+		 */
+		$("span").on("click", (event) => {
+			const elem = $(event.target);
+			const setting = elem.attr("id");
+			const value = elem.attr("value") == "true" ? false : true;
 
-			toggles.each(function (i) {
-				const elem = $(this);
-				const name = elem.attr("id");
-				if (getSetting(name)) {
-					elem.css("color", "green");
-					elem.html("On");
-				} else {
-					elem.css("color", "red");
-					elem.html("Off");
-				}
-			})
-			return true;
-		}
-		function togLocStor(name) {
-			if (getSetting(name))
-				localStorage.removeItem(name);
-			else
-				localStorage.setItem(name, 1);
-			getSettingData();
-		}
-		function togCookie(name) {
-			if (getSetting(name))
-				$.removeCookie(name);
-			else
-				$.cookie(name, 1);
-			getSettingData();
+			if (elem.attr("data-local") == "true") {
+				if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
+				localStorage.setItem(setting, value);
+			} else {
+				$.post("/api/settings/update", { setting, value })
+					.done((d) => {
+						if (d.status != "ok") {
+							alert("That didn't work.");
+							return;
+						}
+					});
+			}
+			show(setting, value);
+		});
+
+		function show(key, value) {
+			const elem = $(`#${key}`);
+
+			elem.attr("value", value.toString());
+			if (value) {
+				elem.css("color", "green");
+				elem.html("On");
+			} else {
+				elem.css("color", "red");
+				elem.html("Off");
+			}
 		}
 	</script>
 </html>
