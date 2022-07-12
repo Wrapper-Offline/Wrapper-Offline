@@ -2,10 +2,17 @@
  * asset routes
  */
 // modules
+const ffmpeg = require("fluent-ffmpeg");
+ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
+ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
+const { fromFile } = require("file-type");
 const fs = require("fs");
 const httpz = require("httpz");
 const mime = require("mime-types");
+const path = require("path");
+const tempfile = require("tempfile");
 // vars
+const fileTypes = require("../data/fileTypes.json");
 const header = process.env.XML_HEADER;
 // stuff
 const Asset = require("../models/asset");
@@ -67,7 +74,7 @@ group
 	})
 	.route("POST", "/api_v2/assets/imported", (req, res) => {
 		res.assert(req.body.data.type, 400, { status: "error" });
-		req.body.data.subtype ||= 0;
+		if (req.body.data.type == "prop") req.body.data.subtype ||= 0;
 
 		res.json({
 			status: "ok",
@@ -78,17 +85,14 @@ group
 	})
 	// load
 	.route(
-		"*",
+		"POST",
 		[
 			"/goapi/getAsset/",
-			"/goapi/getAssetEx/",
-			/\/(assets|goapi\/getAsset)\/([\S]+)/
+			"/goapi/getAssetEx/"
 		],
-		async (req, res) => {
-			const url = req.parsedUrl.pathname;
-			const id = url.charAt(1) == "a" ?
-				req.matches[2] :
-				req.body.assetId || "go away";
+		(req, res) => {
+			const id = req.body.assetId;
+			res.assert(id, 400, "Missing one or more fields.");
 
 			try {
 				const readStream = Asset.load(id);
@@ -100,6 +104,18 @@ group
 			}
 		}
 	)
+	.route("*", /\/(assets|goapi\/getAsset)\/([\S]+)/, (req, res) => {
+		const id = req.matches[2];
+
+		try {
+			const readStream = Asset.load(id);
+			res.setHeader("Content-Type", mime.contentType(id));
+			readStream.pipe(res);
+		} catch (e) {
+			console.log("Error loading asset:", e);
+			res.status(404).end();
+		}
+	})
 	// meta
 	//  #get
 	.route("POST", "/api_v2/asset/get", (req, res) => {
@@ -144,15 +160,28 @@ group
 			file,
 			req.body.type,
 			req.body.subtype,
-			400, { status: "error" }
+			400,
+			{
+				status: "error",
+				msg: "Missing one or more fields."
+			}
 		);
+	
 		// get the filename and extension
+		const { filepath } = file;
 		const origName = file.originalFilename;
-		const dotIn = origName.lastIndexOf(".");
-		const filename = origName.substring(0, dotIn);
-		let ext = origName.substring(dotIn + 1);
-		// read the file
-		const path = file.filepath;
+		const filename = path.parse(origName).name;
+		const { ext } = await fromFile(filepath);
+
+		// validate the file type
+		if ((fileTypes[req.body.type] || []).indexOf(ext) < 0) {
+			res.status(400);
+			res.json({
+				status: "error",
+				msg: "Invalid file type."
+			});
+			return;
+		}
 
 		let info = {
 			type: req.body.type,
@@ -160,27 +189,38 @@ group
 			title: req.body.name || filename,
 		}, stream;
 
-		if (
-			info.type != "bg" ||
-			info.subtype != "video"
-		) {
-			stream = fs.createReadStream(path);
-			stream.pause();
-		}
 		switch (info.type) {
-			case "sound": {
-				ext = "mp3";
-				info.duration = await rFileUtil.mp3Duration(path);
-				info.downloadtype = "progressive";
-				break;
-			}
-
 			case "bg" : {
-				stream = await rFileUtil.resizeImage(path, 550, 354);
+				if (ext == "swf") {
+					stream = fs.createReadStream(filepath);
+				} else {
+					stream = await rFileUtil.resizeImage(filepath, 550, 354);
+				}
 				stream.pause();
+
+				// save asset
+				info.file = await Asset.save(stream, ext, info);
 				break;
 			}
-
+			case "sound": {
+				await new Promise(async (resolve, reject) => {
+					if (ext != "mp3") {
+						stream = await rFileUtil.convertToMp3(path, ext);
+					} else {
+						stream = fs.createReadStream(filepath);
+					}
+					const temppath = tempfile(".mp3");
+					const writeStream = fs.createWriteStream(temppath);
+					stream.pipe(writeStream);
+					stream.on("end", async () => {
+						info.duration = await rFileUtil.mp3Duration(temppath);
+						info.file = await Asset.save(temppath, "mp3", info);
+						info.downloadtype = "progressive";
+						resolve();
+					});
+				});
+				break;
+			}
 			case "prop": {
 				let { ptype } = req.body;
 				// verify the prop type
@@ -188,20 +228,58 @@ group
 					case "placeable":
 					case "wearable":
 					case "holdable":
-						break;
-					default: ptype = "placeable";
+						info.ptype = ptype;
+					default:
+						info.ptype = "placeable";
 				}
 
-			}
+				if (info.subtype == "video") {
+					delete info.ptype;
+					const temppath = tempfile(".flv");
+					await new Promise((resolve, rej) => {
+						// get the height and width
+						ffmpeg(filepath).ffprobe((e, data) => {
+							if (e) rej(e);
+							info.width = data.streams[0].width;
+							info.height = data.streams[0].height;
 
+							// convert the video to an flv
+							ffmpeg(filepath)
+								.output(temppath)
+								.on("end", async () => {
+									const readStream = fs.createReadStream(temppath);
+									info.file = await Asset.save(readStream, "flv", info);
+
+									// save the first frame
+									ffmpeg(filepath)
+										.seek("0:00")
+										.output(path.join(
+											__dirname,
+											"../../",
+											process.env.ASSET_FOLDER,
+											info.id.slice(0, -3) + "png"
+										))
+										.outputOptions("-frames", "1")
+										.on("end", () => resolve(info.id))
+										.run();
+								})
+								.on("error", (e) => rej("Error converting video:", e))
+								.run();
+						});
+					});
+				}
+				break;
+			}
 			default: {
-				
+				res.status(400);
+				res.json({
+					status: "error",
+					msg: "Invalid asset type."
+				});
+				return;
 			}
 		}
 
-		// save asset
-		info.file = await Asset.save(stream, ext, info);
-		// ...
 		// stuff for the lvm
 		info.enc_asset_id = info.file;
 

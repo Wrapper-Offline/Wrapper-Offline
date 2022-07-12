@@ -97,27 +97,34 @@ module.exports = {
 
 	/**
 	 * Saves an asset.
-	 * @param {fs.ReadStream | string} readStream 
+	 * @param {fs.ReadStream | Buffer | string} data 
 	 * @param {string} ext
 	 * @param {object} info 
 	 * @returns {string}
 	 */
-	save(readStream, ext, info) {
+	save(data, ext, info) {
 		return new Promise((res, rej) => {
 			info.id = `${fUtil.generateId()}.${ext}`;
 			DB.insert("assets", info)
 			// save the file
 			let writeStream = fs.createWriteStream(path.join(folder, info.id));
 
-			if (typeof readStream == "string") {
-				// it's a file path
-				readStream = fs.createReadStream(readStream);
-				readStream.pause();
+			if (Buffer.isBuffer(data)) {
+				writeStream.write(data, (e) => {
+					if (e && e != null) rej(e);
+					res(info.id);
+				});
+			} else {
+				if (typeof data == "string") {
+					// it's a file path
+					data = fs.createReadStream(data);
+					data.pause();
+				}
+				data.resume();
+				data.pipe(writeStream);
+				// wait for the stream to end
+				data.on("end", () => res(info.id));
 			}
-			readStream.resume();
-			readStream.pipe(writeStream);
-			// wait for the stream to end
-			readStream.on("end", () => res(info.id));
 		});
 	}
 };

@@ -18,6 +18,7 @@
 		"discord-rpc": "^4.0.1",
 		"electron": "^11.4.7",
 		"eta": "^1.12.3",
+		"file-type": "^16.5.1",
 		"fluent-ffmpeg": "^2.1.2",
 		"formidable": "^2.0.1",
 		"httpz": "github:octanuary/httpz",
