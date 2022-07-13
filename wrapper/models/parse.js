@@ -91,26 +91,20 @@ module.exports = async function (xmlBuffer) {
 		if (themeId == "ugc") {
 			const id = pieces[2];
 			try {
-				let buffers = [];
-				asset
-					.load(id)
-					.on("data", (c) => buffers.push(c))
-					.on("end", () => {
-						const buffer = Buffer.concat(buffers);
+				const buffer = asset.load(id, true);
 
-						// add asset meta
-						ugc += asset.meta2Xml(DB.get("assets", id).data);
-						// and add the file
-						fUtil.addToZip(zip, filename, buffer);
+				// add asset meta
+				ugc += asset.meta2Xml(DB.get("assets", id).data);
+				// and add the file
+				fUtil.addToZip(zip, filename, buffer);
 
-						// add video thumbnails
-						if (type == "prop" && subtype == "video") {
-							pieces[2] = pieces[2].slice(0, -3) + "png";
-							const filename = pieces.join(".")
-							const buffer = asset.load(pieces[2]);
-							fUtil.addToZip(zip, filename, buffer);
-						}
-					});
+				// add video thumbnails
+				if (type == "prop" && subtype == "video") {
+					pieces[2] = pieces[2].slice(0, -3) + "png";
+					const filename = pieces.join(".")
+					const buffer = asset.load(pieces[2], true);
+					fUtil.addToZip(zip, filename, buffer);
+				}
 			} catch (e) {
 				console.error("WARNING:", e);
 				return;

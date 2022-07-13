@@ -39,14 +39,20 @@ module.exports = {
 	 * Looks for a match in the _ASSETS folder and returns the file buffer.
 	 * If there's no match found, it returns null.
 	 * @param {string} aId 
-	 * @returns {fs.ReadStream}
+	 * @param {boolean} returnBuffer
+	 * @returns {fs.ReadStream | Buffer}
 	 */
-	load(id) {
+	load(id, returnBuffer = false) {
 		if (this.exists(id)) {
 			const filepath = path.join(folder, id);
-			const readStream = fs.createReadStream(filepath);
+			let data;
+			if (returnBuffer) {
+				data = fs.readFileSync(filepath);
+			} else {
+				data = fs.createReadStream(filepath);
+			}
 
-			return readStream;
+			return data;
 		} else {
 			throw new Error("Asset doesn't exist.");
 		}

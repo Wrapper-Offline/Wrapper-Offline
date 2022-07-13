@@ -292,6 +292,44 @@ group
 			status: "ok", 
 			data: info
 		});
+	})
+	.route("POST", "/goapi/saveSound/", async (req, res) => {
+		isRecord = req.body.bytes ? true : false;
+
+		let filepath, ext, stream;
+		if (isRecord) {
+			filepath = tempfile(".ogg");
+			ext = "ogg";
+			const buffer = Buffer.from(req.body.bytes, "base64");
+			fs.writeFileSync(filepath, buffer);
+		} else {
+			// read the file
+			filepath = req.files.Filedata.filepath;
+			ext = (await fromFile(filepath)).ext;
+		}
+
+		let info = {
+			type: "sound",
+			subtype: req.body.subtype,
+			title: req.body.title
+		};
+
+		if (ext != "mp3") {
+			stream = await rFileUtil.convertToMp3(filepath, ext);
+		} else {
+			stream = fs.createReadStream(filepath);
+		}
+
+		const temppath = tempfile(".mp3");
+		const writeStream = fs.createWriteStream(temppath);
+		stream.pipe(writeStream);
+		stream.on("end", async () => {
+			info.duration = await rFileUtil.mp3Duration(temppath);
+			const id = await Asset.save(temppath, "mp3", info);
+			res.end(
+				`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`
+			);
+		});
 	});
 
 module.exports = group;

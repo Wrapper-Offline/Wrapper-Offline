@@ -20,6 +20,7 @@ module.exports = function resRender(req, res, next) {
 		case "pag":
 		case "goa":
 		case "api":
+		case "cha":
 		case assetUrl:
 			return next();
 	}
