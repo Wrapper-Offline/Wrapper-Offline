@@ -83,6 +83,7 @@ class AssetImporter {
 						<div class="import_as">
 							<a href="#" type="bg">Background</a>
 							<a href="#" type="prop">Prop</a>
+							<a href="#" type="watermark">Watermark</a>
 							<a href="#" action="cancel">Cancel</a>
 						</div>
 					</div>
@@ -203,6 +204,7 @@ class ImporterFile {
 			.done(d => {
 				if (d.status == "ok") {
 					if (IS_STUDIO) {
+						if (this.type == "watermark") this.el.fadeOut(() => this.el.remove());
 						this.id = d.data.file;
 
 						// why

@@ -17,7 +17,9 @@ group
 	// update
 	.route("POST", "/api/settings/update", (req, res) => {
 		const { setting } = req.body;
-		const value = req.body.value == "true" ? true : false;
+		// convert true or false to a boolean
+		const value = req.body.value == "true" ? true : 
+			req.body.value == "false" ? false : req.body.value;
 		res.assert(
 			setting,
 			typeof value != "undefined",

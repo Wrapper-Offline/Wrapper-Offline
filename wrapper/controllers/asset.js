@@ -206,6 +206,14 @@ group
 				info.file = await Asset.save(stream, ext, info);
 				break;
 			}
+			case "watermark": {
+				stream = fs.createReadStream(filepath);
+				stream.pause();
+
+				// save asset
+				info.file = await Asset.save(stream, ext, info);
+				break;
+			}
 			case "sound": {
 				await new Promise(async (resolve, reject) => {
 					if (ext != "mp3") {

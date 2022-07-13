@@ -5,6 +5,11 @@
 		"png",
 		"jpg"
 	],
+	"watermark": [
+		"swf",
+		"png",
+		"jpg"
+	],
 	"prop": [
 		"swf",
 		"gif",

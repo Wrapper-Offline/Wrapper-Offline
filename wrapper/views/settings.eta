@@ -6,7 +6,7 @@
 		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/settings.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/global.js"></script>
 		<script>const IS_STUDIO = false;</script>
@@ -30,20 +30,30 @@
 					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
 					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
 					them. Turning this off will make Offline stop saying when you're using it on Discord.</p>
-					<span id="DISCORD_RPC"></span>
+					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
 
 					<h3>Truncated themelist</h3>
 					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
 					Keeping this off is highly suggested.<br/>
 					However, if you want to see everything the program has to offer, turn this on.</p>
-					<span id="TRUNCATED_THEMELIST"></span>
+					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
+					
+					<h3>Default watermark</h3>
+					<p>The Video Player has 4 choices for default watermarks.<br/>
+					Default watermarks are shown when you choose a Go!Animate watermark.</p>
+					<select class="setting" id="DEFAULT_WATERMARK">
+						<option>twoLines</option>
+						<option>g4s</option>
+						<option>fullScreen</option>
+						<option>freeTrial</option>
+					</select>
 				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
 
 					<h3>Dark mode</h3>
 					<p>Self-explanatory. Makes the Video List dark.</p>
-					<span id="DARK_MODE" data-local="true"></span>
+					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
 				</nav>
 				<nav class="tab">
 					<h2>Your Library</h2>
@@ -74,7 +84,7 @@
 		 * list
 		 */
 		let list = [];
-		for (const elem of $("span")) list.push(elem.id);
+		for (const elem of $(".setting")) list.push(elem.id);
 
 		$.getJSON("/api/settings/list", (d) => {
 			for (const [key, val] of Object.entries(d)) {
@@ -135,10 +145,11 @@
 		/**
 		 * toggle
 		 */
-		$("span").on("click", (event) => {
+		$(".setting").on("change", (event) => {
 			const elem = $(event.target);
 			const setting = elem.attr("id");
-			const value = elem.attr("value") == "true" ? false : true;
+			const value = elem.prop("tagName") == "SELECT" ? 
+				elem.val() : elem.prop("checked");
 
 			if (elem.attr("data-local") == "true") {
 				if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
@@ -158,13 +169,16 @@
 		function show(key, value) {
 			const elem = $(`#${key}`);
 
-			elem.attr("value", value.toString());
-			if (value) {
-				elem.css("color", "green");
-				elem.html("On");
+			if (elem.prop("tagName") == "SELECT") {
+				elem.find(`:contains('${value}')`).prop("selected", true);
 			} else {
-				elem.css("color", "red");
-				elem.html("Off");
+				if (value) {
+					elem.css("color", "green");
+					elem.html("On");
+				} else {
+					elem.css("color", "red");
+					elem.html("Off");
+				}
 			}
 		}
 	</script>

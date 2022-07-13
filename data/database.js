@@ -3,15 +3,16 @@ const fs = require("fs");
 const path = require("path");
 // vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
-let baseDb = { assets: [], movies: [], folders: [], watermarks: [] };
+let baseDb = { assets: [], movies: [] };
 
 module.exports = class GoDatabase {
 	constructor(isSettings = false) {
 		if (isSettings) {
 			this.path = path.join(folder, "settings.json");
 			baseDb = {
-				DISCORD_RPC: false, // 
-				TRUNCATED_THEMELIST: true // Cuts down the amount of themes that clog up the themelist in the videomaker.
+				DISCORD_RPC: false, // Shows your Wrapper activity in Discord.
+				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
+				DEFAULT_WATERMARK: "twoLines" // Default watermark (if the GA watermark is chosen).
 			};
 		} else {
 			this.path = path.join(folder, "database.json");

@@ -11,6 +11,7 @@ const movie = require("./movie");
 const theme = require("./theme");
 const settings = require("./settings");
 const tts = require("./tts");
+const watermark = require("./watermark");
 const waveform = require("./waveform");
 
 // create the group
@@ -25,6 +26,7 @@ group
 	.add(theme)
 	.add(settings)
 	.add(tts)
+	.add(watermark)
 	.add(waveform);
 
 module.exports = group;
