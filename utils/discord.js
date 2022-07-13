@@ -1,7 +1,7 @@
 /**
  * rich presence
  */
-const database = require("../../data/database"), DB = new database(true);
+const database = require("../data/database"), DB = new database(true);
 const { DISCORD_RPC } = DB.select();
 
 if (DISCORD_RPC == true) {

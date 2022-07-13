@@ -48,10 +48,19 @@
 					<p>The Video Player has 4 choices for default watermarks.<br/>
 					Default watermarks are shown when you choose a Go!Animate watermark.</p>
 					<select class="setting" id="DEFAULT_WATERMARK">
+						<option value="default">GoAnimate</option>
 						<option value="twoLines">Go Make Your Own</option>
 						<option value="g4s">GoAnimate For Schools</option>
-						<option>fullScreen</option>
 						<option value="freeTrial">Free Trial</option>
+					</select>
+
+					<h3>14:9 or 16:9 aspect ratio</h3>
+					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
+					However, you can toggle this setting to make it 14:9, like a video<br/>
+					made with Vyond before 2014.</p>
+					<select class="setting" id="IS_WIDE">
+						<option value="0">14:9</option>
+						<option value="1">16:9</option>
 					</select>
 				</nav>
 				<nav class="tab">

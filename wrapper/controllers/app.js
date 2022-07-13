@@ -9,6 +9,7 @@ require("../../utils/discord")
 // vars
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 // stuff
+const database = require("../../data/database"), DB = new database(true);
 const reqIsStudio = require("../middlewares/req.isStudio");
 function toAttrString(table) {
 	return typeof (table) == "object" ? new URLSearchParams(table).toString() : table.replace(/"/g, "\\\"");
@@ -125,13 +126,14 @@ group
 	})
 	.route("GET", "/go_full", async (req, res) => {
 		discord("Video Maker");
+		const { IS_WIDE } = DB.select();
 		let flashvars = {
 			appCode: "go",
 			collab: 0,
 			ctc: "go",
 			goteam_draft_only: 1,
 			isLogin: "Y",
-			isWide: 1,
+			isWide: IS_WIDE,
 			lid: 0,
 			nextUrl: "/",
 			page: "",
@@ -159,9 +161,10 @@ group
 	})
 	.route("GET", "/player", async (req, res) => {
 		discord("Video Player");
+		const { IS_WIDE } = DB.select();
 		let flashvars = {
 			autostart: 1,
-			isWide: 1,
+			isWide: IS_WIDE,
 			ut: 60,
 			apiserver: "/",
 			storePath: STORE_URL + "/<store>",
