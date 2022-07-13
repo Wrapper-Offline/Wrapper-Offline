@@ -37,15 +37,21 @@
 					Keeping this off is highly suggested.<br/>
 					However, if you want to see everything the program has to offer, turn this on.</p>
 					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
+
+					<h3>Show waveforms</h3>
+					<p>By default, waveforms for audio are generated in the video editor.<br/>
+					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
+					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
+					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
 					
 					<h3>Default watermark</h3>
 					<p>The Video Player has 4 choices for default watermarks.<br/>
 					Default watermarks are shown when you choose a Go!Animate watermark.</p>
 					<select class="setting" id="DEFAULT_WATERMARK">
-						<option>twoLines</option>
-						<option>g4s</option>
+						<option value="twoLines">Go Make Your Own</option>
+						<option value="g4s">GoAnimate For Schools</option>
 						<option>fullScreen</option>
-						<option>freeTrial</option>
+						<option value="freeTrial">Free Trial</option>
 					</select>
 				</nav>
 				<nav class="tab">
@@ -62,7 +68,7 @@
 						<nav id="import_head">
 							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
 							<form>
-								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
+								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 							</form>
 						</nav>
 						<div id="importer-queue"></div>
@@ -170,15 +176,9 @@
 			const elem = $(`#${key}`);
 
 			if (elem.prop("tagName") == "SELECT") {
-				elem.find(`:contains('${value}')`).prop("selected", true);
+				elem.find(`option[value='${value}']`).prop("selected", true);
 			} else {
-				if (value) {
-					elem.css("color", "green");
-					elem.html("On");
-				} else {
-					elem.css("color", "red");
-					elem.html("Off");
-				}
+				elem.prop("checked", value);
 			}
 		}
 	</script>

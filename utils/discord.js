@@ -1,8 +1,10 @@
 /**
  * rich presence
  */
+const database = require("../../data/database"), DB = new database(true);
+const { DISCORD_RPC } = DB.select();
 
-if (!!process.env.DISCORD_RPC) {
+if (DISCORD_RPC == true) {
 	// modules
 	const RPC = require("discord-rpc");
 	const rpc = new RPC.Client({

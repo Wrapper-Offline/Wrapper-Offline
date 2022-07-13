@@ -54,7 +54,8 @@
 }
 .asset_name {
 	/* style */
-	background-color: #00000011;
+	background-color: #0001;
+	color: #444;
 	outline: #666 auto 2px;
 	/* layout */
 	margin: 0;
