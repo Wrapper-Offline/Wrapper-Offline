@@ -14,6 +14,7 @@ const tempfile = require("tempfile");
 // vars
 const fileTypes = require("../data/fileTypes.json");
 const header = process.env.XML_HEADER;
+const thumbUrl = process.env.THUMB_BASE_URL;
 // stuff
 const Asset = require("../models/asset");
 const database = require("../../data/database"), DB = new database();
@@ -330,6 +331,16 @@ group
 				`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`
 			);
 		});
+	})
+	// thumb
+	.route("GET", /\/stock_thumbs\/([\S]+)/, (req, res) => {
+		const filepath = path.join(__dirname, "../../", thumbUrl, req.matches[1]);
+		if (fs.existsSync(filepath)) {
+			fs.createReadStream(filepath).pipe(res);
+		} else {
+			res.status(404);
+			res.end();
+		}
 	});
 
 module.exports = group;

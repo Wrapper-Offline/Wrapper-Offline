@@ -11,6 +11,7 @@ const movie = require("./movie");
 const theme = require("./theme");
 const settings = require("./settings");
 const tts = require("./tts");
+const waveform = require("./waveform");
 
 // create the group
 const group = new httpz.Group();
@@ -23,6 +24,7 @@ group
 	.add(movie)
 	.add(theme)
 	.add(settings)
-	.add(tts);
+	.add(tts)
+	.add(waveform);
 
 module.exports = group;
