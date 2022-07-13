@@ -83,6 +83,9 @@ group
 			}
 		});
 	})
+	.route("GET", "/api/assets/list", (req, res) => {
+		res.json(DB.select("assets"));
+	})
 	// load
 	.route(
 		"POST",
@@ -205,7 +208,7 @@ group
 			case "sound": {
 				await new Promise(async (resolve, reject) => {
 					if (ext != "mp3") {
-						stream = await rFileUtil.convertToMp3(path, ext);
+						stream = await rFileUtil.convertToMp3(filepath, ext);
 					} else {
 						stream = fs.createReadStream(filepath);
 					}
@@ -267,6 +270,8 @@ group
 								.run();
 						});
 					});
+				} else {
+					info.file = await Asset.save(filepath, ext, info);
 				}
 				break;
 			}

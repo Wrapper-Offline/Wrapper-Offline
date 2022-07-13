@@ -15,6 +15,7 @@
 	"sound": [
 		"mp3",
 		"ogg",
-		"wav"
+		"wav",
+		"asf"
 	]
 }

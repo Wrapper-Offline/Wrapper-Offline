@@ -6,9 +6,10 @@
 		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/settings.css"/>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/global.js"></script>
+		<script>const IS_STUDIO = false;</script>
 	</head>
 
 	<body>
@@ -20,6 +21,7 @@
 					<h1 id="settings">Settings</h1>
 					<a href="#" class="selected" data-triggers="0">Features</a>
 					<a href="#" data-triggers="1">Appearance</a>
+					<a href="#" data-triggers="2">Your Library</a>
 				</div>
 				<nav class="tab" style="display:block">
 					<h2>Features</h2>
@@ -43,13 +45,29 @@
 					<p>Self-explanatory. Makes the Video List dark.</p>
 					<span id="DARK_MODE" data-local="true"></span>
 				</nav>
+				<nav class="tab">
+					<h2>Your Library</h2>
+
+					<nav id="importer">
+						<nav id="import_head">
+							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
+							<form>
+								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
+							</form>
+						</nav>
+						<div id="importer-queue"></div>
+					</nav>
+				</nav>
 			</nav>
 		</main>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
+	<script src="/pages/js/importer.js"></script>
+	<script src="/pages/js/filesize.js"></script>
 	<script>
+		new AssetImporter(importer);
 		// this is a mess of type conversion
 
 		/**
@@ -71,6 +89,47 @@
 			list.forEach((key) => {
 				show(key, localStorage.getItem(key) == "true");
 			});
+		});
+		$.getJSON("/api/assets/list", (d) => {
+			for (const info of d) {
+				switch (info.type) {
+					case "bg":
+					case "prop": {
+						$(`
+							<div class="importer_asset">
+								<div class="asset_metadata">
+									<img class="asset_preview" src="${
+										info.id.includes("swf") ? 
+											"/pages/img/importer/image.png" : 
+											info.subtype == "video" ? 
+												"/pages/img/importer/video.png" :
+												`/assets/${info.id}`
+									}" />
+									<div>
+										<h4 class="asset_name">${info.title}</h4>
+										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
+									</div>
+								</div>
+							</div>
+						`).appendTo($("#importer-queue"));
+						break;
+					}
+					case "sound": {
+						$(`
+							<div class="importer_asset">
+								<div class="asset_metadata">
+									<img class="asset_preview" src="/pages/img/importer/sound.png" />
+									<div>
+										<h4 class="asset_name">${info.title}</h4>
+										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
+									</div>
+								</div>
+							</div>
+						`).appendTo($("#importer-queue"));
+						break;
+					}
+				}
+			}
 		});
 
 		/**
