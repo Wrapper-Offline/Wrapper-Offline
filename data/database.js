@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 // vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
-let baseDb = { assets: [], movies: [] };
+let baseDb;
 
 module.exports = class GoDatabase {
 	constructor(isSettings = false) {
@@ -18,6 +18,7 @@ module.exports = class GoDatabase {
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
+			baseDb = { assets: [], movies: [] };
 		}
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {

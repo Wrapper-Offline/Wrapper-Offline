@@ -46,4 +46,4 @@ if (DISCORD_RPC == true) {
 	return;
 }
 // set a blank function so we don't have to check if it's enabled
-module.exports = new Promise((res) => res());
+module.exports = new Promise((res) => res(() => true));

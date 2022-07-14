@@ -12,8 +12,6 @@ const path = require("path");
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
-// stuff
-const discord = require("./utils/discord");
 
 /**
  * initialization
@@ -22,6 +20,8 @@ const discord = require("./utils/discord");
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
+// start discord rpc
+const discord = require("./utils/discord");
 // start the server
 const server = require("./wrapper/server");
 server();
