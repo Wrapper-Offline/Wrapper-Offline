@@ -53,7 +53,7 @@ group
 		res.end(`${header}<watermarks>${
 			typeof wId == "undefined" ?
 				// no watermark
-				"" : wId == "0vTLbQy9hG7k" ?
+				`<watermark style="octanuary"/>` : wId == "0vTLbQy9hG7k" ?
 					// default watermark
 					(() => {
 						const { DEFAULT_WATERMARK } = DB2.select();
