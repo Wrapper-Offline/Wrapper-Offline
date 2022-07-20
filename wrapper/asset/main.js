@@ -84,6 +84,9 @@ module.exports = {
 	 * @returns {string}
 	 */
 	meta2Xml(v) {
+		// sanitize stuff
+		v.title = v.title.replace(/"/g, "&quot;");
+
 		let xml;
 		switch (v.type) {
 			case "char": {
