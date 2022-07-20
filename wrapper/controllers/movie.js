@@ -57,6 +57,11 @@ group
 
 		res.redirect(`/go_full?tray=${theme}&tutorial=0`);
 	})
+
+	// redirect
+	.route("GET", "/dashboard/videos", (res) => {
+		res.redirect(`/`);
+	})
 	// save
 	//  #movies
 	.route("POST", "/goapi/saveMovie/", async (req, res) => {
