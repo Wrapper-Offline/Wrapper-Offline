@@ -85,7 +85,7 @@ module.exports = {
 	 */
 	meta2Xml(v) {
 		// sanitize stuff
-		v.title = v.title.replace(/"/g, "&quot;");
+		v.title = (v.title || "").replace(/"/g, "&quot;");
 
 		let xml;
 		switch (v.type) {

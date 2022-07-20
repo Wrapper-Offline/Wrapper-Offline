@@ -108,7 +108,7 @@ module.exports =  {
 						fUtil.addToZip(zip, filename, buffer);
 					}
 				} catch (e) {
-					console.error(`WARNING: Couldn't find asset ${id}.`);
+					console.error(`WARNING: Couldn't find asset ${id}:`, e);
 					return;
 				}
 			} else {
@@ -184,7 +184,7 @@ module.exports =  {
 										});
 										fUtil.addToZip(zip, filename + ".xml", buffer);
 									} catch (e) {
-										console.error(`WARNING: Couldn't find asset ${id}.`);
+										console.error(`WARNING: Couldn't find asset ${id}:`, e);
 										continue;
 									}
 								} else {
