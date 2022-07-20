@@ -19,10 +19,7 @@ module.exports = {
 		const { type, subtype } = DB.get("assets", id).data;
 		DB.delete("assets", id);
 
-		// ugh
 		if (type == "char") id += ".xml";
-
-		// delete the actual file
 		fs.unlinkSync(path.join(folder, id));
 
 		// delete video and char thumbnails
@@ -36,9 +33,8 @@ module.exports = {
 	},
 
 	/**
-	 * Looks for a match in the _ASSETS folder and returns the file buffer.
-	 * If there's no match found, it returns null.
-	 * @param {string} aId 
+	 * Returns a buffer or stream. Throws an error if the asset doesn't exist.
+	 * @param {string} id 
 	 * @param {boolean} returnBuffer
 	 * @returns {fs.ReadStream | Buffer}
 	 */
@@ -60,11 +56,11 @@ module.exports = {
 
 	/**
 	 * Checks if the file exists.
-	 * @param {string} aId 
+	 * @param {string} id 
 	 * @returns {boolean}
 	 */
-	exists(aId) {
-		const filepath = path.join(folder, aId);
+	exists(id) {
+		const filepath = path.join(folder, id);
 		const exists = fs.existsSync(filepath);
 		return exists;
 	},
@@ -75,6 +71,9 @@ module.exports = {
 	 * @returns {string}
 	 */
 	meta2Xml(v) {
+		// sanitize stuff
+		v.title = (v.title || "").replace(/"/g, "&quot;");
+
 		let xml;
 		switch (v.type) {
 			case "char": {

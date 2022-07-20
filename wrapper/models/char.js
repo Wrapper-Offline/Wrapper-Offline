@@ -23,14 +23,16 @@ module.exports = {
 				return fs.readFileSync(path.join(folder, `${id}.xml`));
 			} catch (err) { // stock characters
 				const nId = (id.slice(0, -3) + "000").padStart(9, 0);
-				const chars = fs.readFileSync(`${baseUrl}/${nId}.txt`);
+				const chars = fs.readFileSync(path.join(baseUrl, `${nId}.txt`));
 
-				var line = chars
+				const line = chars
 					.toString("utf8")
 					.split("\n")
-					.find(v => v.substring(0, 3) == id.slice(-3));
-				if (line) return Buffer.from(line.substring(3));
-				else throw new Error("Character not found.");
+					.find((v) => v.substring(0, 3) == id.slice(-3));
+				if (line) {
+					return Buffer.from(line.substring(3));
+				}
+				throw new Error("Character not found.");
 			}	
 		} catch (err) {
 			throw new Error("Character not found.");

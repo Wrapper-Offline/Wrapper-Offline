@@ -106,7 +106,7 @@ module.exports = async function (xmlBuffer) {
 					fUtil.addToZip(zip, filename, buffer);
 				}
 			} catch (e) {
-				console.error("WARNING:", e);
+				console.error(`WARNING: ${id}:`, e);
 				return;
 			}
 		} else {
@@ -182,7 +182,7 @@ module.exports = async function (xmlBuffer) {
 									});
 									fUtil.addToZip(zip, filename + ".xml", buffer);
 								} catch (e) {
-									console.error(`WARNING: Couldn't find asset ${id}.`);
+									console.error(`WARNING: ${id}:`, e);
 									continue;
 								}
 							} else {
