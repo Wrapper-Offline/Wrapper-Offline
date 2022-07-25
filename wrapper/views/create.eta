@@ -209,18 +209,28 @@
 					Street
 				</a>
 			</div>
+			<div id="char-copy">
+				<h2>Copy a character</h2>
+				<p>Have a character ID? Use it here!</p>
+				<input type="text" value="400001035" name="char-id" />
+				<a href="#" onclick="copyRedirect()">Copy</a>
+			</div>
 		</main>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script>
+		const charId = $("input[name='char-id']");
+
 		// filter the list
 		const params = new URLSearchParams(window.location.search);
 		// default to all themes
 		const filter = params.get("filter") || "vl";
 		if (filter == "cc")
 			$(".theme").not("[data-has-cc]").hide();
+		else
+			$("#char-copy").hide();
 
 		function redirect(tId, ccId = false) {
 			if (filter == "cc") {
@@ -228,6 +238,10 @@
 				return;
 			}
 			window.location.href = `./go_full?tray=${tId}`;
+		}
+		function copyRedirect() {
+			const id = charId.val();
+			window.location.href = `./cc?original_asset_id=${id}`;
 		}
 
 	</script>
