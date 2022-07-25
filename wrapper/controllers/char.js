@@ -7,9 +7,17 @@ const httpz = require("httpz");
 // vars
 const base = Buffer.alloc(1, "0");
 const defaultTypes = {
-	family: "adam",
 	anime: "guy",
-	cctoonadventure: "default"
+	cctoonadventure: "default",
+	family: "adam",
+};
+const bfTypes = {
+	man: "default&ft=_sticky_filter_guy",
+	woman: "default&ft=_sticky_filter_girl",
+	boy: "kid&ft=_sticky_filter_littleboy",
+	girl: "kid&ft=_sticky_filter_littlegirl",
+	heavy_man: "heavy&ft=_sticky_filter_heavyguy",
+	heavy_woman: "heavy&ft=_sticky_filter_heavygirl",
 };
 // stuff
 const Char = require("../models/char");
@@ -47,7 +55,9 @@ group
 				redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
 				break;
 			} default: {
-				const type = req.query.type || defaultTypes[theme] || "";
+				const type = theme == "business" ?
+					bfTypes[req.query.type || ""] || "":
+					req.query.type || defaultTypes[theme] || "";
 				redirect = `/cc?themeId=${theme}&bs=${type}`;
 				break;
 			}
