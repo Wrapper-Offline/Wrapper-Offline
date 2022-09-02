@@ -48,15 +48,13 @@ Wrapper: Offline credits:
 | ----------------------------------------------------- | -------------------------------------------------------------- |
 | [GoTest334 (PL)](https://github.com/GoTest334)        | Current project lead                                           |
 | [Blukas/GoTube (D)](https://github.com/theBlukas)     | Beta testing, Mega Comedy World 2                              |
-| [sparrkz](https://github.com/sparrkzz)                | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
 | [octanuary (D)](https://github.com/octanuary)         | Real importing, starters, API changes                          |
-| 2Epik4u (D)                                           | Stuff                                                          |
+| [sparrkz](https://github.com/sparrkzz)                | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
+| [2Epik4u](https://github.com/2Epik4u)                 | Stuff                                                          |
 | [Benson (Child Groom)](https://github.com/watchbenson)| Creator of Wrapper: Offline                                    |
 | [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo                                                           |
 | VisualPlugin                                          | Text to speech voices                                          |
 | creepyjokes2000                                       | Waveform fix, improved actions                                 |
-| [JoshAnimate](https://github.com/joshtoons2008)       | Headgear fix                                                   |
-| KrisAnimate                                           | Chromium parameter                                             |
 | PoleyMagik                                            | Client Modifications                                           |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***

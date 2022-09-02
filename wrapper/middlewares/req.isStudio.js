@@ -1,6 +1,6 @@
 const { BrowserWindow, Menu } = require("electron");
 const httpz = require("httpz");
-const assetUrl = String.fromCharCode(...[97, 115, 115]); // "/assets/<id>".substring(1, 4);
+const assetUrl = String.fromCharCode(97, 115, 115);
 // It's a naughty word
 // I'm not supposed to say it
 
@@ -21,6 +21,7 @@ module.exports = function resRender(req, res, next) {
 		case "goa":
 		case "api":
 		case "cha":
+		case "fil":
 		case assetUrl:
 			return next();
 	}
