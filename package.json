@@ -7,7 +7,7 @@
 	"private": true,
 	"scripts": {
 		"start": "electron . --unhandled-rejections=strict",
-		"buildwin": "npx electron-packager . --ignore=^/server",
+		"build": "npx electron-packager . --ignore=^/server",
 		"test": "mocha"
 	},
 	"main": "main.js",

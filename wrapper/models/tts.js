@@ -15,12 +15,22 @@ const voices = require("../data/voices.json").voices;
  * @param {string} text text
  * @returns {IncomingMessage}
  */
-module.exports = function processVoice(voiceName, text) {
+module.exports = function processVoice(voiceName, rawText) {
 	return new Promise(async (res, rej) => {
 		const voice = voices[voiceName];
-
 		if (!voice) {
 			rej("That voice doesn't seem to exist.");
+		}
+
+		let flags = {};
+		const pieces = rawText.split("#%");
+		let text = pieces.pop();
+		for (const rawFlag of pieces) {
+			const index = rawFlag.indexOf("=");
+			if (index == -1) continue;
+			const name = rawFlag.substring(0, index);
+			const value = rawFlag.substring(index + 1);
+			flags[name] = value;
 		}
 
 		try {
@@ -73,6 +83,11 @@ module.exports = function processVoice(voiceName, text) {
 					break;
 				}
 				case "cepstral": {
+					let pitch = flags.pitch !== undefined ? +flags.pitch : 50;
+					pitch /= 100;
+					pitch *= 4.6;
+					pitch -= 0.4;
+					pitch = Math.round(pitch * 10) / 10;
 					https.get("https://www.cepstral.com/en/demos", async (r) => {
 						const cookie = r.headers["set-cookie"];
 						const q = new URLSearchParams({
@@ -80,7 +95,7 @@ module.exports = function processVoice(voiceName, text) {
 							voice: voice.arg,
 							createTime: 666,
 							rate: 170,
-							pitch: 1,
+							pitch: pitch,
 							sfx: "none"
 						}).toString();
 
@@ -108,21 +123,20 @@ module.exports = function processVoice(voiceName, text) {
 				}
 				case "vocalware": {
 					const [EID, LID, VID] = voice.arg;
-					const cs = md5(`${EID}${LID}${VID}${text}1mp35883747uetivb9tb8108wfj`);
 					const q = new URLSearchParams({
 						EID,
 						LID,
 						VID,
 						TXT: text,
 						EXT: "mp3",
-						IS_UTF8: 1,
-						ACC: 5883747,
-						cache_flag: 3,
-						CS: cs,
+						FNAME: "",
+						ACC: 15679,
+						SceneID: 2703396,
+						HTTP_ERR: "",
 					}).toString();
 
 					https
-						.get(`https://cache-a.oddcast.com/tts/gen.php?${q}`, res)
+						.get(`https://cache-a.oddcast.com/tts/genB.php?${q}`, res)
 						.on("error", rej);
 					break;
 				}
@@ -171,7 +185,7 @@ module.exports = function processVoice(voiceName, text) {
 										});
 										r.on("error", rej);
 									}
-								);
+								).on("error", rej);
 								req.end(
 									new URLSearchParams({
 										req_voice: voice.arg,
@@ -188,7 +202,7 @@ module.exports = function processVoice(voiceName, text) {
 								);
 							});
 						}
-					);
+					).on("error", rej);
 					req.end(
 						new URLSearchParams({
 							json: `{"googleid":"${email}"`,
