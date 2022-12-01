@@ -382,6 +382,31 @@ const processVoice = (voiceName, text) => {
 					}).toString()
 				);
 				break;
+			}
+			case 'azure': {
+				var body = new URLSearchParams({
+					text: text,
+					voices: voice.arg,
+					download: true,
+					accept: "audio/mp3",
+				});
+				var req = https.get({
+					host: 'play.ht',
+					port: "443",
+					path: `/api/transcribe?${q}`,
+					method: 'GET',
+					headers: {
+						Referer: "https://play.ht/simple-editor/",
+						Origin: "https://play.ht/",
+						"User-Agent":  userAgent,
+				    },
+				}, r => {
+					var buffers = [];
+					r.on('data', d => buffers.push(d));
+					r.on('end', () => res(Buffer.concat(buffers)));
+					r.on('error', rej);
+				});
+				break;
 			} case "cereproc": { // working
 				const req = https.request(
 					{
