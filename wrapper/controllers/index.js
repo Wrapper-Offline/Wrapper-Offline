@@ -2,7 +2,7 @@
  * wrapper's routes
  */
 // modules
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 // stuff
 const app = require("./app");
 const asset = require("./asset");

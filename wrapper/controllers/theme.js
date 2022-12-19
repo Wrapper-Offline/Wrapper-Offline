@@ -2,7 +2,7 @@
  * theme routes
  */
 // modules
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const path = require("path");
 // vars
 const folder = path.join(__dirname, "../../server", process.env.STORE_URL);

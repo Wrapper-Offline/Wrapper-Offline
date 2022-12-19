@@ -1,12 +1,10 @@
-/**
- * start wrapper: offline's server
- */
-// modules
+/*
+start wrapper: offline's server
+*/
 const fs = require("fs");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const path = require("path");
 const static = require("node-static");
-// stuff
 const routes = require("./controllers");
 const reqBody = require("./middlewares/req.body");
 const resRender = require("./middlewares/res.render");

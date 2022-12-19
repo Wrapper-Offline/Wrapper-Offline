@@ -3,7 +3,7 @@
  */
 // modules
 const fs = require("fs");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const path = require("path");
 // stuff
 const database = require("../../data/database"), DB = new database(true);

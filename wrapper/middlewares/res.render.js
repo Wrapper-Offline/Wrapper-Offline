@@ -1,5 +1,5 @@
 const eta = require("eta");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const path = require("path");
 
 /**

@@ -1,5 +1,5 @@
 const formidable = require("formidable");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 
 /**
  * request body

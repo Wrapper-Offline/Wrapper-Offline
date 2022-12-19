@@ -3,7 +3,7 @@
  */
 // modules
 const fs = require("fs");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const tempfile = require("tempfile");
 // vars
 const info = require("../data/voices");

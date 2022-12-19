@@ -2,7 +2,7 @@
  * movie routes
  */
 // modules
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 // stuff
 const database = require("../../data/database"), DB = new database();
 const Movie = require("../models/movie");

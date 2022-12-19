@@ -3,7 +3,7 @@
  */
 // modules
 const fs = require("fs");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 // vars
 const base = Buffer.alloc(1, "0");
 const defaultTypes = {

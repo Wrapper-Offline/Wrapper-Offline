@@ -2,7 +2,7 @@
  * watermark routes
  */
 // modules
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 // vars
 const header = process.env.XML_HEADER;
 // stuff

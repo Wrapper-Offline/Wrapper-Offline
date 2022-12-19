@@ -7,7 +7,7 @@ ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
 ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 const { fromFile } = require("file-type");
 const fs = require("fs");
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 const mime = require("mime-types");
 const path = require("path");
 const tempfile = require("tempfile");

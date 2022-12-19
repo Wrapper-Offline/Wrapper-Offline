@@ -1,12 +1,9 @@
-/**
- * tts api
- */
-// modules
+/*
+tts
+*/
 const brotli = require("brotli");
 const https = require("https");
 const http = require("http");
-const md5 = require("js-md5");
-// vars
 const voices = require("../data/voices.json").voices;
 
 /**
@@ -83,11 +80,16 @@ module.exports = function processVoice(voiceName, rawText) {
 					break;
 				}
 				case "cepstral": {
-					let pitch = flags.pitch !== undefined ? +flags.pitch : 50;
-					pitch /= 100;
-					pitch *= 4.6;
-					pitch -= 0.4;
-					pitch = Math.round(pitch * 10) / 10;
+					let pitch;
+					if (flags.pitch) {
+						pitch = +flags.pitch;
+						pitch /= 100;
+						pitch *= 4.6;
+						pitch -= 0.4;
+						pitch = Math.round(pitch * 10) / 10;
+					} else {
+						pitch = 1;
+					}
 					https.get("https://www.cepstral.com/en/demos", async (r) => {
 						const cookie = r.headers["set-cookie"];
 						const q = new URLSearchParams({
@@ -135,8 +137,28 @@ module.exports = function processVoice(voiceName, rawText) {
 						HTTP_ERR: "",
 					}).toString();
 
+					console.log(`https://cache-a.oddcast.com/tts/genB.php?${q}`)
 					https
-						.get(`https://cache-a.oddcast.com/tts/genB.php?${q}`, res)
+						.get(
+							{
+								hostname: "cache-a.oddcast.com",
+								path: `/tts/genB.php?${q}`,
+								headers: {
+									"Host": "cache-a.oddcast.com",
+									"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0",
+									"Accept": "*/*",
+									"Accept-Language": "en-US,en;q=0.5",
+									"Accept-Encoding": "gzip, deflate, br",
+									"Origin": "https://www.oddcast.com",
+									"DNT": 1,
+									"Connection": "keep-alive",
+									"Referer": "https://www.oddcast.com/",
+									"Sec-Fetch-Dest": "empty",
+									"Sec-Fetch-Mode": "cors",
+									"Sec-Fetch-Site": "same-site"
+								}
+							}, res
+						)
 						.on("error", rej);
 					break;
 				}

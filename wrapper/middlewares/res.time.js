@@ -1,4 +1,4 @@
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 
 /**
  * Logs the response times.

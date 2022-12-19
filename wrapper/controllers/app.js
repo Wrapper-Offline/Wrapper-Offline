@@ -2,7 +2,7 @@
  * app routes
  */
 // modules
-const httpz = require("httpz");
+const httpz = require("@octanuary/httpz")
 let discord;
 require("../../utils/discord")
 	.then((f) => discord = f);
