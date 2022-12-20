@@ -27,33 +27,33 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 **Please do not contact anyone directly on the list for support, use the Discord server.**
 
 Original Wrapper credits:
-| Name                                         | Contribution         |
-| -------------------------------------------- | -------------------- |
-| [VisualPlugin](https://github.com/Windows81) | GoAnimate Wrapper    |
-| [CLarramore](https://github.com/CLarramore)  | Bug fixes            |
-| [PoleyMagik](https://github.com/PoleyMagik)  | Asset Store Archive  |
+Name | Contribution
+--- | ---
+[VisualPlugin](https://github.com/Windows81) | GoAnimate Wrapper
+[CLarramore](https://github.com/CLarramore) | Bug fixes
+[PoleyMagik](https://github.com/PoleyMagik) | Asset Store Archive
 
 No members of the original team are officially working on Offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
 
 The current Project Lead will have (PL) on their name, the current Director of Testing will have (DT) on their name, the current Head of Development with have (HD) on their name, and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point, or left the development team.
 Wrapper: Offline credits:
-| Name                                                  | Contribution                                                   |
-| ----------------------------------------------------- | -------------------------------------------------------------- |
-| [GoTest334 (PL)](https://github.com/GoTest334)        | Current project lead                                           |
-| [Blukas/GoTube (DT)](https://github.com/theBlukas)    | Beta testing, Mega Comedy World 2                              |
-| [octanuary (HD)](https://github.com/octanuary)        | Real importing, starters, API changes                          |
-| [sparrkz](https://github.com/sparrkzz)                | A lot of smaller stuff, the installer, lots of bug fixes, etc. |
-| [2Epik4u](https://github.com/2Epik4u)                 | Stuff                                                          |
-| [Benson (Child Groom)](https://github.com/watchbenson)| Creator of Wrapper: Offline                                    |
-| [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo                                                           |
-| VisualPlugin                                          | Text to speech voices                                          |
-| creepyjokes2000                                       | Waveform fix, improved actions                                 |
-| PoleyMagik                                            | Client Modifications                                           |
+Name | Contribution
+--- | ---
+[GoTest334 (PL)](https://github.com/GoTest334) | Current project lead
+[Blukas/GoTube (DT)](https://github.com/theBlukas)    | Beta testing, Mega Comedy World 2
+[octanuary (HD)](https://github.com/octanuary)        | Real importing, starters, API changes
+shezsparrkz | A lot of smaller stuff, the installer, lots of bug fixes, etc.
+[2Epik4u](https://github.com/2Epik4u) | Stuff
+[Benson (Child Groom)](https://github.com/watchbenson)| Creator of Wrapper: Offline
+[NathanSaturnBOI](https://github.com/NathanSaturnBOI) | Logo
+VisualPlugin | Text to speech voices
+creepyjokes2000 | Waveform fix, improved actions
+PoleyMagik | Client Modifications
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
-| Name                                            | Contribution                     |
-| ----------------------------------------------- | -------------------------------- |
-| [Vyond](https://vyond.com)                      | Creators of the themes we love   |
+Name | Contribution
+--- | ---
+[Vyond](https://vyond.com) | Creators of the themes we love
 
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
