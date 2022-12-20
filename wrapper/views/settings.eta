@@ -76,6 +76,7 @@
 					<nav id="importer">
 						<nav id="import_head">
 							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
+							<button onclick="document.getElementById('char-file').click()" class="import-button">UPLOAD A CHARACTER</button>
 							<form>
 								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 							</form>
@@ -86,6 +87,10 @@
 			</nav>
 		</main>
 
+		<form class="hide" enctype='multipart/form-data' action='/api/char/upload' method='post'>
+			<input id='char-file' type="file" onchange="this.form.submit()" name='import' />
+		</form>
+
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
@@ -95,9 +100,9 @@
 		new AssetImporter(importer);
 		// this is a mess of type conversion
 
-		/**
-		 * list
-		 */
+		/*
+		list
+		*/
 		let list = [];
 		for (const elem of $(".setting")) list.push(elem.id);
 
@@ -157,9 +162,9 @@
 			}
 		});
 
-		/**
-		 * toggle
-		 */
+		/*
+		toggle
+		*/
 		$(".setting").on("change", (event) => {
 			const elem = $(event.target);
 			const setting = elem.attr("id");

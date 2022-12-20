@@ -1,14 +1,8 @@
-/**
- * asset api
- */
-// modules
 const fs = require("fs");
 const path = require("path");
-// vars
-const folder = path.join(__dirname, "../../", process.env.ASSET_FOLDER);
-// stuff
 const database = require("../../data/database"), DB = new database();
 const fUtil = require("../../utils/fileUtil");
+const folder = path.join(__dirname, "../../", process.env.ASSET_FOLDER);
 
 module.exports = {
 	/**
@@ -109,7 +103,11 @@ module.exports = {
 	 */
 	save(data, ext, info) {
 		return new Promise((res, rej) => {
-			info.id = `${fUtil.generateId()}.${ext}`;
+			if (ext.includes(".")) {
+				info.id = ext;
+			} else {
+				info.id = `${fUtil.generateId()}.${ext}`;
+			}
 			DB.insert("assets", info)
 			// save the file
 			let writeStream = fs.createWriteStream(path.join(folder, info.id));

@@ -149,7 +149,7 @@ header dropdowns
 	margin: 10px 0;
 }
 /* character upload */
-form[action="/api/char/upload"] { display: none }
+form.hide { display: none }
 
 /**
 tabs
