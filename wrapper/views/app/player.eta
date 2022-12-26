@@ -13,4 +13,23 @@
 			<%~ it.object(it.attrs, it.params) %>
 		</main>
 	</body>
+
+	<script>
+		const player = document.getElementById("obj");
+		function myNameIsClevelandBrown() {
+			let isPlaying = true;
+
+			document.addEventListener("keydown", (event) => {
+				if (event.keyCode !== 32) return;
+				if (isPlaying) {
+					player.pause();
+					isPlaying = false;
+				} else {
+					player.play();
+					isPlaying = true;
+				}
+			});
+		}
+
+	</script>
 </html>

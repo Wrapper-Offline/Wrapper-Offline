@@ -232,9 +232,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
-				case "voiceforge": {
-					rej("VoiceForge has recently updated their API and due to this, the voices no longer work.\nWe do not have a fix for this at the moment.");
-				}
 				case "svox": {
 					const q = new URLSearchParams({
 						apikey: "e3a4477c01b482ea5acc6ed03b1f419f",
