@@ -30,7 +30,8 @@ module.exports = {
 		const filepath = path.join(folder, `${mId}.xml`);
 
 		const buffer = fs.readFileSync(filepath);
-		const parsed = await Parse.pack(buffer);
+		const thumbBuffer = fs.readFileSync(filepath.slice(0, -3) + "png");
+		const parsed = await Parse.pack(buffer, thumbBuffer);
 		return isGet ? parsed : Buffer.concat([base, parsed]);
 	},
 
@@ -154,12 +155,18 @@ module.exports = {
 		}
 	},
 
+	/**
+	 * unpacks a movie zip
+	 * @param {Buffer} body zip containing the movie and its assets
+	 * @returns {Promise<string>}
+	 */
 	upload(body) {
 		return new Promise(async (res, rej) => {
 			const id = fUtil.generateId();
-			const xml = await Parse.unpack(body);
+			const [xml, thumb] = await Parse.unpack(body);
 
 			fs.writeFileSync(path.join(folder, `${id}.xml`), xml);
+			fs.writeFileSync(path.join(folder, `${id}.png`), thumb);
 			this.meta(id).then((meta) => {
 				const info = {
 					id,

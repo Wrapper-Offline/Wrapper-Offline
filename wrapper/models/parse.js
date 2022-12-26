@@ -71,13 +71,14 @@ function stream2Buffer(readStream) {
 	});
 }
 
-/**
- * Parses a movie XML by adding files to a ZIP.
- * @param {Buffer} xmlBuffer 
- * @returns {Promise<Buffer>}
- */
 module.exports = {
-	async pack(xmlBuffer) {
+	/**
+	 * Parses a movie XML by adding files to a ZIP.
+	 * @param {Buffer} xmlBuffer 
+	 * @param {Buffer | null} thumbBuffer 
+	 * @returns {Promise<Buffer>}
+	 */
+	async pack(xmlBuffer, thumbBuffer = null) {
 		if (xmlBuffer.length == 0) throw null;
 	
 		const zip = nodezip.create();
@@ -260,15 +261,19 @@ module.exports = {
 		}
 	
 		const themeKs = Object.keys(themes);
-		themeKs.forEach(t => {
-			if (t == 'ugc') return;
+		themeKs.forEach((t) => {
+			if (t == "ugc") return;
 			const file = fs.readFileSync(`${store}/${t}/theme.xml`);
 			fUtil.addToZip(zip, `${t}.xml`, file);
 		});
 	
-		fUtil.addToZip(zip, 'themelist.xml', Buffer.from(`${header}<themes>${
-			themeKs.map(t => `<theme>${t}</theme>`).join('')}</themes>`));
-		fUtil.addToZip(zip, 'ugc.xml', Buffer.from(ugc + `</theme>`));
+		fUtil.addToZip(zip, "themelist.xml", Buffer.from(
+			`${header}<themes>${themeKs.map((t) => `<theme>${t}</theme>`).join("")}</themes>`
+		));
+		fUtil.addToZip(zip, "ugc.xml", Buffer.from(ugc + "</theme>"));
+		if (thumbBuffer) {
+			fUtil.addToZip(zip, "thumbnail.png", thumbBuffer);
+		}
 		return await zip.zip();
 	},
 
@@ -374,6 +379,12 @@ module.exports = {
 
 		const readStream = zip["movie.xml"].toReadStream();
 		const buffer = await stream2Buffer(readStream);
-		return buffer;
+
+		let thumbBuffer = Buffer.from([0x00]);
+		if (zip["thumbnail.png"]) {
+			const readStream2 = zip["thumbnail.png"].toReadStream();
+			thumbBuffer = await stream2Buffer(readStream2);
+		}
+		return [buffer, thumbBuffer];
 	}
 };
