@@ -1,9 +1,8 @@
-
-/**
- * movie parsing
- * if you don't know what's going on here, look at the lvm's code
- * ffdec does a great job with that
- */
+/*
+movie parsing
+ if you don't know what's going on here, look at the lvm's code
+ ffdec does a great job with that
+*/
 const fs = require("fs");
 const nodezip = require("node-zip");
 const path = require("path");
@@ -329,7 +328,7 @@ module.exports = {
 							const buffer = await stream2Buffer(readStream);
 							asset.save(buffer, elem.attr.id, {
 								type: "prop",
-								subtype: 0,
+								subtype: "0",
 								title: elem.attr.name,
 								ptype: elem.attr.wearable == 1 ? "wearable" :
 									elem.attr.holdable == 1 ? "holdable" :

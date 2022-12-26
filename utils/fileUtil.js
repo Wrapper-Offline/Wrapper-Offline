@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const nodezip = require('node-zip');
 const fs = require('fs');
 
@@ -7,7 +8,7 @@ module.exports = {
 	 * @returns {string}
 	 */
 	generateId() {
-		return Math.random().toString(16).substring(2, 9);
+		return crypto.randomBytes(4).toString("hex");
 	},
 
 	/**
