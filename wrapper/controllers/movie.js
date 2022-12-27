@@ -20,8 +20,11 @@ group
 		}
 	})
 	// list
-	.route("GET", "/api/movies/list", (req, res) => {
+	.route("GET", "/api/movie/list", (req, res) => {
 		res.json(DB.select("movies"));
+	})
+	.route("GET", "/api/starter/list", (req, res) => {
+		res.json(DB.select("assets", { type: "movie" }));
 	})
 	// load
 	.route(
