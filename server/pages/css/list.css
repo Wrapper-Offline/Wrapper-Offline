@@ -7,11 +7,12 @@ table filter
 **/
 .table_filters {
 	background: #333;
+	margin: 0 auto;
 }
 .table_filter {
 	border-top: 2px solid #dddddd;
 	border-right: 1px solid #ddd;
-	color: #555;
+	color: #444;
 	float: left;
 	padding: 8px;
 	text-align: center;
@@ -173,17 +174,20 @@ tr>:nth-child(4)>:nth-child(5)::before {
 make the table responsive
 **/
 @media(min-width: 790px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 750px;
 	}
 }
 @media(min-width: 1012px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 970px;
 	}
 }
 @media(min-width: 1210px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 1170px;
 	}
 }

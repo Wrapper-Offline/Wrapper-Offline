@@ -1,21 +1,19 @@
-/**
- * Wrapper: Offline
- * License: MIT
- */
+/*
+Wrapper: Offline
+License: MIT
+*/
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
-// modules
 const { app, BrowserWindow, Menu } = require("electron");
 const fs = require("fs");
 const path = require("path");
-// vars
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
 
-/**
- * initialization
- */
+/*
+initialization
+*/
 // create directories if they're missing
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
@@ -26,9 +24,9 @@ const discord = require("./utils/discord");
 const server = require("./wrapper/server");
 server();
 
-/**
- * load flash player
- */
+/*
+load flash player
+*/
 let pluginName;
 switch (process.platform) {
 	case "win32": {
@@ -66,7 +64,7 @@ const createWindow = () => {
 	// clear the menu bar
 	Menu.setApplicationMenu(Menu.buildFromTemplate([]));
 	// load the video list
-	mainWindow.loadURL("http://localhost:4343");
+	mainWindow.loadURL("http://localhost:" + env.SERVER_PORT);
 	mainWindow.on("closed", () => mainWindow = null);
 
 	// debug stuff

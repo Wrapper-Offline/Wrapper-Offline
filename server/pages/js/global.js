@@ -1,27 +1,24 @@
-/***
- * this file has the general page stuff
- */
-
-/**
- * set dark mode
- */
+/*
+set dark mode
+*/
 if (localStorage.getItem("DARK_MODE") == "true") {
 	toggleDarkMode();
 }
 
 function toggleDarkMode() {
-	if ($("html").hasClass("dark")) 
+	if ($("html").hasClass("dark")) {
 		$("html").removeClass("dark");
-	else
+	} else {
 		$("html").addClass("dark");
+	}
 }
 
 
-/**
- * tabs
- */
-window.addEventListener('load', event => {
-	$(".tab_buttons a").on("click", event => {
+/*
+tabs
+*/
+window.addEventListener("load", () => {
+	$(".tab_buttons a").on("click", (event) => {
 		const clicked = $(event.target);
 		const num = clicked.attr("data-triggers");
 		// get siblings
@@ -34,4 +31,35 @@ window.addEventListener('load', event => {
 		pages.hide()
 		$(pages[num]).show();
 	});
-})
+});
+
+
+/*
+movie uploading
+*/
+$("#file").on("change", (event) => {
+	event.preventDefault();
+	const file = event.target.files[0];
+	/** @type {Element} */
+	const isStarter = event.target.nextElementSibling.checked;
+	if (file.type !== "application/x-zip-compressed") {
+		alert("Bastard");
+		return;
+	}
+
+	let b = new FormData();
+	b.append("import", file);
+	b.append("is_starter", isStarter);
+	$.ajax({
+		url: "/api/movie/upload",
+		method: "POST",
+		data: b,
+		processData: false,
+		contentType: false,
+		dataType: "json"
+	})
+		.done((res) => window.location.href = "/go_full?movieId=" + res.id)
+		.fail(() => {
+			alert("Movie upload failed. See the console for more details.");
+		});
+});

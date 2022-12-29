@@ -91,21 +91,24 @@ group
 		readStream.pipe(res); 
 	})
 	// upload
-	.route("*", "/api/movie/upload", async (req, res) => {
+	.route("*", "/api/movie/upload", (req, res) => {
 		const file = req.files.import;
-		res.assert(file, 400, { status: "error" });
-		const path = file.filepath, buffer = fs.readFileSync(path);
-
-		try {
-			const id = await Movie.upload(buffer);
-			fs.unlinkSync(path);
-			const url = `/go_full?movieId=${id}`;
-			res.redirect(url);
-		} catch (e) {
-			console.error("Error uploading character:", e);
-			res.statusCode = 500;
+		if (!file) {
+			console.log("Error uploading movie: No file.")
+			res.statusCode = 400;
 			res.json({ status: "error" });
 		}
+		const isStarter = req.body.is_starter;
+		const path = file.filepath, buffer = fs.readFileSync(path);
+
+		Movie.upload(buffer, isStarter).then((id) => {
+			fs.unlinkSync(path);
+			res.json({ status: "ok", id: id });
+		}).catch((err) => {
+			console.error("Error uploading movie:", e);
+			res.statusCode = 500;
+			res.json({ status: "error" });
+		});
 	});
 
 module.exports = group;

@@ -160,7 +160,7 @@ module.exports = {
 	 * @param {Buffer} body zip containing the movie and its assets
 	 * @returns {Promise<string>}
 	 */
-	upload(body) {
+	upload(body, isStarter) {
 		return new Promise(async (res, rej) => {
 			const id = fUtil.generateId();
 			const [xml, thumb] = await Parse.unpack(body);
@@ -168,6 +168,7 @@ module.exports = {
 			fs.writeFileSync(path.join(folder, `${id}.xml`), xml);
 			fs.writeFileSync(path.join(folder, `${id}.png`), thumb);
 			this.meta(id).then((meta) => {
+				let type;
 				const info = {
 					id,
 					duration: meta.durationString,
@@ -175,8 +176,14 @@ module.exports = {
 					title: meta.title,
 					sceneCount: meta.sceneCount,
 				}
+				if (isStarter) {
+					info.type = "movie";
+					type = "assets";
+				} else {
+					type = "movies";
+				}
 
-				DB.insert("movies", info);
+				DB.insert(type, info);
 				res(id);
 			});
 		});
