@@ -16,6 +16,6 @@
 </header>
 
 <form id="movie-form" class="hide" enctype='multipart/form-data' action='#' method='post'>
-	<input id='file' type="file" name='import' accept=".zip,.xml" />
+	<input id='file' type="file" name='import' accept=".zip" />
 	<input id="is-starter" type="checkbox" value="false" />
 </form>

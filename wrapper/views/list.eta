@@ -79,7 +79,7 @@
 						</td>
 						<td>
 							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
-							<a href="/go_full?movieId=${tbl.id}" title="Edit"></a>
+							<a href="/go_full?movieId=${tbl.id}${starters ? "&isStarter=1" : ""} title="Edit"></a>
 							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip" title="Download files -- NOT AN EXPORTER"></a>
 							<a href="javascript:;" onclick="destructive('${tbl.id}', 'clone')" title="Clone" ${starters ? "style='display:none'" : ""}></a>
 							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
@@ -124,7 +124,8 @@
 									window.location = `/go_full?movieId=${data.mId}`;
 									break;
 								case "delete":
-									$(`#${mId}`).fadeOut(() => $(`#${mId}`).remove());
+									const $elem = $("#" + mId);
+									$elem.fadeOut(() => $elem.remove());
 									break;
 							}
 						} else alert("Guess you're stuck with your movie.");

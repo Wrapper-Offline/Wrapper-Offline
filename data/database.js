@@ -1,7 +1,5 @@
-// modules
 const fs = require("fs");
 const path = require("path");
-// vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
 let baseDb;
 
@@ -10,11 +8,11 @@ module.exports = class GoDatabase {
 		if (isSettings) {
 			this.path = path.join(folder, "settings.json");
 			baseDb = {
-				DISCORD_RPC: false, // Shows your Wrapper activity in Discord.
+				DISCORD_RPC: false, // Shows your Wrapper activity on Discord.
 				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
 				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
-				IS_WIDE: "1" // Sets the video player to 16:9
+				IS_WIDE: "1" // Sets the video player to 16:9.
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
@@ -54,7 +52,8 @@ module.exports = class GoDatabase {
 	 * @param {string} id Id to look for.
 	 */
 	delete(from, id) {
-		const { index } = this.get(from, id);
+		const index = this.get(from, id)?.index;
+		if (typeof index == "undefined") return;
 
 		this.json[from].splice(index, 1);
 		this.save(this.json);
@@ -86,14 +85,10 @@ module.exports = class GoDatabase {
 			}
 		});
 
-		if (!object) {
-			throw new Error("Field not found.");
-		}
-
-		return {
+		return object ? {
 			data: object,
 			index
-		};
+		} : null;
 	}
 
 	/**
@@ -143,7 +138,8 @@ module.exports = class GoDatabase {
 			throw new Error("Must input new data to save.");
 		}
 
-		const { index } = this.get(from, id);
+		const index = this.get(from, id)?.index;
+		if (typeof index == "undefined") return;
 
 		Object.assign(this.json[from][index], data);
 		this.save(this.json);

@@ -9,11 +9,12 @@ const base = Buffer.alloc(1, 0);
 
 module.exports = {
 	/**
-	 * Deletes a movie.
+	 * deletes a movie do i really have to explain this to you
 	 * @param {string} id 
 	 */
 	delete(id) {
 		DB.delete("movies", id);
+		DB.delete("assets", id);
 
 		// delete the actual file
 		fs.unlinkSync(path.join(folder, `${id}.xml`));
