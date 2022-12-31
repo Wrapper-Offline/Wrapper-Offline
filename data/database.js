@@ -47,30 +47,32 @@ module.exports = class GoDatabase {
 	}
 
 	/**
-	 * Deletes a field from the database.
-	 * @param {string} from Category to select from.
-	 * @param {string} id Id to look for.
+	 * deletes a field from the database
+	 * @param {string} from category to select from
+	 * @param {string} id id to look for
+	 * @returns {boolean} did it work or not
 	 */
 	delete(from, id) {
 		const index = this.get(from, id)?.index;
-		if (typeof index == "undefined") return;
+		if (typeof index == "undefined") return false;
 
 		this.json[from].splice(index, 1);
 		this.save(this.json);
+		return true;
 	}
 
 	/**
-	 * Returns an object from the database.
-	 * @param {string} from Category to select from.
-	 * @param {string} id Id to look for.
+	 * returns an object from the database
+	 * @param {string} from category to select from
+	 * @param {string} id id to look for
 	 * @returns {{
 	 * 	data: object,
 	 * 	index: number
-	 * }}
+	 * } | false} returns object if it worked, false if it didn't
 	 */
 	get(from, id) {
 		if (!from || !id) {
-			throw new Error("Must input a category to select from or an id to look for.");
+			throw new Error("Must input a category to select from or an ID to look for.");
 		}
 
 		this.#refresh();
@@ -88,7 +90,7 @@ module.exports = class GoDatabase {
 		return object ? {
 			data: object,
 			index
-		} : null;
+		} : false;
 	}
 
 	/**
@@ -132,6 +134,7 @@ module.exports = class GoDatabase {
 	 * @param {string} from Category to select from.
 	 * @param {string} id Id to look for.
 	 * @param {object} data New data to save.
+	 * @returns {boolean} did it work or not
 	 */
 	update(from, id, data) {
 		if (!data) {
@@ -139,9 +142,10 @@ module.exports = class GoDatabase {
 		}
 
 		const index = this.get(from, id)?.index;
-		if (typeof index == "undefined") return;
+		if (typeof index == "undefined") return false;
 
 		Object.assign(this.json[from][index], data);
 		this.save(this.json);
+		return true;
 	}
 };

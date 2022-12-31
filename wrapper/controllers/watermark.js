@@ -16,17 +16,16 @@ assign
 */
 group.route("POST", /\/goapi\/assignwatermark\/movie\/([\S]+)\/([\S]+)/, (req, res) => {
 	const mId = req.matches[1];
-	if (!DB.get("movies", mId)) {
-		res.statusCode = 400;
-		res.end("1Movie doesn't exist.");
-	}
-
 	let wId = req.matches[2];
 	// reset the watermark if it's the no watermark id
 	if (wId == "0dhteqDBt5nY") wId = undefined;
 
-	DB.update("movies", mId, { watermark: wId });
-	res.end("0");
+	if (DB.update("movies", mId, { watermark: wId })) {
+		res.end("0");
+	} else {
+		res.statusCode = 404;
+		res.end("1Movie doesn't exist.");
+	}
 });
 
 /*

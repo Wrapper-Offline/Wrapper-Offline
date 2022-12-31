@@ -127,9 +127,7 @@ module.exports = {
 							type = "movies";
 						}
 
-						try {
-							DB.update(type, id, info);
-						} catch (e) {
+						if (!DB.update(type, id, info)) {
 							console.log("This movie does not exist in the database. Inserting...", e);
 							DB.insert(type, info);
 						}

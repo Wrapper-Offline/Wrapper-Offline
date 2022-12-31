@@ -44,7 +44,7 @@ module.exports = {
 
 			return data;
 		} else {
-			throw new Error("Asset doesn't exist.");
+			throw new Error("404");
 		}
 	},
 

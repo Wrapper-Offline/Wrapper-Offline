@@ -35,11 +35,9 @@ group
 		const id = req.body.data.id || req.body.data.starter_id;
 		res.assert(id, 400, { status: "error" });
 
-		try {
-			DB.delete("assets", id);
+		if (!DB.delete("assets", id)) {
 			res.json({ status: "ok" });
-		} catch (e) {
-			console.log("Error deleting asset:", e);
+		} else {
 			res.statusCode = 404;
 			res.json({ status: "error" });
 		}
@@ -126,19 +124,18 @@ group
 		const id = req.body?.data.id || req.body?.data.starter_id;
 		res.assert(id, 400, { status: "error" });
 
-		try {
-			const info = DB.get("assets", id).data;
-			// add stuff that will never be useful for an offline lvm clone
+		const info = DB.get("assets", id)?.data;
+		if (info) {
+			// add stuff that will never be useful in an offline lvm clone
 			info.share = { type: "none" };
 			info.published = "";
 			res.json({
 				status: "ok",
 				data: info
 			});
-		} catch (e) {
-			console.log("Error getting asset info:", e);
+		} else {
 			res.statusCode = 404;
-			res.json({ status: "error", data: "That doesn't seem to exist." });
+			res.json({ status: "error" });
 		}
 	})
 	//  #update
@@ -146,13 +143,9 @@ group
 		const id = req.body.data.id || req.body.data.starter_id;
 		res.assert(id, 400, { status: "error" });
 
-		try {
-			DB.update("assets", id, req.body.data);
+		if (!DB.update("assets", id, req.body.data)) {
 			res.json({ status: "ok" });
-		} catch (e) {
-			console.log("Error updating asset:", e);
-			console.log("It's not like anyone will see this anyway...");
-
+		} else {
 			res.statusCode = 404;
 			res.json({ status: "error" });
 		}
