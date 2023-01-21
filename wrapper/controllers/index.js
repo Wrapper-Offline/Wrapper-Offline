@@ -1,9 +1,4 @@
-/**
- * wrapper's routes
- */
-// modules
 const httpz = require("@octanuary/httpz")
-// stuff
 const app = require("./app");
 const asset = require("./asset");
 const char = require("./char");
@@ -13,20 +8,16 @@ const settings = require("./settings");
 const tts = require("./tts");
 const watermark = require("./watermark");
 const waveform = require("./waveform");
-
-// create the group
 const group = new httpz.Group();
 
-group
-	// add all the routes
-	.add(app)
-	.add(asset)
-	.add(char)
-	.add(movie)
-	.add(theme)
-	.add(settings)
-	.add(tts)
-	.add(watermark)
-	.add(waveform);
+group.add(app);
+group.add(asset);
+group.add(char);
+group.add(movie);
+group.add(theme);
+group.add(settings);
+group.add(tts);
+group.add(watermark);
+group.add(waveform);
 
 module.exports = group;

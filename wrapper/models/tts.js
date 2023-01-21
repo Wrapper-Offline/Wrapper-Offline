@@ -1,6 +1,3 @@
-/*
-tts
-*/
 const brotli = require("brotli");
 const https = require("https");
 const http = require("http");

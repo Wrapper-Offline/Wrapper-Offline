@@ -1,10 +1,5 @@
-/**
- * waveform api
- */
-// modules
 const fs = require("fs");
 const path = require("path");
-// vars
 const folder = path.join(__dirname, "../../", process.env.CACHÉ_FOLDER);
 
 module.exports = {
@@ -14,10 +9,10 @@ module.exports = {
 	 * @param {string} id 
 	 * @returns {Buffer | null}
 	 */
-	load(id) { // look for match in folder
-		const match = fs.readdirSync(folder)
-			.find(file => file.includes(`${id}.wf`));
-		return match ? fs.readFileSync(path.join(folder, match)) : null;
+	load(id) {
+		const filepath = path.join(folder, id + ".wf");
+		const exists = fs.existsSync(filepath);
+		return exists ? fs.readFileSync(filepath) : null;
 	},
 
 	/**
@@ -27,7 +22,7 @@ module.exports = {
 	 * @returns {boolean}
 	 */
 	save(wf, id) {
-		fs.writeFileSync(path.join(folder, `${id}.wf`), wf);
+		fs.writeFileSync(path.join(folder, id + ".wf"), wf);
 		return true;
 	}
 };
