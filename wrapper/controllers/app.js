@@ -21,7 +21,8 @@ group.route("*", "/settings", (req, res) => {
 // themelist page
 group.route("GET", "/create", (req, res) => {
 	discord("Choosing a Theme");
-	res.render("create", {});
+	const { TRUNCATED_THEMELIST } = DB.select();
+	res.render("create", { truncatedThemelist: TRUNCATED_THEMELIST });
 });
 // flash pages
 group.route("GET", "/cc", async (req, res) => {

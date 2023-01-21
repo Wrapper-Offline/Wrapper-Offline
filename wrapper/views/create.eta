@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<%~ includeFile("./includes/header", { env: it.env }) %>
+		<%~ includeFile("./includes/header", it); %>
 
 		<main>
 			<h1>Select a theme</h1>
@@ -95,120 +95,110 @@
 					Space Peepz
 				</a>
 			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('fullenergy')">
-					<img src="/pages/img/themes/fullenergy.png" alt="Full Energy">
-					<div>Full Energy</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('politic')">
-					<img src="/pages/img/themes/politic.png" alt="Politics & Celebrity">
-					<div>Politics & Celebrity</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('bizmodels')">
-					<img src="/pages/img/themes/bizmodels.jpg" alt="Business Models">
-					Business Models
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('sticklybiz')">
-					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
-					Stickly Business
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('christmas')">
-					<img src="/pages/img/themes/christmas.png" alt="Holiday & Seasonal">
-					<div>Holiday & Seasonal</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('monstermsh')">
-					<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
-					<div>Monsters Mayhem</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('akon')">
-					<img src="/pages/img/themes/akon.jpg" alt="AKON&#8482;">
-					AKON&#8482;
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('ben10')">
-					<img src="/pages/img/themes/ben10.png" alt="Ben 10&#8482;">
-					Ben 10&#8482;
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('botdf', 'cc2')">
-					<img src="/pages/img/themes/botdf.jpg" alt="Blood on the Dance Floor&#8482;">
-					<div>Blood on the Dance Floor&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('bunny')">
-					<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
-					<div>It's Happy Bunny&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('chowder')">
-					<img src="/pages/img/themes/chowder.png" alt="Chowder&#8482;">
-					<div>Chowder&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('domo')">
-					<img src="/pages/img/themes/domo.png" alt="Domo&#8482;">
-					<div>Domo&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('monkeytalk')">
-					<img src="/pages/img/themes/monkeytalk.png" alt="SuperRica & Rashy&#8482;">
-					<div>SuperRica & Rashy&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('sf')">
-					<img src="/pages/img/themes/sf.png" alt="Street Fighter&#8482;">
-					<div>Street Fighter&#8482;</div>
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('startrek')">
-					<img src="/pages/img/themes/startrek.jpg" alt="Star Trek&#8482; Quogs">
-					<div>Star Trek&#8482; Quogs</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
-					<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
-					Toon Adventure&#8482;
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('underdog')">
-					<img src="/pages/img/themes/underdog.png" alt="Underdog&#8482;">
-					Underdog&#8482;
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('willie')">
-					<img src="/pages/img/themes/willie.jpg" alt="Willie Nelson&#8482;">
-					Willie Nelson&#8482;
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('street')">
-					<img src="/pages/img/themes/street.png" alt="Street">
-					Street
-				</a>
-			</div>
+			<% if (!it.truncatedThemelist) { %>
+				<div class="theme">
+					<a href="#" onclick="redirect('fullenergy')">
+						<img src="/pages/img/themes/fullenergy.png" alt="Full Energy">
+						<div>Full Energy</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('politic')">
+						<img src="/pages/img/themes/politic.png" alt="Politics &amp; Celebrity">
+						<div>Politics &amp; Celebrity</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('christmas')">
+						<img src="/pages/img/themes/christmas.png" alt="Holiday &amp; Seasonal">
+						<div>Holiday &amp; Seasonal</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('monstermsh')">
+						<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
+						<div>Monsters Mayhem</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('akon')">
+						<img src="/pages/img/themes/akon.jpg" alt="AKON&#8482;">
+						AKON&#8482;
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('ben10')">
+						<img src="/pages/img/themes/ben10.png" alt="Ben 10&#8482;">
+						Ben 10&#8482;
+					</a>
+				</div>
+				<div class="theme" data-has-cc>
+					<a href="#" onclick="redirect('botdf', 'cc2')">
+						<img src="/pages/img/themes/botdf.jpg" alt="Blood on the Dance Floor&#8482;">
+						<div>Blood on the Dance Floor&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('bunny')">
+						<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
+						<div>It's Happy Bunny&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('chowder')">
+						<img src="/pages/img/themes/chowder.png" alt="Chowder&#8482;">
+						<div>Chowder&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('domo')">
+						<img src="/pages/img/themes/domo.png" alt="Domo&#8482;">
+						<div>Domo&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('monkeytalk')">
+						<img src="/pages/img/themes/monkeytalk.png" alt="SuperRica & Rashy&#8482;">
+						<div>SuperRica &amp; Rashy&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('sf')">
+						<img src="/pages/img/themes/sf.png" alt="Street Fighter&#8482;">
+						<div>Street Fighter&#8482;</div>
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('startrek')">
+						<img src="/pages/img/themes/startrek.jpg" alt="Star Trek&#8482; Quogs">
+						<div>Star Trek&#8482; Quogs</div>
+					</a>
+				</div>
+				<div class="theme" data-has-cc>
+					<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
+						<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
+						Toon Adventure&#8482;
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('underdog')">
+						<img src="/pages/img/themes/underdog.png" alt="Underdog&#8482;">
+						Underdog&#8482;
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('willie')">
+						<img src="/pages/img/themes/willie.jpg" alt="Willie Nelson&#8482;">
+						Willie Nelson&#8482;
+					</a>
+				</div>
+				<div class="theme">
+					<a href="#" onclick="redirect('street')">
+						<img src="/pages/img/themes/street.png" alt="Street">
+						Street
+					</a>
+				</div>
+			<% } %>
 			<div id="char-copy">
 				<h2>Copy a character</h2>
 				<p>Have a character ID? Use it here!</p>
@@ -217,7 +207,7 @@
 			</div>
 		</main>
 
-		<%~ includeFile("./includes/footer", { env: it.env }) %>
+		<%~ includeFile("./includes/footer", it); %>
 	</body>
 
 	<script>
