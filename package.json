@@ -19,7 +19,7 @@
 		"discord-rpc": "^4.0.1",
 		"electron": "^11.5.0",
 		"eta": "^1.12.3",
-		"file-type": "^16.5.1",
+		"file-type": "^16.5.4",
 		"fluent-ffmpeg": "^2.1.2",
 		"formidable": "^2.0.1",
 		"js-md5": "^0.7.3",
