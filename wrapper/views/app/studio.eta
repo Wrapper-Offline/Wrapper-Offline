@@ -2,10 +2,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title><%= it.extra.title %></title>
+		<title>Video Editor - Wrapper: Offline</title>
 		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css">
 		<style>
 			body {
 				background: #eee;
@@ -18,6 +19,7 @@
 		<script>
 			const STORE_URL = "<%= it.env.STORE_URL %>";
 			const CLIENT_URL = "<%= it.env.CLIENT_URL %>";
+			const IS_STUDIO = true;
 
 		</script>
 	</head>
@@ -29,12 +31,12 @@
 					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
 					<h3 class="close-button" onclick="hideImporter()">✖</h3>
 					<form>
-						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
+						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 					</form>
 				</nav>
 				<div id="importer-queue"></div>
 			</nav>
-			<%~ it.extra.object(it.extra.attrs, it.extra.params) %>
+			<%~ it.object(it.attrs, it.params) %>
 		</main>
 		<div id="previewer" style="display:none">
 			<div id="preview-inside">
@@ -56,5 +58,6 @@
 		</div>
 	</body>
 
+	<script src="/pages/js/importer.js"></script>
 	<script src="/pages/js/studio.js"></script>
 </html>

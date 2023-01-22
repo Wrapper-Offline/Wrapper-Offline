@@ -1,0 +1,86 @@
+{
+	"*": {
+		"/index.html": {
+			"headers": {
+				"Location": "/"
+			},
+			"statusCode": 302,
+			"content": ""
+		}
+	},
+	"GET": {
+		"/goapi/getAssetTags": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "[]"
+		},
+		"/account/logo": {
+			"headers": {
+				"Location": "/settings"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/crossdomain.xml": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<cross-domain-policy><allow-access-from domain=\"*\"/></cross-domain-policy>"
+		},
+		"cc.swf": {},
+		"go_full.swf": {},
+		"favicon.ico": {},
+		"char_default.png": {
+			"content": ""
+		}
+	},
+	"POST": {
+		"/goapi/getMovieInfo/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"visualplugin\"/></watermarks>"
+		},
+		"/goapi/getUserFontList/": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\"}"
+		},
+		"/api_v2/team/members": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/studio_preference/get": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":{}}"
+		},
+		"/goapi/getLatestAssetId/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "0"
+		}
+	},
+	"pages": {
+		"/go_full": "",
+		"/cc": "<script>function characterSaved(){window.location='pages/html/list.html'}</script>"
+	}
+}

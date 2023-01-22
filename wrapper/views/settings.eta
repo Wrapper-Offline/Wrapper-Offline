@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title>Settings</title>
+		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/global.js"></script>
+		<script>const IS_STUDIO = false;</script>
 	</head>
 
 	<body>
@@ -18,11 +19,69 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a href="#" data-triggers="0">Appearance</a>
+					<a href="#" class="selected" data-triggers="0">Features</a>
+					<a href="#" data-triggers="1">Appearance</a>
+					<a href="#" data-triggers="2">Your Library</a>
 				</div>
+				<nav class="tab" style="display:block">
+					<h2>Features</h2>
+
+					<h3>Discord rich presence</h3>
+					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
+					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
+					them. Turning this off will make Offline stop saying when you're using it on Discord.</p>
+					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
+
+					<h3>Truncated themelist</h3>
+					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
+					Keeping this off is highly suggested.<br/>
+					However, if you want to see everything the program has to offer, turn this on.</p>
+					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
+
+					<h3>Show waveforms</h3>
+					<p>By default, waveforms for audio are generated in the video editor.<br/>
+					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
+					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
+					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
+					
+					<h3>Default watermark</h3>
+					<p>The Video Player has 4 choices for default watermarks.<br/>
+					Default watermarks are shown when you choose a Go!Animate watermark.</p>
+					<select class="setting" id="DEFAULT_WATERMARK">
+						<option value="default">GoAnimate</option>
+						<option value="twoLines">Go Make Your Own</option>
+						<option value="g4s">GoAnimate For Schools</option>
+						<option value="freeTrial">Free Trial</option>
+					</select>
+
+					<h3>14:9 or 16:9 aspect ratio</h3>
+					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
+					However, you can toggle this setting to make it 14:9, like a video<br/>
+					made with Vyond before 2014.</p>
+					<select class="setting" id="IS_WIDE">
+						<option value="0">14:9</option>
+						<option value="1">16:9</option>
+					</select>
+				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
-					<p>Dark mode: <span id="darkmode" data-meth="localStorage"></span></p>
+
+					<h3>Dark mode</h3>
+					<p>Self-explanatory. Makes the Video List dark.</p>
+					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+				</nav>
+				<nav class="tab">
+					<h2>Your Library</h2>
+
+					<nav id="importer">
+						<nav id="import_head">
+							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
+							<form>
+								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
+							</form>
+						</nav>
+						<div id="importer-queue"></div>
+					</nav>
 				</nav>
 			</nav>
 		</main>
@@ -30,43 +89,106 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
+	<script src="/pages/js/importer.js"></script>
+	<script src="/pages/js/filesize.js"></script>
 	<script>
-		const getSetting = (name) =>
-			localStorage.getItem(name);
+		new AssetImporter(importer);
+		// this is a mess of type conversion
 
-		getSettingData();
+		/**
+		 * list
+		 */
+		let list = [];
+		for (const elem of $(".setting")) list.push(elem.id);
 
-
-		// toggling
-		$("span").click(event => {
-			if (event.target.id == "darkmode")
-				toggleDarkMode();
-			togLocStor(event.target.id);
+		$.getJSON("/api/settings/list", (d) => {
+			for (const [key, val] of Object.entries(d)) {
+				const index = list.indexOf(key);
+				if (index < 0) {
+					continue;
+				}
+				list.splice(index, 1);
+				show(key, val);
+			}
+			// get local settings
+			list.forEach((key) => {
+				show(key, localStorage.getItem(key) == "true");
+			});
+		});
+		$.getJSON("/api/assets/list", (d) => {
+			for (const info of d) {
+				switch (info.type) {
+					case "bg":
+					case "prop": {
+						$(`
+							<div class="importer_asset">
+								<div class="asset_metadata">
+									<img class="asset_preview" src="${
+										info.id.includes("swf") ? 
+											"/pages/img/importer/image.png" : 
+											info.subtype == "video" ? 
+												"/pages/img/importer/video.png" :
+												`/assets/${info.id}`
+									}" />
+									<div>
+										<h4 class="asset_name">${info.title}</h4>
+										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
+									</div>
+								</div>
+							</div>
+						`).appendTo($("#importer-queue"));
+						break;
+					}
+					case "sound": {
+						$(`
+							<div class="importer_asset">
+								<div class="asset_metadata">
+									<img class="asset_preview" src="/pages/img/importer/sound.png" />
+									<div>
+										<h4 class="asset_name">${info.title}</h4>
+										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
+									</div>
+								</div>
+							</div>
+						`).appendTo($("#importer-queue"));
+						break;
+					}
+				}
+			}
 		});
 
-		// add indicator
-		function getSettingData() {
-			const toggles = $("span");
+		/**
+		 * toggle
+		 */
+		$(".setting").on("change", (event) => {
+			const elem = $(event.target);
+			const setting = elem.attr("id");
+			const value = elem.prop("tagName") == "SELECT" ? 
+				elem.val() : elem.prop("checked");
 
-			toggles.each(function (i) {
-				const elem = $(this);
-				const name = elem.attr("id");
-				if (getSetting(name)) {
-					elem.css("color", "green");
-					elem.html("On");
-				} else {
-					elem.css("color", "red");
-					elem.html("Off");
-				}
-			})
-			return true;
-		}
-		function togLocStor(name) {
-			if (getSetting(name))
-				localStorage.removeItem(name);
-			else
-				localStorage.setItem(name, 1);
-			getSettingData();
+			if (elem.attr("data-local") == "true") {
+				if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
+				localStorage.setItem(setting, value);
+			} else {
+				$.post("/api/settings/update", { setting, value })
+					.done((d) => {
+						if (d.status != "ok") {
+							alert("That didn't work.");
+							return;
+						}
+					});
+			}
+			show(setting, value);
+		});
+
+		function show(key, value) {
+			const elem = $(`#${key}`);
+
+			if (elem.prop("tagName") == "SELECT") {
+				elem.find(`option[value='${value}']`).prop("selected", true);
+			} else {
+				elem.prop("checked", value);
+			}
 		}
 	</script>
 </html>

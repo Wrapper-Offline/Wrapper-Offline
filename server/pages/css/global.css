@@ -1,0 +1,252 @@
+/***
+this css has the general header/footer layout stuff
+***/
+
+@import url("./modern-normalize.css");
+
+:root {
+	--primary: #d85e27;
+	--transition: .15s ease;
+}
+
+/**
+general
+**/
+html, body {
+	background: #eee;
+	color: #474747;
+	font: 16px/1.5 'Sailec', Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+html.dark, html.dark>body {
+	background: #222;
+	color: #eee;
+}
+body {
+	display: flex; 
+	flex-direction: column;
+	overflow: hidden;
+}
+main {
+	padding: 20px 40px;
+	height: 100%;
+	overflow: auto;
+}
+
+
+/**
+header
+**/
+header {
+	/* style */
+	background: #1a1a1a;
+	color: #fff;
+	text-align: center;
+	/* layout */
+	padding-bottom: 13px;
+	padding: 0 15px;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-shrink: 0;
+}
+/* makes the header a set height when the window is 887px wide */
+@media (min-width: 735px) {
+	header {
+		padding-bottom: auto;
+		height: 44px;
+	}
+}
+#logo {
+	margin-top: 4px;
+	height: 35px;
+}
+/* buttons */
+.button_big,
+.button_small {
+	/* style */
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 4px;
+	transition: var(--transition);
+	/* layout */
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 6px 5px;
+}
+.button_big:hover,
+.button_small:hover {
+	cursor: pointer;
+}
+/* small buttons */
+.button_small       { background: #2a2a2a }
+.button_small:hover { background: #333; color: var(--primary) }
+/* big buttons */
+.button_big {
+	background: var(--primary);
+	width: 160px;
+}
+.button_big:hover {
+	text-decoration: underline;
+}
+
+
+/**
+header dropdowns
+**/
+/* change button margin/padding to fit dropdown */
+.dropdown_contain { padding: 0; margin: 6px 5px; }
+.dropdown_button { margin: 0; padding: 5px 10px; }
+.upload_button { margin: 0; padding: 5px 25px; }
+/* make dropdown appear on hover */
+.dropdown_contain:hover>nav {
+	display: block;
+	cursor: default;
+}
+/* the dropdown itself */
+.dropdown_menu {
+	/* style */
+	background-color: #333;
+	border-radius: 4px;
+	/* layout */
+	width: 100%;
+	padding: 10px 0;
+	margin: 0;
+	text-align: left;
+	/* hover stuff */
+	position: relative;
+	float: left;
+	display: none;
+}
+/* dropdown links */
+.dropdown_menu>a {
+	/* style */
+	color: #ddd;
+	text-decoration: none;
+	transition: var(--transition);
+	/* layout */
+	display: block;
+	padding: 2px 20px;
+}
+.dropdown_menu>a:hover {
+	background: #2a2a2a;
+	color: var(--primary);
+	cursor: pointer;
+}
+/* dropdown header and separation */
+.dropdown_menu>h2 {
+	/* style */
+	color: #fff;
+	font-size: 15px;
+	/* layout */
+	margin:0;
+	padding:2px 20px;
+}
+.dropdown_menu>hr {
+	border: 1px solid #222;
+	margin: 10px 0;
+}
+/* character upload */
+form[action="/api/char/upload"] { display: none }
+
+/**
+tabs
+**/
+.tabs_contain {
+    border-radius: 6px;
+    display: flex;
+    margin: auto auto;
+}
+.tab_buttons {
+	padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+.tabs_contain h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.tab_buttons a {
+	/* style */
+	background: #353535;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: var(--transition);
+	/* layout */
+	padding: 8px 18px;
+	margin: 2px 0;
+}
+.tab_buttons a:hover    { background: #2a2a3a; color: var(--primary) }
+.tab_buttons a.selected { background: var(--primary); color: #fff }
+.tab { padding: 0 20px; display: none }
+#shortthemelist:hover,
+#darkmode:hover {
+	cursor: pointer;
+}
+
+/**
+footer
+**/
+footer {
+	background: #1a1a1a;
+	margin-top: auto; /* footer at the foot */
+	display: flex;
+	justify-content: space-between;
+	flex-shrink: 0;
+}
+footer nav { margin:5px 10px}
+/* links */
+footer a {
+	color: #fff;
+	text-decoration:none;
+	margin: 0 10px;
+	font-weight: bold;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+
+/**
+font importing
+**/
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 100;
+	src: url('.../fonts/Sailec-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 200;
+	src: url('../fonts/Sailec-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 400;
+	src: url('../fonts/Sailec-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 500;
+	src: url('../fonts/Sailec-Medium.woff') format('woff');
+}
+
+/* font weight 500 and font weight 700 (bold) are the same for better integration support */
+@font-face {
+	font-family: 'Sailec';
+	font-weight: 700;
+	src: url('../fonts/Sailec-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GlyphiconsRegular';
+	src: url('../fonts/glyphicons-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

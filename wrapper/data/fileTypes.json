@@ -1,0 +1,26 @@
+{
+	"bg": [
+		"swf",
+		"gif",
+		"png",
+		"jpg"
+	],
+	"watermark": [
+		"swf",
+		"png",
+		"jpg"
+	],
+	"prop": [
+		"swf",
+		"gif",
+		"png",
+		"jpg",
+		"mp4"
+	],
+	"sound": [
+		"mp3",
+		"ogg",
+		"wav",
+		"asf"
+	]
+}

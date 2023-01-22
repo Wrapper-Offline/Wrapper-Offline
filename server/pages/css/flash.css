@@ -1,0 +1,109 @@
+/***
+this css has flash page styling
+***/
+
+/**
+general stuff
+**/
+html, body { /* disable dark mode */
+	background-color: #eee;
+	color: #474747 !important;
+}
+main { display: flex; padding: 0 }
+.close-button:hover { 
+	cursor: pointer; 
+	color: var(--primary); 
+}
+
+/**
+objects
+**/
+.char_object {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+previewer
+**/
+#previewer {
+	padding: 60px 0;
+	width: 960px;
+	margin: 0 auto;
+	z-index: 2;
+}
+#preview-inside {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 60px #000;
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 640px;
+}
+#preview-video {
+	color: #505e73;
+	font-size: 21px;
+	font-weight: normal;
+	line-height: 1;
+	text-align: left;
+	padding: 15px 35px;
+	margin: 0;
+}
+#preview-inside .buttons {
+	padding: 14px 0;
+}
+#preview-inside a.close-button {
+	color: #43bca5;
+	line-height: 24px;
+	font-size: 24px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#preview-inside a.close-button:hover {
+	color: #029a85;
+	text-decoration: none;
+}
+.preview-button {
+	background-color: #43bca5;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	text-transform: uppercase;
+	padding: 0 25px;
+	margin: 0 7px;
+}
+.preview-button:hover {
+	background-color: #029a85;
+}
+.preview-button.save {
+	background-color: #e97d3b;
+}
+.preview-button.save:hover {
+	background-color: #dd6522;
+}
+.preview-upsell {
+	padding: 0 35px 15px;
+	text-align: left;
+}
+
+/**
+importer
+**/
+#importer {
+	/* style */
+	box-shadow: 0 0 8px #00000028;
+	/* layout */
+	z-index: 1;
+	display: none;
+	min-width: 320px;
+}

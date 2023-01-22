@@ -1,0 +1,20 @@
+{
+	"XML_HEADER": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+
+	"SWF_URL": "/animation/414827163ad4eb60",
+	"STORE_URL": "/store/3a981f5cb2739137",
+	"CLIENT_URL": "/static/ad44370a650793d9",
+	"CHAR_BASE_URL": "./server/characters",
+	"THUMB_BASE_URL": "./server/thumbnails",
+
+	"ASSET_FOLDER": "./_ASSETS",
+	"CACHÉ_FOLDER": "./_CACHÉ",
+	"PREMADE_FOLDER": "./_PREMADE",
+	"SAVED_FOLDER": "./_SAVED",
+
+	"SERVER_PORT": 4343,
+	"WRAPPER_VER": "2.0.0",
+
+	"DISCORD_RPC": true,
+	"DISCORD_CLIENT": "866340172874383370"
+}

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Video List</title>
+		<title>Create - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's create page"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
@@ -186,7 +186,7 @@
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('toonadv', 'cctoonadv')">
+				<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
 					<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
 					Toon Adventure&#8482;
 				</a>
@@ -209,18 +209,28 @@
 					Street
 				</a>
 			</div>
+			<div id="char-copy">
+				<h2>Copy a character</h2>
+				<p>Have a character ID? Use it here!</p>
+				<input type="text" value="400001035" name="char-id" />
+				<a href="#" onclick="copyRedirect()">Copy</a>
+			</div>
 		</main>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script>
+		const charId = $("input[name='char-id']");
+
 		// filter the list
 		const params = new URLSearchParams(window.location.search);
 		// default to all themes
 		const filter = params.get("filter") || "vl";
 		if (filter == "cc")
 			$(".theme").not("[data-has-cc]").hide();
+		else
+			$("#char-copy").hide();
 
 		function redirect(tId, ccId = false) {
 			if (filter == "cc") {
@@ -228,6 +238,10 @@
 				return;
 			}
 			window.location.href = `./go_full?tray=${tId}`;
+		}
+		function copyRedirect() {
+			const id = charId.val();
+			window.location.href = `./cc?original_asset_id=${id}`;
 		}
 
 	</script>

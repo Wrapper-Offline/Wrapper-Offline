@@ -1,0 +1,67 @@
+/***
+this css has the create page stuff
+***/
+
+/**
+main
+**/
+main {
+	padding: 20px 40px;
+	text-align: center;
+}
+
+
+/**
+theme
+**/
+.theme {
+	/* style */
+	background: #ddd;
+	border-radius: 4px;
+	transition: .15s ease;
+	/* layout */
+	display: inline-table;
+	margin: 5px;	
+	padding: 3px;
+	padding-bottom: 6px;
+}
+.theme:hover { opacity: 0.8; }
+html.dark .theme { background: #353535 }
+.theme img {
+	border-radius: 4px;
+	margin-bottom: 6px;
+	display: block;
+}
+.theme:hover>a,
+.theme:hover>a:visited {
+	color: var(--primary);
+}
+.theme>a {
+	color: #474747;
+	text-decoration: none;
+	margin: 0;
+}
+html.dark .theme>a { color: #eee }
+
+/**
+char copy
+**/
+#char-copy { margin: 30px 0 }
+#char-copy input {
+	/* style */
+	background: #353535;
+	border: 1px solid #353535;
+	color: #fff;
+	border-radius: 4px;
+	/* layout */
+	padding: 5px 10px;
+}
+#char-copy a {
+	/* style */
+	background: var(--primary);
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	/* layout */
+	padding: 5px 10px;
+}
