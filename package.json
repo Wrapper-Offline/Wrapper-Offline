@@ -21,7 +21,7 @@
 		"eta": "^1.12.3",
 		"file-type": "^16.5.1",
 		"fluent-ffmpeg": "^2.1.2",
-		"formidable": "^2.0.1",
+		"formidable": "^2.1.1",
 		"js-md5": "^0.7.3",
 		"mime-types": "^2.1.35",
 		"mp3-duration": "^1.1.0",
