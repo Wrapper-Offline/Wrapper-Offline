@@ -36,6 +36,9 @@
 		}
 	},
 	"POST": {
+		"/goapi/getCCPreMadeCharacters": {
+			"content": ""
+		},
 		"/goapi/getMovieInfo/": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"

@@ -1,9 +1,49 @@
+main {
+	padding-top: 40px;
+}
+
+/**
+table filter
+**/
+.table_filters {
+	background: #333;
+	margin: 0 auto;
+}
+.table_filter {
+	border-top: 2px solid #dddddd;
+	border-right: 1px solid #ddd;
+	color: #444;
+	float: left;
+	padding: 8px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 14px;
+	width: 50%;
+}
+.table_filter:last-of-type {
+	border-right: none;
+}
+.table_filter.selected,
+.table_filter:hover {
+	background: #f2f2f2;
+	font-weight: 400;
+}
+html.dark .table_filter {
+	border-color: #3a3a3a;
+	color: #ddd;
+}
+html.dark .table_filter.selected,
+html.dark .table_filter:hover {
+	background: #2b2b2b;
+}
+
 /**
 table
 **/
 table {
 	border-collapse: collapse;
-	margin: 40px auto 127px;
+	margin: 0 auto 127px;
 	font-size: 14px;
 	width: 100%;
 	max-width: 100%;
@@ -111,7 +151,7 @@ tfoot>tr>td>a {
 
 
 /**
-hardcoded icons!
+hardcoded icons! :)
 **/
 tr>:nth-child(4)>:nth-child(1)::before {
 	content: '\E174';
@@ -123,7 +163,7 @@ tr>:nth-child(4)>:nth-child(3)::before {
 	content: '\E182';
 }
 tr>:nth-child(4)>:nth-child(4)::before {
-	content: '\E010';
+	content: '\E319';
 }
 tr>:nth-child(4)>:nth-child(5)::before {
 	content: '\E017';
@@ -134,17 +174,20 @@ tr>:nth-child(4)>:nth-child(5)::before {
 make the table responsive
 **/
 @media(min-width: 790px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 750px;
 	}
 }
 @media(min-width: 1012px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 970px;
 	}
 }
 @media(min-width: 1210px) {
-	table.full_screen {
+	.table_filters,
+	table {
 		width: 1170px;
 	}
 }

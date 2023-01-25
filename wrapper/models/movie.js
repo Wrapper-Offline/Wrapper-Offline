@@ -1,25 +1,20 @@
-/**
- * movie api
- */
-// module
 const fs = require("fs");
 const nodezip = require("node-zip");
 const path = require("path");
-// vars
-const folder = path.join(__dirname, "../../", process.env.SAVED_FOLDER);
-const base = Buffer.alloc(1, 0);
-// stuff
 const database = require("../../data/database"), DB = new database();
 const fUtil = require("../../utils/fileUtil");
-const parse = require("../models/parse");
+const Parse = require("../models/parse");
+const folder = path.join(__dirname, "../../", process.env.SAVED_FOLDER);
+const base = Buffer.alloc(1, 0);
 
 module.exports = {
 	/**
-	 * Deletes a movie.
+	 * deletes a movie do i really have to explain this to you
 	 * @param {string} id 
 	 */
 	delete(id) {
 		DB.delete("movies", id);
+		DB.delete("assets", id);
 
 		// delete the actual file
 		fs.unlinkSync(path.join(folder, `${id}.xml`));
@@ -36,7 +31,8 @@ module.exports = {
 		const filepath = path.join(folder, `${mId}.xml`);
 
 		const buffer = fs.readFileSync(filepath);
-		const parsed = await parse(buffer);
+		const thumbBuffer = fs.readFileSync(filepath.slice(0, -3) + "png");
+		const parsed = await Parse.pack(buffer, thumbBuffer);
 		return isGet ? parsed : Buffer.concat([base, parsed]);
 	},
 
@@ -131,9 +127,7 @@ module.exports = {
 							type = "movies";
 						}
 
-						try {
-							DB.update(type, id, info);
-						} catch (e) {
+						if (!DB.update(type, id, info)) {
 							console.log("This movie does not exist in the database. Inserting...", e);
 							DB.insert(type, info);
 						}
@@ -149,7 +143,8 @@ module.exports = {
 	 * @param {string} id 
 	 * @returns {fs.readStream}
 	 */
-	thumb(id) { // look for match in folder
+	thumb(id) {
+		// look for match in folder
 		const filepath = path.join(folder, `${id}.png`);
 		if (fs.existsSync(filepath)) {
 			const readStream = fs.createReadStream(filepath);
@@ -158,4 +153,38 @@ module.exports = {
 			throw new Error("Movie doesn't exist.");
 		}
 	},
-}
+
+	/**
+	 * unpacks a movie zip
+	 * @param {Buffer} body zip containing the movie and its assets
+	 * @returns {Promise<string>}
+	 */
+	upload(body, isStarter) {
+		return new Promise(async (res, rej) => {
+			const id = fUtil.generateId();
+			const [xml, thumb] = await Parse.unpack(body);
+
+			fs.writeFileSync(path.join(folder, `${id}.xml`), xml);
+			fs.writeFileSync(path.join(folder, `${id}.png`), thumb);
+			this.meta(id).then((meta) => {
+				let type;
+				const info = {
+					id,
+					duration: meta.durationString,
+					date: meta.date,
+					title: meta.title,
+					sceneCount: meta.sceneCount,
+				}
+				if (isStarter) {
+					info.type = "movie";
+					type = "assets";
+				} else {
+					type = "movies";
+				}
+
+				DB.insert(type, info);
+				res(id);
+			});
+		});
+	}
+};

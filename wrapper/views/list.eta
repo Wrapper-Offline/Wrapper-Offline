@@ -8,18 +8,21 @@
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/list.css">
 		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/global.js"></script>
 	</head>
 
 	<body>
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
-			<table class="full_screen">
+			<nav class="table_filters">
+				<a class="table_filter movies" href="javascript:;" onclick="switchFilter(false)">Movies</a>
+				<a class="table_filter starters" href="javascript:;" onclick="switchFilter(true)">Starters</a>
+			</nav>
+			<table>
 				<thead>
 					<tr>
 						<td></td>
-						<td>Video Title</td>
+						<td>Movie Title</td>
 						<td>Last Modified</td>
 						<td></td>
 					</tr>
@@ -36,8 +39,10 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
+	<script src="/pages/js/global.js"></script>
 	<script>
 		let json;
+		let starters = true;
 		const tbody = $("tbody");
 		const loadMore = $("#load_more");
 
@@ -49,7 +54,7 @@
 			for (; c < C; c++) {
 				// we reached the end
 				if (c > json.length - 1) {
-					loadMore.remove();
+					loadMore.hide();
 					break;
 				}
 
@@ -73,42 +78,58 @@
 							<span>${date}, ${time}</span>
 						</td>
 						<td>
-							<a href="javascript:;" onclick="popup('${tbl.id}')"></a>
-							<a href="/go_full?movieId=${tbl.id}"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
-							<a href="#" onclick="destructive('${tbl.id}', 'repair')"></a>
-							<a href="#" onclick="destructive('${tbl.id}', 'delete')"></a>
+							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
+							<a href="/go_full?movieId=${tbl.id}${starters ? "&isStarter=1" : ""} title="Edit"></a>
+							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip" title="Download files -- NOT AN EXPORTER"></a>
+							<a href="javascript:;" onclick="destructive('${tbl.id}', 'clone')" title="Clone" ${starters ? "style='display:none'" : ""}></a>
+							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
 						</td>
 					</tr>`.trim()
 				);
 			}
 		}
-
 		// i want more movies
-		loadMore.onclick = loadRows;
+		loadMore[0].onclick = loadRows;
 
-
-		$.get("/api/movies/list", data => {
-			json = data;
-			loadRows();
-		});
+		function switchFilter(shouldEqual) {
+			if (starters == shouldEqual) return;
+			$(".movie_filter").removeClass("selected");
+			if (starters) {
+				starters = false;
+				$(".movie_filter.movies").addClass("selected");
+			} else {
+				starters = true;
+				$(".movie_filter.starters").addClass("selected");
+			}
+			$.get(`/api/${starters ? "starter" : "movie"}/list`)
+				.done((data) => {
+					json = data;
+					tbody.html("");
+					C = 0;
+					loadMore.show();
+					loadRows();
+				});
+		}
+		switchFilter();
 
 		function destructive(mId, act) {
 			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
 
 			if (yesno)
-				$.get(`/api/movie/${act}/${mId}`, data => {
-					if (data.status == "ok") {
-						switch (act) {
-							case "repair":
-								window.location = `/player?movieId=${mId}`;
-								break;
-							case "delete":
-								$(`#${mId}`).fadeOut(() => $(`#${mId}`).remove());
-								break;
-						}
-					} else alert("Guess you're stuck with your movie.");
-				});
+				$.get(`/api/movie/${act}/${mId}`)
+					.done((data) => {
+						if (data.status == "ok") {
+							switch (act) {
+								case "clone":
+									window.location = `/go_full?movieId=${data.mId}`;
+									break;
+								case "delete":
+									const $elem = $("#" + mId);
+									$elem.fadeOut(() => $elem.remove());
+									break;
+							}
+						} else alert("Guess you're stuck with your movie.");
+					});
 		}
 
 		function popup(id) {
@@ -117,5 +138,4 @@
 		}
 
 	</script>
-
 </html>

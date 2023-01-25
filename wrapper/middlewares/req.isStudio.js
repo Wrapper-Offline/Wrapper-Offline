@@ -1,7 +1,7 @@
 const { BrowserWindow, Menu } = require("electron");
 const httpz = require("@octanuary/httpz")
 const assetUrl = String.fromCharCode(97, 115, 115);
-// It's a naughty word
+// It's a naughty word ^
 // I'm not supposed to say it
 
 /**

@@ -1,6 +1,3 @@
-/*
-tts
-*/
 const brotli = require("brotli");
 const https = require("https");
 const http = require("http");
@@ -231,9 +228,6 @@ module.exports = function processVoice(voiceName, rawText) {
 						}).toString()
 					);
 					break;
-				}
-				case "voiceforge": {
-					rej("VoiceForge has recently updated their API and due to this, the voices no longer work.\nWe do not have a fix for this at the moment.");
 				}
 				case "svox": {
 					const q = new URLSearchParams({

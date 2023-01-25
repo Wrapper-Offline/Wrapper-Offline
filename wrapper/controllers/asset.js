@@ -1,27 +1,20 @@
-/**
- * asset routes
- */
-// modules
+const Asset = require("../models/asset");
+const database = require("../../data/database"), DB = new database();
 const ffmpeg = require("fluent-ffmpeg");
-ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
-ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 const { fromFile } = require("file-type");
+const { extensions, mimeTypes } = require("file-type/supported");
 const fs = require("fs");
 const httpz = require("@octanuary/httpz")
-const mime = require("mime-types");
 const path = require("path");
 const tempfile = require("tempfile");
-// vars
+const rFileUtil = require("../../utils/realFileUtil");
 const fileTypes = require("../data/fileTypes.json");
 const header = process.env.XML_HEADER;
 const thumbUrl = process.env.THUMB_BASE_URL;
-// stuff
-const Asset = require("../models/asset");
-const database = require("../../data/database"), DB = new database();
-const rFileUtil = require("../../utils/realFileUtil");
-
-// create the group
 const group = new httpz.Group();
+
+ffmpeg.setFfmpegPath(require("@ffmpeg-installer/ffmpeg").path);
+ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 
 function listAssets(filters) {
 	const files = DB.select("assets", filters);
@@ -29,326 +22,349 @@ function listAssets(filters) {
 		files.map(Asset.meta2Xml).join("")}</ugc>`;
 }
 
-group
-	// delete
-	.route("POST", "/api_v2/asset/delete/", (req, res) => {
-		const id = req.body.data.id || req.body.data.starter_id;
-		res.assert(id, 400, { status: "error" });
+/*
+delete
+*/
+group.route("POST", "/api_v2/asset/delete/", (req, res) => {
+	const id = req.body.data.id || req.body.data.starter_id;
+	res.assert(id, 400, { status: "error" });
 
-		try {
-			DB.delete("assets", id);
-			res.json({ status: "ok" });
-		} catch (e) {
-			console.log("Error deleting asset:", e);
+	if (!DB.delete("assets", id)) {
+		res.json({ status: "ok" });
+	} else {
+		res.statusCode = 404;
+		res.json({ status: "error" });
+	}
+});
+
+/*
+list
+*/
+group.route("GET", "/api/assets/list", (req, res) => {
+	res.json(DB.select("assets"));
+});
+group.route("POST", "/api_v2/assets/imported", (req, res) => {
+	res.assert(req.body.data.type, 400, { status: "error" });
+	if (req.body.data.type == "prop") req.body.data.subtype ||= 0;
+
+	// what's even the point of this if it still uses an xml
+	// it's dumb
+	res.json({
+		status: "ok",
+		data: {
+			xml: listAssets(req.body.data)
+		}
+	});
+});
+group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
+	if (req.body.type !== "char") {
+		res.statusCode = 307;
+		res.setHeader("Location", "/api_v2/assets/imported");
+		res.end();
+		return;
+	} else if (!req.body.themeId) {
+		res.statusCode = 400;
+		res.end("1<error><code>malformed</code><message/></error>");
+		return;
+	}
+
+	let themeId;
+	switch (req.body.themeId) {
+		case "custom":
+			themeId = "family";
+			break;
+		case "action":
+		case "animal":
+		case "botdf":
+		case "space":
+			themeId = "cc2";
+			break;
+		default:
+			themeId = req.body.themeId;
+	}
+
+	const filters = {
+		themeId,
+		type: "char"
+	};
+	res.setHeader("Content-Type", "application/xml");
+	res.end(listAssets(filters));
+});
+
+/*
+load
+*/
+group.route("*", /\/(assets|goapi\/getAsset)\/([\S]*)/, (req, res, next) => {
+	let id;
+	switch (req.method) {
+		case "GET":
+			id = req.matches[2];
+			break;
+		case "POST":
+			id = req.body.assetId;
+			break;
+		default:
+			next();
+			return;
+	}
+	if (!id) {
+		res.statusCode = 400;
+		res.end();
+	}
+
+	try {
+		const ext = id.split(".")[-1] || "xml";
+		const mime = mimeTypes[extensions.indexOf(ext)];
+		const readStream = Asset.load(id);
+		res.setHeader("Content-Type", mime);
+		readStream.pipe(res);
+	} catch (err) {
+		if (err.message === "404") {
 			res.statusCode = 404;
-			res.json({ status: "error" });
+			res.end();
+		} else {
+			console.log("Error loading asset:", err);
+			res.statusCode = 500;
+			res.end();
 		}
-	})
-	// list
-	.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
-		res.assert(
-			req.body.type,
-			req.body.type == "char",
-			req.body.themeId,
-			400,
-			"1Missing one or more fields."
-		);
+	}
+});
 
-		let themeId;
-		switch (req.body.themeId) {
-			case "custom":
-				themeId = "family"; break;
-			case "action":
-			case "animal":
-			case "botdf":
-			case "space":
-				themeId = "cc2"; break;
-			default: themeId = req.body.themeId;
-		}
+/*
+thumb
+*/
+group.route("GET", /\/stock_thumbs\/([\S]+)/, (req, res) => {
+	const filepath = path.join(__dirname, "../../", thumbUrl, req.matches[1]);
+	if (fs.existsSync(filepath)) {
+		fs.createReadStream(filepath).pipe(res);
+	} else {
+		res.status(404);
+		res.end();
+	}
+});
 
-		const filters = {
-			themeId,
-			type: "char"
-		};
-		res.setHeader("Content-Type", "application/xml");
-		res.end(listAssets(filters));
-	})
-	.route("POST", "/api_v2/assets/imported", (req, res) => {
-		res.assert(req.body.data.type, 400, { status: "error" });
-		if (req.body.data.type == "prop") req.body.data.subtype ||= 0;
+/*
+info
+*/
+// get
+group.route("POST", "/api_v2/asset/get", (req, res) => {
+	const id = req.body?.data.id || req.body?.data.starter_id;
+	res.assert(id, 400, { status: "error" });
 
+	const info = DB.get("assets", id)?.data;
+	if (info) {
+		// add stuff that will never be useful in an offline lvm clone
+		info.share = { type: "none" };
+		info.published = "";
 		res.json({
 			status: "ok",
-			data: {
-				xml: listAssets(req.body.data)
-			}
+			data: info
 		});
-	})
-	.route("GET", "/api/assets/list", (req, res) => {
-		res.json(DB.select("assets"));
-	})
-	// load
-	.route(
-		"POST",
-		[
-			"/goapi/getAsset/",
-			"/goapi/getAssetEx/"
-		],
-		(req, res) => {
-			const id = req.body.assetId;
-			res.assert(id, 400, "Missing one or more fields.");
+	} else {
+		res.statusCode = 404;
+		res.json({ status: "not_found" });
+	}
+});
+// update
+group.route("POST", "/api_v2/asset/update/", (req, res) => {
+	const id = req.body.data.id || req.body.data.starter_id;
+	const title = req.body.data.title;
+	const tags = req.body.data.tags;
+	if (!id || !title || !tags) {
+		res.statusCode = 400;
+		res.json({ status: "malformed" });
+	}
 
-			try {
-				const readStream = Asset.load(id);
-				res.setHeader("Content-Type", mime.contentType(id));
-				readStream.pipe(res);
-			} catch (e) {
-				console.log("Error loading asset:", e);
-				res.status(404).end();
+	const update = {
+		tags: tags,
+		title: title
+	}
+	if (DB.update("assets", id, update)) {
+		res.json({ status: "ok" });
+	} else {
+		res.statusCode = 404;
+		res.json({ status: "not_found" });
+	}
+});
+
+/*
+save
+*/
+group.route("POST", "/api/asset/upload", async (req, res) => {
+	const file = req.files.import;
+	if (typeof file === "undefined" && !req.body.type && !req.body.subtype) {
+		res.statusCode = 400;
+		res.json({ status: "malformed" });
+	}
+
+	// get the filename and extension
+	const { filepath } = file;
+	const origName = file.originalFilename;
+	const filename = path.parse(origName).name;
+	const { ext } = await fromFile(filepath);
+
+	// validate the file type
+	if ((fileTypes[req.body.type] || []).indexOf(ext) < 0) {
+		res.status(400);
+		res.json({
+			status: "error",
+			msg: "Invalid file type."
+		});
+		return;
+	}
+
+	let info = {
+		type: req.body.type,
+		subtype: req.body.subtype,
+		title: req.body.name || filename,
+	}, stream;
+
+	switch (info.type) {
+		case "bg" : {
+			if (ext == "swf") {
+				stream = fs.createReadStream(filepath);
+			} else {
+				stream = await rFileUtil.resizeImage(filepath, 550, 354);
 			}
-		}
-	)
-	.route("*", /\/(assets|goapi\/getAsset)\/([\S]+)/, (req, res) => {
-		const id = req.matches[2];
+			stream.pause();
 
-		try {
-			const readStream = Asset.load(id);
-			res.setHeader("Content-Type", mime.contentType(id));
-			readStream.pipe(res);
-		} catch (e) {
-			console.log("Error loading asset:", e);
-			res.status(404).end();
+			// save asset
+			info.file = await Asset.save(stream, ext, info);
+			break;
 		}
-	})
-	// meta
-	//  #get
-	.route("POST", "/api_v2/asset/get", (req, res) => {
-		const id = req.body?.data.id || req.body?.data.starter_id;
-		res.assert(id, 400, { status: "error" });
+		case "watermark": {
+			stream = fs.createReadStream(filepath);
+			stream.pause();
 
-		try {
-			const info = DB.get("assets", id).data;
-			// add stuff that will never be useful for an offline lvm clone
-			info.share = { type: "none" };
-			info.published = "";
-			res.json({
-				status: "ok",
-				data: info
+			// save asset
+			info.file = await Asset.save(stream, ext, info);
+			break;
+		}
+		case "sound": {
+			await new Promise(async (resolve, reject) => {
+				if (ext != "mp3") {
+					stream = await rFileUtil.convertToMp3(filepath, ext);
+				} else {
+					stream = fs.createReadStream(filepath);
+				}
+				const temppath = tempfile(".mp3");
+				const writeStream = fs.createWriteStream(temppath);
+				stream.pipe(writeStream);
+				stream.on("end", async () => {
+					info.duration = await rFileUtil.mp3Duration(temppath);
+					info.file = await Asset.save(temppath, "mp3", info);
+					info.downloadtype = "progressive";
+					resolve();
+				});
 			});
-		} catch (e) {
-			console.log("Error getting asset info:", e);
-			res.statusCode = 404;
-			res.json({ status: "error", data: "That doesn't seem to exist." });
+			break;
 		}
-	})
-	//  #update
-	.route("POST", "/api_v2/asset/update/", (req, res) => {
-		const id = req.body.data.id || req.body.data.starter_id;
-		res.assert(id, 400, { status: "error" });
-
-		try {
-			DB.update("assets", id, req.body.data);
-			res.json({ status: "ok" });
-		} catch (e) {
-			console.log("Error updating asset:", e);
-			console.log("It's not like anyone will see this anyway...");
-
-			res.statusCode = 404;
-			res.json({ status: "error" });
-		}
-	})
-	// save
-	.route("POST", "/api/asset/upload", async (req, res) => {
-		const file = req.files.import;
-		res.assert(
-			file,
-			req.body.type,
-			req.body.subtype,
-			400,
-			{
-				status: "error",
-				msg: "Missing one or more fields."
+		case "prop": {
+			let { ptype } = req.body;
+			// verify the prop type
+			switch (ptype) {
+				case "placeable":
+				case "wearable":
+				case "holdable":
+					info.ptype = ptype;
+				default:
+					info.ptype = "placeable";
 			}
-		);
-	
-		// get the filename and extension
-		const { filepath } = file;
-		const origName = file.originalFilename;
-		const filename = path.parse(origName).name;
-		const { ext } = await fromFile(filepath);
 
-		// validate the file type
-		if ((fileTypes[req.body.type] || []).indexOf(ext) < 0) {
+			if (info.subtype == "video") {
+				delete info.ptype;
+				const temppath = tempfile(".flv");
+				await new Promise((resolve, rej) => {
+					// get the height and width
+					ffmpeg(filepath).ffprobe((e, data) => {
+						if (e) rej(e);
+						info.width = data.streams[0].width;
+						info.height = data.streams[0].height;
+
+						// convert the video to an flv
+						ffmpeg(filepath)
+							.output(temppath)
+							.on("end", async () => {
+								const readStream = fs.createReadStream(temppath);
+								info.file = await Asset.save(readStream, "flv", info);
+
+								// save the first frame
+								ffmpeg(filepath)
+									.seek("0:00")
+									.output(path.join(
+										__dirname,
+										"../../",
+										process.env.ASSET_FOLDER,
+										info.id.slice(0, -3) + "png"
+									))
+									.outputOptions("-frames", "1")
+									.on("end", () => resolve(info.id))
+									.run();
+							})
+							.on("error", (e) => rej("Error converting video:", e))
+							.run();
+					});
+				});
+			} else {
+				info.file = await Asset.save(filepath, ext, info);
+			}
+			break;
+		}
+		default: {
 			res.status(400);
 			res.json({
 				status: "error",
-				msg: "Invalid file type."
+				msg: "Invalid asset type."
 			});
 			return;
 		}
+	}
 
-		let info = {
-			type: req.body.type,
-			subtype: req.body.subtype,
-			title: req.body.name || filename,
-		}, stream;
+	// stuff for the lvm
+	info.enc_asset_id = info.file;
 
-		switch (info.type) {
-			case "bg" : {
-				if (ext == "swf") {
-					stream = fs.createReadStream(filepath);
-				} else {
-					stream = await rFileUtil.resizeImage(filepath, 550, 354);
-				}
-				stream.pause();
-
-				// save asset
-				info.file = await Asset.save(stream, ext, info);
-				break;
-			}
-			case "watermark": {
-				stream = fs.createReadStream(filepath);
-				stream.pause();
-
-				// save asset
-				info.file = await Asset.save(stream, ext, info);
-				break;
-			}
-			case "sound": {
-				await new Promise(async (resolve, reject) => {
-					if (ext != "mp3") {
-						stream = await rFileUtil.convertToMp3(filepath, ext);
-					} else {
-						stream = fs.createReadStream(filepath);
-					}
-					const temppath = tempfile(".mp3");
-					const writeStream = fs.createWriteStream(temppath);
-					stream.pipe(writeStream);
-					stream.on("end", async () => {
-						info.duration = await rFileUtil.mp3Duration(temppath);
-						info.file = await Asset.save(temppath, "mp3", info);
-						info.downloadtype = "progressive";
-						resolve();
-					});
-				});
-				break;
-			}
-			case "prop": {
-				let { ptype } = req.body;
-				// verify the prop type
-				switch (ptype) {
-					case "placeable":
-					case "wearable":
-					case "holdable":
-						info.ptype = ptype;
-					default:
-						info.ptype = "placeable";
-				}
-
-				if (info.subtype == "video") {
-					delete info.ptype;
-					const temppath = tempfile(".flv");
-					await new Promise((resolve, rej) => {
-						// get the height and width
-						ffmpeg(filepath).ffprobe((e, data) => {
-							if (e) rej(e);
-							info.width = data.streams[0].width;
-							info.height = data.streams[0].height;
-
-							// convert the video to an flv
-							ffmpeg(filepath)
-								.output(temppath)
-								.on("end", async () => {
-									const readStream = fs.createReadStream(temppath);
-									info.file = await Asset.save(readStream, "flv", info);
-
-									// save the first frame
-									ffmpeg(filepath)
-										.seek("0:00")
-										.output(path.join(
-											__dirname,
-											"../../",
-											process.env.ASSET_FOLDER,
-											info.id.slice(0, -3) + "png"
-										))
-										.outputOptions("-frames", "1")
-										.on("end", () => resolve(info.id))
-										.run();
-								})
-								.on("error", (e) => rej("Error converting video:", e))
-								.run();
-						});
-					});
-				} else {
-					info.file = await Asset.save(filepath, ext, info);
-				}
-				break;
-			}
-			default: {
-				res.status(400);
-				res.json({
-					status: "error",
-					msg: "Invalid asset type."
-				});
-				return;
-			}
-		}
-
-		// stuff for the lvm
-		info.enc_asset_id = info.file;
-
-		res.json({
-			status: "ok", 
-			data: info
-		});
-	})
-	.route("POST", "/goapi/saveSound/", async (req, res) => {
-		isRecord = req.body.bytes ? true : false;
-
-		let filepath, ext, stream;
-		if (isRecord) {
-			filepath = tempfile(".ogg");
-			ext = "ogg";
-			const buffer = Buffer.from(req.body.bytes, "base64");
-			fs.writeFileSync(filepath, buffer);
-		} else {
-			// read the file
-			filepath = req.files.Filedata.filepath;
-			ext = (await fromFile(filepath)).ext;
-		}
-
-		let info = {
-			type: "sound",
-			subtype: req.body.subtype,
-			title: req.body.title
-		};
-
-		if (ext != "mp3") {
-			stream = await rFileUtil.convertToMp3(filepath, ext);
-		} else {
-			stream = fs.createReadStream(filepath);
-		}
-
-		const temppath = tempfile(".mp3");
-		const writeStream = fs.createWriteStream(temppath);
-		stream.pipe(writeStream);
-		stream.on("end", async () => {
-			info.duration = await rFileUtil.mp3Duration(temppath);
-			const id = await Asset.save(temppath, "mp3", info);
-			res.end(
-				`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`
-			);
-		});
-	})
-	// thumb
-	.route("GET", /\/stock_thumbs\/([\S]+)/, (req, res) => {
-		const filepath = path.join(__dirname, "../../", thumbUrl, req.matches[1]);
-		if (fs.existsSync(filepath)) {
-			fs.createReadStream(filepath).pipe(res);
-		} else {
-			res.status(404);
-			res.end();
-		}
+	res.json({
+		status: "ok", 
+		data: info
 	});
+})
+group.route("POST", "/goapi/saveSound/", async (req, res) => {
+	isRecord = req.body.bytes ? true : false;
+
+	let filepath, ext, stream;
+	if (isRecord) {
+		filepath = tempfile(".ogg");
+		ext = "ogg";
+		const buffer = Buffer.from(req.body.bytes, "base64");
+		fs.writeFileSync(filepath, buffer);
+	} else {
+		// read the file
+		filepath = req.files.Filedata.filepath;
+		ext = (await fromFile(filepath)).ext;
+	}
+
+	let info = {
+		type: "sound",
+		subtype: req.body.subtype,
+		title: req.body.title
+	};
+
+	if (ext != "mp3") {
+		stream = await rFileUtil.convertToMp3(filepath, ext);
+	} else {
+		stream = fs.createReadStream(filepath);
+	}
+
+	const temppath = tempfile(".mp3");
+	const writeStream = fs.createWriteStream(temppath);
+	stream.pipe(writeStream);
+	stream.on("end", async () => {
+		info.duration = await rFileUtil.mp3Duration(temppath);
+		const id = await Asset.save(temppath, "mp3", info);
+		res.end(
+			`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`
+		);
+	});
+});
 
 module.exports = group;

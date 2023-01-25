@@ -1,7 +1,5 @@
-// modules
 const fs = require("fs");
 const path = require("path");
-// vars
 const folder = path.join(__dirname, "../", process.env.SAVED_FOLDER);
 let baseDb;
 
@@ -10,11 +8,11 @@ module.exports = class GoDatabase {
 		if (isSettings) {
 			this.path = path.join(folder, "settings.json");
 			baseDb = {
-				DISCORD_RPC: false, // Shows your Wrapper activity in Discord.
+				DISCORD_RPC: false, // Shows your Wrapper activity on Discord.
 				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
 				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
-				IS_WIDE: "1" // Sets the video player to 16:9
+				IS_WIDE: "1" // Sets the video player to 16:9.
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
@@ -49,29 +47,32 @@ module.exports = class GoDatabase {
 	}
 
 	/**
-	 * Deletes a field from the database.
-	 * @param {string} from Category to select from.
-	 * @param {string} id Id to look for.
+	 * deletes a field from the database
+	 * @param {string} from category to select from
+	 * @param {string} id id to look for
+	 * @returns {boolean} did it work or not
 	 */
 	delete(from, id) {
-		const { index } = this.get(from, id);
+		const index = this.get(from, id)?.index;
+		if (typeof index == "undefined") return false;
 
 		this.json[from].splice(index, 1);
 		this.save(this.json);
+		return true;
 	}
 
 	/**
-	 * Returns an object from the database.
-	 * @param {string} from Category to select from.
-	 * @param {string} id Id to look for.
+	 * returns an object from the database
+	 * @param {string} from category to select from
+	 * @param {string} id id to look for
 	 * @returns {{
 	 * 	data: object,
 	 * 	index: number
-	 * }}
+	 * } | false} returns object if it worked, false if it didn't
 	 */
 	get(from, id) {
 		if (!from || !id) {
-			throw new Error("Must input a category to select from or an id to look for.");
+			throw new Error("Must input a category to select from or an ID to look for.");
 		}
 
 		this.#refresh();
@@ -86,14 +87,10 @@ module.exports = class GoDatabase {
 			}
 		});
 
-		if (!object) {
-			throw new Error("Field not found.");
-		}
-
-		return {
+		return object ? {
 			data: object,
 			index
-		};
+		} : false;
 	}
 
 	/**
@@ -137,15 +134,18 @@ module.exports = class GoDatabase {
 	 * @param {string} from Category to select from.
 	 * @param {string} id Id to look for.
 	 * @param {object} data New data to save.
+	 * @returns {boolean} did it work or not
 	 */
 	update(from, id, data) {
 		if (!data) {
 			throw new Error("Must input new data to save.");
 		}
 
-		const { index } = this.get(from, id);
+		const index = this.get(from, id)?.index;
+		if (typeof index == "undefined") return false;
 
 		Object.assign(this.json[from][index], data);
 		this.save(this.json);
+		return true;
 	}
 };
