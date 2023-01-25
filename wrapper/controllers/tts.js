@@ -40,8 +40,12 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 	try {
 		const filepath = tempfile(".mp3");
 		const writeStream = fs.createWriteStream(filepath);
-		const readStream = await processVoice(voice, text);
-		readStream.pipe(writeStream);
+		const data = await processVoice(voice, text);
+		if (typeof data.on == "function") {
+			data.pipe(writeStream);
+		} else {
+			writeStream.end(data);
+		}
 
 		writeStream.on("close", async () => {
 			const duration = await fileUtil.mp3Duration(filepath);

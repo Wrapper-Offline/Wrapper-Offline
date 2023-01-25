@@ -217,10 +217,11 @@
 		const params = new URLSearchParams(window.location.search);
 		// default to all themes
 		const filter = params.get("filter") || "vl";
-		if (filter == "cc")
+		if (filter == "cc") {
 			$(".theme").not("[data-has-cc]").hide();
-		else
+		} else {
 			$("#char-copy").hide();
+		}
 
 		function redirect(tId, ccId = false) {
 			if (filter == "cc") {

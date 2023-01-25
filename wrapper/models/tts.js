@@ -314,6 +314,36 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
+				case "tiktok": {
+					// make sure it's under the char limit
+					text = text.substring(0, 299);
+					const req = https.request(
+						{
+							hostname: "tiktok-tts.weilnet.workers.dev",
+							path: "/api/generation",
+							method: "POST",
+							headers: {
+								"Content-type": "application/json"
+							}
+						},
+						(r) => {
+							let body = "";
+							r.on("data", (b) => body += b);
+							r.on("end", () => {
+								const json = JSON.parse(body);
+								if (json.success !== true) rej(json.error);
+
+								res(Buffer.from(json.data, "base64"));
+							});
+							r.on("error", rej);
+						}
+					).on("error", rej);
+					req.end(JSON.stringify({
+						text: text,
+						voice: voice.arg
+					}));
+					break;
+				}
 			}
 		} catch (e) {
 			rej(e);
