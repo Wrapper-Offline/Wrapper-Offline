@@ -4406,13 +4406,13 @@
 	<char id="400001006" name="GoTube (Creator of Mega CW &amp; Director of Testing)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:W:O credits</tags>
 	</char>
-	<char id="400001007" name="2Epik4u (Developer)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001035" name="octanuary (Director of Development)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:W:O credits</tags>
 	</char>
-	<char id="400001035" name="octanuary (Developer)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001007" name="2Epik4u (Former Developer)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:W:O credits</tags>
 	</char>
-	<char id="327068826" name="benson (Creator of Wrapper: Offline)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
+	<char id="400001037" name="samanthawoah (Former Developer)" cc_theme_id="family" thumbnail_url="char-default.png" copyable="Y">
 		<tags>family,_free,_cat:W:O credits</tags>
 	</char>
 

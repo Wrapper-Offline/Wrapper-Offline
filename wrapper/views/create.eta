@@ -202,7 +202,7 @@
 			<div id="char-copy">
 				<h2>Copy a character</h2>
 				<p>Have a character ID? Use it here!</p>
-				<input type="text" value="400001035" name="char-id" />
+				<input type="text" value="832304" name="char-id" />
 				<a href="#" onclick="copyRedirect()">Copy</a>
 			</div>
 		</main>
