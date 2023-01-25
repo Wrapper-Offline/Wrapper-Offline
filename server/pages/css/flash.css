@@ -28,9 +28,11 @@ objects
 previewer
 **/
 #previewer {
-	padding: 60px 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -80%);
 	width: 960px;
-	margin: 0 auto;
 	z-index: 2;
 }
 #preview-inside {
