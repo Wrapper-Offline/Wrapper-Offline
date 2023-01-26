@@ -4,7 +4,7 @@ License: MIT
 */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow, Menu, globalShortcut } = require("electron");
 const fs = require("fs");
 const path = require("path");
 const assets = path.join(__dirname, env.ASSET_FOLDER);
@@ -75,7 +75,30 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
 	// wait for the server
-	setTimeout(createWindow, 2000);
+	setTimeout(() => {
+		createWindow();
+		// set shortcuts
+		globalShortcut.register("CommandOrControl+Shift+I", () => {
+			const window = BrowserWindow.fromId(+process.env.MAIN_WINDOW_ID);
+			if (window.webContents.isDevToolsOpened()) {
+				window.webContents.closeDevTools();
+			} else {
+				window.webContents.openDevTools();
+			}
+		});
+		globalShortcut.register("CommandOrControl+-", () => {
+			const window = BrowserWindow.fromId(+process.env.MAIN_WINDOW_ID);
+			const zoom = window.webContents.getZoomFactor();
+			if (zoom - 0.2 > 0.1) {
+				window.webContents.setZoomFactor(zoom - 0.2);
+			}
+		});
+		globalShortcut.register("CommandOrControl+=", () => {
+			const window = BrowserWindow.fromId(+process.env.MAIN_WINDOW_ID);
+			const zoom = window.webContents.getZoomFactor();
+			window.webContents.setZoomFactor(zoom + 0.2);
+		});
+	}, 2000);
 });
 app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") app.quit();
