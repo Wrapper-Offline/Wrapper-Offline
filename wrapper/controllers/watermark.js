@@ -34,7 +34,7 @@ list
 group.route("POST", "/goapi/getUserWatermarks/", (req, res) => {
 	const mId = req.body.movieId;
 
-	let wId = DB.get("movies", mId)?.data?.watermark || "what";
+	let wId = DB.get("movies", mId || "loser")?.data?.watermark || "what";
 	const list = DB.select("assets", { type: "watermark" });
 	res.setHeader("Content-Type", "application/xml");
 	res.end(`${header}<watermarks>${
@@ -51,7 +51,7 @@ group.route("POST", "/goapi/getMovieInfo/", (req, res) => {
 	if (!movie) {
 		res.statusCode = 400;
 		res.end("1Movie not found.");
-		return
+		return;
 	}
 
 	const wId = movie.data.watermark;

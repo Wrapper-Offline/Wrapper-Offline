@@ -157,6 +157,7 @@ group.route("GET", "/player", async (req, res) => {
 		},
 		params: {
 			flashvars,
+			allowFullScreen: "true",
 			allowScriptAccess: "always",
 		},
 		object: toObjectString

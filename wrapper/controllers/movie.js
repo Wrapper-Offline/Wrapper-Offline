@@ -47,7 +47,7 @@ group.route("GET", /\/api\/movie\/delete\/([^/]+)$/, async (req, res) => {
 	const id = req.matches[1];
 	if (!DB.get("movies", id) && !DB.get("assets", id)) {
 		res.status(400);
-		res.json({ status: "malformed", msg: "Movie doesn't exist." });
+		return res.json({ status: "malformed", msg: "Movie doesn't exist." });
 	}
 
 	console.log("(Warning!) Deleting movie #" + id);
@@ -61,20 +61,32 @@ upload
 group.route("POST", "/api/movie/upload", (req, res) => {
 	const file = req.files.import;
 	if (!file) {
-		console.log("Error uploading movie: No file.")
+		console.log("Error uploading movie: No file.");
 		res.statusCode = 400;
-		res.json({ status: "malformed", msg: "No file." });
+		return res.json({ msg: "No file" });
 	}
 	const isStarter = req.body.is_starter;
 	const path = file.filepath, buffer = fs.readFileSync(path);
 
+	if (
+		file.mimetype !== "application/x-zip-compressed" &&
+		file.mimetype !== "application/zip" &&
+		!buffer.slice(0, 4).equals(
+			Buffer.from([0x50, 0x4b, 0x03, 0x04])
+		)
+	) {
+		console.error("Attempted movie upload with invalid file.");
+		res.statusCode = 400;
+		return res.json({ msg: "Movie is not a zip" });
+	}
+
 	Movie.upload(buffer, isStarter).then((id) => {
 		fs.unlinkSync(path);
-		res.json({ status: "ok", id: id });
+		res.json({ id: id });
 	}).catch((err) => {
 		console.error("Error uploading movie:", err);
 		res.statusCode = 500;
-		res.json({ status: "error" });
+		res.json({ msg: null });
 	});
 });
 
@@ -116,6 +128,13 @@ group.route("POST", "/goapi/saveMovie/", (req, res) => {
 	const thumb = trigAutosave ?
 		null : Buffer.from(req.body.thumbnail_large, "base64");
 
+	if (!body.slice(0, 4).equals(
+		Buffer.from([0x50, 0x4b, 0x03, 0x04])
+	)) {
+		res.statusCode = 400;
+		return res.end("1Movie is not a zip");
+	}
+
 	Movie.save(body, thumb, req.body.movieId, isStarter).then((id) => {
 		res.end("0" + id);
 	}).catch((err) => {
@@ -129,6 +148,13 @@ group.route("POST", "/goapi/saveTemplate/", (req, res) => {
 	res.assert(req.body.body_zip, req.body.thumbnail_large, 400, "1");
 	const body = Buffer.from(req.body.body_zip, "base64");
 	const thumb = Buffer.from(req.body.thumbnail_large, "base64");
+
+	if (!body.slice(0, 4).equals(
+		Buffer.from([0x50, 0x4b, 0x03, 0x04])
+	)) {
+		res.statusCode = 400;
+		return res.end("1Movie is not a zip");
+	}
 
 	Movie.save(body, thumb, req.body.movieId, true).then((id) => {
 		res.end("0" + id);

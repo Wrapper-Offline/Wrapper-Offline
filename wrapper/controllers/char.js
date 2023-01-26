@@ -107,7 +107,15 @@ upload
 */
 group.route("*", "/api/char/upload", (req, res) => {
 	const file = req.files.import;
-	res.assert(file, 400, { status: "error" });
+	if (!file) {
+		console.log("Error uploading character: No file.");
+		res.statusCode = 400;
+		return res.json({ msg: "No file" });
+	} else if (file.mimetype !== "text/xml") {
+		console.log("Attempted character upload with invalid file.");
+		res.statusCode = 400;
+		return res.json({ msg: "Character is not an XML" });
+	}
 	const origName = file.originalFilename;
 	const path = file.filepath, buffer = fs.readFileSync(path);
 
