@@ -308,7 +308,7 @@ module.exports = function processVoice(voiceName, rawText) {
 							});
 							r.on("error", rej);
 						}
-					);
+					).on("error", rej);
 					req.end(
 						`<speakExtended key='666'><voice>${voice.arg}</voice><text>${text}</text><audioFormat>mp3</audioFormat></speakExtended>`
 					);
