@@ -7,7 +7,7 @@ const fs = require("fs");
 const httpz = require("@octanuary/httpz")
 const path = require("path");
 const tempfile = require("tempfile");
-const rFileUtil = require("../../utils/realFileUtil");
+const fileUtil = require("../../utils/fileUtil");
 const fileTypes = require("../data/fileTypes.json");
 const header = process.env.XML_HEADER;
 const thumbUrl = process.env.THUMB_BASE_URL;
@@ -224,7 +224,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 			if (ext == "swf") {
 				stream = fs.createReadStream(filepath);
 			} else {
-				stream = await rFileUtil.resizeImage(filepath, 550, 354);
+				stream = await fileUtil.resizeImage(filepath, 550, 354);
 			}
 			stream.pause();
 
@@ -243,7 +243,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 		case "sound": {
 			await new Promise(async (resolve, reject) => {
 				if (ext != "mp3") {
-					stream = await rFileUtil.convertToMp3(filepath, ext);
+					stream = await fileUtil.convertToMp3(filepath, ext);
 				} else {
 					stream = fs.createReadStream(filepath);
 				}
@@ -251,7 +251,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 				const writeStream = fs.createWriteStream(temppath);
 				stream.pipe(writeStream);
 				stream.on("end", async () => {
-					info.duration = await rFileUtil.mp3Duration(temppath);
+					info.duration = await fileUtil.mp3Duration(temppath);
 					info.file = await Asset.save(temppath, "mp3", info);
 					info.downloadtype = "progressive";
 					resolve();
@@ -350,7 +350,7 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	};
 
 	if (ext != "mp3") {
-		stream = await rFileUtil.convertToMp3(filepath, ext);
+		stream = await fileUtil.convertToMp3(filepath, ext);
 	} else {
 		stream = fs.createReadStream(filepath);
 	}
@@ -359,7 +359,7 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	const writeStream = fs.createWriteStream(temppath);
 	stream.pipe(writeStream);
 	stream.on("end", async () => {
-		info.duration = await rFileUtil.mp3Duration(temppath);
+		info.duration = await fileUtil.mp3Duration(temppath);
 		const id = await Asset.save(temppath, "mp3", info);
 		res.end(
 			`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`

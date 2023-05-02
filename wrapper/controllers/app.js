@@ -3,11 +3,9 @@ let discord;
 require("../../utils/discord")
 	.then((f) => discord = f);
 const database = require("../../data/database"), DB = new database(true);
-const reqIsStudio = require("../middlewares/req.isStudio");
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
 
-group.add(reqIsStudio);
 // video list
 group.route("*", "/", (req, res) => {
 	discord("Video List");

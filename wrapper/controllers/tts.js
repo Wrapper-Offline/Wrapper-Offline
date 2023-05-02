@@ -2,7 +2,7 @@ const fs = require("fs");
 const httpz = require("@octanuary/httpz");
 const tempfile = require("tempfile");
 const Asset = require("../models/asset");
-const fileUtil = require("../../utils/realFileUtil");
+const { mp3Duration } = require("../../utils/fileUtil");
 const processVoice = require("../models/tts");
 const info = require("../data/voices");
 const group = new httpz.Group();
@@ -47,7 +47,7 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 		}
 
 		writeStream.on("close", async () => {
-			const duration = await fileUtil.mp3Duration(filepath);
+			const duration = await mp3Duration(filepath);
 			const meta = {
 				duration,
 				type: "sound",
