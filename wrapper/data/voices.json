@@ -264,6 +264,14 @@
 			"arg": "Miguel",
 			"desc": "Miguel (Cepstral)"
 		},
+		"isabelle": {
+			"country": "CA",
+			"language": "fr",
+			"gender": "F",
+			"source": "cepstral",
+			"arg": "Isabelle",
+			"desc": "Isabelle"
+		},
 		"birgit": {
 			"country": "DE",
 			"language": "de",
@@ -431,14 +439,6 @@
 			"source": "watson",
 			"arg": "fr-FR_ReneeV3Voice",
 			"desc": "ReneeV3"
-		},
-		"isabelle": {
-			"country": "CA",
-			"language": "fr",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Isabelle",
-			"desc": "Isabelle"
 		},
 		"laila": {
 			"country": "SA",
@@ -1678,7 +1678,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/25-child-s-girl-voice-ivy.html",
-			"desc": "Ivy (RL)"
+			"desc": "Ivy (Alt)"
 		},
 		"joey1": {
 			"country": "US",
@@ -1686,7 +1686,7 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/american/29-male-voice-joey.html",
-			"desc": "Joey (RL)"
+			"desc": "Joey (Alt)"
 		},
 		"brian1": {
 			"country": "GB",
@@ -1694,7 +1694,7 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/british/1-male-voice-brian.html",
-			"desc": "Brian (RL)"
+			"desc": "Brian (Alt)"
 		},
 		"kimberly1": {
 			"country": "US",
@@ -1702,7 +1702,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/33-female-voice-kimberly.html",
-			"desc": "Kimberly (RL)"
+			"desc": "Kimberly (Alt)"
 		},
 		"kendra1": {
 			"country": "US",
@@ -1710,7 +1710,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/32-female-voice-kendra.html",
-			"desc": "Kendra (RL)"
+			"desc": "Kendra (Alt)"
 		},
 		"amy4": {
 			"country": "GB",
@@ -1718,7 +1718,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/british/5-male-voice-amy.html",
-			"desc": "Amy (RL)"
+			"desc": "Amy (Alt)"
 		},
 		"emma2": {
 			"country": "GB",
@@ -1726,7 +1726,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/british/17-female-voice-emma.html",
-			"desc": "Emma (RL)"
+			"desc": "Emma (Alt)"
 		},
 		"justin1": {
 			"country": "US",
@@ -1734,7 +1734,7 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/american/30-child-s-boy-voice-justin.html",
-			"desc": "Justin (RL)"
+			"desc": "Justin (Alt)"
 		},
 		"filiz2": {
 			"country": "TR",
@@ -1742,7 +1742,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/turkish/20-kadın-sesi-filiz.html",
-			"desc": "Filiz (RL)"
+			"desc": "Filiz (Alt)"
 		},
 		"ada1": {
 			"country": "NL",
@@ -3566,7 +3566,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Amy",
-			"desc": "Amy (PO)"
+			"desc": "Amy"
 		},
 		"emma4": {
 			"country": "GB",
@@ -3574,7 +3574,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Emma",
-			"desc": "Emma (PO)"
+			"desc": "Emma"
 		},
 		"brian": {
 			"country": "GB",
@@ -3582,7 +3582,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Brian",
-			"desc": "Brian (PO)"
+			"desc": "Brian"
 		},
 		"chantal": {
 			"country": "CA",
@@ -3598,7 +3598,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Enrique",
-			"desc": "Enrique (PO)"
+			"desc": "Enrique"
 		},
 		"conchita": {
 			"country": "ES",
@@ -3678,7 +3678,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Lea",
-			"desc": "Lea (PO)"
+			"desc": "Lea"
 		},
 		"vicki": {
 			"country": "DE",
@@ -3846,7 +3846,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Ines",
-			"desc": "Ines (PO)"
+			"desc": "Ines"
 		},
 		"carmen": {
 			"country": "RO",
@@ -3894,7 +3894,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Justin",
-			"desc": "Justin (PO)"
+			"desc": "Justin"
 		},
 		"kendra": {
 			"country": "US",
@@ -3902,7 +3902,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Kendra",
-			"desc": "Kendra (PO)"
+			"desc": "Kendra"
 		},
 		"matthew": {
 			"country": "US",
@@ -3918,7 +3918,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Ivy",
-			"desc": "Ivy (PO)"
+			"desc": "Ivy"
 		},
 		"joey": {
 			"country": "US",
@@ -3926,7 +3926,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Joey",
-			"desc": "Joey (PO)"
+			"desc": "Joey"
 		},
 		"joanna": {
 			"country": "US",
@@ -3950,7 +3950,7 @@
 			"gender": "F",
 			"source": "polly",
 			"arg": "Kimberly",
-			"desc": "Kimberly (PO)"
+			"desc": "Kimberly"
 		},
 		"miguel": {
 			"country": "US",
@@ -3958,7 +3958,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Miguel",
-			"desc": "Miguel (PO)"
+			"desc": "Miguel"
 		},
 		"lupe": {
 			"country": "US",

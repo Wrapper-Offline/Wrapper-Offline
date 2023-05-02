@@ -1,24 +1,24 @@
 const brotli = require("brotli");
+const { convertToMp3 } = require("../../utils/realFileUtil.js");
 const https = require("https");
 const voices = require("../data/voices.json").voices;
-const fileUtil = require("../../utils/realFileUtil");
 
 /**
  * uses tts demos to generate tts
- * @param {string} voiceName voice name
- * @param {string} text text
- * @returns {IncomingMessage}
+ * @param {string} voiceName
+ * @param {string} text
+ * @returns {Promise<IncomingMessage>}
  */
 module.exports = function processVoice(voiceName, rawText) {
-	return new Promise(async (res, rej) => {
+	return new Promise((res, rej) => {
 		const voice = voices[voiceName];
 		if (!voice) {
-			rej("That voice doesn't seem to exist.");
+			return rej("The voice you requested is unavailable.");
 		}
 
 		let flags = {};
 		const pieces = rawText.split("#%");
-		let text = pieces.pop();
+		let text = pieces.pop().substring(0, 180);
 		for (const rawFlag of pieces) {
 			const index = rawFlag.indexOf("=");
 			if (index == -1) continue;
@@ -30,8 +30,6 @@ module.exports = function processVoice(voiceName, rawText) {
 		try {
 			switch (voice.source) {
 				case "polly": {
-					// make sure it's under the char limit
-					text = text.substring(0, 181);
 					const body = new URLSearchParams({
 						msg: text,
 						lang: voice.arg,
@@ -50,10 +48,12 @@ module.exports = function processVoice(voiceName, rawText) {
 						},
 						(r) => {
 							let body = "";
-							r.on("data", (b) => body += b);
+							r.on("data", (c) => body += c);
 							r.on("end", () => {
 								const json = JSON.parse(body);
-								if (json.Error == 1) rej(json.Text);
+								if (json.Error == 1) {
+									return rej(json.Text);
+								}
 
 								https
 									.get(json.URL, res)
@@ -61,10 +61,12 @@ module.exports = function processVoice(voiceName, rawText) {
 							});
 							r.on("error", rej);
 						}
-					).on("error", rej);
+					)
+					req.on("error", rej);
 					req.end(body);
 					break;
 				}
+
 				case "nuance": {
 					const q = new URLSearchParams({
 						voice_name: voice.arg,
@@ -76,6 +78,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
+
 				case "cepstral": {
 					let pitch;
 					if (flags.pitch) {
@@ -120,31 +123,29 @@ module.exports = function processVoice(voiceName, rawText) {
 					}).on("error", rej);
 					break;
 				}
-				case "voiceforge": {
-					let fakeEmail = [];
-					for (let c = 0; c < 15; c++) fakeEmail.push(~~(65 + Math.random() * 26));
-					const email = `${String.fromCharCode.apply(null, fakeEmail)}@gmail.com`;
 
+				case "voiceforge": {
 					const q = new URLSearchParams({						
 						msg: text,
 						voice: voice.arg,
-						email
+						email: "null"
 					}).toString();
 					
 					https.get({
 						hostname: "api.voiceforge.com",
 						path: `/swift_engine?${q}`,
 						headers: { 
-							'User-Agent': 'just_audio/2.7.0 (Linux;Android 11) ExoPlayerLib/2.15.0',
-							HTTP_X_API_KEY: '8b3f76a8539',
-							'Accept-Encoding': 'identity',
-							'Icy-Metadata': '1',
-						 }
+							"User-Agent": "just_audio/2.7.0 (Linux;Android 11) ExoPlayerLib/2.15.0",
+							"HTTP_X_API_KEY": "8b3f76a8539",
+							"Accept-Encoding": "identity",
+							"Icy-Metadata": "1",
+						}
 					}, (r) => {
-						fileUtil.convertToMp3(r, "wav").then(res).catch(rej);
+						convertToMp3(r, "wav").then(res).catch(rej);
 					});
 					break;
 				}
+
 				case "vocalware": {
 					const [EID, LID, VID] = voice.arg;
 					const q = new URLSearchParams({
@@ -184,8 +185,8 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
+
 				case "acapela": {
-					// generate a fake email
 					let acapelaArray = [];
 					for (let c = 0; c < 15; c++) acapelaArray.push(~~(65 + Math.random() * 26));
 					const email = `${String.fromCharCode.apply(null, acapelaArray)}@gmail.com`;
@@ -254,6 +255,7 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
+
 				case "svox": {
 					const q = new URLSearchParams({
 						apikey: "e3a4477c01b482ea5acc6ed03b1f419f",
@@ -270,6 +272,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
+
 				case "readloud": {
 					const req = https.request(
 						{
@@ -287,14 +290,18 @@ module.exports = function processVoice(voiceName, rawText) {
 								const html = Buffer.concat(buffers);
 								const beg = html.indexOf("/tmp/");
 								const end = html.indexOf("mp3", beg) + 3;
-								const sub = html.subarray(beg, end).toString();
+								const path = html.subarray(beg, end).toString();
 
-								https
-									.get(`https://gonutts.net${sub}`, res)
-									.on("error", rej);
+								if (path.length > 0) {
+									https.get(`https://gonutts.net${path}`, res)
+										.on("error", rej);
+								} else {
+									return rej("Could not find voice clip file in response.");
+								}
 							});
 						}
-					).on("error", rej);
+					);
+					req.on("error", rej);
 					req.end(
 						new URLSearchParams({
 							but1: text,
@@ -306,6 +313,7 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
+
 				case "cereproc": {
 					const req = https.request(
 						{
@@ -333,15 +341,15 @@ module.exports = function processVoice(voiceName, rawText) {
 							});
 							r.on("error", rej);
 						}
-					).on("error", rej);
+					);
+					req.on("error", rej);
 					req.end(
 						`<speakExtended key='666'><voice>${voice.arg}</voice><text>${text}</text><audioFormat>mp3</audioFormat></speakExtended>`
 					);
 					break;
 				}
+
 				case "tiktok": {
-					// make sure it's under the char limit
-					text = text.substring(0, 299);
 					const req = https.request(
 						{
 							hostname: "tiktok-tts.weilnet.workers.dev",
@@ -356,7 +364,9 @@ module.exports = function processVoice(voiceName, rawText) {
 							r.on("data", (b) => body += b);
 							r.on("end", () => {
 								const json = JSON.parse(body);
-								if (json.success !== true) rej(json.error);
+								if (json.success !== true) {
+									return rej(json.error);
+								}
 
 								res(Buffer.from(json.data, "base64"));
 							});
@@ -371,7 +381,7 @@ module.exports = function processVoice(voiceName, rawText) {
 				}
 			}
 		} catch (e) {
-			rej(e);
+			return rej(e);
 		}
 	});
 };

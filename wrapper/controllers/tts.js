@@ -1,5 +1,5 @@
 const fs = require("fs");
-const httpz = require("@octanuary/httpz")
+const httpz = require("@octanuary/httpz");
 const tempfile = require("tempfile");
 const Asset = require("../models/asset");
 const fileUtil = require("../../utils/realFileUtil");
@@ -37,10 +37,9 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 	const { voice, text } = req.body;
 	res.assert(voice, text, 400, "");
 
-	try {
-		const filepath = tempfile(".mp3");
-		const writeStream = fs.createWriteStream(filepath);
-		const data = await processVoice(voice, text);
+	const filepath = tempfile(".mp3");
+	const writeStream = fs.createWriteStream(filepath);
+	processVoice(voice, text).then((data) => {
 		if (typeof data.on == "function") {
 			data.pipe(writeStream);
 		} else {
@@ -54,14 +53,14 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 				type: "sound",
 				subtype: "tts",
 				title: `[${voices[voice].desc}] ${text}`
-			}
+			};
 			const id = await Asset.save(filepath, "mp3", meta);
 			res.end(`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${meta.title}</title><published>0</published><tags></tags><duration>${meta.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`);
 		});
-	} catch (e) {
-		console.error("Error generating TTS:", e);
-		res.end(`1<error><code>ERR_ASSET_404</code><message>${e}</message><text></text></error>`);
-	};
+	}).catch((err) => {
+		console.error("Error generating TTS:", err);
+		res.end(`1<error><code>ERR_ASSET_404</code><message>${err}</message><text></text></error>`);
+	});
 });
 
 module.exports = group;
