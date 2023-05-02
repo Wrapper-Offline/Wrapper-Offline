@@ -1,7 +1,7 @@
 const brotli = require("brotli");
 const https = require("https");
-const http = require("http");
 const voices = require("../data/voices.json").voices;
+const fileUtil = require("../../utils/realFileUtil");
 
 /**
  * uses tts demos to generate tts
@@ -120,6 +120,31 @@ module.exports = function processVoice(voiceName, rawText) {
 					}).on("error", rej);
 					break;
 				}
+				case "voiceforge": {
+					let fakeEmail = [];
+					for (let c = 0; c < 15; c++) fakeEmail.push(~~(65 + Math.random() * 26));
+					const email = `${String.fromCharCode.apply(null, fakeEmail)}@gmail.com`;
+
+					const q = new URLSearchParams({						
+						msg: text,
+						voice: voice.arg,
+						email
+					}).toString();
+					
+					https.get({
+						hostname: "api.voiceforge.com",
+						path: `/swift_engine?${q}`,
+						headers: { 
+							'User-Agent': 'just_audio/2.7.0 (Linux;Android 11) ExoPlayerLib/2.15.0',
+							HTTP_X_API_KEY: '8b3f76a8539',
+							'Accept-Encoding': 'identity',
+							'Icy-Metadata': '1',
+						 }
+					}, (r) => {
+						fileUtil.convertToMp3(r, "wav").then(res).catch(rej);
+					});
+					break;
+				}
 				case "vocalware": {
 					const [EID, LID, VID] = voice.arg;
 					const q = new URLSearchParams({
@@ -179,11 +204,11 @@ module.exports = function processVoice(voiceName, rawText) {
 							r.on("data", (b) => buffers.push(b));
 							r.on("end", () => {
 								const nonce = JSON.parse(Buffer.concat(buffers)).nonce;
-								let req = http.request(
+								let req = https.request(
 									{
 										hostname: "acapela-group.com",
-										port: "8080",
-										path: "/webservices/1-34-01-Mobility/Synthesizer",
+										port: "8443",
+										path: "/Services/Synthesizer",
 										method: "POST",
 										headers: {
 											"Content-Type": "application/x-www-form-urlencoded",
@@ -198,7 +223,7 @@ module.exports = function processVoice(voiceName, rawText) {
 											const end = html.indexOf("&", beg);
 											const sub = html.subarray(beg, end).toString();
 
-											http
+											https
 												.get(sub, res)
 												.on("error", rej);
 										});
@@ -248,7 +273,7 @@ module.exports = function processVoice(voiceName, rawText) {
 				case "readloud": {
 					const req = https.request(
 						{
-							hostname: "readloud.net",
+							hostname: "gonutts.net",
 							path: voice.arg,
 							method: "POST",
 							headers: { 
@@ -265,7 +290,7 @@ module.exports = function processVoice(voiceName, rawText) {
 								const sub = html.subarray(beg, end).toString();
 
 								https
-									.get(`https://readloud.net${sub}`, res)
+									.get(`https://gonutts.net${sub}`, res)
 									.on("error", rej);
 							});
 						}
