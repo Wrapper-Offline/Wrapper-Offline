@@ -12,7 +12,9 @@ module.exports = class GoDatabase {
 				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
 				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
-				IS_WIDE: "1" // Sets the video player to 16:9.
+				IS_WIDE: "1", // Sets the video player to 16:9.
+				SAVE_LOG_FILES: false, // what do you think
+				HIDE_NAVBAR: true, // what do you think
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
@@ -28,6 +30,12 @@ module.exports = class GoDatabase {
 			} catch (e) {
 				throw new Error("Something is extremely awfully horribly terribly preposterously crazily insanely madly wrong. You may be in a read-only system/admin folder.");
 			}
+		}
+		this.#refresh();
+		if (Object.keys(this.json).length !== Object.keys(baseDb).length) {
+			const newJson = baseDb;
+			Object.assign(newJson, this.json);
+			this.save(newJson);
 		}
 	}
 

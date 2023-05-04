@@ -2,9 +2,9 @@ const previewer = $("#previewer");
 const studio = $("#obj");
 const body = $("body");
 
-/**
- * studio functions
- */
+/*
+studio functions
+*/
 const tutorialReload = (new URLSearchParams(window.location.search)).get("tutorial");
 interactiveTutorial = {
 	neverDisplay: function() {
@@ -12,10 +12,11 @@ interactiveTutorial = {
 	}
 };
 function studioLoaded(arg) { console.log(arg) }
+function quitStudio() { window.location.href = "/" }
 
-/**
- * show and hide widgets
- */
+/*
+show and hide widgets
+*/
 let importerVisible = false;
 function showImporter() {
 	switch(importerVisible) {

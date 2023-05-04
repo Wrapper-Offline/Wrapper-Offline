@@ -4,6 +4,7 @@ License: MIT
 */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
+const settings = (new (require("./data/database"))(true)).select();
 const { app, BrowserWindow, Menu } = require("electron");
 const fs = require("fs");
 const path = require("path");
@@ -25,6 +26,22 @@ const discord = require("./utils/discord");
 // start the server
 const server = require("./wrapper/server");
 server();
+
+/*
+log files
+*/
+if (settings.SAVE_LOG_FILES) {
+	const filePath = path.join(logs, new Date().valueOf() + ".txt");
+	const writeStream = fs.createWriteStream(filePath);
+	console.log = console.error = function (c) {
+		writeStream.write(c + "\n");
+		process.stdout.write(c + "\n");
+	};
+	process.on("exit", () => {
+		console.log("Exiting...");
+		writeStream.close();
+	});
+}
 
 /*
 load flash player
@@ -62,7 +79,7 @@ const createWindow = () => {
 	// use it in external scripts
 	process.env.MAIN_WINDOW_ID = mainWindow.id;
 
-	mainWindow.setAutoHideMenuBar(true);
+	mainWindow.setAutoHideMenuBar(settings.HIDE_NAVBAR);
 	Menu.setApplicationMenu(Menu.buildFromTemplate([
 		{
 			label: "Home",

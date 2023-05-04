@@ -138,10 +138,11 @@ group.route("GET", "/go_full", async (req, res) => {
 });
 group.route("GET", "/player", async (req, res) => {
 	discord("Video Player");
-	const { IS_WIDE } = DB.select();
+	const { IS_WIDE, DEFAULT_WATERMARK } = DB.select();
 	let flashvars = {
 		autostart: 1,
 		isWide: IS_WIDE,
+		isWixPaid: DEFAULT_WATERMARK == "wix" ? 0 : 1,
 		ut: 60,
 		apiserver: "/",
 		storePath: STORE_URL + "/<store>",

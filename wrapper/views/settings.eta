@@ -28,22 +28,27 @@
 
 					<h3>Discord rich presence</h3>
 					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
-					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
-					them. Turning this off will make Offline stop saying when you're using it on Discord.<br/>
-					<i>Applies on next restart.</i></p>
+						much like how lots of modern computer games will show on your Discord status when you're playing<br/>
+						them. Turning this off will make Offline stop saying when you're using it on Discord.<br/>
+						<i>Applies on next restart.</i></p>
 					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
 
 					<h3>Truncated themelist</h3>
 					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
-					Keeping this off is highly suggested.<br/>
-					However, if you want to see everything the program has to offer, turn this on.</p>
+						Keeping this off is highly suggested.<br/>
+						However, if you want to see everything the program has to offer, turn this on.</p>
 					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
 
 					<h3>Show waveforms</h3>
 					<p>By default, waveforms for audio are generated in the video editor.<br/>
-					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
-					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
+						While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
+						Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
 					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
+
+					<h3>Save log files</h3>
+					<p>Saves everything in the console to the _LOGS folder. This may take up a lot of space if left on.<br/>
+						<i>Applies on next restart.</i></p>
+					<input class="setting" type="checkbox" id="SAVE_LOG_FILES"></input>
 				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
@@ -59,20 +64,21 @@
 						<option value="twoLines">Go Make Your Own</option>
 						<option value="g4s">GoAnimate For Schools</option>
 						<option value="freeTrial">Free Trial</option>
+						<option value="wix">GoAnimate Wix</option>
 					</select>
 
 					<h3>14:9 or 16:9 aspect ratio</h3>
 					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
-					However, you can toggle this setting to make it 14:9, like a video<br/>
-					made with Vyond before 2014.</p>
+						However, you can toggle this setting to make it 14:9, like a video<br/>
+						made with Vyond before 2014.</p>
 					<select class="setting" id="IS_WIDE">
 						<option value="0">14:9</option>
 						<option value="1">16:9</option>
 					</select>
 
-					<h3>Show navbar by default</h3>
+					<h3>Auto-hide navbar</h3>
 					<p><i>Applies on next restart.</i></p>
-					<input class="setting" type="checkbox" id="SHOW_NAVBAR"></input>
+					<input class="setting" type="checkbox" id="HIDE_NAVBAR"></input>
 				</nav>
 				<nav class="tab">
 					<h2>Your Library</h2>
@@ -91,8 +97,8 @@
 			</nav>
 		</main>
 
-		<form class="hide" enctype='multipart/form-data' action='/api/char/upload' method='post'>
-			<input id='char-file' type="file" onchange="this.form.submit()" name='import' />
+		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
+			<input id="char-file" type="file" onchange="this.form.submit()" name="import" />
 		</form>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>

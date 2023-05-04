@@ -1,6 +1,7 @@
 # General Wrapper Offline Stuff
 _ASSETS/*
 _CACHÉ/*
+_LOGS/*
 _SAVED/*
 _SAVED/database.json
 !_*/_NO_REMÖVE

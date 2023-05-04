@@ -63,7 +63,7 @@ group.route("POST", "/goapi/getMovieInfo/", (req, res) => {
 				// default watermark
 				(() => {
 					const defaultW = DB2.select().DEFAULT_WATERMARK;
-					return defaultW == "default" ?
+					return defaultW == "default" || defaultW == "wix" ?
 						// return nothing for the GoAnimate watermark
 						"" :
 						`<watermark style="${defaultW}"/>`
