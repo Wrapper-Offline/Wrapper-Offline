@@ -22,7 +22,7 @@
 				<thead>
 					<tr>
 						<td></td>
-						<td>Movie Title</td>
+						<td id="search_container"><input id="search_bar" type="text" placeholder="Search Movies"/></td>
 						<td>Last Modified</td>
 						<td></td>
 					</tr>
@@ -41,10 +41,11 @@
 
 	<script src="/pages/js/global.js"></script>
 	<script>
-		let json;
+		let json, searchTerm = "";
 		let starters = true;
 		const tbody = $("tbody");
 		const loadMore = $("#load_more");
+		const searchBar = $("#search_bar");
 
 		let C = 0;
 		function loadRows() {
@@ -59,6 +60,13 @@
 				}
 
 				const tbl = json[c];
+
+				if (
+					tbl.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
+					searchTerm.length > 0
+				) {
+					continue;
+				}
 				// make the date and time less confusing to read
 				const date = tbl.date.split("T")[0];
 				const time = tbl.date.split("T")[1].substring(0, 8);
@@ -90,6 +98,14 @@
 		}
 		// i want more movies
 		loadMore[0].onclick = loadRows;
+
+		searchBar.on("input", () => {
+			searchTerm = searchBar.val();
+			tbody.html("");
+			C = 0;
+			loadMore.show();
+			loadRows();
+		});
 
 		function switchFilter(shouldEqual) {
 			if (starters == shouldEqual) return;

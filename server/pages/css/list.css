@@ -64,7 +64,6 @@ table rows
 tbody>tr {
 	border-top: 0;
 	border-bottom: 1px solid #ddd;
-	transition: var(--transition);
 }
 tbody>tr:hover { background: #f7f7f7 }
 html.dark tbody>tr { border-color: #3a3a3a }
@@ -80,6 +79,22 @@ thead {
 	border-bottom: 2px solid #ddd;
 }
 html.dark thead { border-color: #3a3a3a }
+/* search bar */
+thead td#search_container:hover {
+	background: #f2f2f2;
+}
+html.dark thead td#search_container:hover {
+	background: #2b2b2b;
+}
+thead input {
+    background: transparent;
+    border: none;
+    color: inherit;
+	width: 100%;
+}
+thead input:focus {
+    outline: none;
+}
 
 
 /**
