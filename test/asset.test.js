@@ -1,13 +1,11 @@
 const env = Object.assign(process.env, require("../env"), require("../config"));
-// modules
 const assert = require("node:assert");
 const base64 = require("js-base64");
 const fs = require("fs");
 const path = require("path");
 const request = require("supertest");
 const xmldoc = require("xmldoc");
-// stuff
-const server = require("../server")();
+const server = require("../wrapper/server")();
 
 let id;
 
@@ -89,4 +87,3 @@ describe("Asset", () => {
 			});
 	});
 });
-

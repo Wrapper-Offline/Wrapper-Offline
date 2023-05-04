@@ -98,7 +98,7 @@ group.route(
 	["/goapi/getMovie/", /\/file\/movie\/file\/([^/]+)$/],
 	async (req, res) => {
 		const isGet = req.method == "GET";
-		const id = isGet ?
+		const id = req.body.movieId = isGet ?
 			req.matches[1] :
 			req.query.movieId;
 		res.assert(id, 400, "1No ID specified.");
