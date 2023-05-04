@@ -142,7 +142,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						}
 					}, (r) => {
 						convertToMp3(r, "wav").then(res).catch(rej);
-					});
+					}).on("error", rej);
 					break;
 				}
 
