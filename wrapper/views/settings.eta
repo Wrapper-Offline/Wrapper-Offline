@@ -19,17 +19,18 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a href="#" class="selected" data-triggers="0">Features</a>
+					<a href="#" class="selected" data-triggers="0">Behavior</a>
 					<a href="#" data-triggers="1">Appearance</a>
 					<a href="#" data-triggers="2">Your Library</a>
 				</div>
 				<nav class="tab" style="display:block">
-					<h2>Features</h2>
+					<h2>Behavior</h2>
 
 					<h3>Discord rich presence</h3>
 					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
 					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
-					them. Turning this off will make Offline stop saying when you're using it on Discord.</p>
+					them. Turning this off will make Offline stop saying when you're using it on Discord.<br/>
+					<i>Applies on next restart.</i></p>
 					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
 
 					<h3>Truncated themelist</h3>
@@ -43,10 +44,16 @@
 					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
 					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
 					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
-					
-					<h3>Default watermark</h3>
-					<p>The Video Player has 4 choices for default watermarks.<br/>
-					Default watermarks are shown when you choose a Go!Animate watermark.</p>
+				</nav>
+				<nav class="tab">
+					<h2>Appearance</h2>
+
+					<h3>Dark mode</h3>
+					<p><i>Does not apply in the Video Maker or Character Creator.</i></p>
+					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+
+					<h3>GoAnimate watermark</h3>
+					<p>The Video Player has 4 choices for GoAnimate watermarks.</p>
 					<select class="setting" id="DEFAULT_WATERMARK">
 						<option value="default">GoAnimate</option>
 						<option value="twoLines">Go Make Your Own</option>
@@ -62,13 +69,10 @@
 						<option value="0">14:9</option>
 						<option value="1">16:9</option>
 					</select>
-				</nav>
-				<nav class="tab">
-					<h2>Appearance</h2>
 
-					<h3>Dark mode</h3>
-					<p>Self-explanatory. Makes the Video List dark.</p>
-					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+					<h3>Show navbar by default</h3>
+					<p><i>Applies on next restart.</i></p>
+					<input class="setting" type="checkbox" id="SHOW_NAVBAR"></input>
 				</nav>
 				<nav class="tab">
 					<h2>Your Library</h2>

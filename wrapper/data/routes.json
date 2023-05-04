@@ -81,9 +81,5 @@
 			},
 			"content": "0"
 		}
-	},
-	"pages": {
-		"/go_full": "",
-		"/cc": "<script>function characterSaved(){window.location='pages/html/list.html'}</script>"
 	}
 }

@@ -148,7 +148,7 @@ header dropdowns
 	border: 1px solid #222;
 	margin: 10px 0;
 }
-/* character upload */
+/* movie upload */
 form.hide { display: none }
 
 /**
@@ -171,8 +171,8 @@ tabs
 }
 .tab_buttons a {
 	/* style */
-	background: #353535;
-	color: #fff;
+	background: #fff;
+	color: #333;
 	text-decoration: none;
 	border-radius: 5px;
 	transition: var(--transition);
@@ -180,8 +180,13 @@ tabs
 	padding: 8px 18px;
 	margin: 2px 0;
 }
-.tab_buttons a:hover    { background: #2a2a3a; color: var(--primary) }
-.tab_buttons a.selected { background: var(--primary); color: #fff }
+.tab_buttons a:hover { background: #ddd; color: var(--primary) }
+html body .tab_buttons a.selected { background: var(--primary); color: #fff }
+html.dark .tab_buttons a {
+	background: #353535;
+	color: #fff;
+}
+html.dark .tab_buttons a:hover:not(.selected) { background: #2a2a2a; color: var(--primary) }
 .tab { padding: 0 20px; display: none }
 #shortthemelist:hover,
 #darkmode:hover {

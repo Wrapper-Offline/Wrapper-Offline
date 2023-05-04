@@ -21,18 +21,19 @@ module.exports = {
 	 * @param {string} fileExt file type
 	 * @returns {Promise<import("stream").PassThrough>}
 	 */
-	 convertToMp3(data, fileExt) {
+	convertToMp3(data, fileExt) {
 		return new Promise((res, rej) => {
 			const command = ffmpeg(data)
 				.inputFormat(fileExt)
 				.toFormat("mp3")
-				.on("error", (e) => rej("Error converting audio:", e));
+				.audioBitrate(4.4e4)
+				.on("error", (err) => rej(err));
 			res(command.pipe());
 		});
 	},
 
 	/**
-	 * gets an mp3 duration in ms
+	 * mp3-duration but now it's wrapped in a promise and returns the duration in ms
 	 * @param {string | Buffer} data mp3 path or buffer
 	 * @returns {Promise<number>}
 	 */

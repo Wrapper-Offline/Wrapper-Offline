@@ -96,7 +96,7 @@ load
 group.route(
 	"*",
 	["/goapi/getMovie/", /\/file\/movie\/file\/([^/]+)$/],
-	async (req, res) => {
+	(req, res) => {
 		const isGet = req.method == "GET";
 		const id = req.body.movieId = isGet ?
 			req.matches[1] :
