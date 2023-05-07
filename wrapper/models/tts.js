@@ -296,7 +296,7 @@ module.exports = function processVoice(voiceName, rawText) {
 								if (path.length > 0) {
 									https.get({
 										hostname: "101.99.94.14",	
-										path: `/${sub}`,
+										path: `/${path}`,
 										headers: {
 											Host: "gonutts.net"
 										}
