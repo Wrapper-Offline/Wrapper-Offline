@@ -276,10 +276,11 @@ module.exports = function processVoice(voiceName, rawText) {
 				case "readloud": {
 					const req = https.request(
 						{
-							hostname: "gonutts.net",
+							hostname: "101.99.94.14",														
 							path: voice.arg,
 							method: "POST",
-							headers: { 
+							headers: { 			
+								Host: "gonutts.net",					
 								"Content-Type": "application/x-www-form-urlencoded"
 							}
 						},
@@ -293,7 +294,13 @@ module.exports = function processVoice(voiceName, rawText) {
 								const path = html.subarray(beg, end).toString();
 
 								if (path.length > 0) {
-									https.get(`https://gonutts.net${path}`, res)
+									https.get({
+										hostname: "101.99.94.14",	
+										path: `/${path}`,
+										headers: {
+											Host: "gonutts.net"
+										}
+									}, res)
 										.on("error", rej);
 								} else {
 									return rej("Could not find voice clip file in response.");
