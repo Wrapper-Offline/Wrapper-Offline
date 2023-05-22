@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title>Video Player - Wrapper: Offline</title>
+		<title>Your Video - GoAnimate</title>
 		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
@@ -13,23 +13,4 @@
 			<%~ it.object(it.attrs, it.params) %>
 		</main>
 	</body>
-
-	<script>
-		const player = document.getElementById("obj");
-		function myNameIsClevelandBrown() {
-			let isPlaying = true;
-
-			document.addEventListener("keydown", (event) => {
-				if (event.keyCode !== 32) return;
-				if (isPlaying) {
-					player.pause();
-					isPlaying = false;
-				} else {
-					player.play();
-					isPlaying = true;
-				}
-			});
-		}
-
-	</script>
 </html>
