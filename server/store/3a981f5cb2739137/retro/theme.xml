@@ -2616,8 +2616,6 @@
 	<sound id="Romance.swf" name="Romance" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="N" is_premium="N" aid="1188" money="0" sharing="0"/>
 	<sound id="BroadcastNews.swf" name="Broadcast News" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="N" is_premium="N" aid="1189" money="0" sharing="0"/>
 	<sound id="FunkyBeat.swf" name="Funky Beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="N" is_premium="N" aid="1190" money="0" sharing="0"/>
-	<sound id="dogs_dogs_dogs.swf" name="Dogs Dogs Dogs Dogs" downloadtype="progressive" subtype="bgmusic" duration="209100" enable="Y" is_premium="N" aid="1191" money="0" sharing="0"/>
-	<sound id="dogs_dogs_dogs.mp3" name="Dogs Dogs Dogs Dogs" downloadtype="progressive" subtype="bgmusic" duration="209100" enable="Y" is_premium="N" aid="6023" money="0" sharing="0"/>
 	<bubble id="ellipse" x="0" y="0" w="180" h="90" rotate="0" type="ELLIPSE" enable="N" is_premium="N" aid="1192" money="0" sharing="0">
 	<body rgb="0xFFFFFF" linergb="0" tailx="180" taily="110"/>
 	<text rgb="0" font="Blambot Casual" size="14" align="center" bold="false" italic="false">Click here to edit</text>
