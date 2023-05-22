@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Create - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's create page"/>
+		<title>The Premium Video Maker from GoAnimate - Create Polished Videos & Animations</title>
+		<meta name="description" content="GoAnimate Theme List"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
 		<script src="/pages/js/jquery.js"></script>
@@ -12,228 +12,237 @@
 	</head>
 
 	<body>
-		<%~ includeFile("./includes/header", it); %>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
-			<h1>Select a theme</h1>
+			<h1>Create Animated Videos for Your Business. Easily.</h1>
+			<h2>EVERYTHING YOU NEED IN A WIDE RANGE OF STYLES. Our themes are carefully produced sets of matching assets, such as characters, actions, background, props and scene starters - each with a unique visual style. Our flagship theme, Business Friendly, offers the widest selection, providing hundreds of actions across numerous occupations and activities, with more being added all the time.</h2>
+			<h1><a href="http://localhost:4343/go_full" class="button_big">Make a Video - Start from Scratch</a></h1>
 
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('custom', 'family')">
-					<img src="/pages/img/themes/custom.jpg" alt="Comedy World">
-					Comedy World
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('action', 'cc2')">
-					<img src="/pages/img/themes/action.jpg" alt="Lil' Peepz">
-					Lil' Peepz
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('business', 'business')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
-					Business Friendly
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Business Friendly (BUSINESS EXCLUSIVE)</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=business" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=business" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('retro')">
-					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
-					Cartoon Classics
+			<div class="theme" data-has-cc>
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/custom.jpg" alt="Comedy World">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Comedy World</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=custom" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=family" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
+			<div class="theme" data-has-cc>
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/action.jpg" alt="Lil' Peepz">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Lil' Peepz</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=action" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
+				</a>
+			
+			</div>
 			<div class="theme">
-				<a href="#" onclick="redirect('politics2')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/politics2.jpg" alt="White Houserz">
-					White Houserz
+				</div>
+				<div class="theme-meat">
+					<a class="none" >White Houserz</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=politics2" class="button_big">Make a Video</a>
+					</div>
+				</div>
+			</div>
+				</a>
+
+			</div>
+			<div class="theme">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Stickly Business (BUSINESS EXCLUSIVE)</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?sticklybiz" class="button_big">Make a Video</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme">
-				<a href="#" onclick="redirect('stick')">
-					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
-					Stick Figure
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Cartoon Classics</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=retro" class="button_big">Make a Video</a>
+					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="theme">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/bizmodels.jpg" alt="Business Models">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Business Models</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=bizmodels" class="button_big">Make a Video</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('anime', 'anime')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/anime.jpg" alt="Anime">
-					Anime
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Anime</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=anime" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=anime" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('ninjaanime', 'ninjaanime')">
-					<img src="/pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
-					Ninja Anime
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/ninjaanime.jpg" alt=" Ninja Anime">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Ninja Anime</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=ninjaanime" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=ninjaanime" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('spacecitizen', 'spacecitizen')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
-					Space Citizens
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Space Citizens</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=spacecitizen" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=spacecitizen" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('chibi', 'chibi')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/chibi.jpg" alt="Chibi Peepz">
-					Chibi Peepz
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Chibi Peepz</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=chibi" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=chibi" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('ninja', 'ninja')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
-					Chibi Ninjas
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Chibi Ninjas</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=ninja" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=ninja" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
 			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('animal', 'cc2')">
-					<img src="/pages/img/themes/animal.jpg" alt="Lil' Petz World">
-					Lil' Petz World
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('space', 'cc2')">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
 					<img src="/pages/img/themes/space.jpg" alt="Space Peepz">
-					Space Peepz
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Space Peepz</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=space" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
 				</a>
 			</div>
-			<% if (!it.truncatedThemelist) { %>
-				<div class="theme">
-					<a href="#" onclick="redirect('fullenergy')">
-						<img src="/pages/img/themes/fullenergy.png" alt="Full Energy">
-						<div>Full Energy</div>
-					</a>
+			<div class="theme">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
 				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('politic')">
-						<img src="/pages/img/themes/politic.png" alt="Politics &amp; Celebrity">
-						<div>Politics &amp; Celebrity</div>
-					</a>
+				<div class="theme-meat">
+					<a class="none" >Stick Figure</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=stick" class="button_big">Make a Video</a>
+					</div>
 				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('christmas')">
-						<img src="/pages/img/themes/christmas.png" alt="Holiday &amp; Seasonal">
-						<div>Holiday &amp; Seasonal</div>
-					</a>
+			</div>
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/animal.jpg" alt="Lil' Petz World">
 				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('monstermsh')">
-						<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
-						<div>Monsters Mayhem</div>
-					</a>
+				<div class="theme-meat">
+					<a class="none" >Lil' Petz World</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=animal" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
+					</div>
 				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('akon')">
-						<img src="/pages/img/themes/akon.jpg" alt="AKON&#8482;">
-						AKON&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('ben10')">
-						<img src="/pages/img/themes/ben10.png" alt="Ben 10&#8482;">
-						Ben 10&#8482;
-					</a>
-				</div>
-				<div class="theme" data-has-cc>
-					<a href="#" onclick="redirect('botdf', 'cc2')">
-						<img src="/pages/img/themes/botdf.jpg" alt="Blood on the Dance Floor&#8482;">
-						<div>Blood on the Dance Floor&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('bunny')">
-						<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
-						<div>It's Happy Bunny&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('chowder')">
-						<img src="/pages/img/themes/chowder.png" alt="Chowder&#8482;">
-						<div>Chowder&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('domo')">
-						<img src="/pages/img/themes/domo.png" alt="Domo&#8482;">
-						<div>Domo&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('monkeytalk')">
-						<img src="/pages/img/themes/monkeytalk.png" alt="SuperRica & Rashy&#8482;">
-						<div>SuperRica &amp; Rashy&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('sf')">
-						<img src="/pages/img/themes/sf.png" alt="Street Fighter&#8482;">
-						<div>Street Fighter&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('startrek')">
-						<img src="/pages/img/themes/startrek.jpg" alt="Star Trek&#8482; Quogs">
-						<div>Star Trek&#8482; Quogs</div>
-					</a>
-				</div>
-				<div class="theme" data-has-cc>
-					<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
-						<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
-						Toon Adventure&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('underdog')">
-						<img src="/pages/img/themes/underdog.png" alt="Underdog&#8482;">
-						Underdog&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('willie')">
-						<img src="/pages/img/themes/willie.jpg" alt="Willie Nelson&#8482;">
-						Willie Nelson&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('street')">
-						<img src="/pages/img/themes/street.png" alt="Street">
-						Street
-					</a>
-				</div>
-			<% } %>
-			<div id="char-copy">
-				<h2>Copy a character</h2>
-				<p>Have a character ID? Use it here!</p>
-				<input type="text" value="832304" name="char-id" />
-				<a href="#" onclick="copyRedirect()">Copy</a>
+			</div>
 			</div>
 		</main>
 
-		<%~ includeFile("./includes/footer", it); %>
-	</body>
-
-	<script>
-		const charId = $("input[name='char-id']");
-
-		// filter the list
-		const params = new URLSearchParams(window.location.search);
-		// default to all themes
-		const filter = params.get("filter") || "vl";
-		if (filter == "cc") {
-			$(".theme").not("[data-has-cc]").hide();
-		} else {
-			$("#char-copy").hide();
-		}
-
-		function redirect(tId, ccId = false) {
-			if (filter == "cc") {
-				window.location.href = `./cc_browser?themeId=${ccId}`;
-				return;
-			}
-			window.location.href = `./go_full?tray=${tId}`;
-		}
-		function copyRedirect() {
-			const id = charId.val();
-			window.location.href = `./cc?original_asset_id=${id}`;
-		}
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
 
 	</script>
 
