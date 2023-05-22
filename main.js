@@ -1,25 +1,24 @@
-/*
-Wrapper: Offline
-License: MIT
-*/
+/**
+ * GoAnimate 2014
+ * License: MIT
+ */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
-const settings = (new (require("./data/database"))(true)).select();
+// modules
 const { app, BrowserWindow, Menu } = require("electron");
 const fs = require("fs");
 const path = require("path");
+// vars
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
-const logs = path.join(__dirname, env.LOG_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
 
-/*
-initialization
-*/
+/**
+ * initialization
+ */
 // create directories if they're missing
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
-if (!fs.existsSync(logs)) fs.mkdirSync(logs);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
 // start discord rpc
 const discord = require("./utils/discord");
@@ -27,25 +26,9 @@ const discord = require("./utils/discord");
 const server = require("./wrapper/server");
 server();
 
-/*
-log files
-*/
-if (settings.SAVE_LOG_FILES) {
-	const filePath = path.join(logs, new Date().valueOf() + ".txt");
-	const writeStream = fs.createWriteStream(filePath);
-	console.log = console.error = function (c) {
-		writeStream.write(c + "\n");
-		process.stdout.write(c + "\n");
-	};
-	process.on("exit", () => {
-		console.log("Exiting...");
-		writeStream.close();
-	});
-}
-
-/*
-load flash player
-*/
+/**
+ * load flash player
+ */
 let pluginName;
 switch (process.platform) {
 	case "win32": {
@@ -69,7 +52,7 @@ const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		width: 1200,
 		height: 700,
-		title: "Wrapper: Offline",
+		title: "GoAnimate - Loading Assets & your dashboard...",
 		icon: path.join(__dirname, "./server/favicon.ico"),
 		webPreferences: {
 			plugins: true,
@@ -79,58 +62,17 @@ const createWindow = () => {
 	// use it in external scripts
 	process.env.MAIN_WINDOW_ID = mainWindow.id;
 
-	mainWindow.setAutoHideMenuBar(settings.HIDE_NAVBAR);
-	Menu.setApplicationMenu(Menu.buildFromTemplate([
-		{
-			label: "Home",
-			click: () => {
-				const id = +process.env.MAIN_WINDOW_ID;
-				BrowserWindow.fromId(id).loadURL("http://localhost:4343")
-			}
-		},
-		{
-			label: "View",
-			submenu: [
-				{ type: "separator" },
-				{ role: "zoomIn" },
-				{ role: "zoomOut" },
-				{ role: "resetZoom" },
-				{ type: "separator" },
-				{ role: "toggleDevTools" },
-				{ type: "separator" },
-				{ role: "minimize" },
-				...(process.platform == "darwin" ? [
-					{ role: "front" },
-					{ type: "separator" },
-					{ role: "window" }
-				] : [
-					{ role: "close" }
-				]),
-			]
-		},
-		{
-			role: "Help",
-			submenu: [
-				{
-					label: "Discord Server",
-					click: async () => {
-						const { shell } = require("electron");
-						await shell.openExternal("https://discord.gg/Kf7BzSw");
-					}
-				},
-				{
-					label: "GitHub",
-					click: async () => {
-						const { shell } = require("electron");
-						await shell.openExternal("https://github.com/Wrapper-Offline/Wrapper-Offline");
-					}
-				}
-			]
-		}
-	]));
+	// initialize stuff
+	// clear the menu bar
+	Menu.setApplicationMenu(Menu.buildFromTemplate([]));
 	// load the video list
-	mainWindow.loadURL("http://localhost:" + env.SERVER_PORT);
+	mainWindow.loadURL("http://localhost:4343");
 	mainWindow.on("closed", () => mainWindow = null);
+
+	// debug stuff
+	if (env.NODE_ENV == "development") {
+		mainWindow.webContents.openDevTools();
+	}
 };
 
 app.whenReady().then(() => {
