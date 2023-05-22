@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png" />
-		<title>Settings - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's settings"/>
+		<title> Your GoAnimate Settings</title>
+		<meta name="description" content="GoAnimate's Settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
 		<script src="/pages/js/jquery.js"></script>
@@ -19,74 +19,63 @@
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
 					<h1 id="settings">Settings</h1>
-					<a href="#" class="selected" data-triggers="0">Behavior</a>
+					<a href="#" class="selected" data-triggers="0">Features</a>
 					<a href="#" data-triggers="1">Appearance</a>
-					<a href="#" data-triggers="2">Your Library</a>
+					<a href="#" data-triggers="2">Your Asset Library</a>
 				</div>
 				<nav class="tab" style="display:block">
-					<h2>Behavior</h2>
+					<h2>Features</h2>
 
 					<h3>Discord rich presence</h3>
-					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
-						much like how lots of modern computer games will show on your Discord status when you're playing<br/>
-						them. Turning this off will make Offline stop saying when you're using it on Discord.<br/>
-						<i>Applies on next restart.</i></p>
+					<p>It's used to show when you're using GoAnimate in your "Playing A Game" status on Discord,<br/>
+					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
+					them. Turning this off will make GoAnimate stop saying when you're using it on Discord.</p>
 					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
 
 					<h3>Truncated themelist</h3>
 					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
-						Keeping this off is highly suggested.<br/>
-						However, if you want to see everything the program has to offer, turn this on.</p>
+					Keeping this off is highly suggested.<br/>
+					However, if you want to see everything GoAnimate has to offer, turn this on.</p>
 					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
 
 					<h3>Show waveforms</h3>
 					<p>By default, waveforms for audio are generated in the video editor.<br/>
-						While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
-						Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
+					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
+					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
 					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
-
-					<h3>Save log files</h3>
-					<p>Saves everything in the console to the _LOGS folder. This may take up a lot of space if left on.<br/>
-						<i>Applies on next restart.</i></p>
-					<input class="setting" type="checkbox" id="SAVE_LOG_FILES"></input>
-				</nav>
-				<nav class="tab">
-					<h2>Appearance</h2>
-
-					<h3>Dark mode</h3>
-					<p><i>Does not apply in the Video Maker or Character Creator.</i></p>
-					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
-
-					<h3>GoAnimate watermark</h3>
-					<p>The Video Player has 4 choices for GoAnimate watermarks.</p>
+					
+					<h3>Default watermark</h3>
+					<p>The Video Player has 4 choices for default watermarks.<br/>
+					Default watermarks are shown when you choose a GoAnimate watermark.</p>
 					<select class="setting" id="DEFAULT_WATERMARK">
 						<option value="default">GoAnimate</option>
 						<option value="twoLines">Go Make Your Own</option>
 						<option value="g4s">GoAnimate For Schools</option>
 						<option value="freeTrial">Free Trial</option>
-						<option value="wix">GoAnimate Wix</option>
 					</select>
 
 					<h3>14:9 or 16:9 aspect ratio</h3>
 					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
-						However, you can toggle this setting to make it 14:9, like a video<br/>
-						made with Vyond before 2014.</p>
+					However, you can toggle this setting to make it 14:9, like a video<br/>
+					made with GoAnimate from 2014 or before.</p>
 					<select class="setting" id="IS_WIDE">
 						<option value="0">14:9</option>
 						<option value="1">16:9</option>
 					</select>
-
-					<h3>Auto-hide navbar</h3>
-					<p><i>Applies on next restart.</i></p>
-					<input class="setting" type="checkbox" id="HIDE_NAVBAR"></input>
 				</nav>
 				<nav class="tab">
-					<h2>Your Library</h2>
+					<h2>Appearance</h2>
+
+					<h3>Toggle Dark mode</h3>
+					<p>Toggling this will make all global GoAnimate webpages into dark mode. By default, this is turned off.</p>
+					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+				</nav>
+				<nav class="tab">
+					<h2>Your Asset Library</h2>
 
 					<nav id="importer">
 						<nav id="import_head">
 							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
-							<button onclick="document.getElementById('char-file').click()" class="import-button">UPLOAD A CHARACTER</button>
 							<form>
 								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 							</form>
@@ -97,10 +86,6 @@
 			</nav>
 		</main>
 
-		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
-			<input id="char-file" type="file" onchange="this.form.submit()" name="import" />
-		</form>
-
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
@@ -110,9 +95,9 @@
 		new AssetImporter(importer);
 		// this is a mess of type conversion
 
-		/*
-		list
-		*/
+		/**
+		 * list
+		 */
 		let list = [];
 		for (const elem of $(".setting")) list.push(elem.id);
 
@@ -172,9 +157,9 @@
 			}
 		});
 
-		/*
-		toggle
-		*/
+		/**
+		 * toggle
+		 */
 		$(".setting").on("change", (event) => {
 			const elem = $(event.target);
 			const setting = elem.attr("id");
