@@ -3,34 +3,31 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Video List - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's Video List"/>
+		<title>Welcome to GoAnimate</title>
+		<meta name="description" content="Your Dashboard - GoAnimate"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/list.css">
 		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/global.js"></script>
 	</head>
 
 	<body>
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
-			<nav class="table_filters">
-				<a class="table_filter movies" href="javascript:;" onclick="switchFilter(false)">Movies</a>
-				<a class="table_filter starters" href="javascript:;" onclick="switchFilter(true)">Starters</a>
-			</nav>
-			<table>
+			<table class="full_screen">
 				<thead>
 					<tr>
 						<td></td>
-						<td id="search_container"><input id="search_bar" type="text" placeholder="Search Movies"/></td>
-						<td>Last Modified</td>
+						<td>Your Latest Videos</td>
+						<td>All Videos ></td>
 						<td></td>
 					</tr>
 				</thead>
 				<tbody></tbody>
 				<tfoot>
 					<tr>
-						<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+						<td colspan="127"><a id="load_more" href="javascript:;">Show All Videos</a></td>
 					</tr>
 				</tfoot>
 			</table>
@@ -39,34 +36,24 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
-	<script src="/pages/js/global.js"></script>
 	<script>
-		let json, searchTerm = "";
-		let starters = true;
+		let json;
 		const tbody = $("tbody");
 		const loadMore = $("#load_more");
-		const searchBar = $("#search_bar");
 
 		let C = 0;
 		function loadRows() {
-			// load only 69 rows
+			// load only 15 rows
 			let c = C;
-			C += 69;
+			C += 15;
 			for (; c < C; c++) {
 				// we reached the end
 				if (c > json.length - 1) {
-					loadMore.hide();
+					loadMore.remove();
 					break;
 				}
 
 				const tbl = json[c];
-
-				if (
-					tbl.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
-					searchTerm.length > 0
-				) {
-					continue;
-				}
 				// make the date and time less confusing to read
 				const date = tbl.date.split("T")[0];
 				const time = tbl.date.split("T")[1].substring(0, 8);
@@ -86,72 +73,49 @@
 							<span>${date}, ${time}</span>
 						</td>
 						<td>
-							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
-							<a href="/go_full?movieId=${tbl.id}${starters ? "&isStarter=1" : ""}" title="Edit"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip" title="Download files -- NOT AN EXPORTER"></a>
-							<a href="javascript:;" onclick="destructive('${tbl.id}', 'clone')" title="Clone" ${starters ? "style='display:none'" : ""}></a>
-							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
+							<a href="javascript:;" onclick="popup('${tbl.id}')"></a>
+							<a href="/go_full?movieId=${tbl.id}"></a>
+							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
+							<a href="#" onclick="destructive('${tbl.id}', 'repair')"></a>
+							<a href="#" onclick="destructive('${tbl.id}', 'delete')"></a>
 						</td>
 					</tr>`.trim()
 				);
 			}
 		}
-		// i want more movies
-		loadMore[0].onclick = loadRows;
 
-		searchBar.on("input", () => {
-			searchTerm = searchBar.val();
-			tbody.html("");
-			C = 0;
-			loadMore.show();
+		// i want more movies
+		loadMore.onclick = loadRows;
+
+
+		$.get("/api/movies/list", data => {
+			json = data;
 			loadRows();
 		});
-
-		function switchFilter(shouldEqual) {
-			if (starters == shouldEqual) return;
-			$(".movie_filter").removeClass("selected");
-			if (starters) {
-				starters = false;
-				$(".movie_filter.movies").addClass("selected");
-			} else {
-				starters = true;
-				$(".movie_filter.starters").addClass("selected");
-			}
-			$.get(`/api/${starters ? "starter" : "movie"}/list`)
-				.done((data) => {
-					json = data;
-					tbody.html("");
-					C = 0;
-					loadMore.show();
-					loadRows();
-				});
-		}
-		switchFilter();
 
 		function destructive(mId, act) {
 			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
 
 			if (yesno)
-				$.get(`/api/movie/${act}/${mId}`)
-					.done((data) => {
-						if (data.status == "ok") {
-							switch (act) {
-								case "clone":
-									window.location = `/go_full?movieId=${data.mId}`;
-									break;
-								case "delete":
-									const $elem = $("#" + mId);
-									$elem.fadeOut(() => $elem.remove());
-									break;
-							}
-						} else alert("Guess you're stuck with your movie.");
-					});
+				$.get(`/api/movie/${act}/${mId}`, data => {
+					if (data.status == "ok") {
+						switch (act) {
+							case "repair":
+								window.location = `/player?movieId=${mId}`;
+								break;
+							case "delete":
+								$(`#${mId}`).fadeOut(() => $(`#${mId}`).remove());
+								break;
+						}
+					} else alert("Guess you're stuck with your movie.");
+				});
 		}
 
 		function popup(id) {
-			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
+			window.open('/player?movieId=' + id, 'Loading your Video... - GoAnimate', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
 				',top=' + (screen.height / 2 - 360));
 		}
 
 	</script>
+
 </html>
