@@ -8,10 +8,10 @@ module.exports = class GoDatabase {
 		if (isSettings) {
 			this.path = path.join(folder, "settings.json");
 			baseDb = {
-				DISCORD_RPC: false, // Shows your Wrapper activity on Discord.
-				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
+				DISCORD_RPC: false, // Shows your GA2014 activity on Discord.
+				TRUNCATED_THEMELIST: true, // Don't mind this, this is used to get rid of the other themes (GA2014 will break if the unneeded themes are deleted from the server/store directory.)
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
-				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
+				DEFAULT_WATERMARK: "twoLines", // This is GoAnimate from 2014, what other GoAnimate watermark did you expect?
 				IS_WIDE: "1", // Sets the video player to 16:9.
 				SAVE_LOG_FILES: false, // what do you think
 				HIDE_NAVBAR: true, // what do you think
