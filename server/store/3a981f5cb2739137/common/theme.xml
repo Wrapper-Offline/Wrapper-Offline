@@ -17698,30 +17698,13 @@
 		<state id="msp_ncc_05musket_ncc_05musket_loop.swf" name="keep shooting" enable="Y"/>
 		<state id="msp_ncc_05musket_ncc_05musket_once.swf" name="shoot once" enable="Y"/>
 	</prop>
-	<sound id="roadSide.swf" name="Rock at the road side" downloadtype="progressive" subtype="bgmusic" duration="39800" enable="Y" is_premium="N" aid="3407" money="0" sharing="0"/>
-	<sound id="rockMain.swf" name="Rock &amp; Roll" downloadtype="progressive" subtype="bgmusic" duration="185000" enable="Y" is_premium="N" aid="3408" money="0" sharing="0"/>
-	<sound id="soft.swf" name="Soft" downloadtype="progressive" subtype="bgmusic" duration="34000" enable="Y" is_premium="N" aid="3409" money="0" sharing="0"/>
-	<sound id="tension builds up.swf" name="Build up tension" downloadtype="progressive" subtype="bgmusic" duration="59000" enable="Y" is_premium="N" aid="3410" money="0" sharing="0"/>
 	<sound id="laugh_4.swf" name="Laugh" downloadtype="embed" subtype="soundeffect" duration="4700" enable="Y" is_premium="N" aid="3411" money="0" sharing="0">
 		<tag>happy</tag>
 		<tag>Human Sounds</tag>
 		<tag>laugh</tag>
 		<tag>people</tag>
 	</sound>
-	<sound id="The_First_Noel.swf" name="The First Noel" downloadtype="progressive" subtype="bgmusic" duration="59400" enable="Y" is_premium="N" aid="3412" money="0" sharing="0"/>
-	<sound id="Action.swf" name="Cinematic" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="3413" money="0" sharing="0"/>
-	<sound id="Suspense.swf" name="Suspense" downloadtype="progressive" subtype="bgmusic" duration="128500" enable="Y" is_premium="N" aid="3414" money="0" sharing="0"/>
-	<sound id="Romance.swf" name="Romance" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="Y" is_premium="N" aid="3415" money="0" sharing="0"/>
-	<sound id="BroadcastNews.swf" name="Broadcast News" downloadtype="progressive" subtype="bgmusic" duration="37600" enable="Y" is_premium="N" aid="3416" money="0" sharing="0"/>
-	<sound id="FunkyBeat.swf" name="Funky Beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="3417" money="0" sharing="0"/>
-	<sound id="recipe_for_riches.swf" name="Recipe For Riches" downloadtype="progressive" subtype="bgmusic" duration="227500" enable="Y" is_premium="N" aid="3418" money="0" sharing="0"/>
-	<sound id="tibetan_monks.swf" name="Tibetan Monks" downloadtype="progressive" subtype="bgmusic" duration="217400" enable="Y" is_premium="N" aid="3419" money="0" sharing="0"/>
-	<sound id="swimming.swf" name="Swimming" downloadtype="progressive" subtype="bgmusic" duration="301400" enable="Y" is_premium="N" aid="3420" money="0" sharing="0"/>
-	<sound id="salient.swf" name="Salient" downloadtype="progressive" subtype="bgmusic" duration="297000" enable="Y" is_premium="N" aid="3421" money="0" sharing="0"/>
-	<sound id="smell_isnt_everything.swf" name="Smell Isn't Everything" downloadtype="progressive" subtype="bgmusic" duration="134300" enable="Y" is_premium="N" aid="3422" money="0" sharing="0"/>
-	<sound id="peace_on_earth.swf" name="Peace On Earth" downloadtype="progressive" subtype="bgmusic" duration="229600" enable="Y" is_premium="N" aid="3423" money="0" sharing="0"/>
-	<sound id="buzzin.swf" name="Buzzin'" downloadtype="progressive" subtype="bgmusic" duration="70600" enable="Y" is_premium="N" aid="3424" money="0" sharing="0"/>
-	<sound id="acid_jazz.mp3" name="Club Jazz" downloadtype="progressive" subtype="bgmusic" duration="33311" enable="Y" is_premium="N" aid="4776" money="0" sharing="0">
+	<sound id="acid_jazz.mp3" name="Acid Jazz" downloadtype="progressive" subtype="bgmusic" duration="33311" enable="Y" is_premium="N" aid="4776" money="0" sharing="0">
 		<tag>Acoustic</tag>
 		<tag>Cartoons</tag>
 		<tag>folk</tag>
@@ -17729,7 +17712,7 @@
 		<tag>joyful</tag>
 		<tag>Lively</tag>
 	</sound>
-	<sound id="action_2.mp3" name="Game - 80s" downloadtype="progressive" subtype="bgmusic" duration="31457" enable="Y" is_premium="N" aid="4777" money="0" sharing="0">
+	<sound id="action_2.mp3" name="Action - 80s" downloadtype="progressive" subtype="bgmusic" duration="31457" enable="Y" is_premium="N" aid="4777" money="0" sharing="0">
 		<tag>Acoustic</tag>
 		<tag>Cartoons</tag>
 		<tag>folk</tag>
@@ -17737,7 +17720,7 @@
 		<tag>joyful</tag>
 		<tag>Lively</tag>
 	</sound>
-	<sound id="Adventure.mp3" name="Game - Adventure" downloadtype="progressive" subtype="bgmusic" duration="52067" enable="Y" is_premium="N" aid="4778" money="0" sharing="0">
+	<sound id="Adventure.mp3" name="Action - Adventure" downloadtype="progressive" subtype="bgmusic" duration="52067" enable="Y" is_premium="N" aid="4778" money="0" sharing="0">
 		<tag>Acoustic</tag>
 		<tag>Cartoons</tag>
 		<tag>folk</tag>
@@ -17766,14 +17749,14 @@
 		<tag>Gentle</tag>
 		<tag>joyful</tag>
 	</sound>
-	<sound id="East_Coast.mp3" name="Game - East Coast" downloadtype="progressive" subtype="bgmusic" duration="38510" enable="Y" is_premium="N" aid="4783" money="0" sharing="0">
+	<sound id="East_Coast.mp3" name="Action - East Coast" downloadtype="progressive" subtype="bgmusic" duration="38510" enable="Y" is_premium="N" aid="4783" money="0" sharing="0">
 		<tag>emotion</tag>
 		<tag>nostalgic</tag>
 		<tag>positive</tag>
 		<tag>rock</tag>
 		<tag>Smooth</tag>
 	</sound>
-	<sound id="Excited.mp3" name="Game - Electric Guitar" downloadtype="progressive" subtype="bgmusic" duration="30778" enable="Y" is_premium="N" aid="4784" money="0" sharing="0">
+	<sound id="Excited.mp3" name="Action - Electric Guitar" downloadtype="progressive" subtype="bgmusic" duration="30778" enable="Y" is_premium="N" aid="4784" money="0" sharing="0">
 		<tag>emotion</tag>
 		<tag>nostalgic</tag>
 		<tag>positive</tag>
@@ -17910,7 +17893,7 @@
 		<tag>Positive</tag>
 		<tag>Soft Rock</tag>
 	</sound>
-	<sound id="ActionAdventure.mp3" name="Game - Electronic" downloadtype="progressive" subtype="bgmusic" duration="63587" enable="Y" is_premium="N" aid="5013" money="0" sharing="0">
+	<sound id="ActionAdventure.mp3" name="Action - Electronic" downloadtype="progressive" subtype="bgmusic" duration="63587" enable="Y" is_premium="N" aid="5013" money="0" sharing="0">
 		<tag>action</tag>
 		<tag>rock</tag>
 	</sound>
@@ -17939,7 +17922,7 @@
 		<tag>joyful</tag>
 		<tag>soft</tag>
 	</sound>
-	<sound id="Action.mp3" name="Cinematic" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="6042" money="0" sharing="0">
+	<sound id="Action.mp3" name="Action" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="6042" money="0" sharing="0">
 		<tag>happy</tag>
 		<tag>joyful</tag>
 		<tag>tension</tag>
@@ -17969,14 +17952,7 @@
 		<tag>rock</tag>
 		<tag>Smooth</tag>
 	</sound>
-	<sound id="FunkyBeat.mp3" name="Funky Beat" downloadtype="progressive" subtype="tribeofnoise" duration="35600" enable="Y" is_premium="N" aid="6046" money="0" sharing="0"/>
-	<sound id="recipe_for_riches.mp3" name="Recipe For Riches" downloadtype="progressive" subtype="tribeofnoise" duration="227500" enable="Y" is_premium="N" aid="6047" money="0" sharing="0"/>
-	<sound id="tibetan_monks.mp3" name="Tibetan Monks" downloadtype="progressive" subtype="tribeofnoise" duration="217400" enable="Y" is_premium="N" aid="6048" money="0" sharing="0"/>
-	<sound id="swimming.mp3" name="Swimming" downloadtype="progressive" subtype="tribeofnoise" duration="301400" enable="Y" is_premium="N" aid="6049" money="0" sharing="0"/>
-	<sound id="salient.mp3" name="Salient" downloadtype="progressive" subtype="tribeofnoise" duration="297000" enable="Y" is_premium="N" aid="6050" money="0" sharing="0"/>
-	<sound id="smell_isnt_everything.mp3" name="Smell Isn't Everything" downloadtype="progressive" subtype="tribeofnoise" duration="134300" enable="Y" is_premium="N" aid="6051" money="0" sharing="0"/>
-	<sound id="peace_on_earth.mp3" name="Peace On Earth" downloadtype="progressive" subtype="tribeofnoise" duration="229600" enable="Y" is_premium="N" aid="6052" money="0" sharing="0"/>
-	<sound id="buzzin.mp3" name="Buzzin'" downloadtype="progressive" subtype="tribeofnoise" duration="70600" enable="Y" is_premium="N" aid="6053" money="0" sharing="0"/>
+	<sound id="FunkyBeat.mp3" name="Funky Beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="6046" money="0" sharing="0"/>
 	<sound id="approved_weird_buzzer.swf" name="Buzzer" downloadtype="embed" subtype="soundeffect" duration="838" enable="Y" is_premium="N" aid="6685" money="0" sharing="0">
 		<tag>Various Foley</tag>
 	</sound>
@@ -18920,96 +18896,6 @@
 		<tag>Sensual</tag>
 		<tag>World</tag>
 	</sound>
-	<sound id="xxx_xmas.mp3" name="Welcome Xmas" downloadtype="progressive" subtype="bgmusic" duration="45694" enable="Y" is_premium="N" aid="24292" money="0" sharing="0">
-		<tag>christmas</tag>
-		<tag>family</tag>
-		<tag>holidays</tag>
-	</sound>
-	<sound id="Beautiful_Day.mp3" name="Loop - Beautiful Day" downloadtype="progressive" subtype="bgmusic" duration="13955" enable="Y" is_premium="N" aid="24293" money="0" sharing="0">
-		<tag>inspirational</tag>
-		<tag>joyful</tag>
-		<tag>loop</tag>
-		<tag>peaceful</tag>
-		<tag>Piano</tag>
-		<tag>romantic</tag>
-		<tag>slow</tag>
-		<tag>soft</tag>
-	</sound>
-	<sound id="Field_of_Dreams.mp3" name="Loop - Field of Dreams" downloadtype="progressive" subtype="bgmusic" duration="9175" enable="Y" is_premium="N" aid="24294" money="0" sharing="0">
-		<tag>corporate</tag>
-		<tag>electronic</tag>
-		<tag>inspirational</tag>
-		<tag>joyful</tag>
-		<tag>loop</tag>
-	</sound>
-	<sound id="Hi_Tech_World.mp3" name="Hi-Tech World" downloadtype="progressive" subtype="bgmusic" duration="186859" enable="Y" is_premium="N" aid="24295" money="0" sharing="0">
-		<tag>corporate</tag>
-		<tag>electronic</tag>
-		<tag>fast</tag>
-		<tag>inspirational</tag>
-		<tag>joyful</tag>
-	</sound>
-	<sound id="Almost_Back_to_Life.mp3" name="Loop - Almost Back to Life" downloadtype="progressive" subtype="bgmusic" duration="17507" enable="Y" is_premium="N" aid="24296" money="0" sharing="0">
-		<tag>corporate</tag>
-		<tag>electronic</tag>
-		<tag>loop</tag>
-		<tag>Piano</tag>
-		<tag>slow</tag>
-	</sound>
-	<sound id="Care_Center.mp3" name="Care Center" downloadtype="progressive" subtype="bgmusic" duration="124584" enable="Y" is_premium="N" aid="24297" money="0" sharing="0">
-		<tag>emotional</tag>
-		<tag>orchestra</tag>
-		<tag>piano</tag>
-		<tag>slow</tag>
-	</sound>
-	<sound id="Move_with_Me.mp3" name="Move with Me" downloadtype="progressive" subtype="bgmusic" duration="12597" enable="Y" is_premium="N" aid="24298" money="0" sharing="0">
-		<tag>energetic</tag>
-		<tag>fast</tag>
-		<tag>joyful</tag>
-		<tag>loop</tag>
-		<tag>Rock</tag>
-	</sound>
-	<sound id="Just_to_Love_You.mp3" name="Just to Love You" downloadtype="progressive" subtype="bgmusic" duration="189942" enable="Y" is_premium="N" aid="24299" money="0" sharing="0">
-		<tag>acoustic</tag>
-		<tag>fast</tag>
-		<tag>guitar</tag>
-		<tag>joyful</tag>
-		<tag>peaceful</tag>
-	</sound>
-	<sound id="Introducing_the_Band.mp3" name="Introducing the Band" downloadtype="progressive" subtype="bgmusic" duration="15392" enable="Y" is_premium="N" aid="24300" money="0" sharing="0">
-		<tag>fast</tag>
-		<tag>guitar</tag>
-		<tag>loop</tag>
-		<tag>Rock</tag>
-	</sound>
-	<sound id="Silver_of_Light.mp3" name="Loop - Silver of Light" downloadtype="progressive" subtype="bgmusic" duration="17194" enable="Y" is_premium="N" aid="24301" money="0" sharing="0">
-		<tag>guitar</tag>
-		<tag>joyful</tag>
-		<tag>loop</tag>
-		<tag>Rock</tag>
-	</sound>
-	<sound id="True_Colors.mp3" name="True Colors" downloadtype="progressive" subtype="bgmusic" duration="131088" enable="Y" is_premium="N" aid="24302" money="0" sharing="0">
-		<tag>inspirational</tag>
-		<tag>joyful</tag>
-		<tag>orchestra</tag>
-		<tag>piano</tag>
-		<tag>slow</tag>
-		<tag>violin</tag>
-	</sound>
-	<sound id="Morning_Wanderer.mp3" name="Morning Wanderer" downloadtype="progressive" subtype="bgmusic" duration="137958" enable="Y" is_premium="N" aid="24303" money="0" sharing="0">
-		<tag>countryside</tag>
-		<tag>joyful</tag>
-		<tag>piano</tag>
-		<tag>romantic</tag>
-		<tag>slow</tag>
-	</sound>
-	<sound id="Creative_Minds.mp3" name="Creative Minds" downloadtype="progressive" subtype="bgmusic" duration="130174" enable="Y" is_premium="N" aid="24304" money="0" sharing="0">
-		<tag>fast</tag>
-		<tag>inspirational</tag>
-		<tag>joyful</tag>
-		<tag>piano</tag>
-		<tag>violin</tag>
-	</sound>
 	<sound id="Always_On_My_Mind.mp3" name="Always On My Mind" downloadtype="progressive" subtype="bgmusic" duration="140596" enable="Y" is_premium="N" aid="24305" money="0" sharing="0">
 		<tag>electronic</tag>
 		<tag>peaceful</tag>
@@ -19021,17 +18907,6 @@
 		<tag>slow</tag>
 		<tag>soft</tag>
 	</sound>
-	<sound id="Happy_Face.mp3" name="Loop - Happy Face" downloadtype="progressive" subtype="bgmusic" duration="8469" enable="Y" is_premium="N" aid="24307" money="0" sharing="0">
-		<tag>loop</tag>
-		<tag>peaceful</tag>
-		<tag>soft</tag>
-		<tag>xylophone</tag>
-	</sound>
-	<sound id="Focusing.mp3" name="Focusing" downloadtype="progressive" subtype="bgmusic" duration="150941" enable="Y" is_premium="N" aid="24308" money="0" sharing="0">
-		<tag>electronic</tag>
-		<tag>fast</tag>
-		<tag>guitar</tag>
-	</sound>
 	<sound id="Young_at_Heart.mp3" name="Young at Heart" downloadtype="progressive" subtype="bgmusic" duration="139238" enable="Y" is_premium="N" aid="24309" money="0" sharing="0">
 		<tag>countryside</tag>
 		<tag>guitar</tag>
@@ -19039,24 +18914,8 @@
 		<tag>joyful</tag>
 		<tag>whistle</tag>
 	</sound>
-	<sound id="New_Media.mp3" name="New Media" downloadtype="progressive" subtype="bgmusic" duration="127770" enable="Y" is_premium="N" aid="24310" money="0" sharing="0">
-		<tag>joyful</tag>
-		<tag>peaceful</tag>
-		<tag>percussions</tag>
-		<tag>piano</tag>
-		<tag>soft</tag>
-	</sound>
-	<sound id="Five_Armies.mp3" name="Five Armies" downloadtype="progressive" subtype="bgmusic" duration="155878" enable="Y" is_premium="N" aid="24311" money="0" sharing="0">
-		<tag>action</tag>
-		<tag>epic</tag>
-		<tag>Orchestra</tag>
-		<tag>solemn</tag>
-	</sound>
-	<sound id="spread_your_wings.mp3" name="Spread your wings" downloadtype="progressive" subtype="bgmusic" duration="142864" enable="Y" is_premium="N" aid="26260" money="0" sharing="0"/>
-	<sound id="epic_hollywood_trailer.mp3" name="Epic Hollywood trailer" downloadtype="progressive" subtype="bgmusic" duration="91611" enable="Y" is_premium="N" aid="26261" money="0" sharing="0"/>
-	<sound id="clap_tap.mp3" name="Clap tap" downloadtype="progressive" subtype="bgmusic" duration="101094" enable="Y" is_premium="N" aid="26262" money="0" sharing="0"/>
-	<sound id="writing_the_future.mp3" name="Writing the future" downloadtype="progressive" subtype="bgmusic" duration="136594" enable="Y" is_premium="N" aid="26263" money="0" sharing="0"/>
-	<sound id="human_evolution.mp3" name="Human evolution" downloadtype="progressive" subtype="bgmusic" duration="177816" enable="Y" is_premium="N" aid="26264" money="0" sharing="0"/>
+	<sound id="writing_the_future.mp3" name="Writing the Future" downloadtype="progressive" subtype="bgmusic" duration="136594" enable="Y" is_premium="N" aid="26263" money="0" sharing="0"/>
+	<sound id="human_evolution.mp3" name="Human Evolution" downloadtype="progressive" subtype="bgmusic" duration="177816" enable="Y" is_premium="N" aid="26264" money="0" sharing="0"/>
 	<sound id="airport_ambience01_60_loop.mp3" name="Ambience - In the airport" downloadtype="progressive" subtype="soundeffect" duration="60552" enable="Y" is_premium="N" aid="27626" money="0" sharing="0"/>
 	<sound id="alarm_clock_vintage_ring_05.mp3" name="FX - Alarm clock ring" downloadtype="progressive" subtype="soundeffect" duration="4232" enable="Y" is_premium="N" aid="27627" money="0" sharing="0"/>
 	<sound id="ambulance_siren_02.mp3" name="Ambience - Ambulance siren" downloadtype="progressive" subtype="soundeffect" duration="20245" enable="Y" is_premium="N" aid="27628" money="0" sharing="0"/>
@@ -19182,94 +19041,6 @@
 	<sound id="white_noise_18db_loop.mp3" name="FX - White noise 18db" downloadtype="progressive" subtype="soundeffect" duration="30877" enable="Y" is_premium="N" aid="27748" money="0" sharing="0"/>
 	<sound id="wind_blustery_01_loop.mp3" name="Ambience - Wind blustery" downloadtype="progressive" subtype="soundeffect" duration="21969" enable="Y" is_premium="N" aid="27749" money="0" sharing="0"/>
 	<sound id="young_girl_scream_01.mp3" name="FX - Scream - female" downloadtype="progressive" subtype="soundeffect" duration="731" enable="Y" is_premium="N" aid="27750" money="0" sharing="0"/>
-	<sound id="122_short_dance_of_the_sugar_plum_fairy_0061.mp3" name="Dance of the Sugar Plum Fairy" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28101" money="0" sharing="0"/>
-	<sound id="129_short_deck_the_hall_jazz_classic_0069.mp3" name="Deck the Hall (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="68728" enable="Y" is_premium="N" aid="28104" money="0" sharing="0"/>
-	<sound id="135_short_silent_night_2_0069.mp3" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="68441" enable="Y" is_premium="N" aid="28107" money="0" sharing="0"/>
-	<sound id="129_short_we_wish_you_a_merry_christmas_jazz_classic_0070.mp3" name="We Wish You a Merry Christmas (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28110" money="0" sharing="0"/>
-	<sound id="85_short_bossa_story_0061.mp3" name="Bossa Story" downloadtype="progressive" subtype="bgmusic" duration="60473" enable="Y" is_premium="N" aid="28113" money="0" sharing="0"/>
-	<sound id="12_short_funky_mama_0063.mp3" name="Funky Mama" downloadtype="progressive" subtype="bgmusic" duration="62851" enable="Y" is_premium="N" aid="28116" money="0" sharing="0"/>
-	<sound id="12_short_happy_go_lucky_0068.mp3" name="Happy Go Lucky" downloadtype="progressive" subtype="bgmusic" duration="67318" enable="Y" is_premium="N" aid="28119" money="0" sharing="0"/>
-	<sound id="12_short_havana_moon_0070.mp3" name="Havana Moon" downloadtype="progressive" subtype="bgmusic" duration="69224" enable="Y" is_premium="N" aid="28122" money="0" sharing="0"/>
-	<sound id="116_short_imagine_anything_0061.mp3" name="Imagine Anything" downloadtype="progressive" subtype="bgmusic" duration="60160" enable="Y" is_premium="N" aid="28125" money="0" sharing="0"/>
-	<sound id="175_short_picnic_for_two_0062.mp3" name="Picnic For Two" downloadtype="progressive" subtype="bgmusic" duration="61231" enable="Y" is_premium="N" aid="28128" money="0" sharing="0"/>
-	<sound id="12_short_secret_garden_0070.mp3" name="Secret Garden" downloadtype="progressive" subtype="bgmusic" duration="69642" enable="Y" is_premium="N" aid="28131" money="0" sharing="0"/>
-	<sound id="156_short_smile_0071.mp3" name="Smile" downloadtype="progressive" subtype="bgmusic" duration="70243" enable="Y" is_premium="N" aid="28134" money="0" sharing="0"/>
-	<sound id="136_full_smilin_0247.mp3" name="Smilin'" downloadtype="progressive" subtype="bgmusic" duration="246857" enable="Y" is_premium="N" aid="28137" money="0" sharing="0"/>
-	<sound id="47_short_soul_mate_0062.mp3" name="Soul Mate" downloadtype="progressive" subtype="bgmusic" duration="61544" enable="Y" is_premium="N" aid="28141" money="0" sharing="0"/>
-	<sound id="12_short_sunny_side_of_the_road_0067.mp3" name="Sunny Side Of The Road" downloadtype="progressive" subtype="bgmusic" duration="66482" enable="Y" is_premium="N" aid="28144" money="0" sharing="0"/>
-	<sound id="116_short_turn_back_around_0061.mp3" name="Turn Back Around" downloadtype="progressive" subtype="bgmusic" duration="60186" enable="Y" is_premium="N" aid="28147" money="0" sharing="0"/>
-	<sound id="125_short_waikiki_0063.mp3" name="Waikiki" downloadtype="progressive" subtype="bgmusic" duration="63033" enable="Y" is_premium="N" aid="28150" money="0" sharing="0"/>
-	<sound id="12_short_yellow_carousel_0069.mp3" name="Yellow Carousel" downloadtype="progressive" subtype="bgmusic" duration="68336" enable="Y" is_premium="N" aid="28153" money="0" sharing="0"/>
-	<sound id="136_loop1_beautiful_day_0014.mp3" name="Beautiful Day" downloadtype="progressive" subtype="bgmusic" duration="13949" enable="Y" is_premium="N" aid="28156" money="0" sharing="0"/>
-	<sound id="12_loop9_field_of_dreams_0010.mp3" name="Field of Dreams" downloadtype="progressive" subtype="bgmusic" duration="9169" enable="Y" is_premium="N" aid="28166" money="0" sharing="0"/>
-	<sound id="168_loop6_almost_back_to_life_0018.mp3" name="Almost Back to Life" downloadtype="progressive" subtype="bgmusic" duration="17502" enable="Y" is_premium="N" aid="28177" money="0" sharing="0"/>
-	<sound id="114_loop2_sliver_of_light_0018.mp3" name="Silver of Light" downloadtype="progressive" subtype="bgmusic" duration="17189" enable="Y" is_premium="N" aid="28191" money="0" sharing="0"/>
-	<sound id="174_loop3_happy_face_2_0009.mp3" name="Happy Face" downloadtype="progressive" subtype="bgmusic" duration="8464" enable="Y" is_premium="N" aid="28197" money="0" sharing="0"/>
-	<sound id="acoustica_full.mp3" name="Acoustica" downloadtype="progressive" subtype="bgmusic" duration="135105" enable="Y" is_premium="N" aid="28202" money="0" sharing="0" min_ut="30"/>
-	<sound id="bakersfield_60.mp3" name="Bakersfield" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28211" money="0" sharing="0" min_ut="30"/>
-	<sound id="barnfire_60.mp3" name="Barnfire" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28217" money="0" sharing="0" min_ut="30"/>
-	<sound id="bluehenry60.mp3" name="Bluehenry" downloadtype="progressive" subtype="bgmusic" duration="60996" enable="Y" is_premium="N" aid="28223" money="0" sharing="0" min_ut="30"/>
-	<sound id="fruitbear_60.mp3" name="Fruitbear" downloadtype="progressive" subtype="bgmusic" duration="64183" enable="Y" is_premium="N" aid="28225" money="0" sharing="0" min_ut="30"/>
-	<sound id="healinghands_60.mp3" name="Healing Hands" downloadtype="progressive" subtype="bgmusic" duration="61623" enable="Y" is_premium="N" aid="28233" money="0" sharing="0" min_ut="30"/>
-	<sound id="hibiscus60.mp3" name="Hibiscus" downloadtype="progressive" subtype="bgmusic" duration="69042" enable="Y" is_premium="N" aid="28239" money="0" sharing="0" min_ut="30"/>
-	<sound id="hillbilly_bootstomp_60.mp3" name="Hillbilly Bootstomp" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28243" money="0" sharing="0" min_ut="30"/>
-	<sound id="spoonful_of_ginger_60.mp3" name="Spoonful of Ginger" downloadtype="progressive" subtype="bgmusic" duration="61884" enable="Y" is_premium="N" aid="28251" money="0" sharing="0" min_ut="30"/>
-	<sound id="sunnysideup_60.mp3" name="Sunny Side Up" downloadtype="progressive" subtype="bgmusic" duration="64758" enable="Y" is_premium="N" aid="28258" money="0" sharing="0" min_ut="30"/>
-	<sound id="test_of_time_full.mp3" name="Test of Time" downloadtype="progressive" subtype="bgmusic" duration="96627" enable="Y" is_premium="N" aid="28264" money="0" sharing="0" min_ut="30"/>
-	<sound id="tongueandcheek_60.mp3" name="Tongue and Cheek" downloadtype="progressive" subtype="bgmusic" duration="57913" enable="Y" is_premium="N" aid="28273" money="0" sharing="0" min_ut="30"/>
-	<sound id="tranceendentalblues_60.mp3" name="Trance-endental Blues" downloadtype="progressive" subtype="bgmusic" duration="63869" enable="Y" is_premium="N" aid="28279" money="0" sharing="0" min_ut="30"/>
-	<sound id="walkinthepark60.mp3" name="Walk in the Park" downloadtype="progressive" subtype="bgmusic" duration="62093" enable="Y" is_premium="N" aid="28286" money="0" sharing="0" min_ut="30"/>
-	<sound id="avocado_inferno60.mp3" name="Avocado Inferno" downloadtype="progressive" subtype="bgmusic" duration="64653" enable="Y" is_premium="N" aid="28293" money="0" sharing="0" min_ut="30"/>
-	<sound id="lift_me_up_full.mp3" name="Lift Me Up" downloadtype="progressive" subtype="bgmusic" duration="157884" enable="Y" is_premium="N" aid="28299" money="0" sharing="0" min_ut="30"/>
-	<sound id="revival.mp3" name="Revival" downloadtype="progressive" subtype="bgmusic" duration="59455" enable="Y" is_premium="N" aid="28310" money="0" sharing="0" min_ut="30"/>
-	<sound id="smooth_steel_60.mp3" name="Smooth Steel" downloadtype="progressive" subtype="bgmusic" duration="59768" enable="Y" is_premium="N" aid="28316" money="0" sharing="0" min_ut="30"/>
-	<sound id="bullethead_60.mp3" name="Bullethead" downloadtype="progressive" subtype="bgmusic" duration="61074" enable="Y" is_premium="N" aid="28320" money="0" sharing="0" min_ut="30"/>
-	<sound id="cornflower_60.mp3" name="Cornflower" downloadtype="progressive" subtype="bgmusic" duration="62380" enable="Y" is_premium="N" aid="28327" money="0" sharing="0" min_ut="30"/>
-	<sound id="dirty_moonshine_full.mp3" name="Dirty Moonshine" downloadtype="progressive" subtype="bgmusic" duration="97437" enable="Y" is_premium="N" aid="28331" money="0" sharing="0" min_ut="30"/>
-	<sound id="electric_rock_opus_full.mp3" name="Electric Rock Opus" downloadtype="progressive" subtype="bgmusic" duration="135262" enable="Y" is_premium="N" aid="28336" money="0" sharing="0" min_ut="30"/>
-	<sound id="fried_chicken_gobblers_full.mp3" name="Fried Chicken Gobblers" downloadtype="progressive" subtype="bgmusic" duration="99422" enable="Y" is_premium="N" aid="28346" money="0" sharing="0" min_ut="30"/>
-	<sound id="garageagogo60.mp3" name="Garage A-go-go" downloadtype="progressive" subtype="bgmusic" duration="63478" enable="Y" is_premium="N" aid="28351" money="0" sharing="0" min_ut="30"/>
-	<sound id="isotope60.mp3" name="Isotope" downloadtype="progressive" subtype="bgmusic" duration="66534" enable="Y" is_premium="N" aid="28356" money="0" sharing="0" min_ut="30"/>
-	<sound id="mojorising60.mp3" name="Mojo Rising" downloadtype="progressive" subtype="bgmusic" duration="60735" enable="Y" is_premium="N" aid="28361" money="0" sharing="0" min_ut="30"/>
-	<sound id="morningglory60.mp3" name="Morning Glory" downloadtype="progressive" subtype="bgmusic" duration="63843" enable="Y" is_premium="N" aid="28367" money="0" sharing="0" min_ut="30"/>
-	<sound id="pineapple_roadkill_60.mp3" name="Pineapple Roadkill" downloadtype="progressive" subtype="bgmusic" duration="64993" enable="Y" is_premium="N" aid="28372" money="0" sharing="0" min_ut="30"/>
-	<sound id="tailhonker_60.mp3" name="Tailhonker" downloadtype="progressive" subtype="bgmusic" duration="55824" enable="Y" is_premium="N" aid="28380" money="0" sharing="0" min_ut="30"/>
-	<sound id="tallboy_60.mp3" name="Tallboy" downloadtype="progressive" subtype="bgmusic" duration="63216" enable="Y" is_premium="N" aid="28385" money="0" sharing="0" min_ut="30"/>
-	<sound id="blue_for_a_lady.mp3" name="Blue for a Lady" downloadtype="progressive" subtype="bgmusic" duration="148454" enable="Y" is_premium="N" aid="28391" money="0" sharing="0" team="1"/>
-	<sound id="dont_leave_me_full.mp3" name="Don't Leave Me" downloadtype="progressive" subtype="bgmusic" duration="158485" enable="Y" is_premium="N" aid="28392" money="0" sharing="0" team="1"/>
-	<sound id="easy_to_say_full.mp3" name="Easy to Say" downloadtype="progressive" subtype="bgmusic" duration="154122" enable="Y" is_premium="N" aid="28396" money="0" sharing="0" team="1"/>
-	<sound id="highway_drivin_full.mp3" name="Highway Drivin" downloadtype="progressive" subtype="bgmusic" duration="149577" enable="Y" is_premium="N" aid="28404" money="0" sharing="0" team="1"/>
-	<sound id="jazz_inc.mp3" name="Jazz Inc" downloadtype="progressive" subtype="bgmusic" duration="110315" enable="Y" is_premium="N" aid="28413" money="0" sharing="0" team="1"/>
-	<sound id="midnight_motion_full.mp3" name="Midnight Motion" downloadtype="progressive" subtype="bgmusic" duration="170710" enable="Y" is_premium="N" aid="28420" money="0" sharing="0" team="1"/>
-	<sound id="misty_man.mp3" name="Misty Man" downloadtype="progressive" subtype="bgmusic" duration="138710" enable="Y" is_premium="N" aid="28427" money="0" sharing="0" team="1"/>
-	<sound id="more_than_you_think.mp3" name="More Than You Think" downloadtype="progressive" subtype="bgmusic" duration="115670" enable="Y" is_premium="N" aid="28428" money="0" sharing="0" team="1"/>
-	<sound id="night_driving_full.mp3" name="Night Driving" downloadtype="progressive" subtype="bgmusic" duration="105169" enable="Y" is_premium="N" aid="28435" money="0" sharing="0" team="1"/>
-	<sound id="rainy_day_full.mp3" name="Rainy Day" downloadtype="progressive" subtype="bgmusic" duration="155246" enable="Y" is_premium="N" aid="28440" money="0" sharing="0" team="1"/>
-	<sound id="remember_last_time_full.mp3" name="Remember Last Time" downloadtype="progressive" subtype="bgmusic" duration="150700" enable="Y" is_premium="N" aid="28449" money="0" sharing="0" team="1"/>
-	<sound id="tigertails_full.mp3" name="Tigertails" downloadtype="progressive" subtype="bgmusic" duration="421146" enable="Y" is_premium="N" aid="28457" money="0" sharing="0" team="1"/>
-	<sound id="72_Minute_Summer_full.mp3" name="72 Minute Summer" downloadtype="progressive" subtype="bgmusic" duration="238838" enable="Y" is_premium="N" aid="28458" money="0" sharing="0" team="1"/>
-	<sound id="all_hat_and_no_cattle_full.mp3" name="All Hat and No Cattle" downloadtype="progressive" subtype="bgmusic" duration="173270" enable="Y" is_premium="N" aid="28461" money="0" sharing="0" team="1"/>
-	<sound id="Big_Steve_full.mp3" name="Big Steve" downloadtype="progressive" subtype="bgmusic" duration="186253" enable="Y" is_premium="N" aid="28462" money="0" sharing="0" team="1"/>
-	<sound id="calypso_dance_full.mp3" name="Calypso Dance" downloadtype="progressive" subtype="bgmusic" duration="81633" enable="Y" is_premium="N" aid="28465" money="0" sharing="0" team="1"/>
-	<sound id="Conversation_full.mp3" name="Conversation" downloadtype="progressive" subtype="bgmusic" duration="298527" enable="Y" is_premium="N" aid="28472" money="0" sharing="0" team="1"/>
-	<sound id="Ellen_Ripley_full.mp3" name="Ellen Ripley" downloadtype="progressive" subtype="bgmusic" duration="252735" enable="Y" is_premium="N" aid="28475" money="0" sharing="0" team="1"/>
-	<sound id="first_dance_full.mp3" name="First Dance" downloadtype="progressive" subtype="bgmusic" duration="181342" enable="Y" is_premium="N" aid="28478" money="0" sharing="0" team="1"/>
-	<sound id="humbucker_full.mp3" name="Humbucker" downloadtype="progressive" subtype="bgmusic" duration="243905" enable="Y" is_premium="N" aid="28487" money="0" sharing="0" team="1"/>
-	<sound id="long_road_alt_full.mp3" name="Long Road" downloadtype="progressive" subtype="bgmusic" duration="103184" enable="Y" is_premium="N" aid="28488" money="0" sharing="0" team="1"/>
-	<sound id="manana_full.mp3" name="Manana" downloadtype="progressive" subtype="bgmusic" duration="99030" enable="Y" is_premium="N" aid="28492" money="0" sharing="0" team="1"/>
-	<sound id="maui_sun_full.mp3" name="Maui Sun" downloadtype="progressive" subtype="bgmusic" duration="202684" enable="Y" is_premium="N" aid="28499" money="0" sharing="0" team="1"/>
-	<sound id="roll_on_full.mp3" name="Roll On" downloadtype="progressive" subtype="bgmusic" duration="223478" enable="Y" is_premium="N" aid="28507" money="0" sharing="0" team="1"/>
-	<sound id="Shade_Tree_full.mp3" name="Shade Tree" downloadtype="progressive" subtype="bgmusic" duration="169195" enable="Y" is_premium="N" aid="28514" money="0" sharing="0" team="1"/>
-	<sound id="slingshot_full.mp3" name="Slingshot" downloadtype="progressive" subtype="bgmusic" duration="238106" enable="Y" is_premium="N" aid="28517" money="0" sharing="0" team="1"/>
-	<sound id="sometimes_full.mp3" name="Sometimes" downloadtype="progressive" subtype="bgmusic" duration="226586" enable="Y" is_premium="N" aid="28518" money="0" sharing="0" team="1"/>
-	<sound id="steppin_out_full.mp3" name="Steppin Out" downloadtype="progressive" subtype="bgmusic" duration="181133" enable="Y" is_premium="N" aid="28521" money="0" sharing="0" team="1"/>
-	<sound id="these_things_full.mp3" name="These Things" downloadtype="progressive" subtype="bgmusic" duration="181238" enable="Y" is_premium="N" aid="28530" money="0" sharing="0" team="1"/>
-	<sound id="three_rings_full.mp3" name="Three Rings" downloadtype="progressive" subtype="bgmusic" duration="177058" enable="Y" is_premium="N" aid="28533" money="0" sharing="0" team="1"/>
-	<sound id="time_to_go_full.mp3" name="Time to Go" downloadtype="progressive" subtype="bgmusic" duration="116010" enable="Y" is_premium="N" aid="28534" money="0" sharing="0" team="1"/>
-	<sound id="tip_sean_full.mp3" name="Tip Sean" downloadtype="progressive" subtype="bgmusic" duration="224601" enable="Y" is_premium="N" aid="28540" money="0" sharing="0" team="1"/>
-	<sound id="warm_sunshine_full.mp3" name="Warm Sunshine" downloadtype="progressive" subtype="bgmusic" duration="110707" enable="Y" is_premium="N" aid="28541" money="0" sharing="0" team="1"/>
-	<sound id="wide_water_full.mp3" name="Wide Water" downloadtype="progressive" subtype="bgmusic" duration="163788" enable="Y" is_premium="N" aid="28544" money="0" sharing="0" team="1"/>
-	<sound id="winding_on_full.mp3" name="Winding On" downloadtype="progressive" subtype="bgmusic" duration="154540" enable="Y" is_premium="N" aid="28547" money="0" sharing="0" team="1"/>
 	<sound id="kazoo_fanfare_03.mp3" name="FX - Kazoo - fanfare" downloadtype="progressive" subtype="soundeffect" duration="1332" enable="Y" is_premium="N" aid="28895" money="0" sharing="0"/>
 	<sound id="kazoo_you_lose_01.mp3" name="FX - Kazoo - you lose" downloadtype="progressive" subtype="soundeffect" duration="940" enable="Y" is_premium="N" aid="28896" money="0" sharing="0"/>
 	<sound id="orchestra_tuning_01.mp3" name="FX - Orchestra tuning" downloadtype="progressive" subtype="soundeffect" duration="10710" enable="Y" is_premium="N" aid="28897" money="0" sharing="0"/>
