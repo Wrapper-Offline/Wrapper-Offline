@@ -1,0 +1,88 @@
+.tab {
+    width: 100%;
+}
+
+/* header */
+#import_head {
+	/* style */
+	background: #222c46;
+	color: #fff;
+	/* layout */
+	margin-bottom: 5px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+.import-button {
+	background-color: #e97d3b;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0 25px;
+	margin: 9px 7px;
+}
+.import-button:hover {
+	background-color: #dd6522;
+}
+#import_head>h3 { margin: 6px }
+#importer form { display: none }
+/* queue */
+.importer_asset {
+	background: #edf2f6;
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+	margin-bottom: 5px;
+}
+.asset_metadata {
+	display: flex;
+	padding: 7px;
+}
+/* asset icon */
+.asset_preview { 
+	margin-right: 6px;
+	/* scale image to fit */
+	overflow: hidden;
+	object-fit: contain;
+	height: 40px;
+	width: 40px;
+}
+.asset_name {
+	/* style */
+	background-color: #0001;
+	color: #444;
+	outline: #666 auto 2px;
+	/* layout */
+	margin: 0;
+	padding: 1px 4px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.asset_name:focus {
+	outline: var(--primary) auto 2px;
+}
+.importer_asset p {
+	color: #858e95;
+	font-size: 12px;
+	margin: 0;
+}
+.import_as {
+	background: #fff;
+}
+.import_as a {
+	display: block;
+	padding: 5px 20px;
+	color: #505969;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	border-top: 1px solid #e2e7ed;
+}
+.import_as a:hover {
+	background: #f5f5f5;
+}
