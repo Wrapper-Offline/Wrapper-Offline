@@ -1,6 +1,5 @@
 {
 	"voices": {
-		},
 		"belle": {
 			"country": "US",
 			"language": "en",
@@ -263,14 +262,22 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "de-DE_ErikaV3Voice",
-			"desc": "ErikaV3"
+			"desc": "Erika"
 		},
-		"sofia": {
-			"country": "MX",
+		"enrique1": {
+			"country": "ES",
+			"language": "es",
+			"gender": "M",
+			"source": "watson",
+			"arg": "es-ES_EnriqueVoice",
+			"desc": "Enrique"
+		},
+		"sofia1": {
+			"country": "US",
 			"language": "es",
 			"gender": "F",
 			"source": "watson",
-			"arg": "es-LA_SofiaVoice",
+			"arg": "es-US_SofiaVoice",
 			"desc": "Sofia"
 		},
 		"laura3": {
@@ -327,7 +334,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "fr-FR_NicolasV3Voice",
-			"desc": "NicolasV3"
+			"desc": "Nicolas"
 		},
 		"renee": {
 			"country": "FR",
@@ -336,14 +343,6 @@
 			"source": "watson",
 			"arg": "fr-FR_ReneeVoice",
 			"desc": "Renee"
-		},
-		"reneev3": {
-			"country": "FR",
-			"language": "fr",
-			"gender": "F",
-			"source": "watson",
-			"arg": "fr-FR_ReneeV3Voice",
-			"desc": "ReneeV3"
 		},
 		"isabelle": {
 			"country": "CA",
@@ -1002,7 +1001,7 @@
 			"desc": "Liang"
 		},
 		"yafang": {
-			"country": "CN",
+			"country": "TW",
 			"language": "zh",
 			"gender": "F",
 			"arg": [3, 10, 8],
@@ -1353,29 +1352,13 @@
 			"arg": "/english/american/28-female-voice-jennifer.html",
 			"desc": "Jennifer"
 		},
-		"ceitidh1": {
+		"ceitidh": {
 			"country": "GB",
 			"language": "gd",
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Ceitidh",
 			"desc": "Ceitidh"
-		},
-		"ceitidh": {
-			"country": "GB",
-			"language": "gd",
-			"gender": "F",
-			"source": "cereproc",
-			"arg": "Ceitidh-CereWave",
-			"desc": "CeitidhV2"
-		},
-		"daria1": {
-			"country": "ro",
-			"language": "ro",
-			"gender": "F",
-			"source": "cereproc",
-			"arg": "Daria",
-			"desc": "Daria"
 		},
 		"daria": {
 			"country": "ro",
@@ -1385,21 +1368,13 @@
 			"arg": "Daria-CereWave",
 			"desc": "Daria"
 		},
-		"florence1": {
-			"country": "CA",
-			"language": "fr",
-			"gender": "F",
-			"source": "cereproc",
-			"arg": "Florence",
-			"desc": "Florence"
-		},
 		"florence": {
 			"country": "CA",
 			"language": "fr",
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Florence-CereWave",
-			"desc": "Florence (CereWave)"
+			"desc": "Florence"
 		},
 		"gabriel": {
 			"country": "BR",
@@ -1409,22 +1384,6 @@
 			"arg": "Gabriel",
 			"desc": "Gabriel"
 		},
-		"gabriel1": {
-			"country": "BR",
-			"language": "pt",
-			"gender": "M",
-			"source": "cereproc",
-			"arg": "Gabriel-CereWave",
-			"desc": "Gabriel (CereWave)"
-		},
-		"gudrun1": {
-			"country": "DE",
-			"language": "de",
-			"gender": "F",
-			"source": "cereproc",
-			"arg": "Gudrun",
-			"desc": "Gudrun"
-		},
 		"gudrun": {
 			"country": "DE",
 			"language": "de",
@@ -1432,14 +1391,6 @@
 			"source": "cereproc",
 			"arg": "Gudrun-CereWave",
 			"desc": "Gudrun (CereWave)"
-		},
-		"laurent1": {
-			"country": "FR",
-			"language": "fr",
-			"gender": "M",
-			"source": "cereproc",
-			"arg": "Laurent",
-			"desc": "Laurent"
 		},
 		"laurent": {
 			"country": "FR",
@@ -1457,21 +1408,13 @@
 			"arg": "Leopold-CereWave",
 			"desc": "Leopold"
 		},
-		"lucia1": {
-			"country": "PT",
-			"language": "pt",
-			"gender": "F",
-			"source": "cereproc",
-			"arg": "Lucia",
-			"desc": "Lucia"
-		},
 		"lucia": {
 			"country": "PT",
 			"language": "pt",
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Lucia-CereWave",
-			"desc": "Lucia (CereWave)"
+			"desc": "Lucia"
 		},
 		"mailin": {
 			"country": "CN",
@@ -1479,7 +1422,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Mailin-CereWave",
-			"desc": "Mailin (CereWave)"
+			"desc": "Mailin"
 		},
 		"nicole1": {
 			"country": "FR",
@@ -1505,28 +1448,28 @@
 			"arg": "Pola-CereWave",
 			"desc": "Pola"
 		},
-		"rita1": {
+		"rita": {
 			"country": "ES",
 			"language": "ca",
 			"gender": "F",
 			"source": "cereproc",
-			"arg": "Rita",
+			"arg": "Rita-CereWave",
 			"desc": "Rita"
 		},
-		"sara1": {
+		"sara": {
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
 			"source": "cereproc",
-			"arg": "Sara",
+			"arg": "Sara-CereWave",
 			"desc": "Sara"
 		},
-		"suzanne1": {
+		"suzanne": {
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
 			"source": "cereproc",
-			"arg": "Suzanne",
+			"arg": "Suzanne-CereWave",
 			"desc": "Suzanne"
 		},
 		"ylva": {
@@ -1537,7 +1480,7 @@
 			"arg": "Ylva-CereWave",
 			"desc": "Ylva"
 		},
-		"yuki1": {
+		"yuki": {
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
@@ -1697,6 +1640,22 @@
 			"arg": "fo_fo_hanus_22k_ns.bvcu",
 			"desc": "Hanus"
 		},
+		"louise": {
+			"country": "CA",
+			"language": "fr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "frc_hd_louise_22k_lf.bvcu",
+			"desc": "Louise"
+		},
+		"elise": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "frf_elise_22k_ns.bvcu",
+			"desc": "Elise"
+		},
 		"alice": {
 			"country": "FR",
 			"language": "fr",
@@ -1704,6 +1663,14 @@
 			"source": "acapela",
 			"arg": "frf_hd_alice_22k_lf.bvcu",
 			"desc": "Alice"
+		},
+		"anais": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "frf_hd_anais_22k_lf.bvcu",
+			"desc": "Anais"
 		},
 		"antoine": {
 			"country": "FR",
@@ -1719,7 +1686,31 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "frf_hd_bruno_22k_lf.bvcu",
-			"desc": "bruno"
+			"desc": "Bruno"
+		},
+		"claire2": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "frf_hd_claire_22k_lf.bvcu",
+			"desc": "Claire"
+		},
+		"julie2": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "frf_hd_julie_22k_lf.bvcu",
+			"desc": "Julie"
+		},
+		"manon": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "M",
+			"source": "acapela",
+			"arg": "frf_hd_manon_22k_lf.bvcu",
+			"desc": "Manon"
 		},
 		"margaux": {
 			"country": "FR",
@@ -1769,14 +1760,6 @@
 			"arg": "ged_hd_julia_22k_lf.bvcu",
 			"desc": "Julia"
 		},
-		"klaus": {
-			"country": "DE",
-			"language": "de",
-			"gender": "M",
-			"source": "acapela",
-			"arg": "ged_hd_klaus_22k_lf.bvcu",
-			"desc": "Klaus"
-		},
 		"sarah2": {
 			"country": "DE",
 			"language": "de",
@@ -1809,6 +1792,14 @@
 			"arg": "grg_hd_dimitris_22k_lf.bvcu",
 			"desc": "Dimitris"
 		},
+		"alessio": {
+			"country": "IT",
+			"language": "it",
+			"gender": "M",
+			"source": "acapela",
+			"arg": "iti_alessio_22k_ns.bvcu",
+			"desc": "Alessio"
+		},
 		"chiara": {
 			"country": "IT",
 			"language": "it",
@@ -1816,6 +1807,14 @@
 			"source": "acapela",
 			"arg": "iti_hd_chiara_22k_lf.bvcu",
 			"desc": "Chiara"
+		},
+		"fabiana": {
+			"country": "IT",
+			"language": "it",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "iti_hd_fabiana_22k_lf.bvcu",
+			"desc": "Fabiana"
 		},
 		"vittorio": {
 			"country": "IT",
@@ -1847,7 +1846,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "non_elias_22k_ns.bvcu",
-			"desc": "elias"
+			"desc": "Elias"
 		},
 		"emilie": {
 			"country": "NO",
@@ -1905,6 +1904,14 @@
 			"arg": "pop_hd_ania_22k_lf.bvcu",
 			"desc": "Ania"
 		},
+		"alyona": {
+			"country": "RU",
+			"language": "ru",
+			"gender": "M",
+			"source": "acapela",
+			"arg": "rur_hd_alyona_22k_lf.bvcu",
+			"desc": "Alyona"
+		},
 		"se_hd_mia": {
 			"country": "SE",
 			"language": "sv",
@@ -1920,14 +1927,6 @@
 			"source": "acapela",
 			"arg": "sps_hd_antonio_22k_lf.bvcu",
 			"desc": "Antonio"
-		},
-		"ines": {
-			"country": "ES",
-			"language": "es",
-			"gender": "M",
-			"source": "acapela",
-			"arg": "sps_hd_ines_22k_lf.bvcu",
-			"desc": "Ines"
 		},
 		"maria": {
 			"country": "ES",
@@ -1956,7 +1955,7 @@
 		"rosa2": {
 			"country": "US",
 			"language": "es",
-			"gender": "F",
+			"gender": "M",
 			"source": "acapela",
 			"arg": "spu_hd_rosa_22k_lf.bvcu",
 			"desc": "Rosa"
@@ -2024,22 +2023,6 @@
 			"source": "acapela",
 			"arg": "sws_hd_erik_22k_lf.bvcu",
 			"desc": "Erik"
-		},
-		"ipek": {
-			"country": "TR",
-			"language": "tr",
-			"gender": "F",
-			"source": "acapela",
-			"arg": "tut_hd_ipek_22k_lf.bvcu",
-			"desc": "Ipek"
-		},
-		"lulu": {
-			"country": "CN",
-			"language": "zh",
-			"gender": "F",
-			"source": "acapela",
-			"arg": "zh_cn_hd_lulu_22k_lf.bvcu",
-			"desc": "Lulu"
 		},
 		"zeina": {
 			"country": "XA",
