@@ -3,12 +3,13 @@ GoAnimate 2014 is a GoAnimate Server Emulator carrying on the torch of [VisualPl
 
 
 ## Running / Installation
-To start GoAnimate 2014 on Windows, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. **Currently there is no support for Linux or MacOS.**
+To start GoAnimate 2014 on Windows, you're first gonna need to install some programs:
+Node.JS (download [here](https://nodejs.org/dist/v20.2.0/node-v20.2.0-x64.msi))
+Ungoogled Chromium (download [here](https://github.com/Wyse-/ungoogled-chromium-binaries/releases/download/67.0.3396.87-3/ungoogled-chromium_67.0.3396.87-3_windows.zip))
+WinRAR (download [here](https://www.win-rar.com/postdownload.html?&L=0))
+After installing these programs, extract Ungoogled Chromium using WINRAR. Once the process is done, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. AFter that, head to Chromium, run chrome.exe and navigate to http://localhost:4343/. **Currently there is no support for Linux or MacOS.**
 
 If you want to import videos and characters from other LVMs such as Wrapper: Offline into GoAnimate 2014, open its folder and drag the "_SAVED" and "_ASSETS" folder into the GoAnimate 2014 folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the folders in GoAnimate 2014 out before dragging the old one in.
-
-## Dependencies
-This program relies on Flash and Node.js to work properly. Luckily, they require no download, as they have already been included in GoAnimate 2014.
 
 ## License
 Most of this project is free/libre software[1] under the MIT license. You have the freedom to run, change, and share this as much as you want.
