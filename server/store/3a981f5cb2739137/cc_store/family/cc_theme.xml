@@ -2045,13 +2045,13 @@
 			<selection type="skeleton" state_id="stand"/>
 			<selection type="upper_body" state_id="default"/>
 		</action>
-		<action id="walk" name="Walk" loop="Y" totalframe="24" enable="Y" category="traveling" is_motion="Y">
+		<action id="walk" name="Walk" loop="Y" totalframe="24" enable="Y" is_motion="Y">
 			<selection type="facial" facial_id="head_neutral"/>
 			<selection type="lower_body" state_id="walk"/>
 			<selection type="skeleton" state_id="walk"/>
 			<selection type="upper_body" state_id="walk"/>
 		</action>
-		<action id="run" name="Run" loop="Y" totalframe="20" enable="Y" category="traveling" is_motion="Y">
+		<action id="run" name="Run" loop="Y" totalframe="20" enable="Y" is_motion="Y">
 			<selection type="facial" facial_id="head_neutral"/>
 			<selection type="lower_body" state_id="run"/>
 			<selection type="skeleton" state_id="run"/>
