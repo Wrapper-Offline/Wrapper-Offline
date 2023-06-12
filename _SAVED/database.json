@@ -1,12 +1,4 @@
 {
-	"assets": [
-		{
-			"type": "char",
-			"subtype": 0,
-			"title": "Untitled",
-			"themeId": "family",
-			"id": "4c89a68d"
-		}
-	],
+	"assets": [],
 	"movies": []
 }
