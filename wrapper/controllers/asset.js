@@ -87,7 +87,7 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 		themeId,
 		type: "char"
 	};
-	if (req.body.assetId !== "null") filters.id = req.body.assetId;
+	if (req.body.assetId && req.body.assetId !== "null") filters.id = req.body.assetId;
 	res.setHeader("Content-Type", "application/xml");
 	res.end(listAssets(filters));
 });
