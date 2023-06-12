@@ -20,6 +20,10 @@
 			const STORE_URL = "<%= it.env.STORE_URL %>";
 			const CLIENT_URL = "<%= it.env.CLIENT_URL %>";
 			const IS_STUDIO = true;
+			function characterSaved(id) {
+				hideCCWindow();
+				studio[0].loadCharacterById(id);
+			}
 
 		</script>
 	</head>
@@ -38,9 +42,21 @@
 			</nav>
 			<%~ it.object(it.attrs, it.params) %>
 		</main>
+		<div id="cc_window" style="display:none">
+			<div class="popup_inside">
+				<h2 class="popup_heading">Character Creator</h2>
+			
+				<iframe id="cc-iframe" src="" title="browser"></iframe> 
+				<div class="buttons">
+					<button class="preview-button edit" type="button" onclick="hideCCWindow();">Back to editing</button>
+				</div>
+
+				<a class="close-button" onclick="hideCCWindow()">×</a>
+			</div>
+		</div>
 		<div id="previewer" style="display:none">
-			<div id="preview-inside">
-				<h2 id="preview-video">Preview Video</h2>
+			<div class="popup_inside">
+				<h2 class="popup_heading">Preview Video</h2>
 			
 				<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
 					width="640" height="360">

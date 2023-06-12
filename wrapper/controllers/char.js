@@ -42,17 +42,20 @@ redirect
 */
 group.route("GET", /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/, (req, res) => {
 	let [, theme, mode, id] = req.matches;
-		
-	let redirect;
+
+	let redirect, external = "";
+	if (req.headers.referer.indexOf("external=true") != -1) {
+		external = "&external=true";
+	}
 	switch (mode) {
 		case "/copy": {
-			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}`;
+			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}${external}`;
 			break;
 		} default: {
 			const type = theme == "business" ?
 				bfTypes[req.query.type || ""] || "":
 				req.query.type || defaultTypes[theme] || "";
-			redirect = `/cc?themeId=${theme}&bs=${type}`;
+			redirect = `/cc?themeId=${theme}&bs=${type}${external}`;
 			break;
 		}
 	}

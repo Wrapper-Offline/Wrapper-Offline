@@ -27,15 +27,21 @@ objects
 /**
 previewer
 **/
-#previewer {
+#previewer,
+#cc_window {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -80%);
-	width: 960px;
 	z-index: 2;
 }
-#preview-inside {
+#previewer {
+	transform: translate(-50%, -80%);
+	width: 960px;
+}
+#cc_window {
+	transform: translate(-50%, -50%);
+}
+.popup_inside {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 0 60px #000;
@@ -43,9 +49,11 @@ previewer
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
+}
+#previewer .popup_inside {
 	width: 640px;
 }
-#preview-video {
+.popup_heading {
 	color: #505e73;
 	font-size: 21px;
 	font-weight: normal;
@@ -54,10 +62,15 @@ previewer
 	padding: 15px 35px;
 	margin: 0;
 }
-#preview-inside .buttons {
+#cc-iframe {
+	border: none;
+    width: 960px;
+    height: 600px;
+}
+.popup_inside .buttons {
 	padding: 14px 0;
 }
-#preview-inside a.close-button {
+.popup_inside a.close-button {
 	color: #43bca5;
 	line-height: 24px;
 	font-size: 24px;
@@ -66,7 +79,7 @@ previewer
 	top: 10px;
 	right: 10px;
 }
-#preview-inside a.close-button:hover {
+.popup_inside a.close-button:hover {
 	color: #029a85;
 	text-decoration: none;
 }

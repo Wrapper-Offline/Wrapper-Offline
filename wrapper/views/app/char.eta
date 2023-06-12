@@ -1,4 +1,4 @@
-<html>
+<html><% if (!it.isExternal) { %>
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
@@ -21,10 +21,22 @@
 	<body>
 		<%~ includeFile("../includes/header", { env: it.env }) %>
 
-		<main>
+		<main><% } %>
+			<% if (it.isExternal) { %>
+				<style>
+					body {
+						margin: 0;
+					}
+				</style>
+				<script>
+					function characterSaved(id) {
+						parent.characterSaved(id);
+					}
+				</script>
+			<% } %>
 			<%~ it.object(it.attrs, it.params) %>
-		</main>
+		<% if (!it.isExternal) { %></main>
 
 		<%~ includeFile("../includes/footer", { env: it.env }) %>
 	</body>
-</html>
+<% } %></html>

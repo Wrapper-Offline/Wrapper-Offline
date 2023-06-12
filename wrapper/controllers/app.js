@@ -60,6 +60,7 @@ group.route("GET", "/cc", async (req, res) => {
 			allowScriptAccess: "always",
 			movie: SWF_URL + "/cc.swf",
 		},
+		isExternal: req.query.external || false,
 		object: toObjectString
 	});
 });
@@ -98,6 +99,7 @@ group.route("GET", "/cc_browser", async (req, res) => {
 			allowScriptAccess: "always",
 			movie: SWF_URL + "/cc.swf",
 		},
+		isExternal: req.query.external || false,
 		object: toObjectString
 	});
 });
