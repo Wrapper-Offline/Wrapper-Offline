@@ -1,7 +1,5 @@
 # GoAnimate 2014
-GoAnimate 2014 is a modified Wrapper: Offline program that's an easy-to-use GoAnimate Server Emulator that uses HTTPZ. Unlike the original project, GA2014 can not be shut down by Vyond. Why? It's because everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of GoAnimate 2014, Wrapper: Offline also added other additional features and improvements compared to the original GoAnimate Wrapper project, such as headgear, more text-to-speech voices, with hopefully more updates and improvements to GoAnimate 2014.
-
-
+GoAnimate 2014 is a modified Wrapper: Offline clone that's an easy-to-use GoAnimate Server Emulator that uses HTTPZ. Unlike the original project, GA2014 can not be shut down by Vyond. Why? It's because everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of GoAnimate 2014, Wrapper: Offline also added other additional features and improvements compared to the original GoAnimate Wrapper project, such as headgear, more text-to-speech voices, with hopefully more updates and improvements to GoAnimate 2014.
 
 ## Running / Installation
 To start GoAnimate 2014 on Windows, you're first gonna need to install some programs:
