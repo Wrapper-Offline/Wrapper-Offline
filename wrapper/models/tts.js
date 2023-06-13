@@ -69,17 +69,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					req.end(body);
 					break;
 				}
-				case "nuance": {
-					const q = new URLSearchParams({
-						voice_name: voice.arg,
-						speak_text: text,
-					}).toString();
-
-					https
-						.get(`https://voicedemo.codefactoryglobal.com/generate_audio.asp?${q}`, res)
-						.on("error", rej);
-					break;
-				}
 				case "cepstral": {
 					let pitch;
 					if (flags.pitch) {
@@ -163,76 +152,6 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
-				case "acapela": {
-					// generate a fake email
-					let acapelaArray = [];
-					for (let c = 0; c < 15; c++) acapelaArray.push(~~(65 + Math.random() * 26));
-					const email = `${String.fromCharCode.apply(null, acapelaArray)}@gmail.com`;
-
-					let req = https.request(
-						{
-							hostname: "acapelavoices.acapela-group.com",
-							path: "/index/getnonce",
-							method: "POST",
-							headers: {
-								"Content-Type": "application/x-www-form-urlencoded",
-							},
-						},
-						(r) => {
-							let buffers = [];
-							r.on("data", (b) => buffers.push(b));
-							r.on("end", () => {
-								const nonce = JSON.parse(Buffer.concat(buffers)).nonce;
-								let req = https.request(
-									{
-										hostname: "acapela-group.com",
-										port: "8443",
-										path: "/Services/Synthesizer",
-										method: "POST",
-										headers: {
-											"Content-Type": "application/x-www-form-urlencoded",
-										},
-									},
-									(r) => {
-										let buffers = [];
-										r.on("data", (d) => buffers.push(d));
-										r.on("end", () => {
-											const html = Buffer.concat(buffers);
-											const beg = html.indexOf("&snd_url=") + 9;
-											const end = html.indexOf("&", beg);
-											const sub = html.subarray(beg, end).toString();
-
-											https
-												.get(sub, res)
-												.on("error", rej);
-										});
-										r.on("error", rej);
-									}
-								).on("error", rej);
-								req.end(
-									new URLSearchParams({
-										req_voice: voice.arg,
-										cl_pwd: "",
-										cl_vers: "1-30",
-										req_echo: "ON",
-										cl_login: "AcapelaGroup",
-										req_comment: `{"nonce":"${nonce}","user":"${email}"}`,
-										req_text: text,
-										cl_env: "ACAPELA_VOICES",
-										prot_vers: 2,
-										cl_app: "AcapelaGroup_WebDemo_Android",
-									}).toString()
-								);
-							});
-						}
-					).on("error", rej);
-					req.end(
-						new URLSearchParams({
-							json: `{"googleid":"${email}"`,
-						}).toString()
-					);
-					break;
-				}
 				case "voiceforge": {
 					let fakeEmail = [];
 					for (let c = 0; c < 15; c++) fakeEmail.push(~~(65 + Math.random() * 26));
@@ -256,22 +175,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					}, (r) => {
 						fileUtil.convertToMp3(r, "wav").then(res).catch(rej);
 					});
-					break;
-				}
-				case "svox": {
-					const q = new URLSearchParams({
-						apikey: "e3a4477c01b482ea5acc6ed03b1f419f",
-						action: "convert",
-						format: "mp3",
-						voice: voice.arg,
-						speed: 0,
-						text: text,
-						version: "0.2.99",
-					}).toString();
-
-					https
-						.get(`https://api.ispeech.org/api/rest?${q}`, res)
-						.on("error", rej);
 					break;
 				}
 				case "readloud": {
