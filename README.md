@@ -7,7 +7,7 @@ To start GoAnimate 2014 on Windows, you're first gonna need to install some prog
   - Node.JS (download [here](https://nodejs.org/dist/v20.2.0/node-v20.2.0-x64.msi))
   - Ungoogled Chromium (download [here](https://github.com/Wyse-/ungoogled-chromium-binaries/releases/download/67.0.3396.87-3/ungoogled-chromium_67.0.3396.87-3_windows.zip))
   - WinRAR (download [here](https://www.win-rar.com/postdownload.html?&L=0))
-  After installing these programs, extract Ungoogled Chromium using WINRAR. Once the process is done, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. AFter that, head to Chromium, run chrome.exe and navigate to http://localhost:4343/. **Currently there is no support for Linux or MacOS.**
+  After installing these programs, extract Ungoogled Chromium using WINRAR. Once the process is done, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. After that, head to Chromium, run chrome.exe and navigate to http://localhost:4343/. **Currently there is no support for Linux, MacOS support is currently in development and will be released soon.**
 
 If you want to import videos and characters from other LVMs such as Wrapper: Offline into GoAnimate 2014, open its folder and drag the "_SAVED" and "_ASSETS" folder into the GoAnimate 2014 folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the folders in GoAnimate 2014 out before dragging the old one in.
 
@@ -31,7 +31,7 @@ Original W:O credits:
 
 No members of the original team are officially working on GA2014 or W:O, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
 
-The current Project Lead will have (PL) on their name, the current Director of Testing will have (DT) on their name, the current Head of Development with have (HD) on their name, and developers will have (D) on their name, to show they are officially working on GoAnimate 2014. Everyone else has simply contributed something at some point, or left the development team.
+The current Project Lead will have (PL) on their name, the current Director of Testing will have (DT) on their name, the current Head of Development with have (HD) on their name, and developers will have (D) on their name, to show they are officially working on Offline. Everyone else has simply contributed something at some point, or left the development team.
 W:O credits:
 | Name                                                  | Contribution                                                   |
 | ----------------------------------------------------- | -------------------------------------------------------------- |
