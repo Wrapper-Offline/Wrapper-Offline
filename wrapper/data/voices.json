@@ -1,93 +1,5 @@
 {
 	"voices": {
-		"belle": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Belle",
-			"desc": "Belle"
-		},
-		"callie": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Callie",
-			"desc": "Callie"
-		},
-		"charlie_cepstral": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "Charlie",
-			"desc": "Young Guy"
-		},
-		"dallas": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "Dallas",
-			"desc": "Dallas"
-		},
-		"damien": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "Damien",
-			"desc": "Scary Voice"
-		},
-		"david": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "David",
-			"desc": "David"
-		},
-		"duchess": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Duchess",
-			"desc": "Duchess"
-		},
-		"duncan": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "Duncan",
-			"desc": "Duncan"
-		},
-		"robin": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Robin",
-			"desc": "Tween Girl"
-		},
-		"lawrence": {
-			"country": "GB",
-			"language": "en",
-			"gender": "M",
-			"source": "cepstral",
-			"arg": "Lawrence",
-			"desc": "Lawrence"
-		},
-		"millie": {
-			"country": "GB",
-			"language": "en",
-			"gender": "F",
-			"source": "cepstral",
-			"arg": "Millie",
-			"desc": "Millie"
-		},
 		"vittoria": {
 			"country": "IT",
 			"language": "it",
@@ -143,6 +55,94 @@
 			"source": "cepstral",
 			"arg": "Miguel",
 			"desc": "Miguel"
+		},
+		"belle": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Belle",
+			"desc": "Belle"
+		},
+		"callie": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Callie",
+			"desc": "Callie"
+		},
+		"charlie_cepstral": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Charlie",
+			"desc": "Young Guy"
+		},
+		"dallas": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Dallas",
+			"desc": "Dallas"
+		},
+		"damien": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Damien",
+			"desc": "Scary Voice"
+		},
+		"david": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "David",
+			"desc": "David"
+		},
+		"duchess": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Duchess",
+			"desc": "Duchess"
+		},
+		"duncan": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Duncan",
+			"desc": "Duncan"
+		},
+		"robin": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Robin",
+			"desc": "Tween Girl"
+		},
+		"lawrence": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Lawrence",
+			"desc": "Lawrence"
+		},
+		"millie": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Millie",
+			"desc": "Millie"
 		},
 		"conrad": {
 			"country": "US",
@@ -1488,22 +1488,6 @@
 			"arg": "it-IT_FrancescaVoice",
 			"desc": "Francesca"
 		},
-		"hanna": {
-			"country": "FO",
-			"language": "fo",
-			"gender": "F",
-			"source": "acapela",
-			"arg": "fo_fo_hanna_22k_ns.bvcu",
-			"desc": "Hanna"
-		},
-		"hanus": {
-			"country": "FO",
-			"language": "fo",
-			"gender": "M",
-			"source": "acapela",
-			"arg": "fo_fo_hanus_22k_ns.bvcu",
-			"desc": "Hanus"
-		},
 		"zeina": {
 			"country": "XA",
 			"language": "ar",
@@ -1540,24 +1524,24 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"source": "polly",
-			"arg": "Amy",
+			"source": "readloud",
+			"arg": "/english/british/5-female-voice-amy.html",
 			"desc": "Amy"
 		},
 		"emma4": {
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"source": "polly",
-			"arg": "Emma",
+			"source": "readloud",
+			"arg": "/english/british/17-female-voice-emma.html",
 			"desc": "Emma"
 		},
 		"brian": {
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"source": "polly",
-			"arg": "Brian",
+			"source": "readloud",
+			"arg": "/english/british/1-male-voice-brian.html",
 			"desc": "Brian"
 		},
 		"chantal": {
@@ -1860,24 +1844,24 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"source": "polly",
-			"arg": "Ivy",
+			"source": "readloud",
+			"arg": "/english/american/25-child-s-girl-voice-ivy.html",
 			"desc": "Ivy"
 		},
 		"joey": {
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"source": "polly",
-			"arg": "Joey",
+			"source": "readloud",
+			"arg": "/english/american/29-male-voice-joey.html",
 			"desc": "Joey"
 		},
 		"salli": {
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"source": "polly",
-			"arg": "Salli",
+			"source": "readloud",
+			"arg": "/english/american/2-girl-s-voice-sally.html",
 			"desc": "Salli"
 		},
 		"kimberly": {
