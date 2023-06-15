@@ -1,15 +1,11 @@
-# General Wrapper Offline Stuff
+# General Wrapper Secluded Stuff
 _ASSETS/*
 _CACHÉ/*
 _LOGS/*
 _SAVED/*
 _SAVED/database.json
-!_*/_NO_REMÖVE
-utilities/backups/*
-utilities/config.bat
 .DS_Store
 .DS_Store
-vfproxy/*
 bbbb/*
 node_modules
 # Logs

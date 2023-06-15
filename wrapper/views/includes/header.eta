@@ -3,15 +3,15 @@
 		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1>
 	</a>
 	<nav id="headbuttons">
-		<div class="dropdown_contain button_small">
-			<div class="dropdown_button upload_button">UPLOAD A MOVIE</div>
+		<div class="dropdown_contain">
+			<div class="btn">UPLOAD A MOVIE</div>
 			<nav class="dropdown_menu">
 				<a onclick="document.getElementById('is-starter').checked = false;document.getElementById('file').click()">Upload as movie</a>
 				<a onclick="document.getElementById('is-starter').checked = true;document.getElementById('file').click()">Upload as starter</a>
 			</nav>
 		</div>	
-		<a href="/create?filter=cc" class="button_small">CREATE A CHARACTER</a>
-		<a href="/create" class="button_big">MAKE A VIDEO</a>
+		<a href="/create?filter=cc" class="btn">CREATE A CHARACTER</a>
+		<a href="/create" class="btn btn_primary">MAKE A VIDEO</a>
 	</nav>
 </header>
 

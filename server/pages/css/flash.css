@@ -115,9 +115,7 @@ previewer
 importer
 **/
 #importer {
-	/* style */
 	box-shadow: 0 0 8px #00000028;
-	/* layout */
 	z-index: 1;
 	display: none;
 	min-width: 320px;

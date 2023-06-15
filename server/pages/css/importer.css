@@ -4,10 +4,8 @@
 
 /* header */
 #import_head {
-	/* style */
 	background: #222c46;
 	color: #fff;
-	/* layout */
 	margin-bottom: 5px;
 	height: 50px;
 	text-align: center;
@@ -53,11 +51,9 @@
 	width: 40px;
 }
 .asset_name {
-	/* style */
 	background-color: #0001;
 	color: #444;
 	outline: #666 auto 2px;
-	/* layout */
 	margin: 0;
 	padding: 1px 4px;
 	font-weight: bold;

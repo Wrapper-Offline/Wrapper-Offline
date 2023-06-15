@@ -15,11 +15,9 @@ main {
 theme
 **/
 .theme {
-	/* style */
 	background: #ddd;
 	border-radius: 4px;
 	transition: .15s ease;
-	/* layout */
 	display: inline-table;
 	margin: 5px;	
 	padding: 3px;
@@ -48,20 +46,16 @@ char copy
 **/
 #char-copy { margin: 30px 0 }
 #char-copy input {
-	/* style */
 	background: #353535;
 	border: 1px solid #353535;
 	color: #fff;
 	border-radius: 4px;
-	/* layout */
 	padding: 5px 10px;
 }
 #char-copy a {
-	/* style */
 	background: var(--primary);
 	color: #fff;
 	text-decoration: none;
 	border-radius: 4px;
-	/* layout */
 	padding: 5px 10px;
 }
