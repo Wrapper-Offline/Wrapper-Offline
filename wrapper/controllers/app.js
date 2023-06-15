@@ -1,30 +1,23 @@
-const httpz = require("@octanuary/httpz")
-let discord;
-require("../../utils/discord")
-	.then((f) => discord = f);
+const httpz = require("@octanuary/httpz");
 const database = require("../../data/database"), DB = new database(true);
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
 
 // video list
 group.route("*", "/", (req, res) => {
-	discord("Video List");
 	res.render("list", {});
 });
 // settings
 group.route("*", "/settings", (req, res) => {
-	discord("Settings");
 	res.render("settings", {});
 });
 // themelist page
 group.route("GET", "/create", (req, res) => {
-	discord("Choosing a Theme");
 	const { TRUNCATED_THEMELIST } = DB.select();
 	res.render("create", { truncatedThemelist: TRUNCATED_THEMELIST });
 });
 // flash pages
 group.route("GET", "/cc", async (req, res) => {
-	discord("Character Creator");
 	let flashvars = {
 		appCode: "go",
 		ctc: "go",
@@ -65,7 +58,6 @@ group.route("GET", "/cc", async (req, res) => {
 	});
 });
 group.route("GET", "/cc_browser", async (req, res) => {
-	discord("Character Browser");
 	let flashvars = {
 		appCode: "go",
 		ctc: "go",
@@ -104,7 +96,6 @@ group.route("GET", "/cc_browser", async (req, res) => {
 	});
 });
 group.route("GET", "/go_full", async (req, res) => {
-	discord("Video Maker");
 	const { IS_WIDE } = DB.select();
 	let flashvars = {
 		appCode: "go",
@@ -139,7 +130,6 @@ group.route("GET", "/go_full", async (req, res) => {
 	});
 });
 group.route("GET", "/player", async (req, res) => {
-	discord("Video Player");
 	const { IS_WIDE, DEFAULT_WATERMARK } = DB.select();
 	let flashvars = {
 		autostart: 1,
