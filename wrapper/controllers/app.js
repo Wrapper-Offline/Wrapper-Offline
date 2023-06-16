@@ -2,6 +2,7 @@ const httpz = require("@octanuary/httpz");
 const database = require("../../data/database"), DB = new database(true);
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
+const defaultBuild = "modded"; // TODO: add a setting for this
 
 // video list
 group.route("*", "/", (req, res) => {
@@ -18,6 +19,7 @@ group.route("GET", "/create", (req, res) => {
 });
 // flash pages
 group.route("GET", "/cc", async (req, res) => {
+	const build = req.query.buildDate || defaultBuild;
 	let flashvars = {
 		appCode: "go",
 		ctc: "go",
@@ -41,7 +43,7 @@ group.route("GET", "/cc", async (req, res) => {
 	res.render("app/char", {
 		title: "Character Creator",
 		attrs: {
-			data: SWF_URL + "/cc.swf",
+			data: SWF_URL + build + "/cc.swf",
 			type: "application/x-shockwave-flash", 
 			id: "char_creator", 
 			width: "960", 
@@ -51,13 +53,14 @@ group.route("GET", "/cc", async (req, res) => {
 		params: {
 			flashvars,
 			allowScriptAccess: "always",
-			movie: SWF_URL + "/cc.swf",
+			movie: SWF_URL + build + "/cc.swf",
 		},
 		isExternal: req.query.external || false,
 		object: toObjectString
 	});
 });
 group.route("GET", "/cc_browser", async (req, res) => {
+	const build = req.query.buildDate || defaultBuild;
 	let flashvars = {
 		appCode: "go",
 		ctc: "go",
@@ -79,7 +82,7 @@ group.route("GET", "/cc_browser", async (req, res) => {
 	res.render("app/char", {
 		title: "Character Browser",
 		attrs: {
-			data: SWF_URL + "/cc_browser.swf",
+			data: SWF_URL + build + "/cc_browser.swf",
 			type: "application/x-shockwave-flash", 
 			id: "char_creator", 
 			width: "100%", 
@@ -89,13 +92,14 @@ group.route("GET", "/cc_browser", async (req, res) => {
 		params: {
 			flashvars,
 			allowScriptAccess: "always",
-			movie: SWF_URL + "/cc.swf",
+			movie: SWF_URL + build + "/cc_browser.swf",
 		},
 		isExternal: req.query.external || false,
 		object: toObjectString
 	});
 });
 group.route("GET", "/go_full", async (req, res) => {
+	const build = req.query.buildDate || defaultBuild;
 	const { IS_WIDE } = DB.select();
 	let flashvars = {
 		appCode: "go",
@@ -119,7 +123,7 @@ group.route("GET", "/go_full", async (req, res) => {
 	Object.assign(flashvars, req.query);
 	res.render("app/studio", {
 		attrs: {
-			data: SWF_URL + "/go_full.swf",
+			data: SWF_URL + build + "/go_full.swf",
 			type: "application/x-shockwave-flash", width: "100%", height: "100%",
 		},
 		params: {
@@ -130,6 +134,7 @@ group.route("GET", "/go_full", async (req, res) => {
 	});
 });
 group.route("GET", "/player", async (req, res) => {
+	const build = req.query.buildDate || defaultBuild;
 	const { IS_WIDE, DEFAULT_WATERMARK } = DB.select();
 	let flashvars = {
 		autostart: 1,
@@ -143,7 +148,7 @@ group.route("GET", "/player", async (req, res) => {
 	Object.assign(flashvars, req.query);
 	res.render("app/player", {
 		attrs: {
-			data: SWF_URL + "/player.swf",
+			data: SWF_URL + build + "/player.swf",
 			type: "application/x-shockwave-flash", width: "100%", height: "100%",
 		},
 		params: {
