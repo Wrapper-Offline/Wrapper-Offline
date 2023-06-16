@@ -11,8 +11,8 @@ const database = require("../../data/database"), DB = new database();
 const char = require("./char");
 const fUtil = require("../../utils/fileUtil");
 const asset = require("./asset");
-const source = path.join(__dirname, "../../server", process.env.CLIENT_URL);
-const store = path.join(__dirname, "../../server", process.env.STORE_URL);
+const source = path.join(__dirname, "../../static/static");
+const store = path.join(__dirname, "../../static/store");
 const header = process.env.XML_HEADER;
 
 function name2Font(font) {

@@ -2,7 +2,7 @@ const httpz = require("@octanuary/httpz")
 const path = require("path");
 const database = require("../../data/database"), DB = new database(true);
 const fUtil = require("../../utils/fileUtil");
-const folder = path.join(__dirname, "../../server", process.env.STORE_URL);
+const folder = path.join(__dirname, "../../static/store");
 const group = new httpz.Group();
 
 /*

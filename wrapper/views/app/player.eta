@@ -3,9 +3,9 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
 		<title>Video Player - Wrapper: Offline</title>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/modern-normalize.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/flash.css">
 	</head>
 
 	<body style="margin:0px">

@@ -17,7 +17,7 @@ const fakeRoutes = require("./data/routes.json");
  */
 module.exports = function () {
 	const server = new httpz.Server();
-	const file = new static.Server(path.join(__dirname, "../server"), { cache: 2 });
+	const file = new static.Server(path.join(__dirname, "../static"), { cache: 2 });
 
 	server.add(reqBody);
 	server.add(resRender);
@@ -54,9 +54,14 @@ module.exports = function () {
 		}
 		// still no match, try serving a static file
 		if (!res.writableEnded) {
-			if (req.method != "GET" && req.method != "HEAD") {
+			if (
+				req.method != "GET" &&
+				req.method != "HEAD" &&
+				!req.parsedUrl.pathname.startsWith("/static")
+			) {
 				file.serveFile("/404.html", 404, {}, req, res);
 			} else {
+				req.url = req.url.substring(7);
 				req.addListener("end", () =>
 					file.serve(req, res, (e) => {
 						if (e && (e.status === 404)) {

@@ -3,6 +3,7 @@ const database = require("../../data/database"), DB = new database(true);
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
 const defaultBuild = "modded"; // TODO: add a setting for this
+const apiserver = "http://localhost:" + process.env.SERVER_PORT + "/";
 
 // video list
 group.route("*", "/", (req, res) => {
@@ -35,7 +36,7 @@ group.route("GET", "/cc", async (req, res) => {
 		original_asset_id: req.query["id"] || "",
 		themeId: "family",
 		// paths
-		apiserver: "/",
+		apiserver: apiserver,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>"
 	};
@@ -74,7 +75,7 @@ group.route("GET", "/cc_browser", async (req, res) => {
 		// options
 		themeId: "family",
 		// paths
-		apiserver: "/",
+		apiserver: apiserver,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>"
 	};
@@ -116,7 +117,7 @@ group.route("GET", "/go_full", async (req, res) => {
 		tray: "custom",
 		tlang: "en_US",
 		ut: 60,
-		apiserver: "http://localhost:4343/",
+		apiserver: apiserver,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>",
 	};
@@ -141,7 +142,7 @@ group.route("GET", "/player", async (req, res) => {
 		isWide: IS_WIDE,
 		isWixPaid: DEFAULT_WATERMARK == "wix" ? 0 : 1,
 		ut: 60,
-		apiserver: "/",
+		apiserver: apiserver,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>",
 	};

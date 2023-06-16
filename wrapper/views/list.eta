@@ -5,9 +5,9 @@
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
 		<title>Video List - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's Video List"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/list.css">
-		<script src="/pages/js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/list.css">
+		<script src="/static/pages/js/jquery.js"></script>
 	</head>
 
 	<body>
@@ -39,7 +39,7 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
-	<script src="/pages/js/global.js"></script>
+	<script src="/static/pages/js/global.js"></script>
 	<script>
 		let json, searchTerm = "";
 		let starters = true;

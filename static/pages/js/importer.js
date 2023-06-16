@@ -50,7 +50,7 @@ class AssetImporter {
 				el = $(`
 					<div class="importer_asset">
 						<div class="asset_metadata">
-							<img class="asset_preview" src="/pages/img/importer/sound.png" />
+							<img class="asset_preview" src="/static/pages/img/importer/sound.png" />
 							<div>
 								<h4 contenteditable="true" class="asset_name">${file.name}</h4>
 								<p class="asset_subtype">${filesize(file.size)} | Import as...</p>
@@ -74,7 +74,7 @@ class AssetImporter {
 				el = $(`
 					<div class="importer_asset">
 						<div class="asset_metadata">
-							<img class="asset_preview" src="/pages/img/importer/image.png" />
+							<img class="asset_preview" src="/static/pages/img/importer/image.png" />
 							<div>
 								<h4 contenteditable="true" class="asset_name">${file.name}</h4>
 								<p class="asset_subtype">${filesize(file.size)} | Import as...</p>
@@ -95,7 +95,7 @@ class AssetImporter {
 				el = $(`
 					<div class="importer_asset">
 						<div class="asset_metadata">
-							<img class="asset_preview" src="/pages/img/importer/video.png" />
+							<img class="asset_preview" src="/static/pages/img/importer/video.png" />
 							<div>
 								<h4 contenteditable="true" class="asset_name">${file.name}</h4>
 								<p class="asset_subtype">${filesize(file.size)} | Video</p>

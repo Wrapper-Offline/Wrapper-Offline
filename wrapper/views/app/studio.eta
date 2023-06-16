@@ -3,19 +3,19 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
 		<title>Video Editor - Wrapper: Offline</title>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/modern-normalize.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/flash.css">
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/importer.css">
 		<style>
 			body {
 				background: #eee;
 			}
 
 		</style>
-		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/filesize.js"></script>
-		<script src="/pages/js/global.js"></script>
+		<script src="/static/pages/js/jquery.js"></script>
+		<script src="/static/pages/js/filesize.js"></script>
+		<script src="/static/pages/js/global.js"></script>
 		<script>
 			const STORE_URL = "<%= it.env.STORE_URL %>";
 			const CLIENT_URL = "<%= it.env.CLIENT_URL %>";
@@ -74,6 +74,6 @@
 		</div>
 	</body>
 
-	<script src="/pages/js/importer.js"></script>
-	<script src="/pages/js/studio.js"></script>
+	<script src="/static/pages/js/importer.js"></script>
+	<script src="/static/pages/js/studio.js"></script>
 </html>

@@ -5,10 +5,10 @@
 		<link rel="icon" href="/favicon.ico" type="image/png" />
 		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
-		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/global.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/pages/css/importer.css"/>
+		<script src="/static/pages/js/jquery.js"></script>
+		<script src="/static/pages/js/global.js"></script>
 		<script>const IS_STUDIO = false;</script>
 	</head>
 
@@ -93,8 +93,8 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
-	<script src="/pages/js/importer.js"></script>
-	<script src="/pages/js/filesize.js"></script>
+	<script src="/static/pages/js/importer.js"></script>
+	<script src="/static/pages/js/filesize.js"></script>
 	<script>
 		new AssetImporter(importer);
 		// this is a mess of type conversion
@@ -129,9 +129,9 @@
 								<div class="asset_metadata">
 									<img class="asset_preview" src="${
 										info.id.includes("swf") ? 
-											"/pages/img/importer/image.png" : 
+											"/static/pages/img/importer/image.png" : 
 											info.subtype == "video" ? 
-												"/pages/img/importer/video.png" :
+												"/static/pages/img/importer/video.png" :
 												`/assets/${info.id}`
 									}" />
 									<div>
@@ -147,7 +147,7 @@
 						$(`
 							<div class="importer_asset">
 								<div class="asset_metadata">
-									<img class="asset_preview" src="/pages/img/importer/sound.png" />
+									<img class="asset_preview" src="/static/pages/img/importer/sound.png" />
 									<div>
 										<h4 class="asset_name">${info.title}</h4>
 										<p class="asset_subtype">${info.type} | ${info.subtype}</p>

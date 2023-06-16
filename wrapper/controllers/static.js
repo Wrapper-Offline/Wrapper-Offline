@@ -3,7 +3,7 @@ const httpz = require("@octanuary/httpz");
 const path = require("path");
 const group = new httpz.Group();
 
-const aniPath = path.join(__dirname, "../../server/animation");
+const aniPath = path.join(__dirname, "../../static/animation");
 const getBuildPath = (d, s) => path.join(aniPath, d, s);
 const dateStringToDate = (s) => {
 	const date = s.split("_");

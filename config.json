@@ -2,10 +2,10 @@
 	"XML_HEADER": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
 
 	"SWF_URL": "/static/animation/",
-	"STORE_URL": "/store/3a981f5cb2739137",
-	"CLIENT_URL": "/static/ad44370a650793d9",
-	"CHAR_BASE_URL": "./server/characters",
-	"THUMB_BASE_URL": "./server/thumbnails",
+	"STORE_URL": "/static/store",
+	"CLIENT_URL": "/static/static",
+	"CHAR_BASE_URL": "./static/characters",
+	"THUMB_BASE_URL": "./static/thumbnails",
 
 	"ASSET_FOLDER": "./_ASSETS",
 	"CACHÉ_FOLDER": "./_CACHÉ",
