@@ -19,21 +19,14 @@ This includes:
 FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some differences from MIT. Flash Player (extensions folder) and GoAnimate's original assets (server folder) are proprietary and do not grant you these rights, but if they did, this project wouldn't need to exist.
 
 ## Credits
-**Please do not contact anyone directly on the list for support, use the Discord server. ALL OF THESE CREDITS ARE THE CREDITS OF WRAPPER: OFFLINE EXCLUDING GOANIMATE LISTED BELOW.**
+Project Leaders have PL on the side of their name, the Directors of Testing have DT on the side of their name, the Head of Development have HD on the side of their name, and developers have D on the side of their name.
 
-Original W:O credits:
+Wrapper: Offline Credits:
 | Name                                         | Contribution         |
 | -------------------------------------------- | -------------------- |
 | [VisualPlugin](https://github.com/Windows81) | Creator of the original GoAnimate Wrapper    |
 | [CLarramore](https://github.com/CLarramore)  | Bug fixes            |
-| [PoleyMagik](https://github.com/PoleyMagik)  | Asset Store Archive  |
-
-No members of the original team are officially working on GA2014 or W:O, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
-
-The current Project Lead will have (PL) on their name, the current Director of Testing will have (DT) on their name, the current Head of Development with have (HD) on their name, and developers will have (D) on their name, to show they are officially working on Offline. Everyone else has simply contributed something at some point, or left the development team.
-W:O credits:
-| Name                                                  | Contribution                                                   |
-| ----------------------------------------------------- | -------------------------------------------------------------- |
+| [ItsJay](https://github.com/PoleyMagik)  | Asset Store Archive  |
 | [GoTest334 (PL)](https://github.com/GoTest334)        | Current W:O project lead                                       |
 | [Blukas/GoTube (DT)](https://github.com/theBlukas)    | Beta testing, Mega Comedy World 2                              |
 | [octanuary (HD)](https://github.com/octanuary)        | Real importing, starters, API changes                          |
@@ -41,15 +34,19 @@ W:O credits:
 | [2Epik4u](https://github.com/2Epik4u)                 | Stuff                                                          |
 | [Benson (Child Groom)](https://github.com/watchbenson)| Creator of W:O                                                 |
 | [NathanSaturnBOI](https://github.com/NathanSaturnBOI) | W:O Logo                                                       |
-| GoAnimate                                             | GoAnimate Logo, watermarks, favicon icon                       |
 | VisualPlugin                                          | Text to speech voices                                          |
 | creepyjokes2000                                       | Waveform fix, improved actions                                 |
-| PoleyMagik                                            | Client Modifications                                           |
+| [ItsJay](https://github.com/PoleyMagik)               | Client Modifications                                           |
+
+GoAnimate 2014 Credits:
+| Name                                         | Contribution         |
+| -------------------------------------------- | -------------------- |
+| [SimplyA_Coder (HD)](https://github.com/SimplyA-Coder)                   | Developer of GoAnimate 2014                       |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline or GoAnimate 2014.***
 | Name                                            | Contribution                     |
 | ----------------------------------------------- | -------------------------------- |
-| [Vyond](https://vyond.com)                      | Creators of the themes we love   |
+| [Vyond](https://vyond.com)                      | GoAnimate Logo, watermarks, favicon icon, asset archives, creator of the themes we love   |
 
 ## Footnotes
 [1] - See <https://www.gnu.org/philosophy/free-sw.html> for a better definition of free software.
