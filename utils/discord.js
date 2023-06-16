@@ -18,9 +18,9 @@ if (DISCORD_RPC == true) {
 			details: `Version ${version}`,
 			startTimestamp: startTime,
 			largeImageKey: "icon",
-			largeImageText: "Wrapper: Offline",
-			smallImageKey: "Wrapper: Offline",
-			smallImagetext: "Wrapper: Offline",
+			largeImageText: "GoAnimate 2014",
+			smallImageKey: "GoAnimate 2014",
+			smallImagetext: "GoAnimate 2014",
 		});
 	}
 
