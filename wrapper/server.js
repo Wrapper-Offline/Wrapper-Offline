@@ -57,11 +57,14 @@ module.exports = function () {
 			if (
 				req.method != "GET" &&
 				req.method != "HEAD" &&
-				!req.parsedUrl.pathname.startsWith("/static")
+				(
+					!req.parsedUrl.pathname.startsWith("/static") ||
+					!req.parsedUrl.pathname.startsWith("//static")
+				)
 			) {
 				file.serveFile("/404.html", 404, {}, req, res);
 			} else {
-				req.url = req.url.substring(7);
+				req.url = req.url.substring(8);
 				req.addListener("end", () =>
 					file.serve(req, res, (e) => {
 						if (e && (e.status === 404)) {
