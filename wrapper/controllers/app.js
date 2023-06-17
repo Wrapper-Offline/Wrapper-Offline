@@ -44,7 +44,7 @@ group.route("GET", "/cc", async (req, res) => {
 	res.render("app/char", {
 		title: "Character Creator",
 		attrs: {
-			data: SWF_URL + build + "/cc.swf",
+			data: SWF_URL + "/" + build + "/cc.swf",
 			type: "application/x-shockwave-flash", 
 			id: "char_creator", 
 			width: "960", 
@@ -54,7 +54,7 @@ group.route("GET", "/cc", async (req, res) => {
 		params: {
 			flashvars,
 			allowScriptAccess: "always",
-			movie: SWF_URL + build + "/cc.swf",
+			movie: SWF_URL + "/" + build + "/cc.swf",
 		},
 		isExternal: req.query.external || false,
 		object: toObjectString
@@ -83,7 +83,7 @@ group.route("GET", "/cc_browser", async (req, res) => {
 	res.render("app/char", {
 		title: "Character Browser",
 		attrs: {
-			data: SWF_URL + build + "/cc_browser.swf",
+			data: SWF_URL + "/" + build + "/cc_browser.swf",
 			type: "application/x-shockwave-flash", 
 			id: "char_creator", 
 			width: "100%", 
@@ -93,7 +93,7 @@ group.route("GET", "/cc_browser", async (req, res) => {
 		params: {
 			flashvars,
 			allowScriptAccess: "always",
-			movie: SWF_URL + build + "/cc_browser.swf",
+			movie: SWF_URL + "/" + build + "/cc_browser.swf",
 		},
 		isExternal: req.query.external || false,
 		object: toObjectString
@@ -124,7 +124,7 @@ group.route("GET", "/go_full", async (req, res) => {
 	Object.assign(flashvars, req.query);
 	res.render("app/studio", {
 		attrs: {
-			data: SWF_URL + build + "/go_full.swf",
+			data: SWF_URL + "/" + build + "/go_full.swf",
 			type: "application/x-shockwave-flash", width: "100%", height: "100%",
 		},
 		params: {
@@ -149,7 +149,7 @@ group.route("GET", "/player", async (req, res) => {
 	Object.assign(flashvars, req.query);
 	res.render("app/player", {
 		attrs: {
-			data: SWF_URL + build + "/player.swf",
+			data: SWF_URL + "/" + build + "/player.swf",
 			type: "application/x-shockwave-flash", width: "100%", height: "100%",
 		},
 		params: {

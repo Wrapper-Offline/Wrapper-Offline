@@ -58,7 +58,7 @@
 			<div class="popup_inside">
 				<h2 class="popup_heading">Preview Video</h2>
 			
-				<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
+				<object id="preview_player" data="<%= it.env.SWF_URL %>/modded/player.swf" type="application/x-shockwave-flash"
 					width="640" height="360">
 					<param name="flashvars" />
 					<param name="allowScriptAccess" value="always" />

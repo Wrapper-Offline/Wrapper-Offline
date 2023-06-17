@@ -1,7 +1,7 @@
 {
 	"XML_HEADER": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
 
-	"SWF_URL": "/static/animation/",
+	"SWF_URL": "/static/animation",
 	"STORE_URL": "/static/store",
 	"CLIENT_URL": "/static/static",
 	"CHAR_BASE_URL": "./static/characters",
