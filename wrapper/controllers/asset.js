@@ -19,7 +19,7 @@ ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 
 function listAssets(filters) {
 	const files = DB.select("assets", filters);
-	return `${header}<ugc more="0">${
+	return `${header}<ugc id="ugc" more="0">${
 		files.map(Asset.meta2Xml).join("")}</ugc>`;
 }
 
@@ -65,45 +65,65 @@ group.route("POST", "/api_v2/assets/imported", (req, res) => {
 });
 group.route("POST", "/goapi/getUserAssets/", (req, res) => {
 	const zip = nodezip.create();
+	
+	const filters = {
+		type: req.body.type
+	};
+	if (req.body.type == "prop") {
+		req.body.subtype ||= 0;
+		filters.subtype = req.body.subtype;
+	}
 
-	// const files = DB.select("assets", filters);
+	const files = DB.select("assets", filters);
+	for (const asset of files) {
+		const buffer = Asset.load(asset.id, true);
+		let filepath = `${asset.type}/${asset.id}`;
+		fileUtil.addToZip(zip, filepath, buffer);
+		if (asset.subtype == "video") {
+			const thumbnailPath = path.join(__dirname, "../../_ASSETS", asset.id.slice(0, -3) + "png");
+			const thumbnail = fs.readFileSync(thumbnailPath);
+			fileUtil.addToZip(zip, `${asset.type}/${asset.id.slice(0, -3) + "png"}`, thumbnail);
+		}
+	}
 
-	fileUtil.addToZip(zip, "desc.xml", listAssets(req.body.data));
+	fileUtil.addToZip(zip, "desc.xml", listAssets(filters));
 	res.setHeader("Content-Type", "application/zip");
 	zip.zip().then((b) => res.end(Buffer.concat([Buffer.from([0x0]), b])));
 });
 group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
-	if (req.body.type !== "char") {
-		res.statusCode = 307;
-		res.setHeader("Location", "/api_v2/assets/imported");
-		res.end();
-		return;
-	} else if (!req.body.themeId) {
-		res.statusCode = 400;
-		res.end("1<error><code>malformed</code><message/></error>");
-		return;
-	}
-
-	let themeId;
-	switch (req.body.themeId) {
-		case "custom":
-			themeId = "family";
-			break;
-		case "action":
-		case "animal":
-		case "botdf":
-		case "space":
-			themeId = "cc2";
-			break;
-		default:
-			themeId = req.body.themeId;
-	}
-
 	const filters = {
-		themeId,
-		type: "char"
+		type: req.body.type
 	};
-	if (req.body.assetId && req.body.assetId !== "null") filters.id = req.body.assetId;
+	if (req.body.type == "char") {
+		if (!req.body.themeId) {
+			res.statusCode = 400;
+			res.end("1<error><code>malformed</code><message>no themeId</message></error>");
+			return;
+		}
+		switch (req.body.themeId) {
+			case "custom":
+				themeId = "family";
+				break;
+			case "action":
+			case "animal":
+			case "botdf":
+			case "space":
+			case "vietnam":
+				themeId = "cc2";
+				break;
+			default:
+				themeId = req.body.themeId;
+		}
+	} else if (req.body.type == "prop") {
+		// separate normal and video props
+		req.body.subtype ||= 0;
+		filters.subtype = req.body.subtype;
+	}
+	if (req.body.assetId && req.body.assetId !== "null") {
+		// used only for the character creator window mod
+		filters.id = req.body.assetId;
+	}
+
 	res.setHeader("Content-Type", "application/xml");
 	res.end(listAssets(filters));
 });
@@ -130,7 +150,7 @@ group.route("*", /\/(assets|goapi\/getAsset)\/([\S]*)/, (req, res, next) => {
 	}
 
 	try {
-		const ext = id.split(".")[-1] || "xml";
+		const ext = id.split(".")[1] || "xml";
 		const mime = mimeTypes[extensions.indexOf(ext)];
 		const readStream = Asset.load(id);
 		res.setHeader("Content-Type", mime);

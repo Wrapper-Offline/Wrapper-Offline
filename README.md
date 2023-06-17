@@ -24,5 +24,6 @@ Name | Contribution
 [Vyond](https://vyond.com) | Creators of the themes we love
 [VisualPlugin](https://github.com/Windows81) | GoAnimate Wrapper, character dump
 [It'sJay](https://github.com/PoleyMagik) | Asset Store Archive, client modifications
+FlashThemes | Props were refusing to load on the old builds, so I said "fuck it" and looked through their getUserAssetsXml response data. I had already spent like a week (2022-01-10 - 2022-01-17) trying to fix this issue back in January 2022, and I was not going to do it again. It turns out the reason why they weren't loading is because the \<ugc\> element didn't have an id attribute. I don't think I would've ever figured that out.
 
 No members of the original GoAnimate Wrapper team are officially working on Offline, even if they have contributed.
