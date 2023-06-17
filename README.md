@@ -1,5 +1,5 @@
 # Wrapper: Secluded
-Wrapper: Secluded is a GoAnimate Server Emulator that runs on your own computer. It's a fork of Wrapper: Offline with changes I felt would be too much for regular users to handle. These changes include, but are not limited to: no Electron, no Discord rich presence, and no guarantee of stability.
+Wrapper: Secluded is a GoAnimate Server Emulator that runs on your own computer. It's like Wrapper: Offline, but without the little kids using it.
 
 ## Running / Installation
 Open a terminal window and run this:
