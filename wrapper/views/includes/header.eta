@@ -3,8 +3,20 @@
 		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="GoAnimate Logo"/></h1>
 	</a>
 	<nav id="headbuttons">
-		<a href="http://localhost:4343/extra_pages/YourAccount.html" class="button_small">Your Account ↓</a>
-		<a href="http://localhost:4343/extra_pages/Explore.html" class="button_small">Explore ↓</a>
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button">Your Account ↓</div>
+			<nav class="dropdown_menu">
+				<a href="http://localhost:4343/">Dashboard</a>
+				<a href="http://localhost:4343/">Your Videos</a>
+			</nav>
+	</div>
+	<div class="dropdown_contain button_small">
+			<div class="dropdown_button">Explore ↓</div>
+			<nav class="dropdown_menu">
+				<a href="http://localhost:4343/extra_pages/WebpageInDevelopment.html">Blog</a>
+				<a href="http://localhost:4343/extra_pages/WebpageInDevelopment.html">Videos</a>
+			</nav>
+		</div>
 		<a href="https://web.archive.org/web/20140421234539/http://goanimate.com/business/videoplans/?hook=header_button.site" class="button_small">Plans & Pricing</a>
 		<a href="http://localhost:4343/create" class="button_big">Make a Video</a>
 	</nav>
