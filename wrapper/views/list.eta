@@ -15,8 +15,8 @@
 
 		<main>
 			<nav class="table_filters">
-				<a class="table_filter movies" href="javascript:;" onclick="switchFilter(false)">Movies</a>
-				<a class="table_filter starters" href="javascript:;" onclick="switchFilter(true)">Starters</a>
+				<a class="btn table_filter movies" href="javascript:;" onclick="switchFilter(false)">Movies</a>
+				<a class="btn table_filter starters" href="javascript:;" onclick="switchFilter(true)">Starters</a>
 			</nav>
 			<table>
 				<thead>
@@ -109,13 +109,13 @@
 
 		function switchFilter(shouldEqual) {
 			if (starters == shouldEqual) return;
-			$(".movie_filter").removeClass("selected");
+			$(".table_filter").removeClass("selected");
 			if (starters) {
 				starters = false;
-				$(".movie_filter.movies").addClass("selected");
+				$(".table_filter.movies").addClass("selected");
 			} else {
 				starters = true;
-				$(".movie_filter.starters").addClass("selected");
+				$(".table_filter.starters").addClass("selected");
 			}
 			$.get(`/api/${starters ? "starter" : "movie"}/list`)
 				.done((data) => {

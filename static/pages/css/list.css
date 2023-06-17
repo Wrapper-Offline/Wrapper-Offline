@@ -6,36 +6,29 @@ main {
 table filter
 **/
 .table_filters {
-	background: #333;
-	margin: 0 auto;
+	background: var(--textured-background);
+	border: 1px solid #b1b1b1;
+	border-radius: 3px;
+    margin: 0 auto 8px;
+	overflow: auto;
+	width: 600px;
+}
+html.dark .table_filters {
+	border-color: #191919;
 }
 .table_filter {
-	border-top: 2px solid #dddddd;
-	border-right: 1px solid #ddd;
-	color: #444;
 	float: left;
-	padding: 8px;
+	padding: 6px;
+	margin: 4px;
 	text-align: center;
-	text-decoration: none;
-	font-weight: 300;
-	font-size: 14px;
-	width: 50%;
+	width: calc(50% - 8px);
 }
-.table_filter:last-of-type {
-	border-right: none;
+.table_filter.selected {
+	background: linear-gradient(#fff, #dfdfdf);
+	color: var(--primary)!important;
 }
-.table_filter.selected,
-.table_filter:hover {
-	background: #f2f2f2;
-	font-weight: 400;
-}
-html.dark .table_filter {
-	border-color: #3a3a3a;
-	color: #ddd;
-}
-html.dark .table_filter.selected,
-html.dark .table_filter:hover {
-	background: #2b2b2b;
+html.dark .table_filter.selected {
+	background: linear-gradient(#3a3a3a, #2e2e2e);
 }
 
 /**

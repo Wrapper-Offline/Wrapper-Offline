@@ -15,7 +15,8 @@ main {
 theme
 **/
 .theme {
-	background: #ddd;
+	background: linear-gradient(#fbfbfb, #f0f0f0);
+	box-shadow: var(--shadow-small);
 	border-radius: 4px;
 	transition: .15s ease;
 	display: inline-table;
@@ -24,9 +25,9 @@ theme
 	padding-bottom: 6px;
 }
 .theme:hover { opacity: 0.8; }
-html.dark .theme { background: #353535 }
+html.dark .theme { background: linear-gradient(#404040, #272727) }
 .theme img {
-	border-radius: 4px;
+	border-radius: 2px;
 	margin-bottom: 6px;
 	display: block;
 }
