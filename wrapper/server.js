@@ -32,9 +32,7 @@ module.exports = function () {
 			const regex = new RegExp(linkIndex);
 			if (regex.test(req.parsedUrl.pathname)) {
 				const route = combLinks[linkIndex];
-				const link = req.parsedUrl.pathname;
 				const headers = route.headers;
-				const path = `./${link}`;
 	
 				try {
 					for (var headerName in headers || {}) {
@@ -43,8 +41,8 @@ module.exports = function () {
 					res.statusCode = route.statusCode || 200;
 					if (route.content !== undefined)
 						res.end(route.content);
-					else if (fs.existsSync(path))
-						fs.createReadStream(path).pipe(res);
+					else if (fs.existsSync(route.path || "fiodfdfjfk bsdbvludi"))
+						fs.createReadStream(route.path).pipe(res);
 					else throw null;
 				} catch (e) {
 					break;
@@ -55,11 +53,13 @@ module.exports = function () {
 		// still no match, try serving a static file
 		if (!res.writableEnded) {
 			if (
-				req.method != "GET" &&
-				req.method != "HEAD" &&
 				(
-					!req.parsedUrl.pathname.startsWith("/static") ||
-					!req.parsedUrl.pathname.startsWith("//static")
+					req.method != "GET" &&
+					req.method != "HEAD"
+				) ||
+				!(
+					req.url.indexOf("/static") == 0 ||
+					req.url.indexOf("//static") == 0
 				)
 			) {
 				file.serveFile("/404.html", 404, {}, req, res);

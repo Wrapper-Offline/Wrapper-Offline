@@ -99,7 +99,7 @@ module.exports = {
 	 * @param {fs.ReadStream | Buffer | string} data 
 	 * @param {string} ext
 	 * @param {object} info 
-	 * @returns {string}
+	 * @returns {Promise<string>}
 	 */
 	save(data, ext, info) {
 		return new Promise((res, rej) => {

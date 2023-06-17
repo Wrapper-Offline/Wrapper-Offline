@@ -4,7 +4,8 @@ const ffmpeg = require("fluent-ffmpeg");
 const { fromFile } = require("file-type");
 const { extensions, mimeTypes } = require("file-type/supported");
 const fs = require("fs");
-const httpz = require("@octanuary/httpz")
+const httpz = require("@octanuary/httpz");
+const nodezip = require("node-zip");
 const path = require("path");
 const tempfile = require("tempfile");
 const fileUtil = require("../../utils/fileUtil");
@@ -44,17 +45,32 @@ group.route("GET", "/api/assets/list", (req, res) => {
 	res.json(DB.select("assets"));
 });
 group.route("POST", "/api_v2/assets/imported", (req, res) => {
-	res.assert(req.body.data.type, 400, { status: "error" });
-	if (req.body.data.type == "prop") req.body.data.subtype ||= 0;
+	if (!req.body.data) { // builds < 2016
+		res.assert(req.body.type, 400, { status: "error" });
+		if (req.body.type == "prop") req.body.subtype ||= 0;
+		res.end(listAssets(req.body));
+	} else { // >= 2016
+		res.assert(req.body.data.type, 400, { status: "error" });
+		if (req.body.data.type == "prop") req.body.data.subtype ||= 0;
+	
+		// what's even the point of this if it still uses an xml
+		// it's dumb
+		res.json({
+			status: "ok",
+			data: {
+				xml: listAssets(req.body.data)
+			}
+		});
+	}
+});
+group.route("POST", "/goapi/getUserAssets/", (req, res) => {
+	const zip = nodezip.create();
 
-	// what's even the point of this if it still uses an xml
-	// it's dumb
-	res.json({
-		status: "ok",
-		data: {
-			xml: listAssets(req.body.data)
-		}
-	});
+	// const files = DB.select("assets", filters);
+
+	fileUtil.addToZip(zip, "desc.xml", listAssets(req.body.data));
+	res.setHeader("Content-Type", "application/zip");
+	zip.zip().then((b) => res.end(Buffer.concat([Buffer.from([0x0]), b])));
 });
 group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 	if (req.body.type !== "char") {
@@ -278,9 +294,9 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 				await new Promise((resolve, rej) => {
 					// get the height and width
 					ffmpeg(filepath).ffprobe((e, data) => {
-						if (e) rej(e);
-						info.width = data.streams[0].width;
-						info.height = data.streams[0].height;
+						if (e) return rej(e);
+						info.width = data.streams[0].width || data.streams[1].width;
+						info.height = data.streams[0].height || data.streams[1].height;
 
 						// convert the video to an flv
 						ffmpeg(filepath)
@@ -328,7 +344,27 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 		status: "ok", 
 		data: info
 	});
-})
+});
+group.route("POST", "/goapi/saveProp/", async (req, res) => {
+	let propType = "placeable";
+	if (req.body.holdable == "1") {
+		propType = "holdable";
+	} else if (req.body.headable == "1") {
+		propType = "headable";
+	}
+
+	const filepath = req.files.Filedata.filepath;
+	const { ext } = await fromFile(filepath);
+	let info = {
+		type: "prop",
+		subtype: "0",
+		title: req.body.title,
+		ptype: propType
+	};
+
+	const id = await Asset.save(filepath, ext, info);
+	res.end(`0<response id="${id}"><type>${info.type}</type><subtype>${info.subtype}</subtype><file>${id}</file><id>${id}</id></response>`);
+});
 group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	isRecord = req.body.bytes ? true : false;
 

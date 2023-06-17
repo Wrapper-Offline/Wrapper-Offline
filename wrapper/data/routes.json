@@ -22,6 +22,9 @@
 			"statusCode": 302,
 			"content": ""
 		},
+		"/favicon.ico": {
+			"path": "static/favicon.ico"
+		},
 		"/crossdomain.xml": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"

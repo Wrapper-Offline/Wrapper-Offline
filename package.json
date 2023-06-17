@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "node main.js",
+		"start": "npx nodemon main.js --ignore ./_LOGS --ignore ./_SAVED --ignore ./_ASSETS --ignore ./_CACHÉ",
 		"test": "mocha"
 	},
 	"main": "main.js",
@@ -24,6 +24,7 @@
 		"mp3-duration": "^1.1.0",
 		"node-static": "^0.7.11",
 		"node-zip": "github:kyriosli/node-zip",
+		"nodemon": "^2.0.22",
 		"sharp": "^0.30.6",
 		"tempfile": "^3.0.0",
 		"xmldoc": "^1.1.2"
