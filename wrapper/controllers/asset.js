@@ -19,6 +19,10 @@ ffmpeg.setFfprobePath(require("@ffprobe-installer/ffprobe").path);
 
 function listAssets(filters) {
 	const files = DB.select("assets", filters);
+	if (filters.type == "effect") {
+		// effects list backwards on the lvm idk why
+		files.reverse();
+	}
 	return `${header}<ugc id="ugc" more="0">${
 		files.map(Asset.meta2Xml).join("")}</ugc>`;
 }
