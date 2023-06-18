@@ -211,6 +211,9 @@ group.route("POST", "/api_v2/asset/get", (req, res) => {
 		res.json({ status: "not_found" });
 	}
 });
+group.route("POST", "/goapi/getLatestAsset/", (req, res) => {
+	res.end("0");
+});
 // update
 group.route("POST", "/api_v2/asset/update/", (req, res) => {
 	const id = req.body.data.id || req.body.data.starter_id;
@@ -411,8 +414,9 @@ group.route("POST", "/goapi/saveVideo/", async (req, res) => {
 		type: "prop",
 		subtype: "video",
 		title: req.body.title
-	};
+	}, id = fileUtil.generateId() + ".flv";
 
+	res.end(`0<asset><type>prop</type><subtype>video</subtype><title>${info.title}</title><published>0</published><tags></tags><width>0</width><height>0</height><file>${id}</file><id>${id}</id></asset>`);
 	const temppath = tempfile(".flv");
 	await new Promise((resolve, rej) => {
 		// get the height and width
@@ -426,7 +430,7 @@ group.route("POST", "/goapi/saveVideo/", async (req, res) => {
 				.output(temppath)
 				.on("end", async () => {
 					const readStream = fs.createReadStream(temppath);
-					info.id = await Asset.save(readStream, "flv", info);
+					await Asset.save(readStream, id, info);
 
 					// save the first frame
 					ffmpeg(filepath)
@@ -435,19 +439,16 @@ group.route("POST", "/goapi/saveVideo/", async (req, res) => {
 							__dirname,
 							"../../",
 							process.env.ASSET_FOLDER,
-							info.id.slice(0, -3) + "png"
+							id.slice(0, -3) + "png"
 						))
 						.outputOptions("-frames", "1")
-						.on("end", () => resolve(info.id))
+						.on("end", () => resolve(id))
 						.run();
 				})
 				.on("error", (e) => rej("Error converting video:", e))
 				.run();
 		});
 	});
-
-	// note: setting the width to anything other than 0 causes the video maker to not load it
-	res.end(`0<asset><type>prop</type><subtype>video</subtype><title>${info.title}</title><published>0</published><tags></tags><width>0</width><height>0</height><file>${info.id}</file><id>${info.id}</id></asset>`);
 });
 group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	isRecord = req.body.bytes ? true : false;
