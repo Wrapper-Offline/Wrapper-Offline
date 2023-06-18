@@ -63,7 +63,16 @@ group.route("POST", "/api_v2/assets/imported", (req, res) => {
 		});
 	}
 });
-group.route("POST", "/goapi/getUserAssets/", (req, res) => {
+group.route("POST", ["/goapi/getUserAssets/", "/goapi/getUserVideoAssets/"], (req, res) => {
+	if (!req.body.type) {
+		if (req.parsedUrl.pathname == "/goapi/getUserVideoAssets/") {
+			req.body.type = "prop";
+			req.body.subtype = "video";
+		} else {
+			req.status(400);
+			return res.end("1<e></e>");
+		}
+	}
 	const zip = nodezip.create();
 	
 	const filters = {
@@ -365,25 +374,80 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 		data: info
 	});
 });
-group.route("POST", "/goapi/saveProp/", async (req, res) => {
-	let propType = "placeable";
-	if (req.body.holdable == "1") {
-		propType = "holdable";
-	} else if (req.body.headable == "1") {
-		propType = "headable";
-	}
-
+group.route("POST", ["/goapi/saveProp/", "/goapi/saveBackground/"], async (req, res) => {
 	const filepath = req.files.Filedata.filepath;
 	const { ext } = await fromFile(filepath);
+	if (fileTypes.prop.indexOf(ext) < 0) {
+		res.status(400);
+		return res.end("1<e><code>UNSUPPORTED_IMAGE_FORMAT</code></e>");
+	}
+
 	let info = {
-		type: "prop",
-		subtype: "0",
-		title: req.body.title,
-		ptype: propType
+		type: req.body.type,
+		title: req.body.title
 	};
+	if (info.type == "prop") {
+		info.subtype = "0";
+		info.ptype = "placeable";
+		if (req.body.holdable == "1") {
+			info.ptype = "holdable";
+		} else if (req.body.headable == "1") {
+			info.ptype = "headable";
+		}
+	}
 
 	const id = await Asset.save(filepath, ext, info);
-	res.end(`0<response id="${id}"><type>${info.type}</type><subtype>${info.subtype}</subtype><file>${id}</file><id>${id}</id></response>`);
+	res.end(`0<asset><type>${info.type}</type><subtype>${info.subtype}</subtype><file>${id}</file><id>${id}</id></asset>`);
+});
+group.route("POST", "/goapi/saveVideo/", async (req, res) => {
+	const filepath = req.files.Filedata.filepath;
+	const { ext } = await fromFile(filepath);
+	if (fileTypes.video.indexOf(ext) < 0) {
+		res.status(400);
+		return res.end("1<e><code>UNSUPPORTED_IMAGE_FORMAT</code></e>");
+	}
+
+	let info = {
+		type: "prop",
+		subtype: "video",
+		title: req.body.title
+	};
+
+	const temppath = tempfile(".flv");
+	await new Promise((resolve, rej) => {
+		// get the height and width
+		ffmpeg(filepath).ffprobe((e, data) => {
+			if (e) return rej(e);
+			info.width = data.streams[0].width || data.streams[1].width;
+			info.height = data.streams[0].height || data.streams[1].height;
+
+			// convert the video to an flv
+			ffmpeg(filepath)
+				.output(temppath)
+				.on("end", async () => {
+					const readStream = fs.createReadStream(temppath);
+					info.id = await Asset.save(readStream, "flv", info);
+
+					// save the first frame
+					ffmpeg(filepath)
+						.seek("0:00")
+						.output(path.join(
+							__dirname,
+							"../../",
+							process.env.ASSET_FOLDER,
+							info.id.slice(0, -3) + "png"
+						))
+						.outputOptions("-frames", "1")
+						.on("end", () => resolve(info.id))
+						.run();
+				})
+				.on("error", (e) => rej("Error converting video:", e))
+				.run();
+		});
+	});
+
+	// note: setting the width to anything other than 0 causes the video maker to not load it
+	res.end(`0<asset><type>prop</type><subtype>video</subtype><title>${info.title}</title><published>0</published><tags></tags><width>0</width><height>0</height><file>${info.id}</file><id>${info.id}</id></asset>`);
 });
 group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	isRecord = req.body.bytes ? true : false;
@@ -419,7 +483,7 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 		info.duration = await fileUtil.mp3Duration(temppath);
 		const id = await Asset.save(temppath, "mp3", info);
 		res.end(
-			`0<response><asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset></response>`
+			`0${req.body.placeable?"":"<response>"}<asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>${info.subtype}</subtype><title>${info.title}</title><published>0</published><tags></tags><duration>${info.duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset>${req.body.placeable?"":"</response>"}`
 		);
 	});
 });

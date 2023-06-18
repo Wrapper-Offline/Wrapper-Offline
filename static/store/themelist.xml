@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list version="1.0">
 	<fvm_meta theme_code="" is_biz="0" />
-	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="custom" />
+	<!-- TODO: fix the cc_theme_ids here -->
+	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="family" />
 	<theme id="action" name="Lil' Peepz" thumb="" cc_theme_id="action" />
 	<theme id="business" name="Business Friendly" thumb="" cc_theme_id="business" />
 	<theme id="politics2" name="White Houserz" thumb="" cc_theme_id="politics2" />

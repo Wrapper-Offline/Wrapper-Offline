@@ -15,7 +15,12 @@
 		"gif",
 		"png",
 		"jpg",
-		"mp4"
+		"mp4",
+		"mov"
+	],
+	"video": [
+		"mp4",
+		"mov"
 	],
 	"sound": [
 		"mp3",

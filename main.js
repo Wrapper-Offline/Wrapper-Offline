@@ -4,22 +4,30 @@ License: MIT
 */
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
-const saveLogs = (new (require("./data/database"))(true)).select().SAVE_LOG_FILES;
 const fs = require("fs");
 const path = require("path");
-const assets = path.join(__dirname, env.ASSET_FOLDER);
-const cache = path.join(__dirname, env.CACHÉ_FOLDER);
-const logs = path.join(__dirname, env.LOG_FOLDER);
-const saved = path.join(__dirname, env.SAVED_FOLDER);
+const dirs = [
+	path.join(__dirname, env.ASSET_FOLDER),
+	path.join(__dirname, env.CACHÉ_FOLDER),
+	path.join(__dirname, env.LOG_FOLDER),
+	path.join(__dirname, env.SAVED_FOLDER)
+];
 
 /*
 initialization
 */
 // create directories if they're missing
-if (!fs.existsSync(assets)) fs.mkdirSync(assets);
-if (!fs.existsSync(cache)) fs.mkdirSync(cache);
-if (!fs.existsSync(logs)) fs.mkdirSync(logs);
-if (!fs.existsSync(saved)) fs.mkdirSync(saved);
+let restart = false;
+for (const dir of dirs) {
+	if (!fs.existsSync(dir)) {
+		fs.mkdirSync(dir);
+		restart = true;
+	}
+}
+if (restart) {
+	console.log("Missing directories created. Exiting...")
+	process.exit(0);
+}
 // start the server
 const server = require("./wrapper/server");
 server();
@@ -27,6 +35,7 @@ server();
 /*
 log files
 */
+const saveLogs = (new (require("./data/database"))(true)).select().SAVE_LOG_FILES;
 if (saveLogs) {
 	const filePath = path.join(logs, new Date().valueOf() + ".txt");
 	const writeStream = fs.createWriteStream(filePath);
