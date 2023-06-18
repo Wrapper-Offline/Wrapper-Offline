@@ -18,6 +18,9 @@
 		"mp4",
 		"mov"
 	],
+	"effect": [
+		"swf"
+	],
 	"video": [
 		"mp4",
 		"mov"

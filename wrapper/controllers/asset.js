@@ -140,7 +140,7 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 /*
 load
 */
-group.route("*", /\/(assets|goapi\/getAsset)\/([\S]*)/, (req, res, next) => {
+group.route("*", /\/(assets|goapi\/getAsset|static\/store\/ugc\/effect)\/([\S]*)/, (req, res, next) => {
 	let id;
 	switch (req.method) {
 		case "GET":
@@ -377,7 +377,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 		data: info
 	});
 });
-group.route("POST", ["/goapi/saveProp/", "/goapi/saveBackground/"], async (req, res) => {
+group.route("POST", ["/goapi/saveProp/", "/goapi/saveBackground/", "/goapi/saveEffect/"], async (req, res) => {
 	const filepath = req.files.Filedata.filepath;
 	const { ext } = await fromFile(filepath);
 	if (fileTypes.prop.indexOf(ext) < 0) {
@@ -400,6 +400,10 @@ group.route("POST", ["/goapi/saveProp/", "/goapi/saveBackground/"], async (req, 
 	}
 
 	const id = await Asset.save(filepath, ext, info);
+	if (info.type == "effect") {
+		info.id = id;
+		return res.end("0" + Asset.meta2Xml(info));
+	}
 	res.end(`0<asset><type>${info.type}</type><subtype>${info.subtype}</subtype><file>${id}</file><id>${id}</id></asset>`);
 });
 group.route("POST", "/goapi/saveVideo/", async (req, res) => {
