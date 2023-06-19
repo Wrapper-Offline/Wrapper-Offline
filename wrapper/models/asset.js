@@ -80,7 +80,7 @@ module.exports = {
 				xml = `<effect type="ANIME" resize="false" move="false" subtype="0" id="${v.id}" aid="${v.id}" enc_asset_id="${v.id}" name="${v.title}" published="0" enable="Y"><tags/></effect>`
 				break;
 			} case "movie": {
-				xml = `<movie id="${v.id}" enc_asset_id="${v.id}" path="/_SAVED/${v.id}" numScene="${v.sceneCount}" title="${v.title}" thumbnail_url="/file/movie/thumb/${v.id}"><tags></tags></movie>`;
+				xml = `<movie id="${v.id}" enc_asset_id="${v.id}" path="movie/${v.id}.png" numScene="${v.sceneCount}" title="${v.title}" thumbnail_url="/file/movie/thumb/${v.id}"><tags></tags></movie>`;
 				break;
 			} case "prop": {
 				if (v.subtype == "video") {

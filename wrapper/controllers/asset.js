@@ -89,13 +89,24 @@ group.route("POST", ["/goapi/getUserAssets/", "/goapi/getUserVideoAssets/"], (re
 
 	const files = DB.select("assets", filters);
 	for (const asset of files) {
-		const buffer = Asset.load(asset.id, true);
-		let filepath = `${asset.type}/${asset.id}`;
-		fileUtil.addToZip(zip, filepath, buffer);
-		if (asset.subtype == "video") {
-			const thumbnailPath = path.join(__dirname, "../../_ASSETS", asset.id.slice(0, -3) + "png");
-			const thumbnail = fs.readFileSync(thumbnailPath);
-			fileUtil.addToZip(zip, `${asset.type}/${asset.id.slice(0, -3) + "png"}`, thumbnail);
+		if (asset.type == "movie") {
+			const xmlPath = path.join(__dirname, "../../_SAVED", asset.id + ".xml");
+			const thumbPath = path.join(__dirname, "../../_SAVED", asset.id + ".png");
+			const xml = fs.readFileSync(xmlPath);
+			const thumb = fs.readFileSync(thumbPath);
+
+			const pathBase = `movie/${asset.id}`;
+			fileUtil.addToZip(zip, pathBase + ".xml", xml);
+			fileUtil.addToZip(zip, pathBase + ".png", thumb);
+		} else {
+			const buffer = Asset.load(asset.id, true);
+			let filepath = `${asset.type}/${asset.id}`;
+			fileUtil.addToZip(zip, filepath, buffer);
+			if (asset.subtype == "video") {
+				const thumbnailPath = path.join(__dirname, "../../_ASSETS", asset.id.slice(0, -3) + "png");
+				const thumbnail = fs.readFileSync(thumbnailPath);
+				fileUtil.addToZip(zip, `${asset.type}/${asset.id.slice(0, -3) + "png"}`, thumbnail);
+			}
 		}
 	}
 
