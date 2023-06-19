@@ -119,11 +119,6 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 		type: req.body.type
 	};
 	if (req.body.type == "char") {
-		if (!req.body.themeId) {
-			res.statusCode = 400;
-			res.end("1<error><code>malformed</code><message>no themeId</message></error>");
-			return;
-		}
 		switch (req.body.themeId) {
 			case "custom":
 				themeId = "family";
@@ -134,6 +129,8 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 			case "space":
 			case "vietnam":
 				themeId = "cc2";
+				break;
+			case undefined:
 				break;
 			default:
 				themeId = req.body.themeId;

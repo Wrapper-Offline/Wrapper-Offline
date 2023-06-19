@@ -22,7 +22,7 @@
 				<thead>
 					<tr>
 						<td></td>
-						<td id="search_container"><input id="search_bar" type="text" placeholder="Search Movies"/></td>
+						<td id="search_container"><input id="search_bar" type="text" placeholder="Search Movies..."/></td>
 						<td>Last Modified</td>
 						<td></td>
 					</tr>

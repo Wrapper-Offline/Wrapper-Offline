@@ -53,9 +53,9 @@ function name2Font(font) {
 			return "FontFileTelex";
 		case "":
 		case null:
-			return '';
+			return "";
 		default:
-			return `FontFile${font.replace(/\s/g, '')}`;
+			return `FontFile${font.replace(/\s/g, "")}`;
 	}
 }
 
@@ -231,7 +231,7 @@ module.exports = {
 								break;
 							}
 	
-							case 'bubbleAsset': {
+							case "bubbleAsset": {
 								const bubble = elem2.childNamed("bubble");
 								const text = bubble.childNamed("text");
 	
