@@ -79,6 +79,19 @@ module.exports = function processVoice(voiceName, rawText) {
 					break;
 				}
 
+				case "microsoft": {
+					const q = new URLSearchParams({
+						text,
+						voice: voice.arg
+					}).toString();
+
+					https.get({
+						hostname: "www.tetyys.com",
+						path: `/SAPI4/SAPI4?${q}`,
+					}, (r) => fileUtil.convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
+					break;
+				}
+
 				case "cepstral": {
 					let pitch;
 					if (flags.pitch) {
