@@ -4528,6 +4528,14 @@
 			"arg": "Mary in Space",
 			"desc": "Mary (In Space)"
 		},
+		"bonzibuddy": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Adult Male #2, American English (TruVoice)",
+			"desc": "Bonzi Buddy"
+		},
 		"maryinsidethestadium": {
 			"country": "US",
 			"language": "en",
