@@ -4383,6 +4383,30 @@
 			"source": "voiceforge",
 			"arg": "Obama",
 			"desc": "Obama"
+		},
+		"sam": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Sam",
+			"desc": "Sam"
+		},
+		"mike1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike",
+			"desc": "Mike (Microsoft)"
+		},
+		"mary": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary",
+			"desc": "Mary"
 		}
 	},
 	"languages": {
