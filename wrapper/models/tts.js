@@ -80,15 +80,12 @@ module.exports = function processVoice(voiceName, rawText) {
 				}
 
 				case "microsoft": {
-					const q = new URLSearchParams({
-						text,
-						voice: voice.arg
-					}).toString();
-
-					https.get({
-						hostname: "www.tetyys.com",
-						path: `/SAPI4/SAPI4?${q}`,
-					}, (r) => fileUtil.convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
+					let url;
+					if (voice.desc.includes("Bonzi")) url = `https://www.tetyys.com/SAPI4/SAPI4?text=${
+						encodeURIComponent(text)
+					}&voice=${encodeURIComponent(voice.arg)}&pitch=140&speed=157`
+					else url = "https://www.tetyys.com/SAPI4/SAPI4?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(voice.arg);
+					https.get(url, (r) => fileUtil.convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
 					break;
 				}
 
