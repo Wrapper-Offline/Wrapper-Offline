@@ -4400,6 +4400,102 @@
 			"arg": "Mike",
 			"desc": "Mike (Microsoft)"
 		},
+		"mikeonthephone": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike (for Telephone)",
+			"desc": "Mike (On The Phone)"
+		},
+		"mikeinthehall": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Hall",
+			"desc": "Mike (In The Hall)"
+		},
+		"mikeinspace": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Space",
+			"desc": "Mike (In Space)"
+		},
+		"mikeinsidethestadium": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Stadium",
+			"desc": "Mike (Inside The Stadium)"
+		},
+		"robosoftsix": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Six",
+			"desc": "RoboSoft Six"
+		},
+		"robosoftfive": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Five",
+			"desc": "RoboSoft Five"
+		},
+		"robosoftfour": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Four",
+			"desc": "RoboSoft Four"
+		},
+		"robosoftthree": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Three",
+			"desc": "RoboSoft Three"
+		},
+		"robosofttwo": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Two",
+			"desc": "RoboSoft Two"
+		},
+		"robosoftone": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft One",
+			"desc": "RoboSoft One"
+		},
+		"malewhisper": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Male Whisper",
+			"desc": "Male Whisper"
+		},
+		"femalewhisper": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Female Whisper",
+			"desc": "Female Whisper"
+		},
 		"mary": {
 			"country": "US",
 			"language": "en",
@@ -4407,6 +4503,38 @@
 			"source": "microsoft",
 			"arg": "Mary",
 			"desc": "Mary"
+		},
+		"maryonthephone": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary (for Telephone)",
+			"desc": "Mary (On The Phone)"
+		},
+		"maryinthehall": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Hall",
+			"desc": "Mary (In The Hall)"
+		},
+		"maryinspace": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Space",
+			"desc": "Mary (In Space)"
+		},
+		"maryinsidethestadium": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Stadium",
+			"desc": "Mary (Inside The Stadium)"
 		}
 	},
 	"languages": {
