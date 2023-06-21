@@ -85,7 +85,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						encodeURIComponent(text)
 					}&voice=${encodeURIComponent(voice.arg)}&pitch=140&speed=157`
 					else url = "https://www.tetyys.com/SAPI4/SAPI4?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(voice.arg);
-					https.get(url, (r) => fileUtil.convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
+					https.get(url, (r) => convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
 					break;
 				}
 
