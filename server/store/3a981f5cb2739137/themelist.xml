@@ -4,6 +4,10 @@
 	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="custom" />
 	<theme id="action" name="Lil' Peepz" thumb="" cc_theme_id="action" />
 	<theme id="business" name="Business Friendly" thumb="" cc_theme_id="business" />
+	<theme id="whiteboard" name="Whiteboard Animation" thumb="" cc_theme_id="business" />
+	<theme id="commoncraft" name="Common Craft" thumb="" cc_theme_id="commoncraft" />
+	<theme id="sticklybiz" name="Stickly Business" thumb="" cc_theme_id="sticklybiz" />
+	<theme id="bizmodels" name="Business Models" thumb="" cc_theme_id="bizmodels" />
 	<theme id="politics2" name="White Houserz" thumb="" cc_theme_id="politics2" />
 	<theme id="retro" name="Cartoon Classics" thumb="ann-stand.swf" cc_theme_id="retro" />
 	<theme id="anime" name="Anime" thumb="" cc_theme_id="anime" />
