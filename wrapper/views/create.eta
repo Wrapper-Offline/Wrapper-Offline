@@ -25,10 +25,39 @@
 					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Business Friendly (BUSINESS EXCLUSIVE)</a>
+					<a class="none" >Business Friendly</a>
 					<div class="apps">
 						<a href="http://localhost:4343/go_full?tray=business" class="button_big">Make a Video</a>
 						<a href="http://localhost:4343/cc_browser?themeId=business" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="theme" data-has-cc>
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/whiteboard.jpg" alt="Whiteboard Animation">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Whiteboard Animation</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=whiteboard" class="button_big">Make a Video</a>
+						<a href="http://localhost:4343/cc_browser?themeId=whiteboard" class="button_small">Character Creator</a>
+					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="theme">
+				<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="/pages/img/themes/commoncraft.jpg" alt="Common Craft">
+				</div>
+				<div class="theme-meat">
+					<a class="none" >Common Craft</a>
+					<div class="apps">
+						<a href="http://localhost:4343/go_full?tray=commoncraft" class="button_big">Make a Video</a>
 					</div>
 				</div>
 			</div>
@@ -86,7 +115,7 @@
 					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Stickly Business (BUSINESS EXCLUSIVE)</a>
+					<a class="none" >Stickly Business</a>
 					<div class="apps">
 						<a href="http://localhost:4343/go_full?sticklybiz" class="button_big">Make a Video</a>
 					</div>
