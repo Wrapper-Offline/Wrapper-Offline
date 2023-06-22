@@ -8,6 +8,7 @@
 			<nav class="dropdown_menu">
 				<a href="http://localhost:4343/">Dashboard</a>
 				<a href="http://localhost:4343/">Your Videos</a>
+				<a href="http://localhost:4343/settings">Settings</a>
 			</nav>
 	</div>
 	<div class="dropdown_contain button_small">
