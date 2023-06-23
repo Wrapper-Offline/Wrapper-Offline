@@ -7,7 +7,7 @@ To start GoAnimate 2014 on Windows, you're first gonna need to install some prog
   - Ungoogled Chromium (download [here](https://github.com/Wyse-/ungoogled-chromium-binaries/releases/download/67.0.3396.87-3/ungoogled-chromium_67.0.3396.87-3_windows.zip))
   - WinRAR (download [here](https://www.win-rar.com/postdownload.html?&L=0))
 
-  After installing these programs, extract Ungoogled Chromium using WINRAR. Once the process is done, download GoAnimate 2014 [here](https://github.com/SimplyA-Coder/GoAnimate-2014/archive/refs/heads/main.zip). Finally, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. After that, head to Chromium, run chrome.exe and navigate to http://localhost:4343/. **Currently there is no support for Linux, MacOS support is currently in development and will be released soon.**
+  After installing these programs, extract Ungoogled Chromium using WINRAR. Once the process is done, download GoAnimate 2014 [here](https://github.com/SimplyA-Coder/GoAnimate-2014/archive/refs/heads/main.zip). Finally, open launch_goanimate.bat. It'll automate just about everything for you and, well, start GoAnimate 2014. After that, head to Chromium, run chrome.exe and navigate to http://localhost:4343/. **Currently**Currently there is no support for Linux or MacOS**.
 
 If you want to import videos and characters from other LVMs such as Wrapper: Offline into GoAnimate 2014, open its folder and drag the "_SAVED" and "_ASSETS" folder into the GoAnimate 2014 folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the folders in GoAnimate 2014 out before dragging the old one in.
 
