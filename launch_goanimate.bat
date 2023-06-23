@@ -12,12 +12,9 @@ title GoAnimate 2014 Launcher
 :: Stop commands from spamming stuff, cleans up the screen
 @echo off && cls
 
-:: Lets variables work or something idk im not a nerd
-SETLOCAL ENABLEDELAYEDEXPANSION
-
 :: Welcome, Director Ford!
 echo GoAnimate 2014
-echo A Legacy Video Maker with the old GoAnimate from 2014, built on Flash Player and Adobe.
+echo A Legacy Video Maker with the old GoAnimate from 2014, built on Flash Player and NodeJS.
 echo:
 
 
@@ -76,7 +73,7 @@ if !INCLUDEDCHROMIUM!==n (
 	popd
 )
 
-echo GoAnimate 2014 has been started! The video list should now be open.
+echo GoAnimate 2014 has been started! Your dashboard should now be open.
 
 ::::::::::::::::
 :: Post-Start ::
@@ -113,14 +110,14 @@ if /i "!choice!"=="clr" goto wrapperstartedcls
 if /i "!choice!"=="cls" goto wrapperstartedcls
 if /i "!choice!"=="clear" goto wrapperstartedcls
 :: funni options
-if "!choice!"=="43" echo OH MY GOD. FOURTY THREE CHARS. NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO & goto wrapperidle
-if /i "!choice!"=="benson" echo Child Groom & goto wrapperidle
-if /i "!choice!"=="ford" echo what up son & goto wrapperidle
-if /i "!choice!"=="no" echo stahp & goto wrapperidle
-if /i "!choice!"=="yes" echo Alright. & goto wrapperidle
-if /i "!choice!"=="fuck off" goto youfuckoff
-if /i "!choice!"=="fuck you" echo No, fuck you. & goto wrapperidle
-if /i "!choice!"=="sex" echo that's fake & goto wrapperidle
+if "!choice!"=="43" echo oh me goodness. there is the opening of the 43 chars. & goto wrapperidle
+if /i "!choice!"=="how do me make video? that's it?" echo 43 chars bart sampson notsmirks uolliac caillou lol its so funny how do i do it? & goto wrapperidle
+if /i "!choice!"=="hello. me name is keyyew." echo 43 FRICKING CHARS! & goto wrapperidle
+if /i "!choice!"=="OH MY GOD NOW THAT IS SOME SCARY GAMERS RIGHT THERE" echo MOM I RATE THE GAME 8 OUT OF 8 BECAUSE IT WAS SO GREAT AND I HATE YOUR ONION GO AWAY & goto wrapperidle
+if /i "!choice!"=="notsmirks" echo this person is very important to goanimate for his special videos without context.. & goto wrapperidle
+if /i "!choice!"=="notsmirkles" echo GOCITY HAS THE NOTSMIRKLES VIRUS AGAIN NOUUUUUUUUUUUUUUUUU & goto wrapperidle
+if /i "!choice!"=="this couch is kind of" echo IM SO SORRY JESSIE J & goto wrapperidle
+if /i "!choice!"=="JESSIE J I APOLOGIZE ME AM VERY SORRY" echo do not worry me dear & goto wrapperidle
 if /i "!choice!"=="browser slayer" goto slayerstestaments
 if /i "!choice!"=="patch" goto patchtime
 if /i "!choice!"=="random" goto sayarandom
@@ -163,11 +160,6 @@ start explorer.exe wrapper-offline
 popd
 goto wrapperidle
 
-:youfuckoff
-echo You fuck off.
-set FUCKOFF=y
-goto wrapperidle
-
 :open_faq
 echo Opening the FAQ...
 start https://github.com/Wrapper-Offline/Wrapper-Offline/wiki
@@ -183,99 +175,6 @@ TASKKILL /IM node.exe /F
 start "" /wait /B "%~F0" point_insertion
 exit
 
-:patchtime
-echo:
-echo would you like to patch whoper online
-echo press y or n
-:patchtimeretry
-set /p PATCHCHOICE= Response:
-echo:
-if not '!patchchoice!'=='' set patchchoice=%patchchoice:~0,1%
-if /i "!patchchoice!"=="y" echo too bad B^) & goto wrapperidle
-if /i "!patchchoice!"=="n" echo good & goto wrapperidle
-echo yes or no question here && goto patchtimeretry
-
-:sayarandom
-:: welcome to "inside jokes with no context" land
-set /a _rand=!RANDOM!*17/32767
-if !_rand!==0 echo stress level ^>0
-if !_rand!==1 echo Something random.
-if !_rand!==2 echo oisjdoiajfgmafvdsdg
-if !_rand!==3 echo my head is unscrewed & echo what do i need it for
-if !_rand!==4 echo when you're eating popcorn you're eating busted nuts
-if !_rand!==5 echo chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken 
-if !_rand!==6 echo when u nut so hard that ur roblox crashes
-if !_rand!==7 echo seven seven seven seven seven seven seven seven seven seven seven seven seven seven seven seven
-if !_rand!==8 echo DONT ASK HOW I GOT IT OR YOU WILL BE BANNED FROM MY CHANNEL WITH NO SECOND CHANCES
-if !_rand!==9 echo everything you know is wrong & echo black is white up is down and short is long
-if !_rand!==10 echo It's a chekcpoint.
-if !_rand!==11 echo Another monday... & echo Another mind-numbing, run-of-the-mill monday... & echo ANOTHER MUNDANE, MORIBUND, HUMDRUM MONDAY!
-if !_rand!==12 echo try typing "with style" when exiting
-if !_rand!==13 echo elmo
-if !_rand!==14 echo gnorm gnat says: trans rights are human rights
-if !_rand!==15 echo wrapper inline
-if !_rand!==16 echo Ronald McDonald Orgy
-goto wrapperidle
-
-:slayerstestaments
-echo:
-echo In the first age,
-PING -n 3 127.0.0.1>nul
-echo In the first battle,
-PING -n 3 127.0.0.1>nul
-echo When the shadows first lengthened,
-PING -n 4 127.0.0.1>nul
-echo One stood.
-PING -n 3 127.0.0.1>nul
-echo Slowed by the waste of unoptimized websites,
-PING -n 4 127.0.0.1>nul
-echo His soul harvested by the trackers of Google
-PING -n 5 127.0.0.1>nul
-echo And exposed beyond anonymity, 
-PING -n 4 127.0.0.1>nul
-echo He chose the path of perpetual torment.
-PING -n 6 127.0.0.1>nul
-echo In his ravenous hatred,
-PING -n 3 127.0.0.1>nul
-echo He found no peace,
-PING -n 3 127.0.0.1>nul
-echo And with boiling blood,
-PING -n 3 127.0.0.1>nul
-echo He scoured the search results,
-PING -n 4 127.0.0.1>nul
-echo Seeking vengeance against the companies who had wronged him.
-PING -n 6 127.0.0.1>nul
-echo He wore the crown of the Taskkillers,
-PING -n 4 127.0.0.1>nul
-echo and those that tasted the bite of his sword
-PING -n 5 127.0.0.1>nul
-echo named him...
-PING -n 3 127.0.0.1>nul
-echo the Browser Slayer.
-PING -n 3 127.0.0.1>nul
-:: here comes something that looks awesome normaly but is disgusting when escaped for batch
-:: credit to http://www.gamers.org/~fpv/doomlogo.html
-echo ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=     ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=     ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=   ^=^=^=^=^=^=^=^=  ^=^=^=^=^=^=^=^=
-echo ^\^\ ^. ^. ^. ^. ^. ^. ^.^\^\   //^. ^. ^. ^. ^. ^. ^.^\^\   //^. ^. ^. ^. ^. ^. ^.^\^\  ^\^\^. ^. ^.^\^\// ^. ^. //
-echo ^|^|^. ^. ^._____^. ^. ^.^|^| ^|^|^. ^. ^._____^. ^. ^.^|^| ^|^|^. ^. ^._____^. ^. ^.^|^| ^|^| ^. ^. ^.^\/ ^. ^. ^.^|^|
-echo ^|^| ^. ^.^|^|   ^|^|^. ^. ^|^| ^|^| ^. ^.^|^|   ^|^|^. ^. ^|^| ^|^| ^. ^.^|^|   ^|^|^. ^. ^|^| ^|^|^. ^. ^. ^. ^. ^. ^. ^|^|
-echo ^|^|^. ^. ^|^|   ^|^| ^. ^.^|^| ^|^|^. ^. ^|^|   ^|^| ^. ^.^|^| ^|^|^. ^. ^|^|   ^|^| ^. ^.^|^| ^|^| ^. ^| ^. ^. ^. ^. ^.^|^|
-echo ^|^| ^. ^.^|^|   ^|^|^. _-^|^| ^|^|-_ ^.^|^|   ^|^|^. ^. ^|^| ^|^| ^. ^.^|^|   ^|^|^. _-^|^| ^|^|-_^.^|^\ ^. ^. ^. ^. ^|^|
-echo ^|^|^. ^. ^|^|   ^|^|-^'  ^|^| ^|^|  ^`-^|^|   ^|^| ^. ^.^|^| ^|^|^. ^. ^|^|   ^|^|-^'  ^|^| ^|^|  ^`^|^\_ ^. ^.^|^. ^.^|^|
-echo ^|^| ^. _^|^|   ^|^|    ^|^| ^|^|    ^|^|   ^|^|_ ^. ^|^| ^|^| ^. _^|^|   ^|^|    ^|^| ^|^|   ^|^\ ^`-_/^| ^. ^|^|
-echo ^|^|_-^' ^|^|  ^.^|/    ^|^| ^|^|    ^\^|^.  ^|^| ^`-_^|^| ^|^|_-^' ^|^|  ^.^|/    ^|^| ^|^|   ^| ^\  / ^|-_^.^|^|
-echo ^|^|    ^|^|_-^'      ^|^| ^|^|      ^`-_^|^|    ^|^| ^|^|    ^|^|_-^'      ^|^| ^|^|   ^| ^\  / ^|  ^`^|^|
-echo ^|^|    ^`^'         ^|^| ^|^|         ^`^'    ^|^| ^|^|    ^`^'         ^|^| ^|^|   ^| ^\  / ^|   ^|^|
-echo ^|^|            ^.^=^=^=^' ^`^=^=^=^.         ^.^=^=^=^'^.^`^=^=^=^.         ^.^=^=^=^' /^=^=^. ^|  ^\/  ^|   ^|^|
-echo ^|^|         ^.^=^=^'   ^\_^|-_ ^`^=^=^=^. ^.^=^=^=^'   _^|_   ^`^=^=^=^. ^.^=^=^=^' _-^|/   ^`^=^=  ^\/  ^|   ^|^|
-echo ^|^|      ^.^=^=^'    _-^'    ^`-_  ^`^=^'    _-^'   ^`-_    ^`^=^'  _-^'   ^`-_  /^|  ^\/  ^|   ^|^|
-echo ^|^|   ^.^=^=^'    _-^'          ^`-__^\^._-^'         ^`-_^./__-^'         ^`^' ^|^. /^|  ^|   ^|^|
-echo ^|^|^.^=^=^'    _-^'                                                     ^`^' ^|  /^=^=^.^|^|
-echo ^=^=^'    _-^'                                                            ^\/   ^`^=^=
-echo ^\   _-^'                                                                ^`-_   /
-echo  ^`^'^'                                                                      ^`^`^'
-goto wrapperidle
-
 ::::::::::::::
 :: Shutdown ::
 ::::::::::::::
@@ -283,7 +182,7 @@ goto wrapperidle
 :: Confirmation before shutting down
 :exitwrapperconfirm
 echo:
-echo Are you sure you want to quit Wrapper: Offline?
+echo Are you sure you want to quit GoAnimate 2014?
 echo Be sure to save all your work.
 echo Type Y to quit, and N to go back.
 :exitwrapperretry
@@ -336,21 +235,6 @@ PING -n 3 127.0.0.1>nul
 echo WRAPPER OFFLINE ALSO ANNIHILA
 PING -n 2 127.0.0.1>nul
 exit
-
-:patched
-title candypaper nointernet PATCHED edition
-color 43
-echo OH MY GODDDDD
-PING -n 3 127.0.0.1>nul
-echo SWEETSSHEET LACKOFINTERNS PATCHED DETECTED^^!^^!^^!^^!^^!^^!^^!^^!^^!^^!^^!^^!
-PING -n 3 127.0.0.1>nul
-echo can never be use again...
-PING -n 4 127.0.0.1>nul
-echo whoever put patch.jpeg back, you are grounded grounded gorrudjnmed for 6000
-PING -n 3 127.0.0.1>nul
-:grr
-echo g r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r 
-goto grr
 
 :configcopy
 if not exist utilities ( md utilities )
