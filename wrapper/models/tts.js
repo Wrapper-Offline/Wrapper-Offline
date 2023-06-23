@@ -6,6 +6,7 @@ const database = require("../../data/database"), db = new database(true).select(
 if (db.fakevoices) voices = require("../data/fakevoices").voices;
 else voices = require("../data/voices").voices;
 const fakeyou = require('fakeyou.js');
+const { getAudioUrl } = require('uberduck-api')
 
 /**
  * uses tts demos to generate tts
@@ -410,6 +411,12 @@ module.exports = function processVoice(voiceName, rawText) {
 					break;
 				}
 
+				case "uberduck": {
+					getAudioUrl('pub_matdvlvkappqohpkax', 'pk_38e6b994-0f0f-4002-ba20-62b62487b2bc', voice.arg, text).then(i => {
+						https.get(i, (r) => convertToMp3(r, "wav").then(res).catch(rej));
+					}).catch(rej);
+					break;
+				}
 				default: return rej("The voice you requested currently has no source available right now. Please try another voice.");
 			}
 		} catch (e) {
