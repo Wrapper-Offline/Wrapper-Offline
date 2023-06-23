@@ -4555,7 +4555,7 @@
 		"roseurgent": {
 			"country": "US",
 			"language": "en",
-			"gender": "M",
+			"gender": "F",
 			"source": "uberduck",
 			"arg": "c4b48524-c8be-4ad5-ac1a-b4c3c74ae5b5",
 			"desc": "Rose (Urgent)"
@@ -4611,7 +4611,7 @@
 		"rosedreamy": {
 			"country": "US",
 			"language": "en",
-			"gender": "M",
+			"gender": "F",
 			"source": "uberduck",
 			"arg": "563c30aa-70c4-4dbc-8c3c-fe7fb2700ee3",
 			"desc": "Rose (Dreamy)"
