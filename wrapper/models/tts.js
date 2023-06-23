@@ -110,7 +110,7 @@ module.exports = function processVoice(voiceName, rawText) {
 							voice: voice.arg,
 							createTime: 666,
 							rate: 170,
-							pitch: pitch,
+							pitch,
 							sfx: "none"
 						}).toString();
 
