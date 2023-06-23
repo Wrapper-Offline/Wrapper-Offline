@@ -119,3 +119,4 @@ dist
 *.sfk
 *.sfap0
 wrapper/.vscode/settings.json
+wrapper/data/fakevoices.json
