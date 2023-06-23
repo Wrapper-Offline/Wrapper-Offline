@@ -5200,94 +5200,6 @@
 			"arg": "zeus",
 			"desc": "Zeus"
 		},
-		"roseurgent": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "uberduck",
-			"arg": "rose-urgent",
-			"desc": "Rose (Urgent)"
-		},
-		"angusupbeat": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "angus-upbeat",
-			"desc": "Angus (Upbeat)"
-		},
-		"loserboyupbeat": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "loser-boy-upbeat",
-			"desc": "Loser Boy (Upbeat)"
-		},
-		"davo": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "davo",
-			"desc": "Davo"
-		},
-		"kiwi": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "kiwi",
-			"desc": "Kiwi"
-		},
-		"frostyjohncynical": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "frosty-john-cynical",
-			"desc": "Frosty John (Cynical)"
-		},
-		"anguspleading": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "angus-pleading",
-			"desc": "Angus (Pleading)"
-		},
-		"rosedreamy": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "uberduck",
-			"arg": "rose-dreamy",
-			"desc": "Rose (Dreamy)"
-		},
-		"bertieangry": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "bertie-angry",
-			"desc": "Bertie (Angry)"
-		},
-		"generalherringbriefing": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "general-herring-briefing",
-			"desc": "General Herring (Briefing)"
-		},
-		"damondeepvoice": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "damon-deepvoice",
-			"desc": "Damon Deepvoice"
-		},
 		"wrl": {
 			"country": "US",
 			"language": "en",
@@ -5296,38 +5208,6 @@
 			"arg": "wrl",
 			"desc": "WRL"
 		},
-		"bertiechipper": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "bertie-chipper",
-			"desc": "Bertie (Chipper)"
-		},
-		"generalherringlosingpatience": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "general-herring-losing-patience",
-			"desc": "General Herring (Losing patience)"
-		},
-		"frostyjohn": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "frosty-john",
-			"desc": "Frosty John"
-		},
-		"movietrailerguy": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "movie-trailer-guy",
-			"desc": "Movie Trailer Guy "
-		},
 		"sjk": {
 			"country": "US",
 			"language": "en",
@@ -5335,54 +5215,6 @@
 			"source": "uberduck",
 			"arg": "sjk",
 			"desc": "SJK"
-		},
-		"jsxi": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "jsxi",
-			"desc": "JSXI"
-		},
-		"relikk": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "relikk",
-			"desc": "Relikk"
-		},
-		"tag": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "tag",
-			"desc": "T.A.G"
-		},
-		"biggay": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "big-gay",
-			"desc": "Big Gay"
-		},
-		"blab": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "b-la-b",
-			"desc": "B La B"
-		},
-		"samlachow": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "sam-lachow",
-			"desc": "Sam Lachow"
 		},
 		"zwf": {
 			"country": "US",
@@ -5407,22 +5239,6 @@
 			"source": "uberduck",
 			"arg": "grimes-v0",
 			"desc": "Grimes"
-		},
-		"carolynspeaking": {
-			"country": "US",
-			"language": "en",
-			"gender": "F",
-			"source": "uberduck",
-			"arg": "carolyn-speaking",
-			"desc": "Carolyn Samuelson"
-		},
-		"blab-controllable": {
-			"country": "US",
-			"language": "en",
-			"gender": "M",
-			"source": "uberduck",
-			"arg": "b-la-b-controllable",
-			"desc": "B La B (with pace control)"
 		}
 	},
 	"languages": {
