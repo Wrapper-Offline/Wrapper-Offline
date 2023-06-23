@@ -97,7 +97,7 @@ module.exports = function processVoice(voiceName, rawText) {
 							voice: voice.arg,
 							createTime: 666,
 							rate: 170,
-							pitch: pitch,
+							pitch,
 							sfx: "none"
 						}).toString();
 
@@ -381,7 +381,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						}
 					).on("error", rej);
 					req.end(JSON.stringify({
-						text: text,
+						text,
 						voice: voice.arg
 					}));
 					break;
