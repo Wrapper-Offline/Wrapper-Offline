@@ -1,7 +1,11 @@
 const brotli = require("brotli");
 const { convertToMp3 } = require("../../utils/fileUtil.js");
 const https = require("https");
-const voices = require("../data/voices.json").voices;
+let voices;
+const database = require("../../data/database"), db = new database(true).select();
+if (db.fakevoices) voices = require("../data/fakevoices").voices;
+else voices = require("../data/voices").voices;
+const fakeyou = require('fakeyou.js');
 
 /**
  * uses tts demos to generate tts
@@ -10,11 +14,9 @@ const voices = require("../data/voices.json").voices;
  * @returns {Promise<IncomingMessage>}
  */
 module.exports = function processVoice(voiceName, rawText) {
-	return new Promise((res, rej) => {
+	return new Promise(async (res, rej) => {
 		const voice = voices[voiceName];
-		if (!voice) {
-			return rej("The voice you requested is unavailable.");
-		}
+		if (!voice) return rej("The voice you requested is unavailable. Please try another voice.");
 
 		let flags = {};
 		const pieces = rawText.split("#%");
@@ -273,7 +275,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						format: "mp3",
 						voice: voice.arg,
 						speed: 0,
-						text: text,
+						text,
 						version: "0.2.99",
 					}).toString();
 
@@ -391,11 +393,24 @@ module.exports = function processVoice(voiceName, rawText) {
 						}
 					).on("error", rej);
 					req.end(JSON.stringify({
-						text: text,
+						text,
 						voice: voice.arg
 					}));
 					break;
 				}
+
+				case "fakeyou": {
+					const fy = new fakeyou.Client({
+						token: `U:${voice.userToken}`
+					});
+					await fy.start();
+					const model = fy.models.cache.get('TM:' + voice.arg);
+					const result = await model.request(text);
+					https.get(result.audioURL(), (r) => convertToMp3(r, "wav").then(res).catch(rej));
+					break;
+				}
+
+				default: return rej("The voice you requested currently has no source available right now. Please try another voice.");
 			}
 		} catch (e) {
 			return rej(e);
