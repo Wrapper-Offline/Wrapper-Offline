@@ -4,7 +4,102 @@ const tempfile = require("tempfile");
 const Asset = require("../models/asset");
 const { mp3Duration } = require("../../utils/fileUtil");
 const processVoice = require("../models/tts");
-const info = require("../data/voices");
+const https = require("https");
+let info;
+const database = require("../../data/database"), db = new database(true).select();
+if (db.fakevoices) info = require("../data/fakevoices");
+else info = require("../data/voices")
+const info2 = {
+	voices: {}
+};
+https.get('https://api.fakeyou.com/tts/list', (r) => { // gets the tts voices for the fakevoices.json file
+	let buffers = [];
+	r.on("data", (b) => buffers.push(b)).on("end", () => {
+		const json = JSON.parse(Buffer.concat(buffers));
+		const malformedFakeVoices = { // fake voices that are nictorious for causing an actionscript error
+			"9": true,
+			"50": true,
+			"1st": true,
+			"2m": true,
+			"2pac": true,
+			"\"blitzcrank\"": true,
+			"\"daniel\"": true,
+			"\"weird": true,
+			ashley: true,
+			baldina: true,
+			barrytube: true,
+			casually: true,
+			christine: true,
+			ddrmax: true,
+			felix: true,
+			fizzarolli: true,
+			ghost: true,
+			keith: true,
+			moxxie: true,
+			racist: true,
+			scooby: true,
+			skip: true,
+			spongebob: true,
+			stolas: true,
+			tuv: true,
+			"larry(": true,
+			"larry(zootopia\\rich": true,
+		};
+		if (json.success) {
+			for (const voice of json.models) {
+				if (!malformedFakeVoices[voice.title.split(" ")[0].split("-")[0].split("+")[0].toLowerCase()]) {
+					info2.voices[voice.title.split(" ")[0].split("-")[0].split("+")[0].toLowerCase().replace(`\"`, '').replace(".", '1')] = {
+						country: "US",
+						language: voice.ietf_primary_language_subtag,
+						gender: "M",
+						source: "fakeyou",
+						arg: voice.model_token.substr(voice.model_token.lastIndexOf(":") + 1),
+						desc: voice.title.split(" ")[0].split("'s")[0],
+						userToken: voice.creator_user_token.substr(voice.model_token.lastIndexOf(":") + 1)
+					}
+				}
+			}
+			info2.languages = {
+				hi: "Hindi",
+				ku: "Kurdish",
+				az: "Azeri",
+				ur: "Urdu",
+				th: "Thai",
+				el: "Greek",
+				fi: "Suomi",
+				ar: "Arabic",
+				de: "German",
+				fr: "French",
+				da: "Danish",
+				en: "English",
+				es: "Spanish",
+				ca: "Catalan",
+				ru: "Russian",
+				it: "Italian",
+				tr: "Turkish",
+				zh: "Chinese",
+				ja: "Japanese",
+				ro: "Romanian",
+				no: "Norwegian",
+				va: "Valencian",
+				pt: "Portuguese",
+				eo: "Esperanto",
+				gl: "Galician",
+				sv: "Swedish",
+				ko: "Korean",
+				pl: "Polish",
+				nl: "Dutch",
+				cy: "Welsh",
+				id: "Indonesian",
+				fo: "Faroese",
+				is: "Icelandic",
+				gd: "Scottish Gaelic",
+				cs: "Czech"
+			}
+			fs.writeFileSync(`${__dirname}/../data/fakevoices.json`, JSON.stringify(info2, null, "\t"));
+		}
+	});
+})
 const group = new httpz.Group();
 
 /*
