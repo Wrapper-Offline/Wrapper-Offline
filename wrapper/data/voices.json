@@ -4543,6 +4543,238 @@
 			"source": "microsoft",
 			"arg": "Mary in Stadium",
 			"desc": "Mary (Inside The Stadium)"
+		},
+				"zeus": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "92022a27-75fb-4e15-90ca-95095a82f5ee",
+			"desc": "Zeus"
+		},
+		"roseurgent": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "c4b48524-c8be-4ad5-ac1a-b4c3c74ae5b5",
+			"desc": "Rose (Urgent)"
+		},
+		"angusupbeat": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "7d29a280-8a3e-4c4b-9df4-cbe77e8f4a63",
+			"desc": "Angus (Upbeat)"
+		},
+		"loserboyupbeat": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "f242dad3-6762-4267-985d-00c088b80e92",
+			"desc": "Loser Boy (Upbeat)"
+		},
+		"davo": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "6dfa8240-c2c7-42d1-9880-e0ac92d150c7",
+			"desc": "Davo"
+		},
+		"kiwi": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "7a715c37-3edd-4696-9828-ee48ba76b52b",
+			"desc": "Kiwi"
+		},
+		"frostyjohncynical": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "aca0bdfe-fbdc-45a7-92bb-47bcc822a661",
+			"desc": "Frosty John (Cynical)"
+		},
+		"anguspleading": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "95d174cc-07a1-431f-ab72-f65d38159b62",
+			"desc": "Angus (Pleading)"
+		},
+		"rosedreamy": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "563c30aa-70c4-4dbc-8c3c-fe7fb2700ee3",
+			"desc": "Rose (Dreamy)"
+		},
+		"bertieangry": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "b3b396e9-b501-4178-8934-e2765b6a43b1",
+			"desc": "Bertie (Angry)"
+		},
+		"generalherringbriefing": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "818bc1dd-1d34-4205-81a8-5e32dfec3e2b",
+			"desc": "General Herring (Briefing)"
+		},
+		"damondeepvoice": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "88ae4672-f2c9-4070-b3e4-0cdc123ca42c",
+			"desc": "Damon Deepvoice"
+		},
+		"wrl": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "30b67b62-51a8-43db-a1b4-edafd5b4cfea",
+			"desc": "WRL"
+		},
+		"bertiechipper": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "080e856b-6fcd-4010-bd3a-3bc0712037a3",
+			"desc": "Bertie (Chipper)"
+		},
+		"generalherringlosingpatience": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "67fbff66-5cc8-4950-932e-4ec0547ee975",
+			"desc": "General Herring (Losing patience)"
+		},
+		"frostyjohn": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "13c0b24a-abff-4c30-9729-7250844ef314",
+			"desc": "Frosty John"
+		},
+		"movietrailerguy": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "639f6cb1-d8e4-4e8e-b35f-ae28b1e1afe3",
+			"desc": "Movie Trailer Guy "
+		},
+		"sjk": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "109cf329-a698-40ea-9f84-d4c66fdb9f68",
+			"desc": "SJK"
+		},
+		"jsxi": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "2f9f6dd7-0f53-4cc0-a652-a53de654560e",
+			"desc": "JSXI"
+		},
+		"relikk": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "d42b8a0a-bf24-45a5-b213-fdc7b54f458f",
+			"desc": "Relikk"
+		},
+		"tag": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "240db79d-bcce-46fc-8129-321792ecfc35",
+			"desc": "T.A.G"
+		},
+		"biggay": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "1ed327ed-b69e-4219-bb5c-2b996bcc192b",
+			"desc": "Big Gay"
+		},
+		"blab": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "61866d1e-b82f-4018-bd79-5a5e37f4a2e1",
+			"desc": "B La B"
+		},
+		"samlachow": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "d1b03d64-dd60-4c31-b154-185765dbde2a",
+			"desc": "Sam Lachow"
+		},
+		"zwf": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "99667c90-c918-4692-821f-8990b8ff2354",
+			"desc": "ZWF"
+		},
+		"zwfrapping": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "5a41dfbb-d46e-473c-a5ad-7aac89e10c76",
+			"desc": "ZWF (rapping)"
+		},
+		"grimesv0": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "e5f2bbed-acef-4f51-9a23-78ba1632d496",
+			"desc": "Grimes"
+		},
+		"carolynspeaking": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "uberduck",
+			"arg": "60c910d0-d924-4f74-a47c-6c9e44e2bb8b",
+			"desc": "Carolyn Samuelson"
+		},
+		"blabcontrollable": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "7f35edab-0b2c-4baf-aca3-fbcd24a31916",
+			"desc": "B La B (with pace control)"
 		}
 	},
 	"languages": {
