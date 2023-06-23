@@ -15,6 +15,7 @@ module.exports = class GoDatabase {
 				IS_WIDE: "1", // Sets the video player to 16:9.
 				SAVE_LOG_FILES: false, // what do you think
 				HIDE_NAVBAR: true, // what do you think
+				fakevoices: false
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
