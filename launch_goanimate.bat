@@ -1,5 +1,5 @@
 :: GoAniate 2014 Launcher
-:: Author: benson#0411
+:: Author: SimplyA_Coder
 :: Project Runner: GoTest334#9880
 :: License: MIT
 set WRAPPER_VER=2.1.0
@@ -52,7 +52,7 @@ popd
 :: Prevents the video list opening too fast
 PING -n 6 127.0.0.1>nul
 
-:: Open Wrapper in preferred browser
+:: Open GoAnimate in preferred browser
 if !INCLUDEDCHROMIUM!==n (
 	if !CUSTOMBROWSER!==n (
 		echo Opening GoAnimate 2014 in your default browser...
@@ -79,7 +79,7 @@ echo GoAnimate 2014 has been started! Your dashboard should now be open.
 :: Post-Start ::
 ::::::::::::::::
 
-title Wrapper: Offline v!WRAPPER_VER!
+title GoAnimate 2014 v!WRAPPER_VER!
 if !VERBOSEWRAPPER!==y ( goto wrapperstarted )
 :wrapperstartedcls
 cls
@@ -99,7 +99,6 @@ echo Enter 1 to reopen the video list
 echo Enter clr to clean up the screen
 echo Enter 0 to close GoAnimate 2014
 set /a _rand=(!RANDOM!*67/32768)+1
-if !_rand!==25 echo Enter things you think'll show a secret if you're feeling adventurous
 :wrapperidle
 echo:
 set /p CHOICE=Choice:
@@ -117,15 +116,15 @@ if /i "!choice!"=="OH MY GOD NOW THAT IS SOME SCARY GAMERS RIGHT THERE" echo MOM
 if /i "!choice!"=="notsmirks" echo this person is very important to goanimate for his special videos without context.. & goto wrapperidle
 if /i "!choice!"=="notsmirkles" echo GOCITY HAS THE NOTSMIRKLES VIRUS AGAIN NOUUUUUUUUUUUUUUUUU & goto wrapperidle
 if /i "!choice!"=="this couch is kind of" echo IM SO SORRY JESSIE J & goto wrapperidle
-if /i "!choice!"=="JESSIE J I APOLOGIZE ME AM VERY SORRY" echo do not worry me dear & goto wrapperidle
-if /i "!choice!"=="browser slayer" goto slayerstestaments
-if /i "!choice!"=="patch" goto patchtime
-if /i "!choice!"=="random" goto sayarandom
-if /i "!choice!"=="die" echo die please & goto wrapperidle
-if /i "!choice!"=="aaron doan" echo YOU^^!^^!^^! Noo Wrapper Is Patched Forever^^!^^!^^! Cries And Hits You So Many Times & goto wrapperidle
-if /i "!choice!"=="spark" echo WHY DID SOMEONE FUCK UP THE LAUNCHER? & goto wrapperidle
-if /i "!choice!"=="xom" echo I break wrapper and i dont fix it HAHAHAHAHHA & goto wrapperidle
-if /i "!choice!"=="gort" echo Attention nightshift personnel. Please report to your assigned post. goto wrapperidle
+if /i "!choice!"=="JESSIE J I APOLOGIZE ME AM VERY SORRY" echo do not worry me dear, next time won't be goof-d. & goto wrapperidle
+if /i "!choice!"=="MOMMY. CAN I MAKE THE HAMBURGER." echo YES BOBBY. MY LOVING DARLING ANGEL SWEET AMAZING CHEERFUL DAUGHTER. NYOOM NYOOM NYOOM NYOOMAAAAAAAAAAAAAAAAAAAA OANNANANANANNA & goto wrapperidle
+if /i "!choice!"=="class, i chew food" echo today we are lerning about schcmalrefernotsmunatonoftheunbelievedghostlies & goto wrapperidle
+if /i "!choice!"=="that crispity...crunchity peanut buttery flavor of a butterfinger" echo Nobody fingers a butterfinger you disgusting maggot and I hate you! & goto wrapperidle
+if /i "!choice!"=="excuse me?" echo OMG OMG HOW DARE YOU DISRESPECT MY ONION YOU OPINION DISRESPECTOR HOLY FEW COOKIE SHFKJNM,ADBHJ GFABDSZIJGKMHNAISJDGKNJISD 204 CHARS SHCHSHCNM,SHC NSMCHSCJSHC NSCNH & goto wrapperidle
+if /i "!choice!"=="shut up shut up im trying to sleep" echo OH MY FRICKING GOD, IT'S SO FRICKING DARK OUTSIDE! & goto wrapperidle
+if /i "!choice!"=="my lord. what shall i say? what shall i say to make my parents understand my anger?" echo AAAAAAAAAAAAAH! YOU FRICKING FRICKS! I'VE HAD IT! I'VE FRICKING HAD IT! & goto wrapperidle
+if /i "!choice!"=="the boys are unstoppable." echo OH? NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO & goto wrapperidle
+if /i "!choice!"=="me name's wardrobe cooking and i am attempting the vhs opening" echo m done goto wrapperidle
 :: dev options
 if /i "!choice!"=="amnesia" goto wipe_save
 if /i "!choice!"=="restart" goto restart
@@ -135,14 +134,14 @@ echo Time to choose. && goto wrapperidle
 :reopen_webpage
 if !INCLUDEDCHROMIUM!==n (
 	if !CUSTOMBROWSER!==n (
-		echo Opening Wrapper: Offline in your default browser...
+		echo Opening GoAnimate 2014 in your default browser...
 		start http://localhost:4343
 	) else (
-		echo Opening Wrapper: Offline in your set browser...
+		echo Opening GoAnimate 2014 in your set browser...
 		start !CUSTOMBROWSER! http://localhost:4343 >nul
 	)
 ) else (
-	echo Opening Wrapper: Offline using included Chromium...
+	echo Opening GoAnimate 2014 using included Chromium...
 	pushd utilities\ungoogled-chromium
 	if !APPCHROMIUM!==y (
 		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile --app=http://localhost:4343 >nul
@@ -155,14 +154,9 @@ goto wrapperidle
 
 :open_files
 pushd ..
-echo Opening the wrapper-offline folder...
-start explorer.exe wrapper-offline
+echo Opening the goanimate-2014 folder...
+start explorer.exe goanimate-2014
 popd
-goto wrapperidle
-
-:open_faq
-echo Opening the FAQ...
-start https://github.com/Wrapper-Offline/Wrapper-Offline/wiki
 goto wrapperidle
 
 :wipe_save
@@ -197,7 +191,7 @@ echo You must answer Yes or No. && goto exitwrapperretry
 
 :point_extraction
 
-title Wrapper: Offline v!WRAPPER_VER! [Shutting down...]
+title GoAnimate 2014 v!WRAPPER_VER! [Shutting down...]
 
 :: Shut down Node.js
 if !VERBOSEWRAPPER!==y (
@@ -208,46 +202,45 @@ if !VERBOSEWRAPPER!==y (
 )
 
 :: This is where I get off.
-echo Wrapper: Offline has been shut down.
+echo GoAnimate 2014 has been shut down.
 if !FUCKOFF!==y ( echo You're a good listener. )
 echo This window will now close.
 if !INCLUDEDCHROMIUM!==y (
 	echo You can close the web browser now.
 )
-echo Open start_wrapper.bat again to start W:O again.
+echo Open launch_goanimate.bat again to start GA2014 again.
 if !DRYRUN!==y ( echo Go wet your run next time. ) 
 pause & exit
 
 :exitwithstyle
-title Wrapper: Offline v!WRAPPER_VER! [Shutting down... WITH STYLE]
-echo SHUTTING DOWN THE WRAPPER OFFLINE
+title Gonimate 2014 v!WRAPPER_VER! [Shutting down... WITH STYLE]
+echo GoAnimate 2014 is shutting down...
 PING -n 3 127.0.0.1>nul
-color 9b
-echo BEWEWEWEWWW PSSHHHH KSHHHHHHHHHHHHHH
+echo Please be patient as this will take a while.
 PING -n 3 127.0.0.1>nul
 TASKKILL /IM node.exe /F
-echo NODE DOT JS ANNIHILATED
+echo Almost complete...
 PING -n 3 127.0.0.1>nul
-echo TIME TO ELIMINATE WRAPPER OFFLINE
+echo Node.js has successfully been shut down.
 PING -n 3 127.0.0.1>nul
-echo BOBOOBOBMWBOMBOM SOUND EFFECTSSSSS
+echo Almost complete...
 PING -n 3 127.0.0.1>nul
-echo WRAPPER OFFLINE ALSO ANNIHILA
+echo GoAnimate 2014 has shut down.
 PING -n 2 127.0.0.1>nul
 exit
 
 :configcopy
 if not exist utilities ( md utilities )
-echo :: Wrapper: Offline Config>> utilities\config.bat
+echo :: GoAnimate 2014 Config>> utilities\config.bat
 echo :: This file is modified by settings.bat. It is not organized, but comments for each setting have been added.>> utilities\config.bat
-echo :: You should be using settings.bat, and not touching this. Offline relies on this file remaining consistent, and it's easy to mess that up.>> utilities\config.bat
+echo :: You should be using settings.bat, and not touching this. GA2014 relies on this file remaining consistent, and it's easy to mess that up.>> utilities\config.bat
 echo:>> utilities\config.bat
 echo :: Opens this file in Notepad when run>> utilities\config.bat
 echo setlocal>> utilities\config.bat
 echo if "%%SUBSCRIPT%%"=="" ( pushd "%~dp0" ^& start notepad.exe config.bat ^& exit )>> utilities\config.bat
 echo endlocal>> utilities\config.bat
 echo:>> utilities\config.bat
-echo :: Shows exactly Offline is doing, and never clears the screen. Useful for development and troubleshooting. Default: n>> utilities\config.bat
+echo :: Shows exactly what GoAnimate 2014 is doing, and never clears the screen. Useful for development and troubleshooting. Default: n>> utilities\config.bat
 echo set VERBOSEWRAPPER=n>> utilities\config.bat
 echo:>> utilities\config.bat
 echo :: Won't check for dependencies (flash, node, etc) and goes straight to launching. Useful for speedy launching post-install. Default: n>> utilities\config.bat
@@ -256,13 +249,13 @@ echo:>> utilities\config.bat
 echo :: Won't install dependencies, regardless of check results. Overridden by SKIPCHECKDEPENDS. Mostly useless, why did I add this again? Default: n>> utilities\config.bat
 echo set SKIPDEPENDINSTALL=n>> utilities\config.bat
 echo:>> utilities\config.bat
-echo :: Opens Offline in an included copy of ungoogled-chromium. Allows continued use of Flash as modern browsers disable it. Default: y>> utilities\config.bat
+echo :: Opens GoAnimate 2014 in an included copy of ungoogled-chromium. Allows continued use of Flash as modern browsers disable it. Default: y>> utilities\config.bat
 echo set INCLUDEDCHROMIUM=y>> utilities\config.bat
 echo:>> utilities\config.bat
 echo :: Opens INCLUDEDCHROMIUM in headless mode. Looks pretty nice. Overrides CUSTOMBROWSER and BROWSER_TYPE. Default: y>> utilities\config.bat
 echo set APPCHROMIUM=y>> utilities\config.bat
 echo:>> utilities\config.bat
-echo :: Opens Offline in a browser of the user's choice. Needs to be a path to a browser executable in quotes. Default: n>> utilities\config.bat
+echo :: Opens GoAnimate 2014 in a browser of the user's choice. Needs to be a path to a browser executable in quotes. Default: n>> utilities\config.bat
 echo set CUSTOMBROWSER=n>> utilities\config.bat
 echo:>> utilities\config.bat
 echo :: Lets the launcher know what browser framework is being used. Mostly used by the Flash installer. Accepts "chrome", "firefox", and "n". Default: n>> utilities\config.bat
