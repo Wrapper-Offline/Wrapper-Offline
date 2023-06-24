@@ -124,7 +124,7 @@ if /i "!choice!"=="excuse me?" echo OMG OMG HOW DARE YOU DISRESPECT MY ONION YOU
 if /i "!choice!"=="shut up shut up im trying to sleep" echo OH MY FRICKING GOD, IT'S SO FRICKING DARK OUTSIDE! & goto wrapperidle
 if /i "!choice!"=="my lord. what shall i say? what shall i say to make my parents understand my anger?" echo AAAAAAAAAAAAAH! YOU FRICKING FRICKS! I'VE HAD IT! I'VE FRICKING HAD IT! & goto wrapperidle
 if /i "!choice!"=="the boys are unstoppable." echo OH? NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO & goto wrapperidle
-if /i "!choice!"=="me name's wardrobe cooking and i am attempting the vhs opening" echo m done goto wrapperidle
+if /i "!choice!"=="me name's wardrobe cooking and i am attempting the vhs opening" echo m done & goto wrapperidle
 :: dev options
 if /i "!choice!"=="amnesia" goto wipe_save
 if /i "!choice!"=="restart" goto restart
