@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "npx nodemon main.js --exec electron . --ignore ./_LOGS --ignore ./_SAVED --ignore ./_ASSETS --ignore ./_CACHÉ",
+		"start": "electron . --unhandled-rejections=strict",
 		"build": "npx electron-packager . --ignore=^/server",
 		"test": "mocha"
 	},
@@ -27,7 +27,7 @@
 		"mp3-duration": "^1.1.0",
 		"node-static": "^0.7.11",
 		"node-zip": "github:kyriosli/node-zip",
-		"nodemon": "^2.0.22",
+		"discord-rpc": "^4.0.1",
 		"sharp": "^0.30.6",
 		"tempfile": "^3.0.0",
 		"uberduck-api": "^1.2.2",
