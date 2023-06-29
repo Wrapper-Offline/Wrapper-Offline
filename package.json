@@ -27,7 +27,7 @@
 		"mp3-duration": "^1.1.0",
 		"node-static": "^0.7.11",
 		"node-zip": "github:kyriosli/node-zip",
-		"discord-rpc": "^4.0.1",
+		"nodemon": "^2.0.22",
 		"sharp": "^0.30.6",
 		"tempfile": "^3.0.0",
 		"uberduck-api": "^1.2.2",
