@@ -21,8 +21,6 @@ if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(logs)) fs.mkdirSync(logs);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
-// start discord rpc
-const discord = require("./utils/discord");
 // start the server
 const server = require("./wrapper/server");
 server();

@@ -77,6 +77,7 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 		case "animal":
 		case "botdf":
 		case "space":
+		case "vietnam":
 			themeId = "cc2";
 			break;
 		default:
@@ -114,7 +115,7 @@ group.route("*", /\/(assets|goapi\/getAsset)\/([\S]*)/, (req, res, next) => {
 	}
 
 	try {
-		const ext = id.split(".")[-1] || "xml";
+		const ext = id.split(".")[1] || "xml";
 		const mime = mimeTypes[extensions.indexOf(ext)];
 		const readStream = Asset.load(id);
 		res.setHeader("Content-Type", mime);
