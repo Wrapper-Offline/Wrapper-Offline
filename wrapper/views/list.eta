@@ -33,7 +33,6 @@
 			</table>
 		</main>
 
-		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script>
@@ -43,9 +42,9 @@
 
 		let C = 0;
 		function loadRows() {
-			// load only 15 rows
+			// load only 169 rows
 			let c = C;
-			C += 15;
+			C += 69;
 			for (; c < C; c++) {
 				// we reached the end
 				if (c > json.length - 1) {
