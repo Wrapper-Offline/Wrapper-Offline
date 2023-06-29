@@ -33,13 +33,16 @@ list
 */
 group.route("POST", "/goapi/getUserWatermarks/", (req, res) => {
 	const mId = req.body.movieId;
+	let wId = null;
+	if (mId) {
+		wId = DB.get("movies", mId).data.watermark;
+	}
 
-	let wId = DB.get("movies", mId || "loser")?.data?.watermark || "what";
 	const list = DB.select("assets", { type: "watermark" });
 	res.setHeader("Content-Type", "application/xml");
 	res.end(`${header}<watermarks>${
 		list.map((w) => `<watermark id="${w.id}" thumbnail="/assets/${w.id}"/>`).join("")
-	}${wId != "what" ? `<preview>${wId}</preview>` : ""}</watermarks>`);
+	}${wId !== null ? `<preview>${wId}</preview>` : ""}</watermarks>`);
 });
 
 /*
