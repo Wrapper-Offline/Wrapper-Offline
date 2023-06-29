@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<%~ includeFile("./includes/header", it); %>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
 			<h1>Create Animated Videos for Your Business. Easily.</h1>
@@ -268,81 +268,8 @@
 					</div>
 				</div>
 			</div>
-			<% if (!it.truncatedThemelist) { %>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/vietnam.jpg" alt="Jungle Warfare">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Jungle Warfare</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=vietnam" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Monsters Mayhem</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=monstermsh" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/christmas.png" alt="Holiday &amp; Seasonal">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Holiday &amp; Seasonal</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=christmas" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/politic.png" alt="Politics &amp; Celebrity">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Politics &amp; Celebrity</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=politic" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/startrek.jpg" alt="Star Trek Quogs">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Star Trek Quogs</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=startrek" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
 			</div>
 		</main>
-
-		<%~ includeFile("./includes/footer", { env: it.env }) %>
 
 	</script>
 
