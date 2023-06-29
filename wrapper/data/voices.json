@@ -1,4 +1,4 @@
-﻿{
+{
 	"voices": {
 		"ava": {
 			"country": "US",
@@ -276,7 +276,11 @@
 			"country": "SA",
 			"language": "ar",
 			"gender": "F",
-			"arg": [2, 27, 2],
+			"arg": [
+				2,
+				27,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Laila"
 		},
@@ -284,7 +288,11 @@
 			"country": "SA",
 			"language": "ar",
 			"gender": "M",
-			"arg": [2, 27, 1],
+			"arg": [
+				2,
+				27,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Tarik"
 		},
@@ -292,7 +300,11 @@
 			"country": "SA",
 			"language": "ar",
 			"gender": "M",
-			"arg": [4, 27, 1],
+			"arg": [
+				4,
+				27,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Maged"
 		},
@@ -300,7 +312,11 @@
 			"country": "ES",
 			"language": "va",
 			"gender": "F",
-			"arg": [2, 5, 3],
+			"arg": [
+				2,
+				5,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Empar"
 		},
@@ -308,7 +324,11 @@
 			"country": "ES",
 			"language": "ca",
 			"gender": "M",
-			"arg": [2, 5, 2],
+			"arg": [
+				2,
+				5,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Jordi"
 		},
@@ -316,7 +336,11 @@
 			"country": "ES",
 			"language": "ca",
 			"gender": "F",
-			"arg": [2, 5, 1],
+			"arg": [
+				2,
+				5,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Montserrat"
 		},
@@ -324,7 +348,11 @@
 			"country": "MX",
 			"language": "es",
 			"gender": "F",
-			"arg": [1, 2, 1],
+			"arg": [
+				1,
+				2,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Rosa (AT&T)"
 		},
@@ -332,7 +360,11 @@
 			"country": "MX",
 			"language": "es",
 			"gender": "M",
-			"arg": [1, 2, 2],
+			"arg": [
+				1,
+				2,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Alberto"
 		},
@@ -340,7 +372,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "F",
-			"arg": [2, 10, 1],
+			"arg": [
+				2,
+				10,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Linlin"
 		},
@@ -348,7 +384,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "F",
-			"arg": [2, 10, 2],
+			"arg": [
+				2,
+				10,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Lisheng"
 		},
@@ -356,7 +396,11 @@
 			"country": "DK",
 			"language": "da",
 			"gender": "F",
-			"arg": [2, 19, 1],
+			"arg": [
+				2,
+				19,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Frida"
 		},
@@ -364,7 +408,11 @@
 			"country": "DK",
 			"language": "da",
 			"gender": "M",
-			"arg": [2, 19, 2],
+			"arg": [
+				2,
+				19,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Magnus"
 		},
@@ -372,7 +420,11 @@
 			"country": "NL",
 			"language": "nl",
 			"gender": "F",
-			"arg": [2, 11, 2],
+			"arg": [
+				2,
+				11,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Saskia"
 		},
@@ -380,7 +432,11 @@
 			"country": "NL",
 			"language": "nl",
 			"gender": "M",
-			"arg": [2, 11, 1],
+			"arg": [
+				2,
+				11,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Willem"
 		},
@@ -388,7 +444,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "F",
-			"arg": [1, 3, 1],
+			"arg": [
+				1,
+				3,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Klara"
 		},
@@ -396,7 +456,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "M",
-			"arg": [1, 3, 2],
+			"arg": [
+				1,
+				3,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Reiner"
 		},
@@ -404,7 +468,11 @@
 			"country": "AU",
 			"language": "en",
 			"gender": "M",
-			"arg": [2, 1, 9],
+			"arg": [
+				2,
+				1,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Alan"
 		},
@@ -412,7 +480,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 7],
+			"arg": [
+				2,
+				1,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Allison (Oddcast)"
 		},
@@ -420,7 +492,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 6],
+			"arg": [
+				2,
+				1,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Catherine"
 		},
@@ -428,7 +504,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [2, 1, 2],
+			"arg": [
+				2,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Dave"
 		},
@@ -436,7 +516,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 4],
+			"arg": [
+				2,
+				1,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Elizabeth"
 		},
@@ -444,7 +528,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 10],
+			"arg": [
+				2,
+				1,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Grace"
 		},
@@ -452,7 +540,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"arg": [2, 1, 5],
+			"arg": [
+				2,
+				1,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Simon"
 		},
@@ -460,7 +552,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [2, 1, 8],
+			"arg": [
+				2,
+				1,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Steven (OddCast)"
 		},
@@ -468,7 +564,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [2, 1, 3],
+			"arg": [
+				2,
+				1,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Kenneth"
 		},
@@ -476,7 +576,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 1],
+			"arg": [
+				2,
+				1,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Susan"
 		},
@@ -484,7 +588,11 @@
 			"country": "IN",
 			"language": "en",
 			"gender": "F",
-			"arg": [2, 1, 11],
+			"arg": [
+				2,
+				1,
+				11
+			],
 			"source": "vocalware",
 			"desc": "Veena"
 		},
@@ -492,7 +600,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [1, 1, 1],
+			"arg": [
+				1,
+				1,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Crystal"
 		},
@@ -500,7 +612,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [1, 1, 2],
+			"arg": [
+				1,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Mike"
 		},
@@ -508,7 +624,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [1, 1, 3],
+			"arg": [
+				1,
+				1,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Claire"
 		},
@@ -516,7 +636,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [1, 1, 4],
+			"arg": [
+				1,
+				1,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Rich"
 		},
@@ -524,7 +648,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [1, 1, 5],
+			"arg": [
+				1,
+				1,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Audrey"
 		},
@@ -532,7 +660,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"arg": [1, 1, 6],
+			"arg": [
+				1,
+				1,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Charles"
 		},
@@ -540,7 +672,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"arg": [4, 1, 5],
+			"arg": [
+				4,
+				1,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Daniel (British)"
 		},
@@ -548,7 +684,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 12],
+			"arg": [
+				4,
+				1,
+				12
+			],
 			"source": "vocalware",
 			"desc": "Fiona"
 		},
@@ -556,7 +696,11 @@
 			"country": "AU",
 			"language": "en",
 			"gender": "M",
-			"arg": [7, 1, 4],
+			"arg": [
+				7,
+				1,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Jackson"
 		},
@@ -564,7 +708,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 2],
+			"arg": [
+				4,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Jill"
 		},
@@ -572,7 +720,11 @@
 			"country": "AU",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 4],
+			"arg": [
+				4,
+				1,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Karen (Oddcast)"
 		},
@@ -580,7 +732,11 @@
 			"country": "AU",
 			"language": "en",
 			"gender": "M",
-			"arg": [4, 1, 10],
+			"arg": [
+				4,
+				1,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Lee"
 		},
@@ -588,7 +744,11 @@
 			"country": "AU",
 			"language": "en",
 			"gender": "F",
-			"arg": [7, 1, 3],
+			"arg": [
+				7,
+				1,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Matilda"
 		},
@@ -596,7 +756,11 @@
 			"country": "IE",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 8],
+			"arg": [
+				4,
+				1,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Moira"
 		},
@@ -604,7 +768,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"arg": [7, 1, 2],
+			"arg": [
+				7,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Oliver (Oddcast)"
 		},
@@ -612,7 +780,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [7, 1, 1],
+			"arg": [
+				7,
+				1,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Olivia (Oddcast)"
 		},
@@ -620,7 +792,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 11],
+			"arg": [
+				4,
+				1,
+				11
+			],
 			"source": "vocalware",
 			"desc": "Samantha (Oddcast)"
 		},
@@ -628,7 +804,11 @@
 			"country": "IN",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 9],
+			"arg": [
+				4,
+				1,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Sangeeta"
 		},
@@ -636,7 +816,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 7],
+			"arg": [
+				4,
+				1,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Serena"
 		},
@@ -644,7 +828,11 @@
 			"country": "ZA",
 			"language": "en",
 			"gender": "F",
-			"arg": [4, 1, 13],
+			"arg": [
+				4,
+				1,
+				13
+			],
 			"source": "vocalware",
 			"desc": "Tessa"
 		},
@@ -652,7 +840,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [4, 1, 3],
+			"arg": [
+				4,
+				1,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Tom"
 		},
@@ -660,7 +852,11 @@
 			"country": "EO",
 			"language": "eo",
 			"gender": "M",
-			"arg": [2, 31, 1],
+			"arg": [
+				2,
+				31,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Ludoviko"
 		},
@@ -668,7 +864,11 @@
 			"country": "FI",
 			"language": "fi",
 			"gender": "M",
-			"arg": [2, 23, 2],
+			"arg": [
+				2,
+				23,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Marko"
 		},
@@ -676,7 +876,11 @@
 			"country": "FI",
 			"language": "fi",
 			"gender": "F",
-			"arg": [2, 23, 1],
+			"arg": [
+				2,
+				23,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Milla"
 		},
@@ -684,7 +888,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "M",
-			"arg": [2, 4, 2],
+			"arg": [
+				2,
+				4,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Bernard"
 		},
@@ -692,7 +900,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
-			"arg": [1, 4, 1],
+			"arg": [
+				1,
+				4,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Juliette"
 		},
@@ -700,7 +912,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "M",
-			"arg": [1, 4, 2],
+			"arg": [
+				1,
+				4,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Alain"
 		},
@@ -708,7 +924,11 @@
 			"country": "CA",
 			"language": "fr",
 			"gender": "M",
-			"arg": [1, 4, 3],
+			"arg": [
+				1,
+				4,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Pierre"
 		},
@@ -716,7 +936,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
-			"arg": [2, 4, 5],
+			"arg": [
+				2,
+				4,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Charlotte"
 		},
@@ -724,7 +948,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
-			"arg": [2, 4, 4],
+			"arg": [
+				2,
+				4,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Florence"
 		},
@@ -732,7 +960,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
-			"arg": [2, 4, 3],
+			"arg": [
+				2,
+				4,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Jolie"
 		},
@@ -740,7 +972,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "M",
-			"arg": [2, 4, 6],
+			"arg": [
+				2,
+				4,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Olivier"
 		},
@@ -748,7 +984,11 @@
 			"country": "ES",
 			"language": "gl",
 			"gender": "F",
-			"arg": [2, 15, 1],
+			"arg": [
+				2,
+				15,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Carmela"
 		},
@@ -756,7 +996,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "F",
-			"arg": [2, 3, 3],
+			"arg": [
+				2,
+				3,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Katrin (Vocalware)"
 		},
@@ -764,7 +1008,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "M",
-			"arg": [2, 3, 2],
+			"arg": [
+				2,
+				3,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Stefan"
 		},
@@ -772,7 +1020,11 @@
 			"country": "EL",
 			"language": "el",
 			"gender": "F",
-			"arg": [2, 8, 1],
+			"arg": [
+				2,
+				8,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Afroditi"
 		},
@@ -780,7 +1032,11 @@
 			"country": "EL",
 			"language": "el",
 			"gender": "M",
-			"arg": [2, 8, 3],
+			"arg": [
+				2,
+				8,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Nikos"
 		},
@@ -788,7 +1044,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [2, 7, 10],
+			"arg": [
+				2,
+				7,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Federica"
 		},
@@ -796,7 +1056,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [2, 7, 9],
+			"arg": [
+				2,
+				7,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Giulia"
 		},
@@ -804,7 +1068,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
-			"arg": [2, 7, 5],
+			"arg": [
+				2,
+				7,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Luca"
 		},
@@ -812,7 +1080,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
-			"arg": [2, 7, 6],
+			"arg": [
+				2,
+				7,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Marcello"
 		},
@@ -820,7 +1092,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
-			"arg": [2, 7, 8],
+			"arg": [
+				2,
+				7,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Matteo"
 		},
@@ -828,7 +1104,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [2, 7, 1],
+			"arg": [
+				2,
+				7,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Paola"
 		},
@@ -836,7 +1116,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
-			"arg": [2, 7, 7],
+			"arg": [
+				2,
+				7,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Raffaele"
 		},
@@ -844,7 +1128,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [2, 7, 2],
+			"arg": [
+				2,
+				7,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Silvana"
 		},
@@ -852,7 +1140,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [2, 7, 3],
+			"arg": [
+				2,
+				7,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Valentina"
 		},
@@ -860,7 +1152,11 @@
 			"country": "NO",
 			"language": "no",
 			"gender": "M",
-			"arg": [2, 20, 2],
+			"arg": [
+				2,
+				20,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Henrik"
 		},
@@ -868,7 +1164,11 @@
 			"country": "NO",
 			"language": "no",
 			"gender": "F",
-			"arg": [2, 20, 1],
+			"arg": [
+				2,
+				20,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Vilde"
 		},
@@ -876,7 +1176,11 @@
 			"country": "PL",
 			"language": "pl",
 			"gender": "M",
-			"arg": [2, 14, 2],
+			"arg": [
+				2,
+				14,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Krzysztof"
 		},
@@ -884,7 +1188,11 @@
 			"country": "PL",
 			"language": "pl",
 			"gender": "F",
-			"arg": [2, 14, 1],
+			"arg": [
+				2,
+				14,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Zosia"
 		},
@@ -892,7 +1200,11 @@
 			"country": "PT",
 			"language": "pt",
 			"gender": "F",
-			"arg": [2, 6, 2],
+			"arg": [
+				2,
+				6,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Amalia"
 		},
@@ -900,7 +1212,11 @@
 			"country": "PT",
 			"language": "pt",
 			"gender": "M",
-			"arg": [2, 6, 3],
+			"arg": [
+				2,
+				6,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Eusebio"
 		},
@@ -908,7 +1224,11 @@
 			"country": "RO",
 			"language": "ro",
 			"gender": "F",
-			"arg": [2, 30, 1],
+			"arg": [
+				2,
+				30,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Ioana"
 		},
@@ -916,7 +1236,11 @@
 			"country": "RU",
 			"language": "ru",
 			"gender": "M",
-			"arg": [2, 21, 2],
+			"arg": [
+				2,
+				21,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Dmitri"
 		},
@@ -924,7 +1248,11 @@
 			"country": "RU",
 			"language": "ru",
 			"gender": "F",
-			"arg": [2, 21, 1],
+			"arg": [
+				2,
+				21,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Olga"
 		},
@@ -932,7 +1260,11 @@
 			"country": "US",
 			"language": "es",
 			"gender": "M",
-			"arg": [2, 2, 7],
+			"arg": [
+				2,
+				2,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Carlos"
 		},
@@ -940,7 +1272,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 1],
+			"arg": [
+				2,
+				2,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Carmen"
 		},
@@ -948,7 +1284,11 @@
 			"country": "AR",
 			"language": "es",
 			"gender": "M",
-			"arg": [2, 2, 4],
+			"arg": [
+				2,
+				2,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Diego"
 		},
@@ -956,7 +1296,11 @@
 			"country": "MX",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 5],
+			"arg": [
+				2,
+				2,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Esperanza"
 		},
@@ -964,7 +1308,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 3],
+			"arg": [
+				2,
+				2,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Francisca"
 		},
@@ -972,7 +1320,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "M",
-			"arg": [2, 2, 6],
+			"arg": [
+				2,
+				2,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Jorge"
 		},
@@ -980,7 +1332,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "M",
-			"arg": [2, 2, 2],
+			"arg": [
+				2,
+				2,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Juan"
 		},
@@ -988,7 +1344,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 9],
+			"arg": [
+				2,
+				2,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Leonor"
 		},
@@ -996,7 +1356,11 @@
 			"country": "US",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 8],
+			"arg": [
+				2,
+				2,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Soledad"
 		},
@@ -1004,7 +1368,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [2, 2, 10],
+			"arg": [
+				2,
+				2,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Ximena"
 		},
@@ -1012,7 +1380,11 @@
 			"country": "SE",
 			"language": "sv",
 			"gender": "F",
-			"arg": [2, 9, 1],
+			"arg": [
+				2,
+				9,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Annika"
 		},
@@ -1020,7 +1392,11 @@
 			"country": "SE",
 			"language": "sv",
 			"gender": "M",
-			"arg": [2, 9, 2],
+			"arg": [
+				2,
+				9,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Sven"
 		},
@@ -1028,7 +1404,11 @@
 			"country": "TR",
 			"language": "tr",
 			"gender": "M",
-			"arg": [2, 16, 1],
+			"arg": [
+				2,
+				16,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Kerem"
 		},
@@ -1036,7 +1416,11 @@
 			"country": "TR",
 			"language": "tr",
 			"gender": "F",
-			"arg": [2, 16, 3],
+			"arg": [
+				2,
+				16,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Selin"
 		},
@@ -1044,7 +1428,11 @@
 			"country": "TR",
 			"language": "tr",
 			"gender": "F",
-			"arg": [2, 16, 2],
+			"arg": [
+				2,
+				16,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Zeynep"
 		},
@@ -1052,7 +1440,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "F",
-			"arg": [3, 10, 3],
+			"arg": [
+				3,
+				10,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Hui"
 		},
@@ -1060,7 +1452,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "M",
-			"arg": [3, 10, 6],
+			"arg": [
+				3,
+				10,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Kaho"
 		},
@@ -1068,7 +1464,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "F",
-			"arg": [3, 10, 7],
+			"arg": [
+				3,
+				10,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Kayan"
 		},
@@ -1076,7 +1476,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "M",
-			"arg": [3, 10, 5],
+			"arg": [
+				3,
+				10,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Kiang"
 		},
@@ -1084,7 +1488,11 @@
 			"country": "CN",
 			"language": "zh",
 			"gender": "M",
-			"arg": [3, 10, 4],
+			"arg": [
+				3,
+				10,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Liang"
 		},
@@ -1092,7 +1500,11 @@
 			"country": "TW",
 			"language": "zh",
 			"gender": "F",
-			"arg": [3, 10, 8],
+			"arg": [
+				3,
+				10,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Yafang"
 		},
@@ -1100,7 +1512,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [7, 1, 7],
+			"arg": [
+				7,
+				1,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Brenda"
 		},
@@ -1108,7 +1524,11 @@
 			"country": "IN",
 			"language": "en",
 			"gender": "F",
-			"arg": [7, 1, 5],
+			"arg": [
+				7,
+				1,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Lakshmi"
 		},
@@ -1116,7 +1536,11 @@
 			"country": "IN",
 			"language": "en",
 			"gender": "M",
-			"arg": [7, 1, 6],
+			"arg": [
+				7,
+				1,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Prashant"
 		},
@@ -1124,7 +1548,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [3, 1, 6],
+			"arg": [
+				3,
+				1,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Ashley"
 		},
@@ -1132,7 +1560,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [3, 1, 8],
+			"arg": [
+				3,
+				1,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Beth"
 		},
@@ -1140,7 +1572,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "F",
-			"arg": [3, 1, 4],
+			"arg": [
+				3,
+				1,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Bridget"
 		},
@@ -1148,7 +1584,11 @@
 			"country": "GB",
 			"language": "en",
 			"gender": "M",
-			"arg": [3, 1, 5],
+			"arg": [
+				3,
+				1,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Hugh"
 		},
@@ -1156,7 +1596,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [3, 1, 7],
+			"arg": [
+				3,
+				1,
+				7
+			],
 			"source": "vocalware",
 			"desc": "James"
 		},
@@ -1164,7 +1608,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [3, 1, 3],
+			"arg": [
+				3,
+				1,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Julie"
 		},
@@ -1172,7 +1620,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "F",
-			"arg": [3, 1, 1],
+			"arg": [
+				3,
+				1,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Kate (Oddcast)"
 		},
@@ -1180,7 +1632,11 @@
 			"country": "US",
 			"language": "en",
 			"gender": "M",
-			"arg": [3, 1, 2],
+			"arg": [
+				3,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Paul"
 		},
@@ -1188,7 +1644,11 @@
 			"country": "CA",
 			"language": "fr",
 			"gender": "F",
-			"arg": [3, 4, 1],
+			"arg": [
+				3,
+				4,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Chloe (Vocalware)"
 		},
@@ -1196,7 +1656,11 @@
 			"country": "CA",
 			"language": "fr",
 			"gender": "M",
-			"arg": [3, 4, 2],
+			"arg": [
+				3,
+				4,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Leo"
 		},
@@ -1204,7 +1668,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "M",
-			"arg": [3, 4, 4],
+			"arg": [
+				3,
+				4,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Louis"
 		},
@@ -1212,7 +1680,11 @@
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
-			"arg": [3, 4, 3],
+			"arg": [
+				3,
+				4,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Roxane"
 		},
@@ -1220,7 +1692,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "F",
-			"arg": [3, 3, 1],
+			"arg": [
+				3,
+				3,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Lena"
 		},
@@ -1228,7 +1704,11 @@
 			"country": "DE",
 			"language": "de",
 			"gender": "M",
-			"arg": [3, 3, 2],
+			"arg": [
+				3,
+				3,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Tim"
 		},
@@ -1236,7 +1716,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "F",
-			"arg": [3, 7, 1],
+			"arg": [
+				3,
+				7,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Elisa"
 		},
@@ -1244,7 +1728,11 @@
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
-			"arg": [3, 7, 2],
+			"arg": [
+				3,
+				7,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Roberto"
 		},
@@ -1252,7 +1740,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
-			"arg": [3, 12, 6],
+			"arg": [
+				3,
+				12,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Haruka"
 		},
@@ -1260,7 +1752,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
-			"arg": [3, 12, 5],
+			"arg": [
+				3,
+				12,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Hikari"
 		},
@@ -1268,7 +1764,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
-			"arg": [3, 12, 3],
+			"arg": [
+				3,
+				12,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Misaki"
 		},
@@ -1276,7 +1776,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "M",
-			"arg": [3, 12, 7],
+			"arg": [
+				3,
+				12,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Ryo"
 		},
@@ -1284,7 +1788,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
-			"arg": [3, 12, 4],
+			"arg": [
+				3,
+				12,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Sayaka"
 		},
@@ -1292,7 +1800,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "M",
-			"arg": [3, 12, 2],
+			"arg": [
+				3,
+				12,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Show"
 		},
@@ -1300,7 +1812,11 @@
 			"country": "JP",
 			"language": "ja",
 			"gender": "M",
-			"arg": [3, 12, 8],
+			"arg": [
+				3,
+				12,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Takeru"
 		},
@@ -1308,7 +1824,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 7],
+			"arg": [
+				3,
+				13,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Dayoung"
 		},
@@ -1316,7 +1836,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 4],
+			"arg": [
+				3,
+				13,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Hyeryun"
 		},
@@ -1324,7 +1848,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 8],
+			"arg": [
+				3,
+				13,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Hyuna"
 		},
@@ -1332,7 +1860,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "M",
-			"arg": [3, 13, 10],
+			"arg": [
+				3,
+				13,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Jihun"
 		},
@@ -1340,7 +1872,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 5],
+			"arg": [
+				3,
+				13,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Jimin"
 		},
@@ -1348,7 +1884,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "M",
-			"arg": [3, 13, 2],
+			"arg": [
+				3,
+				13,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Junwoo"
 		},
@@ -1356,7 +1896,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 6],
+			"arg": [
+				3,
+				13,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Sena"
 		},
@@ -1364,7 +1908,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 1],
+			"arg": [
+				3,
+				13,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Yumi"
 		},
@@ -1372,7 +1920,11 @@
 			"country": "KO",
 			"language": "ko",
 			"gender": "F",
-			"arg": [3, 13, 9],
+			"arg": [
+				3,
+				13,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Yura"
 		},
@@ -1380,7 +1932,11 @@
 			"country": "BR",
 			"language": "pt",
 			"gender": "F",
-			"arg": [3, 6, 1],
+			"arg": [
+				3,
+				6,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Helena"
 		},
@@ -1388,7 +1944,11 @@
 			"country": "BR",
 			"language": "pt",
 			"gender": "M",
-			"arg": [3, 6, 2],
+			"arg": [
+				3,
+				6,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Rafael"
 		},
@@ -1396,7 +1956,11 @@
 			"country": "MX",
 			"language": "es",
 			"gender": "M",
-			"arg": [3, 2, 2],
+			"arg": [
+				3,
+				2,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Francisco"
 		},
@@ -1404,7 +1968,11 @@
 			"country": "MX",
 			"language": "es",
 			"gender": "F",
-			"arg": [3, 2, 3],
+			"arg": [
+				3,
+				2,
+				3
+			],
 			"source": "vocalware",
 			"desc": "Gloria"
 		},
@@ -1412,7 +1980,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [3, 2, 4],
+			"arg": [
+				3,
+				2,
+				4
+			],
 			"source": "vocalware",
 			"desc": "Lola"
 		},
@@ -1420,7 +1992,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "M",
-			"arg": [3, 2, 5],
+			"arg": [
+				3,
+				2,
+				5
+			],
 			"source": "vocalware",
 			"desc": "Manuel"
 		},
@@ -1428,7 +2004,11 @@
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
-			"arg": [3, 2, 1],
+			"arg": [
+				3,
+				2,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Violeta"
 		},
@@ -1436,7 +2016,11 @@
 			"country": "TH",
 			"language": "th",
 			"gender": "M",
-			"arg": [3, 26, 1],
+			"arg": [
+				3,
+				26,
+				1
+			],
 			"source": "vocalware",
 			"desc": "Sarawut"
 		},
@@ -1444,7 +2028,11 @@
 			"country": "TH",
 			"language": "th",
 			"gender": "F",
-			"arg": [3, 26, 2],
+			"arg": [
+				3,
+				26,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Somsi"
 		},
@@ -3780,7 +4368,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 20],
+			"arg": [
+				6,
+				1,
+				20
+			],
 			"source": "vocalware",
 			"desc": "Choirboy I"
 		},
@@ -3788,7 +4380,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 21],
+			"arg": [
+				6,
+				1,
+				21
+			],
 			"source": "vocalware",
 			"desc": "Choirboy II"
 		},
@@ -3796,7 +4392,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 10],
+			"arg": [
+				6,
+				1,
+				10
+			],
 			"source": "vocalware",
 			"desc": "Colossus"
 		},
@@ -3804,7 +4404,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 13],
+			"arg": [
+				6,
+				1,
+				13
+			],
 			"source": "vocalware",
 			"desc": "Crisper"
 		},
@@ -3812,7 +4416,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 15],
+			"arg": [
+				6,
+				1,
+				15
+			],
 			"source": "vocalware",
 			"desc": "Fast Fred"
 		},
@@ -3820,7 +4428,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 2],
+			"arg": [
+				6,
+				1,
+				2
+			],
 			"source": "vocalware",
 			"desc": "Giant"
 		},
@@ -3828,7 +4440,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 8],
+			"arg": [
+				6,
+				1,
+				8
+			],
 			"source": "vocalware",
 			"desc": "Martian"
 		},
@@ -3836,7 +4452,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "F",
-			"arg": [6, 1, 11],
+			"arg": [
+				6,
+				1,
+				11
+			],
 			"source": "vocalware",
 			"desc": "Mellow Yellow"
 		},
@@ -3844,7 +4464,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 18],
+			"arg": [
+				6,
+				1,
+				18
+			],
 			"source": "vocalware",
 			"desc": "Milk Toast"
 		},
@@ -3852,7 +4476,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 9],
+			"arg": [
+				6,
+				1,
+				9
+			],
 			"source": "vocalware",
 			"desc": "Munchkin"
 		},
@@ -3860,7 +4488,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 17],
+			"arg": [
+				6,
+				1,
+				17
+			],
 			"source": "vocalware",
 			"desc": "Nerd"
 		},
@@ -3868,7 +4500,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "F",
-			"arg": [6, 1, 6],
+			"arg": [
+				6,
+				1,
+				6
+			],
 			"source": "vocalware",
 			"desc": "Old Woman"
 		},
@@ -3876,7 +4512,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 7],
+			"arg": [
+				6,
+				1,
+				7
+			],
 			"source": "vocalware",
 			"desc": "Robotoid"
 		},
@@ -3884,7 +4524,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 19],
+			"arg": [
+				6,
+				1,
+				19
+			],
 			"source": "vocalware",
 			"desc": "Tipsy"
 		},
@@ -3892,7 +4536,11 @@
 			"country": "EN",
 			"language": "en",
 			"gender": "M",
-			"arg": [6, 1, 16],
+			"arg": [
+				6,
+				1,
+				16
+			],
 			"source": "vocalware",
 			"desc": "Troll"
 		},
@@ -4383,13 +5031,221 @@
 			"source": "voiceforge",
 			"arg": "Obama",
 			"desc": "Obama"
+		},
+		"sam": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Sam",
+			"desc": "Sam"
+		},
+		"mike1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike",
+			"desc": "Mike (Microsoft)"
+		},
+		"mikeonthephone": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike (for Telephone)",
+			"desc": "Mike (On The Phone)"
+		},
+		"mikeinthehall": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Hall",
+			"desc": "Mike (In The Hall)"
+		},
+		"mikeinspace": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Space",
+			"desc": "Mike (In Space)"
+		},
+		"mikeinsidethestadium": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Mike in Stadium",
+			"desc": "Mike (Inside The Stadium)"
+		},
+		"robosoftsix": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Six",
+			"desc": "RoboSoft Six"
+		},
+		"robosoftfive": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Five",
+			"desc": "RoboSoft Five"
+		},
+		"robosoftfour": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Four",
+			"desc": "RoboSoft Four"
+		},
+		"robosoftthree": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Three",
+			"desc": "RoboSoft Three"
+		},
+		"robosofttwo": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft Two",
+			"desc": "RoboSoft Two"
+		},
+		"robosoftone": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "RoboSoft One",
+			"desc": "RoboSoft One"
+		},
+		"malewhisper": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Male Whisper",
+			"desc": "Male Whisper"
+		},
+		"femalewhisper": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Female Whisper",
+			"desc": "Female Whisper"
+		},
+		"mary": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary",
+			"desc": "Mary"
+		},
+		"maryonthephone": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary (for Telephone)",
+			"desc": "Mary (On The Phone)"
+		},
+		"maryinthehall": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Hall",
+			"desc": "Mary (In The Hall)"
+		},
+		"maryinspace": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Space",
+			"desc": "Mary (In Space)"
+		},
+		"bonzibuddy": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "microsoft",
+			"arg": "Adult Male #2, American English (TruVoice)",
+			"desc": "Bonzi Buddy"
+		},
+		"maryinsidethestadium": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "microsoft",
+			"arg": "Mary in Stadium",
+			"desc": "Mary (Inside The Stadium)"
+		},
+		"zeus": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "zeus",
+			"desc": "Zeus"
+		},
+		"wrl": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "wrl",
+			"desc": "WRL"
+		},
+		"sjk": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "sjk",
+			"desc": "SJK"
+		},
+		"zwf": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "zwf",
+			"desc": "ZWF"
+		},
+		"zwfrapping": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "zwf-rapping",
+			"desc": "ZWF (rapping)"
+		},
+		"grimesv0": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "uberduck",
+			"arg": "grimes-v0",
+			"desc": "Grimes"
 		}
 	},
 	"languages": {
-	    "hi": "Hindi",
-	    "ku": "Kurdish",
-	    "az": "Azeri",
-	    "ur": "Urdu",
+		"hi": "Hindi",
+		"ku": "Kurdish",
+		"az": "Azeri",
+		"ur": "Urdu",
 		"th": "Thai",
 		"el": "Greek",
 		"fi": "Suomi",

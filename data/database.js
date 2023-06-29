@@ -8,12 +8,14 @@ module.exports = class GoDatabase {
 		if (isSettings) {
 			this.path = path.join(folder, "settings.json");
 			baseDb = {
+				DISCORD_RPC: false, // Shows your Wrapper activity on Discord.
 				TRUNCATED_THEMELIST: true, // Cuts down the amount of themes that clog up the themelist in the videomaker.
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
 				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
 				IS_WIDE: "1", // Sets the video player to 16:9.
 				SAVE_LOG_FILES: false, // what do you think
 				HIDE_NAVBAR: true, // what do you think
+				fakevoices: false
 			};
 		} else {
 			this.path = path.join(folder, "database.json");

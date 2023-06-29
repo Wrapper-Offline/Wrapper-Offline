@@ -1,7 +1,12 @@
 const brotli = require("brotli");
 const { convertToMp3 } = require("../../utils/fileUtil.js");
 const https = require("https");
-const voices = require("../data/voices.json").voices;
+let voices;
+const database = require("../../data/database"), db = new database(true).select();
+if (db.fakevoices) voices = require("../data/fakevoices").voices;
+else voices = require("../data/voices").voices;
+const fakeyou = require('fakeyou.js');
+const { getAudioUrl } = require('uberduck-api')
 
 /**
  * uses tts demos to generate tts
@@ -10,11 +15,9 @@ const voices = require("../data/voices.json").voices;
  * @returns {Promise<IncomingMessage>}
  */
 module.exports = function processVoice(voiceName, rawText) {
-	return new Promise((res, rej) => {
+	return new Promise(async (res, rej) => {
 		const voice = voices[voiceName];
-		if (!voice) {
-			return rej("The voice you requested is unavailable.");
-		}
+		if (!voice) return rej("The voice you requested is unavailable. Please try another voice.");
 
 		let flags = {};
 		const pieces = rawText.split("#%");
@@ -79,6 +82,16 @@ module.exports = function processVoice(voiceName, rawText) {
 					break;
 				}
 
+				case "microsoft": {
+					let url;
+					if (voice.desc.includes("Bonzi")) url = `https://www.tetyys.com/SAPI4/SAPI4?text=${
+						encodeURIComponent(text)
+					}&voice=${encodeURIComponent(voice.arg)}&pitch=140&speed=157`
+					else url = "https://www.tetyys.com/SAPI4/SAPI4?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(voice.arg);
+					https.get(url, (r) => convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
+					break;
+				}
+
 				case "cepstral": {
 					let pitch;
 					if (flags.pitch) {
@@ -97,7 +110,7 @@ module.exports = function processVoice(voiceName, rawText) {
 							voice: voice.arg,
 							createTime: 666,
 							rate: 170,
-							pitch: pitch,
+							pitch,
 							sfx: "none"
 						}).toString();
 
@@ -263,7 +276,7 @@ module.exports = function processVoice(voiceName, rawText) {
 						format: "mp3",
 						voice: voice.arg,
 						speed: 0,
-						text: text,
+						text,
 						version: "0.2.99",
 					}).toString();
 
@@ -381,11 +394,30 @@ module.exports = function processVoice(voiceName, rawText) {
 						}
 					).on("error", rej);
 					req.end(JSON.stringify({
-						text: text,
+						text,
 						voice: voice.arg
 					}));
 					break;
 				}
+
+				case "fakeyou": {
+					const fy = new fakeyou.Client({
+						token: `U:${voice.userToken}`
+					});
+					await fy.start();
+					const model = fy.models.cache.get('TM:' + voice.arg);
+					const result = await model.request(text);
+					https.get(result.audioURL(), (r) => convertToMp3(r, "wav").then(res).catch(rej));
+					break;
+				}
+
+				case "uberduck": {
+					getAudioUrl('pub_matdvlvkappqohpkax', 'pk_38e6b994-0f0f-4002-ba20-62b62487b2bc', voice.arg, text).then(i => {
+						https.get(i, (r) => convertToMp3(r, "wav").then(res).catch(rej));
+					}).catch(rej);
+					break;
+				}
+				default: return rej("The voice you requested currently has no source available right now. Please try another voice.");
 			}
 		} catch (e) {
 			return rej(e);

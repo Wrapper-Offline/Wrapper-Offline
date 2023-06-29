@@ -26,6 +26,19 @@
 				<nav class="tab" style="display:block">
 					<h2>Behavior</h2>
 
+					<h3>Discord rich presence</h3>
+					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
+						much like how lots of modern computer games will show on your Discord status when you're playing<br/>
+						them. Turning this off will make Offline stop saying when you're using it on Discord.<br/>
+						<i>Applies on next restart.</i></p>
+					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
+
+					<h3>Fake TTS Voices</h3>
+					<p>Allows you to use most of the tts voices that came from a site called fakeyou.com. <br>
+					keep in mind that the gender and country of most of these voices may not be correct. Thanks for your understanding.<br/>
+						<i>Applies on next restart.</i></p>
+					<input class="setting" type="checkbox" id="fakevoices"></input>
+
 					<h3>Truncated themelist</h3>
 					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
 						Keeping this off is highly suggested.<br/>
