@@ -1,8 +1,0 @@
-<footer>
-	<nav id="foot-left">
-		<a>v<%= it.env.WRAPPER_VER %></a>
-		<a href="http://localhost:4343/settings">Settings</a>
-	</nav>
-
-	<nav id="foot-right"></nav>
-</footer>
