@@ -60,10 +60,9 @@
 						<option value="wix">GoAnimate Wix</option>
 					</select>
 
-					<h3>14:9 or 16:9 aspect ratio</h3>
-					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
-						However, you can toggle this setting to make it 14:9, like a video<br/>
-						made with Vyond before 2014.</p>
+					<h3>Aspect ratio</h3>
+					<p>The Video Maker has 2 choices for aspect ratios, 14:9 and 16:9.<br/>
+					By default it's set to 16:9, however you can choose to use 14:9 instead.</p>
 					<select class="setting" id="IS_WIDE">
 						<option value="0">14:9</option>
 						<option value="1">16:9</option>

@@ -1,5 +1,6 @@
-const httpz = require("@octanuary/httpz");
+const Char = require("../models/Char");
 const database = require("../../data/database"), DB = new database(true);
+const httpz = require("@octanuary/httpz");
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
 
@@ -38,6 +39,11 @@ group.route("GET", "/cc", async (req, res) => {
 		clientThemePath: CLIENT_URL + "/<client_theme>"
 	};
 	Object.assign(flashvars, req.query);
+	if (flashvars.original_asset_id) {
+		const char = Char.load(flashvars.original_asset_id);
+		flashvars.themeId = Char.getTheme(char);
+		delete flashvars.bs;
+	}
 	res.render("app/char", {
 		title: "Character Creator",
 		attrs: {
