@@ -7,4 +7,4 @@ cd {PATH}
 npm install
 npm start
 ```
-**When done, it should open an electron app that has flash built in..**
+**When done, it should open GoAnimate 2014.**
