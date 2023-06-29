@@ -86,7 +86,6 @@
 			</nav>
 		</main>
 
-		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script src="/pages/js/importer.js"></script>
