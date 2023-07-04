@@ -399,7 +399,33 @@ module.exports = function processVoice(voiceName, rawText) {
 					}));
 					break;
 				}
-
+				case "ttstool": {
+					https.request({
+						hostname: "support.readaloud.app",
+						path: "/ttstool/createParts",
+						method: "POST",
+						headers: {
+								"Content-Type": "application/json",
+						},
+					}, (r) => {
+						let buffers = [];
+						r.on("data", (d) => buffers.push(d)).on("error", rej).on("end", () => {
+							https.get({
+								hostname: "support.readaloud.app",
+								path: `/ttstool/getParts?q=${JSON.parse(Buffer.concat(buffers))[0]}`,
+								headers: {
+									"Content-Type": "audio/mp3"
+								}
+							}, res).on("error", rej);
+						});
+					}).end(JSON.stringify([
+						{
+							voiceId: voice.arg,
+							ssml: `<speak version="1.0" xml:lang="${voice.lang}">${text}</speak>`
+						}
+					])).on("error", rej);
+					break;
+				}
 				case "fakeyou": {
 					const fy = new fakeyou.Client({
 						token: `U:${voice.userToken}`
