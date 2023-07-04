@@ -194,10 +194,10 @@ module.exports = function processVoice(voiceName, rawText) {
 								const html = Buffer.concat(buffers);
 								const beg = html.indexOf("/tmp/");
 								const end = html.indexOf("mp3", beg) + 3;
-								const sub = html.subarray(beg, end).toString();
+								const path = html.subarray(beg, end).toString();
 
 								https
-									.get(`https://gonutts.net${sub}`, res)
+									.get(`https://gonutts.net${path}`, res)
 									.on("error", rej);
 							});
 						}
