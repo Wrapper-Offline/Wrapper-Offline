@@ -90,13 +90,13 @@ module.exports = {
 		async function basicParse(file, type, subtype) {
 			const pieces = file.split(".");
 			const themeId = pieces[0];
-	
+			
 			// add the extension to the last key
 			const ext = pieces.pop();
 			pieces[pieces.length - 1] += "." + ext;
 			// add the type to the filename
 			pieces.splice(1, 0, type);
-	
+
 			const filename = pieces.join(".");
 			if (themeId == "ugc") {
 				const id = pieces[2];
@@ -120,6 +120,9 @@ module.exports = {
 					return;
 				}
 			} else {
+				if (type == "prop" && pieces.indexOf("head") > -1) {
+					pieces[1] = "char";
+				}	
 				const filepath = `${store}/${pieces.join("/")}`;
 	
 				// add the file to the zip
