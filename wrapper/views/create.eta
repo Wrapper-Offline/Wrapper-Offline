@@ -433,7 +433,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-action" data-tags="lipsync char_creator">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/action.jpg" alt="Lil&#39; Peepz">
+					<img src="/pages/img/themes/action.jpg" alt="Lil&#39; Peepz">
 				</div>
 				<div class="theme-meat">
 					<h3>Lil' Peepz</h3>
@@ -448,7 +448,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-politics2" data-tags="lipsync">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/politics2.jpg" alt="White Houserz">
+					<img src="/pages/img/themes/politics2.jpg" alt="White Houserz">
 				</div>
 				<div class="theme-meat">
 					<h3>White Houserz</h3>
@@ -462,7 +462,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-sticklybiz" data-tags="">
 			<div class="theme-cell preview">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
+					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
 				</div>
 				<div class="theme-meat">
 					<h3>Stickly Business</h3>
@@ -477,7 +477,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-retro" data-tags="">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/retro.jpg" alt="Cartoon Classics">
+					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
 				</div>
 				<div class="theme-meat">
 					<h3>Cartoon Classics</h3>
@@ -491,7 +491,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-bizmodels" data-tags="">
 			<div class="theme-cell preview">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/bizmodels.jpg" alt="Business Models">
+					<img src="/pages/img/themes/bizmodels.jpg" alt="Business Models">
 				</div>
 				<div class="theme-meat">
 					<h3>Business Models</h3>
@@ -506,7 +506,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-anime" data-tags="char_creator lipsync">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/anime.jpg" alt="Anime">
+					<img src="/pages/img/themes/anime.jpg" alt="Anime">
 				</div>
 				<div class="theme-meat">
 					<h3>Anime</h3>
@@ -521,7 +521,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-ninjaanime" data-tags="char_creator lipsync">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
+					<img src="/pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
 				</div>
 				<div class="theme-meat">
 					<h3>Ninja Anime</h3>
@@ -536,7 +536,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-spacecitizen" data-tags="lipsync char_creator">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
+					<img src="/pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
 				</div>
 				<div class="theme-meat">
 					<h3>Space Citizens</h3>
@@ -551,7 +551,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-chibi" data-tags="lipsync char_creator">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/chibi.jpg" alt="Chibi Peepz">
+					<img src="/pages/img/themes/chibi.jpg" alt="Chibi Peepz">
 				</div>
 				<div class="theme-meat">
 					<h3>Chibi Peepz</h3>
@@ -566,7 +566,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-ninja" data-tags="lipsync char_creator">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
+					<img src="/pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
 				</div>
 				<div class="theme-meat">
 					<h3>Chibi Ninjas</h3>
@@ -581,7 +581,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-space" data-tags="lipsync">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/space.jpg" alt="Space Peepz">
+					<img src="/pages/img/themes/space.jpg" alt="Space Peepz">
 				</div>
 				<div class="theme-meat">
 					<h3>Space Peepz</h3>
@@ -595,7 +595,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-stick" data-tags="">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/stick.jpg" alt="Stick Figure">
+					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
 				</div>
 				<div class="theme-meat">
 					<h3>Stick Figure</h3>
@@ -609,7 +609,7 @@ $('.vm-bf-dots a').click(function(e) {
 		<div class="theme" id="thm-animal" data-tags="lipsync">
 			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="pages/img/themes/animal.jpg" alt="Lil&#39; Petz World">
+					<img src="/pages/img/themes/animal.jpg" alt="Lil&#39; Petz World">
 				</div>
 				<div class="theme-meat">
 					<h3>Lil' Petz World</h3>
