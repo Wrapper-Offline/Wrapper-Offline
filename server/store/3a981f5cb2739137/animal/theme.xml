@@ -2,10 +2,10 @@
 <theme id="animal" name="Lil' Petz" cc_theme_id="cc2">
 	<background id="ncc_pet_01bg.swf" name="Countryside" enable="Y" default="Y" is_premium="N" aid="12443" money="0" sharing="0"/>
 	<background id="ncc_pet_02bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="12444" money="0" sharing="0"/>
-	<background id="ncc_pet_03bg.swf" name="Desert" enable="N" default="N" is_premium="N" aid="12445" money="0" sharing="0"/>
-	<background id="ncc_pet_04bg.swf" name="Cave" enable="N" default="N" is_premium="N" aid="12446" money="0" sharing="0"/>
-	<background id="ncc_pet_05bg.swf" name="Butcher" enable="N" default="N" is_premium="N" aid="12447" money="0" sharing="0"/>
-	<background id="ncc_pet_06bg.swf" name="Forest" enable="N" default="N" is_premium="N" aid="12448" money="0" sharing="0"/>
+	<background id="ncc_pet_03bg.swf" name="Desert" enable="Y" default="N" is_premium="N" aid="12445" money="0" sharing="0"/>
+	<background id="ncc_pet_04bg.swf" name="Cave" enable="Y" default="N" is_premium="N" aid="12446" money="0" sharing="0"/>
+	<background id="ncc_pet_05bg.swf" name="Butcher" enable="Y" default="N" is_premium="N" aid="12447" money="0" sharing="0"/>
+	<background id="ncc_pet_06bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="12448" money="0" sharing="0"/>
 	<compositebg id="ncc_pet_03" name="Desert" enable="Y" default="N" thumb="ncc_pet_03bg.jpg" display_order="100" is_premium="N" money="0" sharing="0" aid="12449">
 	<bg id="ncc_pet_03_BG809" index="0">
 		<file>animal.ncc_pet_03bg.swf</file>
@@ -71,9 +71,61 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<prop id="ncc_pet_03prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="12438" money="0" sharing="0"/>
-	<prop id="ncc_pet_04prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="12439" money="0" sharing="0"/>
-	<prop id="ncc_pet_05prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="12440" money="0" sharing="0"/>
-	<prop id="ncc_pet_06prop_1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="12441" money="0" sharing="0"/>
-	<prop id="ncc_pet_06prop_2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="12442" money="0" sharing="0"/>
+	<prop id="ncc_pet_03prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12438" money="0" sharing="0"/>
+	<prop id="ncc_pet_04prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12439" money="0" sharing="0"/>
+	<prop id="ncc_pet_05prop.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12440" money="0" sharing="0"/>
+	<prop id="ncc_pet_06prop_1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12441" money="0" sharing="0"/>
+	<prop id="ncc_pet_06prop_2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12442" money="0" sharing="0"/>
+	
+	<char id="30311197" name="Little Kitty" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30311197.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30312547" name="Punk Kitty" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30312547.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30315508" name="Nerd Pet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30315508.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30545539" name="Business Rabbit" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30545539.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30569218" name="Blue Bunny" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30569218.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30569565" name="Rabbit" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30569565.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30569668" name="Punk Pet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30569668.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30570649" name="Cat" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30570649.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30571621" name="Punk Male Cat" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30571621.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30571875" name="Butcherpet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30571875.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30572052" name="Cavepet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30572052.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="30572536" name="Happy Bunny" cc_theme_id="cc2" thumbnail_url="stock_thumbs/30572536.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="69316237" name="Ripped Bunny" cc_theme_id="cc2" thumbnail_url="stock_thumbs/69316237.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="69316565" name="Mummified Pet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/69316565.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="69317916" name="Frankenpet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/69317916.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="69318380" name="Pumpkin Pet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/69318380.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
+	<char id="69318711" name="Witch Pet" cc_theme_id="cc2" thumbnail_url="stock_thumbs/69318711.png" copyable="Y">
+		<tags>animal</tags>
+	</char>
 </theme>
