@@ -1,276 +1,946 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>The Premium Video Maker from GoAnimate - Create Polished Videos & Animations</title>
-		<meta name="description" content="GoAnimate Theme List"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
-		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/global.js"></script>
-	</head>
+<!-- GoAnimate 2014 Video List -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta property="og:type" content="article"><meta property="og:title" content="The Premium Video Maker from GoAnimate - Create Polished Videos &amp; Animations"><meta property="og:url" content="https://web.archive.org/web/20140421234546mp_/http://goanimate.com/videomaker"><meta property="og:image" content="https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/e3f2aaca2e8b243a83bf5f6e049391fa7e10320c.bin"><meta property="og:video" content="https://web.archive.org/web/20140218225908/http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-10-04?controlsVisibleOnLoad=false&amp;mediaDuration=207&amp;playButtonVisible=true&amp;referrer=http%3A%2F%2Fgoanimate.com%2Fvideomaker&amp;showAbout=true&amp;showVolume=false&amp;stillUrl=https%3A%2F%2Fweb.archive.org%2Fweb%2F20140218225908%2Fhttp%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fe3f2aaca2e8b243a83bf5f6e049391fa7e10320c.bin&amp;allowSwitchToHtml5=true&amp;trackingTransmitInterval=20&amp;unbufferedSeek=true&amp;videoUrl=https%3A%2F%2Fweb.archive.org%2Fweb%2F20140218225908%2Fhttp%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F00a07fa93ba333cc10aa9d9726681453a918ac7e.bin&amp;wmode=opaque&amp;embedServiceURL=https%3A%2F%2Fweb.archive.org%2Fweb%2F20140218225908%2Fhttp%3A%2F%2Fdistillery.wistia.com%2Fx&amp;accountKey=wistia-production_14033&amp;mediaID=wistia-production_4277089"><meta property="og:video:type" content="application/x-shockwave-flash"><script src="pages/vm_files/quant.js.download" async="" type="text/javascript"></script><script type="text/javascript" async="" src="pages/vm_files/d6e9ca5d19bda4afea55a1493af00d0b98c26240.1.js.download"></script><script type="text/javascript" async="" src="pages/vm_files/i.js.download"></script><script type="text/javascript" async="" src="pages/vm_files/dc.js.download"></script><script src="pages/vm_files/analytics.js.download" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app228.us.archive.org';v.server_ms=300;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="pages/vm_files/bundle-playback.js.download" charset="utf-8"></script>
+<script type="text/javascript" src="pages/vm_files/wombat.js.download" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://goanimate.com/videomaker","20140421234546","https://web.archive.org/","web","/_static/",
+	      "1398123946");
+</script>
+<link rel="stylesheet" type="text/css" href="pages/vm_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="pages/vm_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
 
-	<body>
-		<%~ includeFile("./includes/header", { env: it.env }) %>
 
-		<main>
-			<h1>Create Animated Videos for Your Business. Easily.</h1>
-			<h2>EVERYTHING YOU NEED IN A WIDE RANGE OF STYLES. Our themes are carefully produced sets of matching assets, such as characters, actions, background, props and scene starters - each with a unique visual style. Our flagship theme, Business Friendly, offers the widest selection, providing hundreds of actions across numerous occupations and activities, with more being added all the time.</h2>
-			<h1><a href="http://localhost:4343/go_full" class="button_big">Make a Video - Start from Scratch</a></h1>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="dns-prefetch" href="https://web.archive.org/web/20140421234546/http://lightspeed.goanimate.com/">
 
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
+<title>The Premium Video Maker from GoAnimate - Create Polished Videos &amp; Animations</title>
+
+<meta name="description" content="Make a premium video using GoAnimate\&#39;s powerful Video Maker studio.  Enjoy full creative control with simple drag &amp; drop tools.  Click, Drag, Action!">
+<meta property="og:site_name" content="GoAnimate">
+<meta property="fb:app_id" content="177116303202">
+
+<meta name="google-site-verification" content="K_niiTfCVi72gwvxK00O4NjsVybMutMUnc-ZnN6HUuA">
+
+<link rel="alternate" href="https://web.archive.org/web/20140421234546/http://feeds.feedburner.com/GoAnimate" type="application/rss+xml" title="GoAnimate Blog">
+<link rel="alternate" href="https://web.archive.org/web/20140421234546/http://feeds.feedburner.com/GoAnimate/WhatsNew" type="application/rss+xml" title="GoAnimate - Recently Released Content">
+<link rel="alternate" href="https://web.archive.org/web/20140421234546/http://feeds.feedburner.com/GoAnimate/MostWatched" type="application/rss+xml" title="GoAnimate - Most Watched">
+
+
+<link href="pages/vm_files/css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/bootstrap-modal.css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/bootstrapSwitch.css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/style.css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/site.css" rel="stylesheet" type="text/css">
+<link href="pages/vm_files/overlay.css" rel="stylesheet" type="text/css">
+
+<link href="pages/vm_files/videomaker.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+var srv_tz_os = -4, view_name = "go", user_cookie_name = "u_info";
+</script>
+
+<script src="pages/vm_files/jquery-1.8.3.min.js.download"></script>
+
+<script src="pages/vm_files/bootstrap.min.js.download"></script>
+<script src="pages/vm_files/bootstrap-modalmanager.js.download"></script>
+<script src="pages/vm_files/bootstrap-modal.js.download"></script>
+<script src="pages/vm_files/bootstrapSwitch.js.download"></script>
+
+
+<script src="pages/vm_files/go2.js.download"></script>
+<script src="pages/vm_files/jquery.swfobject.min.js.download"></script>
+<script src="pages/vm_files/jquery.blockUI.js.download"></script>
+<script src="pages/vm_files/jquery.scrollTo.min.js.download"></script>
+<script src="pages/vm_files/app.js.download"></script>
+
+<script src="pages/vm_files/cookie.js.download"></script>
+<script src="pages/vm_files/Gettext.js.download"></script>
+<script type="text/javascript" src="pages/vm_files/goserver_js-en_US.json"></script>
+<script type="text/javascript">
+var I18N_LANG = 'en_US';
+var GT = new Gettext({'locale_data': json_locale_data});
+</script>
+<script src="pages/vm_files/jquery.flexslider.min.js.download"></script>
+<script type="text/javascript" src="pages/vm_files/recaptcha_ajax.js.download"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2516970-1']);
+_gaq.push(['_setDomainName', 'none']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!-- GoAnimate_Footer_ROS_Bottom_960x284 -->
+<script type="text/javascript" src="pages/vm_files/google_service.js.download">
+</script>
+<script type="text/javascript">
+GS_googleAddAdSenseService("ca-pub-9090384317741239");
+GS_googleEnableAllServices();
+</script><script src="pages/vm_files/google_ads.js.download"></script>
+<script type="text/javascript">
+GA_googleAddAttr("is_login", "no");
+GA_googleAddAttr("is_plus", "no");
+GA_googleAddAttr("is_creator", "no");
+</script>
+<script type="text/javascript">
+GA_googleAddSlot("ca-pub-9090384317741239", "GoAnimate_Footer_ROS_Bottom_960x284");
+</script>
+<script type="text/javascript">
+GA_googleFetchAds();
+</script>
+<!-- GoAnimate_Footer_ROS_Bottom_960x284 -->
+
+<link href="https://plus.google.com/+goanimate" rel="publisher">
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://web.archive.org/web/20140421234546/http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body class="en_US" data-new-gr-c-s-check-loaded="14.1114.0" data-gr-ext-installed="">
+ 
+<script type="text/javascript">
+if (self !== top) {
+			jQuery('body').hide();
+	}
+</script>
+<div id="fb-root" class=" fb_reset"><script async="" src="pages/vm_files/all.js.download"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="pages/vm_files/8n77RrR4jg0.html" style="border: none;" allow="autoplay &#39;self&#39;; fullscreen &#39;self&#39;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="pages/vm_files/8n77RrR4jg0(1).html" style="border: none;" allow="autoplay &#39;self&#39;; fullscreen &#39;self&#39;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f995f2a7db7a8e8" frameborder="0" allowtransparency="true" scrolling="no" src="pages/vm_files/ping.html" style="display: none;" allow="autoplay &#39;self&#39;; fullscreen &#39;self&#39;"></iframe></div></div></div>
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({appId: '177116303202', cookie: true, status: true, xfbml: true});
+    jQuery(document).ready(function() {
+      jQuery(document).trigger('facebook.init');
+    });
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//web.archive.org/web/20140421234546/http://connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'd6e9ca5d19bda4afea55a1493af00d0b98c26240';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//web.archive.org/web/20140421234546/http://i.kissmetrics.com/i.js');
+  _kms('//web.archive.org/web/20140421234546/http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script type="text/javascript">
+		jQuery.extend(CCStandaloneBannerAdUI, {"actionshopSWF":"https:\/\/web.archive.org\/web\/20140421234546\/http:\/\/lightspeed.goanimate.com\/animation\/877\/actionshop.swf","apiserver":"https:\/\/web.archive.org\/web\/20140421234546\/http:\/\/goanimate.com\/","clientThemePath":"https:\/\/web.archive.org\/web\/20140421234546\/http:\/\/lightspeed.goanimate.com\/static\/477\/<client_theme>","userId":""});
+</script>
+
+<div class="page-container">
+
+<!-- HEADER -->
+<div class="site-header">
+	<div class="site-header-bg"></div>
+	<div class="container site-header-inside">
+		<a class="site-logo" href="http://localhost:4343/" title="GoAnimate">
+			<img alt="Make a Video Online with GoAnimate 2014" src="pages/vm_files/logo.png">
+		</a>
+
+<div class="pull-right">
+			<ul id="top-nav" class="top-nav">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="http://localhost:4343" data-toggle="dropdown">Your Account <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://localhost:4343">Dashboard</a></li>
+						<li><a href="http://localhost:4343">Your Videos</a></li>
+					</ul>
+				</li>
+				<li class="divider"></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="https://web.archive.org/web/20140421234546/http://goanimate.com/videos" data-toggle="dropdown">Explore <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips">Blog</a></li>
+						<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/videos">Videos</a></li>
+					</ul>
+				</li>
+				<li class="divider"></li>
+
+				<li>
+					<a href="https://web.archive.org/web/20140421234546/http://goanimate.com/business/videoplans/?hook=header_button.site">Plans &amp; Pricing</a>
+				</li>
+					<li>
+			<div class="top-nav-vm-btn">
+				<a class="btn btn-orange pull-left" href="https://localhost:4343/videomaker">Make a Video</a>
+			</div>
+		</li></ul>
+			
+			<li class="divider"></li>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<!-- END OF HEADER -->
+
+<div class="vm-tutorial">
+	<div class="container">
+		<div class="tutorial-video" style="display:none;">
+
+<div id="wistia_9z4fah3lag" class="wistia_embed" style="width:860px;height:484px;"><div id="wistia_9z4fah3lag_grid_wrapper" style="height: 484px;"><div id="wistia_9z4fah3lag_grid_above"></div><div id="wistia_9z4fah3lag_grid_main" style="width: 860px;"><div id="wistia_9z4fah3lag_grid_behind"></div><div id="wistia_9z4fah3lag_grid_center"></div><div id="wistia_9z4fah3lag_grid_front"></div><div id="wistia_9z4fah3lag_grid_top_inside"><div id="wistia_9z4fah3lag_grid_top"></div></div><div id="wistia_9z4fah3lag_grid_bottom_inside"><div id="wistia_9z4fah3lag_grid_bottom"></div></div><div id="wistia_9z4fah3lag_grid_left_inside"><div id="wistia_9z4fah3lag_grid_left"></div></div><div id="wistia_9z4fah3lag_grid_right_inside"><div id="wistia_9z4fah3lag_grid_right"></div></div></div><div id="wistia_9z4fah3lag_grid_below"></div><style id="wistia_4_style" type="text/css" class="wistia_injected_style">#wistia_9z4fah3lag,#wistia_9z4fah3lag *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+#wistia_9z4fah3lag_grid_wrapper{font-family:Arial,sans-serif;font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
+#wistia_9z4fah3lag_grid_above{position:relative;}
+#wistia_9z4fah3lag_grid_main{display:block;height:100%;position:relative;}
+#wistia_9z4fah3lag_grid_behind{height:100%;left:0;position:absolute;top:0;width:100%;}
+#wistia_9z4fah3lag_grid_center{height:100%;position:relative;width:100%;}
+#wistia_9z4fah3lag_grid_front{display:none;height:100%;left:0;position:absolute;top:0;width:100%;}
+#wistia_9z4fah3lag_grid_top_inside{position:absolute;left:0;top:0;width:100%;}
+#wistia_9z4fah3lag_grid_top{width:100%;position:absolute;bottom:0;left:0;}
+#wistia_9z4fah3lag_grid_bottom_inside{position:absolute;left:0;bottom:0;width:100%;}
+#wistia_9z4fah3lag_grid_bottom{width:100%;position:absolute;top:0;left:0;}
+#wistia_9z4fah3lag_grid_left_inside{height:100%;position:absolute;left:0;top:0;}
+#wistia_9z4fah3lag_grid_left{height:100%;position:absolute;right:0;top:0;}
+#wistia_9z4fah3lag_grid_right_inside{height:100%;right:0;position:absolute;top:0;}
+#wistia_9z4fah3lag_grid_right{height:100%;left:0;position:absolute;top:0;}
+#wistia_9z4fah3lag_grid_below{position:relative;}</style></div></div>
+<script charset="ISO-8859-1" src="pages/vm_files/E-v1.js.download"></script>
+<script>
+wistiaEmbed = Wistia.embed("9z4fah3lag");
+</script>
+<script charset="ISO-8859-1" src="pages/vm_files/metadata.js.download"></script>
+
+		</div>
+		<div class="vm-tutorial-trigger-container">
+			<a class="vm-tutorial-trigger" href="https://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips/video-maker-tutorial/" target="_blank">
+				<span class="on">Watch Tutorial</span>
+				<span class="off">Close</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="vm-bf-wrapper">
+<div class="vm-bf" id="topbanner-bf">
+	<div class="container">
+		<h1>Create Animated Videos for Your Business. Easily.</h1>
+		<p class="subtitle"><strong>Everything you need in a wide range of styles</strong></p>
+
+		<div class="vm-bf-content">
+			<p>Our themes are carefully produced sets of matching assets, such as characters, actions, backgrounds, props and scene starters - each with a unique visual style. Our flagship theme, Business Friendly, offers the widest selection, providing hundreds of actions across numerous occupations and activities, with more being added all the time.</p>
+
+			<div class="actions">
+				</button>
+				<a class="btn-flat btn-flat-orange btn-flat banner" href="https://localhost:4343/go_full?tray=business">Make a Video - Start from scratch</a>
+				</button>
+				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeid=business">Character Creator</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="vm-bf whiteboard" id="topbanner-wb" style="display:none;">
+	<div class="container">
+		<h1>Create Animated Videos for Your Business. Easily.</h1>
+		<p class="subtitle"><strong>Everything you need in a wide range of styles</strong></p>
+
+		<div class="vm-bf-content">
+			<p>Our themes are carefully produced sets of matching assets, such as characters, actions, backgrounds, props and scene starters - each with a unique visual style. Our flagship theme, Whiteboard Animation, offers the widest selection, providing hundreds of actions across numerous occupations and activities, with more being added all the time.</p>
+
+			<div class="actions">
+				</button>
+				<a class="btn-flat btn-flat-orange btn-flat banner" href="https://localhost:4343/go_full?tray=whiteboard">Make a Video - Start from scratch</a>
+				</button>
+				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeid=whiteboard">Character Creator</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="vm-bf-dots-wrapper">
+	<ul class="vm-bf-dots">
+		<li class="dot bf on"><a href="http://localhost:4343/videomaker#"></a></li>
+		<li class="dot wb"><a href="http://localhost:4343/videomaker#"></a></li>
+	</ul>
+</div>
+</div>
+
+<script>
+$('.vm-bf-dots a').click(function(e) {
+	e.preventDefault();
+	var $li = $(this).parent();
+	if ($li.hasClass('on')) return;
+	$li.addClass('on').siblings().removeClass('on');
+	$li.parent('.vm-bf-dots').toggleClass('wb', $li.hasClass('wb'));
+	if ($li.hasClass('wb')) {
+		$('#topbanner-bf').fadeOut();
+		$('#topbanner-wb').fadeIn();
+	} else {
+		$('#topbanner-wb').fadeOut();
+		$('#topbanner-bf').fadeIn();
+	}
+});
+</script>
+
+<div class="container themes-section">
+	<div class="header">
+		<div class="header-content">
+			<h2>Select A Theme</h2>
+			Select a theme based on its visual style, or use the filter to choose based on features.		</div>
+		<div class="filter-dropdown-container">
+			<div class="filter-dropdown dropdown">
+				<a class="filter-dropdown-toggle" data-toggle="dropdown" href="http://localhost:4343/videomaker#">Filter Themes <span class="caret"></span></a>
+				<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+					<li>
+						<a class="filter-item" href="http://localhost:4343/videomaker#" data-filter="lipsync">
+							<div class="filter-icon"><img src="pages/vm_files/filter_lip.png" alt=""></div>
+							<div class="filter-body">
+								<div class="filter-name"><strong>Lip-sync</strong></div>
+								<span class="filter-desc">Characters automatically lip-sync their dialog when lines are assigned to them.</span>
+							</div>
+							<div class="filter-checkbox-container">
+								<span class="filter-checkbox"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="filter-item" href="http://localhost:4343/videomaker#" data-filter="ext_lib">
+							<div class="filter-icon"><img src="pages/vm_files/filter_library.png" alt=""></div>
+							<div class="filter-body">
+								<div class="filter-name"><strong>Extensive Library</strong></div>
+								<span class="filter-desc">Collections of characters, backgrounds and props corresponding to a wide variety of locations, occupations and industries.</span>
+							</div>
+							<div class="filter-checkbox-container">
+								<span class="filter-checkbox"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="filter-item" href="http://localhost:4343/videomaker#" data-filter="starters">
+							<div class="filter-icon"><img src="pages/vm_files/filter_starter.png" alt=""></div>
+							<div class="filter-body">
+								<div class="filter-name"><strong>Scene Starters</strong></div>
+								<span class="filter-desc">Pre-made sequences that help you get started (or finished) quickly!  You can also save your own frequently-used sequences as starters.</span>
+							</div>
+							<div class="filter-checkbox-container">
+								<span class="filter-checkbox"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="filter-item" href="http://localhost:4343/videomaker#" data-filter="char_creator">
+							<div class="filter-icon"><img src="pages/vm_files/filter_cc.png" alt=""></div>
+							<div class="filter-body">
+								<div class="filter-name"><strong>Character Creator</strong></div>
+								<span class="filter-desc">Customize your characters!  Adapt existing characters to meet your needs or build completely from scratch.</span>
+							</div>
+							<div class="filter-checkbox-container">
+								<span class="filter-checkbox"></span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="filter-results" id="filter-results" style="display:none">
+		<b class="filter-count">0</b> matching themes based on filters:
+		<ul class="filter-crumb-list"></ul>
+		<a class="filter-crumb-list-clear" href="#">Clear all</a>
+	</div>
+
+	<div class="themes clearfix" id="themes">
+
+		<div class="theme" id="thm-business" data-tags="char_creator lipsync starters ext_lib">
+			<div class="theme-cell preview">
+				<div class="theme-cover">
 					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Business Friendly</a>
+					<h3>Business Friendly</h3>
 					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=business" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=business" class="button_small">Character Creator</a>
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=buisness">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=buisness">Character Creator</a>
 					</div>
 				</div>
 			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
+			<div class="theme-tag biz">Business Exclusive</div>
+		</div>
+
+		<div class="theme" id="thm-whiteboard" data-tags="char_creator lipsync">
+			<div class="theme-cell preview">
+				<div class="theme-cover">
 					<img src="/pages/img/themes/whiteboard.jpg" alt="Whiteboard Animation">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Whiteboard Animation</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=whiteboard" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=whiteboard" class="button_small">Character Creator</a>
+					<h3>Whiteboard Animation</h3>
+					<div class="apps">						
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=whiteboard">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=whiteboard">Character Creator</a>
 					</div>
 				</div>
 			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
+			<div class="theme-tag biz">Business Exclusive</div>
+		</div>
+
+		<div class="theme" id="thm-commoncraft" data-tags="">
+			<div class="theme-cell">
+				<div class="theme-cover">
 					<img src="/pages/img/themes/commoncraft.jpg" alt="Common Craft">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Common Craft</a>
+					<h3>Common Craft</h3>
 					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=commoncraft" class="button_big">Make a Video</a>
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=commoncraft">Make a Video</a>
 					</div>
 				</div>
 			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
+			<div class="theme-tag">$59 per year</div>
+		</div>
+
+		<div class="theme" id="thm-custom" data-tags="lipsync char_creator">
+			<div class="theme-cell">
+				<div class="theme-cover">
 					<img src="/pages/img/themes/custom.jpg" alt="Comedy World">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Comedy World</a>
+					<h3>Comedy World</h3>
 					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=custom" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=family" class="button_small">Character Creator</a>
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=custom">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=family">Character Creator</a>
 					</div>
 				</div>
 			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/action.jpg" alt="Lil' Peepz">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Lil' Peepz</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=action" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/politics2.jpg" alt="White Houserz">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >White Houserz</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=politics2" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
+		</div>
 
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
+		<div class="theme" id="thm-action" data-tags="lipsync char_creator">
+			<div class="theme-cell">
 				<div class="theme-cover launch">
-					<img src="/pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
+					<img src="pages/img/themes/action.jpg" alt="Lil&#39; Peepz">
 				</div>
 				<div class="theme-meat">
-					<a class="none" >Stickly Business</a>
+					<h3>Lil' Peepz</h3>
 					<div class="apps">
-						<a href="http://localhost:4343/go_full?sticklybiz" class="button_big">Make a Video</a>
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=action">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=cc2">Character Creator</a>
 					</div>
 				</div>
 			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Cartoon Classics</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=retro" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/bizmodels.jpg" alt="Business Models">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Business Models</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=bizmodels" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/anime.jpg" alt="Anime">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Anime</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=anime" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=anime" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/ninjaanime.jpg" alt=" Ninja Anime">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Ninja Anime</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=ninjaanime" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=ninjaanime" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Space Citizens</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=spacecitizen" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=spacecitizen" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/chibi.jpg" alt="Chibi Peepz">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Chibi Peepz</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=chibi" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=chibi" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Chibi Ninjas</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=ninja" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=ninja" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/space.jpg" alt="Space Peepz">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Space Peepz</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=space" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme">
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Stick Figure</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=stick" class="button_big">Make a Video</a>
-					</div>
-				</div>
-			</div>
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<div class="theme-cell">
-				<div class="theme-cover launch">
-					<img src="/pages/img/themes/animal.jpg" alt="Lil' Petz World">
-				</div>
-				<div class="theme-meat">
-					<a class="none" >Lil' Petz World</a>
-					<div class="apps">
-						<a href="http://localhost:4343/go_full?tray=animal" class="button_big">Make a Video</a>
-						<a href="http://localhost:4343/cc_browser?themeId=cc2" class="button_small">Character Creator</a>
-					</div>
-				</div>
-			</div>
-			</div>
-		</main>
+		</div>
 
-	</script>
+		<div class="theme" id="thm-politics2" data-tags="lipsync">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/politics2.jpg" alt="White Houserz">
+				</div>
+				<div class="theme-meat">
+					<h3>White Houserz</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=politics2">Make a Video</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-</html>
+		<div class="theme" id="thm-sticklybiz" data-tags="">
+			<div class="theme-cell preview">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/sticklybiz.jpg" alt="Stickly Business">
+				</div>
+				<div class="theme-meat">
+					<h3>Stickly Business</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=sticklybiz">Make a Video</a>
+					</div>
+				</div>
+			</div>
+			<div class="theme-tag biz">Business Exclusive</div>
+		</div>
+
+		<div class="theme" id="thm-retro" data-tags="">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/retro.jpg" alt="Cartoon Classics">
+				</div>
+				<div class="theme-meat">
+					<h3>Cartoon Classics</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=retro">Make a Video</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-bizmodels" data-tags="">
+			<div class="theme-cell preview">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/bizmodels.jpg" alt="Business Models">
+				</div>
+				<div class="theme-meat">
+					<h3>Business Models</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=bizmodels">Make a Video</a>
+					</div>
+				</div>
+			</div>
+			<div class="theme-tag biz">Business Exclusive</div>
+		</div>
+
+		<div class="theme" id="thm-anime" data-tags="char_creator lipsync">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/anime.jpg" alt="Anime">
+				</div>
+				<div class="theme-meat">
+					<h3>Anime</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=anine">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=anime">Character Creator</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-ninjaanime" data-tags="char_creator lipsync">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
+				</div>
+				<div class="theme-meat">
+					<h3>Ninja Anime</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=ninjaanime">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=ninjaanime">Character Creator</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-spacecitizen" data-tags="lipsync char_creator">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
+				</div>
+				<div class="theme-meat">
+					<h3>Space Citizens</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=spacecitizen">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=spacecitizen">Character Creator</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-chibi" data-tags="lipsync char_creator">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/chibi.jpg" alt="Chibi Peepz">
+				</div>
+				<div class="theme-meat">
+					<h3>Chibi Peepz</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=chibi">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=chibi">Character Creator</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-ninja" data-tags="lipsync char_creator">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
+				</div>
+				<div class="theme-meat">
+					<h3>Chibi Ninjas</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=ninja">Make a Video</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=ninja">Character Creator</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-space" data-tags="lipsync">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/space.jpg" alt="Space Peepz">
+				</div>
+				<div class="theme-meat">
+					<h3>Space Peepz</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=space">Make a Video</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-stick" data-tags="">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/stick.jpg" alt="Stick Figure">
+				</div>
+				<div class="theme-meat">
+					<h3>Stick Figure</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=stick">Make a Video</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="theme" id="thm-animal" data-tags="lipsync">
+			<div class="theme-cell">
+				<div class="theme-cover launch">
+					<img src="pages/img/themes/animal.jpg" alt="Lil&#39; Petz World">
+				</div>
+				<div class="theme-meat">
+					<h3>Lil' Petz World</h3>
+					<div class="apps">
+						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=animal">Make a Video</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<script>
+$(function() {
+	$('.vm-tutorial-trigger').click(function(e) {
+		e.preventDefault();
+
+		var $tutorial = $('.vm-tutorial');
+
+		if ($tutorial.hasClass('expand')) {
+			$('.tutorial-video').hide();
+			wistiaEmbed && wistiaEmbed.pause();
+		} else {
+			setTimeout(function() {
+				$('.tutorial-video').show();
+				wistiaEmbed && wistiaEmbed.play();
+			}, 400);
+		}
+
+		$tutorial.toggleClass('expand');
+	});
+
+	$('.theme-cell').each(function() {
+		var $button = $('.apps > .btn:first-child', this);
+		var launch, url;
+
+		$('.theme-cover', this).click(function(e) {
+			e.preventDefault();
+
+			if ($button.attr('href') != undefined) {
+				window.location.href = $button.attr('href');
+			} else {
+				$button.trigger('click');
+			}
+		}).addClass('launch');
+	});
+
+	$('.vm-bf-content .btn-flat, .themes .apps > .btn').tooltip();
+});
+
+var tagNames = {"lipsync":"Lip-sync","ext_lib":"Extensive Library","starters":"Scene Starters","char_creator":"Character Creator"};
+</script>
+<script src="pages/vm_files/video_maker.js.download"></script>
+
+<div id="payment-license-overlay" class="modal hide"></div>
+
+
+<!-- FOOTER -->
+
+<div class="site-footer">
+	<div class="container clearfix">
+
+		<div class="site-footer-nav clearfix">
+			<div class="col" style="border-left: none;">
+				<h5><span>About GoAnimate</span></h5>
+				<ul>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/about">Who we are</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/contactus">Contact Us</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips">Blog</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://press.goanimate.com/">Press</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/videos/mostwatched">Browse all videos</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h5><span>GoAnimate Solutions</span></h5>
+				<ul>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/business/videoplans?hook=footer_button.site">Plans and Pricing</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate4schools.com/" target="_blank">GoAnimate for Schools</a></li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="col">
+				<h5><span>Usage Guidelines</span></h5>
+				<ul>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/termsofuse">Terms of Use for Everyone</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/business/termsofuse">Additional Terms for Businesses</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/legal">Legal Notices</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/privacy">Privacy Policy</a></li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="col" style="border-right: none;">
+				<h5>Getting Help</h5>
+				<ul>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips">Video Maker Tips</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips/table-of-contents-goanimate-tutorials/">Help Videos</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/faq">FAQs</a></li>
+					<li><a href="https://web.archive.org/web/20140421234546/http://goanimate.com/forums">Forums</a></li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+
+		<div>
+			Select your preferred language:
+
+			<ul class="site-languages">
+
+				<li class="active">English</li>
+				<li><a href="javascript:chooseLanguage(&#39;es&#39;)">Español</a></li>
+				<li><a href="javascript:chooseLanguage(&#39;jp&#39;)">日本語</a></li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<div class="clearfix">
+			<div class="site-footer-socials-container pull-left">
+				Follow us on:
+				<ul class="site-footer-socials clearfix">
+					<li><a class="facebook" href="https://web.archive.org/web/20140421234546/http://www.facebook.com/GoAnimateInc">Facebook</a></li>
+					<li><a class="twitter" href="https://web.archive.org/web/20140421234546/http://twitter.com/GoAnimate">Twitter</a></li>
+					<li><a class="linkedin" href="https://web.archive.org/web/20140421234546/http://www.linkedin.com/company/goanimate">Linked In</a></li>
+					<li><a class="gplus" href="https://web.archive.org/web/20140421234546/https://plus.google.com/+goanimate">Google+</a></li>
+					<li><a class="youtube" href="https://web.archive.org/web/20140421234546/http://www.youtube.com/user/GoAnimate">YouTube</a></li>
+				</ul>
+			</div>
+			<div class="site-footer-copyright pull-right">
+				<img src="pages/vm_files/logo_norton.png" alt="Norton Secured">
+				<img src="pages/vm_files/logo_amazon.png" alt="AWS Partner Network">
+				&nbsp;&nbsp;&nbsp;
+				GoAnimate © 2014
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="studio_container" style="display: none;">
+	<div id="studio_holder"><!-- Full Screen Studio -->
+		<div style="top: 50%; position: relative;">
+			This content requires the Adobe Flash Player 10.3. <a href="https://web.archive.org/web/20140421234546/http://get.adobe.com/flashplayer/">Get Flash</a>
+		</div>
+	</div>
+</div>
+
+<!-- END OF PAGE STRUCTURE -->
+
+
+<script>
+var IE = {
+  Version: function() {
+    var version = 999; // we assume a sane browser
+    if (navigator.appVersion.indexOf("MSIE") != -1)
+      // bah, IE again, lets downgrade version number
+      version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    return version;
+  }
+}
+
+var UserData = function() {
+  this.userData = null;
+  this.name = location.hostname;
+ 
+  if (IE.version > 6 && !this.userData) {
+    try {
+      this.userData = document.createElement('INPUT');
+      this.userData.type = "hidden";
+      this.userData.style.display = "none";
+      this.userData.addBehavior ("#default#userData");
+      document.body.appendChild(this.userData);
+      var expires = new Date();
+      expires.setDate(expires.getDate()+365);
+      this.userData.expires = expires.toUTCString();
+    } catch(e) {
+    }
+  }
+ 
+    this.setItem = function(key, value) {
+        
+            this.userData.load(this.name);
+            this.userData.setAttribute(key, value);
+            this.userData.save(this.name);
+    }
+    this.getItem = function(key) {
+            this.userData.load(this.name);
+            return this.userData.getAttribute(key);
+    }
+    this.remove = function(key) {
+            this.userData.load(this.name);
+            this.userData.removeAttribute(key);
+            this.userData.save(this.name);
+    }
+ 
+}
+
+function locStorage(action, key, value){
+    var result;
+    if (typeof(localStorage) == 'undefined' ) {
+            // localStorge not supported
+    } else {
+        try {
+            switch(action){
+                case 'setItem':
+                    localStorage.setItem(key, value);
+                break;
+                case 'getItem':
+                    result = localStorage.getItem(key);
+                break;
+                case 'removeItem':
+                    localStorage.removeItem(key);
+                break;
+            }
+        return result;
+        } catch (e) {
+            if (e == QUOTA_EXCEEDED_ERR) {
+                //data wasn't successfully saved due to quota exceed so throw an error
+            }
+        }
+    }
+}
+function bannedUser(value){
+    if (value == "true"){
+        document.body.innerHTML="";
+    }
+}
+</script>
+<div style="height:0;overflow:hidden;"><object width="1" height="1">   <param name="vap" value="http://lightspeed.goanimate.com/static/477/go/swf/VAP.swf">   <param name="bgcolor" value="#000000"><param name="allowFullScreen" value="true">   <param name="FlashVars" value="detect=true">   <param name="allowscriptaccess" value="always">   <embed src="https://web.archive.org/web/20140421234546oe_/http://lightspeed.goanimate.com/static/477/go/swf/VAP.swf" flashvars="detect=true" type="application/x-shockwave-flash" width="1" height="1" bgcolor="#ffffff" allowscriptaccess="always" allowfullscreen="true"></object></div>    <script>
+    //check userdata (IE)
+    if (IE.version > 6) {
+        var ud = new UserData();
+        var ud_expiry = ud.getItem("vap");
+        if (ud_expiry > 1398123946){
+            document.body.innerHTML='';
+        }
+    }
+    //check localStorage
+    var ls_expiry = locStorage("getItem", "vap");
+    if (ls_expiry > 1398123946){
+        document.body.innerHTML='';
+    }
+    </script>
+    
+<div id="container"></div>
+
+<div id="offer_container">
+</div>
+<script type="text/javascript">
+    </script>
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+	var _qevents = _qevents || [];
+	(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://web.archive.org/web/20140421234546/https://secure" : "https://web.archive.org/web/20140421234546/http://edge")
+			+ ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);  
+	})();
+</script>
+<script type="text/javascript">
+	_qevents.push( {"qacct":"p-66CFnJxwubvnE"} );
+</script>
+<noscript>
+<div style="display: none;">
+	<img src="https://web.archive.org/web/20140421234546im_/http://pixel.quantserve.com/pixel/p-66CFnJxwubvnE.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script type="text/javascript">
+	function logSendShareToGA() {
+		_gaq.push(['_trackPageview', "/pageTracker/goals/reg/contactform"]);
+	}
+
+</script>
+
+<div style="height:0;overflow:hidden;">
+<!-- Google Code for Remarketing tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066565985;
+var google_conversion_label = "zfxRCPeZtAQQ4YLK_AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="pages/vm_files/conversion.js.download">
+</script>
+<noscript>
+<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//web.archive.org/web/20140421234546im_/http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1066565985/?value=0&amp;label=zfxRCPeZtAQQ4YLK_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</div>
+
+
+
+<!-- Bing ad tracking code -->
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="pages/vm_files/mstag.js.download"></script><script type="text/javascript" src="pages/vm_files/mstag.1003102000.js.download"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"2303149",type:"1",nonadvertisingcost:"",revenue:"",actionid:"122891"})</script><script type="text/javascript" src="pages/vm_files/analytics.js(1).download"></script> <noscript> <iframe src="//web.archive.org/web/20140421234546if_/http://flex.atdmt.com/mstag/tag/9b6ffab3-4c45-48fb-8351-579a59bc477f/analytics.html?dedup=1&amp;domainId=2303149&amp;type=1&amp;nonadvertisingcost=&amp;revenue=&amp;actionid=122891" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
