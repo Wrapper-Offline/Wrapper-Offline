@@ -1,0 +1,49 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+(function(W) {
+  if (W.detect.ipad || W.detect.iphone) {
+    return;
+  }
+  var hashedId = "9z4fah3lag";
+  var mediaJson = {"assets":{"flv":{"type":"flv","url":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/00a07fa93ba333cc10aa9d9726681453a918ac7e.bin","width":1280,"height":720,"ext":"flv","size":13839807,"2pass":true},"iphone":{"type":"iphone","url":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/cdc5f4fdc2ea56343e1be19aa8a98188f4f8fede.bin","width":640,"height":360,"ext":"mp4","size":20043682,"2pass":"true"},"still":{"type":"still","url":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/e3f2aaca2e8b243a83bf5f6e049391fa7e10320c.bin","width":1280,"height":720,"ext":"jpg","size":118750,"2pass":null},"original":{"type":"original","url":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/bad8ba851916fc9cd400f51f3d0d51c62b02e935.bin","width":1280,"height":720,"ext":"mp4","size":11778298,"2pass":null},"preview":{"type":"preview","url":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/00a07fa93ba333cc10aa9d9726681453a918ac7e.bin","width":1280,"height":720,"ext":"flv","size":13839807,"2pass":true}},"distilleryUrl":"https://web.archive.org/web/20140218225908/http://distillery.wistia.com/x","accountKey":"wistia-production_14033","mediaKey":"wistia-production_4277089","name":"How to Use GoAnimate","duration":207.0,"hashedId":"9z4fah3lag","branding":false,"flashPlayerUrl":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-10-04","trackingTransmitInterval":20,"showAbout":true,"playerPreference":"auto","embed_options":{"volumeControl":"true","fullscreenButton":"true","controlsVisibleOnLoad":"true","playerColor":"7b796a","version":"v2","stillUrl":"https://web.archive.org/web/20140218225908/http://embed.wistia.com/deliveries/f2d43e338bed04ffd7650c3da9a54a48d87e40af.bin","autoPlay":"false","endVideoBehavior":"default","playButton":"true","smallPlayButton":"true","playbar":"true","branding":"false","plugin":{"postRoll-v1":{"raw":"<div style=\"text-align:center;\"><a\nhref=\"http://goanimate.com/video-maker-tips\"\ng\";style=\"color:#ffffff;text-decoration:none;width=251;height=88;\"\ntarget=\"_blank\"><img src=\"http://gawpstorage.s3.amazonaws.com/video-maker-tips/wp-\n\ncontent/uploads/2013/09/btn_rss_l.png\" alt=\"Check out the latest at our Blog\"></a></div><br/>\n\n<div style=\"text-align:center;\"><a\nhref=\"http://www.youtube.com/user/GoAnimate\"\ng\";style=\"color:#ffffff;text-decoration:none;width=251;height=88;\"\ntarget=\"_blank\"><img src=\"http://gawpstorage.s3.amazonaws.com/video-maker-tips/wp-\n\ncontent/uploads/2013/09/btn_yt_l.png\" alt=\"Check out Our YouTube Channel\"></a></div>","autoSize":"true","rewatch":"true","style":{"backgroundColor":"#303030"}}}}};
+  for (var key in W.data("video")) {
+    var vid = W.data(["video", key]);
+    if (vid.hashedId() === hashedId) {
+      W.seo.inject(mediaJson, W.extend({}, vid.params));
+      break;
+    }
+  }
+}(Wistia));
+
+
+}
+/*
+     FILE ARCHIVED ON 22:59:08 Feb 18, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:22:53 Jul 04, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 249.678
+  exclusion.robots: 0.133
+  exclusion.robots.policy: 0.119
+  cdx.remote: 0.079
+  esindex: 0.014
+  LoadShardBlock: 52.731 (3)
+  PetaboxLoader3.datanode: 75.905 (4)
+  load_resource: 321.192
+  PetaboxLoader3.resolve: 284.742
+*/

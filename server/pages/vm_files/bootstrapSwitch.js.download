@@ -1,0 +1,48 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+/*! ============================================================
+ * bootstrap-switch v1.9.0 by Larentis Mattia @SpiritualGuru
+ * http://www.larentis.eu/
+ *
+ * Enhanced for radiobuttons by Stein, Peter @BdMdesigN
+ * http://www.bdmdesign.org/
+ *
+ * Project site:
+ * http://www.larentis.eu/switch/
+ * ============================================================
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * ============================================================ */
+!function(a){a.fn.bootstrapSwitch=function(d){var c='input[type!="hidden"]';var b={init:function(){return this.each(function(){var r=a(this),o,g,n,q,s=r.closest("form"),j="",i=r.attr("class"),k,e,l="ON",f="OFF",p=false,h=false;a.each(["switch-mini","switch-small","switch-large"],function(t,u){if(i.indexOf(u)>=0){j=u}});r.addClass("has-switch");if(r.data("on")!==undefined){k="switch-"+r.data("on")}if(r.data("on-label")!==undefined){l=r.data("on-label")}if(r.data("off-label")!==undefined){f=r.data("off-label")}if(r.data("label-icon")!==undefined){p=r.data("label-icon")}if(r.data("text-label")!==undefined){h=r.data("text-label")}g=a("<span>").addClass("switch-left").addClass(j).addClass(k).html(""+l+"");k="";if(r.data("off")!==undefined){k="switch-"+r.data("off")}n=a("<span>").addClass("switch-right").addClass(j).addClass(k).html(""+f+"");q=a("<label>").html("&nbsp;").addClass(j).attr("for",r.find(c).attr("id"));if(p){q.html('<i class="icon '+p+'"></i>')}if(h){q.html(""+h+"")}o=r.find(c).wrap(a("<div>")).parent().data("animated",false);if(r.data("animated")!==false){o.addClass("switch-animate").data("animated",true)}o.append(g).append(q).append(n);r.find("> div").addClass(r.find(c).is(":checked")?"switch-on":"switch-off");if(r.find(c).is(":disabled")){a(this).addClass("deactivate")}var m=function(t){if(r.parent("label").is(".label-change-switch")){}else{t.siblings("label").trigger("mousedown").trigger("mouseup").trigger("click")}};r.on("keydown",function(t){if(t.keyCode===32){t.stopImmediatePropagation();t.preventDefault();m(a(t.target).find("span:first"))}});g.on("click",function(){m(a(this))});n.on("click",function(){m(a(this))});r.find(c).on("change",function(y,w){var x=a(this),u=x.parent(),t=x.is(":checked"),v=u.is(".switch-off");y.preventDefault();u.css("left","");if(v===t){if(t){u.removeClass("switch-off").addClass("switch-on")}else{u.removeClass("switch-on").addClass("switch-off")}if(u.data("animated")!==false){u.addClass("switch-animate")}if(typeof w==="boolean"&&w){return}u.parent().trigger("switch-change",{el:x,value:t})}});r.find("label").on("mousedown touchstart",function(u){var t=a(this);e=false;u.preventDefault();u.stopImmediatePropagation();t.closest("div").removeClass("switch-animate");if(t.closest(".has-switch").is(".deactivate")){t.unbind("click")}else{if(t.closest(".switch-on").parent().is(".radio-no-uncheck")){t.unbind("click")}else{t.on("mousemove touchmove",function(A){var v=a(this).closest(".switch"),x=(A.pageX||A.originalEvent.targetTouches[0].pageX)-v.offset().left,y=(x/v.width())*100,z=25,w=75;e=true;if(y<z){y=z}else{if(y>w){y=w}}v.find(">div").css("left",(y-w)+"%")});t.on("click touchend",function(x){var w=a(this),v=w.siblings("input");x.stopImmediatePropagation();x.preventDefault();w.unbind("mouseleave");if(e){v.prop("checked",!(parseInt(w.parent().css("left"),10)<-25))}else{v.prop("checked",!v.is(":checked"))}e=false;v.trigger("change")});t.on("mouseleave",function(x){var w=a(this),v=w.siblings("input");x.preventDefault();x.stopImmediatePropagation();w.unbind("mouseleave mousemove");w.trigger("mouseup");v.prop("checked",!(parseInt(w.parent().css("left"),10)<-25)).trigger("change")});t.on("mouseup",function(v){v.stopImmediatePropagation();v.preventDefault();a(this).trigger("mouseleave")})}}});if(s.data("bootstrapSwitch")!=="injected"){s.bind("reset",function(){setTimeout(function(){s.find(".switch").each(function(){var t=a(this).find(c);t.prop("checked",t.is(":checked")).trigger("change")})},1)});s.data("bootstrapSwitch","injected")}})},toggleActivation:function(){var e=a(this);e.toggleClass("deactivate");e.find(c).prop("disabled",e.is(".deactivate"))},isActive:function(){return !a(this).hasClass("deactivate")},setActive:function(f){var e=a(this);if(f){e.removeClass("deactivate");e.find(c).removeAttr("disabled")}else{e.addClass("deactivate");e.find(c).attr("disabled","disabled")}},toggleState:function(e){var f=a(this).find(":checkbox");f.prop("checked",!f.is(":checked")).trigger("change",e)},toggleRadioState:function(f){var e=a(this).find(":radio");e.not(":checked").prop("checked",!e.is(":checked")).trigger("change",f)},toggleRadioStateAllowUncheck:function(f,g){var e=a(this).find(":radio");if(f){e.not(":checked").trigger("change",g)}else{e.not(":checked").prop("checked",!e.is(":checked")).trigger("change",g)}},setState:function(f,e){a(this).find(c).prop("checked",f).trigger("change",e)},setOnLabel:function(f){var e=a(this).find(".switch-left");e.html(f)},setOffLabel:function(e){var f=a(this).find(".switch-right");f.html(e)},setOnClass:function(g){var f=a(this).find(".switch-left"),e="";if(g!==undefined){if(a(this).attr("data-on")!==undefined){e="switch-"+a(this).attr("data-on")}f.removeClass(e);e="switch-"+g;f.addClass(e)}},setOffClass:function(f){var g=a(this).find(".switch-right"),e="";if(f!==undefined){if(a(this).attr("data-off")!==undefined){e="switch-"+a(this).attr("data-off")}g.removeClass(e);e="switch-"+f;g.addClass(e)}},setAnimated:function(f){var e=a(this).find(c).parent();if(f===undefined){f=false}e.data("animated",f);e.attr("data-animated",f);e[e.data("animated")!==false?"addClass":"removeClass"]("switch-animate")},setSizeClass:function(h){var f=a(this);var g=f.find(".switch-left");var i=f.find(".switch-right");var e=f.find("label");a.each(["switch-mini","switch-small","switch-large"],function(j,k){if(k!==h){g.removeClass(k);i.removeClass(k);e.removeClass(k)}else{g.addClass(k);i.addClass(k);e.addClass(k)}})},status:function(){return a(this).find(c).is(":checked")},destroy:function(){var g=a(this),f=g.find("div"),h=g.closest("form"),e;f.find(":not(input)").remove();e=f.children();e.unwrap().unwrap();e.unbind("change");if(h){h.unbind("reset");h.removeData("bootstrapSwitch")}return e}};if(b[d]){return b[d].apply(this,Array.prototype.slice.call(arguments,1))}if(typeof d==="object"||!d){return b.init.apply(this,arguments)}a.error("Method "+d+" does not exist!")}}(jQuery);(function(a){a(function(){a(".switch").bootstrapSwitch()})})(jQuery);
+
+}
+/*
+     FILE ARCHIVED ON 23:46:13 Apr 21, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:22:42 Jul 04, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 88.627
+  exclusion.robots: 0.162
+  exclusion.robots.policy: 0.144
+  RedisCDXSource: 0.972
+  esindex: 0.014
+  LoadShardBlock: 64.367 (3)
+  PetaboxLoader3.datanode: 90.5 (5)
+  load_resource: 440.817 (2)
+  PetaboxLoader3.resolve: 331.401 (2)
+*/
