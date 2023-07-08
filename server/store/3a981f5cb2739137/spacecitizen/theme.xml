@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme id="spacecitizen" name="Space Citizens" cc_theme_id="spacecitizen">
-	<background id="space01_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20514" money="0" sharing="0"/>
-	<background id="space16_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20529" money="0" sharing="0"/>
-	<background id="space15_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20528" money="0" sharing="0"/>
-	<background id="space14_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20527" money="0" sharing="0"/>
-	<background id="space13_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20526" money="0" sharing="0"/>
-	<background id="space12_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20525" money="0" sharing="0"/>
-	<background id="space11_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20524" money="0" sharing="0"/>
-	<background id="space10_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20523" money="0" sharing="0"/>
-	<background id="space09_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20522" money="0" sharing="0"/>
-	<background id="space08_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20521" money="0" sharing="0"/>
-	<background id="space07_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20520" money="0" sharing="0"/>
-	<background id="space06_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20519" money="0" sharing="0"/>
-	<background id="space05_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20518" money="0" sharing="0"/>
-	<background id="space04_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20517" money="0" sharing="0"/>
-	<background id="space03_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20516" money="0" sharing="0"/>
-	<background id="space02_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20515" money="0" sharing="0"/>
-	<background id="space17_bg.swf" name="" enable="N" default="N" is_premium="N" aid="20530" money="0" sharing="0"/>
+	<background id="space01_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20514" money="0" sharing="0"/>
+	<background id="space16_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20529" money="0" sharing="0"/>
+	<background id="space15_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20528" money="0" sharing="0"/>
+	<background id="space14_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20527" money="0" sharing="0"/>
+	<background id="space13_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20526" money="0" sharing="0"/>
+	<background id="space12_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20525" money="0" sharing="0"/>
+	<background id="space11_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20524" money="0" sharing="0"/>
+	<background id="space10_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20523" money="0" sharing="0"/>
+	<background id="space09_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20522" money="0" sharing="0"/>
+	<background id="space08_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20521" money="0" sharing="0"/>
+	<background id="space07_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20520" money="0" sharing="0"/>
+	<background id="space06_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20519" money="0" sharing="0"/>
+	<background id="space05_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20518" money="0" sharing="0"/>
+	<background id="space04_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20517" money="0" sharing="0"/>
+	<background id="space03_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20516" money="0" sharing="0"/>
+	<background id="space02_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20515" money="0" sharing="0"/>
+	<background id="space17_bg.swf" name="" enable="Y" default="N" is_premium="N" aid="20530" money="0" sharing="0"/>
 	<compositebg id="cbg_space01" name="Space travel" enable="Y" default="N" thumb="space01.jpg" display_order="1" is_premium="N" money="0" sharing="0" aid="20531">
 	<bg id="cbg_space01_BG35" index="0">
 		<file>spacecitizen.space01_bg.swf</file>
@@ -216,9 +216,9 @@
 	<prop id="base02.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20483" money="0" sharing="0"/>
 	<prop id="base03.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20484" money="0" sharing="0"/>
 	<prop id="energy_bar01.swf" name="Tank" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20485" money="0" sharing="0"/>
-	<prop id="explosion01.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="20486" money="0" sharing="0"/>
-	<prop id="explosion02.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="20487" money="0" sharing="0"/>
-	<prop id="explosion03.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="20488" money="0" sharing="0"/>
+	<prop id="explosion01.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20486" money="0" sharing="0"/>
+	<prop id="explosion02.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20487" money="0" sharing="0"/>
+	<prop id="explosion03.swf" name="Explosion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20488" money="0" sharing="0"/>
 	<prop id="planet01.swf" name="Planet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20489" money="0" sharing="0"/>
 	<prop id="msp_spaceship02" name="Spaceship" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_spaceship02_ship02.swf" enable="Y" is_premium="N" aid="20490" money="0" sharing="0">
 		<state id="msp_spaceship02_ship02.swf" name="forward" enable="Y" default="Y"/>
@@ -256,9 +256,28 @@
 	<prop id="space16_prop01.swf" name="Space device" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20472" money="0" sharing="0"/>
 	<prop id="space16_prop02.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20473" money="0" sharing="0"/>
 	<prop id="space17_prop01.swf" name="Lamp" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20474" money="0" sharing="0"/>
-	<prop id="space01_prop01.swf" name="Space ship" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="20475" money="0" sharing="0"/>
+	<prop id="space01_prop01.swf" name="Space ship" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20475" money="0" sharing="0"/>
 	<prop id="space03_prop02.swf" name="Base" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20476" money="0" sharing="0"/>
 	<prop id="space05_prop02.swf" name="Space ship" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20477" money="0" sharing="0"/>
 	<prop id="space06_prop02.swf" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20478" money="0" sharing="0"/>
 	<prop id="space06_prop03.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="20479" money="0" sharing="0"/>
+<!--CHARACTERS-->
+<char id="153629970" name="Sci-Fi Woman" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629970.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
+<char id="153629971" name="Citizen" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629971.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
+<char id="153629973" name="Space Armor Man" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629973.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
+<char id="153629974" name="Punk Sci-Fi Lady" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629974.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
+<char id="153629979" name="Space Cadet" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629979.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
+<char id="153629980" name="Space Knight" cc_theme_id="spacecitizen" thumbnail_url="stock_thumbs/153629980.png" copyable="Y">
+<tags>spacecitizen</tags>
+</char>
 </theme>
