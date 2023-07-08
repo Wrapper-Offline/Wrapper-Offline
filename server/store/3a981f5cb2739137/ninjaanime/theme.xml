@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme id="ninjaanime" name="Ninja Anime" cc_theme_id="ninjaanime">
-  <background id="ninja01_bg.swf" name="Traditional Japanese Home - Fooftop" enable="N" default="N" is_premium="N" aid="17541" money="0" sharing="0"/>
-  <background id="ninja02_bg.swf" name="Traditional Japanese Home - Dojo" enable="N" default="N" is_premium="N" aid="17542" money="0" sharing="0"/>
-  <background id="ninja09_bg.swf" name="Traditional Japanese Home - Garden" enable="N" default="N" is_premium="N" aid="17549" money="0" sharing="0"/>
-  <background id="ninja08_bg.swf" name="Traditional Japanese Home - Dojo" enable="N" default="N" is_premium="N" aid="17548" money="0" sharing="0"/>
-  <background id="ninja03_bg.swf" name="Forest" enable="N" default="N" is_premium="N" aid="17543" money="0" sharing="0"/>
-  <background id="ninja04_bg.swf" name="Forest" enable="N" default="N" is_premium="N" aid="17544" money="0" sharing="0"/>
-  <background id="ninja05_bg.swf" name="Forest" enable="N" default="N" is_premium="N" aid="17545" money="0" sharing="0"/>
-  <background id="ninja16_bg.swf" name="Forest" enable="N" default="N" is_premium="N" aid="17555" money="0" sharing="0"/>
-  <background id="ninja06_bg.swf" name="Desert" enable="N" default="N" is_premium="N" aid="17546" money="0" sharing="0"/>
-  <background id="ninja07_bg.swf" name="Desert" enable="N" default="N" is_premium="N" aid="17547" money="0" sharing="0"/>
-  <background id="ninja10_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17550" money="0" sharing="0"/>
-  <background id="ninja11_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17551" money="0" sharing="0"/>
-  <background id="ninja12_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17552" money="0" sharing="0"/>
-  <background id="ninja13_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17553" money="0" sharing="0"/>
-  <background id="ninja14_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17554" money="0" sharing="0"/>
-  <background id="ninja17_bg.swf" name="Street" enable="N" default="N" is_premium="N" aid="17556" money="0" sharing="0"/>
-  <background id="house06_bg.swf" name="Traditional Japanese Home - Hill side" enable="N" default="N" is_premium="N" aid="17538" money="0" sharing="0"/>
-  <background id="house01_bg.swf" name="Traditional Japanese Home - Garden" enable="N" default="N" is_premium="N" aid="17533" money="0" sharing="0"/>
-  <background id="house03_bg.swf" name="Traditional Japanese Home - Entrance" enable="N" default="N" is_premium="N" aid="17535" money="0" sharing="0"/>
-  <background id="house08_bg.swf" name="Traditional Japanese Home - Hallway" enable="N" default="N" is_premium="N" aid="17540" money="0" sharing="0"/>
-  <background id="house07_bg.swf" name="Traditional Japanese Home - Walkway" enable="N" default="N" is_premium="N" aid="17539" money="0" sharing="0"/>
-  <background id="house04_bg.swf" name="Traditional Japanese Home - Garden" enable="N" default="N" is_premium="N" aid="17536" money="0" sharing="0"/>
-  <background id="house05_bg.swf" name="Traditional Japanese Home - Study" enable="N" default="N" is_premium="N" aid="17537" money="0" sharing="0"/>
-  <background id="house02_bg.swf" name="Traditional Japanese Home - Living room" enable="N" default="N" is_premium="N" aid="17534" money="0" sharing="0"/>
+  <background id="ninja01_bg.swf" name="Traditional Japanese Home - Fooftop" enable="Y" default="N" is_premium="N" aid="17541" money="0" sharing="0"/>
+  <background id="ninja02_bg.swf" name="Traditional Japanese Home - Dojo" enable="Y" default="N" is_premium="N" aid="17542" money="0" sharing="0"/>
+  <background id="ninja09_bg.swf" name="Traditional Japanese Home - Garden" enable="Y" default="N" is_premium="N" aid="17549" money="0" sharing="0"/>
+  <background id="ninja08_bg.swf" name="Traditional Japanese Home - Dojo" enable="Y" default="N" is_premium="N" aid="17548" money="0" sharing="0"/>
+  <background id="ninja03_bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="17543" money="0" sharing="0"/>
+  <background id="ninja04_bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="17544" money="0" sharing="0"/>
+  <background id="ninja05_bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="17545" money="0" sharing="0"/>
+  <background id="ninja16_bg.swf" name="Forest" enable="Y" default="N" is_premium="N" aid="17555" money="0" sharing="0"/>
+  <background id="ninja06_bg.swf" name="Desert" enable="Y" default="N" is_premium="N" aid="17546" money="0" sharing="0"/>
+  <background id="ninja07_bg.swf" name="Desert" enable="Y" default="N" is_premium="N" aid="17547" money="0" sharing="0"/>
+  <background id="ninja10_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17550" money="0" sharing="0"/>
+  <background id="ninja11_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17551" money="0" sharing="0"/>
+  <background id="ninja12_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17552" money="0" sharing="0"/>
+  <background id="ninja13_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17553" money="0" sharing="0"/>
+  <background id="ninja14_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17554" money="0" sharing="0"/>
+  <background id="ninja17_bg.swf" name="Street" enable="Y" default="N" is_premium="N" aid="17556" money="0" sharing="0"/>
+  <background id="house06_bg.swf" name="Traditional Japanese Home - Hill side" enable="Y" default="N" is_premium="N" aid="17538" money="0" sharing="0"/>
+  <background id="house01_bg.swf" name="Traditional Japanese Home - Garden" enable="Y" default="N" is_premium="N" aid="17533" money="0" sharing="0"/>
+  <background id="house03_bg.swf" name="Traditional Japanese Home - Entrance" enable="Y" default="N" is_premium="N" aid="17535" money="0" sharing="0"/>
+  <background id="house08_bg.swf" name="Traditional Japanese Home - Hallway" enable="Y" default="N" is_premium="N" aid="17540" money="0" sharing="0"/>
+  <background id="house07_bg.swf" name="Traditional Japanese Home - Walkway" enable="Y" default="N" is_premium="N" aid="17539" money="0" sharing="0"/>
+  <background id="house04_bg.swf" name="Traditional Japanese Home - Garden" enable="Y" default="N" is_premium="N" aid="17536" money="0" sharing="0"/>
+  <background id="house05_bg.swf" name="Traditional Japanese Home - Study" enable="Y" default="N" is_premium="N" aid="17537" money="0" sharing="0"/>
+  <background id="house02_bg.swf" name="Traditional Japanese Home - Living room" enable="Y" default="N" is_premium="N" aid="17534" money="0" sharing="0"/>
   <compositebg id="cbg_house06" name="Traditional Japanese Home - Hill side" enable="Y" default="N" thumb="house06.jpg" display_order="11" is_premium="N" money="0" sharing="0" aid="17562">
   <bg id="cbg_house06_BG36" index="0">
     <file>ninjaanime.house06_bg.swf</file>
@@ -315,28 +315,104 @@
     <file>ninjaanime.ninja17_bg.swf</file>
   </bg>
 </compositebg>
-  <prop id="house01_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17509" money="0" sharing="0"/>
+  <prop id="house01_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17509" money="0" sharing="0"/>
   <prop id="house02_prop01.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17510" money="0" sharing="0"/>
   <prop id="house02_prop02.swf" name="Cupboard" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17511" money="0" sharing="0"/>
   <prop id="house02_prop03.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17512" money="0" sharing="0"/>
-  <prop id="house04_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17513" money="0" sharing="0"/>
-  <prop id="house07_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17514" money="0" sharing="0"/>
-  <prop id="ninja03_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17515" money="0" sharing="0"/>
-  <prop id="ninja03_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17516" money="0" sharing="0"/>
-  <prop id="ninja04_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17517" money="0" sharing="0"/>
-  <prop id="ninja04_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17518" money="0" sharing="0"/>
-  <prop id="ninja05_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17519" money="0" sharing="0"/>
-  <prop id="ninja05_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17520" money="0" sharing="0"/>
-  <prop id="ninja09_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17521" money="0" sharing="0"/>
-  <prop id="ninja09_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17522" money="0" sharing="0"/>
-  <prop id="ninja10_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17523" money="0" sharing="0"/>
-  <prop id="ninja13_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17524" money="0" sharing="0"/>
-  <prop id="ninja13_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17525" money="0" sharing="0"/>
-  <prop id="ninja16_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17526" money="0" sharing="0"/>
-  <prop id="ninja16_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="17527" money="0" sharing="0"/>
+  <prop id="house04_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17513" money="0" sharing="0"/>
+  <prop id="house07_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17514" money="0" sharing="0"/>
+  <prop id="ninja03_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17515" money="0" sharing="0"/>
+  <prop id="ninja03_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17516" money="0" sharing="0"/>
+  <prop id="ninja04_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17517" money="0" sharing="0"/>
+  <prop id="ninja04_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17518" money="0" sharing="0"/>
+  <prop id="ninja05_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17519" money="0" sharing="0"/>
+  <prop id="ninja05_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17520" money="0" sharing="0"/>
+  <prop id="ninja09_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17521" money="0" sharing="0"/>
+  <prop id="ninja09_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17522" money="0" sharing="0"/>
+  <prop id="ninja10_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17523" money="0" sharing="0"/>
+  <prop id="ninja13_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17524" money="0" sharing="0"/>
+  <prop id="ninja13_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17525" money="0" sharing="0"/>
+  <prop id="ninja16_prop01.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17526" money="0" sharing="0"/>
+  <prop id="ninja16_prop02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17527" money="0" sharing="0"/>
   <prop id="02sword01.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17528" money="0" sharing="0" handstyle="stick"/>
   <prop id="02sword02.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17529" money="0" sharing="0" handstyle="stick"/>
   <prop id="02sword03.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17530" money="0" sharing="0" handstyle="stick"/>
   <prop id="02sword04.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17531" money="0" sharing="0" handstyle="stick"/>
   <prop id="02sword05.swf" name="Sword" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="17532" money="0" sharing="0" handstyle="stick"/>
+<!--CHARACTERS-->
+<char id="127535416" name="Exterminator Ninja" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127535416.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127535507" name="Masked Ninja" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127535507.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127535622" name="Akira" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127535622.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127535705" name="Ayaka" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127535705.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127535841" name="Akari" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127535841.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127536106" name="Akio" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127536106.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127536345" name="Sakura" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127536345.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127536534" name="Haruta" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127536534.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127536853" name="Yamato" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127536853.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537039" name="Makoto" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537039.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537116" name="Hinata" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537116.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537186" name="Professional Ninja" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537186.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537241" name="Emiko" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537241.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537408" name="Riku" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537408.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537512" name="Kenji" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537512.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127537620" name="Aimi" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127537620.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127538003" name="Emi" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127538003.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127540083" name="Takeshi" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127540083.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127672948" name="Naoto" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127672948.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127673247" name="Akimitsu" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127673247.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127673431" name="Akane" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127673431.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127673657" name="Chihiro" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127673657.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="127680191" name="Koji" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/127680191.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="129766798" name="Hana" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/129766798.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
+<char id="129766867" name="Minoru" cc_theme_id="ninjaanime" thumbnail_url="stock_thumbs/129766867.png" copyable="Y">
+<tags>ninjaanime</tags>
+</char>
 </theme>
