@@ -1,25 +1,18 @@
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="/favicon.ico" type="image/png" />
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
 		<title>Video Editor - Wrapper: Offline</title>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css">
-		<style>
-			body {
-				background: #eee;
-			}
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/filesize.js"></script>
 		<script src="/pages/js/global.js"></script>
 		<script>
 			const STORE_URL = "<%= it.env.STORE_URL %>";
 			const CLIENT_URL = "<%= it.env.CLIENT_URL %>";
-			const IS_STUDIO = true;
 			function characterSaved(id) {
 				hideCCWindow();
 				studio[0].loadCharacterById(id);
@@ -32,12 +25,13 @@
 		<main>
 			<nav id="importer">
 				<nav id="import_head">
-					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
-					<h3 class="close-button" onclick="hideImporter()">✖</h3>
+					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="btn btn_primary">UPLOAD FILES</button>
+					<h3 class="close_button" onclick="hideImporter()">✖</h3>
 					<form>
-						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
+						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" multiple="multiple" style="display:none"/>
 					</form>
 				</nav>
+				<div class="importer_hint drag_hint">Release file to upload</div>
 				<div id="importer-queue"></div>
 			</nav>
 			<%~ it.object(it.attrs, it.params) %>
@@ -48,7 +42,7 @@
 			
 				<iframe id="cc-iframe" src="" title="browser"></iframe> 
 				<div class="buttons">
-					<button class="preview-button edit" type="button" onclick="hideCCWindow();">Back to editing</button>
+					<button class="btn btn_popup" type="button" onclick="hideCCWindow();">BACK TO EDITING</button>
 				</div>
 
 				<a class="close-button" onclick="hideCCWindow()">×</a>
@@ -60,13 +54,13 @@
 			
 				<object id="preview_player" data="<%= it.env.SWF_URL %>/player.swf" type="application/x-shockwave-flash"
 					width="640" height="360">
-					<param name="flashvars" />
-					<param name="allowScriptAccess" value="always" />
-					<param name="allowFullScreen" value="true" />
+					<param name="flashvars"/>
+					<param name="allowScriptAccess" value="always"/>
+					<param name="allowFullScreen" value="true"/>
 				</object>
 				<div class="buttons">
-					<button class="preview-button edit" type="button" onclick="hidePreviewer();">Back to editing</button>
-					<button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>
+					<button class="btn btn_popup" type="button" onclick="hidePreviewer();">BACK TO EDITING</button>
+					<button class="btn btn_primary btn_popup" type="button" onclick="publishStudio();">SAVE NOW</button>
 				</div>
 
 				<a class="close-button" onclick="hidePreviewer()">×</a>

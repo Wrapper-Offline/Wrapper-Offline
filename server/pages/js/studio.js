@@ -1,3 +1,4 @@
+const importer = $("#importer");
 const previewer = $("#previewer");
 const cc = $("#cc_window");
 const studio = $("#obj");
@@ -28,6 +29,7 @@ function showImporter() {
 		case false:
 		default: {
 			importerVisible = true;
+			importer.height(window.innerHeight);
 			importer.show();
 			if (!importer.data("importer"))
 				importer.data("importer", new AssetImporter(importer));

@@ -7,13 +7,9 @@ general stuff
 **/
 html, body { /* disable dark mode */
 	background-color: #eee;
-	color: #474747 !important;
+	color: #505969 !important;
 }
 main { display: flex; padding: 0 }
-.close-button:hover { 
-	cursor: pointer; 
-	color: var(--primary); 
-}
 
 /**
 objects
@@ -67,9 +63,7 @@ previewer
     width: 960px;
     height: 600px;
 }
-.popup_inside .buttons {
-	padding: 14px 0;
-}
+
 .popup_inside a.close-button {
 	color: #43bca5;
 	line-height: 24px;
@@ -83,42 +77,13 @@ previewer
 	color: #029a85;
 	text-decoration: none;
 }
-.preview-button {
-	background-color: #43bca5;
-	border: 0;
-	border-radius: 4px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
+
+.popup_inside .buttons {
+	padding: 14px 0;
+}
+.btn_popup {
 	line-height: 36px;
-	text-transform: uppercase;
 	padding: 0 25px;
 	margin: 0 7px;
 }
-.preview-button:hover {
-	background-color: #029a85;
-}
-.preview-button.save {
-	background-color: #e97d3b;
-}
-.preview-button.save:hover {
-	background-color: #dd6522;
-}
-.preview-upsell {
-	padding: 0 35px 15px;
-	text-align: left;
-}
 
-/**
-importer
-**/
-#importer {
-	/* style */
-	box-shadow: 0 0 8px #00000028;
-	/* layout */
-	z-index: 1;
-	display: none;
-	min-width: 320px;
-}

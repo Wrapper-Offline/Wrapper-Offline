@@ -1,49 +1,72 @@
-.tab {
-    width: 100%;
+#importer {
+	background: #e2e7ed;
+	box-shadow: 0 0 8px #00000028;
+	overflow: auto;
+	z-index: 1;
+	display: none;
+	width: 440px;
 }
 
-/* header */
+/**
+header
+**/
 #import_head {
-	/* style */
 	background: #222c46;
 	color: #fff;
-	/* layout */
 	margin-bottom: 5px;
 	height: 50px;
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
 }
-.import-button {
-	background-color: #e97d3b;
-	border: 0;
-	border-radius: 4px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 0 25px;
-	margin: 9px 7px;
+#import_head>.close_button {
+	margin: 6px;
 }
-.import-button:hover {
-	background-color: #dd6522;
+#import_head>.close_button:hover { 
+	cursor: pointer; 
+	color: var(--primary); 
 }
-#import_head>h3 { margin: 6px }
 #importer form { display: none }
-/* queue */
+
+/**
+importer hints
+**/
+.importer_hint {
+    background: #ffffa6;
+    border: 1px solid #cccc68;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+	margin-bottom: 5px;
+	font-size: 13px;
+	text-align: center;
+}
+.importer_hint.drag_hint {
+	background: #43bca5;
+	border-color: #029a85;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 3px;
+	display: none;
+}
+.importer_hint .btn {
+	padding: 6px 25px;
+}
+
+/**
+queue
+**/
 .importer_asset {
 	background: #edf2f6;
 	border-top: 1px solid #d8d8d8;
 	border-bottom: 1px solid #d8d8d8;
 	margin-bottom: 5px;
 }
+/* metadata */
 .asset_metadata {
 	display: flex;
 	padding: 7px;
 }
-/* asset icon */
 .asset_preview { 
 	margin-right: 6px;
 	/* scale image to fit */
@@ -53,17 +76,18 @@
 	width: 40px;
 }
 .asset_name {
-	/* style */
-	background-color: #0001;
 	color: #444;
-	outline: #666 auto 2px;
-	/* layout */
 	margin: 0;
-	padding: 1px 4px;
 	font-weight: bold;
 	font-size: 14px;
+	max-width: 269px;
 }
-.asset_name:focus {
+.asset_name[contenteditable] {
+	background-color: #0001;
+	outline: #666 auto 2px;
+	padding: 1px 4px;
+}
+.asset_name[contenteditable]:focus {
 	outline: var(--primary) auto 2px;
 }
 .importer_asset p {
@@ -71,6 +95,7 @@
 	font-size: 12px;
 	margin: 0;
 }
+/* asset types */
 .import_as {
 	background: #fff;
 }

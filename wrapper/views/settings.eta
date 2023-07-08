@@ -6,24 +6,21 @@
 		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css"/>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/global.js"></script>
-		<script>const IS_STUDIO = false;</script>
 	</head>
 
 	<body>
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>			
-			<nav class="tabs_contain">
-				<div class="tab_buttons">
-					<h1 id="settings">Settings</h1>
-					<a href="#" class="selected" data-triggers="0">Behavior</a>
-					<a href="#" data-triggers="1">Appearance</a>
-					<a href="#" data-triggers="2">Your Library</a>
+			<nav class="tab_nav_container">
+				<div class="tab_navigation">
+					<a href="javascript:;" class="tab selected" data-triggers="0">Behavior</a>
+					<a href="javascript:;" class="tab" data-triggers="1">Appearance</a>
+					<a href="javascript:;" class="tab" data-triggers="2">Your Library</a>
 				</div>
-				<nav class="tab" style="display:block">
+				<nav class="tab_page" style="display:block">
 					<h2>Behavior</h2>
 
 					<h3>Truncated themelist</h3>
@@ -43,7 +40,7 @@
 						<i>Applies on next restart.</i></p>
 					<input class="setting" type="checkbox" id="SAVE_LOG_FILES"></input>
 				</nav>
-				<nav class="tab">
+				<nav class="tab_page">
 					<h2>Appearance</h2>
 
 					<h3>Dark mode</h3>
@@ -72,19 +69,10 @@
 					<p><i>Applies on next restart.</i></p>
 					<input class="setting" type="checkbox" id="HIDE_NAVBAR"></input>
 				</nav>
-				<nav class="tab">
+				<nav class="tab_page">
 					<h2>Your Library</h2>
 
-					<nav id="importer">
-						<nav id="import_head">
-							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
-							<button onclick="document.getElementById('char-file').click()" class="import-button">UPLOAD A CHARACTER</button>
-							<form>
-								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
-							</form>
-						</nav>
-						<div id="importer-queue"></div>
-					</nav>
+					<!-- TODO: add data wiping-->
 				</nav>
 			</nav>
 		</main>
@@ -96,10 +84,7 @@
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
-	<script src="/pages/js/importer.js"></script>
-	<script src="/pages/js/filesize.js"></script>
 	<script>
-		new AssetImporter(importer);
 		// this is a mess of type conversion
 
 		/*

@@ -194,22 +194,29 @@ save
 */
 group.route("POST", "/api/asset/upload", async (req, res) => {
 	const file = req.files.import;
-	if (typeof file === "undefined" && !req.body.type && !req.body.subtype) {
-		res.statusCode = 400;
-		res.json({ status: "malformed" });
+	if (typeof file === "undefined" || !req.body.type || !req.body.subtype) {
+		res.status(400).json({
+			msg: "malformed"
+		});
 	}
 
 	// get the filename and extension
 	const { filepath } = file;
 	const origName = file.originalFilename;
 	const filename = path.parse(origName).name;
-	const { ext } = await fromFile(filepath);
+	const ext = (await fromFile(filepath)).ext;
+
+	if (typeof ext === "undefined") {
+		// filetype couldn't be determined
+		res.status(400).json({
+			msg: "File type could not be determined."
+		});
+		return;
+	}
 
 	// validate the file type
 	if ((fileTypes[req.body.type] || []).indexOf(ext) < 0) {
-		res.status(400);
-		res.json({
-			status: "error",
+		res.status(400).json({
 			msg: "Invalid file type."
 		});
 		return;
@@ -222,20 +229,13 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 	}, stream;
 
 	switch (info.type) {
-		case "bg" : {
-			if (ext == "swf") {
-				stream = fs.createReadStream(filepath);
-			} else {
-				stream = await fileUtil.resizeImage(filepath, 550, 354);
-			}
-			stream.pause();
-
-			// save asset
-			info.file = await Asset.save(stream, ext, info);
-			break;
-		}
+		case "bg":
 		case "watermark": {
-			stream = fs.createReadStream(filepath);
+			if (info.type == "bg" && ext != "swf") {
+				stream = await fileUtil.resizeImage(filepath, 550, 354);
+			} else {
+				stream = fs.createReadStream(filepath);
+			}
 			stream.pause();
 
 			// save asset
@@ -279,9 +279,9 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 				await new Promise((resolve, rej) => {
 					// get the height and width
 					ffmpeg(filepath).ffprobe((e, data) => {
-						if (e) rej(e);
-						info.width = data.streams[0].width;
-						info.height = data.streams[0].height;
+						if (e) return rej(e);
+						info.width = data.streams[0].width || data.streams[1].width;
+						info.height = data.streams[0].height || data.streams[1].width;
 
 						// convert the video to an flv
 						ffmpeg(filepath)
@@ -313,9 +313,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 			break;
 		}
 		default: {
-			res.status(400);
-			res.json({
-				status: "error",
+			res.status(400).json({
 				msg: "Invalid asset type."
 			});
 			return;
@@ -325,10 +323,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 	// stuff for the lvm
 	info.enc_asset_id = info.file;
 
-	res.json({
-		status: "ok", 
-		data: info
-	});
+	res.json(info);
 })
 group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	isRecord = req.body.bytes ? true : false;

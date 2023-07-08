@@ -1,4 +1,4 @@
-const Char = require("../models/Char");
+const Char = require("../models/char");
 const database = require("../../data/database"), DB = new database(true);
 const httpz = require("@octanuary/httpz");
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
