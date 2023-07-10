@@ -1811,6 +1811,38 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
+<compositebg id="evil_lair" name="Evil Lair" thumb="evil_lair.jpg" display_order="0">
+		<bg id="evil_lair_BG2" index="0">
+			<file>retro.evil_lair_bg.swf</file>
+		</bg>
+		<prop id="evil_lair_PROP0" index="2">
+			<file>retro.evil_lair_chair.swf</file>
+			<x>312.2</x>
+			<y>252</y>
+			<xscale>1</xscale>
+			<yscale>1</yscale>
+			<face>1</face>
+			<rotation>0</rotation>
+		</prop>
+		<prop id="evil_lair_PROP1" index="3">
+			<file>retro.evil_lair_torture_table.swf</file>
+			<x>520.2</x>
+			<y>365</y>
+			<xscale>1</xscale>
+			<yscale>1</yscale>
+			<face>1</face>
+			<rotation>0</rotation>
+		</prop>
+		<prop id="evil_lair_PROP2" index="4">
+			<file>retro.evil_lair_rotating_saw.swf</file>
+			<x>534.2</x>
+			<y>331</y>
+			<xscale>1</xscale>
+			<yscale>1</yscale>
+			<face>1</face>
+			<rotation>0</rotation>
+		</prop>
+	</compositebg>
 	<compositebg id="cbg_bigisland" name="Big Island" default="N" thumb="big_island.jpg" display_order="0">
 	<bg id="cbg_bigisland_BG66" index="0">
 		<file>retro.island_sea.swf</file>
@@ -2398,6 +2430,20 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
+<compositebg id="graveyard" name="Graveyard" thumb="graveyard.jpg" display_order="0">
+		<bg id="graveyard_BG3" index="0">
+			<file>common.graveyard_bg.swf</file>
+		</bg>
+		<prop id="graveyard_PROP0" index="2">
+			<file>common.graveyard_grave.swf</file>
+			<x>299.2</x>
+			<y>267</y>
+			<xscale>1</xscale>
+			<yscale>1</yscale>
+			<face>1</face>
+			<rotation>0</rotation>
+		</prop>
+	</compositebg>
 	<prop id="1rose.swf" name="Rose" holdable="1" placeable="1" facing="left"/>
 	<prop id="chcolove.swf" name="Chocolate (A)" holdable="1" placeable="1" wearable="0" facing="left"/>
 	<prop id="chocobox.swf" name="Chocolate Box (A)" holdable="1" placeable="1" wearable="0" facing="left"/>

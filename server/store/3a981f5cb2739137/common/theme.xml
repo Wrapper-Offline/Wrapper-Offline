@@ -1,374 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme id="common" name="Common">
-	<char id="matchBoyNew" name="Match Boy" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf">
-		<category name="emotion">
-			<action id="angry.swf" name="angry" loop="Y" totalframe="50"/>
-			<action id="confused.swf" name="confused" loop="Y" totalframe="70"/>
-			<action id="excited.swf" name="excited" loop="Y" totalframe="75"/>
-			<action id="scared.swf" name="scared" loop="Y" totalframe="2"/>
-			<action id="furious.swf" name="furious" loop="Y" totalframe="100"/>
-			<action id="happy.swf" name="happy" loop="Y" totalframe="60"/>
-			<action id="in_love.swf" name="In love" loop="Y" totalframe="100"/>
-			<action id="sad.swf" name="sad" loop="N" totalframe="70"/>
-			<action id="scheming.swf" name="scheming" loop="Y" totalframe="75"/>
-			<action id="shocked.swf" name="shocked" loop="Y" totalframe="2"/>
-			<action id="shy.swf" name="shy" loop="Y" totalframe="50"/>
-			<action id="desperate.swf" name="desperate" loop="Y" totalframe="43"/>
-			<action id="bored.swf" name="bored" loop="Y" totalframe="130"/>
-		</category>
-		<action id="stand.swf" name="Stand" loop="Y" totalframe="72"/>
-		<motion id="walk.swf" name="Walk" loop="Y" totalframe="8"/>
-		<action id="dance.swf" name="Dance" loop="Y" totalframe="44"/>
-		<action id="die.swf" name="Die" loop="N" totalframe="72"/>
-		<action id="fart.swf" name="Fart" loop="Y" totalframe="48"/>
-		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="54"/>
-		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="3"/>
-		<action id="talk.swf" name="Talk" loop="Y" totalframe="48"/>
-		<action id="threaten.swf" name="Become Threatened" loop="Y" totalframe="2"/>
-		<action id="propose.swf" name="Propose (a)" loop="Y" totalframe="40"/>
-		<action id="propose02.swf" name="Propose (b)" loop="Y" totalframe="45"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="42"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="50"/>
-		<action id="kill06.swf" name="Kill" loop="Y" totalframe="20"/>
-	</char>
-	<char id="matchGirl" name="Match Girl" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf">
-		<category name="emotion">
-			<action id="angry.swf" name="angry" loop="Y" totalframe="50"/>
-			<action id="confused.swf" name="confused" loop="Y" totalframe="70"/>
-			<action id="excited.swf" name="excited" loop="Y" totalframe="75"/>
-			<action id="scared.swf" name="scared" loop="Y" totalframe="2"/>
-			<action id="furious.swf" name="furious" loop="Y" totalframe="100"/>
-			<action id="happy.swf" name="happy" loop="Y" totalframe="60"/>
-			<action id="in_love.swf" name="In love" loop="Y" totalframe="100"/>
-			<action id="sad.swf" name="sad" loop="N" totalframe="70"/>
-			<action id="scheming.swf" name="scheming" loop="Y" totalframe="75"/>
-			<action id="shocked.swf" name="shocked" loop="Y" totalframe="2"/>
-			<action id="desperate.swf" name="desperate" loop="Y" totalframe="43"/>
-			<action id="bored.swf" name="bored" loop="Y" totalframe="130"/>
-		</category>
-		<action id="stand.swf" name="Stand" loop="Y" totalframe="4"/>
-		<motion id="walk.swf" name="Walk" loop="Y" totalframe="58"/>
-		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="35"/>
-		<action id="talk.swf" name="Talk" loop="Y" totalframe="50"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="35"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="70"/>
-		<action id="shy.swf" name="Shy" loop="Y" totalframe="16"/>
-		<action id="dance01.swf" name="Dance (a)" loop="Y" totalframe="25"/>
-		<action id="dance02.swf" name="Dance (b)" loop="Y" totalframe="13"/>
-		<action id="greeting.swf" name="Greeting (a)" loop="Y" totalframe="65"/>
-		<action id="greeting02.swf" name="Greeting (b)" loop="Y" totalframe="75"/>
-		<action id="sing.swf" name="Sing" loop="Y" totalframe="24"/>
-		<action id="think.swf" name="Think" loop="Y" totalframe="75"/>
-		<action id="cry.swf" name="Cry" loop="Y" totalframe="24"/>
-	</char>
 	<background id="street.swf" name="Street"/>
 	<background id="color_bar.swf" name="Color bar"/>
 	<background id="tvsnowflask.swf" name="TV Noise"/>
 	<background id="countdown.swf" name="Count down"/>
 	<background id="credit.swf" name="Credit"/>
-	<background id="backStage.swf" name="Backstage" default="N"/>
-	<background id="dinner_restaurant_bg.swf" name="Restaurant"/>
+	<background id="backStage.swf" name="Backstage"/>
 	<background id="school_locker_bg.swf" name="Classroom lockers"/>
-	<background id="jail_bg.swf" name="Jail"/>
-	<background id="jail_bg_v1.swf" name="Jail"/>
 	<background id="moon.swf" name="Moon"/>
-	<background id="elevator_inside_bg.swf" name="Elevator Inside"/>
-	<background id="elevator_outside.swf" name="Elevator Outside"/>
 	<background id="girl_bedroom_bg.swf" name="Girl bedroom"/>
 	<background id="old_couple_bedroom_bg.swf" name="Old couple bedroom"/>
 	<background id="school_entrance_bg.swf" name="School entrance"/>
-	<background id="kitchen_bg.swf" name="Kitchen"/>
-	<background id="spacious_cubicle_bg.swf" name="Spacious cubicle" default="N"/>
-	<background id="cramped_cubicle_bg.swf" name="Cramped cubicle" default="N"/>
-	<background id="office_corridor_bg.swf" name="Office corridor"/>
-	<background id="student_cafeteria_bg.swf" name="Student cafeteria"/>
-	<background id="donut_shop_bg.swf" name="Donut shop"/>
-	<background id="living_room_bg.swf" name="Living room"/>
-	<background id="hopsital_ward_bg.swf" name="Hopsital ward"/>
-	<background id="doctor_office_bg.swf" name="Doctor's office"/>
+	<background id="cramped_cubicle_bg.swf" name="Cramped cubicle"/>
 	<background id="battlefield.swf" name="BattleField"/>
 	<background id="backyard.swf" name="backyard"/>
 	<background id="train_station.swf" name="train station"/>
 	<background id="garage.swf" name="garage"/>
-	<background id="pirate_ship_deck_bg.swf" name="Pirate Ship deck"/>
-	<background id="Presidential_podium_bg.swf" name="Presidential podium"/>
-	<background id="presidential_desk_bg.swf" name="Presidential Desk"/>
 	<background id="spooky_lab_bg.swf" name="Spooky Lab"/>
-	<background id="graveyard_bg.swf" name="Graveyard"/>
-	<background id="evil_lair_bg.swf" name="evil_lair"/>
 	<background id="stage_bg.swf" name="stage"/>
 	<background id="flashing.swf" name="flashing"/>
 	<background id="rooftop_bg.swf" name=""/>
 	<background id="space_bg.swf" name=""/>
-	<background id="volcanic_planet_bg.swf" name=""/>
 	<background id="twilight.swf" name="twilight"/>
 	<background id="world_map.swf" name="World Map"/>
-	<background id="ncc_floor.swf" name="Floor" default="N"/>
-	<background id="ncc_gradient.swf" name="Gradient" default="N"/>
-	<background id="ncc_high.swf" name="High Horizon" default="N"/>
-	<background id="ncc_interior_left.swf" name="Interior left" default="N"/>
-	<background id="ncc_interior_right.swf" name="Interior right" default="N"/>
-	<background id="ncc_low.swf" name="Low Horizon" default="N"/>
-	<background id="ncc_medium.swf" name="Medium Horizon" default="N"/>
-	<background id="ncc_interior_left02.swf" name="Interior left" default="N"/>
-	<background id="ncc_interior_right02.swf" name="Interior right" default="N"/>
-	<background id="wall01.swf" name="Brick wall" default="N" is_premium="Y"/>
-	<background id="wall02.swf" name="Thick striped wallpaper" default="N"/>
-	<background id="wall03.swf" name="Thin striped wallpaper" default="N"/>
-	<background id="wall04.swf" name="Dotted wallpaper" default="N"/>
-	<background id="wall05.swf" name="Squared wallpaper" default="N" is_premium="Y"/>
-	<background id="wall06.swf" name="Dotted floor" default="N"/>
-	<background id="wall07.swf" name="Striped wallpaper" default="N" is_premium="Y"/>
-	<background id="wall08.swf" name="Flashing floor" default="N" is_premium="Y"/>
-	<background id="star_night.swf" name="starry night" default="N"/>
-	<background id="ncc_wall09_left.swf" name="Teak flooring" default="N"/>
-	<background id="ncc_wall09_right.swf" name="Teak flooring" default="N"/>
-	<background id="wall_09.swf" name="Two-color wall" default="N"/>
-	<background id="ncc_constore01.swf" name="Counter" default="N"/>
-	<background id="ncc_constore02.swf" name="Convenient store" default="N"/>
-	<background id="ncc_train.swf" name="Side view" default="N"/>
-	<background id="nccha_cave.swf" name="Cave" default="N" is_premium="Y"/>
-	<background id="nccha_stone.swf" name="Stone" default="N" is_premium="Y"/>
-	<background id="wall10.swf" name="Wallpaper" default="N"/>
-	<background id="ncc_floor01.swf" name="Floor" default="N"/>
-	<background id="wall11.swf" name="Uniform" default="N"/>
-	<background id="wall12.swf" name="Wallpaper" default="N"/>
-	<background id="wall13.swf" name="Wallpaper" default="N"/>
-	<background id="wall14.swf" name="Wallpaper" default="N"/>
-	<background id="wall_grass.swf" name="Barn" default="N" is_premium="Y"/>
-	<background id="wall15.swf" name="Wallpaper" default="N"/>
-	<background id="ncc_road.swf" name="Road" default="N"/>
-	<background id="ncc_soil.swf" name="Soil" default="N"/>
-	<background id="wall16.swf" name="Interior" default="N" is_premium="Y"/>
-	<background id="wall17.swf" name="Interior" default="N" is_premium="Y"/>
-	<background id="wall18.swf" name="Interior" default="N" is_premium="Y"/>
-	<background id="wall19.swf" name="Interior" default="N"/>
-	<background id="wall20.swf" name="Airport daytime" default="N" is_premium="Y"/>
-	<background id="wall21.swf" name="Airport nighttime" default="N" is_premium="Y"/>
-	<background id="wall22.swf" name="Interior" default="N" is_premium="Y"/>
-	<background id="wall23.swf" name="Floor" default="N"/>
-	<background id="wall24.swf" name="Floor" default="N"/>
-	<background id="ncc_corridor.swf" name="Corridor" default="N" is_premium="Y"/>
-	<background id="ncc_civilwar.swf" name="US Civil War map" default="N"/>
-	<background id="ncc_revolu_bg.swf" name="Independence hall" default="N"/>
-	<background id="ncc_revolu_map.swf" name="US Revolutionary War map" default="N"/>
-	<background id="ncc_usmap.swf" name="US map" default="N" is_premium="Y"/>
-	<background id="ncc_warland.swf" name="Battlefield" default="N" is_premium="Y"/>
-	<background id="wall25.swf" name="Wallpaper" default="N"/>
-	<background id="wall26.swf" name="Wallpaper" default="N"/>
-	<background id="ncc_lift_bg.swf" name="Lift inside" default="N"/>
-	<background id="ncc_lobby.swf" name="Lobby" default="N"/>
-	<background id="ncc_path.swf" name="Path" default="N"/>
-	<background id="ncc_underground.swf" name="Underground" default="N"/>
-	<background id="ncc_plain.swf" name="Plain" default="N"/>
-	<background id="wall27.swf" name="Staircase" default="N"/>
-	<background id="wall28.swf" name="Staircase" default="N"/>
-	<background id="wall29.swf" name="Interior" default="N"/>
-	<background id="wall30.swf" name="Linear gradient" default="N"/>
-	<background id="wall31.swf" name="Radial gradient" default="N"/>
-	<background id="ncc_hilltop_bg.swf" name="Grassland" default="N"/>
-	<background id="wall33.swf" name="pattern" default="N"/>
-	<background id="wall32.swf" name="effect" default="N"/>
-	<background id="ncc_gate.swf" name="Metal doors" default="N"/>
-	<background id="ncc_fx_01.swf" name="Moody" default="N" is_premium="Y"/>
-	<background id="ncc_fx_02.swf" name="Depressed" default="N" is_premium="Y"/>
-	<background id="ncc_fx_03.swf" name="Bad smell" default="N" is_premium="Y"/>
-	<background id="ncc_fx_04.swf" name="Fire" default="N" is_premium="Y"/>
-	<background id="ncc_fx_05.swf" name="In love" default="N" is_premium="Y"/>
-	<background id="ncc_weird.swf" name="Haunted" default="N" is_premium="Y"/>
-	<background id="ncc_shock.swf" name="Shock" default="N" is_premium="Y"/>
-	<background id="ncc_anger.swf" name="Explosion" default="N" is_premium="Y"/>
-	<background id="ncc_anger2.swf" name="Explosion" default="N" is_premium="Y"/>
-	<background id="ncc_fx_08.swf" name="Speed lines" default="N" is_premium="Y"/>
-	<background id="ncc_fx_09.swf" name="Speed lines" default="N" is_premium="Y"/>
-	<background id="ncc_fx_10.swf" name="Speed lines" default="N" is_premium="Y"/>
-	<background id="ncc_pirateship01_bg.swf" name="Ship's side" default="N"/>
-	<background id="ncc_pirateship01_deck.swf" name="Ship's deck" default="N"/>
-	<background id="16_9.swf" name="16-9" default="N"/>
-	<compositebg id="jail" name="Jail" default="N" thumb="jail.jpg" display_order="0">
-		<bg id="JAILBG10" index="0">
-			<file>common.jail_bg_v1.swf</file>
-		</bg>
-		<prop id="JAILPROP6" index="2">
-			<file>common.jail_frontgate_v1.swf</file>
-			<x>170.2</x>
-			<y>198.4</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="JAILPROP7" index="3">
-			<file>common.jail_bed.swf</file>
-			<x>486.2</x>
-			<y>226.5</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="JAILPROP8" index="4">
-			<file>common.jail_crocroach.swf</file>
-			<x>624.8</x>
-			<y>306.8</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="adinnerrestaurantbg" name="Restaurant" default="N" thumb="dinner_restaurant.jpg" display_order="0">
-		<bg id="DINNERRESTBG0" index="0">
-			<file>common.dinner_restaurant_bg.swf</file>
-		</bg>
-		<prop id="RESTAURANTPROP1" index="2">
-			<file>common.lamp.swf</file>
-			<x>333.8</x>
-			<y>20.7</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="RESTAURANTPROP2" index="4">
-			<file>common.light.swf</file>
-			<x>164</x>
-			<y>254.4</y>
-			<xscale>0.47</xscale>
-			<yscale>0.47</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="RESTAURANTPROP3" index="6">
-			<file>common.light.swf</file>
-			<x>337.4</x>
-			<y>223.3</y>
-			<xscale>0.38</xscale>
-			<yscale>0.38</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="RESTAURANTPROP4" index="3">
-			<file>common.table01.swf</file>
-			<x>174.8</x>
-			<y>288.4</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="RESTAURANTPROP5" index="5">
-			<file>common.table02.swf</file>
-			<x>337.1</x>
-			<y>246.4</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="RESTAURANTPROP6" index="7">
-			<file>common.table01.swf</file>
-			<x>479.7</x>
-			<y>308.9</y>
-			<xscale>1.07</xscale>
-			<yscale>1.07</yscale>
-			<face>-1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="elevator_inside" name="Elevator Inside" default="N" thumb="elevator_inside.jpg" display_order="0">
-		<bg id="ELEVATOR_INSIDEBG11" index="0">
-			<file>common.elevator_inside_bg.swf</file>
-		</bg>
-		<prop id="ELEVATOR_INSIDEPROP9" index="2">
-			<file>common.elevator_inside_door.swf</file>
-			<x>442</x>
-			<y>192.3</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="elevator_outside" name="Elevator Outside" default="N" thumb="elevator_outside.jpg" display_order="0">
-		<bg id="ELEVATOR_OUTSIDEBG57" index="0">
-			<file>common.elevator_outside.swf</file>
-		</bg>
-		<prop id="ELEVATOR_OUTSIDEPROP32" index="2">
-			<file>common.elevator_outside_dooropen.swf</file>
-			<x>395.1</x>
-			<y>165.5</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="ELEVATOR_OUTSIDEPROP33" index="3">
-			<file>common.elevator_outside_doorclosed.swf</file>
-			<x>636</x>
-			<y>152.7</y>
-			<xscale>0.64</xscale>
-			<yscale>0.67</yscale>
-			<face>1</face>
-			<rotation>3.4</rotation>
-		</prop>
-		<prop id="ELEVATOR_OUTSIDEPROP5" index="4">
-			<file>common.elevator_outside_rubbishBin.swf</file>
-			<x>518.9</x>
-			<y>234.2</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="ELEVATOR_OUTSIDEPROP8" index="5">
-			<file>common.elevator_outside_doorclosing.swf</file>
-			<x>127.1</x>
-			<y>183.1</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="kitchen" name="Kitchen" default="N" thumb="kitchen.jpg" display_order="0">
-		<bg id="kitchen_BG10" index="0">
-			<file>common.kitchen_bg.swf</file>
-		</bg>
-		<prop id="kitchen_PROP6" index="2">
-			<file>common.kitchen_refrigerator.swf</file>
-			<x>577.1</x>
-			<y>227.2</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="spacious_cubicle" name="Spacious Cubicle" default="N" thumb="spacious_cubicle.jpg" display_order="0">
-		<bg id="spacious_cubicle_BG10" index="0">
-			<file>common.spacious_cubicle_bg.swf</file>
-		</bg>
-		<prop id="spacious_cubicle_PROP6" index="2">
-			<file>common.spacious_cubicle_cubicle.swf</file>
-			<x>306</x>
-			<y>219.2</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="spacious_cubicle_PROP7" index="3">
-			<file>common.spacious_cubicle_chair.swf</file>
-			<x>343.9</x>
-			<y>283.1</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="cramped_cubicle" name="Cramped Cubicle" default="N" thumb="cramped_cubicle.jpg" display_order="0">
+	<background id="ncc_floor.swf" name="Floor"/>
+	<background id="ncc_gradient.swf" name="Gradient"/>
+	<background id="ncc_high.swf" name="High Horizon"/>
+	<background id="ncc_interior_left.swf" name="Interior left"/>
+	<background id="ncc_interior_right.swf" name="Interior right"/>
+	<background id="ncc_low.swf" name="Low Horizon"/>
+	<background id="ncc_medium.swf" name="Medium Horizon"/>
+	<background id="ncc_interior_left02.swf" name="Interior left"/>
+	<background id="ncc_interior_right02.swf" name="Interior right"/>
+	<background id="wall01.swf" name="Brick wall" is_premium="Y"/>
+	<background id="wall02.swf" name="Thick striped wallpaper"/>
+	<background id="wall03.swf" name="Thin striped wallpaper"/>
+	<background id="wall04.swf" name="Dotted wallpaper"/>
+	<background id="wall05.swf" name="Squared wallpaper" is_premium="Y"/>
+	<background id="wall06.swf" name="Dotted floor"/>
+	<background id="wall07.swf" name="Striped wallpaper" is_premium="Y"/>
+	<background id="wall08.swf" name="Flashing floor" is_premium="Y"/>
+	<background id="star_night.swf" name="starry night"/>
+	<background id="ncc_wall09_left.swf" name="Teak flooring"/>
+	<background id="ncc_wall09_right.swf" name="Teak flooring"/>
+	<background id="wall_09.swf" name="Two-color wall"/>
+	<background id="ncc_constore01.swf" name="Counter"/>
+	<background id="ncc_constore02.swf" name="Convenient store"/>
+	<background id="ncc_train.swf" name="Side view"/>
+	<background id="nccha_cave.swf" name="Cave" is_premium="Y"/>
+	<background id="nccha_stone.swf" name="Stone" is_premium="Y"/>
+	<background id="wall10.swf" name="Wallpaper"/>
+	<background id="ncc_floor01.swf" name="Floor"/>
+	<background id="wall11.swf" name="Uniform"/>
+	<background id="wall12.swf" name="Wallpaper"/>
+	<background id="wall13.swf" name="Wallpaper"/>
+	<background id="wall14.swf" name="Wallpaper"/>
+	<background id="wall_grass.swf" name="Barn" is_premium="Y"/>
+	<background id="wall15.swf" name="Wallpaper"/>
+	<background id="ncc_road.swf" name="Road"/>
+	<background id="ncc_soil.swf" name="Soil"/>
+	<background id="wall16.swf" name="Interior" is_premium="Y"/>
+	<background id="wall17.swf" name="Interior" is_premium="Y"/>
+	<background id="wall18.swf" name="Interior" is_premium="Y"/>
+	<background id="wall19.swf" name="Interior"/>
+	<background id="wall20.swf" name="Airport daytime" is_premium="Y"/>
+	<background id="wall21.swf" name="Airport nighttime" is_premium="Y"/>
+	<background id="wall22.swf" name="Interior" is_premium="Y"/>
+	<background id="wall23.swf" name="Floor"/>
+	<background id="wall24.swf" name="Floor"/>
+	<background id="ncc_corridor.swf" name="Corridor" is_premium="Y"/>
+	<background id="ncc_civilwar.swf" name="US Civil War map"/>
+	<background id="ncc_revolu_bg.swf" name="Independence hall"/>
+	<background id="ncc_revolu_map.swf" name="US Revolutionary War map"/>
+	<background id="ncc_usmap.swf" name="US map" is_premium="Y"/>
+	<background id="ncc_warland.swf" name="Battlefield" is_premium="Y"/>
+	<background id="wall25.swf" name="Wallpaper"/>
+	<background id="wall26.swf" name="Wallpaper"/>
+	<background id="ncc_lift_bg.swf" name="Lift inside"/>
+	<background id="ncc_lobby.swf" name="Lobby"/>
+	<background id="ncc_path.swf" name="Path"/>
+	<background id="ncc_underground.swf" name="Underground"/>
+	<background id="ncc_plain.swf" name="Plain"/>
+	<background id="wall27.swf" name="Staircase"/>
+	<background id="wall28.swf" name="Staircase"/>
+	<background id="wall29.swf" name="Interior"/>
+	<background id="wall30.swf" name="Linear gradient"/>
+	<background id="wall31.swf" name="Radial gradient"/>
+	<background id="ncc_hilltop_bg.swf" name="Grassland"/>
+	<background id="wall33.swf" name="pattern"/>
+	<background id="wall32.swf" name="effect"/>
+	<background id="ncc_gate.swf" name="Metal doors"/>
+	<background id="ncc_fx_01.swf" name="Moody" is_premium="Y"/>
+	<background id="ncc_fx_02.swf" name="Depressed" is_premium="Y"/>
+	<background id="ncc_fx_03.swf" name="Bad smell" is_premium="Y"/>
+	<background id="ncc_fx_04.swf" name="Fire" is_premium="Y"/>
+	<background id="ncc_fx_05.swf" name="In love" is_premium="Y"/>
+	<background id="ncc_weird.swf" name="Haunted" is_premium="Y"/>
+	<background id="ncc_shock.swf" name="Shock" is_premium="Y"/>
+	<background id="ncc_anger.swf" name="Explosion" is_premium="Y"/>
+	<background id="ncc_anger2.swf" name="Explosion" is_premium="Y"/>
+	<background id="ncc_fx_08.swf" name="Speed lines" is_premium="Y"/>
+	<background id="ncc_fx_09.swf" name="Speed lines" is_premium="Y"/>
+	<background id="ncc_fx_10.swf" name="Speed lines" is_premium="Y"/>
+	<background id="ncc_pirateship01_bg.swf" name="Ship's side"/>
+	<background id="ncc_pirateship01_deck.swf" name="Ship's deck"/>
+	<background id="16_9.swf" name="16-9"/>
+	<compositebg id="cramped_cubicle" name="Cramped Cubicle" thumb="cramped_cubicle.jpg" display_order="0">
 		<bg id="cramped_cubicle_BG10" index="0">
 			<file>common.cramped_cubicle_bg.swf</file>
 		</bg>
@@ -382,187 +119,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="office_corridor" name="Office corridor" default="N" thumb="office_corridor.jpg" display_order="0">
-		<bg id="office_corridor_BG10" index="0">
-			<file>common.office_corridor_bg.swf</file>
-		</bg>
-		<prop id="office_corridor_PROP6" index="3">
-			<file>common.office_corridor_cubicle_wall.swf</file>
-			<x>509.6</x>
-			<y>204.6</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="office_corridor_PROP7" index="2">
-			<file>common.office_corridor_cubicle_charles.swf</file>
-			<x>373.6</x>
-			<y>244.8</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="office_corridor_PROP8" index="4">
-			<file>common.office_corridor_watercooler.swf</file>
-			<x>552.5</x>
-			<y>284.1</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="student_cafeteria" name="Student cafeteria" default="N" thumb="student_cafeteria.jpg" display_order="0">
-		<bg id="student_cafeteria_BG13" index="0">
-			<file>common.student_cafeteria_bg.swf</file>
-		</bg>
-		<prop id="student_cafeteria_PROP6" index="2">
-			<file>common.student_cafeteria_fence.swf</file>
-			<x>368.9</x>
-			<y>303.8</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="donut_shop" name="Donut shop" default="N" thumb="donut_shop.jpg" display_order="0">
-		<bg id="donut_shop_BG10" index="0">
-			<file>common.donut_shop_bg.swf</file>
-		</bg>
-		<prop id="donut_shop_PROP6" index="2">
-			<file>common.donut_shop_counter.swf</file>
-			<x>323.4</x>
-			<y>251.4</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="living_room" name="Living room" default="N" thumb="living_room.jpg" display_order="0">
-		<bg id="living_room_BG10" index="0">
-			<file>common.living_room_bg.swf</file>
-		</bg>
-		<prop id="living_room_PROP6" index="2">
-			<file>common.living_room_tv.swf</file>
-			<x>133.2</x>
-			<y>310.3</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="hopsital_ward" name="Hospital ward" default="N" thumb="Hopsital_ward.jpg" display_order="0">
-		<bg id="hopsital_ward_BG10" index="0">
-			<file>common.hopsital_ward_bg.swf</file>
-		</bg>
-		<prop id="hopsital_ward_PROP7" index="2">
-			<file>common.hopsital_ward_chair.swf</file>
-			<x>317.1</x>
-			<y>213.3</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="hopsital_ward_PROP8" index="3">
-			<file>common.hopsital_ward_counter.swf</file>
-			<x>64.3</x>
-			<y>374.5</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="doctor_office" name="Doctor's office" default="N" thumb="doctor_office.jpg" display_order="0">
-		<bg id="doctor_office_BG10" index="0">
-			<file>common.doctor_office_bg.swf</file>
-		</bg>
-		<prop id="doctor_office_PROP8" index="2">
-			<file>common.doctor_office_table.swf</file>
-			<x>431.9</x>
-			<y>249.8</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="doctor_office_PROP9" index="3">
-			<file>common.doctor_office_bed.swf</file>
-			<x>195.2</x>
-			<y>299.2</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="pirate_ship_deck" name="Pirate Ship deck" default="N" thumb="pirate_ship_deck.jpg" display_order="0">
-		<bg id="pirate_ship_deck_BG2" index="0">
-			<file>common.pirate_ship_deck_bg.swf</file>
-		</bg>
-		<prop id="pirate_ship_deck_PROP0" index="2">
-			<file>common.pirate_ship_deck_wooden_tub.swf</file>
-			<x>548.2</x>
-			<y>290</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="pirate_ship_deck_PROP1" index="3">
-			<file>common.pirate_ship_deck_cannon.swf</file>
-			<x>157</x>
-			<y>269</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="Presidential_podium" name="Presidential podium" default="N" thumb="Presidential_podium.jpg" display_order="0">
-		<bg id="Presidential_podium_BG2" index="0">
-			<file>common.Presidential_podium_bg.swf</file>
-		</bg>
-		<prop id="Presidential_podium_PROP0" index="2">
-			<file>common.Presidential_podium_podium.swf</file>
-			<x>322.2</x>
-			<y>283</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="presidential_desk" name="Presidential Desk" default="N" thumb="presidential_desk.jpg" display_order="0">
-		<bg id="presidential_desk_BG2" index="0">
-			<file>common.presidential_desk_bg.swf</file>
-		</bg>
-		<prop id="presidential_desk_PROP0" index="2">
-			<file>common.presidential_desk_chair.swf</file>
-			<x>344.4</x>
-			<y>316.8</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="presidential_desk_PROP1" index="3">
-			<file>common.presidential_desk_desk.swf</file>
-			<x>321.2</x>
-			<y>354</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="spooky_lab" name="Spooky Lab" default="N" thumb="spooky_lab.jpg" display_order="0">
+	<compositebg id="spooky_lab" name="Spooky Lab" thumb="spooky_lab.jpg" display_order="0">
 		<bg id="spooky_lab_BG2" index="0">
 			<file>common.spooky_lab_bg.swf</file>
 		</bg>
@@ -576,53 +133,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="graveyard" name="Graveyard" default="N" thumb="graveyard.jpg" display_order="0">
-		<bg id="graveyard_BG3" index="0">
-			<file>common.graveyard_bg.swf</file>
-		</bg>
-		<prop id="graveyard_PROP0" index="2">
-			<file>common.graveyard_grave.swf</file>
-			<x>299.2</x>
-			<y>267</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="evil_lair" name="Evil Lair" default="N" thumb="evil_lair.jpg" display_order="0">
-		<bg id="evil_lair_BG2" index="0">
-			<file>common.evil_lair_bg.swf</file>
-		</bg>
-		<prop id="evil_lair_PROP0" index="2">
-			<file>common.evil_lair_chair.swf</file>
-			<x>312.2</x>
-			<y>252</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="evil_lair_PROP1" index="3">
-			<file>common.evil_lair_torture_table.swf</file>
-			<x>520.2</x>
-			<y>365</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="evil_lair_PROP2" index="4">
-			<file>common.evil_lair_rotating_saw.swf</file>
-			<x>534.2</x>
-			<y>331</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="stage" name="Stage" default="N" thumb="stage.jpg" display_order="0">
+	<compositebg id="stage" name="Stage" thumb="stage.jpg" display_order="0">
 		<bg id="stage_BG2" index="0">
 			<file>common.stage_bg.swf</file>
 		</bg>
@@ -672,7 +183,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="rooftop" name="roof top" default="N" thumb="rooftop.jpg" display_order="0">
+	<compositebg id="rooftop" name="roof top" thumb="rooftop.jpg" display_order="0">
 		<bg id="rooftop_BG3" index="0">
 			<file>common.rooftop_bg.swf</file>
 		</bg>
@@ -695,7 +206,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="space" name="space" default="N" thumb="space.jpg" display_order="0">
+	<compositebg id="space" name="space" thumb="space.jpg" display_order="0">
 		<bg id="space_BG2" index="0">
 			<file>common.space_bg.swf</file>
 		</bg>
@@ -727,45 +238,13 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="volcanic_planet" name="volcanic planet" default="N" thumb="volcanic_planet.jpg" display_order="0">
-		<bg id="volcanic_planet_BG3" index="0">
-			<file>common.volcanic_planet_bg.swf</file>
-		</bg>
-		<prop id="volcanic_planet_PROP0" index="3">
-			<file>common.volcanic_planet_rock.swf</file>
-			<x>536.2</x>
-			<y>237</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="volcanic_planet_PROP1" index="2">
-			<file>common.volcanic_planet_pit.swf</file>
-			<x>262</x>
-			<y>295</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-		<prop id="volcanic_planet_PROP2" index="4">
-			<file>common.volcanic_planet_pit2.swf</file>
-			<x>102.2</x>
-			<y>342</y>
-			<xscale>1</xscale>
-			<yscale>1</yscale>
-			<face>1</face>
-			<rotation>0</rotation>
-		</prop>
-	</compositebg>
-	<compositebg id="cbg_ncc_blank" name="Blank" default="N" thumb="ncc_blank.jpg" display_order="0">
+	<compositebg id="cbg_ncc_blank" name="Blank" thumb="ncc_blank.jpg" display_order="0">
 		<bg id="cbg_ncc_blank_BG10" index="0">
 			<file>common.wall11.swf</file>
 			<color r="ccColorA">16777215</color>
 		</bg>
 	</compositebg>
-	<compositebg id="cbg_kitchen01" name="Kitchen" default="N" thumb="kitchen01.jpg" display_order="2">
+	<compositebg id="cbg_kitchen01" name="Kitchen" thumb="kitchen01.jpg" display_order="2">
 		<bg id="cbg_kitchen01_BG1" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">11063700</color>
@@ -885,7 +364,7 @@
 			<color r="ccColorA">14056225</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_dorm_rm" name="Dorm room" default="N" thumb="dorm_room.jpg" display_order="3">
+	<compositebg id="cbg_dorm_rm" name="Dorm room" thumb="dorm_room.jpg" display_order="3">
 		<bg id="cbg_dorm_rm_BG1" index="0">
 			<file>common.ncc_interior_left.swf</file>
 			<color r="wall">6780571</color>
@@ -1093,7 +572,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_living_rm01" name="Living room" default="N" thumb="living_rm01.jpg" display_order="4">
+	<compositebg id="cbg_living_rm01" name="Living room" thumb="living_rm01.jpg" display_order="4">
 		<bg id="cbg_living_rm01_BG43" index="0">
 			<file>common.ncc_medium.swf</file>
 			<color r="colorA">13295579</color>
@@ -1197,7 +676,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_cafe01" name="Cafe" default="Y" thumb="cafe01.jpg" display_order="5">
+	<compositebg id="cbg_cafe01" name="Cafe" thumb="cafe01.jpg" display_order="5">
 		<bg id="cbg_cafe01_BG2" index="0">
 			<file>common.ncc_gradient.swf</file>
 		</bg>
@@ -1391,7 +870,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_news_room" name="News room" default="N" thumb="news_room.jpg" display_order="6">
+	<compositebg id="cbg_news_room" name="News room" thumb="news_room.jpg" display_order="6">
 		<bg id="cbg_news_room_BG18" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">1779506</color>
@@ -1463,7 +942,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_pirsh01" name="Pirate ship sailing" default="N" thumb="ncc_pirate01.jpg" display_order="7" is_premium="Y">
+	<compositebg id="ncc_pirsh01" name="Pirate ship sailing" thumb="ncc_pirate01.jpg" display_order="7" is_premium="Y">
 		<bg id="ncc_pirsh01_BG141" index="0">
 			<file>common.wall30.swf</file>
 		</bg>
@@ -1583,7 +1062,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_pirsh02" name="Pirate ship plank" default="N" thumb="ncc_pirate02.jpg" display_order="8" is_premium="Y">
+	<compositebg id="ncc_pirsh02" name="Pirate ship plank" thumb="ncc_pirate02.jpg" display_order="8" is_premium="Y">
 		<bg id="ncc_pirsh02_BG16" index="0">
 			<file>common.wall30.swf</file>
 			<color r="ccColorA">13158</color>
@@ -1730,7 +1209,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_pirsh03" name="Pirate ship deck" default="N" thumb="ncc_pirate03.jpg" display_order="9" is_premium="Y">
+	<compositebg id="ncc_pirsh03" name="Pirate ship deck" thumb="ncc_pirate03.jpg" display_order="9" is_premium="Y">
 		<bg id="ncc_pirsh03_BG379" index="0">
 			<file>common.ncc_pirateship01_bg.swf</file>
 		</bg>
@@ -1771,7 +1250,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_living_rm02" name="Living room" default="N" thumb="ncc_living_room.jpg" display_order="101">
+	<compositebg id="cbg_living_rm02" name="Living room" thumb="ncc_living_room.jpg" display_order="101">
 		<bg id="cbg_living_rm02_BG869" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="wall">15658683</color>
@@ -2061,7 +1540,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_bedroom" name="Bedroom" default="N" thumb="bedroom.jpg" display_order="102">
+	<compositebg id="cbg_ncc_bedroom" name="Bedroom" thumb="bedroom.jpg" display_order="102">
 		<bg id="cbg_ncc_bedroom_BG9" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">16310185</color>
@@ -2180,7 +1659,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_bedroom02" name="Bedroom" default="N" thumb="bedroom02.jpg" display_order="103" is_premium="Y">
+	<compositebg id="cbg_ncc_bedroom02" name="Bedroom" thumb="bedroom02.jpg" display_order="103" is_premium="Y">
 		<bg id="cbg_ncc_bedroom02_BG18" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 		</bg>
@@ -2276,7 +1755,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_gbrm" name="Girl bedroom" default="N" thumb="ncc_girl_bedrm.jpg" display_order="104" is_premium="Y">
+	<compositebg id="cbg_ncc_gbrm" name="Girl bedroom" thumb="ncc_girl_bedrm.jpg" display_order="104" is_premium="Y">
 		<bg id="cbg_ncc_gbrm_BG7" index="0">
 			<file>common.wall17.swf</file>
 		</bg>
@@ -2372,7 +1851,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_restaurant01" name="Restaurant" default="N" thumb="restaurant01.jpg" display_order="107">
+	<compositebg id="cbg_restaurant01" name="Restaurant" thumb="restaurant01.jpg" display_order="107">
 		<bg id="cbg_restaurant01_BG1" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">7208960</color>
@@ -2525,7 +2004,7 @@
 			<color r="ccColorA">5186840</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_toilet" name="Toilet" default="N" thumb="ncc_toilet.jpg" display_order="108" is_premium="Y">
+	<compositebg id="cbg_ncc_toilet" name="Toilet" thumb="ncc_toilet.jpg" display_order="108" is_premium="Y">
 		<bg id="cbg_ncc_toilet_BG7" index="0">
 			<file>common.wall16.swf</file>
 		</bg>
@@ -2593,7 +2072,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_corridor" name="Staircase" default="N" thumb="ncc_corridor.jpg" display_order="109" is_premium="Y">
+	<compositebg id="ncc_corridor" name="Staircase" thumb="ncc_corridor.jpg" display_order="109" is_premium="Y">
 		<bg id="ncc_corridor_BG7" index="0">
 			<file>common.wall28.swf</file>
 		</bg>
@@ -2662,7 +2141,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_corridor2" name="Staircase" default="N" thumb="ncc_corridor2.jpg" display_order="110" is_premium="Y">
+	<compositebg id="ncc_corridor2" name="Staircase" thumb="ncc_corridor2.jpg" display_order="110" is_premium="Y">
 		<bg id="ncc_corridor2_BG7" index="0">
 			<file>common.wall27.swf</file>
 		</bg>
@@ -2750,7 +2229,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_backyard" name="Backyard" default="N" thumb="ncc_backyard.jpg" display_order="111" is_premium="Y">
+	<compositebg id="ncc_backyard" name="Backyard" thumb="ncc_backyard.jpg" display_order="111" is_premium="Y">
 		<bg id="ncc_backyard_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorA">5419235</color>
@@ -2934,7 +2413,7 @@
 			<color r="ccColorA">13395558</color>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_backyard2" name="Backyard" default="N" thumb="ncc_backyard02.jpg" display_order="112" is_premium="Y">
+	<compositebg id="ncc_backyard2" name="Backyard" thumb="ncc_backyard02.jpg" display_order="112" is_premium="Y">
 		<bg id="ncc_backyard2_BG17" index="0">
 			<file>common.ncc_medium.swf</file>
 			<color r="colorA">5944549</color>
@@ -3151,7 +2630,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_backyard3" name="Backyard" default="N" thumb="ncc_backyard03.jpg" display_order="113" is_premium="Y">
+	<compositebg id="ncc_backyard3" name="Backyard" thumb="ncc_backyard03.jpg" display_order="113" is_premium="Y">
 		<bg id="ncc_backyard3_BG17" index="0">
 			<file>common.ncc_medium.swf</file>
 			<color r="colorA">5944549</color>
@@ -3341,7 +2820,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_garage" name="Garage" default="N" thumb="ncc_garage.jpg" display_order="114" is_premium="Y">
+	<compositebg id="ncc_garage" name="Garage" thumb="ncc_garage.jpg" display_order="114" is_premium="Y">
 		<bg id="ncc_garage_BG7" index="0">
 			<file>common.wall29.swf</file>
 		</bg>
@@ -3488,7 +2967,7 @@
 			<color r="ccColorA">8017976</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_house" name="House" default="N" thumb="ncc_house.jpg" display_order="201" is_premium="Y">
+	<compositebg id="cbg_ncc_house" name="House" thumb="ncc_house.jpg" display_order="201" is_premium="Y">
 		<bg id="cbg_ncc_house_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">10066329</color>
@@ -3630,7 +3109,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_street02" name="Street" default="N" thumb="street.jpg" display_order="202">
+	<compositebg id="cbg_street02" name="Street" thumb="street.jpg" display_order="202">
 		<bg id="BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">10079334</color>
@@ -3798,7 +3277,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_peak01" name="Park" default="N" thumb="peak01.jpg" display_order="203">
+	<compositebg id="cbg_peak01" name="Park" thumb="peak01.jpg" display_order="203">
 		<bg id="cbg_peak01_BG22" index="0">
 			<file>common.ncc_high.swf</file>
 		</bg>
@@ -4001,7 +3480,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_harbour" name="Harbor" default="N" thumb="harbour.jpg" display_order="204">
+	<compositebg id="cbg_harbour" name="Harbor" thumb="harbour.jpg" display_order="204">
 		<bg id="cbg_harbour_BG2" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorA">3355494</color>
@@ -4289,7 +3768,7 @@
 			<color r="ccColorB">51</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_rest" name="Restaurant" default="N" thumb="ncc_rest.jpg" display_order="206" is_premium="Y">
+	<compositebg id="cbg_ncc_rest" name="Restaurant" thumb="ncc_rest.jpg" display_order="206" is_premium="Y">
 		<bg id="cbg_ncc_rest_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">7916274</color>
@@ -4467,7 +3946,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_police_station_ext" name="Police station (exterior)" default="N" thumb="police_station_ext.jpg" display_order="207" is_premium="Y">
+	<compositebg id="cbg_police_station_ext" name="Police station (exterior)" thumb="police_station_ext.jpg" display_order="207" is_premium="Y">
 		<bg id="cbg_police_station_ext_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">10147325</color>
@@ -4692,7 +4171,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_street01" name="Street" default="N" thumb="street01.jpg" display_order="208">
+	<compositebg id="cbg_street01" name="Street" thumb="street01.jpg" display_order="208">
 		<bg id="cbg_street01_BG3" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">3290175</color>
@@ -4738,7 +4217,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_busstop" name="Bus stop" default="N" thumb="ncc_bus_stop.jpg" display_order="209" is_premium="Y">
+	<compositebg id="cbg_ncc_busstop" name="Bus stop" thumb="ncc_bus_stop.jpg" display_order="209" is_premium="Y">
 		<bg id="cbg_ncc_busstop_BG7" index="0">
 			<file>common.ncc_road.swf</file>
 			<color r="ccColorC">6710886</color>
@@ -4817,7 +4296,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_ext_building" name="building" default="N" thumb="ncc_exterior_building.jpg" display_order="210" is_premium="Y">
+	<compositebg id="ncc_ext_building" name="building" thumb="ncc_exterior_building.jpg" display_order="210" is_premium="Y">
 		<bg id="ncc_ext_building_cbg_police_station_ext_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">10147325</color>
@@ -5121,7 +4600,7 @@
 			<rotation>0.9</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_sniper01" name="Rooftop" default="N" thumb="ncc_sniper01.jpg" display_order="211" is_premium="Y">
+	<compositebg id="ncc_sniper01" name="Rooftop" thumb="ncc_sniper01.jpg" display_order="211" is_premium="Y">
 		<bg id="ncc_sniper01_BG7" index="0">
 			<file>common.wall30.swf</file>
 			<color r="ccColorA">3354167</color>
@@ -5239,7 +4718,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_sniper02" name="Rooftop" default="N" thumb="ncc_sniper02.jpg" display_order="212" is_premium="Y">
+	<compositebg id="ncc_sniper02" name="Rooftop" thumb="ncc_sniper02.jpg" display_order="212" is_premium="Y">
 		<bg id="ncc_sniper02_BG58" index="0">
 			<file>common.wall30.swf</file>
 			<color r="ccColorA">6724044</color>
@@ -5338,7 +4817,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_blackboard" name="Blackboard" default="N" thumb="ncc_blackboard.jpg" display_order="301">
+	<compositebg id="cbg_ncc_blackboard" name="Blackboard" thumb="ncc_blackboard.jpg" display_order="301">
 		<bg id="cbg_ncc_blackboard_BG7" index="0">
 			<file>common.wall14.swf</file>
 		</bg>
@@ -5352,7 +4831,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_classrm01" name="Classroom" default="N" thumb="ncc_classrm01.jpg" display_order="302" is_premium="Y">
+	<compositebg id="cbg_ncc_classrm01" name="Classroom" thumb="ncc_classrm01.jpg" display_order="302" is_premium="Y">
 		<bg id="cbg_ncc_classrm01_BG7" index="0">
 			<file>common.wall12.swf</file>
 		</bg>
@@ -5456,7 +4935,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_classrm02" name="Classroom" default="N" thumb="ncc_classrm02.jpg" display_order="303" is_premium="Y">
+	<compositebg id="cbg_ncc_classrm02" name="Classroom" thumb="ncc_classrm02.jpg" display_order="303" is_premium="Y">
 		<bg id="cbg_ncc_classrm02_BG7" index="0">
 			<file>common.wall13.swf</file>
 		</bg>
@@ -5596,7 +5075,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_locker" name="School corridor" default="N" thumb="ncc_locker.jpg" display_order="304" is_premium="Y">
+	<compositebg id="cbg_ncc_locker" name="School corridor" thumb="ncc_locker.jpg" display_order="304" is_premium="Y">
 		<bg id="cbg_ncc_locker_BG7" index="0">
 			<file>common.ncc_floor01.swf</file>
 			<color r="colorB">8623447</color>
@@ -5630,7 +5109,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_bskbground" name="Basketball court" default="N" thumb="ncc_bskbground.jpg" display_order="305" is_premium="Y">
+	<compositebg id="cbg_ncc_bskbground" name="Basketball court" thumb="ncc_bskbground.jpg" display_order="305" is_premium="Y">
 		<bg id="BG7" index="0">
 			<file>common.wall11.swf</file>
 			<color r="ccColorA">10079487</color>
@@ -5771,7 +5250,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_changing_rm" name="Changing room" default="N" thumb="ncc_changing_rm.jpg" display_order="306" is_premium="Y">
+	<compositebg id="cbg_ncc_changing_rm" name="Changing room" thumb="ncc_changing_rm.jpg" display_order="306" is_premium="Y">
 		<bg id="cbg_ncc_changing_rm_BG7" index="0">
 			<file>common.wall15.swf</file>
 		</bg>
@@ -5866,7 +5345,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_dorm room" name="Dorm room" default="N" thumb="ncc_dorm.jpg" display_order="307" is_premium="Y">
+	<compositebg id="ncc_dorm room" name="Dorm room" thumb="ncc_dorm.jpg" display_order="307" is_premium="Y">
 		<bg id="ncc_dorm room_cbg_dorm_rm_BG1" index="0">
 			<file>common.ncc_interior_left.swf</file>
 			<color r="wall">14733248</color>
@@ -6153,7 +5632,7 @@
 			<color r="ccColorA">13382400</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_bar01" name="Bar" default="N" thumb="bar01.jpg" display_order="402">
+	<compositebg id="cbg_bar01" name="Bar" thumb="bar01.jpg" display_order="402">
 		<bg id="cbg_bar01_BG25" index="0">
 			<file>common.ncc_floor.swf</file>
 			<color r="colorA">3342336</color>
@@ -6274,7 +5753,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_shop" name="Shop" default="N" thumb="ncc_shop.jpg" display_order="403" is_premium="Y">
+	<compositebg id="cbg_ncc_shop" name="Shop" thumb="ncc_shop.jpg" display_order="403" is_premium="Y">
 		<bg id="cbg_ncc_shop_BG7" index="0">
 			<file>common.ncc_medium.swf</file>
 		</bg>
@@ -6306,7 +5785,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_bank" name="Bank counter" default="N" thumb="bank_counter.jpg" display_order="404">
+	<compositebg id="cbg_bank" name="Bank counter" thumb="bank_counter.jpg" display_order="404">
 		<bg id="BG1" index="0">
 			<file>common.ncc_medium.swf</file>
 			<color r="colorB">10053222</color>
@@ -6412,7 +5891,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_check_out" name="Check out counter" default="N" thumb="check_out_counter.jpg" display_order="405">
+	<compositebg id="cbg_check_out" name="Check out counter" thumb="check_out_counter.jpg" display_order="405">
 		<bg id="BG445" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">12562062</color>
@@ -6609,7 +6088,7 @@
 			<color r="ccColorA">10040115</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_counter" name="Counter" default="N" thumb="convenient_cashier.jpg" display_order="406" is_premium="Y">
+	<compositebg id="cbg_ncc_counter" name="Counter" thumb="convenient_cashier.jpg" display_order="406" is_premium="Y">
 		<bg id="cbg_ncc_counter_BG7" index="0">
 			<file>common.ncc_constore01.swf</file>
 		</bg>
@@ -6677,7 +6156,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_constore" name="Convenient store" default="N" thumb="convenient_store.jpg" display_order="407" is_premium="Y">
+	<compositebg id="cbg_ncc_constore" name="Convenient store" thumb="convenient_store.jpg" display_order="407" is_premium="Y">
 		<bg id="cbg_ncc_constore_BG7" index="0">
 			<file>common.ncc_constore02.swf</file>
 		</bg>
@@ -6727,7 +6206,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_krm" name="Karaoke room" default="N" thumb="karaoke_room.jpg" display_order="408">
+	<compositebg id="cbg_krm" name="Karaoke room" thumb="karaoke_room.jpg" display_order="408">
 		<bg id="cbg_krm_BG58" index="0">
 			<file>common.ncc_interior_right02.swf</file>
 			<color r="floor">2237013</color>
@@ -6934,7 +6413,7 @@
 			<color r="ccColorA">3355443</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_vkrm" name="VIP Karaoke room" default="N" thumb="vip_karaoke_room.jpg" display_order="409">
+	<compositebg id="cbg_vkrm" name="VIP Karaoke room" thumb="vip_karaoke_room.jpg" display_order="409">
 		<bg id="cbg_vkrm_cbg_bar01_BG25" index="0">
 			<file>common.ncc_floor.swf</file>
 			<color r="colorA">3342387</color>
@@ -7388,7 +6867,7 @@
 			<color r="ccColorA">51</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_jail" name="Jail" default="N" thumb="ncc_jail.jpg" display_order="410" is_premium="Y">
+	<compositebg id="cbg_jail" name="Jail" thumb="ncc_jail.jpg" display_order="410" is_premium="Y">
 		<bg id="cbg_jail_BG7" index="0">
 			<file>common.wall_09.swf</file>
 		</bg>
@@ -7438,7 +6917,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_police_lineup" name="Police lineup" default="N" thumb="police_lineup.jpg" display_order="411" is_premium="Y">
+	<compositebg id="cbg_police_lineup" name="Police lineup" thumb="police_lineup.jpg" display_order="411" is_premium="Y">
 		<bg id="cbg_police_lineup_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">3355443</color>
@@ -7472,7 +6951,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_hospital" name="Hospital" default="N" thumb="ncc_hospital.jpg" display_order="412" is_premium="Y">
+	<compositebg id="cbg_ncc_hospital" name="Hospital" thumb="ncc_hospital.jpg" display_order="412" is_premium="Y">
 		<bg id="cbg_ncc_hospital_BG12" index="0">
 			<file>common.wall10.swf</file>
 		</bg>
@@ -7578,7 +7057,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_hospitalrm" name="Hospital room" default="N" thumb="ncc_hospitalrm.jpg" display_order="413" is_premium="Y">
+	<compositebg id="cbg_ncc_hospitalrm" name="Hospital room" thumb="ncc_hospitalrm.jpg" display_order="413" is_premium="Y">
 		<bg id="cbg_ncc_hospitalrm_BG11" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">14931915</color>
@@ -7675,7 +7154,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_train_inside" name="Train inside" default="N" thumb="train_inside.jpg" display_order="414" is_premium="Y">
+	<compositebg id="cbg_train_inside" name="Train inside" thumb="train_inside.jpg" display_order="414" is_premium="Y">
 		<bg id="cbg_train_inside_BG7" index="0">
 			<file>common.ncc_train.swf</file>
 		</bg>
@@ -7734,7 +7213,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_coffeeshop" name="Coffee shop" default="N" thumb="ncc_coffee_shop.jpg" display_order="420" is_premium="Y">
+	<compositebg id="cbg_ncc_coffeeshop" name="Coffee shop" thumb="ncc_coffee_shop.jpg" display_order="420" is_premium="Y">
 		<bg id="cbg_ncc_coffeeshop_BG7" index="0">
 			<file>common.wall19.swf</file>
 		</bg>
@@ -7867,7 +7346,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_church01" name="Church" default="N" thumb="ncc_xmaschurch01.jpg" display_order="421" is_premium="Y">
+	<compositebg id="cbg_nccxmas_church01" name="Church" thumb="ncc_xmaschurch01.jpg" display_order="421" is_premium="Y">
 		<bg id="cbg_nccxmas_church01_cbg_street01_BG3" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">9375518</color>
@@ -7965,7 +7444,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_church02" name="Church" default="N" thumb="ncc_xmaschurch02.jpg" display_order="422" is_premium="Y">
+	<compositebg id="cbg_nccxmas_church02" name="Church" thumb="ncc_xmaschurch02.jpg" display_order="422" is_premium="Y">
 		<bg id="cbg_nccxmas_church02_BG8" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">15657668</color>
@@ -8073,7 +7552,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_indephall" name="Independence Hall" default="N" thumb="ncc_revolution_hall.jpg" display_order="423" is_premium="Y">
+	<compositebg id="ncc_indephall" name="Independence Hall" thumb="ncc_revolution_hall.jpg" display_order="423" is_premium="Y">
 		<bg id="ncc_indephall_BG7" index="0">
 			<file>common.ncc_revolu_bg.swf</file>
 		</bg>
@@ -8192,7 +7671,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_fastfood" name="Fast food restaurant" default="N" thumb="ncc_fastfood.jpg" display_order="424" is_premium="Y">
+	<compositebg id="ncc_fastfood" name="Fast food restaurant" thumb="ncc_fastfood.jpg" display_order="424" is_premium="Y">
 		<bg id="ncc_fastfood_BG7" index="0">
 			<file>common.wall19.swf</file>
 			<color r="ccColorA">13369344</color>
@@ -8329,7 +7808,7 @@
 			<color r="ccColorA">16777215</color>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_game01" name="Bar fight" default="N" thumb="ncc_game01.jpg" display_order="425" is_premium="Y">
+	<compositebg id="ncc_game01" name="Bar fight" thumb="ncc_game01.jpg" display_order="425" is_premium="Y">
 		<bg id="ncc_game01_cbg_bar01_BG25" index="0">
 			<file>common.ncc_floor.swf</file>
 			<color r="colorA">3932208</color>
@@ -8464,7 +7943,7 @@
 			<color r="ccColorB">16737894</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_confer" name="Conference room" default="N" thumb="ncc_conference_room.jpg" display_order="451">
+	<compositebg id="cbg_confer" name="Conference room" thumb="ncc_conference_room.jpg" display_order="451">
 		<bg id="cbg_confer_BG56" index="0">
 			<file>common.ncc_interior_left.swf</file>
 			<color r="wall">13684944</color>
@@ -8544,7 +8023,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_print_rm" name="Printing room" default="N" thumb="printing_room.jpg" display_order="452">
+	<compositebg id="cbg_print_rm" name="Printing room" thumb="printing_room.jpg" display_order="452">
 		<bg id="cbg_print_rm_BG1" index="0">
 			<file>common.ncc_floor.swf</file>
 		</bg>
@@ -8757,7 +8236,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_police_office" name="Police office" default="N" thumb="police_office.jpg" display_order="453" is_premium="Y">
+	<compositebg id="cbg_police_office" name="Police office" thumb="police_office.jpg" display_order="453" is_premium="Y">
 		<bg id="cbg_police_office_BG7" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">10467270</color>
@@ -8873,7 +8352,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_pantry" name="Pantry" default="N" thumb="ncc_pantry02.jpg" display_order="454" is_premium="Y">
+	<compositebg id="cbg_ncc_pantry" name="Pantry" thumb="ncc_pantry02.jpg" display_order="454" is_premium="Y">
 		<bg id="cbg_ncc_pantry_BG17" index="0">
 			<file>common.wall12.swf</file>
 			<color r="ccColorC">10066329</color>
@@ -9026,7 +8505,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_bossrm" name="Boss room" default="N" thumb="ncc_boss_office.jpg" display_order="455" is_premium="Y">
+	<compositebg id="cbg_ncc_bossrm" name="Boss room" thumb="ncc_boss_office.jpg" display_order="455" is_premium="Y">
 		<bg id="cbg_ncc_bossrm_BG7" index="0">
 			<file>common.ncc_corridor.swf</file>
 			<color r="ccColorA">4456449</color>
@@ -9084,7 +8563,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_bossrm_ent" name="boss room entrance" default="N" thumb="ncc_boss_reception.jpg" display_order="456" is_premium="Y">
+	<compositebg id="ncc_bossrm_ent" name="boss room entrance" thumb="ncc_boss_reception.jpg" display_order="456" is_premium="Y">
 		<bg id="ncc_bossrm_ent_cbg_news_room_BG18" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">11168844</color>
@@ -9196,7 +8675,7 @@
 			<color r="ccColorA">12013623</color>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_reception" name="reception" default="N" thumb="ncc_reception.jpg" display_order="457" is_premium="Y">
+	<compositebg id="ncc_reception" name="reception" thumb="ncc_reception.jpg" display_order="457" is_premium="Y">
 		<bg id="ncc_reception_BG86" index="0">
 			<file>common.wall03.swf</file>
 			<color r="colorA">10337220</color>
@@ -9277,7 +8756,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_cubicule" name="Cubicule" default="N" thumb="ncc_cubicle.jpg" display_order="458" is_premium="Y">
+	<compositebg id="ncc_cubicule" name="Cubicule" thumb="ncc_cubicle.jpg" display_order="458" is_premium="Y">
 		<bg id="ncc_cubicule_BG45" index="0">
 			<file>common.ncc_high.swf</file>
 			<color r="colorA">7566195</color>
@@ -9482,7 +8961,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_openarea" name="open area" default="N" thumb="ncc_open_area.jpg" display_order="459" is_premium="Y">
+	<compositebg id="ncc_openarea" name="open area" thumb="ncc_open_area.jpg" display_order="459" is_premium="Y">
 		<bg id="ncc_openarea_BG45" index="0">
 			<file>common.ncc_high.swf</file>
 			<color r="colorA">7566195</color>
@@ -9687,7 +9166,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_toilet" name="toilets" default="N" thumb="ncc_toliet.jpg" display_order="460" is_premium="Y">
+	<compositebg id="ncc_toilet" name="toilets" thumb="ncc_toliet.jpg" display_order="460" is_premium="Y">
 		<bg id="ncc_toilet_BG45" index="0">
 			<file>common.ncc_high.swf</file>
 			<color r="colorA">7566195</color>
@@ -9811,7 +9290,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_conrm" name="conference room" default="N" thumb="ncc_conferrm01.jpg" display_order="461" is_premium="Y">
+	<compositebg id="ncc_conrm" name="conference room" thumb="ncc_conferrm01.jpg" display_order="461" is_premium="Y">
 		<bg id="ncc_conrm_BG27" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">15855586</color>
@@ -9920,7 +9399,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_conrm02" name="conference room" default="N" thumb="ncc_conferrm02.jpg" display_order="462" is_premium="Y">
+	<compositebg id="ncc_conrm02" name="conference room" thumb="ncc_conferrm02.jpg" display_order="462" is_premium="Y">
 		<bg id="ncc_conrm02_BG35" index="0">
 			<file>common.ncc_interior_right.swf</file>
 			<color r="wall">15855586</color>
@@ -10018,7 +9497,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_storerm" name="Store room" default="N" thumb="ncc_storerm.jpg" display_order="463" is_premium="Y">
+	<compositebg id="ncc_storerm" name="Store room" thumb="ncc_storerm.jpg" display_order="463" is_premium="Y">
 		<bg id="ncc_storerm_BG9" index="0">
 			<file>common.ncc_interior_left02.swf</file>
 			<color r="sidewall">6710886</color>
@@ -10155,7 +9634,7 @@
 			<color r="ccColorA">8017976</color>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_lobby" name="lobby" default="N" thumb="ncc_lobby.jpg" display_order="463" is_premium="Y">
+	<compositebg id="ncc_lobby" name="lobby" thumb="ncc_lobby.jpg" display_order="463" is_premium="Y">
 		<bg id="ncc_lobby_BG7" index="0">
 			<file>common.ncc_lobby.swf</file>
 		</bg>
@@ -10223,7 +9702,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_lobby_close" name="lobby close-up" default="N" thumb="ncc_lobby_close.jpg" display_order="464" is_premium="Y">
+	<compositebg id="ncc_lobby_close" name="lobby close-up" thumb="ncc_lobby_close.jpg" display_order="464" is_premium="Y">
 		<bg id="ncc_lobby_close_BG24" index="0">
 			<file>common.wall26.swf</file>
 		</bg>
@@ -10264,7 +9743,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_liftint01" name="lift interior" default="N" thumb="ncc_lift_interior1.jpg" display_order="465" is_premium="Y">
+	<compositebg id="ncc_liftint01" name="lift interior" thumb="ncc_lift_interior1.jpg" display_order="465" is_premium="Y">
 		<bg id="ncc_liftint01_cbg_street01_BG3" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">3290175</color>
@@ -10280,7 +9759,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_liftint02" name="lift interior" default="N" thumb="ncc_lift_interior2.jpg" display_order="466">
+	<compositebg id="ncc_liftint02" name="lift interior" thumb="ncc_lift_interior2.jpg" display_order="466">
 		<bg id="ncc_liftint02_cbg_street01_BG3" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorB">3290175</color>
@@ -10296,7 +9775,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_checkin" name="Airport check in" default="N" thumb="ncc_apcheckin.jpg" display_order="483" is_premium="Y">
+	<compositebg id="cbg_ncc_checkin" name="Airport check in" thumb="ncc_apcheckin.jpg" display_order="483" is_premium="Y">
 		<bg id="cbg_ncc_checkin_BG7" index="0">
 			<file>common.wall22.swf</file>
 		</bg>
@@ -10373,7 +9852,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_apsecurity" name="Airport security check" default="N" thumb="ncc_apsecurity_check.jpg" display_order="484" is_premium="Y">
+	<compositebg id="cbg_ncc_apsecurity" name="Airport security check" thumb="ncc_apsecurity_check.jpg" display_order="484" is_premium="Y">
 		<bg id="cbg_ncc_apsecurity_BG8" index="0">
 			<file>common.wall23.swf</file>
 		</bg>
@@ -10424,7 +9903,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_apboardgate" name="Airport board gate" default="N" thumb="ncc_apboardgate.jpg" display_order="485" is_premium="Y">
+	<compositebg id="cbg_ncc_apboardgate" name="Airport board gate" thumb="ncc_apboardgate.jpg" display_order="485" is_premium="Y">
 		<bg id="cbg_ncc_apboardgate_BG7" index="0">
 			<file>common.wall20.swf</file>
 		</bg>
@@ -10474,7 +9953,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_apboardgate_night" name="Airport board gate" default="N" thumb="ncc_apboardgate_night.jpg" display_order="486" is_premium="Y">
+	<compositebg id="cbg_ncc_apboardgate_night" name="Airport board gate" thumb="ncc_apboardgate_night.jpg" display_order="486" is_premium="Y">
 		<bg id="BG69" index="0">
 			<file>common.wall21.swf</file>
 			<color r="ccColorD">5398362</color>
@@ -10525,7 +10004,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_outside01" name="Outside" default="N" thumb="outside_day.jpg" display_order="501">
+	<compositebg id="cbg_ncc_outside01" name="Outside" thumb="outside_day.jpg" display_order="501">
 		<bg id="cbg_ncc_outside01_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">8761404</color>
@@ -10645,7 +10124,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_outside_night" name="Outside (night time)" default="N" thumb="ouside_night.jpg" display_order="502">
+	<compositebg id="cbg_ncc_outside_night" name="Outside (night time)" thumb="ouside_night.jpg" display_order="502">
 		<bg id="cbg_ncc_outside_night_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">3359829</color>
@@ -10698,7 +10177,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_oasis" name="Oasis" default="N" thumb="oasis.jpg" display_order="503">
+	<compositebg id="cbg_ncc_oasis" name="Oasis" thumb="oasis.jpg" display_order="503">
 		<bg id="cbg_ncc_oasis_BG8" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">16367445</color>
@@ -11034,7 +10513,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_sunset" name="Sunset" default="N" thumb="sunset.jpg" display_order="505">
+	<compositebg id="cbg_sunset" name="Sunset" thumb="sunset.jpg" display_order="505">
 		<bg id="cbg_sunset_BG935" index="0">
 			<file>common.ncc_high.swf</file>
 			<color r="colorA">13395456</color>
@@ -11296,7 +10775,7 @@
 			<rotation>6.7</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_desert" name="Desert" default="N" thumb="desert.jpg" display_order="506">
+	<compositebg id="cbg_ncc_desert" name="Desert" thumb="desert.jpg" display_order="506">
 		<bg id="cbg_ncc_desert_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">16367445</color>
@@ -11436,7 +10915,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_seaside" name="Sea side road" default="N" thumb="sea_side_road.jpg" display_order="507">
+	<compositebg id="cbg_seaside" name="Sea side road" thumb="sea_side_road.jpg" display_order="507">
 		<bg id="cbg_seaside_BG30" index="0">
 			<file>common.ncc_high.swf</file>
 			<color r="colorB">13421721</color>
@@ -11781,7 +11260,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_battlefield" name="Battlefield" default="N" thumb="ncc_battlefield.jpg" display_order="512" is_premium="Y">
+	<compositebg id="cbg_ncc_battlefield" name="Battlefield" thumb="ncc_battlefield.jpg" display_order="512" is_premium="Y">
 		<bg id="cbg_ncc_battlefield_BG49" index="0">
 			<file>common.ncc_soil.swf</file>
 			<color r="ccColorA">10667212</color>
@@ -11976,7 +11455,7 @@
 			<rotation>58.7</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_camp_army" name="Army camp" default="N" thumb="ncc_camp_army.jpg" display_order="513" is_premium="Y">
+	<compositebg id="cbg_ncc_camp_army" name="Army camp" thumb="ncc_camp_army.jpg" display_order="513" is_premium="Y">
 		<bg id="cbg_ncc_camp_army_BG7" index="0">
 			<file>common.ncc_soil.swf</file>
 		</bg>
@@ -12126,7 +11605,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_militatinter" name="Army tent" default="N" thumb="ncc_militar_inter.jpg" display_order="514" is_premium="Y">
+	<compositebg id="cbg_ncc_militatinter" name="Army tent" thumb="ncc_militar_inter.jpg" display_order="514" is_premium="Y">
 		<bg id="cbg_ncc_militatinter_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">13606999</color>
@@ -12258,7 +11737,7 @@
 			<rotation>63.9</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_oldbridge" name="The Old North Bridge" default="N" thumb="ncc_old_northbridge.jpg" display_order="515" is_premium="Y">
+	<compositebg id="ncc_oldbridge" name="The Old North Bridge" thumb="ncc_old_northbridge.jpg" display_order="515" is_premium="Y">
 		<bg id="ncc_oldbridge_BG7" index="0">
 			<file>common.ncc_warland.swf</file>
 		</bg>
@@ -12362,7 +11841,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_farmland" name="Farmland with stone walls" default="N" thumb="ncc_farmland.jpg" display_order="516" is_premium="Y">
+	<compositebg id="ncc_farmland" name="Farmland with stone walls" thumb="ncc_farmland.jpg" display_order="516" is_premium="Y">
 		<bg id="ncc_farmland_cbg_ncc_outside01_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">8761404</color>
@@ -12658,7 +12137,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_outdoor" name="Winter landscape" default="N" thumb="ncc_xmasoutdoor.jpg" display_order="517" is_premium="Y">
+	<compositebg id="cbg_nccxmas_outdoor" name="Winter landscape" thumb="ncc_xmasoutdoor.jpg" display_order="517" is_premium="Y">
 		<bg id="cbg_nccxmas_outdoor_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorB">13158</color>
@@ -12740,7 +12219,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_churchoutdoor" name="Church" default="N" thumb="ncc_xmaschurchoutdoor.jpg" display_order="518" is_premium="Y">
+	<compositebg id="cbg_nccxmas_churchoutdoor" name="Church" thumb="ncc_xmaschurchoutdoor.jpg" display_order="518" is_premium="Y">
 		<bg id="cbg_nccxmas_churchoutdoor_BG7" index="0">
 			<file>common.star_night.swf</file>
 			<color r="ccColorB">16777215</color>
@@ -12834,7 +12313,7 @@
 			<color r="ccColorA">9328130</color>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_sniper_uphill" name="Look out over camp" default="N" thumb="ncc_sniper_uphill.jpg" display_order="519" is_premium="Y">
+	<compositebg id="ncc_sniper_uphill" name="Look out over camp" thumb="ncc_sniper_uphill.jpg" display_order="519" is_premium="Y">
 		<bg id="ncc_sniper_uphill_BG7" index="0">
 			<file>common.ncc_hilltop_bg.swf</file>
 		</bg>
@@ -13150,7 +12629,7 @@
 			<rotation>0.1</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_graveyard" name="Graveyard" default="N" thumb="ncc_graveyard.jpg" display_order="601" is_premium="Y">
+	<compositebg id="cbg_ncc_graveyard" name="Graveyard" thumb="ncc_graveyard.jpg" display_order="601" is_premium="Y">
 		<bg id="cbg_ncc_graveyard_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorA">3623305</color>
@@ -13354,7 +12833,7 @@
 			<rotation>30</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_evillair" name="Evil lair" default="N" thumb="ncc_evillair.jpg" display_order="602" is_premium="Y">
+	<compositebg id="cbg_ncc_evillair" name="Evil lair" thumb="ncc_evillair.jpg" display_order="602" is_premium="Y">
 		<bg id="cbg_ncc_evillair_BG8" index="0">
 			<file>common.nccha_cave.swf</file>
 		</bg>
@@ -13395,7 +12874,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_spookylab" name="Spooky lab" default="N" thumb="ncc_spookylab.jpg" display_order="603" is_premium="Y">
+	<compositebg id="cbg_ncc_spookylab" name="Spooky lab" thumb="ncc_spookylab.jpg" display_order="603" is_premium="Y">
 		<bg id="cbg_ncc_spookylab_BG7" index="0">
 			<file>common.nccha_stone.swf</file>
 		</bg>
@@ -13530,7 +13009,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_end" name="Merry Christmas" default="N" thumb="ncc_xmasending.jpg" display_order="604" is_premium="Y">
+	<compositebg id="cbg_nccxmas_end" name="Merry Christmas" thumb="ncc_xmasending.jpg" display_order="604" is_premium="Y">
 		<bg id="cbg_nccxmas_end_cbg_ncc_blank_BG10" index="0">
 			<file>common.wall11.swf</file>
 			<color r="ccColorA">1122867</color>
@@ -13623,7 +13102,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_indoor" name="Christmas Party" default="N" thumb="ncc_xmasindoor.jpg" display_order="605" is_premium="Y">
+	<compositebg id="cbg_nccxmas_indoor" name="Christmas Party" thumb="ncc_xmasindoor.jpg" display_order="605" is_premium="Y">
 		<bg id="cbg_nccxmas_indoor_cbg_restaurant01_BG1" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">4075336</color>
@@ -13754,7 +13233,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_manger" name="Baby Jesus" default="N" thumb="ncc_xmasmanger.jpg" display_order="606" is_premium="Y">
+	<compositebg id="cbg_nccxmas_manger" name="Baby Jesus" thumb="ncc_xmasmanger.jpg" display_order="606" is_premium="Y">
 		<bg id="cbg_nccxmas_manger_BG54" index="0">
 			<file>common.wall_grass.swf</file>
 		</bg>
@@ -13804,7 +13283,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_nccxmas_mangeroutdoor" name="Baby Jesus Stable" default="N" thumb="ncc_xmasmanger_outdoor.jpg" display_order="607" is_premium="Y">
+	<compositebg id="cbg_nccxmas_mangeroutdoor" name="Baby Jesus Stable" thumb="ncc_xmasmanger_outdoor.jpg" display_order="607" is_premium="Y">
 		<bg id="cbg_nccxmas_mangeroutdoor_BG7" index="0">
 			<file>common.star_night.swf</file>
 		</bg>
@@ -13846,7 +13325,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_stp01" name="St. Patrick's day" default="N" thumb="ncc_stp01.jpg" display_order="608" is_premium="Y">
+	<compositebg id="ncc_stp01" name="St. Patrick's day" thumb="ncc_stp01.jpg" display_order="608" is_premium="Y">
 		<bg id="ncc_stp01_BG426" index="0">
 			<file>common.ncc_hilltop_bg.swf</file>
 			<color r="ccColorA">16777215</color>
@@ -14018,7 +13497,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="ncc_stp02" name="St. Patrick's day" default="N" thumb="ncc_stp02.jpg" display_order="609" is_premium="Y">
+	<compositebg id="ncc_stp02" name="St. Patrick's day" thumb="ncc_stp02.jpg" display_order="609" is_premium="Y">
 		<bg id="ncc_stp02_cbg_beach01_BG1" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">6737151</color>
@@ -14241,7 +13720,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_outdoor1620" name="Plymouth rock" default="N" thumb="ncc_outdoor1620.jpg" display_order="700">
+	<compositebg id="cbg_ncc_outdoor1620" name="Plymouth rock" thumb="ncc_outdoor1620.jpg" display_order="700">
 		<bg id="cbg_ncc_outdoor1620_cbg_ncc_outside01_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">16777164</color>
@@ -14460,7 +13939,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_outdoor01" name="Thanksgiving picnic" default="N" thumb="ncc_outdoor01.jpg" display_order="701">
+	<compositebg id="cbg_ncc_outdoor01" name="Thanksgiving picnic" thumb="ncc_outdoor01.jpg" display_order="701">
 		<bg id="cbg_ncc_outdoor01_BG20" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorA">7119814</color>
@@ -14700,7 +14179,7 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_sea" name="Galleon on ocean" default="N" thumb="ncc_sea.jpg" display_order="701" is_premium="Y">
+	<compositebg id="cbg_ncc_sea" name="Galleon on ocean" thumb="ncc_sea.jpg" display_order="701" is_premium="Y">
 		<bg id="cbg_ncc_sea_BG7" index="0">
 			<file>common.ncc_low.swf</file>
 			<color r="colorA">4376564</color>
@@ -14762,7 +14241,7 @@
 			<color r="ccColorA">3052443</color>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_teepee" name="Teepees" default="N" thumb="ncc_teepee.jpg" display_order="701" is_premium="Y">
+	<compositebg id="cbg_ncc_teepee" name="Teepees" thumb="ncc_teepee.jpg" display_order="701" is_premium="Y">
 		<bg id="cbg_ncc_teepee_cbg_ncc_outside01_BG7" index="0">
 			<file>common.ncc_gradient.swf</file>
 			<color r="colorC">6723891</color>
@@ -14990,12 +14469,12 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<compositebg id="cbg_ncc_path" name="Path" default="N" thumb="ncc_path.jpg" display_order="702" is_premium="Y">
+	<compositebg id="cbg_ncc_path" name="Path" thumb="ncc_path.jpg" display_order="702" is_premium="Y">
 		<bg id="cbg_ncc_path_BG17" index="0">
 			<file>common.ncc_path.swf</file>
 		</bg>
 	</compositebg>
-	<compositebg id="cbg_ncc_underground" name="Underground" default="N" thumb="ncc_underground.jpg" display_order="703" is_premium="Y">
+	<compositebg id="cbg_ncc_underground" name="Underground" thumb="ncc_underground.jpg" display_order="703" is_premium="Y">
 		<bg id="cbg_ncc_underground_BG18" index="0">
 			<file>common.ncc_underground.swf</file>
 		</bg>
@@ -15056,14 +14535,6 @@
 	<prop id="ncc_02indian_spear.swf" name="Spear" holdable="1" placeable="1" wearable="0" facing="left" is_premium="Y" handstyle="stick"/>
 	<prop id="ncc_02musket.swf" name="Musket" holdable="1" placeable="1" wearable="0" facing="left" handstyle="stick"/>
 	<prop id="flash_light.swf" name="Flash Light" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_crocroach.swf" name="Cockroach" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_prisoner.swf" name="Prisoner" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_gatedoor.swf" name="Cell Door" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_frontgate.swf" name="Cell Gate" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_frontgate_v1.swf" name="Cell Gate" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_frontcell.swf" name="Cell" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_bggate.swf" name="Cell Gate" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="jail_bed.swf" name="Cell Bed" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="stainblueskirt.swf" name="Blue skirt" holdable="1" placeable="1" wearable="0" facing="left"/>
 	<prop id="guitar.swf" name="Guitar" holdable="1" placeable="1" wearable="0" facing="left"/>
 	<prop id="saxophone.swf" name="Saxophone" holdable="1" placeable="1" wearable="0" facing="left" handstyle="flat"/>
@@ -15136,16 +14607,12 @@
 	<prop id="egg.swf" name="Egg" holdable="0" placeable="1" wearable="0" facing="left" handstyle="flat"/>
 	<prop id="interview_chair.swf" name="Interview Chair" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="interview_desk.swf" name="Interview Desk" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="lamp.swf" name="Lamp" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="light.swf" name="Light" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="mosaic.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="mosaic_02.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="office_carpet.swf" name="Office Carpet" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="office_desk.swf" name="Office Desk" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="office_dog.swf" name="Office Dog" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="pumping_shit.swf" name="Pumping Poop" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="table01.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="table02.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="toilet room.swf" name="Toilet Room" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="tomato.swf" name="Tomato" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="stage01.swf" name="Stage" holdable="0" placeable="1" wearable="0" facing="left"/>
@@ -15154,11 +14621,6 @@
 	<prop id="flagA.swf" name="Flag" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="spotLight_stand.swf" name="SpotLight Stand" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="transform.swf" name="Transform" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="elevator_inside_door.swf" name="Elevator Door" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="elevator_outside_doorclosed.swf" name="Elevator Door" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="elevator_outside_doorclosing.swf" name="Closing Door" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="elevator_outside_dooropen.swf" name="Opening Door" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="elevator_outside_rubbishBin.swf" name="Rubbish Bin" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="cloud.swf" name="Cloud" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="cloud_rain.swf" name="Cloud - raining" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="baton.swf" name="Baton" holdable="1" placeable="1" wearable="0" facing="left" handstyle="stick"/>
@@ -15197,20 +14659,7 @@
 	<prop id="walking_stick.swf" name="Walking Stick" holdable="1" placeable="1" wearable="0" facing="left" handstyle="stick"/>
 	<prop id="water_dispenser.swf" name="Water Dispenser" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="wool_ball.swf" name="Wool Ball" holdable="1" placeable="1" wearable="0" facing="left" handstyle="flat"/>
-	<prop id="kitchen_refrigerator.swf" name="refrigerator" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="spacious_cubicle_chair.swf" name="stylish chair" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="spacious_cubicle_cubicle.swf" name="spacious cubicle" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="cramped_cubicle__chair.swf" name="computer chair" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="office_corridor_cubicle_charles.swf" name="office cubicle" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="office_corridor_cubicle_wall.swf" name="copier area" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="office_corridor_watercooler.swf" name="watercooler side view" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="student_cafeteria_fence.swf" name="belt barrier" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="donut_shop_counter.swf" name="donut shop counter" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="living_room_tv.swf" name="TV back" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="hopsital_ward_chair.swf" name="hospital bench" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="hopsital_ward_counter.swf" name="hospital counter" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="doctor_office_bed.swf" name="doctor office bed" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="doctor_office_table.swf" name="doctor office desk" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="afro1.swf" name="Afro" holdable="0" placeable="1" wearable="1" facing="left"/>
 	<prop id="afro2.swf" name="Afro" holdable="0" placeable="1" wearable="1" facing="left"/>
 	<prop id="tick.swf" name="Tick" holdable="0" placeable="1" wearable="0" facing="left"/>
@@ -15220,16 +14669,7 @@
 	<prop id="car_inside.swf" name="Car_inside" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="train.swf" name="Train" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="crown.swf" name="Crown" holdable="0" placeable="1" wearable="1" facing="left"/>
-	<prop id="pirate_ship_deck_wooden_tub.swf" name="wooden tub" holdable="1" placeable="1" wearable="0" facing="left"/>
-	<prop id="pirate_ship_deck_cannon.swf" name="cannon" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="Presidential_podium_podium.swf" name="Presidential podium podium" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="presidential_desk_chair.swf" name="presidential chair" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="presidential_desk_desk.swf" name="presidential desk" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="spooky_lab_table.swf" name="Lab table" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="graveyard_grave.swf" name="Graveyard grave" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="evil_lair_torture_table.swf" name="Torture table" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="evil_lair_rotating_saw.swf" name="rotating saw" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="evil_lair_chair.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="stage_upper curtain.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="stage_hifi.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="stage_curtain.swf" name="Curtain" holdable="0" placeable="1" wearable="0" facing="left"/>
@@ -15238,9 +14678,6 @@
 	<prop id="earth.swf" name="earth" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="space_saturn.swf" name="saturn" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="space_cheese_planet.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="volcanic_planet_pit2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="volcanic_planet_pit.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
-	<prop id="volcanic_planet_rock.swf" name="" holdable="0" placeable="1" wearable="0" facing="left"/>
 	<prop id="teddy_bear.swf" name="Teddy Bear" holdable="1" placeable="1" wearable="0" facing="left" handstyle="flat"/>
 	<prop id="egg_small.swf" name="Egg" holdable="1" placeable="1" wearable="0" facing="left" handstyle="flat"/>
 	<prop id="egg_break.swf" name="Egg Breaking" holdable="0" placeable="1" wearable="0" facing="left"/>
