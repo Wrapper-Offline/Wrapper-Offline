@@ -1,0 +1,83 @@
+// Chips
+.chip {
+  display: inline-block;
+  height: $chip-height;
+  font-size: $chip-font-size;
+  font-weight: $chip-font-weight;
+  color: $chip-font-color;
+  line-height: $chip-line-height;
+  padding: 0 $chip-padding-right;
+  border-radius: $chip-br;
+  background-color: $chip-background-color;
+  margin-bottom: $chip-margin-bottom;
+  margin-right: $chip-margin-right;
+  cursor: pointer;
+  transition: $pagination-page-link-transition;
+  &:hover {
+    transition: $pagination-page-link-transition;
+    background-color: $grey-lighten-2;
+  }
+  &:focus {
+    transition: $pagination-page-link-transition;
+    background-color: $grey-lighten-1;
+  }
+  &:active {
+    transition: $pagination-page-link-transition;
+    @extend .z-depth-1;
+  }
+  img {
+    float: left;
+    margin: 0 $chip-img-margin-right 0 $chip-img-margin-left;
+    height: $chip-img-height;
+    width: $chip-img-width;
+    border-radius: 50%;
+  }
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: $chip-close-font-size;
+    line-height: $chip-close-line-height;
+    padding-left: $chip-close-padding-left;
+    transition: all 0.1s linear;
+  }
+}
+
+.chips {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid $input-border-color;
+  margin-bottom: $chips-margin-bottom;
+  min-height: $chips-min-height;
+  padding-bottom: $chips-padding-bottom;
+  transition: all .3s;
+  &.focus {
+    border-bottom: 1px solid $input-md-focus-color;
+    box-shadow: 0 1px 0 0 $input-md-focus-color;
+  }
+  &:hover {
+    cursor: text;
+  }
+  .tag.selected {
+    border-bottom: 1px solid $input-md-focus-color;
+    color: $white-base;
+  }
+  .input {
+    display: inline-block;
+    background: none;
+    border: 0;
+    outline: 0;
+    padding: 0 !important;
+    width: $chips-input-width !important;
+    color: $chips-input-font-color;
+    font-size: $chips-input-font-size;
+    font-weight: $chips-input-font-weight;
+    height: $chips-input-height;
+    margin-right: $chips-input-margin-right;
+    line-height: $chips-input-line-height;
+    &:focus {
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+}

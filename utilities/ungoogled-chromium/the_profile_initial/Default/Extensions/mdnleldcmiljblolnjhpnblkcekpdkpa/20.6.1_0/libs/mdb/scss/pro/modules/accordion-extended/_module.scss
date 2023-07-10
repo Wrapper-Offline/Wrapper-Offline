@@ -1,0 +1,100 @@
+// Accordion extended
+.accordion-gradient-bcg {
+  background: linear-gradient(45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%);
+}
+.accordion {
+  &.md-accordion {
+    // Font
+    &.accordion-1,
+    &.accordion-2,
+    &.accordion-3,
+    &.accordion-4,
+    &.accordion-5 {
+      p {
+        font-size: 1rem;
+      }
+    }
+    // Border
+    &.accordion-1,
+    &.accordion-2,
+    &.accordion-4,
+    &.accordion-5 {
+      .card {
+        border: 0;
+        .card-header {
+          border: 0;
+        }
+      }
+    }
+    &.accordion-1 {
+      .card {
+        .card-body {
+          line-height: 1.4;
+        }
+      }
+    }
+    // With gradient background
+    &.accordion-2 {
+      .card {
+        background-color: transparent;
+        .card-body {
+          border: 0;
+          border-radius: 3px;
+        }
+      }
+    }
+    // With icons
+    &.accordion-3 {
+      border-radius: 3px;
+      .fas, .fab, .far {
+        &.fa-angle-down {
+          margin-top: -10px;
+        }
+      }
+    }
+    // With teal cards
+    &.accordion-4 {
+      .card {
+        &:last-of-type {
+          .card-body {
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+          }
+        }
+      }
+    }
+    // With photo background
+    &.accordion-5 {
+      .card {
+        background-color: transparent;
+        .card-header {
+          background-color: #f44336;
+          transition: .3s;
+          &:hover {
+            transition: .3s;
+            background-color: #455a64;
+          }
+          .fas, .fab, .far {
+            background-color: #fff;
+            border-top-left-radius: 3px;
+          }
+        }
+        .card-body {
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+      }
+    }
+    // With table
+    &.accordion-blocks {
+      .card {
+        margin-bottom: 1.2rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        .card-body {
+          border-top: 1px solid #eee;
+        }
+      }
+    }
+  }
+}
+

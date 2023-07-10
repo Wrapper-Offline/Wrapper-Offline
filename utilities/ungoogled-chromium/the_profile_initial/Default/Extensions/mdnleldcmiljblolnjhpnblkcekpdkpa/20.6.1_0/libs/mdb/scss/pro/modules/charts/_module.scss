@@ -1,0 +1,25 @@
+// Charts Pro
+.min-chart {
+  position: relative;
+  display: inline-block;
+  width: $min-chart-width;
+  height: $min-chart-height;
+  margin-top: $min-chart-margin;
+  margin-bottom: $min-chart-margin;
+  text-align: center;
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .percent {
+    display: inline-block;
+    line-height: $min-chart-line-height;
+    z-index: 2;
+    &:after {
+      content: "%";
+      margin-left: $min-chart-percent-margin;
+      font-size: $min-chart-percent-font-size;
+    }
+  }
+}

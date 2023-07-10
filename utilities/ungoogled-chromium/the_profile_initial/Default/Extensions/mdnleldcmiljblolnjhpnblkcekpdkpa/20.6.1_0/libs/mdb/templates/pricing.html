@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap Template</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
+
+  <style>
+
+    html,
+        body,
+        header,
+        .view {
+          height: 700px;
+        }
+
+        @media (max-width: 740px) {
+          html,
+          body,
+          header,
+          .view {
+            height: 1000px;
+          }
+        }
+
+        @media (min-width: 800px) and (max-width: 1030px) {
+          html,
+          body,
+          header,
+          .view  {
+            height: 650px;
+          }
+        }
+
+        .intro-2 {
+            background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
+            background-size: cover;
+        }
+
+        .top-nav-collapse {
+            background-color: #929fba !important;
+        }
+        .navbar:not(.top-nav-collapse) {
+            background: transparent !important;
+        }
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #929fba !important;
+            }
+        }
+        /*h6 {
+            line-height: 1.7;
+        }*/
+        .rgba-gradient {
+            background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(50, 189, 229, 0.6) 100%);
+            background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(50, 189, 229, 0.6) 100%);
+            background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.6)), to(rgba(50, 189, 229, 0.6)));
+            background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(50, 189, 229, 0.6) 100%);
+            background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.6), rgba(50, 189, 229, 0.6) 100%);
+        }
+        @media (max-width: 450px) {
+            .margins {
+                margin-right: 1rem;
+                margin-left: 1rem;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+  <!--Main Navigation-->
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><strong>MDB</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--Intro Section-->
+    <section class="view intro-2">
+      <div class="mask rgba-gradient"></div>
+      <div class="container h-100 d-flex justify-content-center align-items-center">
+        <div class="row flex-center pt-5 mt-3">
+          <div class="col-md-6 text-center text-md-left margins">
+            <div class="white-text">
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Make purchases with our
+                app </h1>
+              <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+              <h6 class="wow fadeInLeft" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi
+                non animi ea dolor molestiae iste.</h6>
+              <br>
+              <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
+              <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Download
+                <i class="fab fa-android left right" aria-hidden="true"></i>
+                <i class="fab fa-apple left" aria-hidden="true"></i>
+                <i class="fab fa-windows" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
+            <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-admin.png" alt="" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </header>
+  <!--Main Navigation-->
+
+
+  <!--Main Layout-->
+  <main>
+
+    <div class="container">
+
+      <!--Section: Features v.2-->
+      <section class="text-center wow fadeIn" data-wow-delay="0.3s">
+
+        <!--Section heading-->
+        <h1 class="font-weight-bold text-center h1 my-5">Why is it so great?</h1>
+        <!--Section description-->
+        <p class="text-center grey-text mb-5 mx-auto w-responsive lead">Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas
+          nostrum quisquam eum.</p>
+
+        <!--Grid row-->
+        <div class="row text-left">
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-4">
+            <div class="col-1 col-md-2 float-left">
+              <i class="fas fa-bullhorn fa-2x blue-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+              <h4 class="font-weight-bold mb-4">Marketing</h4>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                aperiam minima assumenda.</p>
+              <a class="btn btn-primary btn-sm ml-0">Learn more</a>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-4">
+            <div class="col-1 col-md-2 float-left">
+              <i class="fas fa-cogs fa-2x orange-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+              <h4 class="font-weight-bold mb-4">Customization</h4>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                aperiam minima assumenda.</p>
+              <a class="btn btn-deep-orange btn-sm ml-0">Learn more</a>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-4">
+            <div class="col-1 col-md-2 float-left">
+              <i class="fas fa-tachometer-alt fa-2x purple-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+              <h4 class="font-weight-bold mb-4">Support</h4>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                aperiam minima assumenda.</p>
+              <a class="btn btn-secondary btn-sm ml-0">Learn more</a>
+            </div>
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Features v.2-->
+
+      <hr class="my-5">
+
+
+      <!-- Section: Pricing v.6 -->
+      <section class="my-5 wow fadeIn" data-wow-delay="0.3s">
+
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold text-center my-5">Our pricing plans</h2>
+        <!-- Section description -->
+        <p class="text-center w-responsive mx-auto mb-5 grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+          quisquam eum porro a pariatur veniam.</p>
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
+            <!-- Pricing card -->
+            <div class="card pricing-card white-text">
+
+              <!-- Price -->
+              <div class="aqua-gradient rounded-top">
+                <h4 class="option">BASIC</h4>
+              </div>
+
+              <!-- Features -->
+              <div class="card-body striped green-striped card-background px-5">
+
+                <h2 class="my-4 pb-3 h1">20$</h2>
+                <ul>
+                  <li>
+                    <p><strong>1</strong> project</p>
+                  </li>
+                  <li>
+                    <p><strong>100</strong> components</p>
+                  </li>
+                  <li>
+                    <p><strong>150</strong> features</p>
+                  </li>
+                  <li>
+                    <p><strong>200</strong> members</p>
+                  </li>
+                </ul>
+                <button class="mb-3 mt-3 btn aqua-gradient btn-rounded">Buy now</button>
+
+              </div>
+              <!-- Features -->
+
+            </div>
+
+            <!-- Pricing card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+
+            <!-- Pricing card -->
+            <div class="card pricing-card white-text">
+
+              <!-- Price -->
+              <div class="peach-gradient rounded-top">
+                <h4 class="option">PRO</h4>
+              </div>
+
+              <!-- Features -->
+              <div class="card-body striped orange-striped card-background px-5">
+
+                <h2 class="my-4 pb-3 h1">80$</h2>
+                <ul>
+                  <li>
+                    <p><strong>1</strong> project</p>
+                  </li>
+                  <li>
+                    <p><strong>100</strong> components</p>
+                  </li>
+                  <li>
+                    <p><strong>150</strong> features</p>
+                  </li>
+                  <li>
+                    <p><strong>200</strong> members</p>
+                  </li>
+                </ul>
+                <button class="mb-3 mt-3 btn peach-gradient btn-rounded">Buy now</button>
+
+              </div>
+              <!-- Features -->
+
+            </div>
+            <!-- Pricing card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6">
+
+            <!-- Pricing card -->
+            <div class="card pricing-card white-text">
+
+              <!-- Price -->
+              <div class="purple-gradient rounded-top">
+                <h4 class="option">ENTERPRISE</h4>
+              </div>
+
+              <!-- Features -->
+              <div class="card-body striped purple-striped card-background px-5">
+
+                <h2 class="my-4 pb-3 h1">100$</h2>
+                <ul>
+                  <li>
+                    <p><strong>1</strong> project</p>
+                  </li>
+                  <li>
+                    <p><strong>100</strong> components</p>
+                  </li>
+                  <li>
+                    <p><strong>150</strong> features</p>
+                  </li>
+                  <li>
+                    <p><strong>200</strong> members</p>
+                  </li>
+                </ul>
+                <button class="mb-3 mt-3 btn purple-gradient btn-rounded">Buy now</button>
+
+              </div>
+              <!-- Features -->
+
+            </div>
+            <!-- Pricing card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!-- Section: Pricing v.6 -->
+
+
+    </div>
+
+
+  </main>
+  <!--Main Layout-->
+
+  <!--Footer-->
+  <footer class="page-footer pt-4 mt-4   mdb-color lighten-3 text-center text-md-left">
+
+    <!--Footer Links-->
+    <div class="container wow fadeIn" data-wow-delay="0.3s">
+
+      <!--First row-->
+      <div class="row mt-3 mb-4">
+
+        <!--Grid column-->
+        <div class="col-lg-4 text-center">
+          <h5 class="font-weight-bold">MDBootstrap</h5>
+        </div>
+        <!--Grid column-->
+
+        <hr class="w-100 clearfix d-lg-none">
+
+        <div class="col-lg-4">
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <p class="font-weight-bold text-uppercase pr-4">about</p>
+            </li>
+            <li>
+              <p class="font-weight-bold text-uppercase pr-4">contact</p>
+            </li>
+            <li>
+              <p class="font-weight-bold text-uppercase pr-4">blog</p>
+            </li>
+            <li>
+              <p class="font-weight-bold text-uppercase pr-4">team</p>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="w-100 clearfix d-lg-none">
+
+        <!--Grid column-->
+        <div class="col-lg-4">
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li><a class="p-2 m-2 fa-lg fb-ic"><i class="fab fa-facebook-f white-text"></i></a></li>
+            <li><a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a></li>
+            <li><a class="p-2 m-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g white-text"></i></a></li>
+            <li><a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"></i></a></li>
+          </ul>
+        </div>
+        <!--/Grid column-->
+
+      </div>
+      <!--/First row-->
+
+    </div>
+    <!--/Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright text-center py-3 wow fadeIn" data-wow-delay="0.3s">
+      <div class="container-fluid">
+        &copy; 2019 Copyright: <a href="https://mdbootstrap.com/docs/jquery/"> MDBootstrap.com </a>
+      </div>
+    </div>
+    <!--/Copyright-->
+
+  </footer>
+  <!--/Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <script>
+    new WOW().init();
+
+  </script>
+</body>
+
+</html>

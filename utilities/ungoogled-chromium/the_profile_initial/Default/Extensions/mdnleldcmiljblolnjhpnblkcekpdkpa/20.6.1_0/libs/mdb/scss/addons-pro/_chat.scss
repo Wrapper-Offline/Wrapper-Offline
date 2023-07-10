@@ -1,0 +1,23 @@
+// Chat
+.chat-room {
+  .friend-list {
+    li {
+      border-bottom: 1px solid #e0e0e0;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+  img {
+    &.avatar {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  .text-small {
+    font-size: 0.95rem;
+  }
+  .text-smaller {
+    font-size: 0.75rem;
+  }
+}

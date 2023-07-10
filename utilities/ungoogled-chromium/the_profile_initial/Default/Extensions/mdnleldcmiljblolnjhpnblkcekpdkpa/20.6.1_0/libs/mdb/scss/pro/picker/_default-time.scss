@@ -1,0 +1,423 @@
+/* ==========================================================================
+   $BASE-TIME-PICKER
+   ========================================================================== */
+/**
+ * The list of times.
+ */
+.picker__list {
+  list-style: none;
+  padding: $timepicker-pickerlist-padding;
+  margin: 0;
+}
+/**
+ * The times on the clock.
+ */
+.picker__list-item {
+  border-bottom: $timepicker-pickerlistitem-border-bottom solid $timepicker-pickerlistitem-border-color;
+  border-top: $timepicker-pickerlistitem-border-top solid $timepicker-pickerlistitem-border-color;
+  margin-bottom: $timepicker-pickerlistitem-mb;
+  position: relative;
+  @extend .white;
+  padding: $timepicker-pickerlistitem-padding;
+  @media (min-height: $timepicker-pickerlistitem-breakpoint) {
+    padding: $timepicker-pickerlistitem-media-padding;
+  }
+  /* Hovered time */
+  &:hover {
+    cursor: pointer;
+    @extend .black;
+    background: $timepicker-pickerlistitem-hover-bg;
+    border-color: $timepicker-pickerlistitem-hover-border-color;
+    z-index: 10;
+  }
+}
+
+/* Highlighted and hovered/focused time */
+.picker__list-item--highlighted {
+  border-color: $timepicker-pickerlistitem-highlighted-border-color;
+  z-index: 10;
+}
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+  cursor: pointer;
+  color: $black;
+  background: $timepicker-pickerlistitem-highlighted-hover-bg;
+}
+/* Selected and hovered/focused time */
+.picker__list-item--selected,
+.picker__list-item--selected:hover,
+.picker--focused .picker__list-item--selected {
+  background: $timepicker-pickerlistitem-selected-hover-bg;
+  @extend .white-text;
+  z-index: 10;
+}
+/* Disabled time */
+.picker__list-item--disabled,
+.picker__list-item--disabled:hover,
+.picker--focused .picker__list-item--disabled {
+  background: $grey-lighten-4;
+  border-color: $grey-lighten-4;
+  color: $timepicker-pickerlistitem-disabled-hover-color;
+  cursor: default;
+  border-color: $timepicker-pickerlistitem-disabled-hover-color;
+  z-index: auto;
+}
+/**
+ * The clear button
+ */
+.picker--time {
+  .picker__button--clear {
+    display: block;
+    width: $timepicker-pickertime-button-clear-width;
+    margin: $timepicker-pickertime-button-clear-mt auto 0;
+    padding: $timepicker-pickertime-button-clear-padding;
+    background: none;
+    border: 0;
+    font-weight: $timepicker-pickertime-button-clear-font-weight;
+    font-size: $timepicker-pickertime-button-clear-font-size;
+    text-align: center;
+    text-transform: uppercase;
+    color: $timepicker-color-mdb;
+    &:hover,
+    &:focus {
+      color: $black;
+      background: $timepicker-pickertime-button-clear-hover-bg;
+      border-color: $timepicker-pickertime-button-clear-hover-border-color;
+      cursor: pointer;
+      @extend .white-text;
+      outline: none;
+      &:before {
+        @extend .white-text;
+      }
+    }
+    &:before {
+      top: $timepicker-pickertime-button-clear-before-top;
+      color: $timepicker-color-mdb;
+      font-size: $timepicker-pickertime-button-clear-before-font-size;
+      font-weight: $timepicker-pickertime-button-clear-before-font-weight;
+    }
+  }
+}
+
+/* ==========================================================================
+   $DEFAULT-TIME-PICKER
+   ========================================================================== */
+/**
+ * The frame the bounds the time picker.
+ */
+.picker--time .picker__frame {
+  min-width: $timepicker-pickertime-frame-min-width;
+  max-width: $timepicker-pickertime-frame-max-width;
+}
+/**
+ * The picker box.
+ */
+.picker--time .picker__box {
+  font-size: $timepicker-pickerbox-font-size;
+  background: $timepicker-pickerbox-bg;
+  padding: 0;
+  @media (min-height: $timepicker-pickerbox-breakpoint) {
+    margin-bottom: $timepicker-pickerbox-breakpoint-mb;
+  }
+
+}
+
+/*!
+ * ClockPicker v0.0.7 for jQuery (http://weareoutman.github.io/clockpicker/)
+ * Copyright 2014 Wang Shenwei.
+ * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
+ *
+ * Further modified
+ * Copyright 2015 Ching Yaw Hao.
+ *
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+.picker__date-display {
+  text-align: center;
+  background-color: $datepicker-date-bg;
+  @extend .white-text;
+  padding-bottom: $timepicker-pickerdate-display-pb;
+  font-weight: $timepicker-pickerdate-display-font-weight;
+  margin-bottom: $timepicker-pickerdate-display-mb;
+
+  .clockpicker-display {
+    vertical-align: middle;
+    display: inline-block;
+    margin: auto;
+    height: $timepicker-clockpicker-display-height;
+    font-size: $timepicker-clockpicker-display-font-size;
+    padding: $timepicker-clockpicker-display-padding;
+    padding-bottom: 0px;
+    color: $timepicker-clockpicker-display-color;
+    .clockpicker-display-column {
+      float: left;
+      .clockpicker-span-hours.text-primary, .clockpicker-span-minutes.text-primary, #click-am.text-primary, #click-pm.text-primary {
+        animation-name: $timepicker-clockpicker-display-animate-name;
+        @extend .white-text;
+      }
+      #click-am, #click-pm {
+        cursor: pointer;
+      }
+    }
+    .clockpicker-display-am-pm {
+      padding-left: $timepicker-clockpicker-display-am-pm-pl;
+      vertical-align: bottom;
+      height: $timepicker-clockpicker-display-am-pm-height;
+      .clockpicker-span-am-pm {
+        display: inline-block;
+        font-size: $timepicker-clockpicker-span-am-pm-font-size;
+        line-height: $timepicker-clockpicker-span-am-pm-line-height;
+        color: $timepicker-clockpicker-span-am-pm-color;
+      }
+    }
+    .clockpicker-span-hours, .clockpicker-span-minutes {
+      animation-duration: $timepicker-clockpicker-span-hours-animation-duration;
+      animation-fill-mode: both;
+      transition: $timepicker-clockpicker-span-hours-transition;
+      cursor: pointer;
+    }
+  }
+}
+.clockpicker-display {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: auto;
+  height: $timepicker-clockpicker-display-height;
+  font-size: $timepicker-clockpicker-display-font-size;
+  padding: $timepicker-clockpicker-display-padding;
+  padding-bottom: 0px;
+  color: $timepicker-clockpicker-display-color;
+  .clockpicker-display-column {
+    float: left;
+    .clockpicker-span-hours.text-primary, .clockpicker-span-minutes.text-primary, #click-am.text-primary, #click-pm.text-primary {
+      animation-name: $timepicker-clockpicker-display-animate-name;
+      @extend .white-text;
+    }
+    #click-am, #click-pm {
+      cursor: pointer;
+    }
+  }
+  .clockpicker-display-am-pm {
+    padding-left: $timepicker-clockpicker-display-am-pm-pl;
+    vertical-align: bottom;
+    height: $timepicker-clockpicker-display-am-pm-height;
+    .clockpicker-span-am-pm {
+      display: inline-block;
+      font-size: $timepicker-clockpicker-span-am-pm-font-size;
+      line-height: $timepicker-clockpicker-span-am-pm-line-height;
+      color: $timepicker-clockpicker-span-am-pm-color;
+    }
+  }
+  .clockpicker-span-hours, .clockpicker-span-minutes {
+    animation-duration: $timepicker-clockpicker-span-hours-animation-duration;
+    animation-fill-mode: both;
+    cursor: pointer;
+    @include transition-main($timepicker-clockpicker-span-hours-transition);
+  }
+}
+
+@include keyframes (pulse){
+  from {
+    transform: $timepicker-keyframes-transform-pulse;
+  }
+  50% {
+    transform: $timepicker-keyframes-transform-pulse-middle;
+  }
+  to {
+    transform: $timepicker-keyframes-transform-pulse;
+  }
+}
+
+.clockpicker-moving {
+  cursor: move;
+}
+.clockpicker-plate {
+  background-color: $grey-lighten-3;
+  border-radius: $timepicker-clockpicker-plate-border-radius;
+  width: $timepicker-clockpicker-plate-width;
+  height: $timepicker-clockpicker-plate-height;
+  overflow: visible;
+  position: relative;
+  margin: auto;
+  margin-top: $timepicker-clockpicker-plate-margin-top;
+  /* Disable text selection highlighting. Thanks to Hermanya */
+  user-select: none;
+  .clockpicker-canvas,
+  .clockpicker-dial {
+    width: $timepicker-clockpicker-canvas-width;
+    height: $timepicker-clockpicker-canvas-height;
+    position: absolute;
+    left: $timepicker-clockpicker-canvas-left;
+    top: $timepicker-clockpicker-canvas-top;
+  }
+  .clockpicker-dial {
+    @include transition-main($timepicker-clockpicker-dial-transition-transform, $timepicker-clockpicker-dial-transition-opacity);
+    .clockpicker-tick {
+      border-radius: $timepicker-clockpicker-dial-tick-border-radius;
+      color: $timepicker-color-mdb;
+      line-height: $timepicker-clockpicker-dial-tick-line-height;
+      text-align: center;
+      width: $timepicker-clockpicker-dial-tick-width;
+      height: $timepicker-clockpicker-dial-tick-height;
+      position: absolute;
+      cursor: pointer;
+      transition: $timepicker-clockpicker-dial-tick-transition;
+      background-color: $timepicker-clockpicker-dial-tick-hover-bg;
+      &.active,
+      &:hover {
+        background-color: $timepicker-clockpicker-dial-tick-hover-bg-opacity;
+      }
+    }
+  }
+  .clockpicker-minutes {
+    visibility: hidden;
+  }
+  .clockpicker-dial-out {
+    opacity: 0;
+  }
+  .clockpicker-hours.clockpicker-dial-out {
+    @include transform($timepicker-clockpicker-dial-out-transform);
+  }
+  .clockpicker-minutes.clockpicker-dial-out {
+    @include transform($timepicker-clockpicker-dial-out-transform-minutes);
+  }
+}
+
+.clockpicker-canvas {
+  @include transition-main($timepicker-clockpicker-canvas-transition);
+  line {
+    stroke: $timepicker-clockpicker-canvas-stroke;
+    stroke-width: $timepicker-clockpicker-canvas-stroke-width;
+  }
+}
+.clockpicker-canvas-out {
+  opacity: $timepicker-clockpicker-canvas-out-opacity;
+}
+.clockpicker-canvas-bearing {
+  stroke: none;
+  fill: $timepicker-clockpicker-canvas-bearing-fill;
+}
+.clockpicker-canvas-fg {
+  stroke: none;
+  fill: $timepicker-clockpicker-canvas-fg-fill;
+  &.active {
+    fill: $timepicker-clockpicker-canvas-fg-active-fill;
+  }
+}
+.clockpicker-canvas-bg {
+  stroke: none;
+  fill: $timepicker-clockpicker-canvas-bg-fill;
+}
+.clockpicker-canvas-bg-trans {
+  fill: $timepicker-clockpicker-canvas-bg-trans-fill;
+}
+
+.clockpicker-am-pm-block{
+  margin-top: $timepicker-clockpicker-am-pm-block-mt;
+  width: 100%;
+  height: $timepicker-clockpicker-am-pm-block-height;
+  .clockpicker-button.am-button {
+    height: $timepicker-clockpicker-button-am-button-height;
+    width: $timepicker-clockpicker-button-am-button-width;
+    float: left;
+    border: 0;
+  }
+  .clockpicker-button.pm-button {
+    height: $timepicker-clockpicker-button-pm-button-height;
+    width: $timepicker-clockpicker-button-pm-button-width;
+    float: right;
+    border: 0;
+  }
+}
+
+.btn-floating.btn-flat {
+  color: $white-base;
+  padding: 0;
+  background: $primary-color;
+  &:hover {
+    box-shadow: none;
+  }
+  &:hover,
+  &:focus {
+    background-color: $timepicker-clockpicker-btn-floating-focus-bg !important;
+  }
+  &.active {
+    background-color: $timepicker-clockpicker-btn-floating-active-bg !important;
+    box-shadow: $z-depth-1-half;
+  }
+}
+
+.picker__footer {
+  width: 100%;
+  .clockpicker-button {
+    margin: auto;
+    margin-top: $timepicker-clockpicker-footer-button-mt;
+    background-color: transparent;
+    text-transform: uppercase;
+    &:focus {
+      background-color: transparent;
+    }
+    &:active {
+      background-color: $timepicker-clockpicker-footer-button-active-bg;
+    }
+  }
+}
+
+.darktheme {
+  .picker__box {
+    background-color: $grey-darken-4;
+    .picker__date-display {
+      background-color: transparent;
+      .clockpicker-display {
+        @extend .white-text;
+        .clockpicker-span-am-pm {
+          @extend .white-text;
+        }
+
+      }
+    }
+    .picker__calendar-container{
+      .clockpicker-plate {
+        background-color: transparent;
+        .clockpicker-tick {
+          @extend .white-text;
+          background-color: $timepicker-darktheme-clockpicker-plate-bg;
+          &.active, &:hover {
+            background-color: $timepicker-darktheme-clockpicker-plate-active-bg;
+          }
+        }
+        .clockpicker-canvas line {
+          stroke: $timepicker-darktheme-clockpicker-canvas-line-stroke;
+        }
+        .clockpicker-canvas-bearing {
+          fill: $white-base;
+        }
+        .clockpicker-canvas-fg {
+          fill: $timepicker-darktheme-clockpicker-canvas-fg-fill;
+          &.active {
+            fill: $timepicker-darktheme-clockpicker-canvas-active-fg-fill;
+          }
+        }
+        .clockpicker-canvas-bg {
+          fill: $timepicker-darktheme-clockpicker-canvas-bg-fill;
+        }
+        .clockpicker-canvas-bg-trans {
+          fill: $timepicker-darktheme-clockpicker-canvas-bg-trans-fill;
+        }
+      }
+    }
+    .picker__footer{
+      button {
+        @extend .white-text;
+      }
+      .clockpicker-button:active {
+        background-color: $timepicker-darktheme-clockpicker-button-active-bg;
+      }
+    }
+
+  }
+
+}

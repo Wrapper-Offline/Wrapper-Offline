@@ -1,0 +1,91 @@
+// Pricing section
+.pricing-card {
+  text-align: center;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .header {
+    box-shadow: $z-depth-1-half;
+  }
+  .option {
+    padding: $pricing-card-option-padding;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  .price {
+    position: relative;
+    padding-top: $pricing-card-price-padding-top;
+    .number {
+      font-size: $pricing-card-number-font-size;
+      padding: $pricing-card-number-padding;
+      font-weight: 300;
+      &:before {
+        content: "$";
+        position: absolute;
+        font-size: $pricing-card-number-before-font-size;
+        margin-left: $pricing-card-number-before-margin-left;
+        margin-top: $pricing-card-number-before-margin-top;
+      }
+      &:after {
+        content: "/mo";
+        position: absolute;
+        font-size: $pricing-card-number-after-font-size;
+        margin-top: $pricing-card-number-after-margin-top;
+      }
+    }
+    .version {
+      box-shadow: $z-depth-1;
+      border-radius: $md-card-border-radius $md-card-border-radius 0 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: $pricing-card-version-padding;
+      background-color: $pricing-card-version-bgc;
+    }
+  }
+  .striped {
+    padding: $pricing-card-striped-padding;
+    li {
+      border-bottom: 1px solid $pricing-card-striped-li-border-bottom-color;
+      margin-bottom: $pricing-card-striped-li-margin-bottom;
+    }
+    &.green-striped {
+      li {
+        border-color: $pricing-card-green-striped-li-border-color;
+      }
+    }
+    &.orange-striped {
+      li {
+        border-color: $pricing-card-orange-striped-li-border-color;
+      }
+    }
+    &.purple-striped {
+      li {
+        border-color: $pricing-card-purple-striped-li-border-color;
+      }
+    }
+    &.darker-striped {
+      li {
+        border-bottom: 1px solid $pricing-card-striped-li-border-bottom-color-darker;
+      }
+    }
+  }
+  .card-background {
+    background-color: $pricing-card-dark-bgc;
+    border-radius: 0 0 $md-card-border-radius $md-card-border-radius;
+  }
+}
+
+// Additional pricing cards
+.card {
+  .card-circle {
+    border: 2px solid $pricing-card-circle-border-color;
+    height: $pricing-card-circle-height;
+    width: $pricing-card-circle-width;
+    border-radius: $pricing-card-circle-border-radius;
+    .fas, .fab, .far {
+      font-size: $pricing-card-circle-icon-font-size;
+    }
+  }
+}

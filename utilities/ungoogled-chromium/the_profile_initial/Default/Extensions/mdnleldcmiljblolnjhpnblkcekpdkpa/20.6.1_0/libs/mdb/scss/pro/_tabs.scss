@@ -1,0 +1,150 @@
+// Navs, Tabs and Pills
+.md-tabs {
+  box-shadow: $z-depth-1-half;
+  border: 0;
+  padding: $tabs-padding;
+  margin-left: $tabs-margin-x;
+  margin-right: $tabs-margin-x;
+  margin-bottom: $tabs-margin-y;
+  background-color: $nav-tabs-pills-bgc;
+  z-index: 1;
+  position: relative;
+  border-radius: $nav-tabs-border-radius;
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  .nav-item {
+    &.disabled {
+      pointer-events: none !important;
+      .nav-link {
+        color: $nav-item-disabled-link-color;
+      }
+    }
+  }
+  .nav-link {
+    transition: $nav-link-transition;
+    border: 0;
+    color: $white-base;
+  }
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    background-color: $nav-link-active-bgc;
+    color: $white-base;
+    transition: $nav-link-active-transition;
+    border-radius: $nav-tabs-border-radius;
+  }
+  .nav-item.show .nav-link {
+    background-color: $nav-tabs-pills-bgc;
+    color: $white-base;
+    transition: $nav-link-active-transition;
+    border-radius: $nav-tabs-border-radius;
+  }
+  .nav-item.show .nav-link.dropdown-toggle {
+    background-color: $nav-link-active-bgc;
+  }
+}
+.tab-content {
+  padding: $tab-content-padding;
+  padding-top: $tab-content-pt;
+  // z-index: 1;
+  &.vertical {
+    padding-top: 0;
+  }
+}
+
+.md-pills {
+  border: 0;
+  li {
+    padding: $pills-padding;
+  }
+  .show > .nav-link {
+    box-shadow: $z-depth-1;
+    color: $white-base;
+    background-color: $nav-tabs-pills-bgc;
+  }
+  .nav-link {
+    transition: $nav-link-transition;
+    border-radius: $md-pills-nav-link-border-radius;
+    color: $md-pills-nav-link-color;
+    text-align: center;
+    &:hover {
+      @extend .rgba-grey-light;
+    }
+    &.active {
+      box-shadow: $z-depth-1;
+      color: $white-base;
+      background-color: $nav-tabs-pills-bgc;
+    }
+    &.active:hover {
+      box-shadow: $z-depth-1-half;
+    }
+  }
+}
+
+@each $name, $color in $mdb-colors {
+  .pills-#{$name} {
+    .show > .nav-link {
+      background-color: $color !important;
+    }
+    .nav-link {
+      &.active {
+        background-color: $color !important;
+      }
+    }
+  }
+  .tabs-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+.classic-tabs {
+  .nav {
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+    border-radius: $classic-tabs-border-radius $classic-tabs-border-radius 0 0;
+    @media (min-width: 62rem) {
+      overflow-x: hidden;
+    }
+    li {
+      a {
+        display: block;
+        padding: $classic-tabs-padding-y $classic-tabs-padding-x;
+        font-size: $classic-tabs-font-size;
+        text-transform: uppercase;
+        color: $classic-tabs-color;
+        text-align: center;
+        border-radius: 0;
+        &:not(.active) {
+          margin-bottom: $classic-tabs-li-a-active-border-bottom;
+        }
+        &.active {
+          border-bottom: $classic-tabs-li-a-active-border-bottom solid;
+          color: $white-base;
+        }
+      }
+      @media (min-width: 62em) {
+        &:first-child {
+          margin-left: $classic-tabs-margin-left;
+        }
+      }
+    }
+    @each $name, $color in $ctbc {
+      &.#{$name} {
+        li {
+          a {
+            &.active {
+              border-color: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    &.card {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

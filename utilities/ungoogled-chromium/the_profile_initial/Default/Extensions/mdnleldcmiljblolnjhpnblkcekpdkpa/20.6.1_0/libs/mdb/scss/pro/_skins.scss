@@ -1,0 +1,246 @@
+// Skins
+@each $skin, $data in $skins {
+  .#{$skin}-skin {
+    .gradient {
+      background: map-get($data, skin-gradient-start);
+      background: linear-gradient(135deg, map-get($data, skin-gradient-start) 0%, map-get($data, skin-gradient-end) 100%);
+    }
+    .primary-color {
+      background-color: map-get($data, skin-primary-color) !important;
+    }
+    .navbar {
+      background-color: map-get($data, skin-navbar);
+      color: map-get($data, skin-text);
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu a {
+            color: $black;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: darken( map-get($data, skin-accent), 5%);
+            }
+          }
+          @if $skin=="white" {
+            a {
+              color: map-get($data, skin-text);
+            }
+          }
+        }
+      }
+      &.double-nav {
+        a {
+          color: map-get($data, skin-text);
+        }
+      }
+      form {
+        .md-form {
+          .form-control {
+            color: map-get($data, skin-text);
+            font-weight: 300;
+            &::placeholder {
+              color: map-get($data, skin-text);
+            }
+          }
+        }
+      }
+      &.navbar-dark {
+        form {
+          .md-form {
+            .form-control {
+              @if $skin=="white" {
+                color: map-get($data, skin-navbar);
+                &::placeholder {
+                  color: map-get($data, skin-navbar);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .page-footer {
+      background-color: map-get($data, skin-footer-color);
+    }
+    .side-nav {
+      background-color: map-get($data, skin-flat);
+      .logo-wrapper {
+        &>div {
+          background-color: transparent !important;
+        }
+      }
+      .sn-avatar-wrapper img {
+        border: 3px solid darken( map-get($data, skin-accent), 15%);
+      }
+      .social {
+        border-bottom: 1px solid $skins-border-color;
+        a {
+          @if $skin=="white" {
+            .fas, .fab, .far {
+              color: map-get($data, skin-text);
+            }
+          }
+          &:hover {
+            .fas, .fab, .far {
+              color: map-get($data, skin-accent) !important;
+              transition: $skins-side-nav-hover-transition;
+            }
+          }
+        }
+      }
+      @if $skin=="white" {
+        .search-form .md-form input {
+          color: map-get($data, skin-text) !important;
+          border-bottom: $skins-white-search-border-bottom solid $skins-border-color;
+          @include placeholder {
+            color: rgba(map-get($data, skin-text), .5) !important;
+          }
+        }
+      }
+      .collapsible li {
+        background-color: transparent;
+        @if $skin=="white" {
+          a {
+            font-weight: 400;
+          }
+        }
+        .collapsible-header {
+          color: map-get($data, skin-text);
+          transition: $skins-side-nav-hover-transition;
+          &.active {
+            @if $skin=="white" {
+              color: map-get($data, skin-sidenav-item);
+              background-color: transparent;
+            }
+            @else {
+              background-color: map-get($data, skin-sidenav-item-hover);
+            }
+          }
+          &:hover {
+            background-color: map-get($data, skin-sidenav-item-hover);
+          }
+        }
+        .collapsible-body a {
+          color: map-get($data, skin-text);
+          &:hover,
+          &.active,
+          &:active {
+            color: map-get($data, skin-sn-child);
+          }
+        }
+      }
+      .fas, .fab, .far {
+        color: map-get($data, skin-text);
+      }
+      .sidenav-bg {
+        &:after,
+        &.mask-strong:after,
+        {
+          background: map-get($data, skin-mask-strong);
+        }
+        &.mask-light:after {
+          background: map-get($data, skin-mask-light);
+        }
+        &.mask-slight:after {
+          background: map-get($data, skin-mask-slight);
+        }
+      }
+    }
+    @include make-button("primary", map-get($data, skin-btn-primary));
+    @include make-button("secondary", map-get($data, skin-btn-secondary));
+    @include make-button("default", map-get($data, skin-btn-default));
+    @include make-outline-button("primary", map-get($data, skin-btn-primary));
+    @include make-outline-button("secondary", map-get($data, skin-btn-secondary));
+    @include make-outline-button("default", map-get($data, skin-btn-default));
+    .card .btn-action {
+      background: map-get($data, skin-btn-default);
+      &:hover,
+      &:focus {
+        background-color: lighten( map-get($data, skin-btn-default), 5%)!important;
+      }
+      &.active {
+        background-color: darken( map-get($data, skin-btn-default), 20%)!important;
+      }
+    }
+    // Custom inputs
+    input[type="email"]:focus:not([readonly]),
+    input[type="text"]:focus:not([readonly]),
+    input[type="password"]:focus:not([readonly]),
+    input[type="number"]:focus:not([readonly]),
+    textarea.md-textarea:focus:not([readonly]) {
+      border-color: map-get($data, skin-accent);
+      box-shadow: 0 1px 0 0 map-get($data, skin-accent);
+      &+label {
+        color: map-get($data, skin-accent);
+      }
+    }
+    input[type=checkbox]:checked {
+      &+label {
+        &:before {
+          border-right: 2px solid map-get($data, skin-accent);
+          border-bottom: 2px solid map-get($data, skin-accent);
+        }
+      }
+    }
+    input[type=checkbox].filled-in:checked {
+      &+label {
+        &:before {
+          border-right: 2px solid $white-base;
+          border-bottom: 2px solid $white-base;
+        }
+        &:after {
+          background-color: map-get($data, skin-accent);
+          border-color: map-get($data, skin-accent);
+        }
+      }
+    }
+    .md-form {
+      .prefix {
+        &.active {
+          color: map-get($data, skin-accent);
+        }
+      }
+    }
+    // Select colors
+    .dropdown-content {
+      li:not(.disabled) {
+        span {
+          color: map-get($data, skin-accent);
+        }
+      }
+    }
+    .top-nav-collapse {
+      background-color: map-get($data, skin-navbar);
+    }
+    .carousel-multi-item {
+      .controls-top>a,
+      .carousel-indicators li,
+      .carousel-indicators li.active {
+        background-color: map-get($data, skin-accent);
+      }
+    }
+    // Form-header, card-header
+    .form-header,
+    .card-header {
+      background-color: lighten( map-get($data, skin-accent), 2%);
+    }
+    .spinner-primary-color,
+    .spinner-primary-color-only {
+      border-color: map-get($data, skin-primary-color);
+    }
+    .pagination-primary-color {
+      .page-item.active .page-link,
+      .page-item.active .page-link:focus,
+      .page-item.active .page-link:hover {
+        color: $white-base;
+        background-color: map-get($data, skin-primary-color);
+      }
+      .page-link {
+        color: map-get($data, skin-primary-color);
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

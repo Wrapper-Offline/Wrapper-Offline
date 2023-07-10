@@ -1,0 +1,268 @@
+body {
+  font: normal 12px Arial, system-ui, sans-serif;
+}
+
+body:lang(ja) {
+  font-family: Arial, 'Meiryo UI', 'MS Gothic', system-ui, sans-serif;
+}
+
+body:lang(zh-CN) {
+  font-family: Arial, 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+body:lang(zh-TW),
+body:lang(zh-HK) {
+  font-family: Arial, 'Microsoft JhengHei UI', 'Microsoft JhengHei', system-ui, sans-serif;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  user-select: none;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px 7px;
+  border: 1px solid hsl(0, 0%, 62%);
+  font: inherit;
+  font-size: 13px;
+  color: #000;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QwGBBwIHvKt6QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAL0lEQVQI12NoaGgQZ2JgYGBkYmBgYGZiYGBggrMY4VxsYsyoskQQCB2MWAxAMhkADVECDhlW9CoAAAAASUVORK5CYII=');
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  transition: background-color .25s, border-color .25s;
+}
+
+button:not(:disabled):hover {
+  background-color: hsl(0, 0%, 95%);
+  border-color: hsl(0, 0%, 52%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 95%);
+  border-color: hsl(0, 0%, 52%);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QwJARIWJNZvuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQI12NoaGgIZmJgYPjLxMDA8I+JgYHhP5z1Dy7xH5X7jxQCzWQ0A9DEILYBABm5HtJk2jPHAAAAAElFTkSuQmCC');
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+}
+
+/* For some odd reason these hovers appear lighter than all other button hovers in every browser */
+#message-box-buttons button:not(:disabled):hover {
+  background-color: hsl(0, 0%, 90%);
+  border-color: hsl(0, 0%, 50%);
+}
+
+input  {
+  font: inherit;
+}
+
+input:not([type]) {
+  background: #fff;
+  color: #000;
+  height: 22px;
+  min-height: 22px!important;
+  line-height: 22px;
+  padding: 0 3px;
+  font: inherit;
+  border: 1px solid hsl(0, 0%, 66%);
+}
+
+.svg-icon.checked {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  display: none;
+  fill: #000;
+  margin: 2px 0 0 2px;
+}
+
+input[type="checkbox"]:not(.slider):checked + .svg-icon.checked {
+  display: inline-flex;
+  transition: fill .1s;
+}
+
+input[type="checkbox"]:not(.slider) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid hsl(0, 0%, 46%);
+  height: 12px;
+  width: 12px;
+  display: inline-flex;
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 0%, .1);
+  margin: 0;
+  transition: background-color .1s, border-color .1s;
+}
+
+input[type="checkbox"]:not(.slider):hover {
+  border-color: hsl(0, 0%, 32%);
+  background-color: hsl(0, 0%, 82%);
+}
+
+input[type="checkbox"]:not(.slider):checked + .svg-icon.checked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+input[type="checkbox"]:not(.slider):disabled {
+  background-color: transparent;
+  border-color: hsl(0, 0%, 50%);
+}
+
+input[type="checkbox"]:not(.slider):disabled + .svg-icon.checked {
+  fill: hsl(0, 0%, 50%);
+}
+
+input[type="checkbox"]:not(.slider):disabled + .svg-icon.checked + span {
+  color: hsl(0, 0%, 50%);
+}
+
+label {
+  transition: color .1s;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 22px;
+  font: inherit;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid hsl(0, 0%, 66%);
+  padding: 0 20px 0 6px;
+  transition: color .5s;
+}
+
+.select-resizer {
+  display: inline-flex!important;
+  cursor: default;
+  position: relative;
+}
+
+.svg-icon.select-arrow {
+  pointer-events: none;
+  cursor: default;
+  display: inline-flex;
+  height: 14px;
+  width: 14px;
+  fill: #000;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  transition: fill .5s;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: hsl(0, 0%, 88%);
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 60%);
+  cursor: default;
+  height: 13px;
+  width: 13px;
+  position: relative;
+}
+
+input[type="radio"]:after {
+  content: '';
+  background-color: transparent;
+  transform: scale(0);
+  transform-origin: 50% 50%;
+  transition: background-color .5s, transform .5s;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+}
+
+input[type="radio"]:checked:after {
+  background-color: hsl(0, 0%, 30%);
+  transform: scale(1);
+}
+
+/* restore disabled state dimming */
+button:disabled,
+select:disabled,
+option:disabled,
+select[disabled] > option {
+  color: graytext;
+}
+
+select:disabled + .select-arrow,
+select[disabled] + .select-arrow {
+  fill: hsl(0, 0%, 50%);
+}
+
+/* global stuff we use everywhere */
+.hidden {
+  display: none !important;
+}
+
+[data-focused-via-click] :focus,
+[data-focused-via-click]:focus {
+  outline: none;
+}
+
+@supports (-moz-appearance: none) {
+  .moz-appearance-bug .svg-icon.checked,
+  .moz-appearance-bug .onoffswitch input,
+  .moz-appearance-bug input[type="radio"]:after {
+    display: none !important;
+  }
+
+  .moz-appearance-bug input[type="checkbox"] {
+    -moz-appearance: checkbox !important;
+  }
+
+  .moz-appearance-bug input[type="radio"] {
+    -moz-appearance: radio !important;
+  }
+
+  .firefox select {
+    padding: 0 20px 0 2px;
+    line-height: 22px!important;
+  }
+
+  svg {
+    transform: scale(1); /* de-blur */
+  }
+
+/* We can customize everything about number inputs except arrows. They're horrible in Linux FF, so we'll hide them unless hovered or focused. */
+  .firefox.non-windows input[type="number"] {
+    -moz-appearance: textfield;
+    background: #fff;
+    color: #000;
+    border: 1px solid hsl(0, 0%, 66%);
+  }
+
+  .firefox.non-windows input[type="number"]:not(:disabled):hover,
+  .firefox.non-windows input[type="number"]:focus {
+    -moz-appearance: number-input;
+  }
+
+  .firefox.non-windows input[type="color"] {
+    background: #fff;
+    border: 1px solid hsl(0, 0%, 66%);
+    padding: 4px;
+  }
+
+/* Firefox cannot handle fractions in font-size */
+  .firefox button:not(.install) {
+    line-height: 13px;
+    padding: 3px 7px;
+  }
+
+  .firefox.moz-appearance-bug button:not(.install) {
+    padding: 2px 4px;
+  }
+}
