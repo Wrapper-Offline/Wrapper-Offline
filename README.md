@@ -43,6 +43,7 @@ GoAnimate 2014 Credits:
 | Name                                         | Contribution         |
 | -------------------------------------------- | -------------------- |
 | [SimplyA_Coder (HD)](https://github.com/SimplyA-Coder)                   | Developer of GoAnimate 2014                       |
+| [2Epik4u](https://github.com/2Epik4u)                 | Business theme assets                                                |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline or GoAnimate 2014.***
 | Name                                            | Contribution                     |
