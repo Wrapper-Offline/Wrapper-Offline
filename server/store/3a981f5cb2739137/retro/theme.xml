@@ -1406,6 +1406,20 @@
 	<background id="girl_bedroom_bg.swf" name="Girl Bedroom" enable="Y" is_premium="N" money="0" sharing="0"/>
 	<background id="old_couple_bedroom_bg.swf" name="Old Couple Bedroom" enable="Y" is_premium="N" money="0" sharing="0"/>
 	<background id="dinner_restaurant_bg.swf" name="Restaurant" enable="N" is_premium="N" money="0" sharing="0"/>
+	<compositebg id="cemetery" name="cemetery" enable="Y" default="N" thumb="cemetery.jpg" display_order="0" is_premium="N" money="0" sharing="0">
+	<bg id="cemetery_BG5" index="0">
+		<file>retro.cemetery_bg.swf</file>
+	</bg>
+	<prop id="cemetery_PROP0" index="2">
+		<file>retro.cemetery_gravestone.swf</file>
+		<x>222.8</x>
+		<y>313.9</y>
+		<xscale>1</xscale>
+		<yscale>1</yscale>
+		<face>1</face>
+		<rotation>0</rotation>
+	</prop>
+</compositebg>
 	<compositebg id="court" name="Court" enable="Y" default="N" thumb="court.jpg" display_order="0" is_premium="N" money="0" sharing="0">
 	<bg id="COURTBG10" index="0">
 		<file>retro.court_bg_v1.swf</file>
@@ -1947,6 +1961,11 @@
 		<face>1</face>
 		<rotation>0</rotation>
 	</prop>
+</compositebg>
+<compositebg id="cleantoilet" name="Clean Toilet" enable="Y" default="N" thumb="toilet_dirty.jpg" display_order="0" is_premium="N" money="0" sharing="0">
+	<bg id="TOILETCLEANBG0" index="0">
+		<file>retro.toilet_clean.swf</file>
+	</bg>
 </compositebg>
 	<compositebg id="aboxingbg" name="Boxing" enable="Y" default="N" thumb="boxing.jpg" display_order="0" is_premium="N" money="0" sharing="0">
 	<bg id="BOXINGBG0" index="0">
