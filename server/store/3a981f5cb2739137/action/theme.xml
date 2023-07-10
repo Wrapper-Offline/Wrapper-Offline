@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme id="action" name="Lil' Peepz" cc_theme_id="cc2">
+	<background id="ncc_sci07bg.swf" name="Alien planet"/>
+	<background id="ncc_sci08bg.swf" name="Alien planet"/>
+	<background id="ncc_sci10bg.swf" name="Cemetery"/>
 	<background id="ncc_medium.swf" name="Medium Horizoon" enable="Y" default="N" is_premium="N" money="0" sharing="0"/>
 	<background id="ncc_low.swf" name="Low Horizoon" enable="Y" default="N" is_premium="N" money="0" sharing="0"/>
 	<compositebg id="cbg_living_rm01" name="Living room" enable="Y" default="N" thumb="living_rm01.jpg" display_order="0" is_premium="N" money="0" sharing="0">

@@ -75,7 +75,6 @@ group.route("POST", "/goapi/getUserAssetsXml/", (req, res) => {
 			break;
 		case "action":
 		case "animal":
-		case "botdf":
 		case "space":
 		case "vietnam":
 			themeId = "cc2";

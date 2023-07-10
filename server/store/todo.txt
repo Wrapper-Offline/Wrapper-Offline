@@ -1,6 +1,5 @@
 - merge the retro chapel seat props
 - remove duplicate retro courtroom props
 - apply prop xml fixes from hammer.swf
-- create a clean toilet compositebg using the toilet_clean.swf bg
-- replace pumping_shit with one from dirty_toilet in retro dirty toilet compositebg
+- replace duplicate pumping_shit in retro dirty toilet compositebg
 - akon sounds

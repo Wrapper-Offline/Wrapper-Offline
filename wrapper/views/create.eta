@@ -132,12 +132,6 @@
 						Ben 10&#8482;
 					</a>
 				</div>
-				<div class="theme" data-has-cc>
-					<a href="#" onclick="redirect('botdf', 'cc2')">
-						<img src="/pages/img/themes/botdf.jpg" alt="Blood on the Dance Floor&#8482;">
-						<div>Blood on the Dance Floor&#8482;</div>
-					</a>
-				</div>
 				<div class="theme">
 					<a href="#" onclick="redirect('bunny')">
 						<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
