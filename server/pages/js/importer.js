@@ -302,7 +302,7 @@ class ImporterFile {
 			this.upload();
 		});
 
-		this.$el.one("click", "[data-action]", (e) => {
+		this.$el.on("click", "[data-action]", (e) => {
 			const $target = $(e.target);
 			const action = $target.attr("data-action");
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<link rel="icon" href="/favicon.ico" type="image/png" />
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
 		<title>Settings - Wrapper: Offline</title>
 		<meta name="description" content="Wrapper: Offline's settings"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
@@ -78,7 +78,7 @@
 		</main>
 
 		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
-			<input id="char-file" type="file" onchange="this.form.submit()" name="import" />
+			<input id="char-file" type="file" onchange="this.form.submit()" name="import"/>
 		</form>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
@@ -106,47 +106,6 @@
 			list.forEach((key) => {
 				show(key, localStorage.getItem(key) == "true");
 			});
-		});
-		$.getJSON("/api/assets/list", (d) => {
-			for (const info of d) {
-				switch (info.type) {
-					case "bg":
-					case "prop": {
-						$(`
-							<div class="importer_asset">
-								<div class="asset_metadata">
-									<img class="asset_preview" src="${
-										info.id.includes("swf") ? 
-											"/pages/img/importer/image.png" : 
-											info.subtype == "video" ? 
-												"/pages/img/importer/video.png" :
-												`/assets/${info.id}`
-									}" />
-									<div>
-										<h4 class="asset_name">${info.title}</h4>
-										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
-									</div>
-								</div>
-							</div>
-						`).appendTo($("#importer-queue"));
-						break;
-					}
-					case "sound": {
-						$(`
-							<div class="importer_asset">
-								<div class="asset_metadata">
-									<img class="asset_preview" src="/pages/img/importer/sound.png" />
-									<div>
-										<h4 class="asset_name">${info.title}</h4>
-										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
-									</div>
-								</div>
-							</div>
-						`).appendTo($("#importer-queue"));
-						break;
-					}
-				}
-			}
 		});
 
 		/*
