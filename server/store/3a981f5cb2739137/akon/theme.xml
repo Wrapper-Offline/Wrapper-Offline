@@ -231,8 +231,4 @@
 	<prop id="shutter_shades.swf" name="Akon Shutter Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
 	<prop id="homie_shades.swf" name="Ripley Shades" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
 	<prop id="christmas_hat.swf" name="Christmas Hat" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
-	<sound id="right_now_na_60s.mp3" name="Right Now (Na Na Na)" downloadtype="stream" subtype="bgmusic" duration="56137" enable="Y" is_premium="N" money="0" sharing="0"/>
-	<sound id="right_now_na_90s.mp3" name="Right Now (Na Na Na) 90s" downloadtype="stream" subtype="bgmusic" duration="97358" enable="N" is_premium="N" money="0" sharing="0"/>
-	<sound id="be_with_you_60.mp3" name="Be with you" downloadtype="stream" subtype="bgmusic" duration="66330" enable="Y" is_premium="N" money="0" sharing="0"/>
-	<sound id="sound_keep_u_much_longer.mp3" name="Keep You Much Longer" downloadtype="stream" subtype="bgmusic" duration="62125" enable="Y" is_premium="N" money="0" sharing="0"/>
 </theme>
