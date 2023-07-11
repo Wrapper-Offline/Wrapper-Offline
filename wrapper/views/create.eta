@@ -251,7 +251,7 @@ wistiaEmbed = Wistia.embed("9z4fah3lag");
 				</button>
 				<a class="btn-flat btn-flat-orange btn-flat banner" href="https://localhost:4343/go_full?tray=business">Make a Video - Start from scratch</a>
 				</button>
-				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeid=business">Character Creator</a>
+				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeId=business">Character Creator</a>
 			</div>
 		</div>
 	</div>
@@ -268,7 +268,7 @@ wistiaEmbed = Wistia.embed("9z4fah3lag");
 				</button>
 				<a class="btn-flat btn-flat-orange btn-flat banner" href="https://localhost:4343/go_full?tray=whiteboard">Make a Video - Start from scratch</a>
 				</button>
-				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeid=whiteboard">Character Creator</a>
+				<a class="btn-flat vm-bf-cc" href="https://localhost:4343/cc_browser?themeId=whiteboard">Character Creator</a>
 			</div>
 		</div>
 	</div>
@@ -377,7 +377,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Business Friendly</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=buisness">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=buisness">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=buisness">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -393,7 +393,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Whiteboard Animation</h3>
 					<div class="apps">						
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=whiteboard">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=whiteboard">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=whiteboard">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -424,7 +424,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Comedy World</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=custom">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=family">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=family">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -439,7 +439,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Lil' Peepz</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=action">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=cc2">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=cc2">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -512,7 +512,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Anime</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=anine">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=anime">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=anime">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -527,7 +527,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Ninja Anime</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=ninjaanime">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=ninjaanime">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=ninjaanime">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -542,7 +542,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Space Citizens</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=spacecitizen">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=spacecitizen">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=spacecitizen">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -557,7 +557,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Chibi Peepz</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=chibi">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=chibi">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=chibi">Character Creator</a>
 					</div>
 				</div>
 			</div>
@@ -572,7 +572,7 @@ $('.vm-bf-dots a').click(function(e) {
 					<h3>Chibi Ninjas</h3>
 					<div class="apps">
 						<a class="btn btn-orange pull-left" href="http://localhost:4343/go_full?tray=ninja">Make a Video</a>
-						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeid=ninja">Character Creator</a>
+						<a class="btn btn-icon" href="http://localhost:4343/cc_browser?themeId=ninja">Character Creator</a>
 					</div>
 				</div>
 			</div>
