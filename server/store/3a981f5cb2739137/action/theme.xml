@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme id="action" name="Lil' Peepz" cc_theme_id="cc2">
-	<background id="ncc_medium.swf" name="Medium Horizoon" enable="Y" default="N" is_premium="N" aid="10712" money="0" sharing="0"/>
-	<background id="ncc_low.swf" name="Low Horizoon" enable="Y" default="N" is_premium="N" aid="10800" money="0" sharing="0"/>
-	<compositebg id="cbg_living_rm01" name="Living room" enable="Y" default="N" thumb="living_rm01.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="10713">
+	<background id="ncc_sci07bg.swf" name="Alien planet"/>
+	<background id="ncc_sci08bg.swf" name="Alien planet"/>
+	<background id="ncc_sci10bg.swf" name="Cemetery"/>
+	<background id="ncc_medium.swf" name="Medium Horizoon" enable="Y" default="N" is_premium="N" money="0" sharing="0"/>
+	<background id="ncc_low.swf" name="Low Horizoon" enable="Y" default="N" is_premium="N" money="0" sharing="0"/>
+	<compositebg id="cbg_living_rm01" name="Living room" enable="Y" default="N" thumb="living_rm01.jpg" display_order="0" is_premium="N" money="0" sharing="0">
 	<bg id="cbg_living_rm01_BG43" index="0">
 		<file>action.ncc_medium.swf</file>
 		<color r="colorA">13295579</color>
@@ -106,7 +109,7 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<compositebg id="cbg_street01" name="Street" enable="Y" default="Y" thumb="street01.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="10801">
+	<compositebg id="cbg_street01" name="Street" enable="Y" default="Y" thumb="street01.jpg" display_order="0" is_premium="N" money="0" sharing="0">
 	<bg id="cbg_street01_BG3" index="0">
 		<file>action.ncc_low.swf</file>
 		<color r="colorB">3290175</color>
@@ -152,37 +155,37 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<prop id="vending_drink.swf" name="Drinks vending machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10797" money="0" sharing="0"/>
-	<prop id="bench01.swf" name="Bench" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10798" money="0" sharing="0"/>
-	<prop id="street_lamp.swf" name="Street lamp" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10799" money="0" sharing="0"/>
-	<prop id="backdrop.swf" name="City backdrop" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10690" money="0" sharing="0"/>
-	<prop id="window_display.swf" name="Window" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10691" money="0" sharing="0"/>
-	<prop id="msp_door01" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_door01_door01_front_close.swf" enable="Y" is_premium="N" aid="10692" money="0" sharing="0">
+	<prop id="vending_drink.swf" name="Drinks vending machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="bench01.swf" name="Bench" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="street_lamp.swf" name="Street lamp" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="backdrop.swf" name="City backdrop" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="window_display.swf" name="Window" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="msp_door01" name="Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_door01_door01_front_close.swf" enable="Y" is_premium="N" money="0" sharing="0">
 		<state id="msp_door01_door01_front_close.swf" name="front closed" enable="Y" default="Y"/>
 		<state id="msp_door01_door01_front_open.swf" name="front open" enable="Y"/>
 	</prop>
-	<prop id="msp_pic01" name="Picture" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_pic01_pic_front.swf" enable="Y" is_premium="N" aid="10695" money="0" sharing="0">
+	<prop id="msp_pic01" name="Picture" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_pic01_pic_front.swf" enable="Y" is_premium="N" money="0" sharing="0">
 		<state id="msp_pic01_pic_front.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_pic01_pic_side.swf" name="side" enable="Y"/>
 	</prop>
-	<prop id="msp_sofa02" name="sofa" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sofa02_sofa02_front.swf" enable="Y" is_premium="N" aid="10698" money="0" sharing="0">
+	<prop id="msp_sofa02" name="sofa" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_sofa02_sofa02_front.swf" enable="Y" is_premium="N" money="0" sharing="0">
 		<state id="msp_sofa02_sofa02_front.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_sofa02_sofa02_side.swf" name="side" enable="Y"/>
 	</prop>
-	<prop id="lamp_floor.swf" name="Lamp (floor)" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10701" money="0" sharing="0"/>
-	<prop id="msp_shelves03" name="Bookshelves" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_shelves03_bookshelves_front.swf" enable="Y" is_premium="N" aid="10702" money="0" sharing="0">
+	<prop id="lamp_floor.swf" name="Lamp (floor)" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="msp_shelves03" name="Bookshelves" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_shelves03_bookshelves_front.swf" enable="Y" is_premium="N" money="0" sharing="0">
 		<state id="msp_shelves03_bookshelves_front.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_shelves03_bookshelves_side.swf" name="side" enable="Y"/>
 	</prop>
-	<prop id="msp_old_tv" name="Old TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_old_tv_old_tv_front.swf" enable="Y" is_premium="N" aid="10705" money="0" sharing="0">
+	<prop id="msp_old_tv" name="Old TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_old_tv_old_tv_front.swf" enable="Y" is_premium="N" money="0" sharing="0">
 		<state id="msp_old_tv_old_tv_front.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_old_tv_old_tv_front_non.swf" name="front transparent" enable="Y"/>
 		<state id="msp_old_tv_old_tv_back.swf" name="back" enable="Y"/>
 		<state id="msp_old_tv_old_tv_side.swf" name="side" enable="Y"/>
 		<state id="msp_old_tv_old_tv_side_back.swf" name="side back" enable="Y"/>
 	</prop>
-	<prop id="carpet.swf" name="Carpet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10711" money="0" sharing="0"/>
-	<prop id="msp_vending_drink" name="Vending machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_vending_drink_vending_drink.swf" enable="Y" is_premium="Y" aid="12172" money="0" sharing="0">
+	<prop id="carpet.swf" name="Carpet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" money="0" sharing="0"/>
+	<prop id="msp_vending_drink" name="Vending machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_vending_drink_vending_drink.swf" enable="Y" is_premium="Y" money="0" sharing="0">
 		<state id="msp_vending_drink_vending_drink.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_vending_drink_ncc_vending_drink_side.swf" name="side" enable="Y"/>
 	</prop>
