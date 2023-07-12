@@ -1,5 +1,0 @@
-- merge the retro chapel seat props
-- remove duplicate retro courtroom props
-- apply prop xml fixes from hammer.swf
-- replace duplicate pumping_shit in retro dirty toilet compositebg
-- akon sounds

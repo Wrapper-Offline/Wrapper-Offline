@@ -30,7 +30,7 @@ log files
 if (settings.SAVE_LOG_FILES) {
 	const filePath = path.join(logs, new Date().valueOf() + ".txt");
 	const writeStream = fs.createWriteStream(filePath);
-	console.log = console.error = function (c) {
+	console.log = console.error = console.warn = function (c) {
 		writeStream.write(c + "\n");
 		process.stdout.write(c + "\n");
 	};

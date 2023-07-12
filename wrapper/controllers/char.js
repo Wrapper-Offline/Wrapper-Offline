@@ -1,6 +1,5 @@
-const fs = require("fs");
+const Char = require("../models/char");const fs = require("fs");
 const httpz = require("@octanuary/httpz");
-const Char = require("../models/char");
 const { exists } = require("../models/asset");
 const base = Buffer.alloc(1, "0");
 const defaultTypes = {
@@ -90,11 +89,15 @@ group.route("POST", "/goapi/saveCCCharacter/", (req, res) => {
 // save thumbnail only
 group.route("POST", "/goapi/saveCCThumbs/", (req, res) => {
 	const id = req.body.assetId;
-	res.assert(
-		req.body.thumbdata,
-		id,
-		400, "Missing one or more fields."
-	);
+	if (typeof id == "undefined") {
+		console.warn("Attempted character thumbnail save without an ID.");
+		res.status(400).end("1");
+		return;
+	} else if (typeof req.body.thumbdata == "undefined") {
+		console.warn("Attempted character thumbnail save without a file.");
+		res.status(400).end("1");
+		return;
+	} 
 	const thumb = Buffer.from(req.body.thumbdata, "base64");
 
 	if (exists(`${id}.xml`)) {
@@ -111,13 +114,13 @@ upload
 group.route("*", "/api/char/upload", (req, res) => {
 	const file = req.files.import;
 	if (!file) {
-		console.log("Error uploading character: No file.");
-		res.statusCode = 400;
-		return res.json({ msg: "No file" });
+		console.warn("Attempted character upload without a file.");
+		res.status(400).json({ msg: "No file" });
+		return;
 	} else if (file.mimetype !== "text/xml") {
-		console.log("Attempted character upload with invalid file.");
-		res.statusCode = 400;
-		return res.json({ msg: "Character is not an XML" });
+		console.warn("Attempted character upload with invalid file type.");
+		res.status(400).json({ msg: "Character is not an XML" });
+		return;
 	}
 	const origName = file.originalFilename;
 	const path = file.filepath, buffer = fs.readFileSync(path);
@@ -135,8 +138,7 @@ group.route("*", "/api/char/upload", (req, res) => {
 		res.redirect(url);
 	} catch (e) {
 		console.error("Error uploading character:", e);
-		res.statusCode = 500;
-		res.json({ status: "error" });
+		res.status(500).end();
 	}
 });
 
