@@ -37,16 +37,15 @@ module.exports = {
 	 * saves the character and its metadata
 	 * @param {Buffer} buf a buffer of a character xml
 	 * @param {object} info character metadata, must contain type, subtype, title, and themeId
-	 * @param {boolean} addV2 specifies if the 'version="2.0"' shouldn't be added to the xml
 	 * @returns {string}
 	 */
-	save(buf, info, addV2 = false) {
+	save(buf, info) {
 		// save asset info
 		info.id ||= fUtil.generateId();
 		DB.insert("assets", info);
 
 		// fix handheld props for freeaction themes
-		if (this.isFA(info.themeId) && !addV2) {
+		if (this.isFA(info.themeId) && buf.indexOf("version=\"2.0\"") == -1) {
 			const end = buf.indexOf(">", buf.indexOf("<cc_char"));
 			buf = Buffer.concat([
 				buf.subarray(0, end),

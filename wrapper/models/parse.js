@@ -358,7 +358,7 @@ module.exports = {
 							title: elem.attr.name,
 							themeId: char.getTheme(buffer),
 							id: elem.attr.id
-						}, true);
+						});
 					}
 					break;
 				}

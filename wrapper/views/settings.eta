@@ -72,6 +72,8 @@
 				<nav class="tab_page">
 					<h2>Your Library</h2>
 
+					<h3>File uploads</h3>
+					<button onclick="document.getElementById('char-file').click()" class="btn">UPLOAD A CHARACTER</button>
 					<!-- TODO: add data wiping-->
 				</nav>
 			</nav>

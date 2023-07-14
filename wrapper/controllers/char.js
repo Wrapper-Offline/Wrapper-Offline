@@ -132,7 +132,7 @@ group.route("*", "/api/char/upload", (req, res) => {
 		themeId: Char.getTheme(buffer)
 	};
 	try {
-		Char.save(buffer, meta, true);
+		Char.save(buffer, meta);
 		fs.unlinkSync(path);
 		const url = `/cc_browser?themeId=${meta.themeId}`;
 		res.redirect(url);
