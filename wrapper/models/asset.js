@@ -2,9 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const database = require("../../data/database"), DB = new database();
 const fUtil = require("../../utils/fileUtil");
-const folder = path.join(__dirname, "../../", process.env.ASSET_FOLDER);
 
 module.exports = {
+	folder: path.join(__dirname, "../../", process.env.ASSET_FOLDER),
+
 	/**
 	 * Deletes an asset.
 	 * @param {string} id 
@@ -14,7 +15,7 @@ module.exports = {
 		DB.delete("assets", id);
 
 		if (type == "char") id += ".xml";
-		fs.unlinkSync(path.join(folder, id));
+		fs.unlinkSync(path.join(this.folder, id));
 
 		// delete video and char thumbnails
 		if (
@@ -22,7 +23,7 @@ module.exports = {
 			subtype == "video"
 		) {
 			const thumbId = id.slice(0, -3) + "png";
-			fs.unlinkSync(path.join(folder, thumbId));
+			fs.unlinkSync(path.join(this.folder, thumbId));
 		}
 	},
 
@@ -34,7 +35,7 @@ module.exports = {
 	 */
 	load(id, returnBuffer = false) {
 		if (this.exists(id)) {
-			const filepath = path.join(folder, id);
+			const filepath = path.join(this.folder, id);
 			let data;
 			if (returnBuffer) {
 				data = fs.readFileSync(filepath);
@@ -54,7 +55,7 @@ module.exports = {
 	 * @returns {boolean}
 	 */
 	exists(id) {
-		const filepath = path.join(folder, id);
+		const filepath = path.join(this.folder, id);
 		const exists = fs.existsSync(filepath);
 		return exists;
 	},
@@ -110,7 +111,7 @@ module.exports = {
 			}
 			DB.insert("assets", info)
 			// save the file
-			let writeStream = fs.createWriteStream(path.join(folder, info.id));
+			let writeStream = fs.createWriteStream(path.join(this.folder, info.id));
 
 			if (Buffer.isBuffer(data)) {
 				writeStream.write(data, (e) => {

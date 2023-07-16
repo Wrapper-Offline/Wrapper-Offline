@@ -280,6 +280,51 @@ module.exports = {
 		return await zip.zip();
 	},
 
+	async extractAudioTimes(xmlBuffer) {
+		const film = new xmldoc.XmlDocument(xmlBuffer);
+		let audios = [];
+
+		for (const eI in film.children) {
+			const elem = film.children[eI];
+
+			if (elem.name !== "sound") continue;
+			audios.push(elem);
+		}
+		return audios.map((v) => {
+			const pieces = v.childNamed("sfile").val.split(".");
+			const themeId = pieces[0];
+			
+			// add the extension to the last key
+			const ext = pieces.pop();
+			pieces[pieces.length - 1] += "." + ext;
+			// add the type to the filename
+			pieces.splice(1, 0, "sound");
+
+			let filepath;
+			if (themeId == "ugc") {
+				filepath = path.join(asset.folder, pieces[pieces.length - 1]);
+			} else {
+				filepath = path.join(store, pieces.join("/"));
+			}
+
+			return {
+				filepath: filepath,
+				start: +v.childNamed("start").val,
+				stop: +v.childNamed("stop").val,
+				trimStart: +v.childNamed("trimStart")?.val || 0,
+				trimEnd: +v.childNamed("trimEnd")?.val || 0,
+				fadeIn: {
+					duration: +v.childNamed("fadein").attr.duration,
+					vol: +v.childNamed("fadein").attr.vol
+				},
+				fadeOut: {
+					duration: +v.childNamed("fadeout").attr.duration,
+					vol: +v.childNamed("fadeout").attr.vol
+				}
+			}
+		});
+	},
+
 	/**
 	 * unpacks a movie zip returns movie xml
 	 * @param {Buffer} body 

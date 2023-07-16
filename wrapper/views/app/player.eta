@@ -1,11 +1,12 @@
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="/favicon.ico" type="image/png" />
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
 		<title>Video Player - Wrapper: Offline</title>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css"/>
+		<script src="/pages/js/jquery.js"></script>
 	</head>
 
 	<body style="margin:0px">
@@ -15,12 +16,17 @@
 	</body>
 
 	<script>
+		const id = "<%~ it.params.flashvars.movieId %>";
 		const player = document.getElementById("obj");
+		const mspf = 1000 / 24;
+		let currentFrame = 1;
 		function myNameIsClevelandBrown() {
 			let isPlaying = true;
 
 			document.addEventListener("keydown", (event) => {
-				if (event.keyCode !== 32) return;
+				if (event.keyCode !== 32) {
+					return;
+				}
 				if (isPlaying) {
 					player.pause();
 					isPlaying = false;
@@ -28,6 +34,49 @@
 					player.play();
 					isPlaying = true;
 				}
+			});
+		}
+
+		function nextFrame() {
+			player.seekFrame(currentFrame++);
+		}
+
+		function playAndPause() {
+			player.play();
+			setTimeout(() => player.pause(), 100)
+		}
+
+		function notifyMovieEnded() {
+			sendFramesToServer();
+		}
+
+		function sendFramesToServer() {
+			/* cut out duplicate frames */
+			/** @type {{
+			 * 	duration: number
+				guid: string
+				startFrom: number
+			 * }[]}
+			 */
+			const scenes = player.getSceneInfoArray();
+			/** @type {string[]} */
+			const frames = player.getPhotoArray();
+			for (const scene of scenes) {
+				frames.splice(scene.startFrom, 1);
+			}
+			$.ajax({
+				url: "/api/export/video_complete",
+				method: "POST",
+				data: JSON.stringify({
+					frames: frames,
+					id: id
+				}),
+				dataType: "json",
+				contentType: "application/json"
+			}).done((d) => {
+				console.log(d);
+			}).catch((e) => {
+				console.error("Failure to send frames to the server. Error:", e);
 			});
 		}
 

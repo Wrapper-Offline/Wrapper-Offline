@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "npx nodemon main.js --exec electron . --ignore ./_LOGS --ignore ./_SAVED --ignore ./_ASSETS --ignore ./_CACHÉ",
+		"start": "npx nodemon main.js --exec electron . --ignore ./_LOGS --ignore ./_SAVED --ignore ./_ASSETS --ignore ./_CACHÉ --ignore ./frames",
 		"start2": "electron .",
 		"build": "npx electron-packager . --ignore=^/server",
 		"test": "mocha"

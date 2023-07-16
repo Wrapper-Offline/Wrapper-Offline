@@ -1,3 +1,6 @@
+## DISCLAIMER
+This API was meant to be used locally, and NOT to be hosted online.
+
 # Wrapper
 This is an API wrapper for the Legacy Video Maker, which had been retired on *19th December 2019, 03:10 UTC*.	Unlike other services that attempt to sole the same problem, this project allows the LVM to access data peristence and is very portable.
 ## How to Use

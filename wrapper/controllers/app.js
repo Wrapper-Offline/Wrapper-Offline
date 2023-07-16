@@ -140,16 +140,45 @@ group.route("GET", "/player", async (req, res) => {
 	let flashvars = {
 		autostart: 1,
 		isWide: IS_WIDE,
-		isWixPaid: DEFAULT_WATERMARK == "wix" ? 0 : 1,
 		ut: 60,
 		apiserver: "/",
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>",
 	};
+	if (DEFAULT_WATERMARK == "wix") {
+		flashvars.isWixPaid = 1;
+	}
 	Object.assign(flashvars, req.query);
 	res.render("app/player", {
 		attrs: {
 			data: SWF_URL + "/player.swf",
+			type: "application/x-shockwave-flash", width: "100%", height: "100%",
+		},
+		params: {
+			flashvars,
+			allowFullScreen: "true",
+			allowScriptAccess: "always",
+		},
+		object: toObjectString
+	});
+});
+group.route("GET", "/exporter", async (req, res) => {
+	const { IS_WIDE, DEFAULT_WATERMARK } = DB.select();
+	let flashvars = {
+		autostart: 0,
+		isWide: IS_WIDE,
+		ut: 60,
+		apiserver: "/",
+		storePath: STORE_URL + "/<store>",
+		clientThemePath: CLIENT_URL + "/<client_theme>",
+	};
+	if (DEFAULT_WATERMARK == "wix") {
+		flashvars.isWixPaid = 1;
+	}
+	Object.assign(flashvars, req.query);
+	res.render("app/player", {
+		attrs: {
+			data: SWF_URL + "/exporter.swf",
 			type: "application/x-shockwave-flash", width: "100%", height: "100%",
 		},
 		params: {

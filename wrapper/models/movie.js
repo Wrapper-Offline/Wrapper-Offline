@@ -36,6 +36,13 @@ module.exports = {
 		return isGet ? parsed : Buffer.concat([base, parsed]);
 	},
 
+	async getAudio(mId) {
+		const filepath = path.join(folder, `${mId}.xml`);
+		const xml = fs.readFileSync(filepath);
+		const audio = await Parse.extractAudioTimes(xml);
+		return audio;
+	},
+
 	/**
 	 * Gets movie metadata from an XML.
 	 * @param {string} id the movie id
