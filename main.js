@@ -12,12 +12,14 @@ const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const logs = path.join(__dirname, env.LOG_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
+const frames = path.join(__dirname, './frames');
 
 /*
 initialization
 */
 // create directories if they're missing
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
+if (!fs.existsSync(frames)) fs.mkdirSync(frames);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(logs)) fs.mkdirSync(logs);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
