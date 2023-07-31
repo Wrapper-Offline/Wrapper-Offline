@@ -118,7 +118,7 @@ group.route("GET", "/go_full", async (req, res) => {
 		tray: "custom",
 		tlang: "en_US",
 		ut: 60,
-		apiserver: "http://localhost:4343/",
+		apiserver: `http://localhost:${process.env.SERVER_PORT}/`,
 		storePath: STORE_URL + "/<store>",
 		clientThemePath: CLIENT_URL + "/<client_theme>",
 	};

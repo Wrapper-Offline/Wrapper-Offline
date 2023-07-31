@@ -79,7 +79,7 @@
 							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
 						</td>
 						<td>
-							<div>${title}</div>
+							<div title="${tbl.id}">${title}</div>
 							<div>${tbl.duration}</div>
 						</td>
 						<td>

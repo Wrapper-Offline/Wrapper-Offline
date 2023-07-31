@@ -36,8 +36,26 @@ module.exports = {
 		return isGet ? parsed : Buffer.concat([base, parsed]);
 	},
 
-	async getAudio(mId) {
-		const filepath = path.join(folder, `${mId}.xml`);
+	/**
+	 * @param {string} id 
+	 * @returns {Promise<{
+	 *  filepath: string,
+	 *  start: number,
+	 *  stop: number,
+	 *  trimStart: number,
+	 *  trimEnd: number,
+	 *  fadeIn: {
+	 *   duration: number;
+	 *   vol: number;
+	 *  },
+	 *  fadeOut: {
+	 *   duration: number;
+	 *   vol: number;
+	 *  }
+	 * }[]>}
+	 */
+	async getAudio(id) {
+		const filepath = path.join(folder, `${id}.xml`);
 		const xml = fs.readFileSync(filepath);
 		const audio = await Parse.extractAudioTimes(xml);
 		return audio;
