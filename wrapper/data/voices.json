@@ -1536,6 +1536,46 @@
 			"arg": "/english/american/30-child-s-boy-voice-justin.html",
 			"desc": "Justin (Alt)"
 		},
+		"salli1": {
+                        "country": "US",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/american/2-girl-s-voice-sally.html",
+                        "desc": "Salli (Old)"
+                },
+                "russell1": {
+                        "country": "AU",
+                        "language": "en",
+                        "gender": "M",
+                        "source": "readloud",
+                        "arg": "/english/australian/48-male-voice-russell.html",
+                        "desc": "Russell (Old)"
+                },
+                "nicole3": {
+                        "country": "AU",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/australian/43-female-voice-nicole.html",
+                        "desc": "Nicole (Old)"
+                },
+                "geraint1": {
+                        "country": "GB",
+                        "language": "en",
+                        "gender": "M",
+                        "source": "readloud",
+                        "arg": "/english/welsh/21-male-voice-geraint.html",
+                        "desc": "Geraint (Old)"
+                },
+                "gwyneth1": {
+                        "country": "GB",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/welsh/23-female-voice-gwyneth.html",
+                        "desc": "Gwyneth (Old)"
+                },
 		"filiz2": {
 			"country": "TR",
 			"language": "tr",
