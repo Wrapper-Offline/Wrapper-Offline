@@ -1478,7 +1478,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/25-child-s-girl-voice-ivy.html",
-			"desc": "Ivy (Alt)"
+			"desc": "Ivy (Readloud)"
 		},
 		"joey1": {
 			"country": "US",
@@ -1486,7 +1486,7 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/american/29-male-voice-joey.html",
-			"desc": "Joey (Alt)"
+			"desc": "Joey (Readloud)"
 		},
 		"brian1": {
 			"country": "GB",
@@ -1494,7 +1494,7 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/british/1-male-voice-brian.html",
-			"desc": "Brian (Alt)"
+			"desc": "Brian (Readloud)"
 		},
 		"kimberly1": {
 			"country": "US",
@@ -1502,7 +1502,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/33-female-voice-kimberly.html",
-			"desc": "Kimberly (Alt)"
+			"desc": "Kimberly (Readloud)"
 		},
 		"kendra1": {
 			"country": "US",
@@ -1510,7 +1510,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/american/32-female-voice-kendra.html",
-			"desc": "Kendra (Alt)"
+			"desc": "Kendra (Readloud)"
 		},
 		"amy4": {
 			"country": "GB",
@@ -1518,7 +1518,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/british/5-male-voice-amy.html",
-			"desc": "Amy (Alt)"
+			"desc": "Amy (Readloud)"
 		},
 		"emma2": {
 			"country": "GB",
@@ -1526,7 +1526,7 @@
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/english/british/17-female-voice-emma.html",
-			"desc": "Emma (Alt)"
+			"desc": "Emma (Readloud)"
 		},
 		"justin1": {
 			"country": "US",
@@ -1534,15 +1534,239 @@
 			"gender": "M",
 			"source": "readloud",
 			"arg": "/english/american/30-child-s-boy-voice-justin.html",
-			"desc": "Justin (Alt)"
+			"desc": "Justin (Readloud)"
 		},
+		"salli1": {
+                        "country": "US",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/american/2-girl-s-voice-sally.html",
+                        "desc": "Salli (Readloud)"
+                },
+                "russell1": {
+                        "country": "AU",
+                        "language": "en",
+                        "gender": "M",
+                        "source": "readloud",
+                        "arg": "/english/australian/48-male-voice-russell.html",
+                        "desc": "Russell (Readloud)"
+                },
+                "nicole3": {
+                        "country": "AU",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/australian/43-female-voice-nicole.html",
+                        "desc": "Nicole (Readloud)"
+                },
+                "geraint1": {
+                        "country": "GB",
+                        "language": "en",
+                        "gender": "M",
+                        "source": "readloud",
+                        "arg": "/english/welsh/21-male-voice-geraint.html",
+                        "desc": "Geraint (Readloud)"
+                },
+                "gwyneth1": {
+                        "country": "GB",
+                        "language": "en",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/english/welsh/23-female-voice-gwyneth.html",
+                        "desc": "Gwyneth (Readloud)"
+		},
+                "giorgio1": {
+                        "country": "IT",
+                        "language": "it",
+                        "gender": "M",
+                        "source": "readloud",
+                        "arg": "/italian/22-voce-maschile-giorgio.html",
+                        "desc": "Giorgio (Readloud)"
+                },
+                "carla1": {
+			"country": "IT",
+			"language": "it",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/italian/8-voce-femminile-carla.html",
+			"desc": "Carla (Readloud)"
+                },
+                "conchita1": {
+			"country": "ES",
+			"language": "es",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/spanish/castilian/14-voz-femenina-conchita.html",
+			"desc": "Conchita (Readloud)"
+		},
+                "enrique1": {
+			"country": "ES",
+			"language": "es",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/spanish/castilian/18-voz-masculina-enrique.html",
+			"desc": "Enrique (Readloud)"
+		},
+                "ricardo1": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/portuguese/brasilian/46-voz-masculina-ricardo.html",
+			"desc": "Ricardo (Readloud)"
+		},
+                "cristiano1": {
+			"country": "PT",
+			"language": "pt",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/portuguese/15-voz-masculina-cristiano.html",
+			"desc": "Cristiano (Readloud)"
+		},
+                "chantal1": {
+			"country": "CA",
+			"language": "fr",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/french/canadian/13-voix-de-femme-chantal.html",
+			"desc": "Chantal (Readloud)"
+		},
+                "mathieu1": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/french/40-voix-masculine-mathieu.html",
+			"desc": "Mathieu (Readloud)"
+		},
+                "marlene1": {
+			"country": "DE",
+			"language": "de",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/german/39-frauenstimme-marlene.html",
+			"desc": "Marlene (Readloud)"
+		},
+                "hans1": {
+			"country": "DE",
+			"language": "de",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/german/24-mannerstimme-hans.html",
+			"desc": "Hans (Readloud)"
+		},
+                "lotte1": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/dutch/36-vrouwelijke-stem-lotte.html",
+			"desc": "Lotte (Readloud)"
+		},
+                "ruben1": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/dutch/47-mannelijke-stem-ruben.html",
+			"desc": "Ruben (Readloud)"
+		},
+                "naja1": {
+			"country": "DK",
+			"language": "da",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/danish/42-kvinde-stemme-naja.html",
+			"desc": "Naja (Readloud)"
+		},
+                "mads1": {
+			"country": "DK",
+			"language": "da",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/danish/37-mandlig-stemme-mads.html",
+			"desc": "Mads (Readloud)"
+		},
+                "liv1": {
+			"country": "NO",
+			"language": "nb",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/norwegian/34-kvinne-stemme-liv.html",
+			"desc": "Liv (Readloud)"
+		},
+                "astrid1": {
+			"country": "SE",
+			"language": "sv",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/swedish/10-kvinnlig-rost-astrid.html",
+			"desc": "Astrid (Readloud)"
+		},
+                "agnieszka": {
+                        "country": "PL",
+                        "language": "pl",
+                        "gender": "F",
+                        "source": "readloud",
+                        "arg": "/polish/9-kobiecy-glos-agnieszka.html",
+                        "desc": "Agnieszka"
+                },
+                "maja1": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/polish/38-kobiecy-glos-maja.html",
+			"desc": "Maja (Readloud)"
+		},
+                "ewa1": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/polish/19-kobiecy-glos-ewa.html",
+			"desc": "Ewa (Readloud)"
+		},
+                "jan1": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/polish/27-meski-glos-jan.html",
+			"desc": "Jan (Readloud)"
+		},
+                "jacek1": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/polish/26-meski-glos-jacek.html",
+			"desc": "Jacek (Readloud)"
+		},
+                "karl1": {
+			"country": "IS",
+			"language": "is",
+			"gender": "M",
+			"source": "readloud",
+			"arg": "/icelandic/31-male-rodd-karl.html",
+			"desc": "Karl (Readloud)"
+		},
+                "tatyana1": {
+			"country": "RU",
+			"language": "ru",
+			"gender": "F",
+			"source": "readloud",
+			"arg": "/russian/50-zhenskiy-golos-tatyana.html",
+			"desc": "Tatyana (Readloud)"
+		},	
 		"filiz2": {
 			"country": "TR",
 			"language": "tr",
 			"gender": "F",
 			"source": "readloud",
 			"arg": "/turkish/20-kadın-sesi-filiz.html",
-			"desc": "Filiz (Alt)"
+			"desc": "Filiz (Readloud)"
 		},
 		"ada1": {
 			"country": "NL",
@@ -4168,6 +4392,37 @@
 			"source": "tiktok",
 			"desc": "Dramatic (TikTok)"
 		},
+		"amy3": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Amy",
+			"desc": "Amy (Voiceforge)"
+		"belle1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Belle",
+			"desc": "Belle (Voiceforge)"
+		},
+		"callie1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Callie",
+			"desc": "Callie (Voiceforge)"
+		},
+		"charlie1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Charlie",
+			"desc": "Charlie (Voiceforge)"
+		},		
 		"conrad": {
 			"country": "US",
 			"language": "en",
@@ -4176,6 +4431,30 @@
 			"arg": "Conrad",
 			"desc": "Conrad"
 		},
+		"dallas1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Dallas",
+			"desc": "Dallas (Voiceforge)"
+		},
+		"damien1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Damien",
+			"desc": "Damien (Voiceforge)"
+		},
+		"david1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "David",
+			"desc": "David (Voiceforge)"
+		},		
 		"designerdave": {
 			"country": "US",
 			"language": "en",
@@ -4183,6 +4462,14 @@
 			"source": "voiceforge",
 			"arg": "Designer",
 			"desc": "Designer Dave"
+		},
+		"diane1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Diane",
+			"desc": "Diane (Voiceforge)"
 		},
 		"diesel": {
 			"country": "US",
@@ -4199,6 +4486,30 @@
 			"source": "voiceforge",
 			"arg": "Dog",
 			"desc": "Dog"
+		},
+		"duchess1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Duchess",
+			"desc": "Duchess (Voiceforge)"
+		},
+		"duncan1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Duncan",
+			"desc": "Duncan (Voiceforge)"
+		},
+		"emily1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Emily",
+			"desc": "Emily (Voiceforge)"
 		},
 		"evilgenius": {
 			"country": "US",
@@ -4272,6 +4583,14 @@
 			"arg": "Kidaroo",
 			"desc": "Kidaroo"
 		},
+		"lawrence1": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Lawrence",
+			"desc": "Lawrence (Voiceforge)"
+		},		
 		"layo": {
 			"country": "NG",
 			"language": "en",
@@ -4279,6 +4598,22 @@
 			"source": "voiceforge",
 			"arg": "Layo",
 			"desc": "Layo"
+		},
+		"linda1": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Linda",
+			"desc": "Linda (Voiceforge)"
+		},
+		"millie1": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Millie",
+			"desc": "Millie (Voiceforge)"
 		},
 		"princess": {
 			"country": "US",
@@ -4303,6 +4638,14 @@
 			"source": "voiceforge",
 			"arg": "Robot",
 			"desc": "Robot"
+		},
+		"shouty1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Shouty",
+			"desc": "Shouty (Voiceforge)"
 		},
 		"shygirl": {
 			"country": "US",
@@ -4336,6 +4679,14 @@
 			"arg": "TopHat",
 			"desc": "Top-Hat"
 		},
+		"tween_girl": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "voiceforge",
+			"arg": "Robin",
+			"desc": "Tween Girl"
+		},
 		"vixen": {
 			"country": "US",
 			"language": "en",
@@ -4359,6 +4710,22 @@
 			"source": "voiceforge",
 			"arg": "Warren",
 			"desc": "Warren Peas"
+		},
+		"walter_white1": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "Walter",
+			"desc": "Walter (Voiceforge)"
+		},
+		"william3": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "voiceforge",
+			"arg": "William",
+			"desc": "William (Voiceforge)"
 		},
 		"wiseguy": {
 			"country": "US",
