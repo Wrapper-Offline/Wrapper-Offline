@@ -86,10 +86,10 @@
 							<span>${date}, ${time}</span>
 						</td>
 						<td>
-							<a href="javascript:;" onclick="popup('${tbl.id}', 'player')" title="Play"></a>
+							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
 							<a href="/go_full?movieId=${tbl.id}${starters ? "&isStarter=1" : ""}" title="Edit"></a>
 							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip" title="Download files -- NOT AN EXPORTER"></a>
-							<a href="javascript:;" onclick="popup('${tbl.id}', 'exporter')" title="Export"></a>
+							<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>
 							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
 						</td>
 					</tr>`.trim()
@@ -148,8 +148,12 @@
 					});
 		}
 
-		function popup(id, path) {
-			window.open(`/${path}?movieId=${id}`, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
+		function popup(id) {
+			window.open(`/player?movieId=${id}`, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
+				',top=' + (screen.height / 2 - 360));
+		}
+		function popupExport(id) {
+			window.open(`/exporter?movieId=${id}`, 'MsgWindow', 'width=400,height=400,left=' + (screen.width / 2 - 640) +
 				',top=' + (screen.height / 2 - 360));
 		}
 

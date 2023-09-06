@@ -176,10 +176,10 @@ group.route("GET", "/exporter", async (req, res) => {
 		flashvars.isWixPaid = 1;
 	}
 	Object.assign(flashvars, req.query);
-	res.render("app/player", {
+	res.render("app/exporter", {
 		attrs: {
 			data: SWF_URL + "/exporter.swf",
-			type: "application/x-shockwave-flash", width: "100%", height: "100%",
+			type: "application/x-shockwave-flash",
 		},
 		params: {
 			flashvars,

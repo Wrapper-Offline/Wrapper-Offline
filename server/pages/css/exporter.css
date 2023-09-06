@@ -1,0 +1,18 @@
+.export_progress {
+    height: 14px;
+    width: 190px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #000;
+}
+.progress_bar {
+    width: calc(0 / 8 * 100%);
+    display: block;
+    background: #ff0b71;
+    height: 100%;
+}
+
+object {
+	width: 1px;
+	height: 1px;
+}

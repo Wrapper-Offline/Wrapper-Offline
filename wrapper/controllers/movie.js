@@ -29,6 +29,24 @@ group.route("*", /\/file\/movie\/thumb\/([^/]+)$/, (req, res) => {
 });
 
 /*
+info
+*/
+group.route("GET", "/api/movie/get_info", (req, res) => {
+	const id = req.query.id;
+	if (typeof id == "undefined") {
+		res.status(400).json({ msg: "Movie ID missing." });
+		return;
+	}
+
+	const info = DB.get("movies", id)?.data;
+	if (info) {
+		res.json(info);
+	} else {
+		res.status(404).json({ msg: "Movie not found." });
+	}
+});
+
+/*
 list
 */
 // movies
