@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const database = require("../../data/database"), DB = new database();
-const fUtil = require("../../utils/fileUtil");
+const stringUtil = require("../utils/string.util");
 const baseUrl = path.join(__dirname, "../../", process.env.CHAR_BASE_URL);
 const folder = path.join(__dirname, "../../", process.env.ASSET_FOLDER);
 
@@ -41,7 +41,7 @@ module.exports = {
 	 */
 	save(buf, info) {
 		// save asset info
-		info.id ||= fUtil.generateId();
+		info.id ||= stringUtil.generateId();
 		DB.insert("assets", info);
 
 		// fix handheld props for freeaction themes

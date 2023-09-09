@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const database = require("../../data/database"), DB = new database();
-const fUtil = require("../../utils/fileUtil");
+const stringUtil = require("../utils/string.util");
 
 module.exports = {
 	folder: path.join(__dirname, "../../", process.env.ASSET_FOLDER),
@@ -107,7 +107,7 @@ module.exports = {
 			if (ext.includes(".")) {
 				info.id = ext;
 			} else {
-				info.id = `${fUtil.generateId()}.${ext}`;
+				info.id = `${stringUtil.generateId()}.${ext}`;
 			}
 			DB.insert("assets", info)
 			// save the file

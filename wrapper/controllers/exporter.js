@@ -59,7 +59,7 @@ group.route("POST", "/api/export/video_complete", async (req, res) => {
 		});
 	
 	/* add the audio ourselves, i really don't wanna make it record it */
-	let audios = await Movie.getAudio(req.body.id);
+	let audios = await Movie.extractAudioTimes(req.body.id);
 	let complexFilterString = "";
 	let delay = 0;
 	audios = audios.sort((a, b) => a.start - b.start);

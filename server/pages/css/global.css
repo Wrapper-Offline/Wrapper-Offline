@@ -84,6 +84,12 @@ html.dark header {
 	background: #029a85;
 	cursor: pointer;
 }
+.dark .btn {
+    background: #333;
+}
+.dark .btn:hover {
+    background: #444;
+}
 /* primary color buttons */
 .btn.btn_primary {
 	background: #e97d3b;
