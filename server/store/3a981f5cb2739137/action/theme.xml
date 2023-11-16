@@ -189,4 +189,65 @@
 		<state id="msp_vending_drink_vending_drink.swf" name="front" enable="Y" default="Y"/>
 		<state id="msp_vending_drink_ncc_vending_drink_side.swf" name="side" enable="Y"/>
 	</prop>
+
+	<char id="328503868" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503868.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503855" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503855.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503840" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503840.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503826" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503826.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503807" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503807.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503791" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503791.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503770" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503770.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503751" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503751.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503740" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503740.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328503717" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328503717.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519564" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519564.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519582" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519582.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519597" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519597.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519609" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519609.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519624" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519624.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519638" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519638.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519648" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519648.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519675" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519675.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519696" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519696.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
+	<char id="328519707" name="" cc_theme_id="cc2" thumbnail_url="/stock_thumbs/328519707.png" copyable="Y">
+		<tags>cc2,_free,_cat:Specialties</tags>
+	</char>
 </theme>

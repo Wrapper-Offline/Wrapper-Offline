@@ -1,5 +1,4 @@
 const fs = require("fs");
-const nodezip = require("node-zip");
 const path = require("path");
 const database = require("../../data/database"), DB = new database();
 const stringUtil = require("../utils/string.util");
@@ -10,7 +9,8 @@ module.exports = {
 	/**
 	 * deletes a movie do i really have to explain this to you
 	 * @param {string} id 
-	 * @return {Promise<{status: number} | void>}
+	 * @returns {Promise<void>}
+	 * @throws {Promise<{status: number}>}
 	 */
 	delete(id) {
 		return new Promise((res, rej) => {

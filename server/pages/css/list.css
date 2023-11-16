@@ -1,50 +1,64 @@
 /**
 table
 **/
-table {
+#video_list {
 	border-collapse: collapse;
 	margin: 0 auto 127px;
 	font-size: 14px;
 	width: 100%;
 	max-width: 100%;
 }
+#table_view_header {
+	margin: 0 auto;
+}
 
 
 /**
 table columns
 **/
-td {
+.video_col {
 	padding: 8px;
+	vertical-align: middle;
+	flex-shrink: 0;
+}
+.video_col>* {
 	vertical-align: middle;
 }
 
 /**
 table rows
 **/
-tbody>tr {
+.video {
 	border-top: 0;
 	border-bottom: 1px solid #ddd;
+	display: flex;
 }
-html.dark tbody>tr { border-color: #3a3a3a }
+.dark .video { border-color: #3a3a3a }
 
 
 /**
 header
 **/
-thead {
+#table_view_header {
     background: #fff;
     font-weight: 200;
     box-shadow: 0 4px 3px -2px #0002;
 }
-html.dark thead {
+.dark #table_view_header {
 	background: #282828;
 }
+#table_view_header .video_col {
+	padding: 5px;
+}
+#table_view_header>.video>:nth-child(3) {
+	padding-top: 7px;
+}
 /* search bar */
-td#search_container {
+.video_col#search_container {
 	padding: 0;
 	line-height: 28px;
 }
-thead input {
+#table_view_header input {
     border: 1px solid #cac9d4;
     box-shadow: inset 0 1px #1112;
     border-radius: 4px;
@@ -54,11 +68,11 @@ thead input {
     width: 100%;
     height: 30px;
 }
-html.dark thead input {
+.dark #table_view_header input {
 	background: #2a2a2a;
 	border-color: #212121;
 }
-thead input:focus {
+#table_view_header input:focus {
 	outline: none;
 }
 
@@ -67,39 +81,47 @@ thead input:focus {
 thumbnail
 **/
 /* column */
-tr>:nth-child(1) {
-	width: 64px;
+.video>:nth-child(1) {
+	width: 90px;
 }
 /* image */
-tr>:nth-child(1)>img {
+.video>:nth-child(1)>img {
 	display: block;
 	height: 42px;
 }
-tr>:nth-child(1) {
+.video>:nth-child(1) {
 	word-break: break-word;
 }
 
 /**
 information
 **/
+.video>:nth-child(2) {
+	flex-shrink: 1;
+	padding-top: 9px;
+	width: 100%;
+}
 /* title */
-tr>:nth-child(2)>:nth-child(1) {
+.video>:nth-child(2)>:nth-child(1) {
     font-weight: bold;
 }
 /* duration */
-tr>:nth-child(2)>:nth-child(2) {
+.video>:nth-child(2)>:nth-child(2) {
 	color: #939ca2;
 	font-size: 13px;
 }
-html.dark tr>:nth-child(2)>:nth-child(2) { color: #bbb }
+html.dark .video>:nth-child(2)>:nth-child(2) { color: #bbb }
 
 /**
 last modified
 **/
 /* column */
-tr>:nth-child(3) { width: 215px }
+.video>:nth-child(3) {
+	padding-top: 18px;
+	width: 215px;
+}
 /* date modified */
-tr>:nth-child(3)>* {
+.video>:nth-child(3)>* {
 	font-family: monospace;
 	letter-spacing: 1px;
 }
@@ -108,14 +130,15 @@ tr>:nth-child(3)>* {
 actions (play, edit, delete)
 **/
 /* column */
-tr>:nth-child(4) {
-	font-family: 'GlyphiconsRegular';
+.video>:nth-child(4) {
+	font-family: "GlyphiconsRegular";
 	text-decoration: none;
 	font-size: 14px;
-	width: 170px;
+	padding-top: 14px;
+	width: 175px;
 }
 /* buttons */
-tr>:nth-child(4)>a {
+.video>:nth-child(4)>a {
 	background: #43bca5;
     color: #fff;
     border-radius: 100px;
@@ -125,23 +148,23 @@ tr>:nth-child(4)>a {
     margin-right: -4px;
     display: none; 
 }
-tr>:nth-child(4)>a:hover {
+.video>:nth-child(4)>a:hover {
 	background: #46ccb2;
 }
-tr:hover>:nth-child(4)>a {
+.video:hover>:nth-child(4)>a {
     display: inline-block;
 }
-html.dark tr>:nth-child(4)>a { color: #eee }
+html.dark .video>:nth-child(4)>a { color: #eee }
 
 
 /**
 footer, load more button
 **/
-tfoot>tr>td {
+tfoot>.video>.video_col {
 	text-align: center;
 	border: none;
 }
-tfoot>tr>td>a {
+tfoot>.video>.video_col>a {
 	text-decoration: none;
 	color: #474747;
 	font-size: 14px;
@@ -151,19 +174,19 @@ tfoot>tr>td>a {
 /**
 hardcoded icons! :)
 **/
-tr>:nth-child(4)>:nth-child(1)::before {
+.video>:nth-child(4)>:nth-child(1)::before {
 	content: '\E174';
 }
-tr>:nth-child(4)>:nth-child(2)::before {
+.video>:nth-child(4)>:nth-child(2)::before {
 	content: '\E235';
 }
-tr>:nth-child(4)>:nth-child(3)::before {
+.video>:nth-child(4)>:nth-child(3)::before {
 	content: '\E182';
 }
-tr>:nth-child(4)>:nth-child(4)::before {
+.video>:nth-child(4)>:nth-child(4)::before {
 	content: '\E319';
 }
-tr>:nth-child(4)>:nth-child(5)::before {
+.video>:nth-child(4)>:nth-child(5)::before {
 	content: '\E017';
 }
 
@@ -173,19 +196,22 @@ make the table responsive
 **/
 @media(min-width: 790px) {
 	.tab_navigation,
-	table {
+	#table_view_header,
+	#video_list {
 		width: 750px;
 	}
 }
 @media(min-width: 1012px) {
 	.tab_navigation,
-	table {
+	#table_view_header,
+	#video_list {
 		width: 970px;
 	}
 }
 @media(min-width: 1210px) {
 	.tab_navigation,
-	table {
+	#table_view_header,
+	#video_list {
 		width: 1170px;
 	}
 }

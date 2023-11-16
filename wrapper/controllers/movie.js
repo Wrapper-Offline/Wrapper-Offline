@@ -51,13 +51,28 @@ group.route("GET", "/api/movie/get_info", (req, res) => {
 /*
 list
 */
+// list page
+group.route("*", "/", (req, res) => {
+	res.render("list", {});
+});
 // movies
 group.route("GET", "/api/movie/list", (req, res) => {
-	res.json(DB.select("movies"));
-});
-// starters
-group.route("GET", "/api/starter/list", (req, res) => {
-	res.json(DB.select("assets", { type: "movie" }));
+	if (typeof req.query.type == "undefined") {
+		console.warn("Controllers.movie#list attempted without specifying the type to be listed.");
+		res.statusCode = 400;
+		res.json({ msg: "No type specified. "});
+	}
+	switch (req.query.type) {
+		case "movie":
+			return res.json(DB.select("movies"));
+		case "starter":
+			return res.json(DB.select("assets", { type: "movie" }));
+		default: {
+			console.warn("Controllers.movie#list attempted with invalid movie type.");
+			res.statusCode = 400;
+			res.json({ msg: "Invalid type. "});
+		}
+	}
 });
 
 /*
@@ -156,7 +171,7 @@ group.route(
 save
 */
 group.route("POST", ["/goapi/saveMovie/", "/goapi/saveTemplate/"], (req, res) => {
-	if (typeof req.body.body_zip == "undefined") {
+	if (!req.body.body_zip) {
 		console.warn("Controllers.movie#save attempted without movie zip.");
 		res.statusCode = 400;
 		return res.end(stringUtil.xmlError(400, "No movie zip."));
@@ -164,10 +179,10 @@ group.route("POST", ["/goapi/saveMovie/", "/goapi/saveTemplate/"], (req, res) =>
 	const trigAutosave = req.body.is_triggered_by_autosave;
 	const saveAsStarter = req.parsedUrl.pathname == "/goapi/saveTemplate/";
 	// check if we're autosaving an existing movie
-	if (trigAutosave && typeof req.body.movieId == "undefined") {
+	if (trigAutosave && !req.body.movieId) {
 		return res.end("0");
 	} else if ( // check if there's a thumbnail in case this is a manual save
-		!trigAutosave && typeof req.body.thumbnail_large == "undefined"
+		!trigAutosave && !req.body.thumbnail_large
 	) {
 		console.warn("Controllers.movie#save manually attempted without a thumbnail.");
 		res.statusCode = 400;

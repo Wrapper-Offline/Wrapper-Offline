@@ -4,6 +4,13 @@ const database = require("../../data/database"), DB = new database(true);
 const group = new httpz.Group();
 
 /*
+page
+*/
+group.route("*", "/settings", (req, res) => {
+	res.render("settings", {});
+});
+
+/*
 list
 */
 group.route("GET", "/api/settings/list", (req, res) => {

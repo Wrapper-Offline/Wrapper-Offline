@@ -15,25 +15,19 @@
 
 		<main>
 			<nav class="tab_navigation">
-				<a href="javascript:;" class="tab movies" onclick="switchFilter(false)">Movies</a>
+				<a href="javascript:;" class="tab movies" onclick="switchFilter(false)">Videos</a>
 				<a href="javascript:;" class="tab starters" onclick="switchFilter(true)">Starters</a>
 			</nav>
-			<table>
-				<thead>
-					<tr>
-						<td></td>
-						<td id="search_container"><input id="search_bar" type="text" placeholder="Search Movies"/></td>
-						<td>Last Modified</td>
-						<td></td>
-					</tr>
-				</thead>
-				<tbody></tbody>
-				<tfoot>
-					<tr>
-						<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
-					</tr>
-				</tfoot>
-			</table>
+			<div id="table_view_header">
+				<div class="video">
+					<div class="video_col"></div>
+					<div class="video_col search_container"><input class="search_bar" type="text" placeholder="Search videos"/></div>
+					<div class="video_col">Last Modified</div>
+					<div class="video_col"></div>
+				</div>
+			</div>
+			<div id="video_list" class="list_view"></div>
+			<button id="load_more" class="btn">LOAD MORE</button>
 		</main>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
@@ -42,10 +36,10 @@
 	<script src="/pages/js/global.js"></script>
 	<script>
 		let json, searchTerm = "";
-		let starters = true;
-		const tbody = $("tbody");
-		const loadMore = $("#load_more");
-		const searchBar = $("#search_bar");
+		let listStarters = true;
+		const tbody = document.getElementById("video_list");
+		const loadMore = document.getElementById("load_more");
+		const searchBar = document.getElementsByClassName("search_bar")[0];
 
 		let C = 0;
 		function loadRows() {
@@ -55,7 +49,7 @@
 			for (; c < C; c++) {
 				// we reached the end
 				if (c > json.length - 1) {
-					loadMore.hide();
+					loadMore.style.display = "none";
 					break;
 				}
 
@@ -73,60 +67,66 @@
 				// escape the title
 				const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-				tbody.append(
-					`<tr id="${tbl.id}">
-						<td>
+				tbody.innerHTML += 
+					`<div class="video" data-id=${tbl.id}>
+						<div class="video_col">
 							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
-						</td>
-						<td>
+						</div>
+						<div class="video_col">
 							<div title="${tbl.id}">${title}</div>
 							<div>${tbl.duration}</div>
-						</td>
-						<td>
+						</div>
+						<div class="video_col">
 							<span>${date}, ${time}</span>
-						</td>
-						<td>
+						</div>
+						<div class="video_col">
 							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
-							<a href="/go_full?movieId=${tbl.id}${starters ? "&isStarter=1" : ""}" title="Edit"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip" title="Download files -- NOT AN EXPORTER"></a>
+							<a href="/go_full?movieId=${tbl.id}" title="Edit"></a>
+							<a href="/file/movie/file/${tbl.id}" download="${title.replace('"', "_")}.zip" title="Download files -- NOT AN EXPORTER"></a>
 							<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>
 							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
-						</td>
-					</tr>`.trim()
-				);
+						</div>
+					</div>`.trim();
 			}
 		}
 		// i want more movies
-		loadMore[0].onclick = loadRows;
+		loadMore.onclick = loadRows;
 
-		searchBar.on("input", () => {
-			searchTerm = searchBar.val();
-			tbody.html("");
+		function searchInputEvent() {
+			searchTerm = this.value;
+			tbody.innerHTML = "";
 			C = 0;
-			loadMore.show();
+			loadMore.style.display = "";
 			loadRows();
-		});
+		}
+		searchBar.addEventListener("input", searchInputEvent);
 
-		function switchFilter(shouldEqual) {
-			if (starters == shouldEqual) return;
+		function switchFilter(switchTo) {
+			if (listStarters == switchTo) {
+				return;
+			}
+			listStarters = switchTo;
+			// deselect all tabs
 			$(".tab").removeClass("selected");
-			if (starters) {
-				starters = false;
+			if (listStarters == false) {
 				$(".tab.movies").addClass("selected");
 			} else {
-				starters = true;
 				$(".tab.starters").addClass("selected");
 			}
-			$.get(`/api/${starters ? "starter" : "movie"}/list`)
+			$.get(`/api/movie/list?type=${listStarters ? "starter" : "movie"}`)
 				.done((data) => {
 					json = data;
-					tbody.html("");
+					tbody.innerHTML = "";
 					C = 0;
-					loadMore.show();
+					loadMore.style.display = "";
 					loadRows();
+				})
+				.fail((data) => {
+					loadMore.onclick = null;
+					loadMore.innerText = "An error has occured trying to load the movie list.";
 				});
 		}
-		switchFilter();
+		switchFilter(false);
 
 		function destructive(mId, act) {
 			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
