@@ -86,11 +86,11 @@ group.route("GET", /\/api\/movie\/delete\/([^/]+)$/, async (req, res) => {
 		res.end();
 	}).catch((err) => {
 		if (typeof err.status !== "undefined" && err.status == 404) {
-			console.warn("Controllers.movie#upload attempted on nonexistent movie.");
+			console.warn("Controllers.movie#delete attempted on nonexistent movie.");
 			res.statusCode = 404;
 			return res.json({ msg: "Movie doesn't exist." });
 		}
-		console.error("Controllers.movie#upload error:", err);
+		console.error("Controllers.movie#delete error:", err);
 		res.statusCode = 500;
 		res.json({ msg: "Internal server error." });
 	});

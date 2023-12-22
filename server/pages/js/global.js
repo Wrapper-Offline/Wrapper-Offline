@@ -44,10 +44,10 @@ $("#file").on("change", (event) => {
 	const file = event.target.files[0];
 	/** @type {Element} */
 	const isStarter = event.target.nextElementSibling.checked;
-	if (file.type !== "application/x-zip-compressed") {
+	/*if (file.type !== "application/x-zip-compressed" || file.type !== "application/zip") {
 		alert("Bastard");
 		return;
-	}
+	}*/
 
 	let b = new FormData();
 	b.append("import", file);

@@ -91,11 +91,10 @@ module.exports = {
 	 * }} 
 	 */
 	async extractMeta(id) {
-		if (!this.exists(id)) {
+		const filepath = path.join(folder, `${id}.xml`);
+		if (!fs.existsSync(filepath)) {
 			throw { status: 404 };
 		}
-
-		const filepath = path.join(folder, `${id}.xml`);
 		const buffer = fs.readFileSync(filepath);
 
 		// title
