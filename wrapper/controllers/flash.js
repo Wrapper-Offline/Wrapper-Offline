@@ -157,7 +157,7 @@ group.route("GET", "/player", async (req, res) => {
 group.route("GET", "/exporter", async (req, res) => {
 	const { IS_WIDE, DEFAULT_WATERMARK } = DB.select();
 	let flashvars = {
-		autostart: 0,
+		autostart: 1,
 		isWide: IS_WIDE,
 		ut: 60,
 		apiserver: "/",
