@@ -272,15 +272,13 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
-
 				case "readloud": {
 					const req = https.request(
 						{
-							hostname: "101.99.94.14",														
+							hostname: "gonutts.net",
 							path: voice.arg,
 							method: "POST",
-							headers: { 			
-								Host: "gonutts.net",					
+							headers: { 
 								"Content-Type": "application/x-www-form-urlencoded"
 							}
 						},
@@ -291,24 +289,14 @@ module.exports = function processVoice(voiceName, rawText) {
 								const html = Buffer.concat(buffers);
 								const beg = html.indexOf("/tmp/");
 								const end = html.indexOf("mp3", beg) + 3;
-								const path = html.subarray(beg, end).toString();
+								const sub = html.subarray(beg, end).toString();
 
-								if (path.length > 0) {
-									https.get({
-										hostname: "101.99.94.14",	
-										path: `/${path}`,
-										headers: {
-											Host: "gonutts.net"
-										}
-									}, res)
-										.on("error", rej);
-								} else {
-									return rej("Could not find voice clip file in response.");
-								}
+								https
+									.get(`https://gonutts.net${sub}`, res)
+									.on("error", rej);
 							});
 						}
-					);
-					req.on("error", rej);
+					).on("error", rej);
 					req.end(
 						new URLSearchParams({
 							but1: text,
@@ -320,7 +308,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
-
 				case "cereproc": {
 					const req = https.request(
 						{
