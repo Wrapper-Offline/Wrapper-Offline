@@ -123,29 +123,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					}).on("error", rej);
 					break;
 				}
-
-				case "voiceforge": {
-					const q = new URLSearchParams({						
-						msg: text,
-						voice: voice.arg,
-						email: "null"
-					}).toString();
-					
-					https.get({
-						hostname: "api.voiceforge.com",
-						path: `/swift_engine?${q}`,
-						headers: { 
-							"User-Agent": "just_audio/2.7.0 (Linux;Android 11) ExoPlayerLib/2.15.0",
-							"HTTP_X_API_KEY": "8b3f76a8539",
-							"Accept-Encoding": "identity",
-							"Icy-Metadata": "1",
-						}
-					}, (r) => {
-						convertToMp3(r, "wav").then(res).catch(rej);
-					}).on("error", rej);
-					break;
-				}
-
 				case "vocalware": {
 					const [EID, LID, VID] = voice.arg;
 					const q = new URLSearchParams({
@@ -272,7 +249,27 @@ module.exports = function processVoice(voiceName, rawText) {
 						.on("error", rej);
 					break;
 				}
-
+				case "voiceforge": {
+					const q = new URLSearchParams({						
+						msg: text,
+						voice: voice.arg,
+						email: "null"
+					}).toString();
+					
+					https.get({
+						hostname: "api.voiceforge.com",
+						path: `/swift_engine?${q}`,
+						headers: { 
+							"User-Agent": "just_audio/2.7.0 (Linux;Android 11) ExoPlayerLib/2.15.0",
+							"HTTP_X_API_KEY": "8b3f76a8539",
+							"Accept-Encoding": "identity",
+							"Icy-Metadata": "1",
+						}
+					}, (r) => {
+						convertToMp3(r, "wav").then(res).catch(rej);
+					}).on("error", rej);
+					break;
+				}
 				case "readloud": {
 					const req = https.request(
 						{
