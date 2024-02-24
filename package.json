@@ -6,20 +6,43 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "npx nodemon main.js --exec electron . --ignore ./_LOGS --ignore ./_SAVED --ignore ./_ASSETS --ignore ./_CACHÉ --ignore ./frames",
+		"start": "npx nodemon src/main",
 		"start2": "electron .",
 		"build": "npx electron-packager . --ignore=^/server",
+		"postinstall": "node scripts/fixModules.js",
 		"test": "mocha"
 	},
-	"main": "main.js",
+	"main": "./src/main.js",
+	"engines": {
+		"node": ">=16"
+	},
+	"nodemonConfig": {
+		"watch": [
+			"src/",
+			"scripts/",
+			"config.json",
+			"env.json",
+			"node_modules/"
+		],
+		"ignore": [
+			"_ASSETS/",
+			"_CACHÉ/",
+			"_EXPORTS/",
+			"_LOGS/",
+			"_SAVED/"
+		],
+		"execMap": {
+			"js": "electron ."
+		}
+	},
 	"dependencies": {
 		"@ffmpeg-installer/ffmpeg": "^1.1.0",
 		"@ffprobe-installer/ffprobe": "^1.4.1",
-		"@octanuary/httpz": "^1.0.3",
+		"@octanuary/httpz": "^2.0.9",
 		"brotli": "^1.3.3",
 		"electron": "^11.5.0",
-		"eta": "^2.0.0",
-		"file-type": "^16.5.1",
+		"eta": "3.2",
+		"file-type": "^16.5.4",
 		"fluent-ffmpeg": "^2.1.2",
 		"formidable": "^2.0.1",
 		"js-md5": "^0.7.3",
@@ -27,12 +50,18 @@
 		"mp3-duration": "^1.1.0",
 		"node-static": "^0.7.11",
 		"node-zip": "github:kyriosli/node-zip",
-		"nodemon": "^2.0.22",
-		"sharp": "^0.30.6",
+		"nodemon": "^3.0.3",
+		"sharp": "^0.33.2",
 		"tempfile": "^3.0.0",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
+		"@types/brotli": "^1.3.4",
+		"@types/fluent-ffmpeg": "^2.1.24",
+		"@types/formidable": "^3.4.5",
+		"@types/node": "^20.11.13",
+		"@types/node-static": "^0.7.11",
+		"@types/xmldoc": "^1.1.9",
 		"electron-packager": "^15.5.1",
 		"js-base64": "^3.7.2",
 		"mocha": "^10.0.0",

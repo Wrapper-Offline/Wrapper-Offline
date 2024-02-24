@@ -167,7 +167,7 @@ class AssetImporter {
 	 * @param {string} name 
 	 * @param {string} size 
 	 * @param {string} ext 
-	 * @param {?boolean} iUsedToHaveACripplingRobloxPornAddiction
+	 * @param {?boolean} iUsedToHaveACripplingRobloxPornAddiction should the name field be editable
 	 * @returns {JQuery | false}
 	 */
 	insertFileElement(name, size, ext, iUsedToHaveACripplingRobloxPornAddiction = true) {
@@ -281,6 +281,7 @@ class ImporterFile {
 			this.type = fixedTypes.type;
 			this.subtype = fixedTypes.subtype;
 
+			// image props have their own subsubtypes
 			if (this.type == "prop" && this.subtype != "video") {
 				// part 2
 				this.$el.find(".import_as").html(`
@@ -290,7 +291,6 @@ class ImporterFile {
 					<a href="javascript:;" data-action="cancel">Close</a>
 				`.trim());
 			} else {
-				// get the title
 				let name = this.$el.find(".asset_name").text();
 				this.upload(name);
 			}
@@ -299,7 +299,9 @@ class ImporterFile {
 		this.$el.one("click", "[data-ptype]", (e) => {
 			const $target = $(e.target);
 			this.ptype = $target.attr("data-ptype");
-			this.upload();
+
+			let name = this.$el.find(".asset_name").text();
+			this.upload(name);
 		});
 
 		this.$el.on("click", "[data-action]", (e) => {
@@ -364,7 +366,7 @@ class ImporterFile {
 				this.$el.fadeOut(() => this.$el.remove());
 				return;
 			}
-			this.id = d.file;
+			this.id = d.id;
 
 			// update the object for videos
 			const importType = this.subtype == "video" ? "video" : this.type;
@@ -373,10 +375,7 @@ class ImporterFile {
 				d.thumbnail = thumbUrl;
 			}
 
-			// alert the studio
-			studio[0].importerStatus("done");
-			studio[0].importerUploadComplete(importType, d.file, d);
-
+			// set the asset previews
 			if (this.type == "sound") {
 				this.$el.find("img").after(`
 					<audio>
@@ -386,6 +385,7 @@ class ImporterFile {
 					"onclick": "this.nextSibling.play()",
 					"style": "cursor:pointer"
 				});
+				d.downloadtype = "progressive";
 			} else if (this.subtype == 0) {
 				if (this.ext != "swf") {
 					this.$el.find("img").attr("src", `/assets/${d.file}`);
@@ -393,7 +393,13 @@ class ImporterFile {
 					this.$el.find("img").attr("src", "/pages/img/importer/flash.svg");
 				}
 			}
-			// change the subtypes to an add to scene button
+
+			d.file = d.enc_asset_id = this.id;
+			// alert the studio
+			studio[0].importerStatus("done");
+			studio[0].importerUploadComplete(importType, d.id, d);
+
+			// and have some final actions the user can do now that it's uploaded
 			this.$el.find(".import_as").html(`
 				<a href="javascript:;" data-action="add-to-scene">Add to scene</a>
 				<a href="javascript:;" data-action="cancel">Close</a>

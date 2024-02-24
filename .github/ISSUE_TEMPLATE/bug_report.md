@@ -27,6 +27,5 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. windows, macOS, linux]
  - Version [e.g. beta, stable]
 
-
 **Additional context**
 Add any other context about the problem here.

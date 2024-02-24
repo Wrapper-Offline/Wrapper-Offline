@@ -13,6 +13,7 @@ utilities/config.bat
 vfproxy/*
 bbbb/*
 node_modules
+build/*
 # Logs
 logs
 *.log
