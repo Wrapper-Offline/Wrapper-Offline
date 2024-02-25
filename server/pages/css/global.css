@@ -84,6 +84,12 @@ html.dark header {
 	background: #029a85;
 	cursor: pointer;
 }
+header .btn {
+    background: #344583;
+}
+header .btn:hover {
+    background: #2f3e75;
+}
 .dark .btn {
     background: #333;
 }

@@ -10,16 +10,24 @@ const group = new httpz.Group();
 load
 */
 group.route("POST", "/goapi/getWaveform/", async (req, res) => {
-	const SHOW_WAVEFORMS = (new settings()).showWaveforms;
+	const SHOW_WAVEFORMS = settings.showWaveforms;
 	if (SHOW_WAVEFORMS) {
 		const id = req.body.wfid;
 		if (!id) {
 			return res.status(500).end("Missing one or more fields.");
 		}
 
-		const waveform = WfModel.load(id);
-		waveform ? (res.statusCode = 200, res.end(waveform)) :
-			(res.statusCode = 404, res.end());
+		try {
+			const waveform = WfModel.load(id);
+			waveform ? (res.statusCode = 200, res.end(waveform)) :
+				(res.statusCode = 404, res.end());
+		} catch (err) {
+			if (err == "404") {
+				return res.status(404).end();
+			}
+			console.log(req.parsedUrl.pathname, "failed. Error:", err);
+			res.status(500).end();
+		}
 	} else {
 		const filepath = path.join(__dirname, "../data/waveform.txt");
 		if (fs.existsSync(filepath)) {

@@ -26,7 +26,7 @@
 					<div class="video_col"></div>
 				</div>
 			</div>
-			<div id="video_list" class="list_view"></div>
+			<div id="video_list"></div>
 			<button id="load_more" class="btn">LOAD MORE</button>
 		</main>
 
@@ -37,9 +37,20 @@
 	<script>
 		let json, searchTerm = "";
 		let listStarters = true;
-		const tbody = document.getElementById("video_list");
+		const vidList = document.getElementById("video_list");
 		const loadMore = document.getElementById("load_more");
 		const searchBar = document.getElementsByClassName("search_bar")[0];
+
+		switch (localStorage.getItem("LIST_LAYOUT")) {
+			case "grid": {
+				vidList.classList.add("grid_view");
+				break;
+			}
+			case "list":
+			default: {
+				vidList.classList.add("list_view");
+			}
+		}
 
 		let C = 0;
 		function loadRows() {
@@ -67,7 +78,7 @@
 				// escape the title
 				const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-				tbody.innerHTML += 
+				vidList.innerHTML += 
 					`<div class="video" data-id=${tbl.id}>
 						<div class="video_col">
 							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
@@ -83,7 +94,7 @@
 							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
 							<a href="/go_full?movieId=${tbl.id}" title="Edit"></a>
 							<a href="/file/movie/file/${tbl.id}" download="${title.replace('"', "_")}.zip" title="Download files -- NOT AN EXPORTER"></a>
-							<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>
+							<!--<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>-->
 							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
 						</div>
 					</div>`.trim();
@@ -94,7 +105,7 @@
 
 		function searchInputEvent() {
 			searchTerm = this.value;
-			tbody.innerHTML = "";
+			vidList.innerHTML = "";
 			C = 0;
 			loadMore.style.display = "";
 			loadRows();
@@ -116,7 +127,7 @@
 			$.get(`/api/movie/list?type=${listStarters ? "starter" : "movie"}`)
 				.done((data) => {
 					json = data;
-					tbody.innerHTML = "";
+					vidList.innerHTML = "";
 					C = 0;
 					loadMore.style.display = "";
 					loadRows();
