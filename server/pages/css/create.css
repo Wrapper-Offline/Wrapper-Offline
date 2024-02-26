@@ -15,53 +15,83 @@ main {
 theme
 **/
 .theme {
-	/* style */
-	background: #ddd;
-	border-radius: 4px;
-	transition: .15s ease;
-	/* layout */
-	display: inline-table;
-	margin: 5px;	
-	padding: 3px;
-	padding-bottom: 6px;
+	background-color: #f9fafa;
+	background-position: center;
+	background-blend-mode: overlay;
+	background-size: 100%;
+	border: none;
+	box-shadow: 0 1px 5px #0002;
+	border-radius: 3px;
+	transition: 0.12s cubic-bezier(0.7, 0.5, 0.3, 1);
+	display: inline-flex;
+	align-items: center;
+	font-size: 21px;
+	font-weight: bold;
+	margin: 5px;
+	padding: 8px;
+	width: 302px;
 }
-.theme:hover { opacity: 0.8; }
-html.dark .theme { background: #353535 }
+html div.theme:hover {
+	background-color: #babeea;
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+	box-shadow: 0 2px 6px #0003;
+	background-size: 105%;
+	background-position: center -25px;
+	cursor: pointer;
+}
+html.dark .theme {
+	background-color: #151515;
+}
+html.dark .theme:hover {
+	background-color: #252733;
+	color: #ffa975;
+}
 .theme img {
-	border-radius: 4px;
-	margin-bottom: 6px;
+	border-radius: 100%;
+	margin-right: 12px;
 	display: block;
+	height: 70px;
+	width: 70px;
 }
-.theme:hover>a,
-.theme:hover>a:visited {
-	color: var(--primary);
-}
-.theme>a {
-	color: #474747;
-	text-decoration: none;
-	margin: 0;
-}
-html.dark .theme>a { color: #eee }
 
 /**
 char copy
 **/
-#char-copy { margin: 30px 0 }
-#char-copy input {
-	/* style */
-	background: #353535;
-	border: 1px solid #353535;
-	color: #fff;
+.upload_container {
+	background: #ddd;
 	border-radius: 4px;
-	/* layout */
-	padding: 5px 10px;
+	margin: 5px;
+	padding: 3px;
+	padding-bottom: 6px;
+	display: inline-flex;
+	width: 302px;
+	height: 203px;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex-basis: 0;
 }
-#char-copy a {
-	/* style */
-	background: var(--primary);
+html.dark .upload_container {
+	background: #353535;
+}
+.upload_container input {
+	background: #fff;
+	border: 1px solid #cac9d4;
+	box-shadow: inset 0 1px #1112;
 	color: #fff;
-	text-decoration: none;
 	border-radius: 4px;
-	/* layout */
-	padding: 5px 10px;
+	padding: 7px 10px;
+	font-size: 14px;
+}
+html.dark .upload_container input {
+	background: #2a2a2a;
+	border-color: #212121;
+}
+.upload_container .btn {
+	margin: 0;
+	width: unset;
+}
+.upload_container h2 {
+	font-size: 14px;
+	margin: 3px 0;
 }

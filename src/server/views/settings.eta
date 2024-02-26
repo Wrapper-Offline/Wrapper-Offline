@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<%~ include("./includes/header", { env: it.env }) %>
+		<%~ include("./global/header", { env: it.env }) %>
 
 		<main>			
 			<nav class="tab_nav_container">
@@ -27,7 +27,7 @@
 					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
 						Keeping this off is highly suggested.<br/>
 						However, if you want to see everything the program has to offer, turn this on.</p>
-					<input class="setting" type="checkbox" id="truncatedThemelist"></input>
+					<input class="setting" type="checkbox" id="truncatedThemeList"></input>
 
 					<h3>Show waveforms</h3>
 					<p>By default, waveforms for audio are generated in the video editor.<br/>
@@ -80,17 +80,13 @@
 					<h2>Your Library</h2>
 
 					<h3>File uploads</h3>
-					<button onclick="document.getElementById('char-file').click()" class="btn">UPLOAD A CHARACTER</button>
+					
 					<!-- TODO: add data wiping-->
 				</nav>
 			</nav>
 		</main>
 
-		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
-			<input id="char-file" type="file" onchange="this.form.submit()" name="import"/>
-		</form>
-
-		<%~ include("./includes/footer", { env: it.env }) %>
+		<%~ include("./global/footer", { env: it.env }) %>
 	</body>
 
 	<script>
@@ -132,13 +128,15 @@
 			} else {
 				$.post("/api/settings/update", { setting, value })
 					.done((d) => {
+						show(setting, value);
+					})
+					.fail((d) => {
 						if (d.status != "ok") {
 							alert("That didn't work.");
 							return;
 						}
 					});
 			}
-			show(setting, value);
 		});
 
 		function show(key, value) {

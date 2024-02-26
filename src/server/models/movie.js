@@ -152,14 +152,13 @@ module.exports = class MovieModel {
 	 */
 	static async save(xml, thumbnail, id, saveAsStarter) {
 		return new Promise((res, rej) => {
-			const newMovie = typeof id == "undefined" || id.length == 0;
+			const newMovie = !id;
 			if (!newMovie && !this.exists(id)) {
 				return rej("404");
 			}
 			id ||= database.generateId();
 
-			// save the thumbnail on manual saves
-			if (typeof thumbnail !== "undefined") {
+			if (thumbnail) {
 				fs.writeFileSync(path.join(this.folder, id + ".png"), thumbnail);
 			}
 			fs.writeFileSync(path.join(this.folder, id + ".xml"), xml);

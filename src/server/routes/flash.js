@@ -5,11 +5,6 @@ const httpz = require("@octanuary/httpz");
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 const group = new httpz.Group();
 
-// themelist page
-group.route("GET", "/create", (req, res) => {
-	const { truncatedThemeList } = settings;
-	res.render("create", { truncatedThemelist: truncatedThemeList });
-});
 // flash pages
 group.route("GET", "/creator", async (req, res) => {
 	let flashvars = {

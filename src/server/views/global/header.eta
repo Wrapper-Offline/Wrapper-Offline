@@ -1,0 +1,9 @@
+<header>
+	<a href="/">
+		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1>
+	</a>
+	<nav id="headbuttons">
+		<a href="/create?filter=cc" class="btn">CREATE A CHARACTER</a>
+		<a href="/create" class="btn btn_primary">MAKE A VIDEO</a>
+	</nav>
+</header>

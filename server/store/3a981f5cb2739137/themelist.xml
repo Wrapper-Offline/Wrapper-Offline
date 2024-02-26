@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list version="1.0">
 	<fvm_meta theme_code="" is_biz="0"/>
-	<theme id="custom" name="Comedy World" cc_theme_id="custom" col="1"/>
-	<theme id="politics2" name="White Houserz" cc_theme_id="politics2" col="1"/>
+	<theme id="custom" name="Comedy World" cc_theme_id="family" col="1"/>
+	<theme id="politics2" name="White Houserz" col="1"/>
 	<theme id="anime" name="Anime" cc_theme_id="anime" col="1"/>
 	<theme id="ninjaanime" name="Ninja Anime" cc_theme_id="ninjaanime" col="1"/>
 
 	<theme id="business" name="Business Friendly" cc_theme_id="business" col="2"/>
-	<theme id="retro" name="Cartoon Classics" thumb="ann-stand.swf" cc_theme_id="retro" col="2"/>
-	<theme id="stick" name="Stick Figure" cc_theme_id="stick" col="2"/>
+	<theme id="retro" name="Cartoon Classics" col="2"/>
+	<theme id="stick" name="Stick Figure" col="2"/>
 	<theme id="spacecitizen" name="Space Citizens" cc_theme_id="spacecitizen" col="2"/>
 
 	<theme id="action" name="Lil' Peepz" cc_theme_id="cc2" col="3"/>
@@ -17,7 +17,7 @@
 	<theme id="animal" name="Lil' Petz" cc_theme_id="cc2" col="3"/>
 	<theme id="ninja" name="Chibi Ninjas" cc_theme_id="ninja" col="3"/>
 
-	<theme id="common" name="Common" thumb="matchboy-stand.swf"/>
+	<theme id="common" name="Common"/>
 	<word/>
 	<whiteword/>
 	<excludeAssetIDs/>

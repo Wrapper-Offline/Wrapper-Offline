@@ -22,7 +22,7 @@ group.route("GET", "/api/settings/list", (req, res) => {
 update
 */
 group.route("POST", "/api/settings/update", (req, res) => {
-	/** @type {String} >} */
+	/** @type {String} */
 	const name = req.body.setting;
 	if (!name) {
 		return res.status(400).json({msg:"Expected parameter 'setting' on the request body."});
@@ -37,7 +37,7 @@ group.route("POST", "/api/settings/update", (req, res) => {
 
 	// check if the setting exists
 	// this miight be a bad way to program it but i like how it looks
-	if (!settings[name] || name == "getAllSettings") {
+	if (typeof settings[name] == "undefined" || name == "getAllSettings") {
 		console.warn(`r.settings: Attempted #update on invalid setting '${name}'.`);
 		return res.status(400).json({msg:`Expected parameter 'value' for setting '${name}' to have type '${typeof settings[name]}'.`});
 	}

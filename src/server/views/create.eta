@@ -12,196 +12,51 @@
 	</head>
 
 	<body>
-		<%~ include("./includes/header", it); %>
+		<%~ include("./global/header", it); %>
 
 		<main>
 			<h1>Select a theme</h1>
 
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('custom', 'family')">
-					<img src="/pages/img/themes/custom.jpg" alt="Comedy World">
-					Comedy World
-				</a>
+			<% it.themeList.forEach(theme => { %>
+				<div
+					class="theme"
+					style="background-image: url(/pages/img/themes/<%= theme.id %>.jpg);"
+					<%~ theme.id ? `data-vm="${theme.id}"` : "" %>
+					<%~ theme.cc_theme_id ? `data-cc="${theme.cc_theme_id}"` : "" %>
+				>
+					<img src="/pages/img/themes/<%= theme.id %>.jpg" alt="<%= theme.name %>">
+					<%= theme.name %>
+				</div>
+			<% }) %>
+			<div id="char-upload" class="upload_container">
+				<div class="upload_row">
+					<h2>Copy a character</h2>
+					<input type="text" placeholder="ID (ex: 832304)" name="char-id" />
+					<a href="#" onclick="copyRedirect()" class="btn btn_primary">COPY</a>
+				</div>
+				<div class="upload_row">
+					<h2>Upload a character</h2>
+					<button onclick="document.getElementById('char-file').click()" class="btn">UPLOAD A CHARACTER</button>
+				</div>
 			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('action', 'cc2')">
-					<img src="/pages/img/themes/action.jpg" alt="Lil' Peepz">
-					Lil' Peepz
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('business', 'business')">
-					<img src="/pages/img/themes/business.jpg" alt="Business Friendly">
-					Business Friendly
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('retro')">
-					<img src="/pages/img/themes/retro.jpg" alt="Cartoon Classics">
-					Cartoon Classics
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('politics2')">
-					<img src="/pages/img/themes/politics2.jpg" alt="White Houserz">
-					White Houserz
-				</a>
-			</div>
-			<div class="theme">
-				<a href="#" onclick="redirect('stick')">
-					<img src="/pages/img/themes/stick.jpg" alt="Stick Figure">
-					Stick Figure
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('anime', 'anime')">
-					<img src="/pages/img/themes/anime.jpg" alt="Anime">
-					Anime
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('ninjaanime', 'ninjaanime')">
-					<img src="/pages/img/themes/ninjaanime.jpg" alt="Ninja Anime">
-					Ninja Anime
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('spacecitizen', 'spacecitizen')">
-					<img src="/pages/img/themes/spacecitizen.jpg" alt="Space Citizens">
-					Space Citizens
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('chibi', 'chibi')">
-					<img src="/pages/img/themes/chibi.jpg" alt="Chibi Peepz">
-					Chibi Peepz
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('ninja', 'ninja')">
-					<img src="/pages/img/themes/ninja.jpg" alt="Chibi Ninjas">
-					Chibi Ninjas
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('animal', 'cc2')">
-					<img src="/pages/img/themes/animal.jpg" alt="Lil' Petz World">
-					Lil' Petz World
-				</a>
-			</div>
-			<div class="theme" data-has-cc>
-				<a href="#" onclick="redirect('space', 'cc2')">
-					<img src="/pages/img/themes/space.jpg" alt="Space Peepz">
-					Space Peepz
-				</a>
-			</div>
-			<% if (!it.truncatedThemelist) { %>
-				<div class="theme">
-					<a href="#" onclick="redirect('fullenergy')">
-						<img src="/pages/img/themes/fullenergy.png" alt="Full Energy">
-						<div>Full Energy</div>
-					</a>
+			<div id="movie-upload" class="upload_container">
+				<div class="upload_row">
+					<h2>Upload a movie</h2>
+					<button onclick="document.getElementById('is-starter').checked = false;document.getElementById('file').click()" class="btn">UPLOAD AS MOVIE</button>
+					<button onclick="ocument.getElementById('is-starter').checked = true;document.getElementById('file').click()" class="btn">UPLOAD AS STARTER</button>
 				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('politic')">
-						<img src="/pages/img/themes/politic.png" alt="Politics &amp; Celebrity">
-						<div>Politics &amp; Celebrity</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('christmas')">
-						<img src="/pages/img/themes/christmas.png" alt="Holiday &amp; Seasonal">
-						<div>Holiday &amp; Seasonal</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('monstermsh')">
-						<img src="/pages/img/themes/monstermsh.png" alt="Monsters Mayhem">
-						<div>Monsters Mayhem</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('akon')">
-						<img src="/pages/img/themes/akon.jpg" alt="AKON&#8482;">
-						AKON&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('ben10')">
-						<img src="/pages/img/themes/ben10.png" alt="Ben 10&#8482;">
-						Ben 10&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('bunny')">
-						<img src="/pages/img/themes/bunny.png" alt="It's Happy Bunny&#8482;">
-						<div>It's Happy Bunny&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('chowder')">
-						<img src="/pages/img/themes/chowder.png" alt="Chowder&#8482;">
-						<div>Chowder&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('domo')">
-						<img src="/pages/img/themes/domo.png" alt="Domo&#8482;">
-						<div>Domo&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('monkeytalk')">
-						<img src="/pages/img/themes/monkeytalk.png" alt="SuperRica & Rashy&#8482;">
-						<div>SuperRica &amp; Rashy&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('sf')">
-						<img src="/pages/img/themes/sf.png" alt="Street Fighter&#8482;">
-						<div>Street Fighter&#8482;</div>
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('startrek')">
-						<img src="/pages/img/themes/startrek.jpg" alt="Star Trek&#8482; Quogs">
-						<div>Star Trek&#8482; Quogs</div>
-					</a>
-				</div>
-				<div class="theme" data-has-cc>
-					<a href="#" onclick="redirect('toonadv', 'cctoonadventure')">
-						<img src="/pages/img/themes/toonadv.png" alt="Toon Adventure&#8482;">
-						Toon Adventure&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('underdog')">
-						<img src="/pages/img/themes/underdog.png" alt="Underdog&#8482;">
-						Underdog&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('willie')">
-						<img src="/pages/img/themes/willie.jpg" alt="Willie Nelson&#8482;">
-						Willie Nelson&#8482;
-					</a>
-				</div>
-				<div class="theme">
-					<a href="#" onclick="redirect('street')">
-						<img src="/pages/img/themes/street.png" alt="Street">
-						Street
-					</a>
-				</div>
-			<% } %>
-			<div id="char-copy">
-				<h2>Copy a character</h2>
-				<p>Have a character ID? Use it here!</p>
-				<input type="text" value="832304" name="char-id" />
-				<a href="#" onclick="copyRedirect()">Copy</a>
 			</div>
 		</main>
 
-		<%~ include("./includes/footer", it); %>
+		<form id="movie-form" class="hide" enctype="multipart/form-data" action="#" method="post">
+			<input id="file" type="file" name="import" accept=".zip" />
+			<input id="is-starter" type="checkbox" value="false" />
+		</form>
+		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
+			<input id="char-file" type="file" onchange="this.form.submit()" name="import"/>
+		</form>
+
+		<%~ include("./global/footer", it); %>
 	</body>
 
 	<script>
@@ -209,25 +64,60 @@
 
 		// filter the list
 		const params = new URLSearchParams(window.location.search);
-		// default to all themes
 		const filter = params.get("filter") || "vl";
 		if (filter == "cc") {
-			$(".theme").not("[data-has-cc]").hide();
+			$(".theme").not("[data-cc]").hide();
 		} else {
 			$("#char-copy").hide();
 		}
 
-		function redirect(tId, ccId = false) {
+		for (const element of document.getElementsByClassName("theme")) {
+			element.addEventListener("click", redirect);
+		}
+
+		function redirect() {
 			if (filter == "cc") {
-				window.location.href = `./cc_browser?themeId=${ccId}`;
+				const id = this.attributes["data-cc"].value;
+				window.location.href = `./cc_browser?themeId=${id}`;
 				return;
 			}
-			window.location.href = `./go_full?tray=${tId}`;
+			const id = this.attributes["data-vm"].value;
+			window.location.href = `./go_full?tray=${id}`;
 		}
 		function copyRedirect() {
 			const id = charId.val();
 			window.location.href = `./cc?original_asset_id=${id}`;
 		}
+
+		/*
+		movie uploading
+		*/
+		$("#file").on("change", (event) => {
+			event.preventDefault();
+			const file = event.target.files[0];
+			/** @type {boolean} */
+			const isStarter = event.target.nextElementSibling.checked;
+			/*if (file.type !== "application/x-zip-compressed" || file.type !== "application/zip") {
+				alert("Bastard");
+				return;
+			}*/
+
+			let b = new FormData();
+			b.append("import", file);
+			b.append("is_starter", isStarter);
+			$.ajax({
+				url: "/api/movie/upload",
+				method: "POST",
+				data: b,
+				processData: false,
+				contentType: false,
+				dataType: "json"
+			})
+				.done((res) => window.location.href = "/go_full?movieId=" + res.id)
+				.fail(() => {
+					alert("Movie upload failed. See the console for more details.");
+				});
+		});
 
 	</script>
 

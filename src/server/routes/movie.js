@@ -164,7 +164,7 @@ group.route("POST", ["/goapi/saveMovie/", "/goapi/saveTemplate/"], (req, res) =>
 	}
 	const trigAutosave = req.body.is_triggered_by_autosave;
 	const saveAsStarter = req.parsedUrl.pathname == "/goapi/saveTemplate/";
-	// check if we're autosaving an existing movie
+	// make sure we're autosaving an existing movie
 	if (trigAutosave && !req.body.movieId) {
 		return res.end("0");
 	} else if ( // check if there's a thumbnail in case this is a manual save
@@ -174,7 +174,10 @@ group.route("POST", ["/goapi/saveMovie/", "/goapi/saveTemplate/"], (req, res) =>
 	}
 
 	const body = Buffer.from(req.body.body_zip, "base64");
-	const thumb = Buffer.from(req.body.thumbnail_large, "base64");
+	let thumb;
+	if (!trigAutosave) {
+		thumb = Buffer.from(req.body.thumbnail_large, "base64");
+	}
 	if (!body.subarray(0, 4).equals(
 		Buffer.from([0x50, 0x4b, 0x03, 0x04])
 	)) {
