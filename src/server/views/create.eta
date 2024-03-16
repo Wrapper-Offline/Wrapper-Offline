@@ -20,11 +20,11 @@
 			<% it.themeList.forEach(theme => { %>
 				<div
 					class="theme"
-					style="background-image: url(/pages/img/themes/<%= theme.id %>.jpg);"
+					style="background-image: url(/pages/img/themes/banners/<%= theme.id %>.webp);"
 					<%~ theme.id ? `data-vm="${theme.id}"` : "" %>
 					<%~ theme.cc_theme_id ? `data-cc="${theme.cc_theme_id}"` : "" %>
 				>
-					<img src="/pages/img/themes/<%= theme.id %>.jpg" alt="<%= theme.name %>">
+					<img src="/pages/img/themes/icons/<%= theme.id %>.webp" alt="<%= theme.name %>">
 					<%= theme.name %>
 				</div>
 			<% }) %>

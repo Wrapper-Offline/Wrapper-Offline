@@ -371,7 +371,7 @@ class ImporterFile {
 			// update the object for videos
 			const importType = this.subtype == "video" ? "video" : this.type;
 			if (importType == "video") {
-				const thumbUrl = `${window.location.origin}/assets/${d.file.slice(0, -3) + "png"}`;
+				const thumbUrl = `${window.location.origin}/assets/${this.id.slice(0, -3) + "png"}`;
 				d.thumbnail = thumbUrl;
 			}
 
@@ -379,7 +379,7 @@ class ImporterFile {
 			if (this.type == "sound") {
 				this.$el.find("img").after(`
 					<audio>
-						<source src="/assets/${d.file}" data-type="audio/${this.ext}">
+						<source src="/assets/${this.id}" data-type="audio/${this.ext}">
 					</audio>
 				`.trim()).attr({
 					"onclick": "this.nextSibling.play()",
@@ -388,7 +388,7 @@ class ImporterFile {
 				d.downloadtype = "progressive";
 			} else if (this.subtype == 0) {
 				if (this.ext != "swf") {
-					this.$el.find("img").attr("src", `/assets/${d.file}`);
+					this.$el.find("img").attr("src", `/assets/${this.id}`);
 				} else {
 					this.$el.find("img").attr("src", "/pages/img/importer/flash.svg");
 				}

@@ -137,6 +137,7 @@ module.exports = class AssetModel {
 			}
 		}
 
+		console.log(filters)
 		const files = database.instance.select("assets", filters);
 		if (returnXml) {
 			return `${
@@ -154,7 +155,7 @@ module.exports = class AssetModel {
 	 * @returns {Asset}
 	 */
 	static getInfo(id) {
-		if (!this.exists(id)) {
+		if (!this.exists(id, true)) {
 			throw "404";
 		}
 		return database.instance.get("assets", id);
@@ -166,7 +167,7 @@ module.exports = class AssetModel {
 	 * @param {object} info 
 	 */
 	static updateInfo(id, info) {
-		if (!this.exists(id)) {
+		if (!this.exists(id, true)) {
 			throw "404";
 		}
 		database.instance.update("assets", id, info)
@@ -175,8 +176,13 @@ module.exports = class AssetModel {
 	/**
 	 * checks if an asset exists by its id
 	 * @param {string} id 
+	 * @param {boolean} checkDBInstead
 	 */
-	static exists(id) {
+	static exists(id, checkDBInstead) {
+		if (checkDBInstead) {
+			const asset = database.instance.get("assets", id);
+			return asset != false;
+		}
 		const filepath = path.join(this.folder, id);
 		const exists = fs.existsSync(filepath);
 		return exists;

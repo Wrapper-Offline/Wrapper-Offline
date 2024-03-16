@@ -55,9 +55,9 @@ group.route("POST", "/api_v2/assets/imported", (req, res) => {
 	}
 
 	const filters = {
-		type: req.body.data.type,
-		subtype: req.body.data.subtype
+		type: req.body.data.type
 	};
+	if (req.body.data.subtype) filters.subtype = req.body.data.subtype;
 
 	// what's even the point of this if it still uses an xml
 	// it's dumb
@@ -141,7 +141,7 @@ info
 */
 // get
 group.route("POST", "/api_v2/asset/get", (req, res) => {
-	const id = req.body?.data.id || req.body?.data.starter_id;
+	const id = req.body.data?.id ?? req.body.data?.starter_id;
 	if (!id) {
 		return res.status(404).json({status:"error"});
 	}
@@ -156,7 +156,7 @@ group.route("POST", "/api_v2/asset/get", (req, res) => {
 			data: info
 		});
 	} catch (e) {
-		if (e == 404) {
+		if (e == "404") {
 			return res.status(404).json({status:"error"});
 		}
 		console.error(req.parsedUrl.pathname, "failed. Error:", e);
@@ -165,10 +165,10 @@ group.route("POST", "/api_v2/asset/get", (req, res) => {
 });
 // update
 group.route("POST", "/api_v2/asset/update/", (req, res) => {
-	const id = req.body.data.id || req.body.data.starter_id;
-	const title = req.body.data.title;
-	const tags = req.body.data.tags;
-	if (!id || !title || !tags) {
+	const id = req.body.data?.id ?? req.body.data?.starter_id ?? null;
+	const title = req.body.data?.title ?? null;
+	const tags = req.body.data?.tags ?? null;
+	if (!id || title === null || tags === null) {
 		return res.status(400).json({status:"error"});
 	}
 
@@ -180,7 +180,7 @@ group.route("POST", "/api_v2/asset/update/", (req, res) => {
 		AssetModel.updateInfo(id, update);
 		res.json({status:"ok"});
 	} catch (e) {
-		if (e == 404) {
+		if (e == "404") {
 			return res.status(404).json({status:"error"});
 		}
 		console.error(req.parsedUrl.pathname, "failed. Error:", e);
@@ -245,10 +245,9 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
 				// save it to a tempfile so we can get the mp3 duration
 				const temppath = tempfile(".mp3");
 				const writeStream = fs.createWriteStream(temppath);
-				await new Promise(async (resolve, reject) => 
-					stream.pipe(writeStream).on("end", resolve)
-				);
-
+				await new Promise(async (resolve, reject) => (
+					stream.on("end", resolve).pipe(writeStream)
+				));
 				info.duration = await mp3Duration(temppath) * 1e3;
 				info.id = await AssetModel.save(temppath, "mp3", info);
 				break;

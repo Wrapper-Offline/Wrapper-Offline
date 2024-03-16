@@ -16,7 +16,7 @@ theme
 **/
 .theme {
 	background-color: #f9fafa;
-	background-position: center;
+	background-position: center -30px;
 	background-blend-mode: overlay;
 	background-size: 100%;
 	border: none;
@@ -37,30 +37,37 @@ html div.theme:hover {
 	text-shadow: 0 0 10px #000;
 	box-shadow: 0 2px 6px #0003;
 	background-size: 105%;
-	background-position: center -25px;
+	background-position: center -15px;
 	cursor: pointer;
 }
 html.dark .theme {
-	background-color: #151515;
+	background-color: #2c2c2c;
+	background-blend-mode: color;
 }
 html.dark .theme:hover {
-	background-color: #252733;
-	color: #ffa975;
+	background-color: #2e3350;
+    color: #8bccff;
+    background-blend-mode: overlay;
 }
 .theme img {
 	border-radius: 100%;
+	transition: filter 0.1s linear;
 	margin-right: 12px;
 	display: block;
 	height: 70px;
 	width: 70px;
+}
+.theme:hover img {
+    filter: brightness(1.2) blur(0.5px);
 }
 
 /**
 char copy
 **/
 .upload_container {
-	background: #ddd;
-	border-radius: 4px;
+	background-color: #f9fafa;
+	box-shadow: 0 1px 5px #0002;
+	border-radius: 3px;
 	margin: 5px;
 	padding: 3px;
 	padding-bottom: 6px;
@@ -78,7 +85,7 @@ html.dark .upload_container {
 	background: #fff;
 	border: 1px solid #cac9d4;
 	box-shadow: inset 0 1px #1112;
-	color: #fff;
+	color: #111;
 	border-radius: 4px;
 	padding: 7px 10px;
 	font-size: 14px;
@@ -86,6 +93,7 @@ html.dark .upload_container {
 html.dark .upload_container input {
 	background: #2a2a2a;
 	border-color: #212121;
+	color: #fff;
 }
 .upload_container .btn {
 	margin: 0;

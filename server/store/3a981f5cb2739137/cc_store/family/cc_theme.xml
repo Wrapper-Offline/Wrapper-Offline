@@ -400,7 +400,7 @@
 		<selection type="mustache" state_id="default" />
 		<selection type="nose" state_id="default" />
 	</facial>
-	<facial id="head_schemeing" name="Schemeing" enable="Y">
+	<facial id="head_schemeing" name="Scheming" enable="Y">
 		<selection type="beard" state_id="default" />
 		<selection type="ear" state_id="default" />
 		<selection type="eye" state_id="schemeing" />

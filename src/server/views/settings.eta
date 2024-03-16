@@ -55,7 +55,7 @@
 					</select>
 
 					<h3>GoAnimate watermark</h3>
-					<p>The Video Player has 4 choices for GoAnimate watermarks.</p>
+					<p>The Video Player has 5 choices for GoAnimate watermarks.</p>
 					<select class="setting" id="goWatermark">
 						<option value="default">GoAnimate</option>
 						<option value="twoLines">Go Make Your Own</option>
@@ -109,7 +109,8 @@
 			}
 			// the only remaining settings should be local ones
 			list.forEach((key) => {
-				show(key, localStorage.getItem(key) == "true");
+				const val = localStorage.getItem(key);
+				show(key, val == "true" ? true : val == "false" ? false : val);
 			});
 		});
 
