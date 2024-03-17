@@ -57,7 +57,7 @@ module.exports = class CharModel {
 		database.instance.insert("assets", info);
 
 		// fix handheld props for v2 cc themes by inserting version="2.0"
-		if (this.isFA(info.themeId) && xml.indexOf("version=\"2.0\"") == -1) {
+		if (!this.isSkeleton(info.themeId) && xml.indexOf("version=\"2.0\"") == -1) {
 			const end = xml.indexOf(">", xml.indexOf("<cc_char"));
 			xml = Buffer.concat([
 				xml.subarray(0, end),
@@ -105,15 +105,15 @@ module.exports = class CharModel {
 	}
 
 	/**
-	 * checks if a cc_theme is a freeaction theme
+	 * checks if a cc_theme is a skeleton theme
 	 * @param {string} themeId 
 	 */
-	static isFA(themeId) {
+	static isSkeleton(themeId) {
 		switch (themeId) {
 			case "cctoonadventure":
 			case "family":
-				return false;
+				return true;
 		}
-		return true;
+		return false;
 	}
 };
