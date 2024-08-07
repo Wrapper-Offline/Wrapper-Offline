@@ -24,17 +24,20 @@ html.dark, html.dark>body {
 	background: #1e1d25;
 	color: #eee;
 }
-#wo_page_container {
+body {
 	display: flex; 
 	flex-direction: row;
 	overflow: hidden;
-	height: calc(100% - 50px);
+}
+#wo_page_container {
+	width: 100%;
 }
 main#wo_page {
 	background: #0000;
 	overflow: auto;
 	padding: 25px 20px;
 	width: 100%;
+	height: 100%;
 }
 
 
@@ -74,6 +77,47 @@ html.dark #sidebar_bottom {
 	border-color: #343242;
 }
 /* special elements */
+#logo_container {
+	background: #1e1b2b;
+	border-right: 1px solid #15131f;
+	border-bottom: 1px solid #433d5d;
+	box-shadow: inset 0 -1px #5d5984;
+	transition: width 0.2s cubic-bezier(0.2, 0.95, 0.25, 1);
+	display: block;
+	padding: 4px 8px;
+	transform: translateX(-6px);
+	pointer-events: none;
+	width: 250px;
+	height: 50px;
+}
+html.dark #logo_container {
+	background: #14121d;
+	border-right-color: #2b2742;
+	border-bottom-color: #343242;
+	box-shadow: none;
+}
+#logo_icon {
+	transition: left 0.2s cubic-bezier(0.2, 0.95, 0.25, 1);
+	position: absolute;
+	left: 37px;
+	height: 41px;
+}
+#logo_wordmark {
+	transition: 0.2s cubic-bezier(0.2, 0.95, 0.25, 1);
+	position: absolute;
+	left: 37px;
+	height: 41px;
+}
+#wo_sidebar.collapsed #logo_container {
+	width: 62px;
+}
+#wo_sidebar.collapsed #logo_icon {
+	left: 10px;
+}
+#wo_sidebar.collapsed #logo_wordmark {
+	opacity: 0;
+	left: 0;
+}
 #wrapper_ver {
 	color: #909090;
 	display: block;
@@ -108,17 +152,17 @@ html.dark .sidebar_link {
 	margin-right: 6px;
 }
 .sidebar_link:hover {
-	background: #fff2fb;
-	border-color: #f5bcd2;
+	background: #ffeaf4;
+	border-color: #e4b0c5;
 }
 html.dark .sidebar_link:hover {
 	background: #422b3d;
 	border-color: #6b3f56;
 }
 .sidebar_link.sel {
-	background: #ffe9f1;
-	border-color: #f1a7c2;
-	color: #d61f63;
+	background: #ffdbe8;
+	border-color: #e686a9;
+	color: #d60955;
 }
 html.dark .sidebar_link.sel {
 	background: #3c2234;
@@ -170,7 +214,6 @@ header {
 	/* layout */
 	z-index: 1;
 	display: flex;
-	justify-content: space-between;
 	flex-shrink: 0;
 }
 html.dark header {
@@ -186,14 +229,9 @@ html.dark header {
 		height: 50px;
 	}
 }
-#logo {
-	display: block;
-	padding: 4px 8px;
-	width: 250px;
-}
+
 #wo_address_bar {
 	display: flex;
-	width: 100%;
 }
 #wo_address_container {
 	display: flex;

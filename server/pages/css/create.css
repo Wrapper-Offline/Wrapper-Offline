@@ -15,12 +15,11 @@ main {
 theme
 **/
 .theme {
-	background-color: #f9fafa;
+	background-color: #f5f5ff;
 	background-position: center -30px;
 	background-blend-mode: overlay;
 	background-size: 100%;
-	border: none;
-	box-shadow: 0 1px 5px #0002;
+	border: 1px solid #ceccde;
 	border-radius: 3px;
 	transition: 0.12s cubic-bezier(0.7, 0.5, 0.3, 1);
 	display: inline-flex;
@@ -35,19 +34,21 @@ html div.theme:hover {
 	background-color: #babeea;
 	color: #fff;
 	text-shadow: 0 0 10px #000;
-	box-shadow: 0 2px 6px #0003;
+	box-shadow: 0 2px 4px #00000010;
 	background-size: 105%;
 	background-position: center -15px;
 	cursor: pointer;
 }
 html.dark .theme {
 	background-color: #2c2c2c;
+	border-color: #373546;
 	background-blend-mode: color;
 }
 html.dark .theme:hover {
-	background-color: #2e3350;
-    color: #8bccff;
-    background-blend-mode: overlay;
+	background-color: #5d4354;
+	border-color: #6b3f56;
+	color: #ffd2e3;
+	background-blend-mode: overlay;
 }
 .theme img {
 	border-radius: 100%;
@@ -58,7 +59,7 @@ html.dark .theme:hover {
 	width: 70px;
 }
 .theme:hover img {
-    filter: brightness(1.2) blur(0.5px);
+	filter: brightness(1.2) blur(0.5px);
 }
 
 /**

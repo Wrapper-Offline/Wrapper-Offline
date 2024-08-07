@@ -14,29 +14,28 @@
 			it.rendered == null
 		) { %>
 			<script>
-
+				// todo dehardcode the default page
 				Page.switchTo();
 			</script>
 		<% } %>
 	</head>
 
 	<body>
-		<header>
-			<img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/>
-			<div id="wo_address_bar">
-				<div class="address_bar_btns">
-					<a class="btn nav_btn" href="javascript:;">&lt;</a>
-					<a class="btn nav_btn" href="javascript:;">&gt;</a>
-				</div>
-				<div id="wo_address_container">
-					<div class="address_folder">Videos</div>
-					<div class="address_folder">caillou vids</div>
-				</div>
-			</div>
-		</header>
+		<%~ include("./global/sidebar", { env: it.env }) %>
 
 		<section id="wo_page_container">
-			<%~ include("./global/sidebar", { env: it.env }) %>
+			<header>
+				<div id="wo_address_bar">
+					<div class="address_bar_btns">
+						<a class="btn nav_btn" href="javascript:;">&lt;</a>
+						<a class="btn nav_btn" href="javascript:;">&gt;</a>
+					</div>
+					<div id="wo_address_container">
+						<div class="address_folder">Videos</div>
+						<div class="address_folder">caillou vids</div>
+					</div>
+				</div>
+			</header>
 			<main id="wo_page"><%~ it.rendered ?? '' %></main>
 		</section>
 	</body>

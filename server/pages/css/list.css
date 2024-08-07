@@ -29,12 +29,12 @@ grid view
 }
 .grid_view>.video:hover {
 	background: #ffebf9;
-    border-color: #e2a5bd;
-    box-shadow: 0 2px 4px #00000010;
+	border-color: #e2a5bd;
+	box-shadow: 0 2px 4px #00000010;
 }
 html.dark .grid_view>.video {
 	background: #262532;
-    border-color: #373546;
+	border-color: #373546;
 }
 html.dark .grid_view>.video:hover {
 	background: #422b3d;

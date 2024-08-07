@@ -1,4 +1,8 @@
 <section id="wo_sidebar">
+	<div id="logo_container">
+		<img id="logo_icon" src="/pages/img/logo_icon.svg" alt="Candy Wrappers"/>
+		<img id="logo_wordmark" src="/pages/img/logo_wordmark.svg" alt="Wrapper: Offline"/>
+	</div>
 	<div id="sidebar_top" class="sb_section">
 		<a class="sidebar_link tog" data-toggle="" href="javascript:;"><i class="ico arr_r"></i><div class="sb_link_text">Menu</div></a>
 	</div>
