@@ -70,7 +70,8 @@
 </nav>
 
 <script>
-function Page() {
+Page.setTitle("Settings");
+Page.runAfter = function settingsPage() {
 	/*
 	list
 	*/
@@ -103,7 +104,7 @@ function Page() {
 			elem.val() : elem.prop("checked");
 
 		if (elem.attr("data-local") == "true") {
-			if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
+			if (elem.attr("id") == "DARK_MODE") Page.toggleDarkMode();
 			localStorage.setItem(setting, value);
 		} else {
 			$.post("/api/settings/update", { setting, value })
@@ -128,5 +129,5 @@ function Page() {
 			elem.prop("checked", value);
 		}
 	}
-}
+};
 </script>

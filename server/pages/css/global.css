@@ -14,7 +14,7 @@ this css has the general header/footer layout stuff
 general
 **/
 html, body {
-	background: #eee;
+	background: #e6e5f1;
 	color: #505969;
 	font: 16px/1.5 "Sailec", Arial, sans-serif;
 	width: 100%;
@@ -28,66 +28,69 @@ html.dark, html.dark>body {
 	display: flex; 
 	flex-direction: row;
 	overflow: hidden;
-    height: calc(100% - 50px);
+	height: calc(100% - 50px);
 }
 main#wo_page {
 	background: #0000;
-	width: 100%;
 	overflow: auto;
+	padding: 25px 20px;
+	width: 100%;
 }
+
 
 /**
 sidebar
 **/
 #wo_sidebar {
-	background: #24232f;
-	border-right: 1px solid #343242;
+	background: #f0eeff;
+	border-right: 1px solid #ceccde;
 	transition: width 0.2s cubic-bezier(0.2, 0.95, 0.25, 1);
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	flex-shrink: 0;
 	padding: 0 6px;
 	width: 250px;
 }
-#wo_sidebar.collapsed {
-    width: 62px;
+html.dark #wo_sidebar {
+	background: #24232f;
+	border-color: #343242;
 }
+#wo_sidebar.collapsed {
+	width: 62px;
+}
+/* sections */
 .sb_section {
 	padding: 0 4px;
 }
 #sidebar_top {
-	border-bottom: 1px solid #343242;
+	border-bottom: 1px solid #ceccde;
 }
 #sidebar_bottom {
-	border-top: 1px solid #343242;
+	border-top: 1px solid #ceccde;
 	margin-top: auto;
 }
+html.dark #sidebar_top,
+html.dark #sidebar_bottom {
+	border-color: #343242;
+}
+/* special elements */
 #wrapper_ver {
-	color: #bbb;
+	color: #909090;
 	display: block;
 	font-size: 13px;
 	text-align: center;
 	width: 100%;
 }
-.sidebar_group {
-	display: flex;
-	justify-content: space-between;
+html.dark #wrapper_ver {
+	color: #bbb;
 }
-#wo_sidebar.collapsed .sidebar_group {
-	display: block;
-}
-.sidebar_group .sidebar_link {
-	margin-bottom: 0;
-	width: 49%;
-}
-#wo_sidebar.collapsed .sidebar_link {
-	width: 100%;
-}
+/* buttons */
 .sidebar_link {
-	background: #2e2c3c;
-	border: 1px solid #2e2c3c;
-	color: #ddd;
+	background: #f6f5ff;
+	border: 1px solid #c7c4d9;
+	color: #232323;
 	border-radius: 3px;
+	transition: 0.1s ease-out;
 	text-decoration: none;
 	display: block;
 	margin: 5px 0;
@@ -95,30 +98,62 @@ sidebar
 	width: 100%;
 	height: 36px;
 }
+html.dark .sidebar_link {
+	background: #2b2938;
+	border-color: #343242;
+	color: #ddd;
+}
 .sidebar_link i {
 	float: left;
 	margin-right: 6px;
 }
+.sidebar_link:hover {
+	background: #fff2fb;
+	border-color: #f5bcd2;
+}
+html.dark .sidebar_link:hover {
+	background: #422b3d;
+	border-color: #6b3f56;
+}
+.sidebar_link.sel {
+	background: #ffe9f1;
+	border-color: #f1a7c2;
+	color: #d61f63;
+}
+html.dark .sidebar_link.sel {
+	background: #3c2234;
+	border-color: #732a46;
+	color: #fff;
+}
+.sidebar_link.sel i {
+	animation: 0.2s iconBounce cubic-bezier(0, 0.8, 0.45, 1.35);
+}
 #wo_sidebar.collapsed .sb_link_text {
 	display: none;
 }
-.sidebar_link.sel {
-    background: #333146;
-    border-color: #3c3856;
-	color: #fff;
-}
-.sidebar_link:hover {
-    background: #333146;
-    border-color: #333146;
-}
-
+/* collapse button */
 .sidebar_link.tog i.ico::before {
 	transition: transform 0.2s cubic-bezier(0, 0.8, 0.45, 1.35);
-	transform: scale(1);
+	transform: scale(-1) translate(0.5px, -1px);
 	display: block;
 }
 #wo_sidebar.collapsed .sidebar_link.tog i.ico::before {
-	transform: scale(-1) translate(0.5px, -1px);
+	transform: scale(1);
+}
+/* two buttons side by side */
+.sidebar_group {
+	display: flex;
+	justify-content: space-between;
+}
+.sidebar_group .sidebar_link {
+	margin-bottom: 0;
+	width: 49%;
+}
+#wo_sidebar.collapsed .sidebar_group {
+	display: block;
+}
+#wo_sidebar.collapsed .sidebar_link {
+	width: 100%;
 }
 
 
@@ -127,13 +162,12 @@ header
 **/
 header {
 	/* style */
-	background: #191823;
-	border-bottom: 1px solid #fff;
+	background: #242235;
+	border-bottom: 1px solid #433d5d;
+	box-shadow: inset 0 -1px #5d5984;
 	color: #fff;
 	text-align: center;
 	/* layout */
-	padding-bottom: 13px;
-	padding: 0 15px;
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
@@ -142,20 +176,39 @@ header {
 html.dark header {
 	background: #191823;
 	border-color: #343242;
+	box-shadow: none;
+	padding: 0;
+	height: 50px;
 }
 /* makes the header a set height when the window is 887px wide */
 @media (min-width: 735px) {
 	header {
-		padding-bottom: auto;
 		height: 50px;
 	}
 }
 #logo {
 	display: block;
 	padding: 4px 8px;
-	height: 100%;
+	width: 250px;
 }
-/* buttons */
+#wo_address_bar {
+	display: flex;
+	width: 100%;
+}
+#wo_address_container {
+	display: flex;
+}
+header .btn {
+	background: #344583;
+}
+header .btn:hover {
+	background: #2f3e75;
+}
+
+
+/**
+buttons
+**/
 .btn {
 	/* style */
 	background: #43bca5;
@@ -174,17 +227,11 @@ html.dark header {
 	background: #029a85;
 	cursor: pointer;
 }
-header .btn {
-    background: #344583;
-}
-header .btn:hover {
-    background: #2f3e75;
-}
 .dark .btn {
-    background: #333;
+	background: #333;
 }
 .dark .btn:hover {
-    background: #444;
+	background: #444;
 }
 /* primary color buttons */
 .btn.btn_primary {
@@ -262,7 +309,7 @@ tabs
 }
 .tab_navigation {
 	display: flex;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 .tab_nav_container .tab_navigation {
 	border-bottom: 10px solid #fff;
@@ -273,27 +320,27 @@ html.dark .tab_nav_container .tab_navigation {
 }
 .tab {
 	background: #e3e7ed;
-    border-right: 1px solid #cfcfcf;
-    box-shadow:
+	border-right: 1px solid #cfcfcf;
+	box-shadow:
 		inset 0 1px #cfcfcf,
 		inset 0 -1px #c1c1c1,
 		inset 0 -6px 6px -5px #0002;
-    color: #505e73;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 13px;
+	color: #505e73;
+	padding: 7px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
 	width: 100%;
 }
 .tab:last-of-type {
 	border: none;
 }
 .tab.selected {
-    background: #fff;
-    color: #dd6522;
-    box-shadow: 0 -5px #dd6522;
+	background: #fff;
+	color: #dd6522;
+	box-shadow: 0 -5px #dd6522;
 }
 html.dark .tab:not(.selected) {
 	background: #242424;
@@ -314,27 +361,22 @@ html.dark .tab:hover {
 	display: none;
 }
 
+
 /**
-footer
+animations
 **/
-footer {
-	background: #1a1a1a;
-	margin-top: auto; /* footer at the foot */
-	display: flex;
-	justify-content: space-between;
-	flex-shrink: 0;
+@keyframes iconBounce {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.4);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
-footer nav { margin:5px 10px}
-/* links */
-footer a {
-	color: #fff;
-	text-decoration:none;
-	margin: 0 10px;
-	font-weight: bold;
-}
-footer a:hover {
-	text-decoration: underline;
-}
+
 
 /**
 font importing

@@ -10,7 +10,8 @@
 <button id="load_more" class="btn">LOAD MORE</button>
 
 <script>
-function Page() {
+Page.setTitle("List");
+Page.runAfter = function listPage() {
 	let json, searchTerm = "";
 	let filter = "<%= it.filter ?? 'movie' %>";
 	const vidList = document.getElementById("video_list");
@@ -130,5 +131,5 @@ function Page() {
 		window.open(`/exporter?movieId=${id}`, 'MsgWindow', 'width=400,height=400,left=' + (screen.width / 2 - 640) +
 			',top=' + (screen.height / 2 - 360));
 	}
-}
+};
 </script>

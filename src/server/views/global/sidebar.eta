@@ -1,32 +1,8 @@
-<%
-	const sidebarLinks = [
-		{
-			location: "/videos",
-			name: "Videos",
-			icon: "film",
-			default: true
-		},
-		{
-			location: "/starters",
-			name: "Starters",
-			icon: "briefcase"
-		},
-		{
-			location: "/videos",
-			name: "Characters",
-			icon: "person"
-		}
-	];
-%>
 <section id="wo_sidebar">
 	<div id="sidebar_top" class="sb_section">
 		<a class="sidebar_link tog" data-toggle="" href="javascript:;"><i class="ico arr_r"></i><div class="sb_link_text">Menu</div></a>
 	</div>
-	<div id="sidebar_populate" class="sb_section">
-		<% for (const link of sidebarLinks) { %>
-			<a class="sidebar_link <%= link.default ? 'sel' : '' %>" href="<%= link.location %>"><i class="ico <%= link.icon %>"></i><div class="sb_link_text"><%= link.name %></div></a>
-		<% } %>
-	</div>
+	<div id="sidebar_populate" class="sb_section"></div>
 	<div id="sidebar_bottom" class="sb_section">
 		<div class="sidebar_group">
 			<a class="sidebar_link" data-ignore

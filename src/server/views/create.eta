@@ -1,124 +1,108 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Create - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's create page"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
-		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/global.js"></script>
-	</head>
 
-	<body>
-		<%~ include("./global/header", it); %>
+<link rel="stylesheet" type="text/css" href="/pages/css/create.css">
 
-		<main>
-			<h1>Select a theme</h1>
+<h1>Select a theme</h1>
 
-			<% it.themeList.forEach(theme => { %>
-				<div
-					class="theme"
-					style="background-image: url(/pages/img/themes/banners/<%= theme.id %>.webp);"
-					<%~ theme.id ? `data-vm="${theme.id}"` : "" %>
-					<%~ theme.cc_theme_id ? `data-cc="${theme.cc_theme_id}"` : "" %>
-				>
-					<img src="/pages/img/themes/icons/<%= theme.id %>.webp" alt="<%= theme.name %>">
-					<%= theme.name %>
-				</div>
-			<% }) %>
-			<div id="char-upload" class="upload_container">
-				<div class="upload_row">
-					<h2>Copy a character</h2>
-					<input type="text" placeholder="ID (ex: 832304)" name="char-id" />
-					<a href="#" onclick="copyRedirect()" class="btn btn_primary">COPY</a>
-				</div>
-				<div class="upload_row">
-					<h2>Upload a character</h2>
-					<button onclick="document.getElementById('char-file').click()" class="btn">UPLOAD A CHARACTER</button>
-				</div>
-			</div>
-			<div id="movie-upload" class="upload_container">
-				<div class="upload_row">
-					<h2>Upload a movie</h2>
-					<button onclick="document.getElementById('is-starter').checked = false;document.getElementById('file').click()" class="btn">UPLOAD AS MOVIE</button>
-					<button onclick="ocument.getElementById('is-starter').checked = true;document.getElementById('file').click()" class="btn">UPLOAD AS STARTER</button>
-				</div>
-			</div>
-		</main>
+<% it.themeList.forEach(theme => { %>
+	<div
+		class="theme"
+		style="background-image: url(/pages/img/themes/banners/<%= theme.id %>.webp);"
+		<%~ theme.id ? `data-vm="${theme.id}"` : "" %>
+		<%~ theme.cc_theme_id ? `data-cc="${theme.cc_theme_id}"` : "" %>
+	>
+		<img src="/pages/img/themes/icons/<%= theme.id %>.webp" alt="<%= theme.name %>">
+		<%= theme.name %>
+	</div>
+<% }) %>
+<div id="char-upload" class="upload_container">
+	<div class="upload_row">
+		<h2>Copy a character</h2>
+		<input type="text" placeholder="ID (ex: 832304)" name="char-id" />
+		<a href="#" onclick="copyRedirect()" class="btn btn_primary">COPY</a>
+	</div>
+	<div class="upload_row">
+		<h2>Upload a character</h2>
+		<button onclick="document.getElementById('char-file').click()" class="btn">UPLOAD A CHARACTER</button>
+	</div>
+</div>
+<div id="movie-upload" class="upload_container">
+	<div class="upload_row">
+		<h2>Upload a movie</h2>
+		<button onclick="document.getElementById('is-starter').checked = false;document.getElementById('file').click()" class="btn">UPLOAD AS MOVIE</button>
+		<button onclick="ocument.getElementById('is-starter').checked = true;document.getElementById('file').click()" class="btn">UPLOAD AS STARTER</button>
+	</div>
+</div>
 
-		<form id="movie-form" class="hide" enctype="multipart/form-data" action="#" method="post">
-			<input id="file" type="file" name="import" accept=".zip" />
-			<input id="is-starter" type="checkbox" value="false" />
-		</form>
-		<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
-			<input id="char-file" type="file" onchange="this.form.submit()" name="import"/>
-		</form>
 
-		<%~ include("./global/footer", it); %>
-	</body>
+<form id="movie-form" class="hide" enctype="multipart/form-data" action="#" method="post">
+	<input id="file" type="file" name="import" accept=".zip" />
+	<input id="is-starter" type="checkbox" value="false" />
+</form>
+<form class="hide" enctype="multipart/form-data" action="/api/char/upload" method="post">
+	<input id="char-file" type="file" onchange="this.form.submit()" name="import"/>
+</form>
 
-	<script>
-		const charId = $("input[name='char-id']");
 
-		// filter the list
-		const params = new URLSearchParams(window.location.search);
-		const filter = params.get("filter") || "vl";
+<script>
+Page.setTitle("Create");
+Page.runAfter = function createPage() {
+	const charId = $("input[name='char-id']");
+
+	// filter the list
+	const params = new URLSearchParams(window.location.search);
+	const filter = params.get("filter") || "vl";
+	if (filter == "cc") {
+		$(".theme").not("[data-cc]").hide();
+	} else {
+		$("#char-copy").hide();
+	}
+
+	for (const element of document.getElementsByClassName("theme")) {
+		element.addEventListener("click", redirect);
+	}
+
+	function redirect() {
 		if (filter == "cc") {
-			$(".theme").not("[data-cc]").hide();
-		} else {
-			$("#char-copy").hide();
+			const id = this.attributes["data-cc"].value;
+			window.location.href = `./cc_browser?themeId=${id}`;
+			return;
 		}
+		const id = this.attributes["data-vm"].value;
+		window.location.href = `./go_full?tray=${id}`;
+	}
+	function copyRedirect() {
+		const id = charId.val();
+		window.location.href = `./cc?original_asset_id=${id}`;
+	}
 
-		for (const element of document.getElementsByClassName("theme")) {
-			element.addEventListener("click", redirect);
-		}
+	/*
+	movie uploading
+	*/
+	$("#file").on("change", (event) => {
+		event.preventDefault();
+		const file = event.target.files[0];
+		/** @type {boolean} */
+		const isStarter = event.target.nextElementSibling.checked;
+		/*if (file.type !== "application/x-zip-compressed" || file.type !== "application/zip") {
+			alert("Bastard");
+			return;
+		}*/
 
-		function redirect() {
-			if (filter == "cc") {
-				const id = this.attributes["data-cc"].value;
-				window.location.href = `./cc_browser?themeId=${id}`;
-				return;
-			}
-			const id = this.attributes["data-vm"].value;
-			window.location.href = `./go_full?tray=${id}`;
-		}
-		function copyRedirect() {
-			const id = charId.val();
-			window.location.href = `./cc?original_asset_id=${id}`;
-		}
-
-		/*
-		movie uploading
-		*/
-		$("#file").on("change", (event) => {
-			event.preventDefault();
-			const file = event.target.files[0];
-			/** @type {boolean} */
-			const isStarter = event.target.nextElementSibling.checked;
-			/*if (file.type !== "application/x-zip-compressed" || file.type !== "application/zip") {
-				alert("Bastard");
-				return;
-			}*/
-
-			let b = new FormData();
-			b.append("import", file);
-			b.append("is_starter", isStarter);
-			$.ajax({
-				url: "/api/movie/upload",
-				method: "POST",
-				data: b,
-				processData: false,
-				contentType: false,
-				dataType: "json"
-			})
-				.done((res) => window.location.href = "/go_full?movieId=" + res.id)
-				.fail(() => {
-					alert("Movie upload failed. See the console for more details.");
-				});
-		});
-
-	</script>
-
-</html>
+		let b = new FormData();
+		b.append("import", file);
+		b.append("is_starter", isStarter);
+		$.ajax({
+			url: "/api/movie/upload",
+			method: "POST",
+			data: b,
+			processData: false,
+			contentType: false,
+			dataType: "json"
+		})
+			.done((res) => window.location.href = "/go_full?movieId=" + res.id)
+			.fail(() => {
+				alert("Movie upload failed. See the console for more details.");
+			});
+	});
+};
+</script>
