@@ -20,6 +20,13 @@ module.exports = function resRender(req, res, next) {
 		Object.assign(object, data);
 
 		const file = Buffer.from(await eta.renderAsync(filename, object, config));
+
+		if (!req.headers.referer) {
+			object.rendered = file;
+			const base = Buffer.from(await eta.renderAsync("index", object, config));
+			res.end(base);
+			return;
+		}
 		res.end(file);
 	};
 	next();

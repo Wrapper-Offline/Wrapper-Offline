@@ -272,31 +272,16 @@ make the table responsive
 	}
 }
 @media(min-width: 850px) {
-	.tab_navigation,
-	#table_view_header,
-	#video_list {
-		width: 750px;
-	}
 	.grid_view>.video {
 		width: calc(33% - 10px);
 	}
 }
 @media(min-width: 1012px) {
-	.tab_navigation,
-	#table_view_header,
-	#video_list {
-		width: 970px;
-	}
 	.grid_view>.video {
 		width: calc(25% - 10px);
 	}
 }
 @media(min-width: 1210px) {
-	.tab_navigation,
-	#table_view_header,
-	#video_list {
-		width: 1170px;
-	}
 	.grid_view>.video {
 		width: calc(20% - 10px);
 	}

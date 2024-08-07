@@ -58,9 +58,12 @@ group.route("GET", "/api/movie/get_info", (req, res) => {
 /*
 list
 */
-// list page
-group.route("*", "/", (req, res) => {
-	res.render("list", {});
+// list pages
+group.route("GET", "/videos", (req, res) => {
+	res.render("list", {filter:"movie"});	
+});
+group.route("GET", "/starters", (req, res) => {
+	res.render("list", {filter:"starter"});	
 });
 // movies
 group.route("GET", "/api/movie/list", (req, res) => {

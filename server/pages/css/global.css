@@ -3,6 +3,7 @@ this css has the general header/footer layout stuff
 ***/
 
 @import url("./modern-normalize.css");
+@import url("./icons.css");
 
 :root {
 	--primary: #d85e27;
@@ -20,18 +21,104 @@ html, body {
 	height: 100%;
 }
 html.dark, html.dark>body {
-	background: #222;
+	background: #1e1d25;
 	color: #eee;
 }
-body {
+#wo_page_container {
 	display: flex; 
-	flex-direction: column;
+	flex-direction: row;
 	overflow: hidden;
+    height: calc(100% - 50px);
 }
-main {
-	padding: 20px 40px;
-	height: 100%;
+main#wo_page {
+	background: #0000;
+	width: 100%;
 	overflow: auto;
+}
+
+/**
+sidebar
+**/
+#wo_sidebar {
+	background: #24232f;
+	border-right: 1px solid #343242;
+	transition: width 0.2s cubic-bezier(0.2, 0.95, 0.25, 1);
+	display: flex;
+    flex-direction: column;
+	flex-shrink: 0;
+	padding: 0 6px;
+	width: 250px;
+}
+#wo_sidebar.collapsed {
+    width: 62px;
+}
+.sb_section {
+	padding: 0 4px;
+}
+#sidebar_top {
+	border-bottom: 1px solid #343242;
+}
+#sidebar_bottom {
+	border-top: 1px solid #343242;
+	margin-top: auto;
+}
+#wrapper_ver {
+	color: #bbb;
+	display: block;
+	font-size: 13px;
+	text-align: center;
+	width: 100%;
+}
+.sidebar_group {
+	display: flex;
+	justify-content: space-between;
+}
+#wo_sidebar.collapsed .sidebar_group {
+	display: block;
+}
+.sidebar_group .sidebar_link {
+	margin-bottom: 0;
+	width: 49%;
+}
+#wo_sidebar.collapsed .sidebar_link {
+	width: 100%;
+}
+.sidebar_link {
+	background: #2e2c3c;
+	border: 1px solid #2e2c3c;
+	color: #ddd;
+	border-radius: 3px;
+	text-decoration: none;
+	display: block;
+	margin: 5px 0;
+	padding: 5px 12px;
+	width: 100%;
+	height: 36px;
+}
+.sidebar_link i {
+	float: left;
+	margin-right: 6px;
+}
+#wo_sidebar.collapsed .sb_link_text {
+	display: none;
+}
+.sidebar_link.sel {
+    background: #333146;
+    border-color: #3c3856;
+	color: #fff;
+}
+.sidebar_link:hover {
+    background: #333146;
+    border-color: #333146;
+}
+
+.sidebar_link.tog i.ico::before {
+	transition: transform 0.2s cubic-bezier(0, 0.8, 0.45, 1.35);
+	transform: scale(1);
+	display: block;
+}
+#wo_sidebar.collapsed .sidebar_link.tog i.ico::before {
+	transform: scale(-1) translate(0.5px, -1px);
 }
 
 
@@ -40,7 +127,8 @@ header
 **/
 header {
 	/* style */
-	background: #273762;
+	background: #191823;
+	border-bottom: 1px solid #fff;
 	color: #fff;
 	text-align: center;
 	/* layout */
@@ -52,7 +140,8 @@ header {
 	flex-shrink: 0;
 }
 html.dark header {
-	background: #1a1a1a;
+	background: #191823;
+	border-color: #343242;
 }
 /* makes the header a set height when the window is 887px wide */
 @media (min-width: 735px) {
@@ -62,8 +151,9 @@ html.dark header {
 	}
 }
 #logo {
-	margin-top: 7px;
-	height: 35px;
+	display: block;
+	padding: 4px 8px;
+	height: 100%;
 }
 /* buttons */
 .btn {
@@ -245,23 +335,6 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 }
-
-@media(min-width: 790px) {
-	.tab_nav_container {
-		width: 750px;
-	}
-}
-@media(min-width: 1012px) {
-	.tab_nav_container {
-		width: 970px;
-	}
-}
-@media(min-width: 1210px) {
-	.tab_nav_container {
-		width: 1170px;
-	}
-}
-
 
 /**
 font importing

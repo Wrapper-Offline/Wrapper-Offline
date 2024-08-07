@@ -1,0 +1,26 @@
+i.ico {
+	font-family: "GlyphiconsRegular";
+    font-style: normal;
+    display: inline-block;
+}
+i.ico.arr_r::before {
+	content: '\E369';
+}
+i.ico.briefcase::before {
+	content: '\E358';
+}
+i.ico.cog::before {
+	content: '\E137';
+}
+i.ico.film::before {
+	content: '\E009';
+}
+i.ico.person::before {
+	content: '\E004';
+}
+i.ico.speech::before {
+	content: '\E310';
+}
+i.ico.interr::before {
+	content: '\E195';
+}

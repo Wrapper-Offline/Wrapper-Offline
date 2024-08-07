@@ -13,6 +13,9 @@ const watermark = require("./watermark.js");
 const waveform = require("./waveform.js");
 
 const group = new httpz.Group();
+group.route("*", "/", (req, res) => {
+	res.render("list");
+});
 group.add(asset);
 group.add(char);
 //group.add(exporter);

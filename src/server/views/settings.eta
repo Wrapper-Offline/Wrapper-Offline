@@ -1,153 +1,132 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Settings - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's settings"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
-		<script src="/pages/js/jquery.js"></script>
-		<script src="/pages/js/global.js"></script>
-	</head>
+<nav class="tab_nav_container">
+	<div class="tab_navigation">
+		<a href="javascript:;" class="tab selected" data-triggers="0">Behavior</a>
+		<a href="javascript:;" class="tab" data-triggers="1">Appearance</a>
+		<a href="javascript:;" class="tab" data-triggers="2">Your Library</a>
+	</div>
+	<nav class="tab_page" style="display:block">
+		<h2>Behavior</h2>
 
-	<body>
-		<%~ include("./global/header", { env: it.env }) %>
+		<h3>Truncated themelist</h3>
+		<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
+			Keeping this off is highly suggested.<br/>
+			However, if you want to see everything the program has to offer, turn this on.</p>
+		<input class="setting" type="checkbox" id="truncatedThemeList"></input>
 
-		<main>			
-			<nav class="tab_nav_container">
-				<div class="tab_navigation">
-					<a href="javascript:;" class="tab selected" data-triggers="0">Behavior</a>
-					<a href="javascript:;" class="tab" data-triggers="1">Appearance</a>
-					<a href="javascript:;" class="tab" data-triggers="2">Your Library</a>
-				</div>
-				<nav class="tab_page" style="display:block">
-					<h2>Behavior</h2>
+		<h3>Show waveforms</h3>
+		<p>By default, waveforms for audio are generated in the video editor.<br/>
+			While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
+			Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
+		<input class="setting" type="checkbox" id="showWaveforms"></input>
 
-					<h3>Truncated themelist</h3>
-					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
-						Keeping this off is highly suggested.<br/>
-						However, if you want to see everything the program has to offer, turn this on.</p>
-					<input class="setting" type="checkbox" id="truncatedThemeList"></input>
+		<h3>Save log files</h3>
+		<p>Saves everything in the console to the _LOGS folder. This may take up a lot of space if left on.<br/>
+			<i>Applies on next restart.</i></p>
+		<input class="setting" type="checkbox" id="saveLogFiles"></input>
+	</nav>
+	<nav class="tab_page">
+		<h2>Appearance</h2>
 
-					<h3>Show waveforms</h3>
-					<p>By default, waveforms for audio are generated in the video editor.<br/>
-						While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
-						Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
-					<input class="setting" type="checkbox" id="showWaveforms"></input>
+		<h3>Dark mode</h3>
+		<p><i>Does not apply in the Video Maker or Character Creator.</i></p>
+		<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
 
-					<h3>Save log files</h3>
-					<p>Saves everything in the console to the _LOGS folder. This may take up a lot of space if left on.<br/>
-						<i>Applies on next restart.</i></p>
-					<input class="setting" type="checkbox" id="saveLogFiles"></input>
-				</nav>
-				<nav class="tab_page">
-					<h2>Appearance</h2>
+		<h3>Video list layout</h3>
+		<p>Switches the layout of the video list.</p>
+		<select class="setting" id="LIST_LAYOUT" data-local="true">
+			<option value="list">List</option>
+			<option value="grid">Grid</option>
+		</select>
 
-					<h3>Dark mode</h3>
-					<p><i>Does not apply in the Video Maker or Character Creator.</i></p>
-					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+		<h3>GoAnimate watermark</h3>
+		<p>The Video Player has 5 choices for GoAnimate watermarks.</p>
+		<select class="setting" id="goWatermark">
+			<option value="default">GoAnimate</option>
+			<option value="twoLines">Go Make Your Own</option>
+			<option value="g4s">GoAnimate For Schools</option>
+			<option value="freeTrial">Free Trial</option>
+			<option value="wix">GoAnimate Wix</option>
+		</select>
 
-					<h3>Video list layout</h3>
-					<p>Switches the layout of the video list.</p>
-					<select class="setting" id="LIST_LAYOUT" data-local="true">
-						<option value="list">List</option>
-						<option value="grid">Grid</option>
-					</select>
+		<h3>Aspect ratio</h3>
+		<p>The Video Maker has 2 choices for aspect ratios, 14:9 and 16:9.<br/>
+		By default it's set to 16:9, however you can choose to use 14:9 instead.</p>
+		<select class="setting" id="isWide">
+			<option value="false">14:9</option>
+			<option value="true">16:9</option>
+		</select>
 
-					<h3>GoAnimate watermark</h3>
-					<p>The Video Player has 5 choices for GoAnimate watermarks.</p>
-					<select class="setting" id="goWatermark">
-						<option value="default">GoAnimate</option>
-						<option value="twoLines">Go Make Your Own</option>
-						<option value="g4s">GoAnimate For Schools</option>
-						<option value="freeTrial">Free Trial</option>
-						<option value="wix">GoAnimate Wix</option>
-					</select>
+		<h3>Auto-hide navbar</h3>
+		<p><i>Applies on next restart.</i></p>
+		<input class="setting" type="checkbox" id="hideNavbar"></input>
+	</nav>
+	<nav class="tab_page">
+		<h2>Your Library</h2>
 
-					<h3>Aspect ratio</h3>
-					<p>The Video Maker has 2 choices for aspect ratios, 14:9 and 16:9.<br/>
-					By default it's set to 16:9, however you can choose to use 14:9 instead.</p>
-					<select class="setting" id="isWide">
-						<option value="false">14:9</option>
-						<option value="true">16:9</option>
-					</select>
-
-					<h3>Auto-hide navbar</h3>
-					<p><i>Applies on next restart.</i></p>
-					<input class="setting" type="checkbox" id="hideNavbar"></input>
-				</nav>
-				<nav class="tab_page">
-					<h2>Your Library</h2>
-
-					<h3>File uploads</h3>
-					
-					<!-- TODO: add data wiping-->
-				</nav>
-			</nav>
-		</main>
-
-		<%~ include("./global/footer", { env: it.env }) %>
-	</body>
-
-	<script>
-		/*
-		list
-		*/
+		<h3>File uploads</h3>
 		
+		<!-- TODO: add data wiping-->
+	</nav>
+</nav>
 
-		$.getJSON("/api/settings/list", (d) => {
-			let list = [];
-			for (const elem of $(".setting")) list.push(elem.id);
-			// update the values of each setting element
-			for (const [key, val] of Object.entries(d)) {
-				const index = list.indexOf(key);
-				if (index < 0) {
-					continue;
-				}
-				list.splice(index, 1);
-				show(key, val);
+<script>
+function Page() {
+	/*
+	list
+	*/
+	$.getJSON("/api/settings/list", (d) => {
+		let list = [];
+		for (const elem of $(".setting")) list.push(elem.id);
+		// update the values of each setting element
+		for (const [key, val] of Object.entries(d)) {
+			const index = list.indexOf(key);
+			if (index < 0) {
+				continue;
 			}
-			// the only remaining settings should be local ones
-			list.forEach((key) => {
-				const val = localStorage.getItem(key);
-				show(key, val == "true" ? true : val == "false" ? false : val);
-			});
-		});
-
-		/*
-		toggle
-		*/
-		$(".setting").on("change", (event) => {
-			const elem = $(event.target);
-			const setting = elem.attr("id");
-			const value = elem.prop("tagName") == "SELECT" ? 
-				elem.val() : elem.prop("checked");
-
-			if (elem.attr("data-local") == "true") {
-				if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
-				localStorage.setItem(setting, value);
-			} else {
-				$.post("/api/settings/update", { setting, value })
-					.done((d) => {
-						show(setting, value);
-					})
-					.fail((d) => {
-						if (d.status != "ok") {
-							alert("That didn't work.");
-							return;
-						}
-					});
-			}
-		});
-
-		function show(key, value) {
-			const elem = $(`#${key}`);
-
-			if (elem.prop("tagName") == "SELECT") {
-				elem.find(`option[value='${value}']`).prop("selected", true);
-			} else {
-				elem.prop("checked", value);
-			}
+			list.splice(index, 1);
+			show(key, val);
 		}
-	</script>
-</html>
+		// the only remaining settings should be local ones
+		list.forEach((key) => {
+			const val = localStorage.getItem(key);
+			show(key, val == "true" ? true : val == "false" ? false : val);
+		});
+	});
+
+	/*
+	toggle
+	*/
+	$(".setting").on("change", (event) => {
+		const elem = $(event.target);
+		const setting = elem.attr("id");
+		const value = elem.prop("tagName") == "SELECT" ? 
+			elem.val() : elem.prop("checked");
+
+		if (elem.attr("data-local") == "true") {
+			if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
+			localStorage.setItem(setting, value);
+		} else {
+			$.post("/api/settings/update", { setting, value })
+				.done((d) => {
+					show(setting, value);
+				})
+				.fail((d) => {
+					if (d.status != "ok") {
+						alert("That didn't work.");
+						return;
+					}
+				});
+		}
+	});
+
+	function show(key, value) {
+		const elem = $(`#${key}`);
+
+		if (elem.prop("tagName") == "SELECT") {
+			elem.find(`option[value='${value}']`).prop("selected", true);
+		} else {
+			elem.prop("checked", value);
+		}
+	}
+}
+</script>

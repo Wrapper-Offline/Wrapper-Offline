@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title>Wrapper: Offline</title>
+		<meta name="description" content="Wrapper: Offline"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/list.css"/>
+		<script src="/pages/js/jquery.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/>
+			<div class="page_info">
+				Videos
+			</div>
+		</header>
+
+		<section id="wo_page_container">
+			<%~ include("./global/sidebar", { env: it.env }) %>
+			<main id="wo_page"><%~ it.rendered ?? '' %></main>
+		</section>
+	</body>
+
+	<script src="/pages/js/global.js"></script>
+</html>

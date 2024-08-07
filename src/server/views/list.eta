@@ -1,173 +1,134 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<link rel="icon" href="/favicon.ico" type="image/png"/>
-		<title>Video List - Wrapper: Offline</title>
-		<meta name="description" content="Wrapper: Offline's Video List"/>
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/list.css">
-		<script src="/pages/js/jquery.js"></script>
-	</head>
+<div id="table_view_header">
+	<div class="video">
+		<div class="video_col"></div>
+		<div class="video_col search_container"><input class="search_bar" type="text" placeholder="Search videos"/></div>
+		<div class="video_col">Last Modified</div>
+		<div class="video_col"></div>
+	</div>
+</div>
+<div id="video_list"></div>
+<button id="load_more" class="btn">LOAD MORE</button>
 
-	<body>
-		<%~ include("./global/header", { env: it.env }) %>
+<script>
+function Page() {
+	let json, searchTerm = "";
+	let filter = "<%= it.filter ?? 'movie' %>";
+	const vidList = document.getElementById("video_list");
+	const loadMore = document.getElementById("load_more");
+	const searchBar = document.getElementsByClassName("search_bar")[0];
 
-		<main>
-			<nav class="tab_navigation">
-				<a href="javascript:;" class="tab movies" onclick="switchFilter(false)">Videos</a>
-				<a href="javascript:;" class="tab starters" onclick="switchFilter(true)">Starters</a>
-			</nav>
-			<div id="table_view_header">
-				<div class="video">
-					<div class="video_col"></div>
-					<div class="video_col search_container"><input class="search_bar" type="text" placeholder="Search videos"/></div>
-					<div class="video_col">Last Modified</div>
-					<div class="video_col"></div>
-				</div>
-			</div>
-			<div id="video_list"></div>
-			<button id="load_more" class="btn">LOAD MORE</button>
-		</main>
+	switch (localStorage.getItem("LIST_LAYOUT")) {
+		case "grid": {
+			vidList.classList.add("grid_view");
+			document.querySelector("#table_view_header>.video>:nth-child(3)").style.display = "none";
+			break;
+		}
+		case "list":
+		default: {
+			vidList.classList.add("list_view");
+		}
+	}
 
-		<%~ include("./global/footer", { env: it.env }) %>
-	</body>
-
-	<script src="/pages/js/global.js"></script>
-	<script>
-		let json, searchTerm = "";
-		let listStarters = true;
-		const vidList = document.getElementById("video_list");
-		const loadMore = document.getElementById("load_more");
-		const searchBar = document.getElementsByClassName("search_bar")[0];
-
-		switch (localStorage.getItem("LIST_LAYOUT")) {
-			case "grid": {
-				vidList.classList.add("grid_view");
-				document.querySelector("#table_view_header>.video>:nth-child(3)").style.display = "none";
+	let C = 0;
+	function loadRows() {
+		// load only 69 rows
+		let c = C;
+		C += 69;
+		for (; c < C; c++) {
+			// we reached the end
+			if (c > json.length - 1) {
+				loadMore.style.display = "none";
 				break;
 			}
-			case "list":
-			default: {
-				vidList.classList.add("list_view");
+
+			const tbl = json[c];
+
+			if (
+				tbl.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
+				searchTerm.length > 0
+			) {
+				continue;
 			}
+			// make the date and time less confusing to read
+			const date = tbl.date.split("T")[0];
+			const time = tbl.date.split("T")[1].substring(0, 8);
+			// escape the title
+			const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+			vidList.innerHTML += 
+				`<div class="video" data-id=${tbl.id}>
+					<div class="video_col">
+						<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
+					</div>
+					<div class="video_col">
+						<div title="${tbl.id}">${title}</div>
+						<div>${tbl.duration}</div>
+					</div>
+					<div class="video_col">
+						<span>${date}, ${time}</span>
+					</div>
+					<div class="video_col">
+						<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
+						<a href="/go_full?movieId=${tbl.id}" title="Edit"></a>
+						<a href="/file/movie/file/${tbl.id}" download="${title.replace('"', "_")}.zip" title="Download files -- NOT AN EXPORTER"></a>
+						<!--<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>-->
+						<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
+					</div>
+				</div>`.trim();
 		}
+	}
+	// i want more movies
+	loadMore.onclick = loadRows;
 
-		let C = 0;
-		function loadRows() {
-			// load only 69 rows
-			let c = C;
-			C += 69;
-			for (; c < C; c++) {
-				// we reached the end
-				if (c > json.length - 1) {
-					loadMore.style.display = "none";
-					break;
-				}
+	function searchInputEvent() {
+		searchTerm = this.value;
+		vidList.innerHTML = "";
+		C = 0;
+		loadMore.style.display = "";
+		loadRows();
+	}
+	searchBar.addEventListener("input", searchInputEvent);
 
-				const tbl = json[c];
-
-				if (
-					tbl.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1 &&
-					searchTerm.length > 0
-				) {
-					continue;
-				}
-				// make the date and time less confusing to read
-				const date = tbl.date.split("T")[0];
-				const time = tbl.date.split("T")[1].substring(0, 8);
-				// escape the title
-				const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-				vidList.innerHTML += 
-					`<div class="video" data-id=${tbl.id}>
-						<div class="video_col">
-							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
-						</div>
-						<div class="video_col">
-							<div title="${tbl.id}">${title}</div>
-							<div>${tbl.duration}</div>
-						</div>
-						<div class="video_col">
-							<span>${date}, ${time}</span>
-						</div>
-						<div class="video_col">
-							<a href="javascript:;" onclick="popup('${tbl.id}')" title="Play"></a>
-							<a href="/go_full?movieId=${tbl.id}" title="Edit"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${title.replace('"', "_")}.zip" title="Download files -- NOT AN EXPORTER"></a>
-							<!--<a href="javascript:;" onclick="popupExport('${tbl.id}')" title="Export"></a>-->
-							<a href="javascript:;" onclick="destructive('${tbl.id}', 'delete')" title="Delete"></a>
-						</div>
-					</div>`.trim();
-			}
-		}
-		// i want more movies
-		loadMore.onclick = loadRows;
-
-		function searchInputEvent() {
-			searchTerm = this.value;
+	$.get(`/api/movie/list?type=${filter}`)
+		.done((data) => {
+			json = data;
 			vidList.innerHTML = "";
 			C = 0;
 			loadMore.style.display = "";
 			loadRows();
-		}
-		searchBar.addEventListener("input", searchInputEvent);
+		})
+		.fail((data) => {
+			loadMore.onclick = null;
+			loadMore.innerText = "An error has occured trying to load the movie list.";
+		});
 
-		function switchFilter(switchTo) {
-			if (listStarters == switchTo) {
-				return;
-			}
-			listStarters = switchTo;
-			// deselect all tabs
-			$(".tab").removeClass("selected");
-			if (listStarters == false) {
-				$(".tab.movies").addClass("selected");
-			} else {
-				$(".tab.starters").addClass("selected");
-			}
-			$.get(`/api/movie/list?type=${listStarters ? "starter" : "movie"}`)
+	function destructive(mId, act) {
+		const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
+
+		if (yesno)
+			$.get(`/api/movie/${act}/${mId}`)
 				.done((data) => {
-					json = data;
-					vidList.innerHTML = "";
-					C = 0;
-					loadMore.style.display = "";
-					loadRows();
-				})
-				.fail((data) => {
-					loadMore.onclick = null;
-					loadMore.innerText = "An error has occured trying to load the movie list.";
+					if (data.status == "ok") {
+						switch (act) {
+							case "clone":
+								window.location = `/go_full?movieId=${data.mId}`;
+								break;
+							case "delete":
+								const $elem = $("#" + mId);
+								$elem.fadeOut(() => $elem.remove());
+								break;
+						}
+					} else alert("Guess you're stuck with your movie.");
 				});
-		}
-		switchFilter(false);
+	}
 
-		function destructive(mId, act) {
-			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);
-
-			if (yesno)
-				$.get(`/api/movie/${act}/${mId}`)
-					.done((data) => {
-						if (data.status == "ok") {
-							switch (act) {
-								case "clone":
-									window.location = `/go_full?movieId=${data.mId}`;
-									break;
-								case "delete":
-									const $elem = $("#" + mId);
-									$elem.fadeOut(() => $elem.remove());
-									break;
-							}
-						} else alert("Guess you're stuck with your movie.");
-					});
-		}
-
-		function popup(id) {
-			window.open(`/player?movieId=${id}`, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
-				',top=' + (screen.height / 2 - 360));
-		}
-		function popupExport(id) {
-			window.open(`/exporter?movieId=${id}`, 'MsgWindow', 'width=400,height=400,left=' + (screen.width / 2 - 640) +
-				',top=' + (screen.height / 2 - 360));
-		}
-
-	</script>
-</html>
+	function popup(id) {
+		window.open(`/player?movieId=${id}`, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) +
+			',top=' + (screen.height / 2 - 360));
+	}
+	function popupExport(id) {
+		window.open(`/exporter?movieId=${id}`, 'MsgWindow', 'width=400,height=400,left=' + (screen.width / 2 - 640) +
+			',top=' + (screen.height / 2 - 360));
+	}
+}
+</script>
