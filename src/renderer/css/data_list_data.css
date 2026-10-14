@@ -58,17 +58,24 @@ grid view
 	align-items: start;
 	display: inline-flex;
 	flex-direction: column;
+	align-items: stretch;
 	margin: 0 0 20px;
 	width: calc(4 * var(--scale));
 }
-.dl_cell img {
+.dl_cell div.img_row {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+.dl_cell div.img_row img {
 	border-radius: 5.5px 5.5px 0 0;
 	transition: filter 0.2s var(--button-anim);
 	margin: 0;
 	width: 100%;
 	height: auto;
 }
-.dl_cell span.duration {
+.dl_cell div.img_row span.duration {
 	background: #000a;
 	color: #fff;
 	border-radius: 3px;
@@ -76,42 +83,31 @@ grid view
 	font-size: 12px;
 	margin: -20px 0 0;
 	padding: 0 4px;
-	position: relative;
-	top: -5px;
+	position: absolute;
+	bottom: 5px;
 	left: 4px;
 }
-.dl_cell div.actions {
+.dl_cell div.img_row div.actions {
 	background: #000c;
 	border-radius: 16px;
 	display: none;
-	margin: -33px auto 0;
 	padding: 4px 13px 2px 3px;
-	position: relative;
-	top: calc(
-		14px - 
-		((
-			(9 / 16) * ((4 * var(--scale)) - 8px)
-		) / 2)
-	);
+	position: absolute;
 }
-.dl_cell div.actions a {
-	color: #fff;
-}
-.dl_cell div.data {
+.dl_cell div.text_row {
 	border-top: 1px solid hsl(240 12% 76% / 1);
 	padding: 4px 8px 9px;
-	width: 100%;
 }
-.dl_cell div.data span {
+.dl_cell div.text_row span {
 	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.dl_cell div.data span:nth-child(1) {
+.dl_cell div.text_row span:nth-child(1) {
 	font-weight: bold;
 }
-.dl_cell div.data span:nth-child(2) {
+.dl_cell div.text_row span:nth-child(2) {
 	opacity: 0.8;
 	line-height: 18px;
 }
@@ -120,13 +116,13 @@ grid view
 	background-color: hsl(338deg 55% 85%);
 	border-color: hsl(338deg 55% 77%);
 }
-.dl_cell:hover img {
+.dl_cell:hover div.img_row img {
 	filter: brightness(0.5)
 }
-.dl_cell:hover div.actions {
+.dl_cell:hover div.img_row div.actions {
 	display: block;
 }
-.dl_cell:hover div.data {
+.dl_cell:hover div.text_row {
 	border-color: hsl(338deg 55% 77%);
 }
 
@@ -134,7 +130,7 @@ grid view
 	background-color: hsl(344 80% 50% / 0.55);
 	border-color: hsl(344deg 97% 65%);
 }
-.dl_cell.checked div.data {
+.dl_cell.checked div.text_row {
 	border-color: hsl(344deg 97% 65%);
 	color: #fff;
 }
@@ -146,20 +142,20 @@ html.dark .dl_row td.title img {
 	background: hsl(250deg 8% 20%);
 }
 html.dark .dl_cell,
-html.dark .dl_cell div.data {
+html.dark .dl_cell div.text_row {
 	border-color: hsl(250 9% 24% / 1);
 }
 html.dark .dl_cell:hover {
 	background-color: hsl(330 26% 26% / 1);
 	border-color: hsl(330 26% 41% / 1);
 }
-html.dark .dl_cell:hover div.data {
+html.dark .dl_cell:hover div.text_row {
 	border-color: hsl(330 26% 41% / 1);
 }
 html.dark .dl_cell.checked {
 	background: hsl(342 47% 40% / 0.45);
 	border-color: hsl(342deg 55% 48%);
 }
-html.dark .dl_cell.checked div.data {
+html.dark .dl_cell.checked div.text_row {
 	border-color: hsl(342deg 55% 48%);
 }

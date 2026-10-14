@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"useDefineForClassFields": false,
+		"resolveJsonModule": true,
+		"noEmit": true,
+		"typeRoots": [
+			"./src/shared/@types",
+			"./node_modules/@types",
+		]
+	}
+}

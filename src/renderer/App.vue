@@ -48,6 +48,10 @@ a:hover {
 	z-index: 99999;
 }
 
+.ico_svg svg {
+	height: 100%;
+}
+
 ::-webkit-scrollbar {
 	background: #0000;
 }

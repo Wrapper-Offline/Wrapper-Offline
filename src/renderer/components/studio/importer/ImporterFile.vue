@@ -113,8 +113,8 @@ enter animation
 <script setup lang="ts">
 import { apiServer } from "../../../utils/AppInit";
 import locale from "../../../locale/en_US";
-import { PendingFile } from "./AssetImporter.vue";
-import { Ref, ref, toValue, useTemplateRef, watch } from "vue";
+import { type PendingFile } from "./AssetImporter.vue";
+import { type Ref, ref, toValue, useTemplateRef, watch } from "vue";
 
 export type AssetStatus = "await_type" | "await_ptype" | "uploading" | "error" | "finished";
 

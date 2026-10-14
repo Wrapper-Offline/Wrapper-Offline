@@ -3,7 +3,7 @@ import { apiServer } from "../utils/AppInit.js";
 import BaseModal from "./BaseModal.vue";
 import Button from "./controls/Button.vue";
 import CheckboxInput from "./controls/CheckboxInput.vue";
-import { computed, ref, watch, watchEffect } from "vue";
+import { computed, ref, watch } from "vue";
 import en_US from "../locale/en_US.js";
 import SelectInput from "./controls/SelectInput.vue";
 import SettingsModalWatermarks from "./SettingsModalWatermarks.vue";
@@ -328,7 +328,7 @@ const unwatch = watch(onTTSTab, () => {
 		</div>
 
 		<template #foot>
-			<Button primary @click="$emit('userClose')">Close</Button>
+			<Button @click="$emit('userClose')">Close</Button>
 		</template>
 	</BaseModal>
 </template>
@@ -360,12 +360,13 @@ const unwatch = watch(onTTSTab, () => {
 	font-weight: normal;
 }
 .settings_container .tab_col .tab_btn:hover {
-	background: hsl(252 16% 89% / 1);
+	background: hsl(346 65% 91%);
+	color: hsl(338 20% 42%);
 	transition: none;
 	cursor: pointer;
 }
 .settings_container .tab_col .tab_btn.sel {
-	background: hsl(211, 92%, 63%);
+	background: hsl(344 97% 65%);
 	color: #fff;
 	cursor: default;
 	font-weight: bold;
@@ -444,7 +445,7 @@ html.dark .settings_container .tab_col .tab_btn:hover {
 	background: hsl(250deg 11% 21%);
 }
 html.dark .settings_container .tab_col .tab_btn.sel {
-	background: hsl(213deg 92% 56%);
+	background: hsl(343 78% 59%);
 }
 html.dark .settings_container .tab .setting_row {
 	border-color: hsl(250deg 11% 21%);

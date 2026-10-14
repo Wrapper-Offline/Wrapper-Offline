@@ -12,3 +12,11 @@ export enum Flow {
 	Grid,
 	List
 };
+
+export interface Folder {
+	id: string,
+	name: string,
+	color: number,
+	size: number,
+	folder?: string
+};

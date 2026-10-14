@@ -3,7 +3,7 @@
 <script setup lang="ts">
 import { apiServer } from "../../../utils/AppInit";
 import en_US from "../../../locale/en_US";
-import { Char } from "../../../interfaces/Asset";
+import type { Char } from "../../../interfaces/Asset";
 
 const emit = defineEmits<{
 	entryDelete: [string[]]

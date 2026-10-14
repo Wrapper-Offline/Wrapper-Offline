@@ -123,7 +123,7 @@ export default {
 <script setup lang="ts">
 import { ref } from "vue";
 import CharListOptions from "../options/CharListOptions.vue";
-import { Char } from "../../../interfaces/Asset";
+import type { Char } from "../../../interfaces/Asset";
 import useCharRenderer from "../../../composables/useCharRenderer";
 
 const emit = defineEmits<{

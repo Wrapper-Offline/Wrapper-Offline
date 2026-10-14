@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
-import { Columns, Flow, type EntryKey } from "../interfaces/DataList";
+import { type Columns, Flow, type EntryKey } from "../interfaces/DataList";
 import {
 	computed,
 	provide,
 	ref,
+	shallowRef,
+	triggerRef,
 	useTemplateRef,
 	watchEffect
 } from "vue";
@@ -33,20 +35,31 @@ const sort = useStorage<[EntryKey<Movie>, boolean]>("movieListSort", ["title", t
 
 const folder = ref<string>("");
 const isLoading = ref(true);
-const entryList = ref<{
+const data = shallowRef<{
 	folders: [],
 	entries: Movie[]
 }>({
 	folders: [],
 	entries: [],
 });
+const filteredData = computed(() => data);
 
 provide("columnKeys", columnKeys);
-provide("flow", flow);
-provide("scale", scale);
+provide("flow", {
+	flow,
+	updateFlow(value:Flow) {
+		flow.value = value;
+	}
+});
+provide("scale", {
+	scale,
+	updateScale(value:number) {
+		scale.value = value;
+	}
+});
 
 function resetList() {
-	entryList.value = {
+	data.value = {
 		folders: [],
 		entries: [],
 	};
@@ -69,7 +82,7 @@ function timestampToSeconds(time:string) {
 
 /**
  * compares entry using the current sort setting
- * @param entry1 asset 1
+ * @param entry1 entry 1
  * @param entry2 entry 2
  */
 function compareEntries(entry1:Movie, entry2:Movie): number {
@@ -101,10 +114,6 @@ function resizeColumn(key:EntryKey<Movie>, newWidth:number) {
 	columns.value[key] = newWidth;
 }
 
-function changeFlow(value:Flow) {
-	flow.value = value;
-}
-
 /** updates the sort setting and resorts the list */
 function changeSort(key:EntryKey<Movie>) {
 	if (sort.value[0] == key) {
@@ -112,7 +121,7 @@ function changeSort(key:EntryKey<Movie>) {
 	} else {
 		sort.value = [key, true];
 	}
-	entryList.value.entries = entryList.value.entries.sort(compareEntries);
+	data.value.entries = data.value.entries.sort(compareEntries);
 }
 
 /**
@@ -156,8 +165,9 @@ async function getMovieTree(folderId?:string) {
  */
 async function loadMovieList() {
 	const response = await getMovieTree(folder.value);
-	entryList.value = response.list_data;
-	entryList.value.entries = entryList.value.entries.sort(compareEntries);
+	data.value = response.list_data;
+	data.value.entries = data.value.entries.sort(compareEntries);
+	triggerRef(data);
 	setTimeout(() => { // wait for thumbs to load
 		isLoading.value = false;
 	}, 20);
@@ -180,9 +190,7 @@ watchEffect(async () => {
 	<div>
 		<Navbar>
 			<template #right>
-				<NavbarDataListSettings
-					:flow
-					@flow-update="changeFlow"/>
+				<NavbarDataListSettings new-folder/>
 			</template>
 		</Navbar>
 
@@ -191,7 +199,7 @@ watchEffect(async () => {
 			<DataList
 				ref="list-tree"
 				:class="{ load_state:isLoading }"
-				v-model="entryList"
+				:data="filteredData"
 				:columns
 				:sort
 				:data-component="MovieListData"
@@ -203,8 +211,13 @@ watchEffect(async () => {
 </template>
 
 <style lang="css" scoped>
-:deep(.dl_row.movie) td.title img {
-	width: calc(calc(calc(v-bind("scale + 'px'") - 20px) / 9) * 16);
+:deep(.dl_cell.folder) svg {
+	height: calc((((4 * var(--scale)) - 2px) / 16) * 9)
+}
+
+:deep(.dl_row.movie) td.title img,
+:deep(.dl_row.folder) td.title svg {
+	width: calc(((var(--scale) - 20px) / 9) * 16);
 }
 
 </style>

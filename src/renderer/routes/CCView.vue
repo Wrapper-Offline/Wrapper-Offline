@@ -12,7 +12,7 @@
 import CCObject from "../components/CCObject.vue";
 import Navbar from "../components/Navbar.vue";
 import { onBeforeRouteUpdate, useRoute, useRouter } from "vue-router";
-import { onMounted, Ref, ref, useTemplateRef } from "vue";
+import { onMounted, type Ref, ref, useTemplateRef } from "vue";
 import { useSidebar } from "../composables/useSidebar";
 import useTempStorage from "../composables/useTempStorage";
 import { useThemeList } from "../composables/useThemeList";

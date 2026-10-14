@@ -5,14 +5,14 @@ import { join } from "path";
 import Parse from "../utils/movieParser.js";
 import Settings from "../../storage/settings";
 
-export type Movie = {
+export interface Movie {
+	id: string,
 	duration: string,
 	date: string,
 	title: string,
 	sceneCount: number,
 	watermark?: string,
-	parentFolder?: string,
-	id: string,
+	folder?: string,
 };
 
 export default class MovieModel {
@@ -42,18 +42,14 @@ export default class MovieModel {
 	/**
 	 * returns a movie thumbnail stream
 	 * @param id movie id
-	 * @throws {RangeError} movie doesn't exist
-	 * @throws {Error} movie does exist, but the thumbnail file doesn't
+	 * @throws {RangeError} the thumbnail file doesn't exist
 	 */
 	static thumb(id:string) {
-		if (!this.exists(id)) {
-			throw new RangeError("I'm so sorry... the movie.. it doesn't exist... x`C");
-		}
 		const filepath = join(this.folder, `${id}.png`);
 		if (fs.existsSync(filepath)) {
 			return fs.createReadStream(filepath);
 		}
-		throw new Error("ummmmm uhh ummmmmmm");
+		throw new RangeError("ummmmm uhh ummmmmmm");
 	}
 
 	/**
@@ -127,7 +123,7 @@ export default class MovieModel {
 			properties.watermark = Settings.defaultWatermark;
 		}
 		if (newMovie && saveAsStarter) {
-			properties.parentFolder = "starters";
+			properties.folder = "starters";
 		}
 		try {
 			Database.update("movies", id, properties);
@@ -158,7 +154,7 @@ export default class MovieModel {
 					sceneCount: meta.sceneCount,
 				};
 				if (isStarter) {
-					info.parentFolder = "starters"
+					info.folder = "starters"
 				}
 
 				Database.insert("movies", info);

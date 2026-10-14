@@ -1,12 +1,7 @@
 {
-	"compilerOptions": {
-		"esModuleInterop": true,
-		"useDefineForClassFields": false,
-		"experimentalDecorators": true,
-		"resolveJsonModule": true,
-		"typeRoots": [
-			"./src/shared/@types",
-			"./node_modules/@types",
-		]
-	}
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	]
 }

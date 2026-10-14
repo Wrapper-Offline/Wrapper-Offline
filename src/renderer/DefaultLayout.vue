@@ -24,7 +24,7 @@ html.dark .page_contents {
 <script setup lang="ts">
 import { usePreferredDark, useStorage } from "@vueuse/core";
 import Sidebar from "./components/Sidebar.vue";
-import { onMounted, Ref, watch, WatchHandle } from "vue";
+import { onMounted, type Ref, watch, type WatchHandle } from "vue";
 
 const theme = useStorage("theme", "auto");
 let isSystemDark:Ref<boolean> | null = null;

@@ -3,7 +3,7 @@ import { apiServer } from "../utils/AppInit";
 import type { Asset } from "../interfaces/Asset";
 import AssetListOptions from "../components/AssetListOptions.vue";
 import AssetListData from "../components/AssetListData.vue";
-import { Columns, Flow, type EntryKey } from "../interfaces/DataList";
+import { type Columns, Flow, type EntryKey } from "../interfaces/DataList";
 import { flattenAssetType } from "../utils/flattenAssetType";
 import DataList from "../components/DataList.vue";
 import Navbar from "../components/Navbar.vue";
@@ -12,6 +12,8 @@ import {
 	onMounted,
 	provide,
 	ref,
+	shallowRef,
+	triggerRef,
 	useTemplateRef,
 } from "vue";
 import { useStorage } from "@vueuse/core";
@@ -25,25 +27,37 @@ const columns = useStorage<Columns<Asset>>("assetListColumns", {
 	"type": 150
 });
 const columnKeys = computed(() => Object.keys(columns.value));
+const flow = useStorage("movieListFlow", Flow.List);
 const scale = useStorage("assetListScale", 60);
 /** [key, descending] */
 const sort = useStorage<[EntryKey<Asset>, boolean]>("assetListSort", ["name", true]);
 
 const isLoading = ref(true);
-const entryList = ref<{
+const data = shallowRef<{
 	folders: [],
 	entries: Asset[]
 }>({
 	folders: [],
 	entries: [],
 });
+const filteredData = computed(() => data);
 
 provide("columnKeys", columnKeys);
-provide("flow", Flow.List);
-provide("scale", scale);
+provide("flow", {
+	flow,
+	updateFlow(value:Flow) {
+		flow.value = value;
+	}
+});
+provide("scale", {
+	scale,
+	updateScale(value:number) {
+		scale.value = value;
+	}
+});
 
 function resetList() {
-	entryList.value = {
+	data.value = {
 		folders: [],
 		entries: [],
 	};
@@ -51,7 +65,7 @@ function resetList() {
 
 /**
  * compares entry using the current sort setting
- * @param entry1 asset 1
+ * @param entry1 entry 1
  * @param entry2 entry 2
  */
 function compareEntries(entry1:Asset, entry2:Asset): number {
@@ -85,7 +99,7 @@ function changeSort(key:EntryKey<Asset>) {
 	} else {
 		sort.value = [key, true];
 	}
-	entryList.value.entries = entryList.value.entries.sort(compareEntries);
+	data.value.entries = data.value.entries.sort(compareEntries);
 }
 
 /**
@@ -106,8 +120,9 @@ async function getAssetList(): Promise<Asset[]> {
  */
 async function loadAssetList() {
 	const response = await getAssetList();
-	entryList.value.entries = response;
-	entryList.value.entries = entryList.value.entries.sort(compareEntries);
+	data.value.entries = response;
+	data.value.entries = data.value.entries.sort(compareEntries);
+	triggerRef(data);
 	setTimeout(() => { // wait for thumbs to load
 		isLoading.value = false;
 	}, 20);
@@ -138,7 +153,7 @@ onMounted(async () => {
 			<DataList
 				ref="list-tree"
 				:class="{ load_state:isLoading }"
-				v-model="entryList"
+				:data="filteredData"
 				:columns
 				:sort
 				:data-component="AssetListData"

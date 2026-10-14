@@ -1,348 +1,3 @@
-<style lang="css">
-.app_sidebar {
-	background: hsl(240deg 18% 26%);
-	z-index: 8;
-	user-select: none;
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
-}
-
-/**
-logo container
-**/
-.app_sidebar #logo_container {
-	background: hsl(240deg 18% 13%);
-	padding: 4px 8px;
-	transform: translateX(0);
-	height: 50px;
-}
-.app_sidebar #logo_container .logo_btn {
-	border-radius: 3px;
-	transition: 0.2s var(--button-anim);
-	cursor: pointer;
-	width: 100%;
-	height: 100%;
-}
-.app_sidebar #logo_container .logo_btn:hover {
-	transition: none;
-	background: hsl(240deg 16% 18%);
-}
-.app_sidebar #logo_container #logo_icon {
-	transition: 0.205s var(--slide-anim);
-	pointer-events: none;
-	position: absolute;
-	left: calc(50% - calc(175px / 2));
-	height: 41px;
-}
-.app_sidebar #logo_container #logo_wordmark {
-	transition: 0.205s var(--slide-anim);
-	pointer-events: none;
-	position: absolute;
-	left: calc(50% - calc(175px / 2));
-	height: 41px;
-}
-
-/**
-sidebar sections *OR* grouped link containers
-**/
-.app_sidebar ul {
-	list-style: none;
-	margin: 0;
-	padding: 2px 8px;
-}
-/* sections */
-.app_sidebar>ul:first-of-type {
-	border-bottom: 1px solid hsl(240 14% 32% / 1);
-}
-.app_sidebar>ul.page_specific {
-	padding-right: 0;
-	flex-grow: 1;
-	overflow-y: scroll;
-}
-.app_sidebar>ul.page_specific::-webkit-scrollbar {
-	width: 13px;
-}
-.app_sidebar>ul.page_specific::-webkit-scrollbar-thumb {
-	background: hsl(240deg 10% 73%);
-	border-color: hsl(240deg 18% 23%);
-}
-.app_sidebar>ul:last-of-type {
-	border-top: 1px solid hsl(240 14% 32% / 1);
-	margin-top: auto;
-	padding-bottom: 8px;
-}
-/* grouped links (faq & discord) */
-.app_sidebar .group>ul {
-	display: flex;
-	justify-content: space-between;
-	padding: 0;
-}
-.app_sidebar .group>ul>.link {
-	margin-bottom: 0;
-	width: calc(50% - 2.5px);
-}
-.app_sidebar .group>ul>.divider {
-	background: hsl(240 14% 32% / 1);
-	margin: 7px 0 5px;
-	width: 1px;
-}
-
-/* icons */
-.app_sidebar i {
-	margin-top: 0;
-	margin-right: 7px;
-}
-
-/**
-links
-**/
-.app_sidebar .link {
-	border-radius: 4px;
-	transition: 0.2s var(--button-anim);
-	overflow: hidden;
-	display: flex;
-	margin: 3px 0;
-	height: 35px;
-}
-.app_sidebar .link>a {
-	color: #fff;
-	text-decoration: none;
-	-webkit-user-drag: none;
-	display: flex;
-	padding: 5px 8px;
-	height: 100%;
-	width: calc(100% - 14px);
-}
-.app_sidebar .link>button {
-	background: #0000;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	display: flex;
-	padding: 8px 8px;
-	width: calc(100% - 14px);
-}
-/* remove ugly button styling */
-.app_sidebar .link>button:focus {
-	outline: none;
-}
-.app_sidebar .link::after {
-	content: "";
-	background: linear-gradient(90deg, #0000 0, #313145 10px);
-	width: 14px;
-	height: 100%;
-}
-/* states */
-.app_sidebar .link:hover {
-	background: hsl(240 18% 29% / 1);
-	transition: none;
-}
-.app_sidebar .link:hover::after {
-	background: linear-gradient(90deg, #0000 0, hsl(240 18% 29% / 1) 10px);
-}
-.app_sidebar .link.sel {
-	background: hsl(238deg 18% 36%);
-	font-weight: bold;
-}
-.app_sidebar .link.sel::after {
-	background: linear-gradient(90deg, #0000 0, hsl(238deg 18% 36%) 10px);
-}
-
-
-/**
-create button
-**/
-.app_sidebar .link.create {
-	background: hsl(344deg 97% 65%);
-	border-bottom-color: #ac0633;
-}
-.app_sidebar .link.create>button {
-	color: #fff;
-}
-.app_sidebar .link.create::after {
-	content: "";
-	background: linear-gradient(90deg, #0000 0, hsl(344deg 97% 65%) 10px);
-	width: 14px;
-	height: 100%;
-}
-
-
-/* spacer */
-.app_sidebar .spacer {
-	margin-bottom: 7px;
-}
-
-
-/**
-dragger
-**/
-.app_sidebar .dragger {
-	cursor: col-resize;
-	position: absolute;
-	top: 50px;
-	float: right;
-	width: 6px;
-	height: calc(100% - 50px);
-}
-.app_sidebar .dragger:hover {
-	background: #489cf7a3;
-	transition: 0.08s ease-in;
-	transition-delay: 0.18s;
-}
-
-/* headings */
-.app_sidebar h3 {
-	color: #918fa0;
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 5px 0;
-}
-
-/* version string */
-.app_sidebar #wrapper_ver {
-	color: #909090;
-	display: block;
-	font-size: 13px;
-	text-align: center;
-}
-
-.app_sidebar input {
-	display: none;
-}
-
-/***
-dark mode recoloring
-***/
-html.dark .app_sidebar {
-	background: hsl(250 10% 13% / 1);
-}
-html.dark .app_sidebar #logo_container {
-	background: hsl(250 10% 9% / 1);
-	border-color: hsl(250 10% 22% / 1);
-}
-html.dark .app_sidebar #logo_container .logo_btn:hover {
-	background: #1b1924;
-}
-/* sections */
-html.dark .app_sidebar>ul:first-of-type {
-	border-color: hsl(250deg 14% 23%);
-}
-html.dark .app_sidebar>ul.page_specific::-webkit-scrollbar {
-	width: 13px;
-}
-html.dark .app_sidebar>ul.page_specific::-webkit-scrollbar-thumb {
-	background: hsl(250 10% 40% / 1);
-	border-color: hsl(250 10% 13% / 1);
-}
-html.dark .app_sidebar>ul:last-of-type {
-	border-color: hsl(250deg 14% 23%);
-}
-/* grouped links */
-html.dark  .app_sidebar .group>ul>.divider {
-	background: hsl(250deg 14% 23%);
-	margin: 7px 0 5px;
-	width: 1px;
-}
-/* links */
-html.dark .app_sidebar .link>a,
-html.dark .app_sidebar .link>button {
-	color: #ddd;
-}
-html.dark .app_sidebar .link i {
-	color: #9f9eab;
-}
-html.dark .app_sidebar .link::after {
-	background: linear-gradient(90deg, #0000 0, hsl(250 11% 13% / 1) 10px);
-}
-html.dark .app_sidebar .link:hover {
-	background: hsl(250 10% 18% / 1);
-}
-html.dark .app_sidebar .link:hover::after {
-	background: linear-gradient(90deg, #0000 0, hsl(250 10% 18% / 1) 10px);
-}
-html.dark .app_sidebar .link.sel {
-	background: hsl(250 10% 23% / 1);
-}
-html.dark .app_sidebar .link.sel::after {
-	background: linear-gradient(90deg, #0000 0, hsl(250 10% 23% / 1) 10px);
-}
-/* create button */
-html.dark .app_sidebar .link.create {
-	background: hsl(342deg 58% 54%);
-	border-bottom-color: #732137;
-}
-html.dark .app_sidebar .link.create button,
-html.dark .app_sidebar .link.create i {
-	color: #eee;
-}
-html.dark .app_sidebar .link.create::after {
-	background: linear-gradient(90deg, #0000 0, hsl(342deg 58% 54%) 10px);
-}
-html.dark .app_sidebar .user_custom .link>button:hover {
-	background: #573344;
-}
-html.dark .app_sidebar #wrapper_ver {
-	color: #bbb;
-}
-
-/**
-width below 200px
-**/
-/* hide the logo wordmark */
-.app_sidebar.logo_collapsed #logo_container {
-	width: 62px;
-}
-.app_sidebar.logo_collapsed #logo_container #logo_icon {
-	left: calc(50% - calc(41px / 2));
-}
-.app_sidebar.logo_collapsed #logo_container #logo_wordmark {
-	opacity: 0;
-}
-
-/**
-collapsed
-**/
-/* display groups vertically */
-.app_sidebar.collapsed .group>ul {
-	display: block;	
-}
-.app_sidebar.collapsed .group>ul>.link {
-	width: 100%;
-}
-.app_sidebar.collapsed .link>a {
-	padding: 5px 12.5px;
-}
-.app_sidebar.collapsed .link>button {
-	padding: 8px 12.5px;
-}
-.app_sidebar.collapsed .link::after {
-	content: none;
-}
-/* flip the collapse button and hide link text */
-.app_sidebar.collapsed .link[data-toggle] i.ico::before {
-	transform: scale(1);
-}
-.app_sidebar.collapsed .link_text {
-	display: none;
-}
-
-/**
-resize state
-**/
-.app_sidebar.resize {
-	filter: brightness(0.95);
-	transition: none;
-}
-.app_sidebar.resize #logo_container {
-	transition: none;
-}
-.app_sidebar.resize .dragger {
-	background: #5298d6;
-}
-</style>
-
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
 import AppInfoModal from "./AppInfoModal.vue";
@@ -354,15 +9,22 @@ import { onBeforeRouteLeave, useRouter } from "vue-router";
 import openPlayerWindow from "../utils/openPlayerWindow";
 import { ref, toValue, useTemplateRef } from "vue";
 import SettingsModal from "./SettingsModal.vue";
-import useListStore from "../composables/useListStore";
 import { useSidebar } from "../composables/useSidebar";
 import useTempStorage from "../composables/useTempStorage";
 import { wrapperVer } from "../utils/AppInit";
 import { useStorage } from "@vueuse/core";
+import CogIcon from "./icons/CogIcon.vue";
+import PeopleIcon from "./icons/PeopleIcon.vue";
+import FilmIcon from "./icons/FilmIcon.vue";
+import FilmPuzzleIcon from "./icons/FilmPuzzleIcon.vue";
+import ImageIcon from "./icons/ImageIcon.vue";
+import FolderIcon from "./icons/FolderIcon.vue";
+import DiscordIcon from "./icons/DiscordIcon.vue";
+import QuestionIcon from "./icons/QuestionIcon.vue";
+import PlusIcon from "./icons/PlusIcon.vue";
 
 const charInput = useTemplateRef("char-input");
 const movieInput = useTemplateRef("movie-input");
-const { pendingRefresh } = useListStore();
 const router = useRouter();
 const sidebar = useSidebar();
 const tempStorage = useTempStorage();
@@ -532,7 +194,7 @@ defineExpose({ width });
 	}" :style="{
 		width: width + 'px'
 	}">
-		<div id="logo_container" :style="{width:width + 'px'}">
+		<div id="logo_container" :style="{ width:width + 'px' }">
 			<div class="logo_btn" @click="openAppInfo" title="About Wrapper: Offline">
 				<img id="logo_icon" src="/img/logo_icon.svg" alt="Candy"/>
 				<img id="logo_wordmark" src="/img/logo_wordmark.svg" alt="Wrapper: Offline"/>
@@ -543,7 +205,7 @@ defineExpose({ width });
 				<template #toggle>
 					<li class="link create">
 						<button>
-							<i class="ico arr_r"></i>
+							<PlusIcon/>
 							<div class="link_text">New</div>
 						</button>
 					</li>
@@ -555,121 +217,124 @@ defineExpose({ width });
 				<DropdownItem @click="movieUpload_click()">Upload a video</DropdownItem>
 				<DropdownItem @click="starterUpload_click()">Upload a starter</DropdownItem>
 			</Dropdown>
-			<div class="spacer"></div>
+		</ul>
+		<ul class="links">
+			<h3>Folders</h3>
 			<li class="link" :class="{sel:router.currentRoute.value.name == 'char_list'}">
 				<RouterLink to="/characters">
-					<i class="ico person"></i>
+					<PeopleIcon/>
 					<div class="link_text">Characters</div>
 				</RouterLink>
 			</li>
 			<li class="link" :class="{sel:router.currentRoute.value.name == 'movie_list' && !router.currentRoute.value.params.folderId}">
 				<RouterLink to="/movies">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Videos</div>
 				</RouterLink>
 			</li>
 			<li class="link" :class="{sel:router.currentRoute.value.name == 'movie_list' && router.currentRoute.value.params.folderId == 'starters'}">
 				<RouterLink to="/movies/starters">
-					<i class="ico briefcase"></i>
+					<FilmPuzzleIcon/>
 					<div class="link_text">Starters</div>
 				</RouterLink>
 			</li>
 			<li class="link" :class="{sel:router.currentRoute.value.name == 'asset_list'}">
 				<RouterLink to="/assets">
-					<i class="ico cloud"></i>
+					<ImageIcon/>
 					<div class="link_text">Your Library</div>
 				</RouterLink>
 			</li>
-		</ul>
-		<ul class="page_specific">
+
+			<div class="spacer"></div>
+
 			<h3>Starred</h3>
 			<li class="link">
 				<RouterLink to="/fgdf">
-					<i class="ico folder"></i>
+					<FolderIcon/>
 					<div class="link_text">Example folder</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico folder"></i>
+					<FolderIcon/>
 					<div class="link_text">Example folder</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico folder"></i>
+					<FolderIcon/>
 					<div class="link_text">Example folder</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico folder"></i>
+					<FolderIcon/>
 					<div class="link_text">Example folder</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico folder"></i>
+					<FolderIcon/>
 					<div class="link_text">Example folder</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
 			<li class="link">
 				<RouterLink to="/">
-					<i class="ico film"></i>
+					<FilmIcon/>
 					<div class="link_text">Example movie</div>
 				</RouterLink>
 			</li>
@@ -679,14 +344,14 @@ defineExpose({ width });
 				<ul>
 					<li class="link" title="Get answers to various questions you may have">
 						<a href="javascript:window.appWindow.openFAQ();">
-							<i class="ico interr"></i>
+							<QuestionIcon/>
 							<div class="link_text">FAQ</div>
 						</a>
 					</li>
 					<div class="divider"></div>
 					<li class="link" title="Need help with Wrapper? Chat with our community on Discord!">
 						<a href="javascript:window.appWindow.openDiscord();">
-							<i class="ico speech"></i>
+							<DiscordIcon/>
 							<div class="link_text">Discord</div>
 						</a>
 					</li>
@@ -694,7 +359,7 @@ defineExpose({ width });
 			</li>
 			<li class="link" title="Configure Wrapper">
 				<button @click="openSettings">
-					<i class="ico cog"></i>
+					<CogIcon/>
 					<div class="link_text">Settings</div>
 				</button>
 			</li>
@@ -710,3 +375,357 @@ defineExpose({ width });
 		<input type="file" ref="movie-input" accept=".zip" @input="movieInput_input"/>
 	</div>
 </template>
+
+<style>
+.app_sidebar {
+	background: hsl(240deg 18% 26%);
+	z-index: 8;
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+/**
+logo container
+**/
+.app_sidebar #logo_container {
+	background: hsl(240deg 18% 13%);
+	padding: 4px 8px;
+	transform: translateX(0);
+	height: 50px;
+}
+.app_sidebar #logo_container .logo_btn {
+	border-radius: 3px;
+	transition: 0.2s var(--button-anim);
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+.app_sidebar #logo_container .logo_btn:hover {
+	transition: none;
+	background: hsl(240deg 16% 18%);
+}
+.app_sidebar #logo_container #logo_icon {
+	transition: 0.205s var(--slide-anim);
+	pointer-events: none;
+	position: absolute;
+	left: calc(50% - calc(175px / 2));
+	height: 41px;
+}
+.app_sidebar #logo_container #logo_wordmark {
+	transition: 0.205s var(--slide-anim);
+	pointer-events: none;
+	position: absolute;
+	left: calc(50% - calc(175px / 2));
+	height: 41px;
+}
+
+/**
+sidebar sections *OR* grouped link containers
+**/
+.app_sidebar ul {
+	list-style: none;
+	margin: 0 0;
+	padding: 4px 8px;
+}
+/* sections */
+.app_sidebar>ul.links {
+	padding-right: 0;
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+.app_sidebar>ul.links::-webkit-scrollbar {
+	width: 13px;
+}
+.app_sidebar>ul.links::-webkit-scrollbar-thumb {
+	background: hsl(240deg 10% 73% / 0.8);
+	border-color: hsl(240deg 18% 26%);
+	opacity: 0.9;
+}
+.app_sidebar>ul.links::-webkit-scrollbar-thumb:hover {
+	background: hsl(240deg 10% 73%);
+}
+.app_sidebar>ul:last-of-type {
+	border-top: 1px solid hsl(240 14% 32% / 1);
+	margin-top: auto;
+	margin-bottom: 0;
+	padding-bottom: 8px;
+}
+/* grouped links (faq & discord) */
+.app_sidebar .group>ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+.app_sidebar .group>ul>.link {
+	margin-bottom: 0;
+	width: calc(50% - 2.5px);
+}
+.app_sidebar .group>ul>.divider {
+	background: hsl(240 14% 32% / 1);
+	margin: 7px 0 5px;
+	width: 1px;
+}
+
+/* icons */
+.app_sidebar i {
+	margin-top: 0;
+	margin-right: 7px;
+}
+
+/* headings */
+.app_sidebar h3 {
+	color: #918fa0;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0px 0;
+	padding: 0px 8px;
+}
+
+/* version string */
+.app_sidebar #wrapper_ver {
+	color: #909090;
+	display: block;
+	font-size: 13px;
+	text-align: center;
+}
+
+/**
+links
+**/
+.app_sidebar .link {
+	border-radius: 4px;
+	transition: 0.2s var(--button-anim);
+	overflow: hidden;
+	display: flex;
+	margin: 3px 0;
+	height: 35px;
+}
+.app_sidebar .link>a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-user-drag: none;
+	display: flex;
+	padding: 5px 6px;
+	height: 100%;
+	width: calc(100% - 14px);
+}
+.app_sidebar .link>button {
+	background: #0000;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 5px 6px;
+	width: calc(100% - 14px);
+}
+/* remove ugly button styling */
+.app_sidebar .link>button:focus {
+	outline: none;
+}
+.app_sidebar .link .ico_svg {
+	color: hsl(242 12% 85%);
+	margin-right: 4px;
+	height: 100%;
+}
+.app_sidebar .link::after {
+	content: "";
+	background: linear-gradient(90deg, #0000 0, hsl(240deg 18% 26%) 10px);
+	width: 14px;
+	height: 100%;
+}
+/* states */
+.app_sidebar .link:hover {
+	background: hsl(240 18% 29% / 1);
+	transition: none;
+}
+.app_sidebar .link:hover::after {
+	background: linear-gradient(90deg, #0000 0, hsl(240 18% 29% / 1) 10px);
+}
+.app_sidebar .link.sel {
+	background: hsl(238deg 18% 36%);
+}
+.app_sidebar .link.sel::after {
+	background: linear-gradient(90deg, #0000 0, hsl(238deg 18% 36%) 10px);
+}
+
+
+/**
+create button
+**/
+.app_sidebar .link.create {
+	background: hsl(344deg 97% 65%);
+	border-bottom-color: #ac0633;
+}
+.app_sidebar .link.create>button,
+.app_sidebar .link.create>button .ico_svg {
+	color: #fff!important;
+}
+.app_sidebar .link.create::after {
+	content: "";
+	background: linear-gradient(90deg, #0000 0, hsl(344deg 97% 65%) 10px);
+	width: 14px;
+	height: 100%;
+}
+
+
+/* spacer */
+.app_sidebar .spacer {
+	margin-bottom: 7px;
+}
+
+
+/**
+dragger
+**/
+.app_sidebar .dragger {
+	cursor: col-resize;
+	position: absolute;
+	top: 50px;
+	float: right;
+	width: 6px;
+	height: calc(100% - 50px);
+}
+.app_sidebar .dragger:hover {
+	background: #489cf7a3;
+	transition: 0.08s ease-in;
+	transition-delay: 0.18s;
+}
+
+.app_sidebar input {
+	display: none;
+}
+
+/***
+dark mode recoloring
+***/
+html.dark .app_sidebar {
+	background: hsl(250 10% 13% / 1);
+}
+html.dark .app_sidebar #logo_container {
+	background: hsl(250 10% 9% / 1);
+	border-color: hsl(250 10% 22% / 1);
+}
+html.dark .app_sidebar #logo_container .logo_btn:hover {
+	background: #1b1924;
+}
+/* sections */
+html.dark .app_sidebar>ul:first-of-type {
+	border-color: hsl(250deg 14% 23%);
+}
+html.dark .app_sidebar>ul::-webkit-scrollbar {
+	width: 13px;
+}
+html.dark .app_sidebar>ul::-webkit-scrollbar-thumb {
+	background: hsl(250 10% 40% / 0.8);
+	border-color: hsl(250 10% 13%);
+}
+html.dark .app_sidebar>ul::-webkit-scrollbar-thumb:hover {
+	background: hsl(250 10% 40% / 1);
+}
+html.dark .app_sidebar>ul:last-of-type {
+	border-color: hsl(250deg 14% 23%);
+}
+/* grouped links */
+html.dark  .app_sidebar .group>ul>.divider {
+	background: hsl(250deg 14% 23%);
+	margin: 7px 0 5px;
+	width: 1px;
+}
+/* links */
+html.dark .app_sidebar .link>a,
+html.dark .app_sidebar .link>button {
+	color: #ddd;
+}
+html.dark .app_sidebar .link::after {
+	background: linear-gradient(90deg, #0000 0, hsl(250 11% 13% / 1) 10px);
+}
+html.dark .app_sidebar .link:hover {
+	background: hsl(250 10% 18% / 1);
+}
+html.dark .app_sidebar .link:hover::after {
+	background: linear-gradient(90deg, #0000 0, hsl(250 10% 18% / 1) 10px);
+}
+html.dark .app_sidebar .link.sel {
+	background: hsl(250 10% 23% / 1);
+}
+html.dark .app_sidebar .link.sel::after {
+	background: linear-gradient(90deg, #0000 0, hsl(250 10% 23% / 1) 10px);
+}
+/* create button */
+html.dark .app_sidebar .link.create {
+	background: hsl(342deg 58% 54%);
+	border-bottom-color: #732137;
+}
+html.dark .app_sidebar .link.create button,
+html.dark .app_sidebar .link.create i {
+	color: #eee;
+}
+html.dark .app_sidebar .link.create::after {
+	background: linear-gradient(90deg, #0000 0, hsl(342deg 58% 54%) 10px);
+}
+html.dark .app_sidebar .user_custom .link>button:hover {
+	background: #573344;
+}
+html.dark .app_sidebar #wrapper_ver {
+	color: #bbb;
+}
+
+/**
+width below 200px
+**/
+/* hide the logo wordmark */
+.app_sidebar.logo_collapsed #logo_container {
+	width: 62px;
+}
+.app_sidebar.logo_collapsed #logo_container #logo_icon {
+	left: calc(50% - calc(41px / 2));
+}
+.app_sidebar.logo_collapsed #logo_container #logo_wordmark {
+	opacity: 0;
+}
+
+/**
+collapsed
+**/
+/* display groups vertically */
+.app_sidebar.collapsed .group>ul {
+	display: block;	
+}
+.app_sidebar.collapsed .group>ul>.link {
+	width: 100%;
+}
+.app_sidebar.collapsed .link>a {
+	padding: 5px 12.5px;
+}
+.app_sidebar.collapsed .link>button {
+	padding: 8px 12.5px;
+}
+.app_sidebar.collapsed .link::after {
+	content: none;
+}
+/* flip the collapse button and hide link text */
+.app_sidebar.collapsed .link[data-toggle] i.ico::before {
+	transform: scale(1);
+}
+.app_sidebar.collapsed .link_text {
+	display: none;
+}
+
+/**
+resize state
+**/
+.app_sidebar.resize {
+	filter: brightness(0.95);
+	transition: none;
+}
+.app_sidebar.resize #logo_container {
+	transition: none;
+}
+.app_sidebar.resize .dragger {
+	background: #5298d6;
+}
+
+</style>

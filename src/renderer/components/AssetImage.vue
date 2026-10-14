@@ -34,7 +34,7 @@ img {
 
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
-import { Asset } from "../interfaces/Asset";
+import type { Asset } from "../interfaces/Asset";
 import { ref, useTemplateRef } from "vue";
 
 const props = defineProps<{

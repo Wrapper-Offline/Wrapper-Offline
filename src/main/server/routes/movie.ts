@@ -29,11 +29,10 @@ group.route("*", /\/file\/movie\/thumb\/([^/]+)$/, (req, res) => {
 		const readStream = MovieModel.thumb(id);
 		res.setHeader("Content-Type", "image/png");
 		readStream.pipe(res); 
-	} catch (err) {
-		if (err == "404") {
+	} catch (e) {
+		if (e instanceof RangeError)
 			return res.status(404).end();
-		}
-		console.log(req.parsedUrl.pathname, "failed. Error:", err);
+		console.log(req.parsedUrl.pathname, "failed. Error:", e);
 		res.status(500).end();
 	}
 });
@@ -64,9 +63,19 @@ list
 group.route("GET", "/api/movie/list", (req, res) => {
 	const basePath = req.query.path;
 	let movies:Movie[] = Database.select("movies");
-	movies = movies.filter(m => {
-		return basePath ? m.parentFolder == basePath : !m.parentFolder;
-	});
+	let folders = [];
+	if (basePath) {
+		movies = movies.filter(m => {
+			return basePath ? m.folder == basePath : !m.folder;
+		});
+	} else {
+		folders.push({
+			id: "starters",
+			name: "Starters",
+			color: 16535421,
+			folder: "api"
+		});
+	}
 	// const folders = Database.select("movie_folders", {
 	// 	parent_id: basePath ? basePath : "/",
 	// });
@@ -96,7 +105,7 @@ group.route("GET", "/api/movie/list", (req, res) => {
 	// 		});
 	// 	}
 	// }
-	res.json({ folder_path:[], folders:[], movies });
+	res.json({ folder_path:[], folders, movies });
 });
 
 /*

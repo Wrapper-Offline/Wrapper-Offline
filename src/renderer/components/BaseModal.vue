@@ -38,7 +38,7 @@ const { class: classList, show = true } = defineProps<{
 
 <style lang="css">
 .modal_container {
-	background: hsl(245 8% 6% / 0.62);
+	background: hsl(245 6% 3% / 0.62);
 	backdrop-filter: blur(1px);
 	animation: 0.1s modal_container_fade forwards ease-out;
 	z-index: 9;

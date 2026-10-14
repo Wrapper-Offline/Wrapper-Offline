@@ -6,11 +6,11 @@ import { join } from "path";
 import type { Movie } from "../../main/server/models/movie";
 import type { Watermark } from "../../main/server/models/watermark";
 
-export type Folder = {
+export interface Folder {
 	id: string,
-	title: string
+	name: string,
 	color: number,
-	parent_id: string,
+	folder?: string
 };
 
 type DatabaseJson = {
@@ -18,7 +18,7 @@ type DatabaseJson = {
 	assets: Asset[],
 	movies: Movie[],
 	movie_folders: Folder[],
-	watermarks: Watermark[],
+	watermarks: Watermark[]
 };
 
 type ArrayKey<T> = {
@@ -85,7 +85,7 @@ export class Database {
 						date: (asset as any).date,
 						title: (asset as any).title,
 						sceneCount: (asset as any).sceneCount,
-						parentFolder: "starters"
+						folder: "starters"
 					});
 					json.assets.splice(Number(i), 1);
 					continue;

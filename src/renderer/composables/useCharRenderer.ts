@@ -1,4 +1,4 @@
-import { onUnmounted, ShallowRef } from "vue";
+import { onUnmounted, type ShallowRef } from "vue";
 
 type ThumbRenderedCallback = (bytes:string) => any;
 

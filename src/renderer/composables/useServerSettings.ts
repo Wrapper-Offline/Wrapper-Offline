@@ -1,5 +1,5 @@
 import { apiServer } from "../utils/AppInit";
-import { onUnmounted, Ref, ref, watch } from "vue";
+import { onUnmounted, type Ref, ref, watch } from "vue";
 
 interface SettingsObj {
 	enableMenuBar: boolean

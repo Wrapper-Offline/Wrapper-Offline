@@ -1,6 +1,20 @@
-<style lang="css">
+<script setup lang="ts">
+const props = defineProps<{
+	primary?: boolean,
+	icon?: boolean
+}>();
+
+</script>
+
+<template>
+	<div class="btn" :class="{ primary: props.primary, ico:props.icon }">
+		<slot></slot>
+	</div>
+</template>
+
+<style>
 .btn {
-	background: #838190;
+	background: hsl(213deg 92% 56%);
 	color: #fff;
 	border-radius: 4px;
 	border: none;
@@ -28,25 +42,14 @@
 	cursor: pointer;
 }
 .btn.primary {
-	background: #fc4f7d;
+	background: hsl(344 97% 65%);
 }
-.dark .btn {
+
+html.dark .btn {
 	background: #42404f;
 }
-.dark .btn.primary {
-	background: hsl(342deg 58% 54%);
+html.dark .btn.primary {
+	background: hsl(343 78% 59%);
 }
+
 </style>
-
-<script setup lang="ts">
-const props = defineProps<{
-	primary?: boolean,
-	icon?: boolean
-}>();
-</script>
-
-<template>
-	<div class="btn" :class="{ primary: props.primary, ico:props.icon }">
-		<slot></slot>
-	</div>
-</template>

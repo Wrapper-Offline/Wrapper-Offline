@@ -50,7 +50,7 @@
 
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
-import { Asset } from "../interfaces/Asset";
+import type { Asset } from "../interfaces/Asset";
 import AssetImage from "./AssetImage.vue";
 import Button from "./controls/Button.vue";
 import { flattenAssetType } from "../utils/flattenAssetType";

@@ -8,6 +8,7 @@
 }
 
 .checked .data_list_options .option,
+.dl_cell .data_list_options .option,
 html.dark .data_list_options .option {
 	color: hsl(0 0% 100% / 1);
 }

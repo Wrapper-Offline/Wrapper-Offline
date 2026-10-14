@@ -1,4 +1,4 @@
-import { Asset } from "../interfaces/Asset";
+import type { Asset } from "../interfaces/Asset";
 
 export function flattenAssetType(asset:Asset): string {
 	switch (asset.type) {

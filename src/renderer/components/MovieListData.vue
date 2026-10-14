@@ -2,7 +2,7 @@
 import { apiServer } from "../utils/AppInit";
 import CheckboxInput from "./controls/CheckboxInput.vue";
 import { Flow, type EntryKey } from "../interfaces/DataList";
-import { inject } from "vue";
+import { inject, ref } from "vue";
 import type { Movie } from "../interfaces/Movie";
 import MovieListOptions from "./MovieListOptions.vue";
 import openPlayerWindow from "../utils/openPlayerWindow";
@@ -23,7 +23,7 @@ const props = defineProps<{
 defineExpose({ id:props.entry.id });
 
 const columns = inject<EntryKey<Movie>[]>("columnKeys", []);
-const flow = inject<Flow>("flow", Flow.List);
+const { flow } = inject("flow", { flow:ref(Flow.List) });
 const onMovieDblclick = useStorage("onMovieDblclick", "play");
 const router = useRouter();
 
@@ -116,22 +116,26 @@ function entryInfo(key:EntryKey<Movie>) {
 		v-if="flow == Flow.Grid"
 		class="dl_cell movie"
 		:class="{ checked }"
+		draggable="true"
 		@dblclick="entryElem_dblClick"
 		@click.ctrl.exact="entryElem_ctrlClick"
 		@click.shift.exact="entryElem_shiftClick"
 		@click.exact="entryElem_click">
-			<img
-				:src="`${apiServer}/file/movie/thumb/${entryInfo('id')}`"
-				alt="thumbnail"/>
-			<span class="duration">{{ entryInfo('duration') }}</span>
-			<div class="actions hidden">
-				<MovieListOptions :entry="entry" @entry-delete="deleteBtn_click"/>
+			<div class="img_row">
+				<img
+					:src="`${apiServer}/file/movie/thumb/${entryInfo('id')}`"
+					alt="thumbnail"/>
+				<span class="duration">{{ entryInfo('duration') }}</span>
+				<div class="actions hidden">
+					<MovieListOptions :entry="entry" @entry-delete="deleteBtn_click"/>
+				</div>
 			</div>
-			<div class="data">
+			<div class="text_row">
 				<span :title="entryInfo('title')" v-html="entryInfo('title')"></span>
 				<span>{{ entryInfo('date') }}</span>
 			</div>
 	</div>
+
 	<tr
 		v-else
 		class="dl_row movie"
@@ -141,7 +145,6 @@ function entryInfo(key:EntryKey<Movie>) {
 		@click.ctrl.exact="entryElem_ctrlClick"
 		@click.shift.exact="entryElem_shiftClick"
 		@click.exact="entryElem_click">
-	<!--@dragstart="onMovieDrag($event, movie.id)"-->
 		<td class="hidden">
 			<CheckboxInput
 				v-bind:model-value="checked"
@@ -165,7 +168,8 @@ function entryInfo(key:EntryKey<Movie>) {
 <style scoped>
 @import url(../css/data_list_data.css);
 
-tr.movie td.title img {
+.dl_row.movie td.title img {
 	width: initial;
 }
+
 </style>

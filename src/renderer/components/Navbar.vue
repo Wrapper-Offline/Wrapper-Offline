@@ -5,8 +5,6 @@ const emit = defineEmits<{
 	saveClick: [],
 }>();
 defineProps<{
-	/** display a number at the end of a final link */
-	count?: number,
 	/** specify supported features to show */
 	supported?: {
 		/**	displays a download button */
@@ -17,8 +15,6 @@ defineProps<{
 		save?: boolean,
 		/** display a search box */
 		search?: boolean,
-		/** display view mode toggle (list or grid) */
-		viewMode?: boolean,
 		/** display a zoom slider */
 		zoom?: boolean,
 	}
@@ -39,7 +35,7 @@ defineProps<{
 
 <style lang="css">
 header {
-	background: hsl(255 13% 88% / 1);
+	background: hsl(250 16% 87% / 1);
 	border-radius: 10px 0 0;
 	display: flex;
 	flex-shrink: 0;
@@ -54,7 +50,6 @@ header>div {
 }
 /* navigation buttons */
 header .nav_btn {
-	border: 1px solid #0000;
 	color: hsl(211 4% 32% / 1);
 	border-radius: 5px;
 	transition: 0.2s var(--button-anim);
@@ -66,9 +61,8 @@ header .nav_btn i {
 	transform: translateY(1px);
 }
 header .nav_btn:hover {
-	background: hsl(338deg 37% 83%);
-	border-color: hsl(344deg 57% 58% / 45%);
-	color: hsl(344deg 15% 30% / 1);
+	background: hsl(211 60% 76% / .75);
+	color: hsl(220 30% 25% / 1);
 	transition: none;
 	cursor: pointer;
 }
@@ -141,8 +135,8 @@ html.dark header .nav_btn {
 	color: hsl(0deg 0% 82%);
 }
 html.dark header .nav_btn:hover {
-	background: hsl(328 21% 21% / 1);
-	color: hsl(328 23% 88% / 1);
+	background: hsl(211 50% 30% / .75);
+	color: hsl(207, 35%, 88%);
 }
 html.dark header .link_container .link {
 	color: hsl(0deg 0% 85%);

@@ -5,33 +5,26 @@ import {
 	type ComponentInstance,
 	computed,
 	inject,
+	onMounted,
 	reactive,
 	ref,
+	type ShallowRef,
 	useTemplateRef,
+	shallowRef,
+	watch
 } from "vue";
 import {
 	type Columns,
 	type DataListEntry,
 	type EntryKey,
 	Flow,
+	type Folder
 } from "../interfaces/DataList";
 import locale from "../locale/en_US";
-import { useRoute, useRouter } from "vue-router";
 import { useScreenWidth } from "../composables/useScreenWidth";
+import DataListFolder from "./DataListFolder.vue";
+import { useElementBounding } from "@vueuse/core";
 
-interface Folder {
-	id: string,
-	title: string,
-	color: number,
-	parent_id: string
-}
-
-const data = defineModel<{
-	folders: Folder[],
-	entries: Entry[]
-}>({
-	required: true
-});
 const emit = defineEmits<{
 	/** emitted when a column has been resized. [id, new width] */
 	columnResize: [EntryKey<Entry>, number],
@@ -39,6 +32,10 @@ const emit = defineEmits<{
 	sortChange: [EntryKey<Entry>]
 }>();
 const props = defineProps<{
+	data: ShallowRef<{
+		folders: Folder[],
+		entries: Entry[]
+	}>,
 	columns: Columns<Entry>,
 	/** [key to sort by, descending] */
 	sort: [EntryKey<Entry>, boolean],
@@ -46,26 +43,7 @@ const props = defineProps<{
 	optionsComponent: Component
 }>();
 
-const route = useRoute();
-const router = useRouter();
-const screenWidth = useScreenWidth();
-const columnKeys = inject<EntryKey<Entry>[]>("columnKeys", []);
-const flow = inject("flow", ref(Flow.List));
-const scale = inject("scale", 60);
-
-const allSelected = computed(() => 
-	selection.entries.length == data.value.entries.length && 
-	data.value.entries.length > 0);
-const columnWidths = computed(() => {
-	const widths:Columns<Entry> = {};
-	const isGrid = flow.value == Flow.Grid;
-	for (const k in props.columns) {
-		const width = props.columns[k as keyof Columns<Entry>] as number;
-		widths[k as keyof Columns<Entry>] = isGrid ?
-			150 : calculateWidth(width);
-	}
-	return widths;
-});
+const listRows = useTemplateRef<ComponentInstance<Component>[]>("list-row");
 const selection = reactive<{
 	anchor: number,
 	entries: string[]
@@ -73,7 +51,9 @@ const selection = reactive<{
 	anchor: 0,
 	entries: []
 });
-const listRows = useTemplateRef<ComponentInstance<Component>[]>("list-row");
+const allSelected = computed(() => 
+	selection.entries.length == props.data.value.entries.length && 
+	props.data.value.entries.length > 0);
 
 /**
  * resets list of selected entries
@@ -83,68 +63,12 @@ function resetSelection() {
 	selection.entries = [];
 }
 
-/**
- * calculates the width of a column based on the screen width
- * if the screen is wider than 1200px, the column will be 
- */
-function calculateWidth(width:number) {
-	return (screenWidth.value > 1200) ? 
-		~~(width * screenWidth.value / 1200) : width;
-}
-
-/**
- * emits an event requesting the parent to resort the list
- * @param key entry key to sort by
- */
-function column_click(key:EntryKey<Entry>) {
-	emit("sortChange", key);
-}
-
-/**
- * resizes the columns on mousemove and emits the resize
- * event on mouseup
- * @param e mouse event
- * @param key column key
- */
-function dragger_down(e:MouseEvent, key:EntryKey<Entry>) {
-	const dragger = e.currentTarget as HTMLDivElement | null;
-	const column = dragger?.parentElement;
-	const startX = e.clientX;
-	const startWidth = props.columns[key];
-	if (!dragger || !column || !startWidth) {
-		// this shouldn't even be possible but TS nags me if i don't check
-		return;
-	}
-	document.body.classList.add("col_resize");
-	dragger.classList.add("active");
-	let width = startWidth;
-	const moveCb = (moveE2:MouseEvent) => {
-		let dx = moveE2.clientX - startX;
-		if (screenWidth.value > 1200) {
-			dx = ~~(dx / (screenWidth.value / 1200));
-		}
-		width = startWidth + dx;
-		width = Math.max(startWidth + dx, 90);
-		width = Math.min(width, 400);
-		const tmi = calculateWidth(width);
-		column.style.width = tmi + "px";
-		dragger.style.marginLeft = (tmi - 10) + "px";
-	};
-	window.addEventListener("mousemove", moveCb);
-	window.addEventListener("mouseup", (e) => {
-		window.removeEventListener("mousemove", moveCb);
-		document.body.classList.remove("col_resize");
-		dragger.classList.remove("active");
-		emit("columnResize", key, width);
-	});
-}
-
 /** resets if everything is selected, otherwise selects all */
 function selectAll_click() {
 	if (allSelected.value) {
 		resetSelection();
 	} else {
-		selection.entries = data.value.entries.map(v => v.id);
+		selection.entries = props.data.value.entries.map(v => v.id);
 	}
 }
 
@@ -152,14 +76,14 @@ function selectAll_click() {
  * called when folder is clicked, navigates to it
  * @param folderId folder id
  */
-function folder_click(folderId:string) {
-	router.push({
-		name: route.name,
-		params: {
-			folderId
-		}
-	});
-}
+// function folder_click(folderId:string) {
+// 	router.push({
+// 		name: route.name,
+// 		params: {
+// 			folderId
+// 		}
+// 	});
+// }
 
 /**
  * called when a movie is deleted, removes it from list
@@ -167,8 +91,8 @@ function folder_click(folderId:string) {
  */
 function entry_delete(ids:string[]) {
 	for (const id of ids) {
-		const entryI = data.value.entries.findIndex((v) => v.id == id);
-		data.value.entries.splice(entryI, 1);
+		const entryI = props.data.value.entries.findIndex((v) => v.id == id);
+		props.data.value.entries.splice(entryI, 1);
 		const selI = selection.entries.findIndex((v) => v == id);
 		selection.entries.splice(selI, 1);
 	}
@@ -278,7 +202,7 @@ function ctrlADown(e:KeyboardEvent) {
 		selection.entries = entries;
 	} else {
 		if (!allSelected.value) {
-			selection.entries = data.value.entries.map(v => v.id);
+			selection.entries = props.data.value.entries.map(v => v.id);
 		}
 	}
 }
@@ -291,12 +215,190 @@ function removeListeners() {
 	document.removeEventListener("keydown", ctrlADown);
 }
 
+const columnKeys = inject<EntryKey<Entry>[]>("columnKeys", []);
+const { flow } = inject("flow", { flow:ref(Flow.List) });
+const { scale } = inject("scale", { scale:ref(60) });
+
+const screenWidth = useScreenWidth();
+const columnWidths = computed(() => {
+	const widths:Columns<Entry> = {};
+	const isGrid = flow.value == Flow.Grid;
+	for (const k in props.columns) {
+		const width = props.columns[k as keyof Columns<Entry>] as number;
+		widths[k as keyof Columns<Entry>] = isGrid ?
+			150 : calculateWidth(width);
+	}
+	return widths;
+});
+
+/**
+ * calculates the width of a column based on the screen width
+ * if the screen is wider than 1200px, the column will be adjusted
+ * to take up more space
+ */
+function calculateWidth(width:number) {
+	return (screenWidth.value > 1200) ? 
+		~~(width * screenWidth.value / 1200) : width;
+}
+
+/**
+ * emits an event requesting the parent to resort the list
+ * @param key entry key to sort by
+ */
+function column_click(key:EntryKey<Entry>) {
+	emit("sortChange", key);
+}
+
+/**
+ * resizes the columns on mousemove and emits the resize
+ * event on mouseup
+ * @param e mouse event
+ * @param key column key
+ */
+function dragger_down(e:MouseEvent, key:EntryKey<Entry>) {
+	const dragger = e.currentTarget as HTMLDivElement | null;
+	const column = dragger?.parentElement;
+	const startX = e.clientX;
+	const startWidth = props.columns[key];
+	if (!dragger || !column || !startWidth) {
+		// this shouldn't even be possible but TS nags me if i don't check
+		return;
+	}
+	document.body.classList.add("col_resize");
+	dragger.classList.add("active");
+	let width = startWidth;
+	const moveCb = (moveE2:MouseEvent) => {
+		let dx = moveE2.clientX - startX;
+		if (screenWidth.value > 1200) {
+			dx = ~~(dx / (screenWidth.value / 1200));
+		}
+		width = startWidth + dx;
+		width = Math.max(startWidth + dx, 90);
+		width = Math.min(width, 400);
+		const tmi = calculateWidth(width);
+		column.style.width = tmi + "px";
+		dragger.style.marginLeft = (tmi - 10) + "px";
+	};
+	window.addEventListener("mousemove", moveCb);
+	window.addEventListener("mouseup", () => {
+		window.removeEventListener("mousemove", moveCb);
+		document.body.classList.remove("col_resize");
+		dragger.classList.remove("active");
+		emit("columnResize", key, width);
+	});
+}
+
+const LIST_OVERSCAN = 5;
+const GRID_X_MARGIN = 25;
+const GRID_Y_MARGIN = 20;
+
+const scrollableParent = ref<HTMLElement | null>(null);
+const { top:spTop, height:spHeight } = useElementBounding(scrollableParent);
+
+const tbody = useTemplateRef("dl-tbody");
+const { top:tbodyTop, width:tbodyWidth } = useElementBounding(tbody);
+
+const sampleCell = useTemplateRef("sample-cell")
+const rowHeight = computed(() => {
+	if (flow.value == Flow.Grid) {
+		if (!sampleCell.value?.$el) {
+			return 1;
+		}
+		return sampleCell.value.$el.offsetHeight + GRID_Y_MARGIN;
+	} else {
+		return scale.value;
+	}
+});
+
+const maxVisibleRows = computed(() => {
+	return Math.ceil(spHeight.value / rowHeight.value);
+});
+const numColumns = computed(() => {
+	return flow.value == Flow.Grid ?
+		Math.floor((tbodyWidth.value - GRID_X_MARGIN) / (4 * scale.value + GRID_X_MARGIN)) :
+		1;
+});
+
+const topMargin = ref(0);
+const bottomMargin = ref(0);
+const visibleData = shallowRef<{
+	folders: Folder[],
+	entries: Entry[]
+}>({
+	folders: [],
+	entries: []
+});
+
+function refreshVisibleData() {
+	if (!tbody.value || !parent) {
+		return;
+	}
+	const numFolders = props.data.value.folders.length;
+	const numEntries = props.data.value.entries.length;
+	const numItems = numFolders + numEntries;
+	const numRows = numItems / numColumns.value;
+
+	const offsetTop = tbodyTop.value - spTop.value;
+	const topmostRow = Math.floor(-offsetTop / rowHeight.value);
+	const firstVisibleRow = Math.max(0, topmostRow - LIST_OVERSCAN);
+	const lastVisibleRow = Math.min(numItems, topmostRow + maxVisibleRows.value + LIST_OVERSCAN);
+	const firstVisibleEntry = firstVisibleRow * numColumns.value;
+	const lastVisibleEntry = (lastVisibleRow + 1) * numColumns.value - 1;
+
+	let folderStart = 0, folderEnd = 0;
+	let entryStart = 0, entryEnd = 0
+	if (firstVisibleEntry < numFolders) {
+		folderStart = firstVisibleEntry;
+	} else {
+		folderStart = numFolders;
+		entryStart = firstVisibleEntry - numFolders;
+	}
+	if (lastVisibleEntry < numFolders) {
+		folderEnd = lastVisibleEntry;
+	} else {
+		folderEnd = numFolders;
+		entryEnd = lastVisibleEntry;
+	}
+
+	topMargin.value = firstVisibleRow * rowHeight.value;
+	bottomMargin.value = (numRows - lastVisibleRow) * rowHeight.value;
+	visibleData.value.folders = props.data.value.folders.slice(folderStart, folderEnd);
+	visibleData.value.entries = props.data.value.entries.slice(entryStart, entryEnd);
+}
+
+function findScrollableParent(element:HTMLElement): HTMLElement | null {
+	if (element.scrollHeight > element.clientHeight) {
+		return element;
+	} else if (element.parentElement) {
+		return findScrollableParent(element.parentElement)
+	}
+	return null;
+}
+
+watch(
+	[
+		props.data,
+		tbodyTop,
+		spHeight
+	],
+	refreshVisibleData
+);
+
+const container = useTemplateRef("dl-container");
+onMounted(() => {
+	if (!container.value) {
+		return null;
+	}
+	scrollableParent.value = findScrollableParent(container.value);
+});
+
 defineExpose({ resetSelection });
 
 </script>
 
 <template>
 	<div
+		ref="dl-container"
 		class="dl_container"
 		:class="[{
 			select_mode: selection.entries.length > 0
@@ -317,6 +419,7 @@ defineExpose({ resetSelection });
 				:entry="selection.entries"
 				@entry-delete="entry_delete"/>
 		</div>
+
 		<table class="data_list">
 			<thead class="list_head">
 				<tr>
@@ -345,25 +448,21 @@ defineExpose({ resetSelection });
 					<th class="space"></th>
 				</tr>
 			</thead>
-			<tbody>
-				<!-- <tr
-					v-for="folder in data.folders"
-					class="entry folder"
-					@click="folder_click(folder.id)">
-					<td></td>
-					<template v-for="columnId in columnIds">
-						<td v-if="columnId == 'title'" class="title">
-							<FolderIcon :color="folder.color"/>
-							<span>
-								{{ folder.title }}
-							</span>
-						</td>
-						<td v-else></td>
-					</template>
-					<td></td>
-				</tr> -->
+
+			<tbody ref="dl-tbody">
+				<div class="spacer" :style="{
+					gridColumn: '1 / span ' + numColumns,
+					height: topMargin + 'px'
+				}"></div>
+
+				<DataListFolder
+					v-for="folder in visibleData.folders"
+					:key="folder.id"
+					:entry="folder"
+					:checked="false"/>
+
 				<component :is="dataComponent"
-					v-for="entry in data.entries"
+					v-for="entry in visibleData.entries"
 					:key="entry.id"
 					:entry="entry"
 					:checked="selection.entries.includes(entry.id)"
@@ -373,8 +472,29 @@ defineExpose({ resetSelection });
 					@entry-ctrl-click="entry_ctrlClick(entry.id)"
 					@entry-dbl-click="entry_dblClick()"
 					@entry-shift-click="entry_shiftClick(entry.id)"/>
+
+				<!-- sample cell used to get the row height on grid views -->
+				<DataListFolder
+					ref="sample-cell"
+					:entry="{
+						id: 'sample',
+						name: 'hot damn',
+						color: 20200418,
+						size: 43,
+					}"
+					:checked="false"
+					:style="{
+						position: 'absolute',
+						visibility: 'hidden',
+						pointerEvents: 'none'
+					}"/>
+
+				<div class="spacer" :style="{
+					gridColumn: '1 / span ' + numColumns,
+					height: bottomMargin + 'px'
+				}"></div>
 			</tbody>
-		</table>
+		</table>		
 	</div>
 </template>
 
@@ -401,15 +521,24 @@ list view
 	table-layout: fixed;
 	width: 100%;
 }
-/* 
-.data_list.list {
-	--scale: v-bind("scale + 'px'");
-	border-collapse: collapse;
-	border-spacing: 0;
-	table-layout: fixed;
-	width: 100%;
-} */
 
+.data_list tbody {
+	transition: 0.08s var(--slide-anim);
+	height: 100%;
+}
+/* extra space at the bottom */
+.data_list tbody::after {
+	content: "";
+	display: block;
+	height: 30px;
+}
+
+/* loading */
+.dl_container.load_state tbody {
+	transition: none;
+	transform: translateX(-40px);
+	opacity: 0;
+}
 
 /**
 select mode
@@ -514,39 +643,6 @@ thead.list_head th .dragger:hover,
 thead.list_head th .dragger.active {
 	background: #489cf7a3;
 	transition: background 0.1s ease-in;
-}
-
-
-/***
-list view
-***/
-
-.data_list tbody {
-	transition: 0.08s var(--slide-anim);
-	height: 100%;
-}
-/* extra space at the bottom */
-.data_list tbody::after {
-	content: "";
-	display: block;
-	height: 30px;
-}
-
-/* TODO IMPLEMENT FOLDERS */
-/* tr.folder td.title .folder_icon {
-	margin-right: 7px;
-	min-width: calc(calc(calc(v-bind("scale + 'px'") - 20px) / 9) * 16);
-	height: calc(v-bind("scale + 'px'") - 20px);
-}
-div.folder .thumbnail_container img {
-	height: calc(calc(calc(calc(calc(4 * v-bind("scale + 'px'")) - 14px) / 16) * 9) - 1px);
-} */
-
-/* loading */
-.dl_container.load_state tbody {
-	transition: none;
-	transform: translateX(-40px);
-	opacity: 0;
 }
 
 
